@@ -1,0 +1,79 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: pcor-mii
+canonical: https://bih-cei.github.io/PCOR-MII
+name: PCOR_MII
+title: PCOR-MII Implementation Guide
+# description: Example Implementation Guide for getting started with SUSHI
+status: draft # draft | active | retired | unknown
+version: 0.1.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2026+
+releaseLabel: draft
+license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+language: de
+jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+publisher:
+  name: BIH-CEI
+  url: https://www.bihealth.org/
+  # email: test@example.org
+
+# The dependencies property corresponds to IG.dependsOn. The key is the
+# package id and the value is the version (or dev/current). For advanced
+# use cases, the value can be an object with keys for id, uri, and version.
+#
+# Hinweis: Für MII-konforme Profile/Bindings hier z. B. den Basis-Kerndatensatz
+# als Abhängigkeit ergänzen (Version vor Aktivierung prüfen):
+# dependencies:
+#   de.medizininformatikinitiative.kerndatensatz.base: 2026.0.0
+#   de.basisprofil.r4: 1.5.4
+
+# The pages property corresponds to IG.definition.page. SUSHI can
+# auto-generate the page list, but if the author includes pages in
+# this file, it is assumed that the author will fully manage the
+# pages section and SUSHI will not generate any page entries.
+pages:
+  index.md:
+    title: Startseite
+  Questionnaires.md:
+    title: Fragebögen
+  Implementation.md:
+    title: Anwendung
+  Release-Notes.md:
+    title: Release Notes
+
+# The parameters property represents IG.definition.parameter. Rather
+# than a list of code/value pairs (as in the ImplementationGuide
+# resource), the code is the YAML key.
+parameters:
+  shownav: true
+  i18n-default-lang: de           # Standardsprache: Deutsch
+  i18n-lang:
+    - en                          # Zusätzliche Sprache: Englisch
+  translation-sources:
+    - input/translations/en       # Pfad zu den englischen Übersetzungen
+  excludettl: true
+#   validation: [allow-any-extensions, no-broken-links]
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Startseite: index.html
+  Fragebögen: Questionnaires.html
+  Anwendung: Implementation.html
+  Release Notes: Release-Notes.html
+  Artefakte: artifacts.html
+
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+instanceOptions:
+  # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
+  # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
+  manualSliceOrdering: true # true | false

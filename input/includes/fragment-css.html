@@ -1,0 +1,88 @@
+<!-- T-CABS BIH Corporate Design Colors -->
+<!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
+<!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
+<!--
+   BIH-BLAU Abstufungen:
+   100% #003754  90% #1a4b65  80% #335f77  70% #4d7388
+   60% #668899   50% #809daa  40% #99b1bb  30% #b3c5cc
+   20% #ccd9dd   10% #e6ecee
+
+   BIH-KORALL Abstufungen:
+   100% #ea5451  90% #ec6562  80% #ee7674  70% #f08785
+   60% #f29897   50% #f5aaa8  40% #f7bbba  30% #f9cccb
+   20% #fbdddc   10% #fdeeee
+-->
+<style>
+:root {
+  --ig-status-text-color: #4d7388;       /*  1. IG title and status text - BLAU 70% */
+  --navbar-bg-color: #335f77;            /*  2. Header container - BLAU 80% */
+  --footer-bg-color: #335f77;            /*  3. Footer background - BLAU 80% */
+  --footer-container-bg-color: #335f77;  /*  4. Footer container - BLAU 80% */
+  --stripe-bg-color: #f5aaa8;            /*  5. Header strip - KORALL 50% */
+
+  --btn-hover-color: #f29897;            /*  6. Menu button hover - KORALL 60% */
+  --btn-active-color: #f08785;           /*  7. Menu button active - KORALL 70% */
+  --btn-text-color: #ffffff;             /*  8. Menu button text */
+  --btn-gradient-start-color: #4d7388;   /*  9. Menu gradient start - BLAU 70% */
+  --btn-gradient-end-color: #335f77;     /* 10. Menu gradient end - BLAU 80% */
+  --btn-gradient-start-color-alpha: #ff4d7388; /* 11. Menu gradient start (alpha) */
+  --btn-gradient-end-color-alpha: #ff335f77;   /* 12. Menu gradient end (alpha) */
+  --link-color: #4d7388;                 /* 13. Hyperlink - BLAU 70% */
+  --link-hover-color: #f08785;           /* 14. Hyperlink hover - KORALL 70% */
+
+  --publish-box-bg-color: #fdeeee;       /* 15. Publish box background - KORALL 10% */
+  --publish-box-border: 1px solid #f7bbba; /* 16. Publish box border - KORALL 40% */
+  --toc-box-bg-color: #e6ecee;           /* 17. TOC box background - BLAU 10% */
+  --toc-box-border: 1px solid #b3c5cc;   /* 18. TOC box border - BLAU 30% */
+  --stu-note-background-color: #fdeeee;  /* 19. STU note background - KORALL 10% */
+  --stu-note-border-left-color: #f5aaa8; /* 20. STU note border - KORALL 50% */
+
+  --ig-header-color: #f5f8fa;            /* 21. Header sides */
+  --ig-header-container-color: #ffffff;  /* 22. Header container center */
+  --footer-nav-bg-color: #f5f8fa;        /* 23. Footer navigation background */
+
+  --footer-text-color: #ffffff;          /* 24. Footer text */
+  --footer-hyperlink-text-color: #b3d8e8;/* 25. Footer hyperlinks */
+  --footer-highlight-text-color: #f5aaa8;/* 26. Footer highlight - KORALL 50% */
+
+  --breadcrumb-bg-color: #f5f8fa;        /* 27. Breadcrumb background */
+  --breadcrumb-text-color: #4d7388;      /* 28. Breadcrumb text - BLAU 70% */
+
+  --dragon-background-color: #fdeeee;    /* 29. Dragon background - KORALL 10% */
+  --dragon-text-color: #4d7388;          /* 30. Dragon text - BLAU 70% */
+}
+
+/* ─── T-CABS Header: Charité-Logo zwischen BIH und Sprach-Switcher ─── */
+/* fhir2.base.template kennt nur #project-nav und #family-nav.         */
+/* #charite-nav muss hier mit gleichen Regeln wie #family-nav ergänzt   */
+/* werden, sonst rutscht das Logo aus dem Header.                       */
+#charite-nav {
+  line-height: 50px;
+  float: var(--ig-right);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+  color: #808080;
+}
+#charite-logo {
+  float: var(--ig-right);
+  margin-left: 6px;
+}
+
+/* ─── T-CABS Navbar/Footer: kräftiges BIH-BLAU 100% statt 80% ─── */
+/* Original-IG nutzt hartkodiertes #003754 mit !important, weil    */
+/* die Variable --navbar-bg-color (#335f77) zu hell wirkt.         */
+nav.navbar.navbar-inverse {
+  background-color: #003754 !important;
+}
+#segment-footer {
+  background-color: #003754 !important;
+}
+#segment-footer > .container {
+  background-color: #003754 !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #ea5451 !important;   /* KORALL 100% Hover */
+}
+</style>
