@@ -25,11 +25,12 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
-# Hinweis: Für MII-konforme Profile/Bindings hier z. B. den Basis-Kerndatensatz
-# als Abhängigkeit ergänzen (Version vor Aktivierung prüfen):
-# dependencies:
-#   de.medizininformatikinitiative.kerndatensatz.base: 2026.0.0
-#   de.basisprofil.r4: 1.5.4
+# Wir bauen auf dem MII-PRO-Modul auf: dessen fertige PRO-Questionnaires
+# (PHQ-9, GAD-7, PROMIS-29, EQ-5D-5L, EORTC QLQ-C30, …) werden referenziert,
+# nicht nachgebaut. SDC ist die Basis der MII-PRO-Profile.
+dependencies:
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.3.0
+  hl7.fhir.uv.sdc: 3.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in

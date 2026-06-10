@@ -1,12 +1,12 @@
 Diese Seite gibt einen Überblick über die im PCOR-MII Implementation Guide definierten Fragebögen. Die vollständigen, maschinenlesbaren Definitionen finden sich unter [Artefakte](artifacts.html).
 
-### Übersicht
+### Fragebögen nach Kategorie
 
-| Questionnaire | Beschreibung | Status |
-|---|---|---|
-| [PCOR Beispiel-Fragebogen](Questionnaire-PcorExampleQuestionnaire.html) | Vorlage zur Erfassung patientenberichteter Angaben | draft |
+#### Demographie
 
-> Der mitgelieferte Fragebogen ist eine **Vorlage**. Eigene Questionnaires werden als FSH-Datei unter `input/fsh/Questionnaires/` angelegt (Datei `PCOR_Example_Questionnaire.fsh` als Ausgangspunkt kopieren).
+- [DEM — Demographics & Medical History](Questionnaire-DEM.html) — Soziodemographie und medizinische Vorgeschichte (Screening)
+
+> Weitere Fragebögen werden als FSH-Datei unter `input/fsh/Questionnaires/` angelegt und hier unter der passenden Kategorie verlinkt. Als Ausgangspunkt dient der [PCOR Beispiel-Fragebogen](Questionnaire-PcorExampleQuestionnaire.html) (Vorlage).
 
 ### Aufbau eines Questionnaires
 
