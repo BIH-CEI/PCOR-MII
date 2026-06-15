@@ -6,6 +6,14 @@ Diese Seite gibt einen Überblick über die im PCOR-MII Implementation Guide def
 
 - [DEM — Demographics & Medical History](Questionnaire-DEM.html) — Soziodemographie und medizinische Vorgeschichte (Screening)
 
+#### Patient-Reported Outcomes (PROMIS)
+
+Aus dem [MII PRO-Modul](https://simplifier.net/guide/mii-pro-v2026-de) referenziert (Dependency `de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1`, kein eigener Nachbau). Lizenz folgt dem [4-Schichten-Copyright-Modell](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS) (PHO + CPCOR + LOINC + MII):
+
+- [**PROMIS-29 Profile v2.1**](PROMIS-29.html) — Multi-Domain HRQoL, 29 Items über 7 Domänen + Schmerzintensität
+- [**PROMIS Cognitive Function SF 4a**](PROMIS-Cognitive-Function.html) — kognitive Funktion (Selbstauskunft), 4 Items
+- [**PROMIS-16 Profile v2.1 (PROPr)**](PROMIS-16.html) — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)
+
 > Weitere Fragebögen werden als FSH-Datei unter `input/fsh/Questionnaires/` angelegt und hier unter der passenden Kategorie verlinkt. Als Ausgangspunkt dient der [PCOR Beispiel-Fragebogen](Questionnaire-PcorExampleQuestionnaire.html) (Vorlage).
 
 ### Aufbau eines Questionnaires
