@@ -115,7 +115,9 @@ jobs:
           message: |
             🚀 **PR Preview deployed**
 
-            📖 Preview: https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/
-            🕐 Commit `${{ github.event.pull_request.head.sha }}` · ${{ github.run_id }}
+            📖 Preview (DE): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/de/
+            📖 Preview (EN): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/en/
+            🌐 Sprach-Picker (Root, JS-Redirect): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/
+            🕐 Commit `${{ github.event.pull_request.head.sha }}` · Run ${{ github.run_id }}
 
             *Wird beim Schließen des PRs automatisch entfernt.*
