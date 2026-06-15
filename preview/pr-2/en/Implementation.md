@@ -2,26 +2,28 @@
 
 ## Anwendung
 
-Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fragebögen in der Praxis angewendet werden.
+**Translated page. Original language: German.**
 
-### Vom Questionnaire zur Antwort
+This page describes how the questionnaires defined in the PCOR-MII Implementation Guide are applied in practice.
 
-Ein `Questionnaire` ist die **Definition** eines Fragebogens. Die konkreten Antworten einer Person werden als **`QuestionnaireResponse`** erfasst. Die Verknüpfung erfolgt über:
+### From Questionnaire to Response
 
-* `QuestionnaireResponse.questionnaire` → kanonische URL des `Questionnaire` (inkl. Version)
-* jede Antwort referenziert das zugehörige Item über die identische **`linkId`**
+A `Questionnaire` is the **definition** of a form. The concrete answers of a person are captured as a **`QuestionnaireResponse`**. They are linked via:
 
-Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch über Systemgrenzen hinweg.
+* `QuestionnaireResponse.questionnaire` → canonical URL of the `Questionnaire` (including version)
+* each answer references the corresponding item via the identical **`linkId`**
 
-### Lebenszyklus
+This keeps every captured answer unambiguously mapped to its question — even across system boundaries.
 
-1. **Bereitstellung**– das`Questionnaire`wird über einen FHIR-Server bereitgestellt (`GET [base]/Questionnaire?url=...`).
-1. **Rendering**– ein Client (ePRO-App, Studienportal) rendert die Items anhand von`type`,`text`und Antwortoptionen.
-1. **Pre-Population****(optional)**– vorhandene Daten werden vorbefüllt (z. B. via[Structured Data Capture, SDC](https://hl7.org/fhir/uv/sdc/)).
-1. **Erfassung**– die ausgefüllten Antworten werden als`QuestionnaireResponse`gespeichert (`status = completed`).
-1. **Auswertung / Extraktion****(optional)**– relevante Antworten werden in andere FHIR-Ressourcen (z. B.`Observation`) überführt (Data Extraction).
+### Lifecycle
 
-### Beispiel: QuestionnaireResponse (Auszug)
+1. **Provisioning**– the`Questionnaire`is served from a FHIR server (`GET [base]/Questionnaire?url=...`).
+1. **Rendering**– a client (ePRO app, study portal) renders the items based on`type`,`text`, and answer options.
+1. **Pre-population****(optional)**– existing data is pre-filled (e.g. via[Structured Data Capture, SDC](https://hl7.org/fhir/uv/sdc/)).
+1. **Capture**– the completed answers are stored as a`QuestionnaireResponse`(`status = completed`).
+1. **Evaluation / extraction****(optional)**– relevant answers are transferred into other FHIR resources (e.g.`Observation`) via data extraction.
+
+### Example: QuestionnaireResponse (excerpt)
 
 ```
 {
@@ -33,7 +35,7 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
       "linkId": "pro",
       "item": [
         { "linkId": "pro.general-health",
-          "answer": [ { "valueString": "Gut" } ] }
+          "answer": [ { "valueString": "Good" } ] }
       ]
     }
   ]
@@ -41,13 +43,13 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
 
 ```
 
-### Validierung
+### Validation
 
-`QuestionnaireResponse`s können gegen das zugehörige `Questionnaire` validiert werden – u. a. auf Pflicht-Items (`required`), zulässige Antwortoptionen und Datentypen. Dies erlaubt der IG Publisher bzw. der FHIR-Validator gegen die hier veröffentlichten Definitionen.
+`QuestionnaireResponse`s can be validated against the corresponding `Questionnaire` — including mandatory items (`required`), permitted answer options, and data types. The IG Publisher / FHIR validator can validate against the definitions published here.
 
-### Hinweise zur Integration
+### Integration Notes
 
-* **Versionierung**: Antworten immer gegen eine **versionierte** `Questionnaire`-URL erfassen, damit spätere Änderungen am Fragebogen bestehende Daten nicht uneindeutig machen.
-* **Structured Data Capture (SDC)**: Für Pre-Population und Extraktion empfiehlt sich der HL7-SDC-IG als ergänzender Standard.
-* **Mehrsprachigkeit**: Item-Texte können über `translation`-Extensions mehrsprachig hinterlegt werden.
+* **Versioning**: always capture answers against a **versioned** `Questionnaire` URL, so later changes to the form do not make existing data ambiguous.
+* **Structured Data Capture (SDC)**: for pre-population and extraction, the HL7 SDC IG is recommended as a complementary standard.
+* **Multi-language**: item texts can be provided in multiple languages via `translation` extensions.
 

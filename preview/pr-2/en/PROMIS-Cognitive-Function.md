@@ -2,6 +2,8 @@
 
 ## PROMIS Cognitive Function SF 4a
 
+**Translated page. Original language: German.**
+
 PROMIS® Cognitive Function Short Form 4a misst die subjektive kognitive Funktion (Konzentration, Erinnerung, klares Denken) mit 4 Items. Die Kurzform eignet sich für Studien, in denen kognitive Selbstauskunft als ein Domain unter mehreren erhoben werden soll, ohne den Fragebogen-Aufwand einer Long-Form.
 
 ### Verwendung in PCOR-MII

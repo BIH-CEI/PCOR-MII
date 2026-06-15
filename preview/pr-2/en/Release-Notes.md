@@ -2,32 +2,34 @@
 
 ## Release Notes
 
-### Versionierung
+**Translated page. Original language: German.**
 
-Dieser IG folgt [Semantic Versioning 2.0.0](https://semver.org/):
+### Versioning
 
-* **MAJOR** — inkompatible Änderungen an normativem Inhalt (Item-Struktur, `linkId`s, Terminologie-Bindungen)
-* **MINOR** — neue Questionnaires, Items, Beispiele oder abwärtskompatible Verbesserungen
-* **PATCH** — Korrekturen von Fehlern in normativem Inhalt (falsche Codes, fehlerhafte Constraints)
+This IG follows [Semantic Versioning 2.0.0](https://semver.org/):
 
-Versionen `0.x.y` kennzeichnen die frühe Entwicklung — die Spezifikation ist noch nicht stabil. Version `1.0.0` markiert das erste stabile Release nach fachlicher Abstimmung und formaler Veröffentlichung.
+* **MAJOR** — incompatible changes to normative content (item structure, `linkId`s, terminology bindings)
+* **MINOR** — new questionnaires, items, examples, or backward-compatible improvements
+* **PATCH** — fixes to errors in normative content (wrong codes, incorrect constraints)
 
-Jede Änderung ist einer der folgenden Kategorien zugeordnet:
+Versions `0.x.y` indicate initial development — the specification is not yet stable. Version `1.0.0` will mark the first stable release after expert review and formal publication.
 
-* **`feature`** — neuer Inhalt (Questionnaires, Items, ValueSets, Beispiele)
-* **`improve`** — Verfeinerung oder Erweiterung bestehenden normativen Inhalts
-* **`fix`** — Korrektur von Fehlern in normativem Inhalt
-* **`documentation`** — Dokumentationsänderungen ohne Auswirkung auf normative Aspekte
+Each change is tagged with one of the following categories:
+
+* **`feature`** — new content (questionnaires, items, ValueSets, examples)
+* **`improve`** — refinement or extension of existing normative content
+* **`fix`** — correction of errors in normative content
+* **`documentation`** — documentation changes with no impact on normative aspects
 
 -------
 
 ### v0.1.0 (2026-06-04) — Initial Draft
 
-**`feature`** Erstaufbau des PCOR-MII Implementation Guide mit BIH-Corporate-Design-Template, Mehrsprachigkeit (Deutsch als Standardsprache, Englisch als Übersetzung) und CI/CD-Pipeline (GitHub Actions → GitHub Pages)
+**`feature`** Initial setup of the PCOR-MII Implementation Guide with BIH corporate design template, multi-language support (German default, English translation), and CI/CD pipeline (GitHub Actions → GitHub Pages)
 
-**`feature`** Beispiel-Questionnaire `PcorExampleQuestionnaire` als Vorlage (Item-Typen `group`, `choice`, `date`, `string`)
+**`feature`** Example questionnaire `PcorExampleQuestionnaire` as a template (item types `group`, `choice`, `date`, `string`)
 
-**`documentation`** Seitenstruktur: Startseite, Fragebögen, Anwendung (QuestionnaireResponse, Population, Extraktion), Release Notes
+**`documentation`** Page structure: Home, Questionnaires, Implementation (QuestionnaireResponse, population, extraction), Release Notes
 
-**`documentation`** CC-BY-4.0-Lizenz
+**`documentation`** CC-BY-4.0 license
 

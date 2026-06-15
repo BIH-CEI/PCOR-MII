@@ -6,7 +6,10 @@
     "name" : "DemBeziehungsstatusVS",
     "title" : "DEM Beziehungsstatus",
     "description" : "Partnerschaftsstatus (GIPS04).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-einkommen-vs",
@@ -15,7 +18,10 @@
     "name" : "DemEinkommenVS",
     "title" : "DEM Haushaltseinkommen",
     "description" : "Einkommensbänder (Q_OECDLIT7a).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-erwerbsstatus-vs",
@@ -24,7 +30,10 @@
     "name" : "DemErwerbsstatusVS",
     "title" : "DEM Erwerbsstatus",
     "description" : "Aktuelle Arbeitssituation (Q_OECDLIT5a).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-geschlecht-vs",
@@ -33,7 +42,10 @@
     "name" : "DemGeschlechtVS",
     "title" : "DEM Geschlecht",
     "description" : "Selbstbeschriebenes Geschlecht (Q_SEX).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-haeufigkeit-5-vs",
@@ -42,7 +54,10 @@
     "name" : "DemHaeufigkeit5VS",
     "title" : "DEM Häufigkeit (5-stufig)",
     "description" : "5-stufige Häufigkeitsskala (MONMEAL/MONRENT/MONBILLS).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-isced-vs",
@@ -51,7 +66,10 @@
     "name" : "DemIscedVS",
     "title" : "DEM Bildungsabschluss (ISCED)",
     "description" : "Höchster Bildungsabschluss (Q_ISCED).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein",
@@ -60,7 +78,10 @@
     "name" : "DemJaNeinVS",
     "title" : "DEM Ja/Nein",
     "description" : "Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
@@ -69,7 +90,10 @@
     "name" : "DemJaNeinKaVS",
     "title" : "DEM Ja/Nein/Keine Angabe",
     "description" : "Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS.",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-nz-vs",
@@ -78,7 +102,10 @@
     "name" : "DemJaNeinNzVS",
     "title" : "DEM Ja/Nein/Nicht zutreffend",
     "description" : "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS.",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-leichtigkeit-6-vs",
@@ -87,7 +114,10 @@
     "name" : "DemLeichtigkeit6VS",
     "title" : "DEM Leichtigkeit Unterstützung (6-stufig)",
     "description" : "Leichtigkeit, Unterstützung zu erhalten (WHODIS1/2).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-rentenstatus-vs",
@@ -96,7 +126,10 @@
     "name" : "DemRentenstatusVS",
     "title" : "DEM Rentenstatus",
     "description" : "Rentenstatus (GIPS10).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-urbanizitaet-vs",
@@ -105,7 +138,10 @@
     "name" : "DemUrbanizitaetVS",
     "title" : "DEM Urbanizität",
     "description" : "Wohnort-Typ (Q_OECDLITii).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-zigaretten-band-vs",
@@ -114,6 +150,9 @@
     "name" : "DemZigarettenBandVS",
     "title" : "DEM Zigaretten pro Tag",
     "description" : "Zigaretten/Tag in Bändern (GIPS57b).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"]
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"],
+    "uses" : {
+    },
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   }]
 }

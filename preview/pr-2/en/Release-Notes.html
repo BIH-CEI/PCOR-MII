@@ -208,6 +208,21 @@ nav.navbar.navbar-inverse {
 
               
 
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/Release-Notes.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
       <!-- /HEADER CONTENT -->
@@ -255,6 +270,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
+
 
 
 
@@ -267,43 +284,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#versionierung" id="markdown-toc-versionierung">Versionierung</a></li>
+  <li><a href="#versioning" id="markdown-toc-versioning">Versioning</a></li>
   <li><a href="#v010-2026-06-04--initial-draft" id="markdown-toc-v010-2026-06-04--initial-draft">v0.1.0 (2026-06-04) — Initial Draft</a></li>
 </ul>
 
 </div>
-<h3 id="versionierung">Versionierung</h3>
+<h3 id="versioning">Versioning</h3>
 
-<p>Dieser IG folgt <a href="https://semver.org/">Semantic Versioning 2.0.0</a>:</p>
+<p>This IG follows <a href="https://semver.org/">Semantic Versioning 2.0.0</a>:</p>
 
 <ul>
-  <li><strong>MAJOR</strong> — inkompatible Änderungen an normativem Inhalt (Item-Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Terminologie-Bindungen)</li>
-  <li><strong>MINOR</strong> — neue Questionnaires, Items, Beispiele oder abwärtskompatible Verbesserungen</li>
-  <li><strong>PATCH</strong> — Korrekturen von Fehlern in normativem Inhalt (falsche Codes, fehlerhafte Constraints)</li>
+  <li><strong>MAJOR</strong> — incompatible changes to normative content (item structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, terminology bindings)</li>
+  <li><strong>MINOR</strong> — new questionnaires, items, examples, or backward-compatible improvements</li>
+  <li><strong>PATCH</strong> — fixes to errors in normative content (wrong codes, incorrect constraints)</li>
 </ul>
 
-<p>Versionen <code class="language-plaintext highlighter-rouge">0.x.y</code> kennzeichnen die frühe Entwicklung — die Spezifikation ist noch nicht stabil. Version <code class="language-plaintext highlighter-rouge">1.0.0</code> markiert das erste stabile Release nach fachlicher Abstimmung und formaler Veröffentlichung.</p>
+<p>Versions <code class="language-plaintext highlighter-rouge">0.x.y</code> indicate initial development — the specification is not yet stable. Version <code class="language-plaintext highlighter-rouge">1.0.0</code> will mark the first stable release after expert review and formal publication.</p>
 
-<p>Jede Änderung ist einer der folgenden Kategorien zugeordnet:</p>
+<p>Each change is tagged with one of the following categories:</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> — neuer Inhalt (Questionnaires, Items, ValueSets, Beispiele)</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> — Verfeinerung oder Erweiterung bestehenden normativen Inhalts</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> — Korrektur von Fehlern in normativem Inhalt</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> — Dokumentationsänderungen ohne Auswirkung auf normative Aspekte</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> — new content (questionnaires, items, ValueSets, examples)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> — refinement or extension of existing normative content</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> — correction of errors in normative content</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> — documentation changes with no impact on normative aspects</li>
 </ul>
 
 <hr />
 
 <h3 id="v010-2026-06-04--initial-draft">v0.1.0 (2026-06-04) — Initial Draft</h3>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Erstaufbau des PCOR-MII Implementation Guide mit BIH-Corporate-Design-Template, Mehrsprachigkeit (Deutsch als Standardsprache, Englisch als Übersetzung) und CI/CD-Pipeline (GitHub Actions → GitHub Pages)</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Initial setup of the PCOR-MII Implementation Guide with BIH corporate design template, multi-language support (German default, English translation), and CI/CD pipeline (GitHub Actions → GitHub Pages)</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Beispiel-Questionnaire <code class="language-plaintext highlighter-rouge">PcorExampleQuestionnaire</code> als Vorlage (Item-Typen <code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">choice</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">string</code>)</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Example questionnaire <code class="language-plaintext highlighter-rouge">PcorExampleQuestionnaire</code> as a template (item types <code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">choice</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">string</code>)</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Seitenstruktur: Startseite, Fragebögen, Anwendung (QuestionnaireResponse, Population, Extraktion), Release Notes</p>
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Page structure: Home, Questionnaires, Implementation (QuestionnaireResponse, population, extraction), Release Notes</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> CC-BY-4.0-Lizenz</p>
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> CC-BY-4.0 license</p>
 
 
 
@@ -355,7 +372,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 15:11:00 +0000">
+  <span title="2026-06-15 15:19:00 +0000">
     2026-06-15
   </span>
 

@@ -2,6 +2,8 @@
 
 ## PROMIS-33 Profile v2.1
 
+**Translated page. Original language: German.**
+
 PROMIS®-33 Profile v2.1 ist die erweiterte Variante der PROMIS-Profile mit 33 Items über 8 Domänen (Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Ability to Participate in Social Roles and Activities, Pain Interference, **Cognitive Function**) plus Schmerzintensität. Gegenüber PROMIS-29 ergänzt PROMIS-33 vier Cognitive-Function-Items, behält die Item-Tiefe der anderen Domänen (jeweils 4 Items) bei.
 
 > **Status in PCOR-MII**: geplant, noch nicht implementiert.Der zugehörige FHIR-Questionnaire ist im MII PRO-Modul aktuell **nicht** verfügbar. Die Implementierung ist als Nachfolge-Erweiterung zu PROMIS-29 vorgesehen, sobald PHO und PCOR-MII den finalen validierten deutschen Wording-Stand bereitstellen. Diese Seite dient zunächst als Platzhalter zur sichtbaren Kennzeichnung des geplanten Umfangs.

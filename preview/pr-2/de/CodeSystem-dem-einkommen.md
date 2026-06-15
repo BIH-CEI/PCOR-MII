@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-15T14:42:41+00:00",
+  "date" : "2026-06-15T15:19:45+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
