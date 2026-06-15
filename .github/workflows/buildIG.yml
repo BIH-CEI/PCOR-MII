@@ -1,18 +1,18 @@
-name: Build IG and Deploy to GitHub Pages
+name: Build IG and Deploy
 
 on:
   push:
-    branches: [ main, development ]
+    branches: [main, development]
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  pull-requests: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -62,18 +62,60 @@ jobs:
           chmod +x _build.sh
           ./_build.sh -y
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload built IG as artifact
+        uses: actions/upload-artifact@v4
         with:
+          name: ig-output
           path: output
+          retention-days: 14
 
-  deploy:
+  deploy-main:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: ig-output
+          path: output
+
+      - name: Deploy main to gh-pages root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          keep_files: true
+          commit_message: "deploy(main): ${{ github.sha }}"
+
+  deploy-preview:
+    if: github.event_name == 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ig-output
+          path: output
+
+      - name: Deploy PR preview to gh-pages /preview/pr-N
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+          destination_dir: preview/pr-${{ github.event.pull_request.number }}
+          keep_files: true
+          commit_message: "deploy(pr-${{ github.event.pull_request.number }}): ${{ github.event.pull_request.head.sha }}"
+
+      - name: Comment preview URL on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          message: |
+            🚀 **PR Preview deployed**
+
+            📖 Preview: https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/
+            🕐 Commit `${{ github.event.pull_request.head.sha }}` · ${{ github.run_id }}
+
+            *Wird beim Schließen des PRs automatisch entfernt.*
