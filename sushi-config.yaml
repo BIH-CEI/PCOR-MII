@@ -61,13 +61,11 @@ pages:
 # resource), the code is the YAML key.
 parameters:
   shownav: true
-  # i18n-Multi-Lang-Setup bewusst deaktiviert: IG wird DE-first single-language gerendert.
-  # IG Publisher würde mit i18n-lang+translation-sources alle Seiten in /de/ und /en/ ablegen
-  # und Root-Stubs mit JS-Redirect erzeugen — das macht die URLs unhandlich und der eigentliche
-  # Render-Inhalt (FHIR-Ressourcen-Detail-Seiten) wird sowieso nicht aus translation-Extensions
-  # gespeist, sondern nur aus text-Feldern. Daher: single-lang DE; Übersetzungs-Inhalte aus
-  # input/translations/en/ aktuell ungenutzt (bleiben im Repo für späteren Wiedereinsatz, z.B.
-  # über Liquid-Template oder pre-rendering).
+  i18n-default-lang: de           # Standardsprache: Deutsch
+  i18n-lang:
+    - en                          # Zusätzliche Sprache: Englisch
+  translation-sources:
+    - input/translations/en       # Pfad zu den englischen Übersetzungen
   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 
