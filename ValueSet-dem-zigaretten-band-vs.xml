@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dem-zigaretten-band-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet dem-zigaretten-band-vs</b></p><a name="dem-zigaretten-band-vs"> </a><a name="hcdem-zigaretten-band-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-dem-zigaretten-band.html">codesystem DEM Zigaretten pro Tag (Bänder) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b1"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b1">b1</a></td><td>1-10</td></tr><tr><td><a name="dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b2"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b2">b2</a></td><td>11-20</td></tr><tr><td><a name="dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b3"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b3">b3</a></td><td>21-30</td></tr><tr><td><a name="dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b4"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b4">b4</a></td><td>&gt; 30</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet dem-zigaretten-band-vs</b></p><a name="en-dem-zigaretten-band-vs"> </a><a name="en-hcdem-zigaretten-band-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-dem-zigaretten-band.html">codesystem DEM Zigaretten pro Tag (Bänder) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="en-dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b1"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b1">b1</a></td><td>1-10</td></tr><tr><td><a name="en-dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b2"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b2">b2</a></td><td>11-20</td></tr><tr><td><a name="en-dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b3"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b3">b3</a></td><td>21-30</td></tr><tr><td><a name="en-dem-zigaretten-band-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band-b4"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-zigaretten-band.html#dem-zigaretten-band-b4">b4</a></td><td>&gt; 30</td></tr></table></div></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/dem-zigaretten-band-vs"/>
+  <version value="0.1.0"/>
+  <name value="DemZigarettenBandVS"/>
+  <title value="DEM Zigaretten pro Tag"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-15T14:40:34+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Zigaretten/Tag in Bändern (GIPS57b)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-06-10T00:00:00Z"/>
+    <parameter>
+      <name value="used-codesystem"/>
+      <valueUri value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band|0.1.0"/>
+    </parameter>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+      <code value="b1"/>
+      <display value="1-10"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+      <code value="b2"/>
+      <display value="11-20"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+      <code value="b3"/>
+      <display value="21-30"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+      <code value="b4"/>
+      <display value="&gt; 30"/>
+    </contains>
+  </expansion>
+</ValueSet>
