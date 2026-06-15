@@ -208,21 +208,6 @@ nav.navbar.navbar-inverse {
 
               
 
-
-<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
-  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-  </div>
-  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
- 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-
-    <div><a href="../de/index.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
-
-  </div>
-</div>
-
-
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
       <!-- /HEADER CONTENT -->
@@ -319,8 +304,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
-
 
 
 
@@ -333,57 +316,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#objective-of-the-implementation-guide" id="markdown-toc-objective-of-the-implementation-guide">Objective of the Implementation Guide</a></li>
-  <li><a href="#target-groups" id="markdown-toc-target-groups">Target Groups</a></li>
-  <li><a href="#structure-of-the-implementation-guide" id="markdown-toc-structure-of-the-implementation-guide">Structure of the Implementation Guide</a></li>
-  <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
+  <li><a href="#ziel-des-implementation-guide" id="markdown-toc-ziel-des-implementation-guide">Ziel des Implementation Guide</a></li>
+  <li><a href="#zielgruppen" id="markdown-toc-zielgruppen">Zielgruppen</a></li>
+  <li><a href="#struktur-des-implementation-guide" id="markdown-toc-struktur-des-implementation-guide">Struktur des Implementation Guide</a></li>
+  <li><a href="#kontakt" id="markdown-toc-kontakt">Kontakt</a></li>
 </ul>
 
 </div>
-<p>The PCOR-MII Implementation Guide defines standardized <strong>FHIR R4 Questionnaires</strong> for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the <a href="https://www.medizininformatik-initiative.de/">German Medical Informatics Initiative (MII)</a> and explains their application.</p>
+<p>Der PCOR-MII Implementation Guide definiert standardisierte <strong>FHIR R4 Questionnaires</strong> für die Erfassung patientenzentrierter Daten (Patient-Centered Outcomes Research, PCOR) im Kontext der <a href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative (MII)</a> und erklärt ihre Anwendung.</p>
 
-<h3 id="objective-of-the-implementation-guide">Objective of the Implementation Guide</h3>
+<h3 id="ziel-des-implementation-guide">Ziel des Implementation Guide</h3>
 
-<p>This IG provides uniform, interoperable questionnaires that allow patient-reported information to be collected in a structured, cross-site comparable, and machine-readable way. It defines:</p>
+<p>Dieser IG stellt einheitliche, interoperable Fragebögen bereit, mit denen patientenberichtete Angaben strukturiert, standortübergreifend vergleichbar und maschinenlesbar erhoben werden können. Definiert werden:</p>
 
 <ul>
-  <li><strong>Questionnaires</strong> – FHIR questionnaire definitions with unique <code class="language-plaintext highlighter-rouge">linkId</code>s, item types, and answer options</li>
-  <li><strong>Application guidance</strong> – how the questionnaires are filled in (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>), pre-populated, and evaluated</li>
-  <li><strong>Terminology bindings</strong> – where required, links to LOINC, SNOMED CT, and project-specific CodeSystems/ValueSets</li>
+  <li><strong>Questionnaires</strong> – FHIR-Fragebogen-Definitionen mit eindeutigen <code class="language-plaintext highlighter-rouge">linkId</code>s, Item-Typen und Antwortoptionen</li>
+  <li><strong>Anwendungshinweise</strong> – wie die Fragebögen ausgefüllt (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>), vorbefüllt (Population) und ausgewertet werden</li>
+  <li><strong>Terminologie-Bindungen</strong> – soweit erforderlich, Anbindung an LOINC, SNOMED CT und projektspezifische CodeSysteme/ValueSets</li>
 </ul>
 
-<h3 id="target-groups">Target Groups</h3>
+<h3 id="zielgruppen">Zielgruppen</h3>
 
-<p><strong>Primary target groups:</strong></p>
+<p><strong>Primäre Zielgruppen:</strong></p>
 <ul>
-  <li>Software developers and system integrators embedding questionnaires into research and care systems</li>
-  <li>Data Integration Centers of the MII sites</li>
+  <li>Software-Entwickler:innen und Systemintegrator:innen, die Fragebögen in Studien- und Versorgungssysteme einbinden</li>
+  <li>Datenintegrationszentren der MII-Standorte</li>
 </ul>
 
-<p><strong>Secondary target groups:</strong></p>
+<p><strong>Sekundäre Zielgruppen:</strong></p>
 <ul>
-  <li>Researchers evaluating patient-reported outcomes</li>
-  <li>Vendors of ePRO / study software</li>
+  <li>Forschende, die patientenberichtete Outcomes auswerten</li>
+  <li>Hersteller von ePRO-/Studien-Software</li>
 </ul>
 
-<h3 id="structure-of-the-implementation-guide">Structure of the Implementation Guide</h3>
+<h3 id="struktur-des-implementation-guide">Struktur des Implementation Guide</h3>
 
-<p>Accessible via the menu bar:</p>
+<p>Über die Menüleiste erreichbar:</p>
 
 <ol>
-  <li><strong>Questionnaires</strong> – overview of the defined questionnaires and their structure</li>
-  <li><strong>Implementation</strong> – detailed description of how the questionnaires are filled in and evaluated</li>
-  <li><strong>Release Notes</strong> – versioning and change history</li>
-  <li><strong>Artifacts</strong> – machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)</li>
+  <li><strong>Fragebögen</strong> – Überblick über die definierten Questionnaires und ihren Aufbau</li>
+  <li><strong>Anwendung</strong> – detaillierte Beschreibung, wie die Fragebögen ausgefüllt und ausgewertet werden</li>
+  <li><strong>Release Notes</strong> – Versionierung und Änderungshistorie</li>
+  <li><strong>Artefakte</strong> – maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme)</li>
 </ol>
 
-<h3 id="contact">Contact</h3>
+<h3 id="kontakt">Kontakt</h3>
 
 <ul>
-  <li>Technical questions or comments: thimo-andre.hoelter[at]charite.de or <a href="https://github.com/BIH-CEI/PCOR-MII/issues">GitHub Issues</a></li>
+  <li>Technische Fragen oder Anmerkungen: thimo-andre.hoelter[at]charite.de oder <a href="https://github.com/BIH-CEI/PCOR-MII/issues">GitHub Issues</a></li>
 </ul>
 
-<p>This Implementation Guide is maintained by the <a href="https://www.bihealth.org/">Berlin Institute of Health (BIH) – Core Unit eHealth &amp; Interoperability (CEI)</a> at <a href="https://www.charite.de/">Charité – Universitätsmedizin Berlin</a>.</p>
+<p>Dieser Implementation Guide wird vom <a href="https://www.bihealth.org/">Berlin Institute of Health (BIH) – Core Unit eHealth &amp; Interoperability (CEI)</a> an der <a href="https://www.charite.de/">Charité – Universitätsmedizin Berlin</a> gepflegt.</p>
 
 
 
@@ -435,7 +418,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 14:42:00 +0000">
+  <span title="2026-06-15 15:11:00 +0000">
     2026-06-15
   </span>
 

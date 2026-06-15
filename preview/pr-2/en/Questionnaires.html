@@ -208,21 +208,6 @@ nav.navbar.navbar-inverse {
 
               
 
-
-<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
-  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-  </div>
-  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
- 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-
-    <div><a href="../de/Questionnaires.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
-
-  </div>
-</div>
-
-
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
       <!-- /HEADER CONTENT -->
@@ -270,8 +255,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
-
 
 
 
@@ -284,61 +267,61 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
-  <li><a href="#structure-of-a-questionnaire" id="markdown-toc-structure-of-a-questionnaire">Structure of a Questionnaire</a></li>
-  <li><a href="#conventions" id="markdown-toc-conventions">Conventions</a></li>
+  <li><a href="#fragebögen-nach-kategorie" id="markdown-toc-fragebögen-nach-kategorie">Fragebögen nach Kategorie</a></li>
+  <li><a href="#aufbau-eines-questionnaires" id="markdown-toc-aufbau-eines-questionnaires">Aufbau eines Questionnaires</a></li>
+  <li><a href="#konventionen" id="markdown-toc-konventionen">Konventionen</a></li>
 </ul>
 
 </div>
-<p>This page gives an overview of the questionnaires defined in the PCOR-MII Implementation Guide. The full, machine-readable definitions can be found under <a href="artifacts.html">Artifacts</a>.</p>
+<p>Diese Seite gibt einen Überblick über die im PCOR-MII Implementation Guide definierten Fragebögen. Die vollständigen, maschinenlesbaren Definitionen finden sich unter <a href="artifacts.html">Artefakte</a>.</p>
 
-<h3 id="overview">Overview</h3>
+<h3 id="fragebögen-nach-kategorie">Fragebögen nach Kategorie</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Questionnaire</th>
-      <th>Description</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="Questionnaire-PcorExampleQuestionnaire.html">PCOR Example Questionnaire</a></td>
-      <td>Template for capturing patient-reported information</td>
-      <td>draft</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="demographie">Demographie</h4>
+
+<ul>
+  <li><a href="Questionnaire-DEM.html">DEM — Demographics &amp; Medical History</a> — Soziodemographie und medizinische Vorgeschichte (Screening)</li>
+</ul>
+
+<h4 id="patient-reported-outcomes-promis"><a href="PROMIS.html">Patient-Reported Outcomes (PROMIS)</a></h4>
+
+<p>Aus dem <a href="https://simplifier.net/guide/mii-pro-v2026-de">MII PRO-Modul</a> referenziert (Dependency <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1</code>, kein eigener Nachbau). Lizenz folgt dem <a href="https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS">4-Schichten-Copyright-Modell</a> (PHO + CPCOR + LOINC + MII). Übersicht: <a href="PROMIS.html">PROMIS-Sektion</a>.</p>
+
+<ul>
+  <li><a href="PROMIS-33.html"><strong>PROMIS-33 Profile v2.1</strong></a> — Multi-Domain HRQoL inkl. Cognitive Function, 33 Items (<em>geplant, noch nicht im MII PRO-Modul implementiert</em>)</li>
+  <li><a href="PROMIS-29.html"><strong>PROMIS-29 Profile v2.1</strong></a> — Multi-Domain HRQoL, 29 Items über 7 Domänen + Schmerzintensität</li>
+  <li><a href="PROMIS-Cognitive-Function.html"><strong>PROMIS Cognitive Function SF 4a</strong></a> — kognitive Funktion (Selbstauskunft), 4 Items</li>
+  <li><a href="PROMIS-16.html"><strong>PROMIS-16 Profile v2.1 (PROPr)</strong></a> — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)</li>
+</ul>
 
 <blockquote>
-  <p>The included questionnaire is a <strong>template</strong>. Define your own questionnaires as FSH files under <code class="language-plaintext highlighter-rouge">input/fsh/Questionnaires/</code> (copy <code class="language-plaintext highlighter-rouge">PCOR_Example_Questionnaire.fsh</code> as a starting point).</p>
+  <p>Weitere Fragebögen werden als FSH-Datei unter <code class="language-plaintext highlighter-rouge">input/fsh/Questionnaires/</code> angelegt und hier unter der passenden Kategorie verlinkt. Als Ausgangspunkt dient der <a href="Questionnaire-PcorExampleQuestionnaire.html">PCOR Beispiel-Fragebogen</a> (Vorlage).</p>
 </blockquote>
 
-<h3 id="structure-of-a-questionnaire">Structure of a Questionnaire</h3>
+<h3 id="aufbau-eines-questionnaires">Aufbau eines Questionnaires</h3>
 
-<p>A FHIR <code class="language-plaintext highlighter-rouge">Questionnaire</code> is built hierarchically from <strong>items</strong>. Each item has:</p>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">linkId</code></strong> – unique, stable identifier of the item (the basis for later evaluation)</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">text</code></strong> – the displayed question or group heading</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – e.g. <code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">string</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">choice</code>, <code class="language-plaintext highlighter-rouge">integer</code>, <code class="language-plaintext highlighter-rouge">boolean</code>, <code class="language-plaintext highlighter-rouge">decimal</code></li>
-  <li><strong><code class="language-plaintext highlighter-rouge">required</code></strong> / <strong><code class="language-plaintext highlighter-rouge">repeats</code></strong> – mandatory and repeatability flags</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">answerOption</code></strong> or <strong><code class="language-plaintext highlighter-rouge">answerValueSet</code></strong> – permitted answers for <code class="language-plaintext highlighter-rouge">choice</code> items</li>
-</ul>
-
-<p>Items of type <code class="language-plaintext highlighter-rouge">group</code> bundle thematically related questions and can be nested.</p>
-
-<h3 id="conventions">Conventions</h3>
+<p>Ein FHIR <code class="language-plaintext highlighter-rouge">Questionnaire</code> ist hierarchisch aus <strong>Items</strong> aufgebaut. Jedes Item besitzt:</p>
 
 <ul>
-  <li><strong>Stable <code class="language-plaintext highlighter-rouge">linkId</code>s</strong>: once published, <code class="language-plaintext highlighter-rouge">linkId</code>s are not renamed, so existing <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s remain mappable.</li>
-  <li><strong>Meaningful, hierarchical <code class="language-plaintext highlighter-rouge">linkId</code>s</strong> (e.g. <code class="language-plaintext highlighter-rouge">pro.general-health</code>) ease evaluation and maintenance.</li>
-  <li><strong>Answer options</strong>: small, closed lists directly as <code class="language-plaintext highlighter-rouge">answerOption</code>; larger, reusable concept lists as <code class="language-plaintext highlighter-rouge">answerValueSet</code> with a dedicated ValueSet.</li>
-  <li><strong>Terminology</strong>: use coded answers (LOINC/SNOMED CT) instead of free text wherever possible to keep data analyzable.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">linkId</code></strong> – eindeutige, stabile Kennung des Items (Basis für die spätere Auswertung)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">text</code></strong> – die angezeigte Frage bzw. Gruppenüberschrift</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">type</code></strong> – z. B. <code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">string</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">choice</code>, <code class="language-plaintext highlighter-rouge">integer</code>, <code class="language-plaintext highlighter-rouge">boolean</code>, <code class="language-plaintext highlighter-rouge">decimal</code></li>
+  <li><strong><code class="language-plaintext highlighter-rouge">required</code></strong> / <strong><code class="language-plaintext highlighter-rouge">repeats</code></strong> – Pflicht- bzw. Wiederholbarkeit</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">answerOption</code></strong> oder <strong><code class="language-plaintext highlighter-rouge">answerValueSet</code></strong> – zulässige Antworten bei <code class="language-plaintext highlighter-rouge">choice</code>-Items</li>
 </ul>
 
-<p>Details on completion and evaluation are provided under <a href="Implementation.html">Implementation</a>.</p>
+<p>Items vom Typ <code class="language-plaintext highlighter-rouge">group</code> fassen inhaltlich zusammengehörige Fragen zusammen und können verschachtelt werden.</p>
+
+<h3 id="konventionen">Konventionen</h3>
+
+<ul>
+  <li><strong>Stabile <code class="language-plaintext highlighter-rouge">linkId</code>s</strong>: einmal veröffentlichte <code class="language-plaintext highlighter-rouge">linkId</code>s werden nicht umbenannt, damit bereits erfasste <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s zuordenbar bleiben.</li>
+  <li><strong>Sprechende, hierarchische <code class="language-plaintext highlighter-rouge">linkId</code>s</strong> (z. B. <code class="language-plaintext highlighter-rouge">pro.general-health</code>) erleichtern Auswertung und Pflege.</li>
+  <li><strong>Antwortoptionen</strong>: kleine, geschlossene Auswahllisten direkt als <code class="language-plaintext highlighter-rouge">answerOption</code>; größere, wiederverwendbare Konzeptlisten als <code class="language-plaintext highlighter-rouge">answerValueSet</code> mit eigenem ValueSet.</li>
+  <li><strong>Terminologie</strong>: wo möglich kodierte Antworten (LOINC/SNOMED CT) statt Freitext, um Auswertbarkeit zu sichern.</li>
+</ul>
+
+<p>Details zur Befüllung und Auswertung finden sich unter <a href="Implementation.html">Anwendung</a>.</p>
 
 
 
@@ -390,7 +373,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 14:42:00 +0000">
+  <span title="2026-06-15 15:11:00 +0000">
     2026-06-15
   </span>
 

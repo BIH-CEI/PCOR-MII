@@ -2,36 +2,43 @@
 
 ## Fragebögen
 
-**Translated page. Original language: German.**
+Diese Seite gibt einen Überblick über die im PCOR-MII Implementation Guide definierten Fragebögen. Die vollständigen, maschinenlesbaren Definitionen finden sich unter [Artefakte](artifacts.md).
 
-This page gives an overview of the questionnaires defined in the PCOR-MII Implementation Guide. The full, machine-readable definitions can be found under [Artifacts](artifacts.md).
+### Fragebögen nach Kategorie
 
-### Overview
+#### Demographie
 
-| | | |
-| :--- | :--- | :--- |
-| [PCOR Example Questionnaire](Questionnaire-PcorExampleQuestionnaire.md) | Template for capturing patient-reported information | draft |
+* [DEM — Demographics & Medical History](Questionnaire-DEM.md) — Soziodemographie und medizinische Vorgeschichte (Screening)
 
-> The included questionnaire is a **template**. Define your own questionnaires as FSH files under `input/fsh/Questionnaires/` (copy `PCOR_Example_Questionnaire.fsh` as a starting point).
+#### Patient-Reported Outcomes (PROMIS)
 
-### Structure of a Questionnaire
+Aus dem [MII PRO-Modul](https://simplifier.net/guide/mii-pro-v2026-de) referenziert (Dependency `de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1`, kein eigener Nachbau). Lizenz folgt dem [4-Schichten-Copyright-Modell](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS) (PHO + CPCOR + LOINC + MII). Übersicht: [PROMIS-Sektion](PROMIS.md).
 
-A FHIR `Questionnaire` is built hierarchically from **items**. Each item has:
+* [**PROMIS-33 Profile v2.1**](PROMIS-33.md) — Multi-Domain HRQoL inkl. Cognitive Function, 33 Items (**geplant, noch nicht im MII PRO-Modul implementiert**)
+* [**PROMIS-29 Profile v2.1**](PROMIS-29.md) — Multi-Domain HRQoL, 29 Items über 7 Domänen + Schmerzintensität
+* [**PROMIS Cognitive Function SF 4a**](PROMIS-Cognitive-Function.md) — kognitive Funktion (Selbstauskunft), 4 Items
+* [**PROMIS-16 Profile v2.1 (PROPr)**](PROMIS-16.md) — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)
 
-* **`linkId`** – unique, stable identifier of the item (the basis for later evaluation)
-* **`text`** – the displayed question or group heading
-* **`type`** – e.g. `group`, `string`, `date`, `choice`, `integer`, `boolean`, `decimal`
-* **`required`** / **`repeats`** – mandatory and repeatability flags
-* **`answerOption`** or **`answerValueSet`** – permitted answers for `choice` items
+> Weitere Fragebögen werden als FSH-Datei unter `input/fsh/Questionnaires/` angelegt und hier unter der passenden Kategorie verlinkt. Als Ausgangspunkt dient der [PCOR Beispiel-Fragebogen](Questionnaire-PcorExampleQuestionnaire.md) (Vorlage).
 
-Items of type `group` bundle thematically related questions and can be nested.
+### Aufbau eines Questionnaires
 
-### Conventions
+Ein FHIR `Questionnaire` ist hierarchisch aus **Items** aufgebaut. Jedes Item besitzt:
 
-* **Stable `linkId`s**: once published, `linkId`s are not renamed, so existing `QuestionnaireResponse`s remain mappable.
-* **Meaningful, hierarchical `linkId`s** (e.g. `pro.general-health`) ease evaluation and maintenance.
-* **Answer options**: small, closed lists directly as `answerOption`; larger, reusable concept lists as `answerValueSet` with a dedicated ValueSet.
-* **Terminology**: use coded answers (LOINC/SNOMED CT) instead of free text wherever possible to keep data analyzable.
+* **`linkId`** – eindeutige, stabile Kennung des Items (Basis für die spätere Auswertung)
+* **`text`** – die angezeigte Frage bzw. Gruppenüberschrift
+* **`type`** – z. B. `group`, `string`, `date`, `choice`, `integer`, `boolean`, `decimal`
+* **`required`** / **`repeats`** – Pflicht- bzw. Wiederholbarkeit
+* **`answerOption`** oder **`answerValueSet`** – zulässige Antworten bei `choice`-Items
 
-Details on completion and evaluation are provided under [Implementation](Implementation.md).
+Items vom Typ `group` fassen inhaltlich zusammengehörige Fragen zusammen und können verschachtelt werden.
+
+### Konventionen
+
+* **Stabile `linkId`s**: einmal veröffentlichte `linkId`s werden nicht umbenannt, damit bereits erfasste `QuestionnaireResponse`s zuordenbar bleiben.
+* **Sprechende, hierarchische `linkId`s** (z. B. `pro.general-health`) erleichtern Auswertung und Pflege.
+* **Antwortoptionen**: kleine, geschlossene Auswahllisten direkt als `answerOption`; größere, wiederverwendbare Konzeptlisten als `answerValueSet` mit eigenem ValueSet.
+* **Terminologie**: wo möglich kodierte Antworten (LOINC/SNOMED CT) statt Freitext, um Auswertbarkeit zu sichern.
+
+Details zur Befüllung und Auswertung finden sich unter [Anwendung](Implementation.md).
 

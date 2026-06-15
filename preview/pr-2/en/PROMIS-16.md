@@ -2,8 +2,6 @@
 
 ## PROMIS-16 Profile v2.1 (PROPr)
 
-**Translated page. Original language: German.**
-
 PROMIS®-16 Profile v2.1 (PROPr) ist die ultrakurze Variante der PROMIS-Profile mit 16 Items über 8 Domänen (Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Ability to Participate in Social Roles and Activities, Pain Interference, **Cognitive Function**). Im Vergleich zu PROMIS-29 ergänzt PROMIS-16 die Cognitive-Function-Domäne und reduziert die Item-Last pro Domäne auf zwei Items.
 
 ### Verwendung in PCOR-MII

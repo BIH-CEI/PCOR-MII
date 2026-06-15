@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-15T14:42:41+00:00",
+  "date" : "2026-06-15T15:11:11+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

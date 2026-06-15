@@ -2,8 +2,6 @@
 
 ## PROMIS
 
-**Translated page. Original language: German.**
-
 **PROMIS®** (Patient-Reported Outcomes Measurement Information System) ist ein vom US National Institutes of Health (NIH) gegründetes Instrumentariums-Framework zur standardisierten Erfassung patientenberichteter Gesundheitszustände über mehrere Domänen hinweg (z.B. Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Pain Interference, Social Function, Cognitive Function).
 
 Die PROMIS Health Organization (PHO) pflegt die Item-Banken und Profile international; das **PROMIS National Center Deutschland** (CPCOR Charité, Leitung Felix Fischer) verantwortet die validierten deutschen Übersetzungen.

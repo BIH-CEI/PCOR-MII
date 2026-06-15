@@ -2,42 +2,40 @@
 
 ## Startseite
 
-**Translated page. Original language: German.**
+Der PCOR-MII Implementation Guide definiert standardisierte **FHIR R4 Questionnaires** für die Erfassung patientenzentrierter Daten (Patient-Centered Outcomes Research, PCOR) im Kontext der [Medizininformatik-Initiative (MII)](https://www.medizininformatik-initiative.de/) und erklärt ihre Anwendung.
 
-The PCOR-MII Implementation Guide defines standardized **FHIR R4 Questionnaires** for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the [German Medical Informatics Initiative (MII)](https://www.medizininformatik-initiative.de/) and explains their application.
+### Ziel des Implementation Guide
 
-### Objective of the Implementation Guide
+Dieser IG stellt einheitliche, interoperable Fragebögen bereit, mit denen patientenberichtete Angaben strukturiert, standortübergreifend vergleichbar und maschinenlesbar erhoben werden können. Definiert werden:
 
-This IG provides uniform, interoperable questionnaires that allow patient-reported information to be collected in a structured, cross-site comparable, and machine-readable way. It defines:
+* **Questionnaires** – FHIR-Fragebogen-Definitionen mit eindeutigen `linkId`s, Item-Typen und Antwortoptionen
+* **Anwendungshinweise** – wie die Fragebögen ausgefüllt (`QuestionnaireResponse`), vorbefüllt (Population) und ausgewertet werden
+* **Terminologie-Bindungen** – soweit erforderlich, Anbindung an LOINC, SNOMED CT und projektspezifische CodeSysteme/ValueSets
 
-* **Questionnaires** – FHIR questionnaire definitions with unique `linkId`s, item types, and answer options
-* **Application guidance** – how the questionnaires are filled in (`QuestionnaireResponse`), pre-populated, and evaluated
-* **Terminology bindings** – where required, links to LOINC, SNOMED CT, and project-specific CodeSystems/ValueSets
+### Zielgruppen
 
-### Target Groups
+**Primäre Zielgruppen:**
 
-**Primary target groups:**
+* Software-Entwickler:innen und Systemintegrator:innen, die Fragebögen in Studien- und Versorgungssysteme einbinden
+* Datenintegrationszentren der MII-Standorte
 
-* Software developers and system integrators embedding questionnaires into research and care systems
-* Data Integration Centers of the MII sites
+**Sekundäre Zielgruppen:**
 
-**Secondary target groups:**
+* Forschende, die patientenberichtete Outcomes auswerten
+* Hersteller von ePRO-/Studien-Software
 
-* Researchers evaluating patient-reported outcomes
-* Vendors of ePRO / study software
+### Struktur des Implementation Guide
 
-### Structure of the Implementation Guide
+Über die Menüleiste erreichbar:
 
-Accessible via the menu bar:
+1. **Fragebögen**– Überblick über die definierten Questionnaires und ihren Aufbau
+1. **Anwendung**– detaillierte Beschreibung, wie die Fragebögen ausgefüllt und ausgewertet werden
+1. **Release Notes**– Versionierung und Änderungshistorie
+1. **Artefakte**– maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme)
 
-1. **Questionnaires**– overview of the defined questionnaires and their structure
-1. **Implementation**– detailed description of how the questionnaires are filled in and evaluated
-1. **Release Notes**– versioning and change history
-1. **Artifacts**– machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)
+### Kontakt
 
-### Contact
+* Technische Fragen oder Anmerkungen: thimo-andre.hoelter[at]charite.de oder [GitHub Issues](https://github.com/BIH-CEI/PCOR-MII/issues)
 
-* Technical questions or comments: thimo-andre.hoelter[at]charite.de or [GitHub Issues](https://github.com/BIH-CEI/PCOR-MII/issues)
-
-This Implementation Guide is maintained by the [Berlin Institute of Health (BIH) – Core Unit eHealth & Interoperability (CEI)](https://www.bihealth.org/) at [Charité – Universitätsmedizin Berlin](https://www.charite.de/).
+Dieser Implementation Guide wird vom [Berlin Institute of Health (BIH) – Core Unit eHealth & Interoperability (CEI)](https://www.bihealth.org/) an der [Charité – Universitätsmedizin Berlin](https://www.charite.de/) gepflegt.
 

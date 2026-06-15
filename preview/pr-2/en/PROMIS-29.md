@@ -2,8 +2,6 @@
 
 ## PROMIS-29 Profile v2.1
 
-**Translated page. Original language: German.**
-
 PROMIS®-29 Profile v2.1 ist das umfassende Multi-Domain-Instrument zur Erfassung der gesundheitsbezogenen Lebensqualität. 29 Items decken sieben Domänen (Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Ability to Participate in Social Roles and Activities, Pain Interference) plus ein Schmerzintensitäts-Single-Item ab.
 
 ### Verwendung in PCOR-MII

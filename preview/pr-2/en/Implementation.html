@@ -208,21 +208,6 @@ nav.navbar.navbar-inverse {
 
               
 
-
-<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
-  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-  </div>
-  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
- 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
-
-    <div><a href="../de/Implementation.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
-
-  </div>
-</div>
-
-
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
       <!-- /HEADER CONTENT -->
@@ -270,8 +255,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
-
 
 
 
@@ -284,38 +267,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#from-questionnaire-to-response" id="markdown-toc-from-questionnaire-to-response">From Questionnaire to Response</a></li>
-  <li><a href="#lifecycle" id="markdown-toc-lifecycle">Lifecycle</a></li>
-  <li><a href="#example-questionnaireresponse-excerpt" id="markdown-toc-example-questionnaireresponse-excerpt">Example: QuestionnaireResponse (excerpt)</a></li>
-  <li><a href="#validation" id="markdown-toc-validation">Validation</a></li>
-  <li><a href="#integration-notes" id="markdown-toc-integration-notes">Integration Notes</a></li>
+  <li><a href="#vom-questionnaire-zur-antwort" id="markdown-toc-vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</a></li>
+  <li><a href="#lebenszyklus" id="markdown-toc-lebenszyklus">Lebenszyklus</a></li>
+  <li><a href="#beispiel-questionnaireresponse-auszug" id="markdown-toc-beispiel-questionnaireresponse-auszug">Beispiel: QuestionnaireResponse (Auszug)</a></li>
+  <li><a href="#validierung" id="markdown-toc-validierung">Validierung</a></li>
+  <li><a href="#hinweise-zur-integration" id="markdown-toc-hinweise-zur-integration">Hinweise zur Integration</a></li>
 </ul>
 
 </div>
-<p>This page describes how the questionnaires defined in the PCOR-MII Implementation Guide are applied in practice.</p>
+<p>Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fragebögen in der Praxis angewendet werden.</p>
 
-<h3 id="from-questionnaire-to-response">From Questionnaire to Response</h3>
+<h3 id="vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</h3>
 
-<p>A <code class="language-plaintext highlighter-rouge">Questionnaire</code> is the <strong>definition</strong> of a form. The concrete answers of a person are captured as a <strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong>. They are linked via:</p>
+<p>Ein <code class="language-plaintext highlighter-rouge">Questionnaire</code> ist die <strong>Definition</strong> eines Fragebogens. Die konkreten Antworten einer Person werden als <strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> erfasst. Die Verknüpfung erfolgt über:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> → canonical URL of the <code class="language-plaintext highlighter-rouge">Questionnaire</code> (including version)</li>
-  <li>each answer references the corresponding item via the identical <strong><code class="language-plaintext highlighter-rouge">linkId</code></strong></li>
+  <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> → kanonische URL des <code class="language-plaintext highlighter-rouge">Questionnaire</code> (inkl. Version)</li>
+  <li>jede Antwort referenziert das zugehörige Item über die identische <strong><code class="language-plaintext highlighter-rouge">linkId</code></strong></li>
 </ul>
 
-<p>This keeps every captured answer unambiguously mapped to its question — even across system boundaries.</p>
+<p>Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch über Systemgrenzen hinweg.</p>
 
-<h3 id="lifecycle">Lifecycle</h3>
+<h3 id="lebenszyklus">Lebenszyklus</h3>
 
 <ol>
-  <li><strong>Provisioning</strong> – the <code class="language-plaintext highlighter-rouge">Questionnaire</code> is served from a FHIR server (<code class="language-plaintext highlighter-rouge">GET [base]/Questionnaire?url=...</code>).</li>
-  <li><strong>Rendering</strong> – a client (ePRO app, study portal) renders the items based on <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">text</code>, and answer options.</li>
-  <li><strong>Pre-population</strong> <em>(optional)</em> – existing data is pre-filled (e.g. via <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture, SDC</a>).</li>
-  <li><strong>Capture</strong> – the completed answers are stored as a <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (<code class="language-plaintext highlighter-rouge">status = completed</code>).</li>
-  <li><strong>Evaluation / extraction</strong> <em>(optional)</em> – relevant answers are transferred into other FHIR resources (e.g. <code class="language-plaintext highlighter-rouge">Observation</code>) via data extraction.</li>
+  <li><strong>Bereitstellung</strong> – das <code class="language-plaintext highlighter-rouge">Questionnaire</code> wird über einen FHIR-Server bereitgestellt (<code class="language-plaintext highlighter-rouge">GET [base]/Questionnaire?url=...</code>).</li>
+  <li><strong>Rendering</strong> – ein Client (ePRO-App, Studienportal) rendert die Items anhand von <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">text</code> und Antwortoptionen.</li>
+  <li><strong>Pre-Population</strong> <em>(optional)</em> – vorhandene Daten werden vorbefüllt (z. B. via <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture, SDC</a>).</li>
+  <li><strong>Erfassung</strong> – die ausgefüllten Antworten werden als <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> gespeichert (<code class="language-plaintext highlighter-rouge">status = completed</code>).</li>
+  <li><strong>Auswertung / Extraktion</strong> <em>(optional)</em> – relevante Antworten werden in andere FHIR-Ressourcen (z. B. <code class="language-plaintext highlighter-rouge">Observation</code>) überführt (Data Extraction).</li>
 </ol>
 
-<h3 id="example-questionnaireresponse-excerpt">Example: QuestionnaireResponse (excerpt)</h3>
+<h3 id="beispiel-questionnaireresponse-auszug">Beispiel: QuestionnaireResponse (Auszug)</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
@@ -326,23 +309,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w"> </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro.general-health"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Good"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+          </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gut"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="validation">Validation</h3>
+<h3 id="validierung">Validierung</h3>
 
-<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s can be validated against the corresponding <code class="language-plaintext highlighter-rouge">Questionnaire</code> — including mandatory items (<code class="language-plaintext highlighter-rouge">required</code>), permitted answer options, and data types. The IG Publisher / FHIR validator can validate against the definitions published here.</p>
+<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s können gegen das zugehörige <code class="language-plaintext highlighter-rouge">Questionnaire</code> validiert werden – u. a. auf Pflicht-Items (<code class="language-plaintext highlighter-rouge">required</code>), zulässige Antwortoptionen und Datentypen. Dies erlaubt der IG Publisher bzw. der FHIR-Validator gegen die hier veröffentlichten Definitionen.</p>
 
-<h3 id="integration-notes">Integration Notes</h3>
+<h3 id="hinweise-zur-integration">Hinweise zur Integration</h3>
 
 <ul>
-  <li><strong>Versioning</strong>: always capture answers against a <strong>versioned</strong> <code class="language-plaintext highlighter-rouge">Questionnaire</code> URL, so later changes to the form do not make existing data ambiguous.</li>
-  <li><strong>Structured Data Capture (SDC)</strong>: for pre-population and extraction, the HL7 SDC IG is recommended as a complementary standard.</li>
-  <li><strong>Multi-language</strong>: item texts can be provided in multiple languages via <code class="language-plaintext highlighter-rouge">translation</code> extensions.</li>
+  <li><strong>Versionierung</strong>: Antworten immer gegen eine <strong>versionierte</strong> <code class="language-plaintext highlighter-rouge">Questionnaire</code>-URL erfassen, damit spätere Änderungen am Fragebogen bestehende Daten nicht uneindeutig machen.</li>
+  <li><strong>Structured Data Capture (SDC)</strong>: Für Pre-Population und Extraktion empfiehlt sich der HL7-SDC-IG als ergänzender Standard.</li>
+  <li><strong>Mehrsprachigkeit</strong>: Item-Texte können über <code class="language-plaintext highlighter-rouge">translation</code>-Extensions mehrsprachig hinterlegt werden.</li>
 </ul>
 
 
@@ -395,7 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-15 14:42:00 +0000">
+  <span title="2026-06-15 15:11:00 +0000">
     2026-06-15
   </span>
 
