@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dem-ja-nein"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet dem-ja-nein</b></p><a name="en-dem-ja-nein"> </a><a name="en-hcdem-ja-nein"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-dem-antwort.html">codesystem DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 2 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="en-dem-ja-nein-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort-ja"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-antwort.html#dem-antwort-ja">ja</a></td><td>Ja</td></tr><tr><td><a name="en-dem-ja-nein-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort-nein"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-antwort.html#dem-antwort-nein">nein</a></td><td>Nein</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"/>
+  <version value="0.1.0"/>
+  <name value="DemJaNeinVS"/>
+  <title value="DEM Ja/Nein"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-15T14:42:41+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+      <concept>
+        <code value="ja"/>
+        <display value="Ja"/>
+      </concept>
+      <concept>
+        <code value="nein"/>
+        <display value="Nein"/>
+      </concept>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-06-10T00:00:00Z"/>
+    <parameter>
+      <name value="used-codesystem"/>
+      <valueUri value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0"/>
+    </parameter>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+      <code value="ja"/>
+      <display value="Ja"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+      <code value="nein"/>
+      <display value="Nein"/>
+    </contains>
+  </expansion>
+</ValueSet>

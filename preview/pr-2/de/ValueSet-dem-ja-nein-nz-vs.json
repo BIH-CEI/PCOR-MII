@@ -1,0 +1,71 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dem-ja-nein-nz-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dem-ja-nein-nz-vs</b></p><a name=\"dem-ja-nein-nz-vs\"> </a><a name=\"hcdem-ja-nein-nz-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-dem-antwort.html\">codesystem DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 3 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"dem-ja-nein-nz-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort-ja\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-antwort.html#dem-antwort-ja\">ja</a></td><td>Ja</td></tr><tr><td><a name=\"dem-ja-nein-nz-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort-nein\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-antwort.html#dem-antwort-nein\">nein</a></td><td>Nein</td></tr><tr><td><a name=\"dem-ja-nein-nz-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort-nicht-zutreffend\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-antwort.html#dem-antwort-nicht-zutreffend\">nicht-zutreffend</a></td><td>Nicht zutreffend</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-nz-vs",
+  "version" : "0.1.0",
+  "name" : "DemJaNeinNzVS",
+  "title" : "DEM Ja/Nein/Nicht zutreffend",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-15T14:42:41+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+      "concept" : [{
+        "code" : "ja",
+        "display" : "Ja"
+      },
+      {
+        "code" : "nein",
+        "display" : "Nein"
+      },
+      {
+        "code" : "nicht-zutreffend",
+        "display" : "Nicht zutreffend"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-10T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+      "code" : "ja",
+      "display" : "Ja"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+      "code" : "nein",
+      "display" : "Nein"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+      "code" : "nicht-zutreffend",
+      "display" : "Nicht zutreffend"
+    }]
+  }
+}
