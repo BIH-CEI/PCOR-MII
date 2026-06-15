@@ -29,7 +29,7 @@ publisher:
 # (PHQ-9, GAD-7, PROMIS-29, EQ-5D-5L, EORTC QLQ-C30, …) werden referenziert,
 # nicht nachgebaut. SDC ist die Basis der MII-PRO-Profile.
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.3.0
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.4.1
   hl7.fhir.uv.sdc: 3.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -41,6 +41,12 @@ pages:
     title: Startseite
   Questionnaires.md:
     title: Fragebögen
+    PROMIS-29.md:
+      title: PROMIS-29 Profile v2.1
+    PROMIS-Cognitive-Function.md:
+      title: PROMIS Cognitive Function SF 4a
+    PROMIS-16.md:
+      title: PROMIS-16 Profile v2.1 (PROPr)
   Implementation.md:
     title: Anwendung
   Release-Notes.md:
