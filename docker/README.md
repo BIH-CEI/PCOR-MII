@@ -64,6 +64,26 @@ In `application.yaml` einen Postgres/MySQL-Datasource-Block ergänzen und entspr
 - **H2 in-memory DB** — Restarts löschen alle Daten. Für Persistence externe DB anbinden.
 - **Single-Version-Lookup** — siehe [Bereitstellung](../input/pagecontent/Bereitstellung.md) für die Diskussion zu Multi-Version-Canonical-Resolution.
 
+## Lizenzierung & Attribution
+
+Der Container packt mehrere Inhaltsschichten mit unterschiedlichen Lizenzen zusammen:
+
+| Inhalt | Lizenz | Hinweis |
+|--------|--------|---------|
+| HAPI FHIR (Base-Image) | Apache 2.0 | Quelle: [hapiproject/hapi](https://hub.docker.com/r/hapiproject/hapi) |
+| MII PRO-Modul (Profile, Definitionen, Beispiele) | CC-BY 4.0 | Attribution erfüllt durch [IG-Dokumentation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) |
+| PROMIS-Items (Wordings) | PHO Lizenz | Re-Distribution erlaubt, aber **Nutzung registrationspflichtig** über PROMIS National Center Deutschland (CPCOR Charité). [Lizenz-Details + CPCOR-Kontakt](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html) |
+| Offizielle deutsche PROMIS-Übersetzungen | PCOR-MII Kuration | bereitgestellt durch [PROMIS National Center Deutschland (CPCOR Charité)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html), Leitung Felix Fischer |
+| LOINC Codes | LOINC License | Free for use, Quelle: [Regenstrief Institute](https://loinc.org) |
+| PCOR-MII Implementation Guide | CC-BY 4.0 | Quelle: [BIH-CEI/PCOR-MII](https://github.com/BIH-CEI/PCOR-MII) |
+
+Die `meta.copyright`-Felder und das 4-Schichten Copyright-RuleSet (`PROMIS_Copyright_DE`) sind in allen ausgelieferten PROMIS-Resources eingebettet — Attribution erfolgt also automatisch durch FHIR-konformes Resource-Handling.
+
+**Vor produktivem Einsatz mit echten Daten**:
+
+1. PROMIS-Nutzungs-Anfrage beim [PROMIS National Center DE](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html) stellen
+2. Wenn Container public deployed: README-Hinweis zur Lizenzkette + Attribution sichtbar machen
+
 ## Verhältnis zu fhir-sdc-questionnaire-service
 
 [BIH-CEI/fhir-sdc-questionnaire-service](https://github.com/BIH-CEI/fhir-sdc-questionnaire-service) bietet eine parallele HAPI-Image-Variante mit MII PRO (aktuell 2026.3.0). Wir haben uns hier bewusst für einen **eigenständigen Build von HAPI-Base** entschieden, um:
