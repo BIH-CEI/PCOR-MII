@@ -317,23 +317,51 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de-DE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w"> </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro.general-health"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gut"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pcor-mii-exa-patient"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"authored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-16T10:00:00+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro.general-health"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"good"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Good"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<p>Vollständige, validierte Beispiele:</p>
+
+<ul>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> — Beispiel-Fragebogen mit allen Item-Typen</li>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a> — PROMIS-16 vollständig befüllt</li>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></a> — PROMIS Cognitive Function SF 4a</li>
+  <li>Für PROMIS-29 wird das upstream-Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-pro-promis-29-response</code> aus dem MII PRO-Modul verwendet (siehe <a href="PROMIS-29.html">PROMIS-29-Seite</a>)</li>
+</ul>
+
 <h3 id="validierung">Validierung</h3>
 
-<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s können gegen das zugehörige <code class="language-plaintext highlighter-rouge">Questionnaire</code> validiert werden – u. a. auf Pflicht-Items (<code class="language-plaintext highlighter-rouge">required</code>), zulässige Antwortoptionen und Datentypen. Dies erlaubt der IG Publisher bzw. der FHIR-Validator gegen die hier veröffentlichten Definitionen.</p>
+<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s können gegen das <code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil und das zugehörige <code class="language-plaintext highlighter-rouge">Questionnaire</code> validiert werden – u. a. auf Pflicht-Items (<code class="language-plaintext highlighter-rouge">required</code>), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle vier Beispiele oben sind gegen den FHIR-Validator geprüft (0 Errors).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir validate &lt;qr.json&gt; <span class="se">\</span>
+  <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
+  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 <span class="se">\</span>
+  <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
+  <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
+</code></pre></div></div>
 
 <h3 id="hinweise-zur-integration">Hinweise zur Integration</h3>
 
@@ -393,7 +421,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 08:19:00 +0000">
+  <span title="2026-06-16 08:59:00 +0000">
     2026-06-16
   </span>
 

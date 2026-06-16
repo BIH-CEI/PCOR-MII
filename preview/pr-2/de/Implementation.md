@@ -26,24 +26,52 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
 ```
 {
   "resourceType": "QuestionnaireResponse",
-  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
   "status": "completed",
-  "item": [
-    {
-      "linkId": "pro",
-      "item": [
-        { "linkId": "pro.general-health",
-          "answer": [ { "valueString": "Gut" } ] }
-      ]
-    }
-  ]
+  "subject": { "reference": "Patient/pcor-mii-exa-patient" },
+  "authored": "2026-06-16T10:00:00+02:00",
+  "item": [{
+    "linkId": "pro",
+    "item": [{
+      "linkId": "pro.general-health",
+      "answer": [{
+        "valueCoding": {
+          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
+          "code": "good",
+          "display": "Good"
+        }
+      }]
+    }]
+  }]
 }
 
 ```
 
+Vollständige, validierte Beispiele:
+
+* [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) — Beispiel-Fragebogen mit allen Item-Typen
+* [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — PROMIS-16 vollständig befüllt
+* [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md) — PROMIS Cognitive Function SF 4a
+* Für PROMIS-29 wird das upstream-Beispiel `mii-exa-pro-promis-29-response` aus dem MII PRO-Modul verwendet (siehe [PROMIS-29-Seite](PROMIS-29.md))
+
 ### Validierung
 
-`QuestionnaireResponse`s können gegen das zugehörige `Questionnaire` validiert werden – u. a. auf Pflicht-Items (`required`), zulässige Antwortoptionen und Datentypen. Dies erlaubt der IG Publisher bzw. der FHIR-Validator gegen die hier veröffentlichten Definitionen.
+`QuestionnaireResponse`s können gegen das `MII PR PRO QuestionnaireResponse`-Profil und das zugehörige `Questionnaire` validiert werden – u. a. auf Pflicht-Items (`required`), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle vier Beispiele oben sind gegen den FHIR-Validator geprüft (0 Errors).
+
+```
+fhir validate <qr.json> \
+  -version 4.0.1 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+  -ig hl7.fhir.uv.sdc#3.0.0 \
+  -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
+
+```
 
 ### Hinweise zur Integration
 

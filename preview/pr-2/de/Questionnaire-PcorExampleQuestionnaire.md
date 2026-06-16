@@ -23,6 +23,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
 {
   "resourceType" : "Questionnaire",
   "id" : "PcorExampleQuestionnaire",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"]
+  },
+  "language" : "de-DE",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
   "version" : "0.1.0",
   "name" : "PcorExampleQuestionnaire",
@@ -30,7 +34,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "status" : "draft",
   "experimental" : true,
   "subjectType" : ["Patient"],
-  "date" : "2026-06-04",
+  "date" : "2026-06-16",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -101,21 +105,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "text" : "Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?",
       "type" : "choice",
       "required" : true,
-      "answerOption" : [{
-        "valueString" : "Ausgezeichnet"
-      },
-      {
-        "valueString" : "Sehr gut"
-      },
-      {
-        "valueString" : "Gut"
-      },
-      {
-        "valueString" : "Weniger gut"
-      },
-      {
-        "valueString" : "Schlecht"
-      }]
+      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health"
     },
     {
       "linkId" : "pro.comment",
