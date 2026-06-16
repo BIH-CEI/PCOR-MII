@@ -1,0 +1,43 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-beziehungsstatus",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-beziehungsstatus</b></p><a name=\"dem-beziehungsstatus\"> </a><a name=\"hcdem-beziehungsstatus\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">keine-feste<a name=\"dem-beziehungsstatus-keine-feste\"> </a></td><td>Keine feste Partnerschaft</td></tr><tr><td style=\"white-space:nowrap\">feste<a name=\"dem-beziehungsstatus-feste\"> </a></td><td>Feste Partnerschaft</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
+  "version" : "0.1.0",
+  "name" : "DemBeziehungsstatusCS",
+  "title" : "DEM Beziehungsstatus (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T11:11:33+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Partnerschaftsstatus (GIPS04).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "keine-feste",
+    "display" : "Keine feste Partnerschaft"
+  },
+  {
+    "code" : "feste",
+    "display" : "Feste Partnerschaft"
+  }]
+}

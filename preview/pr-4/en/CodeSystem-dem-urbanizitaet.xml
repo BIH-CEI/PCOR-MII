@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dem-urbanizitaet"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-urbanizitaet</b></p><a name="en-dem-urbanizitaet"> </a><a name="en-hcdem-urbanizitaet"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">stadt<a name="en-dem-urbanizitaet-stadt"> </a></td><td>Stadt</td></tr><tr><td style="white-space:nowrap">dorf-vorort<a name="en-dem-urbanizitaet-dorf-vorort"> </a></td><td>Dorf oder Vorort</td></tr><tr><td style="white-space:nowrap">laendlich<a name="en-dem-urbanizitaet-laendlich"> </a></td><td>Ländliche Region</td></tr><tr><td style="white-space:nowrap">weiss-nicht<a name="en-dem-urbanizitaet-weiss-nicht"> </a></td><td>Ich weiss es nicht</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+  <version value="0.1.0"/>
+  <name value="DemUrbanizitaetCS"/>
+  <title value="DEM Urbanizität (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-16T11:11:33+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Beschreibung des Wohnorts (Q_OECDLITii)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="stadt"/>
+    <display value="Stadt"/>
+  </concept>
+  <concept>
+    <code value="dorf-vorort"/>
+    <display value="Dorf oder Vorort"/>
+  </concept>
+  <concept>
+    <code value="laendlich"/>
+    <display value="Ländliche Region"/>
+  </concept>
+  <concept>
+    <code value="weiss-nicht"/>
+    <display value="Ich weiss es nicht"/>
+  </concept>
+</CodeSystem>

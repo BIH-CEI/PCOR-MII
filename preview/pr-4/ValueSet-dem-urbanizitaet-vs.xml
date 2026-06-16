@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dem-urbanizitaet-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet dem-urbanizitaet-vs</b></p><a name="dem-urbanizitaet-vs"> </a><a name="hcdem-urbanizitaet-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-dem-urbanizitaet.html">codesystem DEM Urbanizität (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-stadt"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-stadt">stadt</a></td><td>Stadt</td></tr><tr><td><a name="dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-dorf-vorort"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-dorf-vorort">dorf-vorort</a></td><td>Dorf oder Vorort</td></tr><tr><td><a name="dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-laendlich"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-laendlich">laendlich</a></td><td>Ländliche Region</td></tr><tr><td><a name="dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-weiss-nicht"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-weiss-nicht">weiss-nicht</a></td><td>Ich weiss es nicht</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet dem-urbanizitaet-vs</b></p><a name="en-dem-urbanizitaet-vs"> </a><a name="en-hcdem-urbanizitaet-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-dem-urbanizitaet.html">codesystem DEM Urbanizität (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="en-dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-stadt"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-stadt">stadt</a></td><td>Stadt</td></tr><tr><td><a name="en-dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-dorf-vorort"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-dorf-vorort">dorf-vorort</a></td><td>Dorf oder Vorort</td></tr><tr><td><a name="en-dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-laendlich"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-laendlich">laendlich</a></td><td>Ländliche Region</td></tr><tr><td><a name="en-dem-urbanizitaet-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet-weiss-nicht"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code></td><td style="white-space:nowrap">  <a href="CodeSystem-dem-urbanizitaet.html#dem-urbanizitaet-weiss-nicht">weiss-nicht</a></td><td>Ich weiss es nicht</td></tr></table></div></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/dem-urbanizitaet-vs"/>
+  <version value="0.1.0"/>
+  <name value="DemUrbanizitaetVS"/>
+  <title value="DEM Urbanizität"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-16T11:11:33+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Wohnort-Typ (Q_OECDLITii)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-06-10T00:00:00Z"/>
+    <parameter>
+      <name value="used-codesystem"/>
+      <valueUri value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.1.0"/>
+    </parameter>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+      <code value="stadt"/>
+      <display value="Stadt"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+      <code value="dorf-vorort"/>
+      <display value="Dorf oder Vorort"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+      <code value="laendlich"/>
+      <display value="Ländliche Region"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+      <code value="weiss-nicht"/>
+      <display value="Ich weiss es nicht"/>
+    </contains>
+  </expansion>
+</ValueSet>
