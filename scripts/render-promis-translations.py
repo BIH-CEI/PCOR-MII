@@ -132,44 +132,53 @@ def render_questionnaire(q):
         "EN/DE-Architektur-Migration hin."
     )
 
-    def emit_item_row(it):
-        lid = it.get("linkId", "")
-        code = ""
-        if it.get("code"):
-            code = it["code"][0].get("code", "")
-        en, de = label_pair(it.get("text", ""), it.get("_text"))
+    def format_options(opts):
+        """Render answer options as a single cell content with one option per line."""
+        if not opts:
+            return ""
+        rendered = []
+        for opt in opts:
+            vc = opt.get("valueCoding", {})
+            code = vc.get("code", "")
+            disp_text = vc.get("display", "")
+            disp_underscore = vc.get("_display")
+            opt_en, opt_de = label_pair(disp_text, disp_underscore)
+            ord_val = ""
+            for ext in opt.get("extension", []):
+                if ext.get("url", "").endswith("/ordinalValue"):
+                    ord_val = str(ext.get("valueDecimal", ""))
+            label = opt_de or opt_en or ""
+            en_suffix = f" / {opt_en}" if (opt_de and opt_en) else ""
+            rendered.append(
+                f"**{ord_val}**&nbsp;·&nbsp;{label}{en_suffix}&nbsp;(`{code}`)"
+            )
+        return "<br>".join(rendered)
 
+    def flush_table(rows):
+        """Emit the accumulated rows as a single markdown table."""
+        if not rows:
+            return
         lines.append("")
-        lines.append("| linkId | LOINC | English | Deutsch |")
-        lines.append("|---|---|---|---|")
-        lines.append(f"| `{lid}` | {code} | {md_cell(en)} | {md_cell(de)} |")
-
-        opts = it.get("answerOption", [])
-        if opts:
-            lines.append("")
-            lines.append("**Antwortoptionen:**")
-            lines.append("")
-            lines.append("| Code | English | Deutsch | Ordinal |")
-            lines.append("|---|---|---|---|")
-            for opt in opts:
-                vc = opt.get("valueCoding", {})
-                code = vc.get("code", "")
-                disp_text = vc.get("display", "")
-                disp_underscore = vc.get("_display")
-                opt_en, opt_de = label_pair(disp_text, disp_underscore)
-                ord_val = ""
-                for ext in opt.get("extension", []):
-                    if ext.get("url", "").endswith("/ordinalValue"):
-                        ord_val = str(ext.get("valueDecimal", ""))
-                lines.append(
-                    f"| {code} | {md_cell(opt_en)} | {md_cell(opt_de)} | {ord_val} |"
-                )
+        lines.append('<div markdown="1" class="promis-item-table">')
+        lines.append("")
+        lines.append("| linkId | LOINC | English | Deutsch | Antwortoptionen |")
+        lines.append("|---|---|---|---|---|")
+        lines.extend(rows)
+        lines.append("")
+        lines.append("</div>")
 
     def render(items):
+        row_buffer = []  # accumulates item rows within current section
+
+        def emit_buffered():
+            flush_table(row_buffer)
+            row_buffer.clear()
+
         for it in items:
             if it.get("type") == "display" or is_score_helper(it):
                 continue
             if it.get("type") == "group":
+                emit_buffered()
                 en, de = label_pair(it.get("text", ""), it.get("_text"))
                 title = de or en or it.get("linkId", "")
                 lines.append("")
@@ -179,7 +188,16 @@ def render_questionnaire(q):
                 if it.get("item"):
                     render(it["item"])
             else:
-                emit_item_row(it)
+                lid = it.get("linkId", "")
+                code = ""
+                if it.get("code"):
+                    code = it["code"][0].get("code", "")
+                en, de = label_pair(it.get("text", ""), it.get("_text"))
+                opts_cell = format_options(it.get("answerOption", []))
+                row_buffer.append(
+                    f"| `{lid}` | {code} | {md_cell(en)} | {md_cell(de)} | {opts_cell} |"
+                )
+        emit_buffered()
 
     render(q.get("item", []))
     return "\n".join(lines)

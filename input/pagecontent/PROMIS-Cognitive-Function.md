@@ -35,60 +35,15 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 _Sektion `PROMIS-CognitiveFunction-SF4a`_
 
-| linkId | LOINC | English | Deutsch |
-|---|---|---|---|
-| `promis-cognition-pc2r` | 81461-6 | My thinking has been slow | Ich war langsam beim Denken |
+<div markdown="1" class="promis-item-table">
 
-**Antwortoptionen:**
+| linkId | LOINC | English | Deutsch | Antwortoptionen |
+|---|---|---|---|---|
+| `promis-cognition-pc2r` | 81461-6 | My thinking has been slow | Ich war langsam beim Denken | **5**&nbsp;·&nbsp;Nie / Not at all&nbsp;(`LA6568-5`)<br>**4**&nbsp;·&nbsp;Selten (einmal) / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal (zwei- oder dreimal) / Sometimes&nbsp;(`LA10082-8`)<br>**2**&nbsp;·&nbsp;Oft (ungefähr einmal täglich) / Often&nbsp;(`LA10044-8`)<br>**1**&nbsp;·&nbsp;Sehr oft (mehrmals täglich) / Always&nbsp;(`LA9933-8`) |
+| `promis-cognition-pc35r` | 81478-0 | It has seemed like my brain was not working as well as usual | Es kam mir so vor, als ob mein Gehirn nicht so gut wie sonst funktionierte | **5**&nbsp;·&nbsp;Nie / Not at all&nbsp;(`LA6568-5`)<br>**4**&nbsp;·&nbsp;Selten (einmal) / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal (zwei- oder dreimal) / Sometimes&nbsp;(`LA10082-8`)<br>**2**&nbsp;·&nbsp;Oft (ungefähr einmal täglich) / Often&nbsp;(`LA10044-8`)<br>**1**&nbsp;·&nbsp;Sehr oft (mehrmals täglich) / Always&nbsp;(`LA9933-8`) |
+| `promis-cognition-pc36r` | 81479-8 | I have had to work harder than usual to keep track of what I was doing | Ich musste mir größere Mühe geben als sonst, um den Überblick über das zu bewahren, womit ich gerade beschäftigt war | **5**&nbsp;·&nbsp;Nie / Not at all&nbsp;(`LA6568-5`)<br>**4**&nbsp;·&nbsp;Selten (einmal) / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal (zwei- oder dreimal) / Sometimes&nbsp;(`LA10082-8`)<br>**2**&nbsp;·&nbsp;Oft (ungefähr einmal täglich) / Often&nbsp;(`LA10044-8`)<br>**1**&nbsp;·&nbsp;Sehr oft (mehrmals täglich) / Always&nbsp;(`LA9933-8`) |
+| `promis-cognition-pc42r` | 81485-5 | I have had trouble shifting back and forth between different activities that require thinking | Ich hatte Schwierigkeiten, zwischen verschiedenen Aktivitäten, die ein gewisses Nachdenken erfordern, hin und her zu wechseln | **5**&nbsp;·&nbsp;Nie / Not at all&nbsp;(`LA6568-5`)<br>**4**&nbsp;·&nbsp;Selten (einmal) / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal (zwei- oder dreimal) / Sometimes&nbsp;(`LA10082-8`)<br>**2**&nbsp;·&nbsp;Oft (ungefähr einmal täglich) / Often&nbsp;(`LA10044-8`)<br>**1**&nbsp;·&nbsp;Sehr oft (mehrmals täglich) / Always&nbsp;(`LA9933-8`) |
 
-| Code | English | Deutsch | Ordinal |
-|---|---|---|---|
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| linkId | LOINC | English | Deutsch |
-|---|---|---|---|
-| `promis-cognition-pc35r` | 81478-0 | It has seemed like my brain was not working as well as usual | Es kam mir so vor, als ob mein Gehirn nicht so gut wie sonst funktionierte |
-
-**Antwortoptionen:**
-
-| Code | English | Deutsch | Ordinal |
-|---|---|---|---|
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| linkId | LOINC | English | Deutsch |
-|---|---|---|---|
-| `promis-cognition-pc36r` | 81479-8 | I have had to work harder than usual to keep track of what I was doing | Ich musste mir größere Mühe geben als sonst, um den Überblick über das zu bewahren, womit ich gerade beschäftigt war |
-
-**Antwortoptionen:**
-
-| Code | English | Deutsch | Ordinal |
-|---|---|---|---|
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| linkId | LOINC | English | Deutsch |
-|---|---|---|---|
-| `promis-cognition-pc42r` | 81485-5 | I have had trouble shifting back and forth between different activities that require thinking | Ich hatte Schwierigkeiten, zwischen verschiedenen Aktivitäten, die ein gewisses Nachdenken erfordern, hin und her zu wechseln |
-
-**Antwortoptionen:**
-
-| Code | English | Deutsch | Ordinal |
-|---|---|---|---|
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+</div>
 
 <!-- END AUTO-TRANSLATION-TABLE -->
