@@ -294,6 +294,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Diese Kombination entspricht funktional dem PROMIS-33-Profile (PROMIS-29 + 4 Cognitive-Function-Items) und nutzt die bereits im MII PRO-Modul gepflegten Items und Scoring-Logiken. Eine separate FHIR-Repräsentation von PROMIS-33 ist daher nicht erforderlich.</p>
 
+<h3 id="beispiele-promis-33-abdeckung-als-zwei-questionnaireresponses">Beispiele (PROMIS-33-Abdeckung als zwei QuestionnaireResponses)</h3>
+
+<p>Für die <a href="Implementation.html">Pilot-Kohorte "50 First Patients"</a> wird die PROMIS-33-Abdeckung als <strong>zwei separate QuestionnaireResponses</strong> ausgetauscht, beide konform zum <a href="https://simplifier.net/guide/mii-pro-v2026-de"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>:</p>
+
+<ul>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-29-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-29-response</code></strong></a> — 29 Items (7 Domänen + Schmerzintensität)</li>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></strong></a> — 4 Cognitive-Function-Items</li>
+</ul>
+
+<p>Beide referenzieren die jeweiligen Questionnaire-Canonicals aus dem MII PRO-Modul v2026.4.1 und sind über ihre <code class="language-plaintext highlighter-rouge">meta.profile</code> für Validierung gegen das PRO-QR-Profil markiert.</p>
+
 
 
 
@@ -344,7 +355,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-16 08:08:00 +0000">
+  <span title="2026-06-16 08:19:00 +0000">
     2026-06-16
   </span>
 

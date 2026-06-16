@@ -30,6 +30,12 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 * Eine separate DE-primary-Darstellungsvariante (`mii-qst-pro-promis-29-de`) existiert für Renderer, die die `translation`-Extension nicht auswerten; inhaltlich ist sie mit der Hauptversion identisch und wird nicht eigenständig gepflegt.
 * Score-Berechnung erfolgt im Questionnaire selbst über FHIR-Variables-Variable, eine separate CQL Library ist nicht erforderlich.
 
+### Beispiel-QuestionnaireResponse
+
+[**`pcor-mii-exa-promis-29-response`**](QuestionnaireResponse-pcor-mii-exa-promis-29-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 7 Domänen + Schmerzintensität, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+
+### Item-Tabelle
+
 **Auto-generiert aus `mii-qst-pro-promis-29` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.

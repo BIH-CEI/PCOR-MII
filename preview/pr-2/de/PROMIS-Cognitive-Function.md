@@ -29,6 +29,14 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 * Items überlappen mit den Cognitive-Function-Items aus PROMIS-16 — Score-Vergleich erfordert Aufmerksamkeit auf die jeweilige Itemzusammensetzung und Skalierung.
 * Für umfassende Kognitions-Erfassung steht zusätzlich die Long-Form (PROMIS Cognitive Function) zur Verfügung, die jedoch derzeit nicht im MII PRO-Modul implementiert ist.
 
+### Beispiel-QuestionnaireResponse
+
+[**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+
+Im **50-First-Patients Pilot-Datenaustausch** ist dieses Instrument zusammen mit PROMIS-29 Teil der PROMIS-33-Abdeckung — siehe [PROMIS-33](PROMIS-33.md).
+
+### Item-Tabelle
+
 **Auto-generiert aus `mii-qst-pro-promis-cognitive-function-sf4a` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.

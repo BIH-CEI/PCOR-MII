@@ -38,6 +38,12 @@ Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library `mii-l
 * Item-Überlapp mit PROMIS-29: 14 der 16 Items aus PROMIS-16 finden sich auch in PROMIS-29. Die Cognitive-Function-Items sind die 2 zusätzlichen Items in PROMIS-16.
 * Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.
 
+### Beispiel-QuestionnaireResponse
+
+[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+
+### Item-Tabelle
+
 **Auto-generiert aus `mii-qst-pro-promis-16` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.
