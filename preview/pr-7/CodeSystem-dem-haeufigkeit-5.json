@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-haeufigkeit-5",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-haeufigkeit-5</b></p><a name=\"dem-haeufigkeit-5\"> </a><a name=\"hcdem-haeufigkeit-5\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">staendig<a name=\"dem-haeufigkeit-5-staendig\"> </a></td><td>Ständig</td></tr><tr><td style=\"white-space:nowrap\">meistens<a name=\"dem-haeufigkeit-5-meistens\"> </a></td><td>Meistens</td></tr><tr><td style=\"white-space:nowrap\">manchmal<a name=\"dem-haeufigkeit-5-manchmal\"> </a></td><td>Manchmal</td></tr><tr><td style=\"white-space:nowrap\">selten<a name=\"dem-haeufigkeit-5-selten\"> </a></td><td>Selten</td></tr><tr><td style=\"white-space:nowrap\">nie<a name=\"dem-haeufigkeit-5-nie\"> </a></td><td>Nie</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-haeufigkeit-5</b></p><a name=\"en-dem-haeufigkeit-5\"> </a><a name=\"en-hcdem-haeufigkeit-5\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">staendig<a name=\"en-dem-haeufigkeit-5-staendig\"> </a></td><td>Ständig</td></tr><tr><td style=\"white-space:nowrap\">meistens<a name=\"en-dem-haeufigkeit-5-meistens\"> </a></td><td>Meistens</td></tr><tr><td style=\"white-space:nowrap\">manchmal<a name=\"en-dem-haeufigkeit-5-manchmal\"> </a></td><td>Manchmal</td></tr><tr><td style=\"white-space:nowrap\">selten<a name=\"en-dem-haeufigkeit-5-selten\"> </a></td><td>Selten</td></tr><tr><td style=\"white-space:nowrap\">nie<a name=\"en-dem-haeufigkeit-5-nie\"> </a></td><td>Nie</td></tr></table></div></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
+  "version" : "0.1.0",
+  "name" : "DemHaeufigkeit5CS",
+  "title" : "DEM Häufigkeit (5-stufig) (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T13:23:14+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "5-stufige Häufigkeitsskala für finanzielle Sorgen (MONMEAL/MONRENT/MONBILLS). Quelle: Commonwealth Fund 2017.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "staendig",
+    "display" : "Ständig"
+  },
+  {
+    "code" : "meistens",
+    "display" : "Meistens"
+  },
+  {
+    "code" : "manchmal",
+    "display" : "Manchmal"
+  },
+  {
+    "code" : "selten",
+    "display" : "Selten"
+  },
+  {
+    "code" : "nie",
+    "display" : "Nie"
+  }]
+}

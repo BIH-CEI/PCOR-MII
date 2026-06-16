@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dem-leichtigkeit-6"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-leichtigkeit-6</b></p><a name="dem-leichtigkeit-6"> </a><a name="hcdem-leichtigkeit-6"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">sehr-einfach<a name="dem-leichtigkeit-6-sehr-einfach"> </a></td><td>Sehr einfach</td></tr><tr><td style="white-space:nowrap">einfach<a name="dem-leichtigkeit-6-einfach"> </a></td><td>Einfach</td></tr><tr><td style="white-space:nowrap">weder-noch<a name="dem-leichtigkeit-6-weder-noch"> </a></td><td>Weder einfach noch schwierig</td></tr><tr><td style="white-space:nowrap">schwierig<a name="dem-leichtigkeit-6-schwierig"> </a></td><td>Schwierig</td></tr><tr><td style="white-space:nowrap">sehr-schwierig<a name="dem-leichtigkeit-6-sehr-schwierig"> </a></td><td>Sehr schwierig</td></tr><tr><td style="white-space:nowrap">nicht-zutreffend<a name="dem-leichtigkeit-6-nicht-zutreffend"> </a></td><td>Nicht zutreffend</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"/>
+  <version value="0.1.0"/>
+  <name value="DemLeichtigkeit6CS"/>
+  <title value="DEM Leichtigkeit Unterstützung (6-stufig) (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-16T13:23:14+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Skala zur erlebten Leichtigkeit, Unterstützung zu erhalten (WHODIS1/WHODIS2)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="sehr-einfach"/>
+    <display value="Sehr einfach"/>
+  </concept>
+  <concept>
+    <code value="einfach"/>
+    <display value="Einfach"/>
+  </concept>
+  <concept>
+    <code value="weder-noch"/>
+    <display value="Weder einfach noch schwierig"/>
+  </concept>
+  <concept>
+    <code value="schwierig"/>
+    <display value="Schwierig"/>
+  </concept>
+  <concept>
+    <code value="sehr-schwierig"/>
+    <display value="Sehr schwierig"/>
+  </concept>
+  <concept>
+    <code value="nicht-zutreffend"/>
+    <display value="Nicht zutreffend"/>
+  </concept>
+</CodeSystem>

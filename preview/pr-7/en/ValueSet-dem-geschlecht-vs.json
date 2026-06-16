@@ -1,0 +1,69 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dem-geschlecht-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dem-geschlecht-vs</b></p><a name=\"en-dem-geschlecht-vs\"> </a><a name=\"en-hcdem-geschlecht-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-dem-geschlecht.html\">codesystem DEM Geschlecht (Selbstbeschreibung) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 5 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"en-dem-geschlecht-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht-weiblich\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-geschlecht.html#dem-geschlecht-weiblich\">weiblich</a></td><td>Weiblich</td></tr><tr><td><a name=\"en-dem-geschlecht-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht-maennlich\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-geschlecht.html#dem-geschlecht-maennlich\">maennlich</a></td><td>Männlich</td></tr><tr><td><a name=\"en-dem-geschlecht-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht-nicht-binaer\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-geschlecht.html#dem-geschlecht-nicht-binaer\">nicht-binaer</a></td><td>Nicht-binär</td></tr><tr><td><a name=\"en-dem-geschlecht-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht-andere\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-geschlecht.html#dem-geschlecht-andere\">andere</a></td><td>Andere</td></tr><tr><td><a name=\"en-dem-geschlecht-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht-keine-angabe\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-geschlecht.html#dem-geschlecht-keine-angabe\">keine-angabe</a></td><td>Möchte ich nicht sagen</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-geschlecht-vs",
+  "version" : "0.1.0",
+  "name" : "DemGeschlechtVS",
+  "title" : "DEM Geschlecht",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T13:23:14+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Selbstbeschriebenes Geschlecht (Q_SEX).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-10T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+      "code" : "weiblich",
+      "display" : "Weiblich"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+      "code" : "maennlich",
+      "display" : "Männlich"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+      "code" : "nicht-binaer",
+      "display" : "Nicht-binär"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+      "code" : "andere",
+      "display" : "Andere"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+      "code" : "keine-angabe",
+      "display" : "Möchte ich nicht sagen"
+    }]
+  }
+}
