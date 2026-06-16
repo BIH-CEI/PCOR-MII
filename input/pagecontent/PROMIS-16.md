@@ -10,8 +10,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16)
-- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS)
+- Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis-16.html)
+- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
 - Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"
 
 ### Eigenschaften
@@ -36,7 +36,7 @@ Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library `mii-l
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 ### Item-Tabelle
 
@@ -54,8 +54,8 @@ _Sektion `PROMIS-16.PhysicalFunction`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-pfa21` | 62826-3 | Are you able to go up and down stairs at a normal pace? | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? |  |
-| `promis-pfa23` | 62827-1 | Are you able to go for a walk of at least 15 minutes? | Können Sie mindestens 15 Minuten lang spazieren gehen? |  |
+| `promis-pfa21` | 62826-3 | Are you able to go up and down stairs at a normal pace? | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? | **1**&nbsp;·&nbsp;Ohne jede Schwierigkeiten / Without any difficulty&nbsp;(`LA13921-4`)<br>**2**&nbsp;·&nbsp;Mit geringen Schwierigkeiten / With a little difficulty&nbsp;(`LA13918-0`)<br>**3**&nbsp;·&nbsp;Mit einigen Schwierigkeiten / With some difficulty&nbsp;(`LA13920-6`)<br>**4**&nbsp;·&nbsp;Mit großen Schwierigkeiten / With much difficulty&nbsp;(`LA13919-8`)<br>**5**&nbsp;·&nbsp;Kann ich gar nicht / Unable to do&nbsp;(`LA13912-3`) |
+| `promis-pfa23` | 62827-1 | Are you able to go for a walk of at least 15 minutes? | Können Sie mindestens 15 Minuten lang spazieren gehen? | **1**&nbsp;·&nbsp;Ohne jede Schwierigkeiten / Without any difficulty&nbsp;(`LA13921-4`)<br>**2**&nbsp;·&nbsp;Mit geringen Schwierigkeiten / With a little difficulty&nbsp;(`LA13918-0`)<br>**3**&nbsp;·&nbsp;Mit einigen Schwierigkeiten / With some difficulty&nbsp;(`LA13920-6`)<br>**4**&nbsp;·&nbsp;Mit großen Schwierigkeiten / With much difficulty&nbsp;(`LA13919-8`)<br>**5**&nbsp;·&nbsp;Kann ich gar nicht / Unable to do&nbsp;(`LA13912-3`) |
 
 </div>
 
@@ -67,8 +67,8 @@ _Sektion `PROMIS-16.Anxiety`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-edanx40` | 61941-1 | I found it hard to focus on anything other than my anxiety. | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. |  |
-| `promis-edanx41` | 61942-9 | My worries overwhelmed me. | Meine Sorgen haben mich überwältigt. |  |
+| `promis-edanx40` | 61941-1 | I found it hard to focus on anything other than my anxiety. | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
+| `promis-edanx41` | 61942-9 | My worries overwhelmed me. | Meine Sorgen haben mich überwältigt. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
 
 </div>
 
@@ -80,8 +80,8 @@ _Sektion `PROMIS-16.Depression`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-eddep29` | 61967-6 | I felt depressed. | Ich fühlte mich niedergeschlagen. |  |
-| `promis-eddep41` | 61973-4 | I felt hopeless. | Ich fühlte mich hoffnungslos. |  |
+| `promis-eddep29` | 61967-6 | I felt depressed. | Ich fühlte mich niedergeschlagen. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
+| `promis-eddep41` | 61973-4 | I felt hopeless. | Ich fühlte mich hoffnungslos. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
 
 </div>
 
@@ -93,8 +93,8 @@ _Sektion `PROMIS-16.Fatigue`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-hi7` | 61878-5 | I feel fatigued. | Ich bin erschöpft. |  |
-| `promis-an3` | 61882-7 | I had trouble starting things because I was tired. | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. |  |
+| `promis-hi7` | 61878-5 | I feel fatigued. | Ich bin erschöpft. | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
+| `promis-an3` | 61882-7 | I had trouble starting things because I was tired. | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
 
 </div>
 
@@ -106,8 +106,8 @@ _Sektion `PROMIS-16.Sleep`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-sleep25` |  | I had problems during the day because of poor sleep. | Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe. |  |
-| `promis-sleep90` |  | I had trouble sleeping. | Es fiel mir schwer zu schlafen. |  |
+| `promis-sleep25` |  | I had problems during the day because of poor sleep. | Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe. | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
+| `promis-sleep90` |  | I had trouble sleeping. | Es fiel mir schwer zu schlafen. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
 
 </div>
 
@@ -119,8 +119,8 @@ _Sektion `PROMIS-16.SocialRoles`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-srpper31-caps` |  | I have trouble taking care of my regular personal responsibilities. | Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern. |  |
-| `promis-srpper46-caps` | 76712-9 | I have trouble doing all of the activities with friends that I want to do. | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. |  |
+| `promis-srpper31-caps` |  | I have trouble taking care of my regular personal responsibilities. | Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
+| `promis-srpper46-caps` | 76712-9 | I have trouble doing all of the activities with friends that I want to do. | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. | **1**&nbsp;·&nbsp;Nie / Never&nbsp;(`LA6270-8`)<br>**2**&nbsp;·&nbsp;Selten / Rarely&nbsp;(`LA10066-1`)<br>**3**&nbsp;·&nbsp;Manchmal / Sometimes&nbsp;(`LA10082-8`)<br>**4**&nbsp;·&nbsp;Oft / Often&nbsp;(`LA10044-8`)<br>**5**&nbsp;·&nbsp;Immer / Always&nbsp;(`LA9933-8`) |
 
 </div>
 
@@ -132,8 +132,8 @@ _Sektion `PROMIS-16.PainInterference`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-painin9` | 61758-9 | How much did pain interfere with your day-to-day activities? | Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten? |  |
-| `promis-painin31` | 61773-8 | How much did pain interfere with your ability to participate in social activities? | Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? |  |
+| `promis-painin9` | 61758-9 | How much did pain interfere with your day-to-day activities? | Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten? | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
+| `promis-painin31` | 61773-8 | How much did pain interfere with your ability to participate in social activities? | Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
 
 </div>
 
@@ -145,8 +145,8 @@ _Sektion `PROMIS-16.Cognition`_
 
 | linkId | LOINC | English | Deutsch | Antwortoptionen |
 |---|---|---|---|---|
-| `promis-pc27r` |  | I have been able to remember to do things, like take medicine or buy something I needed. | Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte. |  |
-| `promis-pc-caps3r` |  | I have been able to think clearly without extra effort. | Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen. |  |
+| `promis-pc27r` |  | I have been able to remember to do things, like take medicine or buy something I needed. | Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte. | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
+| `promis-pc-caps3r` |  | I have been able to think clearly without extra effort. | Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen. | **1**&nbsp;·&nbsp;Überhaupt nicht / Not at all&nbsp;(`LA6568-5`)<br>**2**&nbsp;·&nbsp;Ein wenig / A little bit&nbsp;(`LA13863-8`)<br>**3**&nbsp;·&nbsp;Mäßig / Somewhat&nbsp;(`LA13909-9`)<br>**4**&nbsp;·&nbsp;Ziemlich / Quite a bit&nbsp;(`LA13902-4`)<br>**5**&nbsp;·&nbsp;Sehr / Very much&nbsp;(`LA13914-9`) |
 
 </div>
 

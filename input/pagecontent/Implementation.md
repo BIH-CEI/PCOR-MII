@@ -1,5 +1,11 @@
 Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fragebögen in der Praxis angewendet werden.
 
+### Rolle von FHIR in PCOR-MII
+
+Das Erfassungs-System kann **außerhalb FHIR** liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) **oder direkt in FHIR** erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). **FHIR ist primär die Ablage- und Austausch-Form** — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.
+
+In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.html) und [Bereitstellung](Bereitstellung.html).
+
 ### Vom Questionnaire zur Antwort
 
 Ein `Questionnaire` ist die **Definition** eines Fragebogens. Die konkreten Antworten einer Person werden als **`QuestionnaireResponse`** erfasst. Die Verknüpfung erfolgt über:
@@ -13,9 +19,8 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
 
 1. **Bereitstellung** – das `Questionnaire` wird über einen FHIR-Server bereitgestellt (`GET [base]/Questionnaire?url=...`).
 2. **Rendering** – ein Client (ePRO-App, Studienportal) rendert die Items anhand von `type`, `text` und Antwortoptionen.
-3. **Pre-Population** *(optional)* – vorhandene Daten werden vorbefüllt (z. B. via [Structured Data Capture, SDC](https://hl7.org/fhir/uv/sdc/)).
-4. **Erfassung** – die ausgefüllten Antworten werden als `QuestionnaireResponse` gespeichert (`status = completed`).
-5. **Auswertung / Extraktion** *(optional)* – relevante Antworten werden in andere FHIR-Ressourcen (z. B. `Observation`) überführt (Data Extraction).
+3. **Erfassung** – die ausgefüllten Antworten werden als `QuestionnaireResponse` gespeichert (`status = completed`).
+4. **Auswertung / Extraktion** *(zukünftig)* – relevante Antworten werden in andere FHIR-Ressourcen (z. B. `Observation`) überführt (Data Extraction via [SDC](https://hl7.org/fhir/uv/sdc/)). In PCOR-MII aktuell nicht implementiert.
 
 ### Beispiel: QuestionnaireResponse (Auszug)
 
@@ -70,5 +75,5 @@ fhir validate <qr.json> \
 ### Hinweise zur Integration
 
 - **Versionierung**: Antworten immer gegen eine **versionierte** `Questionnaire`-URL erfassen, damit spätere Änderungen am Fragebogen bestehende Daten nicht uneindeutig machen.
-- **Structured Data Capture (SDC)**: Für Pre-Population und Extraktion empfiehlt sich der HL7-SDC-IG als ergänzender Standard.
+- **Structured Data Capture (SDC)**: ergänzender Standard für Data-Extraction (zukünftig in PCOR-MII).
 - **Mehrsprachigkeit**: Item-Texte können über `translation`-Extensions mehrsprachig hinterlegt werden.

@@ -1,0 +1,56 @@
+spring:
+  main:
+    allow-circular-references: true
+  flyway:
+    enabled: false
+  jpa:
+    properties:
+      hibernate.format_sql: false
+      hibernate.show_sql: false
+
+hapi:
+  fhir:
+    fhir_version: R4
+    server_address: http://localhost:8080/fhir
+
+    # Standard-Features für PCOR-MII Pilot — kein produktiver Hardening!
+    allow_external_references: true
+    allow_multiple_delete: true
+    expunge_enabled: true
+    enforce_referential_integrity_on_write: false
+    enforce_referential_integrity_on_delete: false
+    auto_create_placeholder_reference_targets: true
+    default_pretty_print: true
+
+    # Implementation Guides: vorinstalliert via lokaler Tarballs (kein Online-Download zur Bootzeit)
+    implementationguides:
+      mii-pro:
+        url: file:///opt/hapi/packages/mii-pro.tgz
+        name: de.medizininformatikinitiative.kerndatensatz.pros
+        version: 2026.4.1
+        installMode: STORE_AND_INSTALL
+      pcor-mii:
+        url: file:///opt/hapi/packages/pcor-mii.tgz
+        name: pcor-mii
+        version: 0.1.0
+        installMode: STORE_AND_INSTALL
+
+    # Terminology
+    terminology:
+      graphql_enabled: true
+    cors:
+      allow_credentials: true
+      allowed_origin: "*"
+
+    # Tester (HAPI Web UI verfügbar unter /)
+    tester:
+      home:
+        name: PCOR-MII Server
+        server_address: http://localhost:8080/fhir
+        refuse_to_fetch_third_party_urls: false
+        fhir_version: R4
+
+    # Validation auf POST/PUT — strikt, aber nicht blockend (warnings only)
+    validation:
+      requests_enabled: true
+      responses_enabled: true
