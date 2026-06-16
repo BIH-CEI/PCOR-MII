@@ -1,52 +1,67 @@
 {
-  "date" : "Tue, 16 Jun, 2026 11:48:44 +0000",
+  "date" : "Tue, 16 Jun, 2026 12:08:45 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-pcor-mii.json",
     "size" : 12816,
     "processes" : [{
       "activity" : "load",
-      "start" : 30,
-      "length" : 14
+      "start" : 31,
+      "length" : 16
+    },
+    {
+      "activity" : "scan",
+      "start" : 31,
+      "length" : 1
     },
     {
       "activity" : "checkR4R4B",
       "start" : 31,
-      "length" : 14
+      "length" : 16
     },
     {
       "activity" : "generateNarratives",
       "start" : 31,
-      "length" : 69
+      "length" : 85
     },
     {
       "activity" : "validate",
-      "start" : 33,
-      "length" : 3379
+      "start" : 35,
+      "length" : 5310
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 39,
-      "length" : 27
+      "start" : 47,
+      "length" : 29
     },
     {
       "activity" : "generate1",
-      "start" : 40,
-      "length" : 122
+      "start" : 47,
+      "length" : 142
     },
     {
       "activity" : "generate2",
-      "start" : 44,
-      "length" : 373
+      "start" : 52,
+      "length" : 310
+    },
+    {
+      "activity" : "generate2",
+      "start" : 55,
+      "length" : 1
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 69,
+      "start" : 83,
       "length" : 6
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 80,
+      "start" : 99,
       "length" : 3
     }]
   },
@@ -55,53 +70,58 @@
     "size" : 860,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
-      "length" : 3
+      "start" : 31,
+      "length" : 4
     },
     {
       "activity" : "load",
-      "start" : 30,
-      "length" : 7
+      "start" : 31,
+      "length" : 6
     },
     {
       "activity" : "load-configure",
       "start" : 31,
-      "length" : 2
+      "length" : 3
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "loadInfo",
+      "start" : 31,
+      "length" : 1
     },
     {
       "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 9
+      "start" : 32,
+      "length" : 13
     },
     {
       "activity" : "validate",
       "start" : 32,
-      "length" : 964
+      "length" : 1638
     },
     {
       "activity" : "checkConformanceResources",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
+      "start" : 45,
       "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 39,
-      "length" : 12
+      "start" : 47,
+      "length" : 13
     },
     {
       "activity" : "generate1",
-      "start" : 40,
-      "length" : 19
+      "start" : 47,
+      "length" : 16
     },
     {
       "activity" : "generate2",
-      "start" : 44,
-      "length" : 151
+      "start" : 52,
+      "length" : 143
     }]
   },
   {
@@ -109,42 +129,52 @@
     "size" : 565,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
+      "start" : 31,
       "length" : 2
     },
     {
       "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
       "start" : 31,
       "length" : 3
     },
     {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 6
+    },
+    {
       "activity" : "validate",
-      "start" : 33,
-      "length" : 27
+      "start" : 34,
+      "length" : 16
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 39,
+      "start" : 47,
       "length" : 11
     },
     {
       "activity" : "generate1",
-      "start" : 40,
-      "length" : 11
+      "start" : 47,
+      "length" : 12
     },
     {
       "activity" : "generate2",
-      "start" : 44,
-      "length" : 98
+      "start" : 52,
+      "length" : 97
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 69,
+      "start" : 83,
       "length" : 1
     }]
   },
@@ -153,43 +183,43 @@
     "size" : 941,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
+      "start" : 31,
       "length" : 2
     },
     {
       "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "checkR4R4B",
       "start" : 31,
-      "length" : 1
+      "length" : 2
     },
     {
       "activity" : "generateNarratives",
-      "start" : 31,
+      "start" : 32,
       "length" : 5
     },
     {
       "activity" : "validate",
-      "start" : 33,
-      "length" : 26
+      "start" : 34,
+      "length" : 21
     },
     {
       "activity" : "translate",
-      "start" : 39,
+      "start" : 47,
       "length" : 12
     },
     {
       "activity" : "generate1",
-      "start" : 40,
-      "length" : 11
+      "start" : 47,
+      "length" : 14
     },
     {
       "activity" : "generate2",
-      "start" : 44,
-      "length" : 87
+      "start" : 52,
+      "length" : 100
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 83,
+      "length" : 1
     }]
   },
   {
@@ -197,47 +227,47 @@
     "size" : 1319,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
+      "start" : 31,
       "length" : 2
     },
     {
       "activity" : "load",
-      "start" : 30,
+      "start" : 31,
       "length" : 3
     },
     {
       "activity" : "generateNarratives",
-      "start" : 31,
+      "start" : 32,
       "length" : 5
     },
     {
       "activity" : "validate",
-      "start" : 33,
-      "length" : 56
+      "start" : 34,
+      "length" : 32
     },
     {
-      "activity" : "scanForUsageStats",
-      "start" : 39,
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
       "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 39,
-      "length" : 12
+      "start" : 47,
+      "length" : 11
     },
     {
       "activity" : "generate1",
-      "start" : 40,
-      "length" : 14
+      "start" : 47,
+      "length" : 19
     },
     {
       "activity" : "generate2",
-      "start" : 44,
-      "length" : 83
+      "start" : 53,
+      "length" : 85
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 69,
+      "start" : 83,
       "length" : 1
     }]
   },
@@ -246,1128 +276,12 @@
     "size" : 864,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 93
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 10
-    },
-    {
-      "activity" : "generate2",
-      "start" : 44,
-      "length" : 79
-    },
-    {
-      "activity" : "scanExamplesForR5",
-      "start" : 80,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-haeufigkeit-5.json",
-    "size" : 801,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "checkR4R4B",
       "start" : 31,
       "length" : 1
     },
     {
-      "activity" : "generateNarratives",
+      "activity" : "load",
       "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 16
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 13
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 62
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-isced-de.json",
-    "size" : 1490,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 27
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 13
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 68
-    },
-    {
-      "activity" : "responsesForQuestionnaire",
-      "start" : 45,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-leichtigkeit-6.json",
-    "size" : 926,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "load-configure",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 18
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 11
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 11
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 59
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-rentenstatus.json",
-    "size" : 677,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 2
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 18
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 9
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 57
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-urbanizitaet.json",
-    "size" : 693,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 16
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 9
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 71
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-dem-zigaretten-band.json",
-    "size" : 651,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 18
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 11
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 56
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/CodeSystem-pcor-example-general-health.json",
-    "size" : 1125,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 20
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 11
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 52
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Questionnaire-DEM.json",
-    "size" : 14413,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 5
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 21
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 664
-    },
-    {
-      "activity" : "validate",
-      "start" : 37,
-      "length" : 1665
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 17
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 227
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 137
-    },
-    {
-      "activity" : "makeDependencies",
-      "start" : 47,
-      "length" : 1
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 9
-    },
-    {
-      "activity" : "scanExamplesForR5",
-      "start" : 80,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/Questionnaire-PcorExampleQuestionnaire.json",
-    "size" : 2610,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 5
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 31,
-      "length" : 80
-    },
-    {
-      "activity" : "validate",
-      "start" : 38,
-      "length" : 257
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 57
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 41
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 3
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs.json",
-    "size" : 1072,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 4
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 79
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 29
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 13
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 216
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-einkommen-vs.json",
-    "size" : 1580,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 4
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 5
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 30
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 14
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 18
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 83
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-erwerbsstatus-vs.json",
-    "size" : 2612,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 4
-    },
-    {
-      "activity" : "scan",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 7
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 37
-    },
-    {
-      "activity" : "translate",
-      "start" : 39,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 29
-    },
-    {
-      "activity" : "generate2",
-      "start" : 45,
-      "length" : 92
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-geschlecht-vs.json",
-    "size" : 1501,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 5
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 29
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 12
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 17
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 74
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-haeufigkeit-5-vs.json",
-    "size" : 1519,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 25
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 17
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 69
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-isced-vs.json",
-    "size" : 2365,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 5
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 49
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 13
-    },
-    {
-      "activity" : "generate1",
-      "start" : 40,
-      "length" : 23
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 71
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein-ka-vs.json",
-    "size" : 1491,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 25
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 10
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 14
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 69
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein-nz-vs.json",
-    "size" : 1480,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 59
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 10
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 14
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 74
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein.json",
-    "size" : 1199,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 21
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 9
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 12
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 64
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-leichtigkeit-6-vs.json",
-    "size" : 1776,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 24
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 7
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 21
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 67
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    },
-    {
-      "activity" : "scanExamplesForR5",
-      "start" : 80,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-rentenstatus-vs.json",
-    "size" : 1352,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load-configure",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "checkR4R4B",
-      "start" : 31,
-      "length" : 1
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 20
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 6
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 16
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 59
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-urbanizitaet-vs.json",
-    "size" : 1354,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 18
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 6
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 17
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 62
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-dem-zigaretten-band-vs.json",
-    "size" : 1331,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 1
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 3
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 4
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 17
-    },
-    {
-      "activity" : "checkConformanceResources3",
-      "start" : 39,
-      "length" : 1
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 5
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 16
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 74
-    },
-    {
-      "activity" : "generateValidationPack",
-      "start" : 69,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "fsh-generated/resources/ValueSet-pcor-example-general-health.json",
-    "size" : 591,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "load",
-      "start" : 30,
-      "length" : 2
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 32,
-      "length" : 3
-    },
-    {
-      "activity" : "validate",
-      "start" : 33,
-      "length" : 9
-    },
-    {
-      "activity" : "translate",
-      "start" : 40,
-      "length" : 5
-    },
-    {
-      "activity" : "generate1",
-      "start" : 41,
-      "length" : 9
-    },
-    {
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 58
-    }]
-  },
-  {
-    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-example-response.json",
-    "size" : 1909,
-    "processes" : [{
-      "activity" : "loadResources",
-      "start" : 30,
       "length" : 2
     },
     {
@@ -1377,36 +291,511 @@
     },
     {
       "activity" : "validate",
-      "start" : 39,
-      "length" : 21
+      "start" : 34,
+      "length" : 20
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 45,
+      "length" : 1
     },
     {
       "activity" : "translate",
-      "start" : 40,
-      "length" : 4
+      "start" : 47,
+      "length" : 10
     },
     {
       "activity" : "generate1",
-      "start" : 41,
-      "length" : 37
+      "start" : 47,
+      "length" : 13
     },
     {
       "activity" : "generate2",
-      "start" : 46,
-      "length" : 26
+      "start" : 53,
+      "length" : 82
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dem-haeufigkeit-5.json",
+    "size" : 801,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
     },
     {
-      "activity" : "generateExampleZip",
-      "start" : 69,
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 23
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 72
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 83,
       "length" : 1
     }]
   },
   {
-    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json",
-    "size" : 4010,
+    "name" : "fsh-generated/resources/CodeSystem-dem-isced-de.json",
+    "size" : 1490,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 24
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 19
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 67
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dem-leichtigkeit-6.json",
+    "size" : 926,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 22
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 68
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dem-rentenstatus.json",
+    "size" : 677,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 19
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 64
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 83,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dem-urbanizitaet.json",
+    "size" : 693,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 19
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 60
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dem-zigaretten-band.json",
+    "size" : 651,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 20
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 61
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-pcor-example-general-health.json",
+    "size" : 1125,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 66
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 60
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 99,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Questionnaire-DEM.json",
+    "size" : 14413,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 25
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 565
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 4071
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 259
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 147
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Questionnaire-PcorExampleQuestionnaire.json",
+    "size" : 2610,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 31
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 575
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 70
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 51
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs.json",
+    "size" : 1072,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 76
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 56
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 212
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-einkommen-vs.json",
+    "size" : 1580,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
       "length" : 4
     },
     {
@@ -1417,36 +806,193 @@
     {
       "activity" : "generateNarratives",
       "start" : 32,
-      "length" : 12
+      "length" : 5
     },
     {
       "activity" : "validate",
-      "start" : 39,
-      "length" : 520
+      "start" : 34,
+      "length" : 26
     },
     {
       "activity" : "translate",
-      "start" : 40,
-      "length" : 4
+      "start" : 47,
+      "length" : 6
     },
     {
       "activity" : "generate1",
-      "start" : 41,
-      "length" : 132
+      "start" : 48,
+      "length" : 17
     },
     {
       "activity" : "generate2",
-      "start" : 46,
-      "length" : 52
+      "start" : 54,
+      "length" : 79
     }]
   },
   {
-    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.json",
-    "size" : 1761,
+    "name" : "fsh-generated/resources/ValueSet-dem-erwerbsstatus-vs.json",
+    "size" : 2612,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 30,
+      "start" : 31,
       "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 31
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 28
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 91
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-geschlecht-vs.json",
+    "size" : 1501,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 21
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 18
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 72
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-haeufigkeit-5-vs.json",
+    "size" : 1519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 34,
+      "length" : 24
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 17
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 65
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 99,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-isced-vs.json",
+    "size" : 2365,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
     },
     {
       "activity" : "generateNarratives",
@@ -1455,22 +1001,506 @@
     },
     {
       "activity" : "validate",
-      "start" : 39,
-      "length" : 13
+      "start" : 34,
+      "length" : 55
     },
     {
       "activity" : "translate",
-      "start" : 40,
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 24
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 68
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein-ka-vs.json",
+    "size" : 1491,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 56
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 67
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein-nz-vs.json",
+    "size" : 1480,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 59
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 66
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-ja-nein.json",
+    "size" : 1199,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 29
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 61
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-leichtigkeit-6-vs.json",
+    "size" : 1776,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 44
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 19
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 63
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-rentenstatus-vs.json",
+    "size" : 1352,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 22
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 58
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-urbanizitaet-vs.json",
+    "size" : 1354,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 33
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
       "length" : 3
     },
     {
       "activity" : "generate1",
-      "start" : 41,
-      "length" : 46
+      "start" : 48,
+      "length" : 16
     },
     {
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 54,
+      "length" : 77
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-dem-zigaretten-band-vs.json",
+    "size" : 1331,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 22
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 16
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 57
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 84,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-pcor-example-general-health.json",
+    "size" : 591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 9
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 57
+    }]
+  },
+  {
+    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-example-response.json",
+    "size" : 1909,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 10
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 17
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 51
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 24
+    }]
+  },
+  {
+    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json",
+    "size" : 4010,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 11
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 45,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 45,
+      "length" : 1952
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 102
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 27
+    }]
+  },
+  {
+    "name" : "input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.json",
+    "size" : 1761,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 13
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 36
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
       "length" : 17
     }]
   },
@@ -1479,22 +1509,22 @@
     "size" : 2327,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
   {
     "name" : "/input/includes/variables.md",
-    "size" : 54,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 1
-    }]
+    "size" : 54
   },
   {
     "name" : "/input/includes/fragment-header.html",
-    "size" : 431
+    "size" : 431,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 55,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/includes/img.html",
@@ -1505,7 +1535,7 @@
     "size" : 3992,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
@@ -1515,20 +1545,15 @@
   },
   {
     "name" : "/fsh-generated/includes/fsh-link-references.md",
-    "size" : 1823,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 46,
-      "length" : 1
-    }]
+    "size" : 1823
   },
   {
     "name" : "/input/pagecontent/PROMIS-16.md",
     "size" : 12382,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
-      "length" : 1
+      "start" : 55,
+      "length" : 2
     }]
   },
   {
@@ -1540,7 +1565,7 @@
     "size" : 1558,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
@@ -1548,13 +1573,8 @@
     "name" : "/input/pagecontent/PROMIS-29.md",
     "size" : 17578,
     "processes" : [{
-      "activity" : "validate",
-      "start" : 39,
-      "length" : 1
-    },
-    {
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 2
     }]
   },
@@ -1567,7 +1587,7 @@
     "size" : 5399,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
@@ -1576,7 +1596,7 @@
     "size" : 5217,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
@@ -1589,21 +1609,26 @@
     "size" : 2069,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/Implementation.md",
-    "size" : 3860
+    "size" : 3860,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 55,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/Bereitstellung.md",
     "size" : 9029,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
-      "length" : 2
+      "start" : 55,
+      "length" : 1
     }]
   },
   {
@@ -1623,7 +1648,7 @@
     "size" : 43630,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 1
     }]
   },
@@ -1636,7 +1661,7 @@
     "size" : 19117,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 46,
+      "start" : 55,
       "length" : 2
     }]
   }]
