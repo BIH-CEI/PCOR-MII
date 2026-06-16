@@ -8,7 +8,7 @@ Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fra
 
 Das Erfassungs-System kann **außerhalb FHIR** liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) **oder direkt in FHIR** erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). **FHIR ist primär die Ablage- und Austausch-Form** — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.
 
-In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.md) und [Bereitstellung](Bereitstellung.md).
+In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.md) und [Bereitstellung](Bereitstellung.md).
 
 ### Vom Questionnaire zur Antwort
 

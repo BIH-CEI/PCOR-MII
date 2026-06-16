@@ -10,7 +10,7 @@ Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implement
 
 Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
 
-1. **Strukturell**dem[`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/)entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
+1. **Strukturell**dem[`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
 1. Die**`linkId`s**müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen
 1. Jede**codierte Antwort**muss aus dem`answerValueSet`(bzw.`answerOption`) des jeweiligen Items stammen
 

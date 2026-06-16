@@ -14,8 +14,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-* Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis-16.html)
-* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
+* Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538121)
+* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
 * Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"
 
 ### Eigenschaften
@@ -40,7 +40,7 @@ Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library `mii-l
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 ### Item-Tabelle
 

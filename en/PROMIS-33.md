@@ -15,6 +15,6 @@ Diese Kombination entspricht funktional dem PROMIS-33-Profile (PROMIS-29 + 4 Cog
 
 Für die [Pilot-Kohorte "50 First Patients"](Implementation.md) wird die PROMIS-33-Abdeckung als **zwei separate QuestionnaireResponses** ausgetauscht, beide konform zum `MII PR PRO QuestionnaireResponse`-Profil:
 
-* [**`mii-exa-pro-promis-29-response`** (Upstream MII PRO-Modul)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) — 29 Items (7 Domänen + Schmerzintensität)
+* [**`mii-exa-pro-promis-29-response`** (Upstream MII PRO-Modul)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) — 29 Items (7 Domänen + Schmerzintensität)
 * [**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md) — 4 Cognitive-Function-Items (lokal in PCOR-MII, da upstream noch nicht vorhanden)
 

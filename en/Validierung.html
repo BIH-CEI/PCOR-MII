@@ -336,7 +336,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:</p>
 
 <ol>
-  <li><strong>Strukturell</strong> dem <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
+  <li><strong>Strukturell</strong> dem <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
   <li>Die <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen</li>
   <li>Jede <strong>codierte Antwort</strong> muss aus dem <code class="language-plaintext highlighter-rouge">answerValueSet</code> (bzw. <code class="language-plaintext highlighter-rouge">answerOption</code>) des jeweiligen Items stammen</li>
 </ol>
@@ -548,7 +548,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-16 13:06:00 +0000">
+  <span title="2026-06-16 13:17:00 +0000">
     2026-06-16
   </span>
 

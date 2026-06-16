@@ -33,7 +33,7 @@ Rentenstatus (GIPS10).
   "title" : "DEM Rentenstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T13:06:44+00:00",
+  "date" : "2026-06-16T13:17:28+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
