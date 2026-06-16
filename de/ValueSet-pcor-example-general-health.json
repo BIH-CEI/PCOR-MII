@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "pcor-example-general-health",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet pcor-example-general-health</b></p><a name=\"pcor-example-general-health\"> </a><a name=\"hcpcor-example-general-health\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-pcor-example-general-health.html\"><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health",
+  "version" : "0.1.0",
+  "name" : "PcorExampleGeneralHealthVS",
+  "title" : "PCOR Example General Health Self-Assessment",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T09:03:15+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health"
+    }]
+  }
+}

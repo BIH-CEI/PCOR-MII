@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-06-15T14:40:34+00:00",
+  "date" : "2026-06-16T09:03:15+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1083,8 +1083,65 @@
         "reference" : "Questionnaire/PcorExampleQuestionnaire"
       },
       "name" : "PCOR Beispiel-Fragebogen",
-      "description" : "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires.",
+      "description" : "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.4.1.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pcor-example-general-health"
+      },
+      "name" : "PCOR Example General Health Self-Assessment",
+      "description" : "ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pcor-example-general-health"
+      },
+      "name" : "PCOR Example General Health Self-Assessment",
+      "description" : "Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-example-response"
+      },
+      "name" : "pcor-mii-exa-example-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-16-response"
+      },
+      "name" : "pcor-mii-exa-promis-16-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"
+      },
+      "name" : "pcor-mii-exa-promis-cognitive-function-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     }],
     "page" : {
       "extension" : [{
@@ -1112,6 +1169,24 @@
         "title" : "Fragebögen",
         "generation" : "markdown",
         "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PROMIS.html"
+          }],
+          "nameUrl" : "PROMIS.html",
+          "title" : "PROMIS (Übersicht)",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PROMIS-33.html"
+          }],
+          "nameUrl" : "PROMIS-33.html",
+          "title" : "PROMIS-33 Profile v2.1",
+          "generation" : "markdown"
+        },
+        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "PROMIS-29.html"

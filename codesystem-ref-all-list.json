@@ -8,8 +8,8 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
     "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
+    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
     "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein"
   },
   {
@@ -121,5 +121,16 @@
     "uses" : {
     },
     "ValueSet-dem-zigaretten-band-vs.html" : "DEM Zigaretten pro Tag"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PcorExampleGeneralHealthCS",
+    "title" : "PCOR Example General Health Self-Assessment",
+    "description" : "Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire.",
+    "uses" : {
+    },
+    "ValueSet-pcor-example-general-health.html" : "PCOR Example General Health Self-Assessment"
   }]
 }
