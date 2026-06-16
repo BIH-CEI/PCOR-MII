@@ -1,5 +1,44 @@
 Diese Seite beschreibt, wie `Questionnaire`s und `QuestionnaireResponse`s im PCOR-MII Kontext validiert werden können.
 
+## Validierungs-Architektur
+
+Ein `QuestionnaireResponse` ist nicht "alleine" validierbar — der Validator muss eine Auflösungskette durchlaufen, um zu wissen *gegen was* validiert wird:
+
+```mermaid
+flowchart TB
+    QR["QuestionnaireResponse<br/>(zu validieren)"]
+    Profile["meta.profile:<br/>MII PR PRO QR Profile"]
+    Q["Questionnaire<br/>(z.B. mii-qst-pro-promis-16)"]
+    VS["ValueSet<br/>(z.B. frequency-response-scale)"]
+    CS["CodeSystem<br/>(LOINC)"]
+
+    QR -->|"validiert gegen"| Profile
+    QR -->|"questionnaire =<br/>canonical URL"| Q
+    Q -->|"item.answerValueSet"| VS
+    VS -->|"compose.include"| CS
+
+    subgraph CLI ["Lokal: HL7 Validator CLI"]
+        direction LR
+        CLI_Cmd["fhir validate<br/>-profile ...<br/>-ig pros#2026.4.1"]
+    end
+
+    subgraph Server ["Lokal: PCOR-MII Container (port 8097)"]
+        direction LR
+        Server_Cmd["POST /fhir/QR/$validate"]
+    end
+
+    QR -.->|"Option 1"| CLI_Cmd
+    QR -.->|"Option 2"| Server_Cmd
+
+    style QR fill:#e1f5ff
+    style Profile fill:#fff4e1
+    style Q fill:#fff4e1
+    style VS fill:#e1ffe1
+    style CS fill:#e1ffe1
+```
+
+Beide Tools laden dieselben Quell-Definitionen (PRO-Modul-Package + SDC), kommen also zum **gleichen Ergebnis**. CLI ist gut für CI-Pipelines, Server-`$validate` für Run-Time-Checks beim Empfang.
+
 ## Was kann validiert werden?
 
 | Was | Wogegen |
@@ -43,6 +82,18 @@ Beim lokalen Build (`./_build.sh`) validiert IG Publisher automatisch alle Beisp
 fhir push input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
 fhir validate --profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
+
+### Server-seitig via PCOR-MII Container
+
+Wenn der [lokale PCOR-MII Container](Bereitstellung.html) läuft (Port 8097), kann er Validierung als FHIR-`$validate`-Operation ausführen — derselbe Validator wie das CLI, aber via HTTP:
+
+```bash
+curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
+  -H "Content-Type: application/fhir+json" \
+  -d @input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
+```
+
+Antwort ist ein `OperationOutcome` mit `issue`-Liste. Die `severity` ist identisch zur CLI-Ausgabe. Vorteil: keine Java/JAR-Installation beim Konsumenten nötig, alles per HTTP-Call.
 
 ## Ergebnis-Interpretation
 
