@@ -10,9 +10,9 @@ docker compose up --build
 ```
 
 Dann erreichbar unter:
-- **Web UI**: <http://localhost:8080/>
-- **FHIR API**: <http://localhost:8080/fhir>
-- **CapabilityStatement**: <http://localhost:8080/fhir/metadata>
+- **Web UI**: <http://localhost:8097/>
+- **FHIR API**: <http://localhost:8097/fhir>
+- **CapabilityStatement**: <http://localhost:8097/fhir/metadata>
 
 ## Was ist drin?
 
@@ -37,7 +37,7 @@ Bei jedem Push auf `main` wird das Image gebaut und nach GitHub Container Regist
 ## Validierung gegen den laufenden Server
 
 ```bash
-curl -X POST http://localhost:8080/fhir/QuestionnaireResponse/\$validate \
+curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
   -H "Content-Type: application/fhir+json" \
   -d @../input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
 ```
