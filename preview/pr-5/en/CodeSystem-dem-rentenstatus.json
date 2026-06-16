@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-rentenstatus",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-rentenstatus</b></p><a name=\"en-dem-rentenstatus\"> </a><a name=\"en-hcdem-rentenstatus\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">keine<a name=\"en-dem-rentenstatus-keine\"> </a></td><td>Keine Rente</td></tr><tr><td style=\"white-space:nowrap\">laufend<a name=\"en-dem-rentenstatus-laufend\"> </a></td><td>Laufendes Rentenverfahren</td></tr><tr><td style=\"white-space:nowrap\">auf-zeit<a name=\"en-dem-rentenstatus-auf-zeit\"> </a></td><td>Rente auf Zeit</td></tr><tr><td style=\"white-space:nowrap\">auf-dauer<a name=\"en-dem-rentenstatus-auf-dauer\"> </a></td><td>Rente auf Dauer</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus",
+  "version" : "0.1.0",
+  "name" : "DemRentenstatusCS",
+  "title" : "DEM Rentenstatus (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T13:06:07+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Rentenstatus (GIPS10).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "keine",
+    "display" : "Keine Rente"
+  },
+  {
+    "code" : "laufend",
+    "display" : "Laufendes Rentenverfahren"
+  },
+  {
+    "code" : "auf-zeit",
+    "display" : "Rente auf Zeit"
+  },
+  {
+    "code" : "auf-dauer",
+    "display" : "Rente auf Dauer"
+  }]
+}

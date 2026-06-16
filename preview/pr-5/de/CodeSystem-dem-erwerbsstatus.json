@@ -1,0 +1,79 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-erwerbsstatus",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-erwerbsstatus</b></p><a name=\"dem-erwerbsstatus\"> </a><a name=\"hcdem-erwerbsstatus\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">selbststaendig<a name=\"dem-erwerbsstatus-selbststaendig\"> </a></td><td>Selbstständigerwerbend</td></tr><tr><td style=\"white-space:nowrap\">angestellt<a name=\"dem-erwerbsstatus-angestellt\"> </a></td><td>Angestellt</td></tr><tr><td style=\"white-space:nowrap\">arbeitssuchend<a name=\"dem-erwerbsstatus-arbeitssuchend\"> </a></td><td>Arbeitssuchend</td></tr><tr><td style=\"white-space:nowrap\">haushalt<a name=\"dem-erwerbsstatus-haushalt\"> </a></td><td>Hausfrau/Hausmann</td></tr><tr><td style=\"white-space:nowrap\">arbeitsunfaehig<a name=\"dem-erwerbsstatus-arbeitsunfaehig\"> </a></td><td>Krankheitsbedingte Arbeitsunfähigkeit</td></tr><tr><td style=\"white-space:nowrap\">pensioniert<a name=\"dem-erwerbsstatus-pensioniert\"> </a></td><td>Pensioniert</td></tr><tr><td style=\"white-space:nowrap\">student<a name=\"dem-erwerbsstatus-student\"> </a></td><td>Student/in</td></tr><tr><td style=\"white-space:nowrap\">nicht-arbeitend<a name=\"dem-erwerbsstatus-nicht-arbeitend\"> </a></td><td>Nicht arbeitend und nicht arbeitssuchend</td></tr><tr><td style=\"white-space:nowrap\">lernende<a name=\"dem-erwerbsstatus-lernende\"> </a></td><td>Lernende/r</td></tr><tr><td style=\"white-space:nowrap\">anderes<a name=\"dem-erwerbsstatus-anderes\"> </a></td><td>Anderes</td></tr><tr><td style=\"white-space:nowrap\">weiss-nicht<a name=\"dem-erwerbsstatus-weiss-nicht\"> </a></td><td>Ich weiss es nicht</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus",
+  "version" : "0.1.0",
+  "name" : "DemErwerbsstatusCS",
+  "title" : "DEM Erwerbsstatus (OECD)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T13:06:07+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Aktuelle Arbeitssituation nach OECD Measuring Financial Literacy (Q_OECDLIT5a).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 11,
+  "concept" : [{
+    "code" : "selbststaendig",
+    "display" : "Selbstständigerwerbend"
+  },
+  {
+    "code" : "angestellt",
+    "display" : "Angestellt"
+  },
+  {
+    "code" : "arbeitssuchend",
+    "display" : "Arbeitssuchend"
+  },
+  {
+    "code" : "haushalt",
+    "display" : "Hausfrau/Hausmann"
+  },
+  {
+    "code" : "arbeitsunfaehig",
+    "display" : "Krankheitsbedingte Arbeitsunfähigkeit"
+  },
+  {
+    "code" : "pensioniert",
+    "display" : "Pensioniert"
+  },
+  {
+    "code" : "student",
+    "display" : "Student/in"
+  },
+  {
+    "code" : "nicht-arbeitend",
+    "display" : "Nicht arbeitend und nicht arbeitssuchend"
+  },
+  {
+    "code" : "lernende",
+    "display" : "Lernende/r"
+  },
+  {
+    "code" : "anderes",
+    "display" : "Anderes"
+  },
+  {
+    "code" : "weiss-nicht",
+    "display" : "Ich weiss es nicht"
+  }]
+}
