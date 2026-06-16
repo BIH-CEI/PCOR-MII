@@ -198,6 +198,12 @@ nav.navbar.navbar-inverse {
     <a href="Implementation.html">Anwendung</a>
   </li>
   <li>
+    <a href="Validierung.html">Validierung</a>
+  </li>
+  <li>
+    <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
     <a href="Release-Notes.html">Release Notes</a>
   </li>
   <li>
@@ -241,7 +247,7 @@ nav.navbar.navbar-inverse {
 
             <a href="#bottom">Ende</a>
 
-          | <a href="Release-Notes.html">weiter &gt;</a>
+          | <a href="Validierung.html">weiter &gt;</a>
 
           </span>
 
@@ -282,6 +288,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#rolle-von-fhir-in-pcor-mii" id="markdown-toc-rolle-von-fhir-in-pcor-mii">Rolle von FHIR in PCOR-MII</a></li>
   <li><a href="#vom-questionnaire-zur-antwort" id="markdown-toc-vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</a></li>
   <li><a href="#lebenszyklus" id="markdown-toc-lebenszyklus">Lebenszyklus</a></li>
   <li><a href="#beispiel-questionnaireresponse-auszug" id="markdown-toc-beispiel-questionnaireresponse-auszug">Beispiel: QuestionnaireResponse (Auszug)</a></li>
@@ -291,6 +298,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <p>Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fragebögen in der Praxis angewendet werden.</p>
+
+<h3 id="rolle-von-fhir-in-pcor-mii">Rolle von FHIR in PCOR-MII</h3>
+
+<p>Das Erfassungs-System kann <strong>außerhalb FHIR</strong> liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) <strong>oder direkt in FHIR</strong> erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). <strong>FHIR ist primär die Ablage- und Austausch-Form</strong> — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.</p>
+
+<p>In beiden Fällen entstehen <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s + ggf. <code class="language-plaintext highlighter-rouge">Observation</code>s konform zum <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>. Validierung und Austausch sehen deshalb gleich aus — siehe <a href="Validierung.html">Validierung</a> und <a href="Bereitstellung.html">Bereitstellung</a>.</p>
 
 <h3 id="vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</h3>
 
@@ -308,9 +321,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ol>
   <li><strong>Bereitstellung</strong> – das <code class="language-plaintext highlighter-rouge">Questionnaire</code> wird über einen FHIR-Server bereitgestellt (<code class="language-plaintext highlighter-rouge">GET [base]/Questionnaire?url=...</code>).</li>
   <li><strong>Rendering</strong> – ein Client (ePRO-App, Studienportal) rendert die Items anhand von <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">text</code> und Antwortoptionen.</li>
-  <li><strong>Pre-Population</strong> <em>(optional)</em> – vorhandene Daten werden vorbefüllt (z. B. via <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture, SDC</a>).</li>
   <li><strong>Erfassung</strong> – die ausgefüllten Antworten werden als <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> gespeichert (<code class="language-plaintext highlighter-rouge">status = completed</code>).</li>
-  <li><strong>Auswertung / Extraktion</strong> <em>(optional)</em> – relevante Antworten werden in andere FHIR-Ressourcen (z. B. <code class="language-plaintext highlighter-rouge">Observation</code>) überführt (Data Extraction).</li>
+  <li><strong>Auswertung / Extraktion</strong> <em>(zukünftig)</em> – relevante Antworten werden in andere FHIR-Ressourcen (z. B. <code class="language-plaintext highlighter-rouge">Observation</code>) überführt (Data Extraction via <a href="https://hl7.org/fhir/uv/sdc/">SDC</a>). In PCOR-MII aktuell nicht implementiert.</li>
 </ol>
 
 <h3 id="beispiel-questionnaireresponse-auszug">Beispiel: QuestionnaireResponse (Auszug)</h3>
@@ -367,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Versionierung</strong>: Antworten immer gegen eine <strong>versionierte</strong> <code class="language-plaintext highlighter-rouge">Questionnaire</code>-URL erfassen, damit spätere Änderungen am Fragebogen bestehende Daten nicht uneindeutig machen.</li>
-  <li><strong>Structured Data Capture (SDC)</strong>: Für Pre-Population und Extraktion empfiehlt sich der HL7-SDC-IG als ergänzender Standard.</li>
+  <li><strong>Structured Data Capture (SDC)</strong>: ergänzender Standard für Data-Extraction (zukünftig in PCOR-MII).</li>
   <li><strong>Mehrsprachigkeit</strong>: Item-Texte können über <code class="language-plaintext highlighter-rouge">translation</code>-Extensions mehrsprachig hinterlegt werden.</li>
 </ul>
 
@@ -405,7 +417,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Release-Notes.html">weiter ></a>
+                <a href="Validierung.html">weiter ></a>
 
               </td>
             </tr>
@@ -421,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 09:03:00 +0000">
+  <span title="2026-06-16 12:55:00 +0000">
     2026-06-16
   </span>
 

@@ -198,6 +198,12 @@ nav.navbar.navbar-inverse {
     <a href="Implementation.html">Anwendung</a>
   </li>
   <li>
+    <a href="Validierung.html">Validierung</a>
+  </li>
+  <li>
+    <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
     <a href="Release-Notes.html">Release Notes</a>
   </li>
   <li>
@@ -314,8 +320,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>Definition im MII PRO-Modul: <a href="https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16">PROMIS-16 (Simplifier)</a></li>
-  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS">PROMIS-Lizenzierung</a></li>
+  <li>Definition im MII PRO-Modul: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis-16.html">PROMIS-16 (Simplifier)</a></li>
+  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html">PROMIS-Lizenzierung</a></li>
   <li>Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"</li>
 </ul>
 
@@ -347,7 +353,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
 
-<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum <a href="https://simplifier.net/guide/mii-pro-v2026-de"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
+<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
 
 <h3 id="item-tabelle">Item-Tabelle</h3>
 
@@ -379,14 +385,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>62826-3</td>
         <td>Are you able to go up and down stairs at a normal pace?</td>
         <td>Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen?</td>
-        <td> </td>
+        <td><strong>1</strong> · Ohne jede Schwierigkeiten / Without any difficulty (<code class="language-plaintext highlighter-rouge">LA13921-4</code>)<br /><strong>2</strong> · Mit geringen Schwierigkeiten / With a little difficulty (<code class="language-plaintext highlighter-rouge">LA13918-0</code>)<br /><strong>3</strong> · Mit einigen Schwierigkeiten / With some difficulty (<code class="language-plaintext highlighter-rouge">LA13920-6</code>)<br /><strong>4</strong> · Mit großen Schwierigkeiten / With much difficulty (<code class="language-plaintext highlighter-rouge">LA13919-8</code>)<br /><strong>5</strong> · Kann ich gar nicht / Unable to do (<code class="language-plaintext highlighter-rouge">LA13912-3</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-pfa23</code></td>
         <td>62827-1</td>
         <td>Are you able to go for a walk of at least 15 minutes?</td>
         <td>Können Sie mindestens 15 Minuten lang spazieren gehen?</td>
-        <td> </td>
+        <td><strong>1</strong> · Ohne jede Schwierigkeiten / Without any difficulty (<code class="language-plaintext highlighter-rouge">LA13921-4</code>)<br /><strong>2</strong> · Mit geringen Schwierigkeiten / With a little difficulty (<code class="language-plaintext highlighter-rouge">LA13918-0</code>)<br /><strong>3</strong> · Mit einigen Schwierigkeiten / With some difficulty (<code class="language-plaintext highlighter-rouge">LA13920-6</code>)<br /><strong>4</strong> · Mit großen Schwierigkeiten / With much difficulty (<code class="language-plaintext highlighter-rouge">LA13919-8</code>)<br /><strong>5</strong> · Kann ich gar nicht / Unable to do (<code class="language-plaintext highlighter-rouge">LA13912-3</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -415,14 +421,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>61941-1</td>
         <td>I found it hard to focus on anything other than my anxiety.</td>
         <td>Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-edanx41</code></td>
         <td>61942-9</td>
         <td>My worries overwhelmed me.</td>
         <td>Meine Sorgen haben mich überwältigt.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -451,14 +457,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>61967-6</td>
         <td>I felt depressed.</td>
         <td>Ich fühlte mich niedergeschlagen.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-eddep41</code></td>
         <td>61973-4</td>
         <td>I felt hopeless.</td>
         <td>Ich fühlte mich hoffnungslos.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -487,14 +493,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>61878-5</td>
         <td>I feel fatigued.</td>
         <td>Ich bin erschöpft.</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-an3</code></td>
         <td>61882-7</td>
         <td>I had trouble starting things because I was tired.</td>
         <td>Es fällt mir schwer, etwas anzufangen, weil ich müde bin.</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -523,14 +529,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td> </td>
         <td>I had problems during the day because of poor sleep.</td>
         <td>Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe.</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-sleep90</code></td>
         <td> </td>
         <td>I had trouble sleeping.</td>
         <td>Es fiel mir schwer zu schlafen.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -559,14 +565,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td> </td>
         <td>I have trouble taking care of my regular personal responsibilities.</td>
         <td>Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-srpper46-caps</code></td>
         <td>76712-9</td>
         <td>I have trouble doing all of the activities with friends that I want to do.</td>
         <td>Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte.</td>
-        <td> </td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -595,14 +601,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td>61758-9</td>
         <td>How much did pain interfere with your day-to-day activities?</td>
         <td>Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten?</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-painin31</code></td>
         <td>61773-8</td>
         <td>How much did pain interfere with your ability to participate in social activities?</td>
         <td>Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen?</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -631,14 +637,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td> </td>
         <td>I have been able to remember to do things, like take medicine or buy something I needed.</td>
         <td>Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte.</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
       <tr>
         <td><code class="language-plaintext highlighter-rouge">promis-pc-caps3r</code></td>
         <td> </td>
         <td>I have been able to think clearly without extra effort.</td>
         <td>Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen.</td>
-        <td> </td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
       </tr>
     </tbody>
   </table>
@@ -697,7 +703,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 09:03:00 +0000">
+  <span title="2026-06-16 12:55:00 +0000">
     2026-06-16
   </span>
 

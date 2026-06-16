@@ -16,8 +16,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-* Definition im MII PRO-Modul: [PROMIS-29 (Simplifier)](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-29)
-* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS)
+* Definition im MII PRO-Modul: [PROMIS-29 (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis-29.html)
+* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
 * Offizielle deutsche Quelle: PHO PDF "PROMIS-29 Profile v2.1 German, 06 April 2020"
 
 ### Eigenschaften
@@ -36,7 +36,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 Das MII PRO-Modul liefert ein vollständiges, professionell kuratiertes QR-Beispiel direkt mit:
 
-* [**`mii-exa-pro-promis-29-response`**](https://simplifier.net/guide/mii-pro-v2026-de) (Upstream, Simplifier) — vollständige Antwort über alle 7 Domänen + Schmerzintensität, konform zum `MII PR PRO QuestionnaireResponse`-Profil (validiert: 0 Errors).
+* [**`mii-exa-pro-promis-29-response`**](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) (Upstream, Simplifier) — vollständige Antwort über alle 7 Domänen + Schmerzintensität, konform zum `MII PR PRO QuestionnaireResponse`-Profil (validiert: 0 Errors).
 
 Diese Referenz wird hier bewusst **nicht dupliziert** — Pflege erfolgt zentral im MII PRO-Modul.
 

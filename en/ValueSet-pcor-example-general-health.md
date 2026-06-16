@@ -33,7 +33,7 @@ ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit a
   "title" : "PCOR Example General Health Self-Assessment",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T09:03:15+00:00",
+  "date" : "2026-06-16T12:55:32+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

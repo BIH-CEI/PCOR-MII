@@ -14,8 +14,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-* Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16)
-* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS)
+* Definition im MII PRO-Modul: [PROMIS-16 (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis-16.html)
+* Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
 * Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"
 
 ### Eigenschaften
@@ -40,7 +40,7 @@ Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library `mii-l
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 ### Item-Tabelle
 
@@ -54,8 +54,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-pfa21` | 62826-3 | Are you able to go up and down stairs at a normal pace? | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? |   |
-| `promis-pfa23` | 62827-1 | Are you able to go for a walk of at least 15 minutes? | Können Sie mindestens 15 Minuten lang spazieren gehen? |   |
+| `promis-pfa21` | 62826-3 | Are you able to go up and down stairs at a normal pace? | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? | **1** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`)**2** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**5** · Kann ich gar nicht / Unable to do (`LA13912-3`) |
+| `promis-pfa23` | 62827-1 | Are you able to go for a walk of at least 15 minutes? | Können Sie mindestens 15 Minuten lang spazieren gehen? | **1** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`)**2** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**5** · Kann ich gar nicht / Unable to do (`LA13912-3`) |
 
 ### Emotionale Belastung — Angst
 
@@ -63,8 +63,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-edanx40` | 61941-1 | I found it hard to focus on anything other than my anxiety. | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. |   |
-| `promis-edanx41` | 61942-9 | My worries overwhelmed me. | Meine Sorgen haben mich überwältigt. |   |
+| `promis-edanx40` | 61941-1 | I found it hard to focus on anything other than my anxiety. | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-edanx41` | 61942-9 | My worries overwhelmed me. | Meine Sorgen haben mich überwältigt. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### Emotionale Belastung — Depressivität
 
@@ -72,8 +72,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-eddep29` | 61967-6 | I felt depressed. | Ich fühlte mich niedergeschlagen. |   |
-| `promis-eddep41` | 61973-4 | I felt hopeless. | Ich fühlte mich hoffnungslos. |   |
+| `promis-eddep29` | 61967-6 | I felt depressed. | Ich fühlte mich niedergeschlagen. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-eddep41` | 61973-4 | I felt hopeless. | Ich fühlte mich hoffnungslos. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### Erschöpfung
 
@@ -81,8 +81,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-hi7` | 61878-5 | I feel fatigued. | Ich bin erschöpft. |   |
-| `promis-an3` | 61882-7 | I had trouble starting things because I was tired. | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. |   |
+| `promis-hi7` | 61878-5 | I feel fatigued. | Ich bin erschöpft. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-an3` | 61882-7 | I had trouble starting things because I was tired. | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
 ### Schlafbezogene Beeinträchtigungen / Schlafbeeinträchtigung
 
@@ -90,8 +90,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-sleep25` |   | I had problems during the day because of poor sleep. | Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe. |   |
-| `promis-sleep90` |   | I had trouble sleeping. | Es fiel mir schwer zu schlafen. |   |
+| `promis-sleep25` |   | I had problems during the day because of poor sleep. | Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-sleep90` |   | I had trouble sleeping. | Es fiel mir schwer zu schlafen. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### Teilhabe an sozialen Rollen und Aktivitäten
 
@@ -99,8 +99,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-srpper31-caps` |   | I have trouble taking care of my regular personal responsibilities. | Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern. |   |
-| `promis-srpper46-caps` | 76712-9 | I have trouble doing all of the activities with friends that I want to do. | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. |   |
+| `promis-srpper31-caps` |   | I have trouble taking care of my regular personal responsibilities. | Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-srpper46-caps` | 76712-9 | I have trouble doing all of the activities with friends that I want to do. | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### Beeinträchtigung durch Schmerzen
 
@@ -108,8 +108,8 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-painin9` | 61758-9 | How much did pain interfere with your day-to-day activities? | Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten? |   |
-| `promis-painin31` | 61773-8 | How much did pain interfere with your ability to participate in social activities? | Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? |   |
+| `promis-painin9` | 61758-9 | How much did pain interfere with your day-to-day activities? | Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-painin31` | 61773-8 | How much did pain interfere with your ability to participate in social activities? | Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
 ### Kognitive Funktionen — Fähigkeiten
 
@@ -117,6 +117,6 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `promis-pc27r` |   | I have been able to remember to do things, like take medicine or buy something I needed. | Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte. |   |
-| `promis-pc-caps3r` |   | I have been able to think clearly without extra effort. | Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen. |   |
+| `promis-pc27r` |   | I have been able to remember to do things, like take medicine or buy something I needed. | Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-pc-caps3r` |   | I have been able to think clearly without extra effort. | Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
