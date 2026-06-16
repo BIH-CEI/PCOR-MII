@@ -135,8 +135,8 @@ nav.navbar.navbar-inverse {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.1.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -233,7 +233,7 @@ nav.navbar.navbar-inverse {
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='Questionnaires.html'><b>Fragebögen</b></a></li><li><a href='PROMIS.html'><b>PROMIS</b></a></li><li><b>PROMIS-33 Profile v2.1</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='Questionnaires.html'><b>Fragebögen</b></a></li><li><b>PROMIS-33 Profile v2.1</b></li>
 
           <span style="float: var(--ig-right);">
 
@@ -280,52 +280,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#geplante-eigenschaften" id="markdown-toc-geplante-eigenschaften">Geplante Eigenschaften</a></li>
-  <li><a href="#bezug-zu-anderen-promis-instrumenten" id="markdown-toc-bezug-zu-anderen-promis-instrumenten">Bezug zu anderen PROMIS-Instrumenten</a></li>
-  <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
-  <li><a href="#item-übersicht" id="markdown-toc-item-übersicht">Item-Übersicht</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<p>PROMIS®-33 Profile v2.1 ist die erweiterte Variante der PROMIS-Profile mit 33 Items über 8 Domänen (Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Ability to Participate in Social Roles and Activities, Pain Interference, <strong>Cognitive Function</strong>) plus Schmerzintensität. Gegenüber PROMIS-29 ergänzt PROMIS-33 vier Cognitive-Function-Items, behält die Item-Tiefe der anderen Domänen (jeweils 4 Items) bei.</p>
-
-<blockquote>
-  <p><strong>Status in PCOR-MII</strong>: geplant, noch nicht implementiert.</p>
-
-  <p>Der zugehörige FHIR-Questionnaire ist im MII PRO-Modul aktuell <strong>nicht</strong> verfügbar. Die Implementierung ist als Nachfolge-Erweiterung zu PROMIS-29 vorgesehen, sobald PHO und PCOR-MII den finalen validierten deutschen Wording-Stand bereitstellen. Diese Seite dient zunächst als Platzhalter zur sichtbaren Kennzeichnung des geplanten Umfangs.</p>
-</blockquote>
-
-<h3 id="geplante-eigenschaften">Geplante Eigenschaften</h3>
+<p>PROMIS®-33 Profile v2.1 ergänzt PROMIS-29 um die Cognitive-Function-Domäne. In PCOR-MII wird <strong>keine eigenständige PROMIS-33-Implementierung</strong> vorgesehen — stattdessen wird die PROMIS-33-Abdeckung durch die getrennte Verwendung der zwei bereits verfügbaren Instrumente erreicht:</p>
 
 <ul>
-  <li><strong>Items</strong>: 33 (PROMIS-29 Items + 4 zusätzliche Cognitive-Function-Items)</li>
-  <li><strong>Primärsprache</strong>: voraussichtlich Englisch mit deutscher <code class="language-plaintext highlighter-rouge">translation</code>-Extension (Konvention des MII PRO-Moduls)</li>
-  <li><strong>Scoring</strong>: Raw Score + T-Score je Domäne, analog PROMIS-29</li>
-  <li><strong>Geplante Capabilities</strong>: displayable, collectable, calculatable, extractable</li>
+  <li><a href="PROMIS-29.html"><strong>PROMIS-29 Profile v2.1</strong></a> — deckt die 7 Domänen Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Social Function, Pain Interference + Schmerzintensität ab</li>
+  <li><a href="PROMIS-Cognitive-Function.html"><strong>PROMIS Cognitive Function SF 4a</strong></a> — deckt die Cognitive-Function-Domäne ab</li>
 </ul>
 
-<h3 id="bezug-zu-anderen-promis-instrumenten">Bezug zu anderen PROMIS-Instrumenten</h3>
-
-<ul>
-  <li><strong>vs PROMIS-29</strong>: identisch in 7 Domänen + Schmerzintensität, ergänzt um Cognitive Function (4 Items)</li>
-  <li><strong>vs PROMIS-16</strong>: vollständige (nicht ultrakurze) Variante mit denselben 8 Domänen</li>
-  <li><strong>vs PROMIS Cognitive Function SF 4a</strong>: integriert die Cognitive-Function-Items direkt im Multi-Domain-Profile statt als separate Short-Form</li>
-</ul>
-
-<h3 id="quellen">Quellen</h3>
-
-<ul>
-  <li>PROMIS Health Organization Übersicht: <a href="https://www.healthmeasures.net/explore-measurement-systems/promis">healthmeasures.net</a></li>
-  <li>MII PRO-Modul (für künftige Implementierung): <a href="https://simplifier.net/guide/mii-pro-v2026-de">Simplifier-IG</a></li>
-</ul>
-
-<h3 id="item-übersicht">Item-Übersicht</h3>
-
-<blockquote>
-  <p>Sobald PROMIS-33 im MII PRO-Modul implementiert ist, wird hier eine auto-generierte Item-Tabelle (linkId, LOINC, EN, DE, Antwortoptionen) eingefügt — analog zu <a href="PROMIS-29.html">PROMIS-29</a> und <a href="PROMIS-16.html">PROMIS-16</a>.</p>
-</blockquote>
+<p>Diese Kombination entspricht funktional dem PROMIS-33-Profile (PROMIS-29 + 4 Cognitive-Function-Items) und nutzt die bereits im MII PRO-Modul gepflegten Items und Scoring-Logiken. Eine separate FHIR-Repräsentation von PROMIS-33 ist daher nicht erforderlich.</p>
 
 
 
@@ -377,7 +342,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 07:48:00 +0000">
+  <span title="2026-06-16 08:08:00 +0000">
     2026-06-16
   </span>
 

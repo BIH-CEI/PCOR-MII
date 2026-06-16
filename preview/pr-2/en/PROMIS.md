@@ -1,6 +1,6 @@
-# PROMIS - PCOR-MII Implementation Guide v0.1.0
+# PROMIS (Übersicht) - PCOR-MII Implementation Guide v0.1.0
 
-## PROMIS
+## PROMIS (Übersicht)
 
 **Translated page. Original language: German.**
 

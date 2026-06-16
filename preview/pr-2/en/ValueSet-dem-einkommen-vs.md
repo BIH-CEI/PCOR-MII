@@ -33,7 +33,7 @@ Einkommensbänder (Q_OECDLIT7a).
   "title" : "DEM Haushaltseinkommen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T07:48:16+00:00",
+  "date" : "2026-06-16T08:08:12+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
