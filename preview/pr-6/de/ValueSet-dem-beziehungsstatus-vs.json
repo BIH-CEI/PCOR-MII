@@ -1,0 +1,54 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dem-beziehungsstatus-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dem-beziehungsstatus-vs</b></p><a name=\"dem-beziehungsstatus-vs\"> </a><a name=\"hcdem-beziehungsstatus-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-dem-beziehungsstatus.html\">codesystem DEM Beziehungsstatus (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 2 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"dem-beziehungsstatus-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus-keine-feste\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-beziehungsstatus.html#dem-beziehungsstatus-keine-feste\">keine-feste</a></td><td>Keine feste Partnerschaft</td></tr><tr><td><a name=\"dem-beziehungsstatus-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus-feste\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-dem-beziehungsstatus.html#dem-beziehungsstatus-feste\">feste</a></td><td>Feste Partnerschaft</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-beziehungsstatus-vs",
+  "version" : "0.1.0",
+  "name" : "DemBeziehungsstatusVS",
+  "title" : "DEM Beziehungsstatus",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-16T13:17:24+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Partnerschaftsstatus (GIPS04).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-10T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
+      "code" : "keine-feste",
+      "display" : "Keine feste Partnerschaft"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
+      "code" : "feste",
+      "display" : "Feste Partnerschaft"
+    }]
+  }
+}
