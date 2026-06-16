@@ -20,7 +20,7 @@ PROMIS-Ressourcen unterliegen dem 4-Schichten-Modell aus dem MII PRO-Modul:
 3. **Offizielle deutsche Übersetzungen** bereitgestellt durch PCOR-MII, kuratiert durch PROMIS National Center Deutschland
 4. **LOINC-Codes** © Regenstrief Institute
 
-Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html).
+Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1).
 
 ### Item-Überlapp
 
@@ -28,6 +28,6 @@ PROMIS-29 und PROMIS-16 überlappen sich in 14 Items (PROMIS-16 ist quasi ein PR
 
 ### Quellen
 
-- Übergeordneter IG: [MII PRO-Modul (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/)
+- Übergeordneter IG: [MII PRO-Modul (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
 - PROMIS Health Organization: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
 - PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer

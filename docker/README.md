@@ -71,9 +71,9 @@ Der Container packt mehrere Inhaltsschichten mit unterschiedlichen Lizenzen zusa
 | Inhalt | Lizenz | Hinweis |
 |--------|--------|---------|
 | HAPI FHIR (Base-Image) | Apache 2.0 | Quelle: [hapiproject/hapi](https://hub.docker.com/r/hapiproject/hapi) |
-| MII PRO-Modul (Profile, Definitionen, Beispiele) | CC-BY 4.0 | Attribution erfüllt durch [IG-Dokumentation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) |
-| PROMIS-Items (Wordings) | PHO Lizenz | Re-Distribution erlaubt, aber **Nutzung registrationspflichtig** über PROMIS National Center Deutschland (CPCOR Charité). [Lizenz-Details + CPCOR-Kontakt](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html) |
-| Offizielle deutsche PROMIS-Übersetzungen | PCOR-MII Kuration | bereitgestellt durch [PROMIS National Center Deutschland (CPCOR Charité)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html), Leitung Felix Fischer |
+| MII PRO-Modul (Profile, Definitionen, Beispiele) | CC-BY 4.0 | Attribution erfüllt durch [IG-Dokumentation](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) |
+| PROMIS-Items (Wordings) | PHO Lizenz | Re-Distribution erlaubt, aber **Nutzung registrationspflichtig** über PROMIS National Center Deutschland (CPCOR Charité). [Lizenz-Details + CPCOR-Kontakt](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) |
+| Offizielle deutsche PROMIS-Übersetzungen | PCOR-MII Kuration | bereitgestellt durch [PROMIS National Center Deutschland (CPCOR Charité)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1), Leitung Felix Fischer |
 | LOINC Codes | LOINC License | Free for use, Quelle: [Regenstrief Institute](https://loinc.org) |
 | PCOR-MII Implementation Guide | CC-BY 4.0 | Quelle: [BIH-CEI/PCOR-MII](https://github.com/BIH-CEI/PCOR-MII) |
 
@@ -81,7 +81,7 @@ Die `meta.copyright`-Felder und das 4-Schichten Copyright-RuleSet (`PROMIS_Copyr
 
 **Vor produktivem Einsatz mit echten Daten**:
 
-1. PROMIS-Nutzungs-Anfrage beim [PROMIS National Center DE](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html) stellen
+1. PROMIS-Nutzungs-Anfrage beim [PROMIS National Center DE](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) stellen
 2. Wenn Container public deployed: README-Hinweis zur Lizenzkette + Attribution sichtbar machen
 
 ## Verhältnis zu fhir-sdc-questionnaire-service

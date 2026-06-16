@@ -10,8 +10,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- Definition im MII PRO-Modul: [PROMIS-Bibliothek (Simplifier)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
-- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/promis.html)
+- Definition im MII PRO-Modul: [PROMIS Cognitive Function SF 4a (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538188)
+- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
 
 ### Eigenschaften
 
@@ -27,7 +27,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 Im **50-First-Patients Pilot-Datenaustausch** ist dieses Instrument zusammen mit PROMIS-29 Teil der PROMIS-33-Abdeckung — siehe [PROMIS-33](PROMIS-33.html).
 
