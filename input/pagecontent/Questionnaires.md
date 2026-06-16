@@ -6,10 +6,11 @@ Diese Seite gibt einen Überblick über die im PCOR-MII Implementation Guide def
 
 - [DEM — Demographics & Medical History](Questionnaire-DEM.html) — Soziodemographie und medizinische Vorgeschichte (Screening)
 
-#### Patient-Reported Outcomes (PROMIS)
+#### [Patient-Reported Outcomes (PROMIS)](PROMIS.html)
 
-Aus dem [MII PRO-Modul](https://simplifier.net/guide/mii-pro-v2026-de) referenziert (Dependency `de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1`, kein eigener Nachbau). Lizenz folgt dem [4-Schichten-Copyright-Modell](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS) (PHO + CPCOR + LOINC + MII):
+Aus dem [MII PRO-Modul](https://simplifier.net/guide/mii-pro-v2026-de) referenziert (Dependency `de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1`, kein eigener Nachbau). Lizenz folgt dem [4-Schichten-Copyright-Modell](https://simplifier.net/guide/mii-pro-v2026-de/MIIIGModulPRO/PRO-Bibliothek/PROMIS) (PHO + CPCOR + LOINC + MII). Übersicht: [PROMIS-Sektion](PROMIS.html).
 
+- [**PROMIS-33 Profile v2.1**](PROMIS-33.html) — Multi-Domain HRQoL inkl. Cognitive Function, 33 Items (*geplant, noch nicht im MII PRO-Modul implementiert*)
 - [**PROMIS-29 Profile v2.1**](PROMIS-29.html) — Multi-Domain HRQoL, 29 Items über 7 Domänen + Schmerzintensität
 - [**PROMIS Cognitive Function SF 4a**](PROMIS-Cognitive-Function.html) — kognitive Funktion (Selbstauskunft), 4 Items
 - [**PROMIS-16 Profile v2.1 (PROPr)**](PROMIS-16.html) — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)

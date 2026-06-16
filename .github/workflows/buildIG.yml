@@ -57,6 +57,18 @@ jobs:
           chmod +x _updatePublisher.sh
           ./_updatePublisher.sh -y
 
+      - name: Run SUSHI (triggers FHIR package download to ~/.fhir/packages)
+        run: |
+          npm install -g fsh-sushi
+          sushi .
+
+      - name: Render PROMIS translation tables into pagecontent
+        # Reads PROMIS Questionnaires from the MII PRO-Modul package (downloaded above by SUSHI)
+        # and injects DE/EN/Code/Ordinal tables between AUTO-TRANSLATION-TABLE markers in the
+        # PROMIS-29.md, PROMIS-16.md and PROMIS-Cognitive-Function.md pagecontent files.
+        # Idempotent: re-runs replace the section without touching surrounding content.
+        run: python3 scripts/render-promis-translations.py
+
       - name: Build IG
         run: |
           chmod +x _build.sh
@@ -115,7 +127,9 @@ jobs:
           message: |
             🚀 **PR Preview deployed**
 
-            📖 Preview: https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/
-            🕐 Commit `${{ github.event.pull_request.head.sha }}` · ${{ github.run_id }}
+            📖 Preview (DE): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/de/
+            📖 Preview (EN): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/en/
+            🌐 Sprach-Picker (Root, JS-Redirect): https://bih-cei.github.io/PCOR-MII/preview/pr-${{ github.event.pull_request.number }}/
+            🕐 Commit `${{ github.event.pull_request.head.sha }}` · Run ${{ github.run_id }}
 
             *Wird beim Schließen des PRs automatisch entfernt.*

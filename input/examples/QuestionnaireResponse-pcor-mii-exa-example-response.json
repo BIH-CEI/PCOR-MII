@@ -1,0 +1,56 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-example-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient"
+  },
+  "authored": "2026-06-16T10:00:00+02:00",
+  "item": [
+    {
+      "linkId": "general",
+      "item": [
+        {
+          "linkId": "general.assessment-date",
+          "answer": [{"valueDate": "2026-06-16"}]
+        },
+        {
+          "linkId": "general.sex",
+          "answer": [{
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/administrative-gender",
+              "code": "female",
+              "display": "Female"
+            }
+          }]
+        }
+      ]
+    },
+    {
+      "linkId": "pro",
+      "item": [
+        {
+          "linkId": "pro.general-health",
+          "answer": [{
+            "valueCoding": {
+              "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
+              "code": "good",
+              "display": "Good"
+            }
+          }]
+        },
+        {
+          "linkId": "pro.comment",
+          "answer": [{"valueString": "Kein Vorerkrankungsstatus, gute allgemeine Verfassung."}]
+        }
+      ]
+    }
+  ]
+}
