@@ -40,429 +40,86 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 **Sektion `PROMIS-29.PhysicalFunction`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-pfa11` | 61597-1 | Are you able to do chores such as vacuuming or yard work [PROMIS] | Können Sie Hausarbeiten erledigen, z.B. Staubsaugen oder Gartenarbeit? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA13912-3 | Unable to do | Kann ich gar nicht | 1 |
-| LA13919-8 | With much difficulty | Mit großen Schwierigkeiten | 2 |
-| LA13920-6 | With some difficulty | Mit einigen Schwierigkeiten | 3 |
-| LA13918-0 | With a little difficulty | Mit geringen Schwierigkeiten | 4 |
-| LA13921-4 | Without any difficulty | Ohne jede Schwierigkeiten | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-pfa21` | 61607-8 | Are you able to go up and down stairs at a normal pace [PROMIS] | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA13912-3 | Unable to do | Kann ich gar nicht | 1 |
-| LA13919-8 | With much difficulty | Mit großen Schwierigkeiten | 2 |
-| LA13920-6 | With some difficulty | Mit einigen Schwierigkeiten | 3 |
-| LA13918-0 | With a little difficulty | Mit geringen Schwierigkeiten | 4 |
-| LA13921-4 | Without any difficulty | Ohne jede Schwierigkeiten | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-pfa23` | 61609-4 | Are you able to go for a walk of at least 15 minutes [PROMIS] | Können Sie mindestens 15 Minuten lang spazieren gehen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA13912-3 | Unable to do | Kann ich gar nicht | 1 |
-| LA13919-8 | With much difficulty | Mit großen Schwierigkeiten | 2 |
-| LA13920-6 | With some difficulty | Mit einigen Schwierigkeiten | 3 |
-| LA13918-0 | With a little difficulty | Mit geringen Schwierigkeiten | 4 |
-| LA13921-4 | Without any difficulty | Ohne jede Schwierigkeiten | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-pfa53` | 61635-9 | Are you able to run errands and shop [PROMIS] | Können Sie Besorgungen machen und einkaufen gehen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA13912-3 | Unable to do | Kann ich gar nicht | 1 |
-| LA13919-8 | With much difficulty | Mit großen Schwierigkeiten | 2 |
-| LA13920-6 | With some difficulty | Mit einigen Schwierigkeiten | 3 |
-| LA13918-0 | With a little difficulty | Mit geringen Schwierigkeiten | 4 |
-| LA13921-4 | Without any difficulty | Ohne jede Schwierigkeiten | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-pfa11` | 61597-1 | Are you able to do chores such as vacuuming or yard work [PROMIS] | Können Sie Hausarbeiten erledigen, z.B. Staubsaugen oder Gartenarbeit? | **1** · Kann ich gar nicht / Unable to do (`LA13912-3`)**2** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**5** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`) |
+| `promis-pfa21` | 61607-8 | Are you able to go up and down stairs at a normal pace [PROMIS] | Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen? | **1** · Kann ich gar nicht / Unable to do (`LA13912-3`)**2** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**5** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`) |
+| `promis-pfa23` | 61609-4 | Are you able to go for a walk of at least 15 minutes [PROMIS] | Können Sie mindestens 15 Minuten lang spazieren gehen? | **1** · Kann ich gar nicht / Unable to do (`LA13912-3`)**2** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**5** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`) |
+| `promis-pfa53` | 61635-9 | Are you able to run errands and shop [PROMIS] | Können Sie Besorgungen machen und einkaufen gehen? | **1** · Kann ich gar nicht / Unable to do (`LA13912-3`)**2** · Mit großen Schwierigkeiten / With much difficulty (`LA13919-8`)**3** · Mit einigen Schwierigkeiten / With some difficulty (`LA13920-6`)**4** · Mit geringen Schwierigkeiten / With a little difficulty (`LA13918-0`)**5** · Ohne jede Schwierigkeiten / Without any difficulty (`LA13921-4`) |
 
 ### ANGST
 
 **Sektion `PROMIS-29.Anxiety`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-edanx01` | 61923-9 |   | Ich fürchtete mich. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-edanx40` | 61941-1 |   | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-edanx41` | 61942-9 |   | Meine Sorgen haben mich überwältigt. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-edanx53` | 61949-4 |   | Ich fühlte mich unruhig. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-edanx01` | 61923-9 |   | Ich fürchtete mich. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-edanx40` | 61941-1 |   | Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-edanx41` | 61942-9 |   | Meine Sorgen haben mich überwältigt. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-edanx53` | 61949-4 |   | Ich fühlte mich unruhig. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### DEPRESSION
 
 **Sektion `PROMIS-29.Depression`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-eddep04` | 61953-6 |   | Ich fühlte mich wertlos. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-eddep06` | 61955-1 |   | Ich fühlte mich hilflos. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-eddep29` | 61967-6 |   | Ich fühlte mich niedergeschlagen. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-eddep41` | 61973-4 |   | Ich fühlte mich hoffnungslos. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-eddep04` | 61953-6 |   | Ich fühlte mich wertlos. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-eddep06` | 61955-1 |   | Ich fühlte mich hilflos. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-eddep29` | 61967-6 |   | Ich fühlte mich niedergeschlagen. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-eddep41` | 61973-4 |   | Ich fühlte mich hoffnungslos. | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
 
 ### ERSCHÖPFUNG
 
 **Sektion `PROMIS-29.Fatigue`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-hi7` | 61878-5 |   | Ich bin erschöpft. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-an3` | 61882-7 | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. |   |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-fatexp41` | 61863-7 |   | Wie ausgelaugt fühlten Sie sich im Allgemeinen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-fatexp40` | 61864-5 |   | Wie erschöpft waren Sie im Allgemeinen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-hi7` | 61878-5 |   | Ich bin erschöpft. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-an3` | 61882-7 | Es fällt mir schwer, etwas anzufangen, weil ich müde bin. |   | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-fatexp41` | 61863-7 |   | Wie ausgelaugt fühlten Sie sich im Allgemeinen? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-fatexp40` | 61864-5 |   | Wie erschöpft waren Sie im Allgemeinen? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
 ### SCHLAFSTÖRUNGEN
 
 **Sektion `PROMIS-29.Sleep`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-sleep109` | 61987-4 |   | Meine Schlafqualität war … |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA9615-1 | Very poor | Sehr schlecht | 5 |
-| LA8969-3 | Poor | Schlecht | 4 |
-| LA8968-5 | Fair | Mäßig | 3 |
-| LA8967-7 | Good | Gut | 2 |
-| LA13913-1 | Very Good | Sehr gut | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-sleep116` | 61986-6 |   | Mein Schlaf war erfrischend. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 5 |
-| LA13863-8 | A little bit | Ein wenig | 4 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 2 |
-| LA13914-9 | Very much | Sehr | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-sleep20` | 61998-1 |   | Ich hatte Schlafprobleme. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-sleep44` | 61999-9 |   | Ich hatte Schwierigkeiten einzuschlafen. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-sleep109` | 61987-4 |   | Meine Schlafqualität war … | **5** · Sehr schlecht / Very poor (`LA9615-1`)**4** · Schlecht / Poor (`LA8969-3`)**3** · Mäßig / Fair (`LA8968-5`)**2** · Gut / Good (`LA8967-7`)**1** · Sehr gut / Very Good (`LA13913-1`) |
+| `promis-sleep116` | 61986-6 |   | Mein Schlaf war erfrischend. | **5** · Überhaupt nicht / Not at all (`LA6568-5`)**4** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**2** · Ziemlich / Quite a bit (`LA13902-4`)**1** · Sehr / Very much (`LA13914-9`) |
+| `promis-sleep20` | 61998-1 |   | Ich hatte Schlafprobleme. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-sleep44` | 61999-9 |   | Ich hatte Schwierigkeiten einzuschlafen. | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
 ### SOZIALE TEILHABE
 
 **Sektion `PROMIS-29.Social`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-srpper23-caps` | 76709-5 |   | Es fällt mir schwer, meine gewohnte Arbeit zu erledigen (einschließlich der Arbeit zu Hause). |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 1 |
-| LA10066-1 | Rarely | Selten | 2 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 4 |
-| LA9933-8 | Always | Immer | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-srpper11-caps` | 75417-6 |   | Es fällt mir schwer, allen meinen regelmäßigen Freizeitaktivitäten mit anderen nachzugehen. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 5 |
-| LA10066-1 | Rarely | Selten | 4 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 2 |
-| LA9933-8 | Always | Immer | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-srpper18-caps` | 76708-7 |   | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit meiner Familie machen möchte. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 5 |
-| LA10066-1 | Rarely | Selten | 4 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 2 |
-| LA9933-8 | Always | Immer | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-srpper46-caps` | 76712-9 |   | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6270-8 | Never | Nie | 5 |
-| LA10066-1 | Rarely | Selten | 4 |
-| LA10082-8 | Sometimes | Manchmal | 3 |
-| LA10044-8 | Often | Oft | 2 |
-| LA9933-8 | Always | Immer | 1 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-srpper23-caps` | 76709-5 |   | Es fällt mir schwer, meine gewohnte Arbeit zu erledigen (einschließlich der Arbeit zu Hause). | **1** · Nie / Never (`LA6270-8`)**2** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**4** · Oft / Often (`LA10044-8`)**5** · Immer / Always (`LA9933-8`) |
+| `promis-srpper11-caps` | 75417-6 |   | Es fällt mir schwer, allen meinen regelmäßigen Freizeitaktivitäten mit anderen nachzugehen. | **5** · Nie / Never (`LA6270-8`)**4** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**2** · Oft / Often (`LA10044-8`)**1** · Immer / Always (`LA9933-8`) |
+| `promis-srpper18-caps` | 76708-7 |   | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit meiner Familie machen möchte. | **5** · Nie / Never (`LA6270-8`)**4** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**2** · Oft / Often (`LA10044-8`)**1** · Immer / Always (`LA9933-8`) |
+| `promis-srpper46-caps` | 76712-9 |   | Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte. | **5** · Nie / Never (`LA6270-8`)**4** · Selten / Rarely (`LA10066-1`)**3** · Manchmal / Sometimes (`LA10082-8`)**2** · Oft / Often (`LA10044-8`)**1** · Immer / Always (`LA9933-8`) |
 
 ### SCHMERZBEDINGTE BEEINTRÄCHTIGUNG
 
 **Sektion `PROMIS-29.PainInterference`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-painin9` | 61758-9 |   | Wie sehr beeinträchtigten Schmerzen Ihre Alltagsaktivitäten? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-painin22` | 61769-6 |   | Wie sehr beeinträchtigten Schmerzen Ihre häuslichen Tätigkeiten? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-painin31` | 61773-8 |   | Wie sehr beeinträchtigten Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-painin34` | 61775-3 |   | Wie sehr beeinträchtigten Schmerzen Sie bei Ihrer Hausarbeit? |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Überhaupt nicht | 1 |
-| LA13863-8 | A little bit | Ein wenig | 2 |
-| LA13909-9 | Somewhat | Mäßig | 3 |
-| LA13902-4 | Quite a bit | Ziemlich | 4 |
-| LA13914-9 | Very much | Sehr | 5 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-painin9` | 61758-9 |   | Wie sehr beeinträchtigten Schmerzen Ihre Alltagsaktivitäten? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-painin22` | 61769-6 |   | Wie sehr beeinträchtigten Schmerzen Ihre häuslichen Tätigkeiten? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-painin31` | 61773-8 |   | Wie sehr beeinträchtigten Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
+| `promis-painin34` | 61775-3 |   | Wie sehr beeinträchtigten Schmerzen Sie bei Ihrer Hausarbeit? | **1** · Überhaupt nicht / Not at all (`LA6568-5`)**2** · Ein wenig / A little bit (`LA13863-8`)**3** · Mäßig / Somewhat (`LA13909-9`)**4** · Ziemlich / Quite a bit (`LA13902-4`)**5** · Sehr / Very much (`LA13914-9`) |
 
 ### SCHMERZINTENSITÄT
 
 **Sektion `PROMIS-29.PainIntensity`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-global07` | 61583-1 |   | Wie würden Sie Ihre Schmerzen im Allgemeinen einschätzen? |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-global07` | 61583-1 |   | Wie würden Sie Ihre Schmerzen im Allgemeinen einschätzen? |   |
 
 ### BEREICHS-BEWERTUNGEN
 

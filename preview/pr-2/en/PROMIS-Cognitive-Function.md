@@ -39,59 +39,10 @@ Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Qu
 
 **Sektion `PROMIS-CognitiveFunction-SF4a`**
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-cognition-pc2r` | 81461-6 | My thinking has been slow | Ich war langsam beim Denken |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-cognition-pc35r` | 81478-0 | It has seemed like my brain was not working as well as usual | Es kam mir so vor, als ob mein Gehirn nicht so gut wie sonst funktionierte |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-cognition-pc36r` | 81479-8 | I have had to work harder than usual to keep track of what I was doing | Ich musste mir größere Mühe geben als sonst, um den Überblick über das zu bewahren, womit ich gerade beschäftigt war |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `promis-cognition-pc42r` | 81485-5 | I have had trouble shifting back and forth between different activities that require thinking | Ich hatte Schwierigkeiten, zwischen verschiedenen Aktivitäten, die ein gewisses Nachdenken erfordern, hin und her zu wechseln |
-
-**Antwortoptionen:**
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| LA6568-5 | Not at all | Nie | 5 |
-| LA10066-1 | Rarely | Selten (einmal) | 4 |
-| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
-| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
-| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| `promis-cognition-pc2r` | 81461-6 | My thinking has been slow | Ich war langsam beim Denken | **5** · Nie / Not at all (`LA6568-5`)**4** · Selten (einmal) / Rarely (`LA10066-1`)**3** · Manchmal (zwei- oder dreimal) / Sometimes (`LA10082-8`)**2** · Oft (ungefähr einmal täglich) / Often (`LA10044-8`)**1** · Sehr oft (mehrmals täglich) / Always (`LA9933-8`) |
+| `promis-cognition-pc35r` | 81478-0 | It has seemed like my brain was not working as well as usual | Es kam mir so vor, als ob mein Gehirn nicht so gut wie sonst funktionierte | **5** · Nie / Not at all (`LA6568-5`)**4** · Selten (einmal) / Rarely (`LA10066-1`)**3** · Manchmal (zwei- oder dreimal) / Sometimes (`LA10082-8`)**2** · Oft (ungefähr einmal täglich) / Often (`LA10044-8`)**1** · Sehr oft (mehrmals täglich) / Always (`LA9933-8`) |
+| `promis-cognition-pc36r` | 81479-8 | I have had to work harder than usual to keep track of what I was doing | Ich musste mir größere Mühe geben als sonst, um den Überblick über das zu bewahren, womit ich gerade beschäftigt war | **5** · Nie / Not at all (`LA6568-5`)**4** · Selten (einmal) / Rarely (`LA10066-1`)**3** · Manchmal (zwei- oder dreimal) / Sometimes (`LA10082-8`)**2** · Oft (ungefähr einmal täglich) / Often (`LA10044-8`)**1** · Sehr oft (mehrmals täglich) / Always (`LA9933-8`) |
+| `promis-cognition-pc42r` | 81485-5 | I have had trouble shifting back and forth between different activities that require thinking | Ich hatte Schwierigkeiten, zwischen verschiedenen Aktivitäten, die ein gewisses Nachdenken erfordern, hin und her zu wechseln | **5** · Nie / Not at all (`LA6568-5`)**4** · Selten (einmal) / Rarely (`LA10066-1`)**3** · Manchmal (zwei- oder dreimal) / Sometimes (`LA10082-8`)**2** · Oft (ungefähr einmal täglich) / Often (`LA10044-8`)**1** · Sehr oft (mehrmals täglich) / Always (`LA9933-8`) |
 
