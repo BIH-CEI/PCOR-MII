@@ -69,7 +69,7 @@ Best für: ad-hoc Lookup, Skripte (wie unser [extract-qst-translations](https://
 
 Wenn ein Producer-Server FHIR Crmi unterstützt:
 
-```http
+```
 GET [producer]/Questionnaire/mii-qst-pro-promis-16/$package
 ```
 
