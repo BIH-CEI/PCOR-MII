@@ -26,3 +26,7 @@ PROMIS®-33 Profile v2.1 ist die erweiterte Variante der PROMIS-Profile mit 33 I
 * PROMIS Health Organization Übersicht: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
 * MII PRO-Modul (für künftige Implementierung): [Simplifier-IG](https://simplifier.net/guide/mii-pro-v2026-de)
 
+### Item-Übersicht
+
+> Sobald PROMIS-33 im MII PRO-Modul implementiert ist, wird hier eine auto-generierte Item-Tabelle (linkId, LOINC, EN, DE, Antwortoptionen) eingefügt — analog zu [PROMIS-29](PROMIS-29.md) und [PROMIS-16](PROMIS-16.md).
+

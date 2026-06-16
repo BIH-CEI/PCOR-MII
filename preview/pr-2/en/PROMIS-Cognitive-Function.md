@@ -31,3 +31,67 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 * Items überlappen mit den Cognitive-Function-Items aus PROMIS-16 — Score-Vergleich erfordert Aufmerksamkeit auf die jeweilige Itemzusammensetzung und Skalierung.
 * Für umfassende Kognitions-Erfassung steht zusätzlich die Long-Form (PROMIS Cognitive Function) zur Verfügung, die jedoch derzeit nicht im MII PRO-Modul implementiert ist.
 
+**Auto-generiert aus `mii-qst-pro-promis-cognitive-function-sf4a` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
+
+Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.
+
+### PROMIS Kognitive Funktion SF 4a
+
+**Sektion `PROMIS-CognitiveFunction-SF4a`**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `promis-cognition-pc2r` | 81461-6 | My thinking has been slow | Ich war langsam beim Denken |
+
+**Antwortoptionen:**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| LA6568-5 | Not at all | Nie | 5 |
+| LA10066-1 | Rarely | Selten (einmal) | 4 |
+| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
+| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
+| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `promis-cognition-pc35r` | 81478-0 | It has seemed like my brain was not working as well as usual | Es kam mir so vor, als ob mein Gehirn nicht so gut wie sonst funktionierte |
+
+**Antwortoptionen:**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| LA6568-5 | Not at all | Nie | 5 |
+| LA10066-1 | Rarely | Selten (einmal) | 4 |
+| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
+| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
+| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `promis-cognition-pc36r` | 81479-8 | I have had to work harder than usual to keep track of what I was doing | Ich musste mir größere Mühe geben als sonst, um den Überblick über das zu bewahren, womit ich gerade beschäftigt war |
+
+**Antwortoptionen:**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| LA6568-5 | Not at all | Nie | 5 |
+| LA10066-1 | Rarely | Selten (einmal) | 4 |
+| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
+| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
+| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `promis-cognition-pc42r` | 81485-5 | I have had trouble shifting back and forth between different activities that require thinking | Ich hatte Schwierigkeiten, zwischen verschiedenen Aktivitäten, die ein gewisses Nachdenken erfordern, hin und her zu wechseln |
+
+**Antwortoptionen:**
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| LA6568-5 | Not at all | Nie | 5 |
+| LA10066-1 | Rarely | Selten (einmal) | 4 |
+| LA10082-8 | Sometimes | Manchmal (zwei- oder dreimal) | 3 |
+| LA10044-8 | Often | Oft (ungefähr einmal täglich) | 2 |
+| LA9933-8 | Always | Sehr oft (mehrmals täglich) | 1 |
+
