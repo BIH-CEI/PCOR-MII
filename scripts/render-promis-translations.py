@@ -190,9 +190,19 @@ def render_questionnaire(q):
             else:
                 lid = it.get("linkId", "")
                 code = ""
+                loinc_display = ""
                 if it.get("code"):
-                    code = it["code"][0].get("code", "")
+                    first_code = it["code"][0]
+                    code = first_code.get("code", "")
+                    # LOINC display ist der offizielle englische Itemname — verlässlicher als
+                    # die text-Felder, weil im MII PRO-Modul aufgrund der Mixed-Architecture
+                    # einige text-Felder DE statt EN enthalten.
+                    loinc_display = first_code.get("display", "")
                 en, de = label_pair(it.get("text", ""), it.get("_text"))
+                # Wenn EN aus text-Feld fehlt (DE-primary ohne EN-Extension), fallback auf
+                # LOINC code.display als kanonischen englischen Namen.
+                if not en and loinc_display:
+                    en = loinc_display
                 opts_cell = format_options(it.get("answerOption", []))
                 row_buffer.append(
                     f"| `{lid}` | {code} | {md_cell(en)} | {md_cell(de)} | {opts_cell} |"
