@@ -33,7 +33,7 @@
   "title" : "DEM Häufigkeit (5-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T12:55:32+00:00",
+  "date" : "2026-06-16T13:06:44+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -1,7 +1,7 @@
 PCOR_MII : Validation Results
 =========================================
 
-err = 8, warn = 36, info = 54
+err = 5, warn = 38, info = 77
 $--
 Generated $--. FHIR version $-- for pcor-mii#$-- (canonical = https://bih-cei.github.io/PCOR-MII)
  Build Errors : 2 / 7 / 0
@@ -18,8 +18,10 @@ Generated $--. FHIR version $-- for pcor-mii#$-- (canonical = https://bih-cei.gi
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-zigaretten-band : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-pcor-example-general-health : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ImplementationGuide-pcor-mii : 0 / 3 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Patient-pcor-mii-exa-patient : 0 / 1 / 1
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-DEM : 0 / 12 / 14
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-PcorExampleQuestionnaire : 3 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/QuestionnaireResponse-DEMResponse : 0 / 1 / 24
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-einkommen-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-erwerbsstatus-vs : 0 / 1 / 3
@@ -34,9 +36,9 @@ Generated $--. FHIR version $-- for pcor-mii#$-- (canonical = https://bih-cei.gi
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-urbanizitaet-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-zigaretten-band-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-pcor-example-general-health : 0 / 0 / 2
- /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-example-response : 1 / 0 / 2
- /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response : 1 / 0 / 2
- /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response : 1 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-example-response : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response : 0 / 0 / 2
 </table>
 == n/a ==
 ERROR: ImplementationGuide/pcor-mii: This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.subscriptions-backport.r4#1.1.0' is for FHIR version 4.0.0
@@ -77,6 +79,8 @@ INFORMATION: ImplementationGuide/pcor-mii: ImplementationGuide.jurisdiction[0].c
 WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2].uri: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2]: The canonical URL https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro doesn't point to an actual ImplementationGuide resource
 WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[3]: The ImplementationGuide uses package hl7.fhir.uv.sdc#3.0.0 released on 2022-03-08, but the most recent appropriate version is 4.0.0. This reference is getting old and the more recent version should be considered
+== fsh-generated/resources/Patient-pcor-mii-exa-patient.json ==
+WARNING: Patient/pcor-mii-exa-patient: Patient: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == fsh-generated/resources/Questionnaire-DEM.json ==
 INFORMATION: Questionnaire/DEM: Questionnaire.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language
@@ -109,6 +113,31 @@ ERROR: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Slice 'Questionnai
 ERROR: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Questionnaire.code: mindestens erforderlich = 1, aber nur gefunden 0
 INFORMATION: Questionnaire/PcorExampleQuestionnaire: Questionnaire.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
 WARNING: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
+== fsh-generated/resources/QuestionnaireResponse-DEMResponse.json ==
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[3].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[4].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[5].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[7].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[8].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[9].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[13].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[13].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[3].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[4].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[5].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[6].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[7].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[8].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+WARNING: QuestionnaireResponse/DEMResponse: QuestionnaireResponse: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs.json ==
 INFORMATION: ValueSet/dem-beziehungsstatus-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 WARNING: ValueSet/dem-beziehungsstatus-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
@@ -164,8 +193,5 @@ INFORMATION: ValueSet/dem-zigaretten-band-vs: ValueSet.expansion: This expansion
 == fsh-generated/resources/ValueSet-pcor-example-general-health.json ==
 INFORMATION: ValueSet/pcor-example-general-health: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == input/examples/QuestionnaireResponse-pcor-mii-exa-example-response.json ==
-ERROR: QuestionnaireResponse/pcor-mii-exa-example-response: QuestionnaireResponse.subject: Ressource 'Patient/pcor-mii-exa-patient' nicht auffindbar
 == input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json ==
-ERROR: QuestionnaireResponse/pcor-mii-exa-promis-16-response: QuestionnaireResponse.subject: Ressource 'Patient/pcor-mii-exa-patient' nicht auffindbar
 == input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.json ==
-ERROR: QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response: QuestionnaireResponse.subject: Ressource 'Patient/pcor-mii-exa-patient' nicht auffindbar

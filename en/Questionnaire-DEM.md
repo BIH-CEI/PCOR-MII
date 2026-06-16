@@ -13,7 +13,7 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
 
 ### Responses for this Questionnaire
 
-There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.
+* Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizinische Vorgeschichte)./a>
 
 
 

@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-06-16T12:55:32+00:00",
+  "date" : "2026-06-16T13:06:44+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -777,6 +777,18 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pcor-mii-exa-patient"
+      },
+      "name" : "Beispiel-Patientin (DEM)",
+      "description" : "Minimale Beispiel-Patientin als subject der DEM-Beispielantwort.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1065,6 +1077,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/DEMResponse"
+      },
+      "name" : "DEM — Beispielantwort",
+      "description" : "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizinische Vorgeschichte).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       }],
       "reference" : {
@@ -1163,21 +1187,21 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "Questionnaires.html"
+          "valueUrl" : "Demographie.html"
         }],
-        "nameUrl" : "Questionnaires.html",
-        "title" : "Fragebögen",
+        "nameUrl" : "Demographie.html",
+        "title" : "Demographie",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "PROMIS.html"
+        }],
+        "nameUrl" : "PROMIS.html",
+        "title" : "PROMIS",
         "generation" : "markdown",
         "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "PROMIS.html"
-          }],
-          "nameUrl" : "PROMIS.html",
-          "title" : "PROMIS (Übersicht)",
-          "generation" : "markdown"
-        },
-        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "PROMIS-33.html"

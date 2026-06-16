@@ -111,6 +111,18 @@ nav.navbar.navbar-inverse {
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: #ea5451 !important;   /* KORALL 100% Hover */
 }
+
+/* ─── "Diesen Fragebogen testen" / NLM Forms Library ausblenden ─── */
+/* Der Block kommt aus fhir2.base.template (layout-questionnaire.html:   */
+/* Anker name="test" -> <h3> -> Div mit dem NLM-Forms-Library-Link) und  */
+/* ist nicht per IG-Parameter abschaltbar. Das Projekt-template/ wird bei */
+/* jedem Build aus dem Package neu ausgepackt, daher hier portabel per    */
+/* Geschwister-Selektor über den stabilen name="test"-Anker ausgeblendet. */
+a[name="test"],
+a[name="test"] + h3,
+a[name="test"] + h3 + div {
+  display: none !important;
+}
 </style>
 
 
@@ -137,8 +149,8 @@ nav.navbar.navbar-inverse {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7.9"}
-    h3,h4,h5,h6{--heading-prefix:"7.9"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.9"}
+    h3,h4,h5,h6{--heading-prefix:"8.9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -193,8 +205,18 @@ nav.navbar.navbar-inverse {
   <li>
     <a href="index.html">Startseite</a>
   </li>
-  <li>
-    <a href="Questionnaires.html">Fragebögen</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Demographie.html">Demographie</a>
+      </li>
+      <li>
+        <a href="PROMIS.html">PROMIS</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -400,7 +422,7 @@ nav.navbar.navbar-inverse {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:55:00 +0000">
+  <span title="2026-06-16 13:06:00 +0000">
     2026-06-16
   </span>
 
