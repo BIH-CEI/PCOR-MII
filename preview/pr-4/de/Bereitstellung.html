@@ -582,59 +582,73 @@ Content-Type: application/fhir+json
 
 <h2 id="pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</h2>
 
-<p>Im Pilot tauschen mehrere Sites PROMIS-Daten gegen einen zentralen PCOR-MII-Server aus:</p>
+<p>Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene ePRO-App, Papier+Eingabemaske) <strong>oder</strong> direkt in FHIR erfolgen (z.B. via LHC-Forms gegen einen PCOR-MII Container). FHIR ist primär die <strong>Ablage- und Austausch-Form</strong> zwischen Erhebung und Empfänger:</p>
 
 <pre><code class="language-mermaid">flowchart TB
-    subgraph Sites ["Partner-Sites"]
-        SiteA["Site A&lt;br/&gt;ePRO-App"]
-        SiteB["Site B&lt;br/&gt;ePRO-App"]
-        SiteC["Site C&lt;br/&gt;ePRO-App"]
+    subgraph Sites ["Partner-Sites — Erhebung im jeweiligen Quell-System"]
+        direction TB
+        SiteA["Site A&lt;br/&gt;REDCap"]
+        SiteB["Site B&lt;br/&gt;LimeSurvey"]
+        SiteC["Site C&lt;br/&gt;eigene ePRO-App"]
     end
 
-    subgraph Pilot ["PCOR-MII Container (lokaler Pilot)"]
+    subgraph Transform ["Transform-Schicht (pro Site)"]
+        direction TB
+        Mapper["Mapper / ETL-Skript&lt;br/&gt;(Quelle → MII PRO Bundle)"]
+    end
+
+    subgraph Validate ["PCOR-MII Container (zentral oder pro Site)"]
+        direction TB
         HAPI["HAPI FHIR :8097&lt;br/&gt;+ MII PRO 2026.4.1&lt;br/&gt;+ PCOR-MII&lt;br/&gt;+ SDC 3.0.0"]
-        DB[("H2 / Postgres&lt;br/&gt;QR-Storage")]
-        HAPI --- DB
+        Validator["POST /\$validate"]
+        Storage[("Optional:&lt;br/&gt;QR-Storage&lt;br/&gt;H2 / Postgres")]
+        Validator --&gt; HAPI
+        HAPI --- Storage
     end
 
-    subgraph Auswertung ["Score-Auswertung (extern, CQL geplant)"]
-        SCORES["Raw-Scores +&lt;br/&gt;T-Scores +&lt;br/&gt;PROPr Utility"]
+    subgraph Receiver ["Empfänger (z.B. FDPG, Konsortial-Knoten)"]
+        direction TB
+        FDPG["MII KDS Empfänger"]
     end
 
-    Patient["Patient/in"] --&gt;|"Selbstauskunft"| SiteA
-    Patient2["Patient/in"] --&gt;|"Selbstauskunft"| SiteB
-    Patient3["Patient/in"] --&gt;|"Selbstauskunft"| SiteC
+    SiteA --&gt; Mapper
+    SiteB --&gt; Mapper
+    SiteC --&gt; Mapper
 
-    SiteA --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
-    SiteB --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
-    SiteC --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
+    Mapper --&gt;|"FHIR-Bundle&lt;br/&gt;(QR + Score-Observations)"| Validator
+    Validator --&gt;|"OperationOutcome:&lt;br/&gt;0 errors? → weiter"| Mapper
+    Mapper --&gt;|"POST Bundle&lt;br/&gt;(validiertes Mapping)"| FDPG
 
-    HAPI --&gt;|"validiert vs&lt;br/&gt;PRO-QR-Profil"| HAPI
-    HAPI --&gt;|"GET /Questionnaire&lt;br/&gt;?url=…&amp;version=…"| Forscher["Forscher/in"]
-    HAPI --&gt;|"GET /QR?subject=…"| Auswertung
-
-    style HAPI fill:#ffe1e1
-    style DB fill:#ffe1e1
     style SiteA fill:#e1f5ff
     style SiteB fill:#e1f5ff
     style SiteC fill:#e1f5ff
-    style SCORES fill:#e1ffe1
+    style Mapper fill:#fff4e1
+    style HAPI fill:#ffe1e1
+    style Validator fill:#ffe1e1
+    style FDPG fill:#e1ffe1
 </code></pre>
 
 <p><strong>Setup-Aufgaben pro Site</strong>:</p>
 <ol>
-  <li>ePRO-App rendert PROMIS-16 oder PROMIS-29+Cognitive Function (Questionnaire-Definitionen aus PCOR-MII-Container über <code class="language-plaintext highlighter-rouge">GET /Questionnaire?url=…</code>)</li>
-  <li>Patient füllt aus → App erzeugt <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> mit <code class="language-plaintext highlighter-rouge">meta.profile = mii-pr-pro-questionnaire-response|2026.4.1</code></li>
-  <li>App POSTet als Transaction-Bundle an <code class="language-plaintext highlighter-rouge">/fhir</code></li>
-  <li>PCOR-MII-Server validiert + speichert</li>
+  <li>Datenexport aus dem Erhebungs-System (REDCap CSV-Export, LimeSurvey API, App-Backend, …)</li>
+  <li>Mapper schreiben (Skript/ETL), das die Daten in ein MII-PRO-konformes FHIR-Bundle umwandelt:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> mit <code class="language-plaintext highlighter-rouge">meta.profile = mii-pr-pro-questionnaire-response|2026.4.1</code></li>
+      <li>referenziert den Questionnaire via <code class="language-plaintext highlighter-rouge">canonical|version</code></li>
+      <li>codierte Antworten gemäß den im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code>s</li>
+    </ul>
+  </li>
+  <li>Validierung gegen PCOR-MII Container (lokal oder zentral): <code class="language-plaintext highlighter-rouge">POST /\$validate</code></li>
+  <li>Wenn 0 errors: POST des Bundles an den Empfänger-Server</li>
 </ol>
 
 <p><strong>Setup-Aufgaben zentral</strong>:</p>
 <ul>
-  <li>PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen (lokales LAN / Reverse-Proxy / Cloud — je nach Konsortiums-Datenschutz-Konzept)</li>
-  <li>Auth ergänzen vor produktivem Einsatz (HAPI-Defaults haben keine)</li>
-  <li>Persistente DB statt H2</li>
+  <li>PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen — oder jede Site läuft ihn lokal (Container ist klein und stateless für reine Validierung)</li>
+  <li>Empfänger-Server (FDPG, Konsortial-Knoten) ist eine <strong>separate</strong> FHIR-Instanz mit ggf. anderen Auth- und Persistenz-Anforderungen</li>
 </ul>
+
+<p><strong>Form-Rendering direkt aus FHIR</strong> ist als Pfad gleichwertig: dieselben Validierungs-Garantien greifen (das Bundle ist das gleiche). Wenn deine Site mit LHC-Forms o.ä. arbeitet, fällt der Mapper-Schritt weg und das Bundle entsteht direkt im FHIR-Server. Beide Wege treffen sich bei <code class="language-plaintext highlighter-rouge">$validate</code>.</p>
 
 <h2 id="empfehlung-für-pcor-mii-pilot">Empfehlung für PCOR-MII Pilot</h2>
 
@@ -697,7 +711,7 @@ Content-Type: application/fhir+json
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:25:00 +0000">
+  <span title="2026-06-16 12:31:00 +0000">
     2026-06-16
   </span>
 

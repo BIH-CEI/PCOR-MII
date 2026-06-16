@@ -290,6 +290,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#primärer-use-case-mapping-validierung" id="markdown-toc-primärer-use-case-mapping-validierung">Primärer Use Case: Mapping-Validierung</a></li>
   <li><a href="#validierungs-architektur" id="markdown-toc-validierungs-architektur">Validierungs-Architektur</a></li>
   <li><a href="#was-kann-validiert-werden" id="markdown-toc-was-kann-validiert-werden">Was kann validiert werden?</a></li>
   <li><a href="#tools" id="markdown-toc-tools">Tools</a>    <ul>
@@ -310,6 +311,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <p>Diese Seite beschreibt, wie <code class="language-plaintext highlighter-rouge">Questionnaire</code>s und <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s im PCOR-MII Kontext validiert werden können.</p>
+
+<h2 id="primärer-use-case-mapping-validierung">Primärer Use Case: Mapping-Validierung</h2>
+
+<p>Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier-Pencil + Eingabemaske) <strong>oder</strong> direkt in FHIR erfolgen (z.B. via LHC-Forms gegen den PCOR-MII Container). FHIR ist primär die <strong>Ablage- und Austausch-Form</strong> — nicht zwingend das Erfassungs-Frontend.</p>
+
+<p>In beiden Fällen ist der wichtigste Validierungs-Use-Case derselbe: <strong>prüfe das FHIR-Bundle gegen das PRO-QR-Profil, bevor du es sendest</strong>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REDCap / LimeSurvey / eigene App
+            │
+            ▼
+        Mapper (Skript / ETL)
+            │
+            ▼ erzeugt FHIR-Bundle (QR + Observations)
+            │
+            ▼
+     ┌──────────────────────┐
+     │  $validate           │  ← genau hier kommt PCOR-MII ins Spiel
+     │  gegen PRO-QR-Profil │
+     └──────────────────────┘
+            │ wenn OK
+            ▼
+        Empfänger-Server (FDPG, Konsortiums-Knoten, …)
+</code></pre></div></div>
 
 <h2 id="validierungs-architektur">Validierungs-Architektur</h2>
 
@@ -542,7 +566,7 @@ fhir validate <span class="nt">--profile</span> https://www.medizininformatik-in
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-16 12:25:00 +0000">
+  <span title="2026-06-16 12:31:00 +0000">
     2026-06-16
   </span>
 
