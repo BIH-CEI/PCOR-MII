@@ -33,7 +33,7 @@ Leichtigkeit, Unterstützung zu erhalten (WHODIS1/2).
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T07:41:08+00:00",
+  "date" : "2026-06-16T07:48:16+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
