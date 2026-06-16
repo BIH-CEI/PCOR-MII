@@ -85,4 +85,16 @@ nav.navbar.navbar-inverse {
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: #ea5451 !important;   /* KORALL 100% Hover */
 }
+
+/* ─── "Diesen Fragebogen testen" / NLM Forms Library ausblenden ─── */
+/* Der Block kommt aus fhir2.base.template (layout-questionnaire.html:   */
+/* Anker name="test" -> <h3> -> Div mit dem NLM-Forms-Library-Link) und  */
+/* ist nicht per IG-Parameter abschaltbar. Das Projekt-template/ wird bei */
+/* jedem Build aus dem Package neu ausgepackt, daher hier portabel per    */
+/* Geschwister-Selektor über den stabilen name="test"-Anker ausgeblendet. */
+a[name="test"],
+a[name="test"] + h3,
+a[name="test"] + h3 + div {
+  display: none !important;
+}
 </style>

@@ -39,10 +39,10 @@ dependencies:
 pages:
   index.md:
     title: Startseite
-  Questionnaires.md:
-    title: Fragebögen
-    PROMIS.md:
-      title: PROMIS (Übersicht)
+  Demographie.md:
+    title: Demographie
+  PROMIS.md:
+    title: PROMIS
     PROMIS-33.md:
       title: PROMIS-33 Profile v2.1
     PROMIS-29.md:
@@ -79,7 +79,9 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Startseite: index.html
-  Fragebögen: Questionnaires.html
+  Fragebögen:
+    Demographie: Demographie.html
+    PROMIS: PROMIS.html
   Anwendung: Implementation.html
   Validierung: Validierung.html
   Bereitstellung: Bereitstellung.html
