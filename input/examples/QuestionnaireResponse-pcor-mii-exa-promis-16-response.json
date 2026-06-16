@@ -1,0 +1,73 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-promis-16-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"
+    ]
+  },
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient"
+  },
+  "authored": "2026-06-16T10:10:00+02:00",
+  "item": [
+    {
+      "linkId": "PROMIS-16.PhysicalFunction",
+      "item": [
+        {"linkId": "promis-pfa21", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13918-0", "display": "With a little difficulty"}}]},
+        {"linkId": "promis-pfa23", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13921-4", "display": "Without any difficulty"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.Anxiety",
+      "item": [
+        {"linkId": "promis-edanx40", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]},
+        {"linkId": "promis-edanx41", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10082-8", "display": "Sometimes"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.Depression",
+      "item": [
+        {"linkId": "promis-eddep29", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10082-8", "display": "Sometimes"}}]},
+        {"linkId": "promis-eddep41", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA6270-8", "display": "Never"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.Fatigue",
+      "item": [
+        {"linkId": "promis-hi7", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13863-8", "display": "A little bit"}}]},
+        {"linkId": "promis-an3", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13909-9", "display": "Somewhat"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.Sleep",
+      "item": [
+        {"linkId": "promis-sleep25", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13863-8", "display": "A little bit"}}]},
+        {"linkId": "promis-sleep90", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13863-8", "display": "A little bit"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.SocialRoles",
+      "item": [
+        {"linkId": "promis-srpper31-caps", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]},
+        {"linkId": "promis-srpper46-caps", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.PainInterference",
+      "item": [
+        {"linkId": "promis-painin9", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA13863-8", "display": "A little bit"}}]},
+        {"linkId": "promis-painin31", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA6568-5", "display": "Not at all"}}]}
+      ]
+    },
+    {
+      "linkId": "PROMIS-16.Cognition",
+      "item": [
+        {"linkId": "promis-pc27r", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]},
+        {"linkId": "promis-pc-caps3r", "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10082-8", "display": "Sometimes"}}]}
+      ]
+    }
+  ]
+}

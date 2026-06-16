@@ -1,0 +1,38 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-promis-cognitive-function-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"
+    ]
+  },
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient"
+  },
+  "authored": "2026-06-16T10:05:00+02:00",
+  "item": [
+    {
+      "linkId": "PROMIS-CognitiveFunction-SF4a",
+      "item": [
+        {
+          "linkId": "promis-cognition-pc2r",
+          "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]
+        },
+        {
+          "linkId": "promis-cognition-pc35r",
+          "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10082-8", "display": "Sometimes"}}]
+        },
+        {
+          "linkId": "promis-cognition-pc36r",
+          "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10082-8", "display": "Sometimes"}}]
+        },
+        {
+          "linkId": "promis-cognition-pc42r",
+          "answer": [{"valueCoding": {"system": "http://loinc.org", "code": "LA10066-1", "display": "Rarely"}}]
+        }
+      ]
+    }
+  ]
+}
