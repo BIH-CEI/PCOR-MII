@@ -4,62 +4,28 @@
 
 **Translated page. Original language: German.**
 
-Diese Seite beschreibt, wie `Questionnaire`s und `QuestionnaireResponse`s im PCOR-MII Kontext validiert werden können.
+Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implementierung valide gegenüber den PRO- und PCOR-MII-Datendefinitionen ist?**
 
-## Primärer Use Case: Mapping-Validierung
+## Worum geht's beim Validieren?
 
-Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier-Pencil + Eingabemaske) **oder** direkt in FHIR erfolgen (z.B. via LHC-Forms gegen den PCOR-MII Container). FHIR ist primär die **Ablage- und Austausch-Form** — nicht zwingend das Erfassungs-Frontend.
+Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
 
-In beiden Fällen ist der wichtigste Validierungs-Use-Case derselbe: **prüfe das FHIR-Bundle gegen das PRO-QR-Profil, bevor du es sendest**.
-
-```
-REDCap / LimeSurvey / eigene App
-            │
-            ▼
-        Mapper (Skript / ETL)
-            │
-            ▼ erzeugt FHIR-Bundle (QR + Observations)
-            │
-            ▼
-     ┌──────────────────────┐
-     │  $validate           │  ← genau hier kommt PCOR-MII ins Spiel
-     │  gegen PRO-QR-Profil │
-     └──────────────────────┘
-            │ wenn OK
-            ▼
-        Empfänger-Server (FDPG, Konsortiums-Knoten, …)
-
-```
-
-## Validierungs-Architektur
-
-Ein `QuestionnaireResponse` ist nicht "alleine" validierbar — der Validator muss eine Auflösungskette durchlaufen, um zu wissen **gegen was** validiert wird:
+1. **Strukturell**dem[`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/)entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
+1. Die**`linkId`s**müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen
+1. Jede**codierte Antwort**muss aus dem`answerValueSet`(bzw.`answerOption`) des jeweiligen Items stammen
 
 ```
 flowchart TB
     QR["QuestionnaireResponse<br/>(zu validieren)"]
-    Profile["meta.profile:<br/>MII PR PRO QR Profile"]
+    Profile["meta.profile<br/>MII PR PRO QR"]
     Q["Questionnaire<br/>(z.B. mii-qst-pro-promis-16)"]
     VS["ValueSet<br/>(z.B. frequency-response-scale)"]
     CS["CodeSystem<br/>(LOINC)"]
 
     QR -->|"validiert gegen"| Profile
-    QR -->|"questionnaire =<br/>canonical URL"| Q
+    QR -->|"questionnaire = canonical|version"| Q
     Q -->|"item.answerValueSet"| VS
     VS -->|"compose.include"| CS
-
-    subgraph CLI ["Lokal: HL7 Validator CLI"]
-        direction LR
-        CLI_Cmd["fhir validate<br/>-profile ...<br/>-ig pros#2026.4.1"]
-    end
-
-    subgraph Server ["Lokal: PCOR-MII Container (port 8097)"]
-        direction LR
-        Server_Cmd["POST /fhir/QR/$validate"]
-    end
-
-    QR -.->|"Option 1"| CLI_Cmd
-    QR -.->|"Option 2"| Server_Cmd
 
     style QR fill:#e1f5ff
     style Profile fill:#fff4e1
@@ -69,29 +35,34 @@ flowchart TB
 
 ```
 
-Beide Tools laden dieselben Quell-Definitionen (PRO-Modul-Package + SDC), kommen also zum **gleichen Ergebnis**. CLI ist gut für CI-Pipelines, Server-`$validate` für Run-Time-Checks beim Empfang.
+Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.4.1)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
 
-## Was kann validiert werden?
+## Drei Wege zum validierten Bundle
 
-| | |
-| :--- | :--- |
-| `QuestionnaireResponse` | (a) das[`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/)(Struktur-Constraints) und (b) das referenzierte`Questionnaire`(linkId-Treffer, Item-Typ-Konsistenz, codierte Antworten gegen die`answerValueSet`s) |
-| `Questionnaire` | das[`MII PR PRO Questionnaire`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/)(SDC-konforme Struktur) |
-| `Bundle`(Transaction/Batch) | Bundle-Struktur + jede einzelne Ressource gegen ihr deklariertes`meta.profile` |
+### A. Container-$validate (schnellste Schleife beim Mapper-Entwickeln)
 
-## Tools
+[PCOR-MII Container](Bereitstellung.md) starten und das Bundle per HTTP gegen `$validate` werfen:
 
-### FHIR Validator CLI (HL7)
+```
+curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
+  -H "Content-Type: application/fhir+json" \
+  -d @my-questionnaire-response.json
 
-Der offizielle Validator von HL7 (Java-basiert):
+```
+
+Antwort ist ein `OperationOutcome` mit `issue`-Liste, severity-getaggt. Praktisch für: iterative Mapper-Entwicklung in der Shell, schnelle Roundtrips ohne Java-Setup.
+
+### B. HL7 Validator CLI (für CI-Pipelines)
+
+Der offizielle Java-Validator. Empfohlen wenn dein Build-System keine HTTP-Endpoints aufrufen soll.
 
 ```
 # Einmaliger Download
 curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar" \
   -o ~/.fhir/validator_cli.jar
 
-# QR validieren gegen das PRO-QR-Profil
-java -jar ~/.fhir/validator_cli.jar input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json \
+# Validieren
+java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
   -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
@@ -99,61 +70,51 @@ java -jar ~/.fhir/validator_cli.jar input/examples/QuestionnaireResponse-pcor-mi
 
 ```
 
-Wichtig: Mit `-ig <package>#<version>` werden die Profile, ValueSets und CodeSystems des MII PRO-Moduls + SDC geladen. Ohne das schlägt die Validierung von Code-Antworten gegen die `answerValueSet`s fehl.
+Best für: GitHub-Actions/GitLab-CI-Steps, Pre-Commit-Hooks, Mass-Validation großer Datensätze.
 
-### IG Publisher Validation
+### C. IG Publisher Build (automatisch in deinem IG)
 
-Beim lokalen Build (`./_build.sh`) validiert IG Publisher automatisch alle Beispiele gegen ihre `meta.profile`-Deklarationen. Errors brechen den Build. Output liegt unter `output/qa.html` und `output/qa.json`.
+Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: deklariere die Resources mit `meta.profile` — IG Publisher validiert dann beim Build automatisch und stoppt bei Errors. Output in `output/qa.html` und `output/qa.json`.
 
-### Simplifier Online-Validator
+## Was du in deiner Implementierung sicherstellst
 
-[simplifier.net/validator](https://simplifier.net/validator) — Web-UI für ad-hoc-Validierung. ValueSets aus dem MII PRO-Modul müssen im Projekt-Scope sein.
+Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
-### Firely Terminal
+* **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.4.1`
+* **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.4.1`
+* **`linkId`s** der Answer-Items matchen **exakt** die im Questionnaire definierten linkIds
+* **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.md) Item-Tabellen)
+* **`status = completed`** (bzw. `in-progress`/`amended` je nach Lebenszyklus)
+* **`subject`-Referenz** auf den Patienten
+* **`authored`** Timestamp gesetzt
+* **`text.div`** narrative mit `xml:lang`/`lang` wenn `Resource.language` gesetzt (siehe Best-Practice-Block unten)
 
-```
-fhir push input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
-fhir validate --profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
-
-```
-
-### Server-seitig via PCOR-MII Container
-
-Wenn der [lokale PCOR-MII Container](Bereitstellung.md) läuft (Port 8097), kann er Validierung als FHIR-`$validate`-Operation ausführen — derselbe Validator wie das CLI, aber via HTTP:
-
-```
-curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
-  -H "Content-Type: application/fhir+json" \
-  -d @input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
-
-```
-
-Antwort ist ein `OperationOutcome` mit `issue`-Liste. Die `severity` ist identisch zur CLI-Ausgabe. Vorteil: keine Java/JAR-Installation beim Konsumenten nötig, alles per HTTP-Call.
-
-## Ergebnis-Interpretation
+## Severity-Interpretation
 
 | | | |
 | :--- | :--- | :--- |
-| `error` | FHIR-Konformanz verletzt | ❌ Nein — muss behoben werden |
-| `warning` | FHIR-Best-Practice verletzt | ⚠️ Fall-by-Fall — manche legitim, manche zu fixen |
-| `information`/`note` | Hinweis (z.B. terminology server konnte Code nicht auflösen) | ✓ meist OK |
+| `error` | FHIR-Konformanz verletzt | ❌ Muss behoben werden |
+| `warning` | FHIR-Best-Practice verletzt | ⚠️ Fall-by-Fall |
+| `information`/`note` | Hinweis (z.B. Terminologie-Server konnte Code nicht auflösen) | ✓ meist OK |
 
-### Typische Warnings — was bedeuten sie?
+### Häufige Warnings — wann ignorieren, wann nicht
 
-* **`dom-6: A resource should have narrative for robust management`** — fehlende `text.div`-Sektion. Best Practice, nicht blockend. Im PCOR-MII durch `additional`-Narrative auf allen Beispielen befüllt.
-* **`Die Ressource hat eine language, aber das XHTML hat kein lang/xml:lang Tag`** — wenn `Resource.language` gesetzt ist, muss die `text.div` ebenfalls `xml:lang="..."` und `lang="..."` haben. Fix: beide Attribute am `<div>`-Element ergänzen.
-* **`Wrong Display Name 'XYZ' for http://loinc.org#LAxxx-y`** — der Display weicht von der offiziellen LOINC-Bezeichnung ab. Häufig durch DE-Übersetzungen, die als alternative Display gespeichert sind. Bewusst akzeptabel; bei einigen FHIR-Servern via `lenient-display`-Setting deaktivierbar.
-* **`Canonical URL ... kann nicht aufgelöst werden`** — Referenz auf eine externe Canonical-URL, die der Validator nicht findet. Bei Upstream-Modulen meist http/https-Mismatch (siehe Bead `anw` für das MII PRO-Modul).
+| | |
+| :--- | :--- |
+| `dom-6: A resource should have narrative for robust management` | `text.div`-Element ergänzen (FHIR Best Practice). Bei reinen Maschine-zu-Maschine-Bundles oft ignorierbar |
+| `Die Ressource hat eine language, aber das XHTML hat kein lang Tag` | wenn`Resource.language`gesetzt, dann auch`xml:lang="de-DE" lang="de-DE"`am`<div>`-Element |
+| `Wrong Display Name 'X' for http://loinc.org#LAxxx-y` | Display weicht von der LOINC-Bezeichnung ab (z.B. deutsche Übersetzung). Bewusst akzeptabel, bei strict-display-Servern via Setting deaktivierbar |
+| `Canonical URL ... kann nicht aufgelöst werden` | Server hat den referenzierten Questionnaire nicht — entweder`-ig`-Parameter ergänzen oder Server-Bestückung prüfen (siehe[Bereitstellung](Bereitstellung.md)) |
 
-## Validierte Beispiele in PCOR-MII
+## Validierte Beispiele als Referenz
 
-Alle drei `QuestionnaireResponse`-Beispiele in dieser IG validieren mit **0 errors, 0 warnings**:
+Drei vollständige Beispiele in diesem IG, alle mit **0 errors, 0 warnings**:
 
-* [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md)
 * [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md)
 * [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md)
+* [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) (für den Beispiel-Questionnaire)
 
-Validation-Befehl zum Reproduzieren:
+Reproduzieren:
 
 ```
 for f in input/examples/QuestionnaireResponse-*.json; do
@@ -167,15 +128,9 @@ done
 
 ```
 
-## Wozu Validierung in PCOR-MII?
+## Wozu Validierung in der Pipeline?
 
-Validierung ist eine notwendige, aber nicht hinreichende Bedingung für korrekte Daten. Sie prüft:
+Validierung prüft strukturelle und Code-Bindungs-Konformanz, **nicht** klinische/inhaltliche Plausibilität. Sie schützt aber sehr zuverlässig vor den häufigsten Mapping-Fehlern: falsche LA-Codes (z.B. Frequency- vs Intensity-Skala verwechselt), fehlende Pflicht-Items, Versions-Mismatch zwischen `questionnaire`-Referenz und Server-Stand.
 
-* **Strukturelle Konformanz**: alle Pflichtfelder gefüllt, Datentypen korrekt
-* **Code-Bindung**: Antworten codiert nach den im Questionnaire definierten ValueSets
-* **Profile-Constraints**: das `meta.profile` wird tatsächlich eingehalten
-
-Nicht geprüft werden inhaltliche/klinische Plausibilität (z.B. ob ein Score-Wert sinnvoll ist) — dafür braucht es CQL- oder anwendungsspezifische Regeln.
-
-Für den Datenaustausch in der [50-First-Patients Pilot-Kohorte](Implementation.md) wird empfohlen: jeder Sender validiert seine QRs lokal **vor** dem Versenden, und jeder Empfänger validiert nochmal beim Eingang.
+Für den [50-First-Patients Pilot](Implementation.md): **jeder Sender validiert lokal bevor er sendet**, jeder Empfänger validiert nochmal beim Eingang. Das fängt 95% der Drift-Probleme bei wenig Aufwand.
 

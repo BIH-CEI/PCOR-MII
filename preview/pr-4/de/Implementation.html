@@ -321,9 +321,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ol>
   <li><strong>Bereitstellung</strong> – das <code class="language-plaintext highlighter-rouge">Questionnaire</code> wird über einen FHIR-Server bereitgestellt (<code class="language-plaintext highlighter-rouge">GET [base]/Questionnaire?url=...</code>).</li>
   <li><strong>Rendering</strong> – ein Client (ePRO-App, Studienportal) rendert die Items anhand von <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">text</code> und Antwortoptionen.</li>
-  <li><strong>Pre-Population</strong> <em>(optional)</em> – vorhandene Daten werden vorbefüllt (z. B. via <a href="https://hl7.org/fhir/uv/sdc/">Structured Data Capture, SDC</a>).</li>
   <li><strong>Erfassung</strong> – die ausgefüllten Antworten werden als <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> gespeichert (<code class="language-plaintext highlighter-rouge">status = completed</code>).</li>
-  <li><strong>Auswertung / Extraktion</strong> <em>(optional)</em> – relevante Antworten werden in andere FHIR-Ressourcen (z. B. <code class="language-plaintext highlighter-rouge">Observation</code>) überführt (Data Extraction).</li>
+  <li><strong>Auswertung / Extraktion</strong> <em>(zukünftig)</em> – relevante Antworten werden in andere FHIR-Ressourcen (z. B. <code class="language-plaintext highlighter-rouge">Observation</code>) überführt (Data Extraction via <a href="https://hl7.org/fhir/uv/sdc/">SDC</a>). In PCOR-MII aktuell nicht implementiert.</li>
 </ol>
 
 <h3 id="beispiel-questionnaireresponse-auszug">Beispiel: QuestionnaireResponse (Auszug)</h3>
@@ -380,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Versionierung</strong>: Antworten immer gegen eine <strong>versionierte</strong> <code class="language-plaintext highlighter-rouge">Questionnaire</code>-URL erfassen, damit spätere Änderungen am Fragebogen bestehende Daten nicht uneindeutig machen.</li>
-  <li><strong>Structured Data Capture (SDC)</strong>: Für Pre-Population und Extraktion empfiehlt sich der HL7-SDC-IG als ergänzender Standard.</li>
+  <li><strong>Structured Data Capture (SDC)</strong>: ergänzender Standard für Data-Extraction (zukünftig in PCOR-MII).</li>
   <li><strong>Mehrsprachigkeit</strong>: Item-Texte können über <code class="language-plaintext highlighter-rouge">translation</code>-Extensions mehrsprachig hinterlegt werden.</li>
 </ul>
 
@@ -434,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:31:00 +0000">
+  <span title="2026-06-16 12:48:00 +0000">
     2026-06-16
   </span>
 

@@ -288,378 +288,150 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#container-build-stack-im-pcor-mii-repo" id="markdown-toc-container-build-stack-im-pcor-mii-repo">Container-Build-Stack (im PCOR-MII Repo)</a></li>
-  <li><a href="#das-problem-ein-qr-alleine-reicht-nicht" id="markdown-toc-das-problem-ein-qr-alleine-reicht-nicht">Das Problem: ein QR alleine reicht nicht</a></li>
-  <li><a href="#optionen-für-die-server-befüllung" id="markdown-toc-optionen-für-die-server-befüllung">Optionen für die Server-Befüllung</a>    <ul>
-      <li><a href="#option-a-package-operation-fhir-native-empfohlen" id="markdown-toc-option-a-package-operation-fhir-native-empfohlen">Option A: $package-Operation (FHIR-Native, empfohlen)</a></li>
-      <li><a href="#option-b-pre-built-hapi-image-mit-gemounteten-inhalten" id="markdown-toc-option-b-pre-built-hapi-image-mit-gemounteten-inhalten">Option B: Pre-built HAPI Image mit gemounteten Inhalten</a></li>
-      <li><a href="#option-c-transaction-bundle-mit-allen-relevanten-resources" id="markdown-toc-option-c-transaction-bundle-mit-allen-relevanten-resources">Option C: Transaction-Bundle mit allen relevanten Resources</a></li>
-      <li><a href="#package-operation-bundle-automatisch-generieren-lassen" id="markdown-toc-package-operation-bundle-automatisch-generieren-lassen"><code class="language-plaintext highlighter-rouge">$package</code>-Operation: Bundle automatisch generieren lassen</a></li>
+  <li><a href="#was-du-bekommst" id="markdown-toc-was-du-bekommst">Was du bekommst</a></li>
+  <li><a href="#wege-das-zu-bekommen" id="markdown-toc-wege-das-zu-bekommen">Wege, das zu bekommen</a>    <ul>
+      <li><a href="#1-pcor-mii-container-für-mapper-entwicklung-lokales-testen" id="markdown-toc-1-pcor-mii-container-für-mapper-entwicklung-lokales-testen">1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)</a></li>
+      <li><a href="#2-mii-pro-package-via-simplifier-für-build-pipelines" id="markdown-toc-2-mii-pro-package-via-simplifier-für-build-pipelines">2. MII PRO Package via Simplifier (für Build-Pipelines)</a></li>
+      <li><a href="#3-direkter-repo-zugriff-für-scripting-doku-tools" id="markdown-toc-3-direkter-repo-zugriff-für-scripting-doku-tools">3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)</a></li>
+      <li><a href="#4-package-operation-für-bestückung-eines-fremden-fhir-servers" id="markdown-toc-4-package-operation-für-bestückung-eines-fremden-fhir-servers">4. <code class="language-plaintext highlighter-rouge">$package</code>-Operation (für Bestückung eines fremden FHIR-Servers)</a></li>
     </ul>
   </li>
-  <li><a href="#put-post-und-das-problem-der-versions-koexistenz" id="markdown-toc-put-post-und-das-problem-der-versions-koexistenz">PUT, POST, und das Problem der Versions-Koexistenz</a>    <ul>
-      <li><a href="#was-passiert-mit-put-questionnairepromis-29" id="markdown-toc-was-passiert-mit-put-questionnairepromis-29">Was passiert mit <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code>?</a></li>
-      <li><a href="#konsequenz-was-ist-mit-bestehenden-qrs-die-auf-202630-verweisen" id="markdown-toc-konsequenz-was-ist-mit-bestehenden-qrs-die-auf-202630-verweisen">Konsequenz: Was ist mit bestehenden QRs, die auf <code class="language-plaintext highlighter-rouge">|2026.3.0</code> verweisen?</a></li>
-      <li><a href="#post-statt-put--löst-das-problem" id="markdown-toc-post-statt-put--löst-das-problem">POST statt PUT — löst das Problem?</a></li>
-      <li><a href="#die-richtige-achse-multi-version-support" id="markdown-toc-die-richtige-achse-multi-version-support">Die richtige Achse: Multi-Version-Support</a></li>
-      <li><a href="#empfehlung-für-pcor-mii" id="markdown-toc-empfehlung-für-pcor-mii">Empfehlung für PCOR-MII</a></li>
-    </ul>
-  </li>
+  <li><a href="#versions-koexistenz-auf-empfänger-servern" id="markdown-toc-versions-koexistenz-auf-empfänger-servern">Versions-Koexistenz auf Empfänger-Servern</a></li>
   <li><a href="#pilot-datenfluss-50-first-patients" id="markdown-toc-pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</a></li>
-  <li><a href="#empfehlung-für-pcor-mii-pilot" id="markdown-toc-empfehlung-für-pcor-mii-pilot">Empfehlung für PCOR-MII Pilot</a></li>
 </ul>
 
 </div>
-<p>Diese Seite beschreibt, was ein FHIR-Server bereitstellen muss, damit <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s aus PCOR-MII <em>interpretierbar</em> und <em>validierbar</em> sind — und welche Optionen es für die initiale Befüllung des Servers gibt.</p>
+<p>Diese Seite beschreibt, <strong>wie Implementierer die PCOR-MII Datendefinitionen konsumieren können</strong> — Questionnaire-Definitionen, ValueSets, das PRO-QR-Profil und Beispiele.</p>
 
-<h2 id="container-build-stack-im-pcor-mii-repo">Container-Build-Stack (im PCOR-MII Repo)</h2>
+<h2 id="was-du-bekommst">Was du bekommst</h2>
 
-<p>Im Verzeichnis <code class="language-plaintext highlighter-rouge">docker/</code> dieses Repos liegt eine Multi-Stage-Dockerfile, die einen kompletten HAPI FHIR Server mit MII PRO und PCOR-MII vorinstalliert baut. Build-Time-Bake → kein Cold-Start, kein Online-Download zur Laufzeit.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Resources</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Profile (Struktur-Constraints)</td>
+      <td><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">MII PR PRO Questionnaire</code> (aus dem MII PRO-Modul)</td>
+    </tr>
+    <tr>
+      <td>Questionnaire-Definitionen</td>
+      <td>PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR Beispiel (PCOR-MII + MII PRO-Modul)</td>
+    </tr>
+    <tr>
+      <td>ValueSets</td>
+      <td>Frequency-/Intensity-/Physical-Function-Response-Scale + lokale PCOR-MII ValueSets</td>
+    </tr>
+    <tr>
+      <td>Beispiele</td>
+      <td>validierte <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s (siehe <a href="Validierung.html">Validierung</a>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="wege-das-zu-bekommen">Wege, das zu bekommen</h2>
+
+<h3 id="1-pcor-mii-container-für-mapper-entwicklung-lokales-testen">1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)</h3>
+
+<p>Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundle gegen <code class="language-plaintext highlighter-rouge">$validate</code> prüfen, Definitionen ad-hoc per FHIR-API ziehen.</p>
 
 <pre><code class="language-mermaid">flowchart LR
-    subgraph Stage1 ["Stage 1: SUSHI"]
-        FSH["input/fsh/&lt;br/&gt;(FSH Sources)"]
-        FSHGEN["fsh-generated/&lt;br/&gt;resources/"]
-        FSH --&gt;|"sushi --snapshot"| FSHGEN
-    end
+    SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.4.1"| HAPI
+    REPO[("PCOR-MII Repo")] --&gt;|"als Package"| HAPI
+    HAPI_BASE["hapiproject/hapi:v8.4.0"] --&gt; HAPI["PCOR-MII Container&lt;br/&gt;localhost:8097"]
+    HAPI --&gt;|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
 
-    subgraph Stage2 ["Stage 2: Package-Builder"]
-        FSHGEN --&gt; PCOR["pcor-mii.tgz&lt;br/&gt;(lokales Package)"]
-        SIMPLIFIER[("Simplifier&lt;br/&gt;Package Registry")] --&gt;|"curl 2026.4.1"| MIIPRO["mii-pro.tgz"]
-    end
-
-    subgraph Stage3 ["Stage 3: HAPI Runtime"]
-        HAPI_BASE["hapiproject/hapi:v8.4.0&lt;br/&gt;(Spring Boot + JPA + H2)"]
-        PCOR --&gt; HAPI["HAPI Container&lt;br/&gt;:8080 → host :8097"]
-        MIIPRO --&gt; HAPI
-        HAPI_BASE --&gt; HAPI
-        APPYAML["application.yaml&lt;br/&gt;(IG-Preload + Tester-Config)"] --&gt; HAPI
-    end
-
-    HAPI --&gt;|"GET /fhir/metadata"| CLIENT["Client / Reviewer"]
-    HAPI --&gt;|"$validate, $expand"| CLIENT
-
-    style FSH fill:#e1f5ff
-    style FSHGEN fill:#e1f5ff
-    style PCOR fill:#fff4e1
-    style MIIPRO fill:#fff4e1
     style HAPI fill:#ffe1e1
+    style SIMPLIFIER fill:#e1f5ff
+    style REPO fill:#e1f5ff
 </code></pre>
 
-<p>Erlaubt: lokale Validierung (siehe <a href="Validierung.html">Validierung</a>), Form-Rendering via <a href="https://lhcforms.nlm.nih.gov/">LHC-Forms</a>, Pilot-Datenaustausch (siehe unten).</p>
-
-<h2 id="das-problem-ein-qr-alleine-reicht-nicht">Das Problem: ein QR alleine reicht nicht</h2>
-
-<p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> enthält:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">questionnaire</code> → Canonical-URL auf den Fragebogen</li>
-  <li><code class="language-plaintext highlighter-rouge">item.linkId</code> → verweist auf das Item <em>im</em> Fragebogen</li>
-  <li><code class="language-plaintext highlighter-rouge">answer.valueCoding.code</code> → verweist auf ein Konzept <em>aus dem</em> <code class="language-plaintext highlighter-rouge">answerValueSet</code> oder <code class="language-plaintext highlighter-rouge">answerOption</code> des Items</li>
-</ul>
-
-<p><strong>Ohne den Fragebogen selbst</strong> weiß ein konsumierender Server/Client nicht, was die <code class="language-plaintext highlighter-rouge">linkId</code>s bedeuten, welcher Itemtext dahintersteht, oder welche <code class="language-plaintext highlighter-rouge">code</code>-Werte zulässig waren. Die QR ist im strengen Sinn <strong>nicht interpretierbar</strong>.</p>
-
-<p><strong>Ohne die ValueSets/CodeSystems</strong> kann der Server nicht prüfen, ob die gelieferten Codes gültig waren — Code-Bindungs-Validation schlägt fehl. Display-Anreicherungen (z.B. "LA6270-8 = Nie") sind ohne CodeSystem nicht möglich.</p>
-
-<p>Konkret für PCOR-MII heißt das: ein FHIR-Server, der PROMIS-16-QRs entgegennimmt, muss <strong>mindestens</strong> diese Ressourcen vorhalten:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Questionnaire/mii-qst-pro-promis-16</code> (das Instrument)</li>
-  <li><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-pro-promis-frequency-response-scale</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-pro-promis-intensity-response-scale</code></li>
-  <li><code class="language-plaintext highlighter-rouge">ValueSet/mii-vs-pro-promis-physical-function-response-scale</code></li>
-  <li>die unter den ValueSets gebundenen LOINC-Konzepte (über einen Terminology-Server oder als CodeSystem-Mirror)</li>
-  <li><code class="language-plaintext highlighter-rouge">StructureDefinition/mii-pr-pro-questionnaire-response</code> (das PRO-QR-Profil)</li>
-</ul>
-
-<h2 id="optionen-für-die-server-befüllung">Optionen für die Server-Befüllung</h2>
-
-<h3 id="option-a-package-operation-fhir-native-empfohlen">Option A: $package-Operation (FHIR-Native, empfohlen)</h3>
-
-<p><a href="https://hl7.org/fhir/uv/packaging/">Die FHIR-Packaging-Spec</a> definiert eine <code class="language-plaintext highlighter-rouge">$package</code>-Operation, mit der ein Server ein komplettes NPM-Package (z.B. <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1</code>) als Bundle entgegennimmt und alle Ressourcen registriert.</p>
-
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST [base]/$package
-Content-Type: application/json
-
-{
-  "resourceType": "Parameters",
-  "parameter": [
-    { "name": "id", "valueString": "de.medizininformatikinitiative.kerndatensatz.pros" },
-    { "name": "version", "valueString": "2026.4.1" }
-  ]
-}
-</span></code></pre></div></div>
-
-<p>Pro: deklarativ, vollständig, versioniert. Server-Implementierungen: HAPI (Operation <code class="language-plaintext highlighter-rouge">$import</code> mit Package-Manifest), Firely Server, einige Open-Source-FHIR-Implementierungen.</p>
-
-<p>Con: nicht überall verfügbar. Manche Server unterstützen nur ad-hoc Transaction-Bundles.</p>
-
-<h3 id="option-b-pre-built-hapi-image-mit-gemounteten-inhalten">Option B: Pre-built HAPI Image mit gemounteten Inhalten</h3>
-
-<p>Ein vorgebautes <a href="https://github.com/hapifhir/hapi-fhir-jpaserver-starter">HAPI FHIR Starter</a> Docker-Image, das beim Start die Packages aus dem <code class="language-plaintext highlighter-rouge">~/.fhir/packages</code>-Verzeichnis automatisch lädt:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose.yml</span>
-<span class="na">services</span><span class="pi">:</span>
-  <span class="na">hapi</span><span class="pi">:</span>
-    <span class="na">image</span><span class="pi">:</span> <span class="s">hapiproject/hapi:latest</span>
-    <span class="na">environment</span><span class="pi">:</span>
-      <span class="na">HAPI_FHIR_IG_RUNTIME_UPLOAD_ENABLED</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-      <span class="na">HAPI_FHIR_IMPLEMENTATIONGUIDES_PCOR_MII_PACKAGE_URL</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://bih-cei.github.io/PCOR-MII/package.tgz"</span>
-      <span class="na">HAPI_FHIR_IMPLEMENTATIONGUIDES_PCOR_MII_NAME</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pcor-mii"</span>
-      <span class="na">HAPI_FHIR_IMPLEMENTATIONGUIDES_MII_PRO_PACKAGE_URL</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"</span>
-      <span class="na">HAPI_FHIR_IMPLEMENTATIONGUIDES_MII_PRO_NAME</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mii-pro"</span>
-    <span class="na">ports</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose <span class="nt">-f</span> docker/docker-compose.yml up <span class="nt">--build</span>
+curl http://localhost:8097/fhir/Questionnaire?_summary<span class="o">=</span><span class="nb">true</span>            <span class="c"># alle Definitionen</span>
+curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii-qst-pro-promis-16   <span class="c"># gezielt</span>
 </code></pre></div></div>
 
-<p>Pro: schnell testbar, Standard-Setup. Geeignet für Entwicklungs- und Test-Umgebungen.</p>
+<p>Details: <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/README.md</a></p>
 
-<p>Con: nicht für produktiven Datenaustausch ohne weitere Härtung (Auth, Audit, Backup).</p>
+<h3 id="2-mii-pro-package-via-simplifier-für-build-pipelines">2. MII PRO Package via Simplifier (für Build-Pipelines)</h3>
 
-<h3 id="option-c-transaction-bundle-mit-allen-relevanten-resources">Option C: Transaction-Bundle mit allen relevanten Resources</h3>
+<p>Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST [base]/
-Content-Type: application/fhir+json
-
-{
-  "resourceType": "Bundle",
-  "type": "transaction",
-  "entry": [
-    { "resource": { "resourceType": "Questionnaire", "id": "mii-qst-pro-promis-16", ... },
-      "request": { "method": "PUT", "url": "Questionnaire/mii-qst-pro-promis-16" } },
-    { "resource": { "resourceType": "ValueSet", "id": "mii-vs-pro-promis-frequency-response-scale", ... },
-      "request": { "method": "PUT", "url": "ValueSet/mii-vs-pro-promis-frequency-response-scale" } },
-    ...
-  ]
-}
-</span></code></pre></div></div>
-
-<p>Pro: funktioniert mit <em>jedem</em> FHIR-Server. Volle Kontrolle über jede einzelne Ressource.</p>
-
-<p>Con: muss manuell zusammengestellt werden, keine automatische Versionsauflösung.</p>
-
-<h3 id="package-operation-bundle-automatisch-generieren-lassen"><code class="language-plaintext highlighter-rouge">$package</code>-Operation: Bundle automatisch generieren lassen</h3>
-
-<p>Wenn der <strong>Producer-Server</strong> die <a href="https://hl7.org/fhir/uv/crmi/">FHIR Crmi (Canonical Resource Management Infrastructure)</a> <code class="language-plaintext highlighter-rouge">$package</code>-Operation unterstützt, kann der Konsument das Bundle aus Option C <strong>automatisch erzeugen lassen</strong>:</p>
-
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [producer-base]/Questionnaire/mii-qst-pro-promis-16/$package
-</span></code></pre></div></div>
-
-<p>Antwort ist ein <code class="language-plaintext highlighter-rouge">Bundle</code> (transaction-fertig), das den Questionnaire <strong>plus alle transitiv referenzierten ValueSets, CodeSystems und Profile</strong> enthält — exakt der Set, den der Konsument braucht, um QRs gegen diesen Questionnaire interpretieren und validieren zu können.</p>
-
-<p>Konkret für PCOR-MII:</p>
-<ul>
-  <li>Producer = der PCOR-MII Container (<a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/</a>) — HAPI ab v6.x unterstützt <code class="language-plaintext highlighter-rouge">$package</code> via Clinical Reasoning Modul</li>
-  <li>Konsument lädt das Bundle und PUTet es auf seinen eigenen Server</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Producer → Bundle generieren lassen</span>
-curl http://pcor-mii-producer:8097/fhir/Questionnaire/mii-qst-pro-promis-16/<span class="se">\$</span>package <span class="o">&gt;</span> promis-16-bundle.json
-
-<span class="c"># Konsument → Bundle einspielen</span>
-curl <span class="nt">-X</span> POST http://localhost:8080/fhir <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
-  <span class="nt">-d</span> @promis-16-bundle.json
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir <span class="nb">install </span>de.medizininformatikinitiative.kerndatensatz.pros 2026.4.1
+<span class="c"># entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1/</span>
 </code></pre></div></div>
 
-<p>Pro: kein manuelles Bundle-Bauen, automatische Dependency-Auflösung, Versions-Pinning inkludiert (jede Canonical mit ihrer aktuellen <code class="language-plaintext highlighter-rouge">version</code>).</p>
+<p>Beispiel <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
+  <span class="na">de.medizininformatikinitiative.kerndatensatz.pros</span><span class="pi">:</span> <span class="s">2026.4.1</span>
+  <span class="na">hl7.fhir.uv.sdc</span><span class="pi">:</span> <span class="s">3.0.0</span>
+</code></pre></div></div>
 
-<p>Con: <code class="language-plaintext highlighter-rouge">$package</code>-Implementierung ist noch nicht universell — HAPI-CR-Variante (Clinical Reasoning) muss aktiv sein, Firely-Server unterstützt es, viele andere Server nicht. Im PCOR-MII Container nicht out-of-the-box aktiviert (HAPI-Default), kann via Plugin nachgezogen werden.</p>
+<p>PCOR-MII selbst ist (Stand 2026.06.) <strong>nicht</strong> als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.</p>
 
-<p><strong>Wichtig</strong>: <code class="language-plaintext highlighter-rouge">$package</code> liefert ValueSets in ihrer <strong><code class="language-plaintext highlighter-rouge">compose</code>-Form</strong> (Definition, nicht Expansion). Wenn der Konsument die ausexpandierte Konzept-Liste benötigt (z.B. für Form-Rendering, ohne TerminologyServer-Roundtrip), muss er pro ValueSet separat <code class="language-plaintext highlighter-rouge">$expand</code> aufrufen:</p>
+<h3 id="3-direkter-repo-zugriff-für-scripting-doku-tools">3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)</h3>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/ValueSet/mii-vs-pro-promis-frequency-response-scale/$expand
-</span></code></pre></div></div>
+<p>Repo klonen, SUSHI laufen lassen, FHIR JSONs sind in <code class="language-plaintext highlighter-rouge">fsh-generated/resources/</code>:</p>
 
-<p>Für die PROMIS-VS sind die Konzepte aber bereits inline in <code class="language-plaintext highlighter-rouge">compose.include[].concept[]</code> definiert (mit deutschen <code class="language-plaintext highlighter-rouge">designation</code>-Einträgen), so dass die Expansion trivial ist und keinen externen TerminologyServer braucht. Bei einigen Crmi-Implementierungen lässt sich <code class="language-plaintext highlighter-rouge">$package</code> mit <code class="language-plaintext highlighter-rouge">?includeExpansion=true</code> aufrufen, um beides in einem Schritt zu bekommen — nicht universell standardisiert.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/BIH-CEI/PCOR-MII
+<span class="nb">cd </span>PCOR-MII <span class="o">&amp;&amp;</span> sushi <span class="nb">.</span>
+<span class="nb">ls </span>fsh-generated/resources/
+</code></pre></div></div>
 
-<h2 id="put-post-und-das-problem-der-versions-koexistenz">PUT, POST, und das Problem der Versions-Koexistenz</h2>
+<p>Best für: ad-hoc Lookup, Skripte (wie unser <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">extract-qst-translations</a>), CI-Integrationen.</p>
 
-<p>Auf Standard-FHIR-Servern entsteht ein praktisches Problem, sobald mehrere Versionen desselben Fragebogens im Spiel sind:</p>
+<h3 id="4-package-operation-für-bestückung-eines-fremden-fhir-servers">4. <code class="language-plaintext highlighter-rouge">$package</code>-Operation (für Bestückung eines fremden FHIR-Servers)</h3>
 
-<h3 id="was-passiert-mit-put-questionnairepromis-29">Was passiert mit <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code>?</h3>
+<p>Wenn ein Producer-Server FHIR Crmi unterstützt:</p>
 
-<p>Wenn du via Transaction-Bundle eine <code class="language-plaintext highlighter-rouge">Questionnaire/promis-29</code> mit <code class="language-plaintext highlighter-rouge">Questionnaire.version = "2026.4.1"</code> PUTtest und auf dem Server liegt schon dieselbe <code class="language-plaintext highlighter-rouge">id</code> mit <code class="language-plaintext highlighter-rouge">Questionnaire.version = "2026.3.0"</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [producer]/Questionnaire/mii-qst-pro-promis-16/$package
+</code></pre></div></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Verhalten</th>
-      <th>Was passiert</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">meta.versionId</code> (Server-seitiges Versionierungs-Feld)</td>
-      <td>wird hochgezählt: 5 → 6 (technische History)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">Questionnaire.version</code> (Business-Versionierungsfeld)</td>
-      <td>wird auf den neuen Wert <code class="language-plaintext highlighter-rouge">"2026.4.1"</code> <strong>überschrieben</strong></td>
-    </tr>
-    <tr>
-      <td>Es existiert nur <strong>eine</strong> logische Ressource pro <code class="language-plaintext highlighter-rouge">id</code></td>
-      <td>ja, immer</td>
-    </tr>
-    <tr>
-      <td>Mit <code class="language-plaintext highlighter-rouge">If-Match: W/"5"</code>-Header</td>
-      <td>412 Precondition Failed, falls aktuelle <code class="language-plaintext highlighter-rouge">meta.versionId</code> ≠ 5 (= Optimistic Locking, <strong>nichts</strong> mit <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> zu tun)</td>
-    </tr>
-  </tbody>
-</table>
+<p>liefert ein transaction-fertiges Bundle mit dem Questionnaire + allen referenzierten ValueSets/CodeSystems/Profilen, versioniert. Konsument PUTet das auf seinen eigenen Server.</p>
 
-<h3 id="konsequenz-was-ist-mit-bestehenden-qrs-die-auf-202630-verweisen">Konsequenz: Was ist mit bestehenden QRs, die auf <code class="language-plaintext highlighter-rouge">|2026.3.0</code> verweisen?</h3>
+<p>ValueSets kommen im <code class="language-plaintext highlighter-rouge">compose</code>-Format. Für PROMIS reicht das, weil die Konzepte inline definiert sind. HAPI braucht für <code class="language-plaintext highlighter-rouge">$package</code> das Clinical-Reasoning-Modul (im PCOR-MII Container nicht out-of-the-box).</p>
 
-<p><strong>Sie sind nach der Überschreibung nicht mehr sauber resolvbar.</strong> Eine QR mit <code class="language-plaintext highlighter-rouge">questionnaire = "https://.../mii-qst-pro-promis-29|2026.3.0"</code> findet auf dem Server zwar dieselbe <code class="language-plaintext highlighter-rouge">id</code> — aber die liegt jetzt als <code class="language-plaintext highlighter-rouge">2026.4.1</code> vor. Der Renderer/Validator hat dann zwei Optionen:</p>
+<h2 id="versions-koexistenz-auf-empfänger-servern">Versions-Koexistenz auf Empfänger-Servern</h2>
 
-<ol>
-  <li><strong>Strikt</strong>: Lookup schlägt fehl (Version mismatch) → QR ist nicht renderbar.</li>
-  <li><strong>Lax</strong>: Lookup ignoriert die Version → QR wird gegen die <em>aktuelle</em> Version interpretiert. Risiko: linkIds könnten sich geändert haben, codings könnten zu nicht mehr gültigen Antwortmöglichkeiten gehören.</li>
-</ol>
+<p>Auf Standard-HAPI: <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code> mit neuer <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> <strong>überschreibt</strong> den existierenden Eintrag. Eine ältere QR mit <code class="language-plaintext highlighter-rouge">…|2026.3.0</code>-Referenz ist danach nicht mehr sauber resolvbar — pro <code class="language-plaintext highlighter-rouge">id</code> koexistiert nur eine Version.</p>
 
-<p>Beides ist suboptimal. Die Lax-Variante ist besonders gefährlich für klinische Daten.</p>
-
-<h3 id="post-statt-put--löst-das-problem">POST statt PUT — löst das Problem?</h3>
-
-<p><code class="language-plaintext highlighter-rouge">POST [base]/Questionnaire</code> (ohne <code class="language-plaintext highlighter-rouge">id</code> in der URL) lässt den Server eine <strong>neue, eigene</strong> <code class="language-plaintext highlighter-rouge">id</code> vergeben:</p>
-
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST [base]/Questionnaire
-Content-Type: application/fhir+json
-{ "resourceType": "Questionnaire", "url": "https://.../mii-qst-pro-promis-29", "version": "2026.4.1", ... }
-</span></code></pre></div></div>
-
-<p>Resultat: der Server speichert die neue Version unter <code class="language-plaintext highlighter-rouge">Questionnaire/auto-id-xyz</code>, parallel zur älteren <code class="language-plaintext highlighter-rouge">Questionnaire/auto-id-abc</code> mit version 2026.3.0.</p>
-
-<p><strong>Aber</strong>: bei jedem Re-Upload desselben Fragebogens entstehen <strong>Duplikate</strong>. Idempotenz geht verloren. Nicht ideal für Server-Pflege.</p>
-
-<h3 id="die-richtige-achse-multi-version-support">Die richtige Achse: Multi-Version-Support</h3>
-
-<p>POST vs PUT ist nicht der entscheidende Hebel. Drei robuste Patterns:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Pattern</th>
-      <th>Wie</th>
-      <th>Vorteil</th>
-      <th>Nachteil</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>A. Versions-Suffix in <code class="language-plaintext highlighter-rouge">id</code></strong></td>
-      <td><code class="language-plaintext highlighter-rouge">Questionnaire/promis-29-v2026-3-0</code>, <code class="language-plaintext highlighter-rouge">Questionnaire/promis-29-v2026-4-1</code> (PUT mit id)</td>
-      <td>funktioniert auf jedem FHIR-Server</td>
-      <td>Clients müssen die id-Konvention kennen; Canonical-Lookup über <code class="language-plaintext highlighter-rouge">?url=&amp;version=</code> nicht out-of-the-box</td>
-    </tr>
-    <tr>
-      <td><strong>B. HAPI Multi-Version-Mode</strong></td>
-      <td>HAPI ab v6.x mit Terminology-Service-Konfiguration; mehrere <code class="language-plaintext highlighter-rouge">Questionnaire.version</code>-Werte koexistieren unter gleicher logischer <code class="language-plaintext highlighter-rouge">id</code></td>
-      <td>sauberer FHIR-native Canonical-Lookup mit Version; semantisch korrekt</td>
-      <td>server-spezifisches Setup</td>
-    </tr>
-    <tr>
-      <td><strong>C. Package-Registry als Auflösungsquelle</strong></td>
-      <td>FHIR-Server lädt Canonicals on-demand aus <code class="language-plaintext highlighter-rouge">https://packages.simplifier.net/...</code></td>
-      <td>klare Trennung: Definitionen im Package-Server, Daten im FHIR-Server</td>
-      <td>zusätzliche Abhängigkeit, Latenz, Offline-Setup schwieriger</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="empfehlung-für-pcor-mii">Empfehlung für PCOR-MII</h3>
-
-<p>Für den Pilot:</p>
-
-<ol>
-  <li><strong>Eine einzige Version (<code class="language-plaintext highlighter-rouge">2026.4.1</code>)</strong> in der gesamten Pilot-Phase. Keine Multi-Version-Komplexität.</li>
-  <li><strong>PUT mit fester <code class="language-plaintext highlighter-rouge">id</code></strong> in Transaction-Bundles zur initialen Server-Bestückung (idempotent, einfach).</li>
-  <li><strong>Bei späterer Versions-Migration</strong>: Pattern A (Versions-Suffix) oder B (HAPI Multi-Version) — Entscheidung zum Zeitpunkt der ersten Major-Version-Migration treffen.</li>
-</ol>
-
-<p><code class="language-plaintext highlighter-rouge">Questionnaire.version</code> (das Business-Feld) sollte in der QR-Referenz <strong>immer mitgeführt</strong> werden: <code class="language-plaintext highlighter-rouge">questionnaire = "https://.../mii-qst-pro-promis-29|2026.4.1"</code>. Damit kann ein zukünftiger Multi-Version-Server die korrekte Auflösung sauber abbilden, auch wenn der heutige Standard-Server die Version ignoriert.</p>
+<p>Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.4.1) durchgehend. Bei späterer Migration: Versions-Suffix in der <code class="language-plaintext highlighter-rouge">id</code> (z.B. <code class="language-plaintext highlighter-rouge">promis-29-v2026-4-1</code>) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (<code class="language-plaintext highlighter-rouge">…|2026.4.1</code>).</p>
 
 <h2 id="pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</h2>
 
-<p>Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene ePRO-App, Papier+Eingabemaske) <strong>oder</strong> direkt in FHIR erfolgen (z.B. via LHC-Forms gegen einen PCOR-MII Container). FHIR ist primär die <strong>Ablage- und Austausch-Form</strong> zwischen Erhebung und Empfänger:</p>
+<p>Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene App) <strong>oder</strong> direkt in FHIR (LHC-Forms o.ä.). FHIR ist primär die <strong>Ablage- und Austausch-Form</strong>:</p>
 
-<pre><code class="language-mermaid">flowchart TB
-    subgraph Sites ["Partner-Sites — Erhebung im jeweiligen Quell-System"]
+<pre><code class="language-mermaid">flowchart LR
+    subgraph Sites ["Partner-Sites"]
         direction TB
         SiteA["Site A&lt;br/&gt;REDCap"]
         SiteB["Site B&lt;br/&gt;LimeSurvey"]
-        SiteC["Site C&lt;br/&gt;eigene ePRO-App"]
+        SiteC["Site C&lt;br/&gt;eigene App"]
     end
 
-    subgraph Transform ["Transform-Schicht (pro Site)"]
-        direction TB
-        Mapper["Mapper / ETL-Skript&lt;br/&gt;(Quelle → MII PRO Bundle)"]
-    end
-
-    subgraph Validate ["PCOR-MII Container (zentral oder pro Site)"]
-        direction TB
-        HAPI["HAPI FHIR :8097&lt;br/&gt;+ MII PRO 2026.4.1&lt;br/&gt;+ PCOR-MII&lt;br/&gt;+ SDC 3.0.0"]
-        Validator["POST /\$validate"]
-        Storage[("Optional:&lt;br/&gt;QR-Storage&lt;br/&gt;H2 / Postgres")]
-        Validator --&gt; HAPI
-        HAPI --- Storage
-    end
-
-    subgraph Receiver ["Empfänger (z.B. FDPG, Konsortial-Knoten)"]
-        direction TB
-        FDPG["MII KDS Empfänger"]
-    end
+    Mapper["Mapper / ETL&lt;br/&gt;Quelle → MII PRO Bundle"]
+    Validator["PCOR-MII Container&lt;br/&gt;$validate"]
+    FDPG["Empfänger&lt;br/&gt;(FDPG / KDS-Knoten)"]
 
     SiteA --&gt; Mapper
     SiteB --&gt; Mapper
     SiteC --&gt; Mapper
-
-    Mapper --&gt;|"FHIR-Bundle&lt;br/&gt;(QR + Score-Observations)"| Validator
-    Validator --&gt;|"OperationOutcome:&lt;br/&gt;0 errors? → weiter"| Mapper
-    Mapper --&gt;|"POST Bundle&lt;br/&gt;(validiertes Mapping)"| FDPG
+    Mapper --&gt;|"FHIR-Bundle"| Validator
+    Validator --&gt;|"0 errors → weiter"| Mapper
+    Mapper --&gt;|"POST validiertes Bundle"| FDPG
 
     style SiteA fill:#e1f5ff
     style SiteB fill:#e1f5ff
     style SiteC fill:#e1f5ff
     style Mapper fill:#fff4e1
-    style HAPI fill:#ffe1e1
     style Validator fill:#ffe1e1
     style FDPG fill:#e1ffe1
 </code></pre>
 
-<p><strong>Setup-Aufgaben pro Site</strong>:</p>
-<ol>
-  <li>Datenexport aus dem Erhebungs-System (REDCap CSV-Export, LimeSurvey API, App-Backend, …)</li>
-  <li>Mapper schreiben (Skript/ETL), das die Daten in ein MII-PRO-konformes FHIR-Bundle umwandelt:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> mit <code class="language-plaintext highlighter-rouge">meta.profile = mii-pr-pro-questionnaire-response|2026.4.1</code></li>
-      <li>referenziert den Questionnaire via <code class="language-plaintext highlighter-rouge">canonical|version</code></li>
-      <li>codierte Antworten gemäß den im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code>s</li>
-    </ul>
-  </li>
-  <li>Validierung gegen PCOR-MII Container (lokal oder zentral): <code class="language-plaintext highlighter-rouge">POST /\$validate</code></li>
-  <li>Wenn 0 errors: POST des Bundles an den Empfänger-Server</li>
-</ol>
-
-<p><strong>Setup-Aufgaben zentral</strong>:</p>
-<ul>
-  <li>PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen — oder jede Site läuft ihn lokal (Container ist klein und stateless für reine Validierung)</li>
-  <li>Empfänger-Server (FDPG, Konsortial-Knoten) ist eine <strong>separate</strong> FHIR-Instanz mit ggf. anderen Auth- und Persistenz-Anforderungen</li>
-</ul>
-
-<p><strong>Form-Rendering direkt aus FHIR</strong> ist als Pfad gleichwertig: dieselben Validierungs-Garantien greifen (das Bundle ist das gleiche). Wenn deine Site mit LHC-Forms o.ä. arbeitet, fällt der Mapper-Schritt weg und das Bundle entsteht direkt im FHIR-Server. Beide Wege treffen sich bei <code class="language-plaintext highlighter-rouge">$validate</code>.</p>
-
-<h2 id="empfehlung-für-pcor-mii-pilot">Empfehlung für PCOR-MII Pilot</h2>
-
-<p>Für die <a href="Implementation.html">50-First-Patients Pilot-Kohorte</a>:</p>
-
-<ol>
-  <li><strong>Konsumierende Partner-Sites</strong> mounten vorzugsweise ein <strong>HAPI mit PRO + PCOR-MII Packages</strong> via Option B (schnelles Setup, einheitlich).</li>
-  <li><strong>Datenversand</strong> erfolgt über Transaction-Bundles mit <code class="language-plaintext highlighter-rouge">POST</code> (kein PUT für neue QRs) — auf die Server-vorhandenen <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Ressourcen via Canonical-Referenz, keine Inline-Kopien.</li>
-  <li><strong>Versionierung</strong>: das MII PRO-Modul kommt im Pilot in <strong>einer einzigen Version</strong> (<code class="language-plaintext highlighter-rouge">2026.4.1</code>) zum Einsatz. Multi-Version-Lookup wird nicht benötigt, solange der Pilot läuft.</li>
-  <li><strong>Validierung</strong>: vor dem Versand lokal mit dem CLI-Validator (siehe <a href="Validierung.html">Validierung</a>).</li>
-</ol>
+<p>Site exportiert aus Quell-System → Mapper baut FHIR-Bundle → gegen Container validieren → ans FDPG/KDS senden. Bei Direkt-in-FHIR-Erfassung entfällt der Mapper-Schritt; beide Pfade treffen sich bei <code class="language-plaintext highlighter-rouge">$validate</code>.</p>
 
 
 
@@ -711,7 +483,7 @@ Content-Type: application/fhir+json
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:31:00 +0000">
+  <span title="2026-06-16 12:48:00 +0000">
     2026-06-16
   </span>
 

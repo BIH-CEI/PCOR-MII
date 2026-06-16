@@ -225,12 +225,10 @@ PROMIS&reg;-33 Profile v2.1 ergänzt PROMIS-29 um die Cognitive-Function-Domäne
           <a href="de/Bereitstellung.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/hapifhir/hapi-fhir-jpaserver-starter">github.com</a>
+          <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">github.com</a>
         </td>
         <td>
-Ein vorgebautes           <a href="https://github.com/hapifhir/hapi-fhir-jpaserver-starter">HAPI FHIR Starter</a>
- Docker-Image, das beim Start die Packages aus dem           <code class="language-plaintext highlighter-rouge">~/.fhir/packages</code>
--Verzeichnis automatisch lädt:
+Details:           <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/README.md</a>
         </td>
       </tr>
       <tr>
@@ -238,12 +236,11 @@ Ein vorgebautes           <a href="https://github.com/hapifhir/hapi-fhir-jpaserv
           <a href="de/Bereitstellung.html">web</a>
         </td>
         <td>
-          <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">github.com</a>
+          <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">github.com</a>
         </td>
         <td>
-Producer = der PCOR-MII Container (          <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/</a>
-) — HAPI ab v6.x unterstützt           <code class="language-plaintext highlighter-rouge">$package</code>
- via Clinical Reasoning Modul
+Best für: ad-hoc Lookup, Skripte (wie unser           <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">extract-qst-translations</a>
+), CI-Integrationen.
         </td>
       </tr>
       <tr>
@@ -263,7 +260,7 @@ Producer = der PCOR-MII Container (          <a href="https://github.com/BIH-CEI
           Package pcor-mii#0.1.0 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Erstellt 
-            <span title="2026-06-16 12:31:00 +0000">
+            <span title="2026-06-16 12:48:00 +0000">
     2026-06-16
   </span>
 
@@ -514,26 +511,11 @@ Dieser IG folgt           <a href="https://semver.org/">Semantic Versioning 2.0.
           <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/">medizininformatik-initiative.github.io</a>
         </td>
         <td>
-(a) das           <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/">
+          <strong>Strukturell</strong>
+ dem           <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/">
 <code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil
           </a>
- (Struktur-Constraints) und (b) das referenzierte           <code class="language-plaintext highlighter-rouge">Questionnaire</code>
- (linkId-Treffer, Item-Typ-Konsistenz, codierte Antworten gegen die           <code class="language-plaintext highlighter-rouge">answerValueSet</code>
-s)
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="de/Validierung.html">web</a>
-        </td>
-        <td>
-          <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/">medizininformatik-initiative.github.io</a>
-        </td>
-        <td>
-das           <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/dev/">
-<code class="language-plaintext highlighter-rouge">MII PR PRO Questionnaire</code>-Profil
-          </a>
- (SDC-konforme Struktur)
+ entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
         </td>
       </tr>
       <tr>
@@ -603,7 +585,7 @@ Dieser Implementation Guide wird vom           <a href="https://www.bihealth.org
           Package pcor-mii#0.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Generated 
-            <span title="2026-06-16 12:31:00 +0000">
+            <span title="2026-06-16 12:48:00 +0000">
     2026-06-16
   </span>
 
