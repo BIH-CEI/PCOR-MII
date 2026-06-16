@@ -16,7 +16,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-* Definition im MII PRO-Modul: [PROMIS Cognitive Function SF 4a (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538188)
+* Raw-Resource: [PROMIS Cognitive Function SF 4a Questionnaire (Simplifier Package)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538188) (eine dedizierte IG-Doku-Seite gibt es im MII PRO IG noch nicht)
 * Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
 
 ### Eigenschaften

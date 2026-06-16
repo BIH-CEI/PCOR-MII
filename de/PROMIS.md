@@ -32,7 +32,7 @@ PROMIS-29 und PROMIS-16 überlappen sich in 14 Items (PROMIS-16 ist quasi ein PR
 
 ### Quellen
 
-* Übergeordneter IG: [MII PRO-Modul (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
+* Übergeordneter IG: [MII PRO-Modul IG-Doku (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/Index.page.md?version=current) · [PRO-Bibliothek PROMIS-Sektion](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/Index.page.md?version=current) · [Raw-Package](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
 * PROMIS Health Organization: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
 * PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer
 

@@ -33,7 +33,7 @@ Wohnort-Typ (Q_OECDLITii).
   "title" : "DEM Urbanizität",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T13:17:28+00:00",
+  "date" : "2026-06-16T13:23:35+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
