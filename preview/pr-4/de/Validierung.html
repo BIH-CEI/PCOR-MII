@@ -288,12 +288,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#validierungs-architektur" id="markdown-toc-validierungs-architektur">Validierungs-Architektur</a></li>
   <li><a href="#was-kann-validiert-werden" id="markdown-toc-was-kann-validiert-werden">Was kann validiert werden?</a></li>
   <li><a href="#tools" id="markdown-toc-tools">Tools</a>    <ul>
       <li><a href="#fhir-validator-cli-hl7" id="markdown-toc-fhir-validator-cli-hl7">FHIR Validator CLI (HL7)</a></li>
       <li><a href="#ig-publisher-validation" id="markdown-toc-ig-publisher-validation">IG Publisher Validation</a></li>
       <li><a href="#simplifier-online-validator" id="markdown-toc-simplifier-online-validator">Simplifier Online-Validator</a></li>
       <li><a href="#firely-terminal" id="markdown-toc-firely-terminal">Firely Terminal</a></li>
+      <li><a href="#server-seitig-via-pcor-mii-container" id="markdown-toc-server-seitig-via-pcor-mii-container">Server-seitig via PCOR-MII Container</a></li>
     </ul>
   </li>
   <li><a href="#ergebnis-interpretation" id="markdown-toc-ergebnis-interpretation">Ergebnis-Interpretation</a>    <ul>
@@ -306,6 +308,44 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 <p>Diese Seite beschreibt, wie <code class="language-plaintext highlighter-rouge">Questionnaire</code>s und <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s im PCOR-MII Kontext validiert werden können.</p>
+
+<h2 id="validierungs-architektur">Validierungs-Architektur</h2>
+
+<p>Ein <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> ist nicht "alleine" validierbar — der Validator muss eine Auflösungskette durchlaufen, um zu wissen <em>gegen was</em> validiert wird:</p>
+
+<pre><code class="language-mermaid">flowchart TB
+    QR["QuestionnaireResponse&lt;br/&gt;(zu validieren)"]
+    Profile["meta.profile:&lt;br/&gt;MII PR PRO QR Profile"]
+    Q["Questionnaire&lt;br/&gt;(z.B. mii-qst-pro-promis-16)"]
+    VS["ValueSet&lt;br/&gt;(z.B. frequency-response-scale)"]
+    CS["CodeSystem&lt;br/&gt;(LOINC)"]
+
+    QR --&gt;|"validiert gegen"| Profile
+    QR --&gt;|"questionnaire =&lt;br/&gt;canonical URL"| Q
+    Q --&gt;|"item.answerValueSet"| VS
+    VS --&gt;|"compose.include"| CS
+
+    subgraph CLI ["Lokal: HL7 Validator CLI"]
+        direction LR
+        CLI_Cmd["fhir validate&lt;br/&gt;-profile ...&lt;br/&gt;-ig pros#2026.4.1"]
+    end
+
+    subgraph Server ["Lokal: PCOR-MII Container (port 8097)"]
+        direction LR
+        Server_Cmd["POST /fhir/QR/$validate"]
+    end
+
+    QR -.-&gt;|"Option 1"| CLI_Cmd
+    QR -.-&gt;|"Option 2"| Server_Cmd
+
+    style QR fill:#e1f5ff
+    style Profile fill:#fff4e1
+    style Q fill:#fff4e1
+    style VS fill:#e1ffe1
+    style CS fill:#e1ffe1
+</code></pre>
+
+<p>Beide Tools laden dieselben Quell-Definitionen (PRO-Modul-Package + SDC), kommen also zum <strong>gleichen Ergebnis</strong>. CLI ist gut für CI-Pipelines, Server-<code class="language-plaintext highlighter-rouge">$validate</code> für Run-Time-Checks beim Empfang.</p>
 
 <h2 id="was-kann-validiert-werden">Was kann validiert werden?</h2>
 
@@ -365,6 +405,17 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar input/examples/Quest
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir push input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
 fhir validate <span class="nt">--profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 </code></pre></div></div>
+
+<h3 id="server-seitig-via-pcor-mii-container">Server-seitig via PCOR-MII Container</h3>
+
+<p>Wenn der <a href="Bereitstellung.html">lokale PCOR-MII Container</a> läuft (Port 8097), kann er Validierung als FHIR-<code class="language-plaintext highlighter-rouge">$validate</code>-Operation ausführen — derselbe Validator wie das CLI, aber via HTTP:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST http://localhost:8097/fhir/QuestionnaireResponse/<span class="se">\$</span>validate <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> @input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json
+</code></pre></div></div>
+
+<p>Antwort ist ein <code class="language-plaintext highlighter-rouge">OperationOutcome</code> mit <code class="language-plaintext highlighter-rouge">issue</code>-Liste. Die <code class="language-plaintext highlighter-rouge">severity</code> ist identisch zur CLI-Ausgabe. Vorteil: keine Java/JAR-Installation beim Konsumenten nötig, alles per HTTP-Call.</p>
 
 <h2 id="ergebnis-interpretation">Ergebnis-Interpretation</h2>
 
@@ -489,7 +540,7 @@ fhir validate <span class="nt">--profile</span> https://www.medizininformatik-in
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:08:00 +0000">
+  <span title="2026-06-16 12:20:00 +0000">
     2026-06-16
   </span>
 

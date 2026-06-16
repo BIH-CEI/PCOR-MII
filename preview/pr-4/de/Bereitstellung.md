@@ -4,6 +4,44 @@
 
 Diese Seite beschreibt, was ein FHIR-Server bereitstellen muss, damit `QuestionnaireResponse`s aus PCOR-MII **interpretierbar** und **validierbar** sind — und welche Optionen es für die initiale Befüllung des Servers gibt.
 
+## Container-Build-Stack (im PCOR-MII Repo)
+
+Im Verzeichnis `docker/` dieses Repos liegt eine Multi-Stage-Dockerfile, die einen kompletten HAPI FHIR Server mit MII PRO und PCOR-MII vorinstalliert baut. Build-Time-Bake → kein Cold-Start, kein Online-Download zur Laufzeit.
+
+```
+flowchart LR
+    subgraph Stage1 ["Stage 1: SUSHI"]
+        FSH["input/fsh/<br/>(FSH Sources)"]
+        FSHGEN["fsh-generated/<br/>resources/"]
+        FSH -->|"sushi --snapshot"| FSHGEN
+    end
+
+    subgraph Stage2 ["Stage 2: Package-Builder"]
+        FSHGEN --> PCOR["pcor-mii.tgz<br/>(lokales Package)"]
+        SIMPLIFIER[("Simplifier<br/>Package Registry")] -->|"curl 2026.4.1"| MIIPRO["mii-pro.tgz"]
+    end
+
+    subgraph Stage3 ["Stage 3: HAPI Runtime"]
+        HAPI_BASE["hapiproject/hapi:v8.4.0<br/>(Spring Boot + JPA + H2)"]
+        PCOR --> HAPI["HAPI Container<br/>:8080 → host :8097"]
+        MIIPRO --> HAPI
+        HAPI_BASE --> HAPI
+        APPYAML["application.yaml<br/>(IG-Preload + Tester-Config)"] --> HAPI
+    end
+
+    HAPI -->|"GET /fhir/metadata"| CLIENT["Client / Reviewer"]
+    HAPI -->|"$validate, $expand"| CLIENT
+
+    style FSH fill:#e1f5ff
+    style FSHGEN fill:#e1f5ff
+    style PCOR fill:#fff4e1
+    style MIIPRO fill:#fff4e1
+    style HAPI fill:#ffe1e1
+
+```
+
+Erlaubt: lokale Validierung (siehe [Validierung](Validierung.md)), Form-Rendering via [LHC-Forms](https://lhcforms.nlm.nih.gov/), Pilot-Datenaustausch (siehe unten).
+
 ## Das Problem: ein QR alleine reicht nicht
 
 Eine `QuestionnaireResponse` enthält:
@@ -155,6 +193,62 @@ Für den Pilot:
 1. **Bei späterer Versions-Migration**: Pattern A (Versions-Suffix) oder B (HAPI Multi-Version) — Entscheidung zum Zeitpunkt der ersten Major-Version-Migration treffen.
 
 `Questionnaire.version` (das Business-Feld) sollte in der QR-Referenz **immer mitgeführt** werden: `questionnaire = "https://.../mii-qst-pro-promis-29|2026.4.1"`. Damit kann ein zukünftiger Multi-Version-Server die korrekte Auflösung sauber abbilden, auch wenn der heutige Standard-Server die Version ignoriert.
+
+## Pilot-Datenfluss "50 First Patients"
+
+Im Pilot tauschen mehrere Sites PROMIS-Daten gegen einen zentralen PCOR-MII-Server aus:
+
+```
+flowchart TB
+    subgraph Sites ["Partner-Sites"]
+        SiteA["Site A<br/>ePRO-App"]
+        SiteB["Site B<br/>ePRO-App"]
+        SiteC["Site C<br/>ePRO-App"]
+    end
+
+    subgraph Pilot ["PCOR-MII Container (lokaler Pilot)"]
+        HAPI["HAPI FHIR :8097<br/>+ MII PRO 2026.4.1<br/>+ PCOR-MII<br/>+ SDC 3.0.0"]
+        DB[("H2 / Postgres<br/>QR-Storage")]
+        HAPI --- DB
+    end
+
+    subgraph Auswertung ["Score-Auswertung (extern, CQL geplant)"]
+        SCORES["Raw-Scores +<br/>T-Scores +<br/>PROPr Utility"]
+    end
+
+    Patient["Patient/in"] -->|"Selbstauskunft"| SiteA
+    Patient2["Patient/in"] -->|"Selbstauskunft"| SiteB
+    Patient3["Patient/in"] -->|"Selbstauskunft"| SiteC
+
+    SiteA -->|"POST Bundle<br/>(transaction)"| HAPI
+    SiteB -->|"POST Bundle<br/>(transaction)"| HAPI
+    SiteC -->|"POST Bundle<br/>(transaction)"| HAPI
+
+    HAPI -->|"validiert vs<br/>PRO-QR-Profil"| HAPI
+    HAPI -->|"GET /Questionnaire<br/>?url=…&version=…"| Forscher["Forscher/in"]
+    HAPI -->|"GET /QR?subject=…"| Auswertung
+
+    style HAPI fill:#ffe1e1
+    style DB fill:#ffe1e1
+    style SiteA fill:#e1f5ff
+    style SiteB fill:#e1f5ff
+    style SiteC fill:#e1f5ff
+    style SCORES fill:#e1ffe1
+
+```
+
+**Setup-Aufgaben pro Site**:
+
+1. ePRO-App rendert PROMIS-16 oder PROMIS-29+Cognitive Function (Questionnaire-Definitionen aus PCOR-MII-Container über`GET /Questionnaire?url=…`)
+1. Patient füllt aus → App erzeugt`QuestionnaireResponse`mit`meta.profile = mii-pr-pro-questionnaire-response|2026.4.1`
+1. App POSTet als Transaction-Bundle an`/fhir`
+1. PCOR-MII-Server validiert + speichert
+
+**Setup-Aufgaben zentral**:
+
+* PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen (lokales LAN / Reverse-Proxy / Cloud — je nach Konsortiums-Datenschutz-Konzept)
+* Auth ergänzen vor produktivem Einsatz (HAPI-Defaults haben keine)
+* Persistente DB statt H2
 
 ## Empfehlung für PCOR-MII Pilot
 

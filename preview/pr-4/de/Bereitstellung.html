@@ -288,6 +288,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#container-build-stack-im-pcor-mii-repo" id="markdown-toc-container-build-stack-im-pcor-mii-repo">Container-Build-Stack (im PCOR-MII Repo)</a></li>
   <li><a href="#das-problem-ein-qr-alleine-reicht-nicht" id="markdown-toc-das-problem-ein-qr-alleine-reicht-nicht">Das Problem: ein QR alleine reicht nicht</a></li>
   <li><a href="#optionen-für-die-server-befüllung" id="markdown-toc-optionen-für-die-server-befüllung">Optionen für die Server-Befüllung</a>    <ul>
       <li><a href="#option-a-package-operation-fhir-native-empfohlen" id="markdown-toc-option-a-package-operation-fhir-native-empfohlen">Option A: $package-Operation (FHIR-Native, empfohlen)</a></li>
@@ -303,11 +304,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#empfehlung-für-pcor-mii" id="markdown-toc-empfehlung-für-pcor-mii">Empfehlung für PCOR-MII</a></li>
     </ul>
   </li>
+  <li><a href="#pilot-datenfluss-50-first-patients" id="markdown-toc-pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</a></li>
   <li><a href="#empfehlung-für-pcor-mii-pilot" id="markdown-toc-empfehlung-für-pcor-mii-pilot">Empfehlung für PCOR-MII Pilot</a></li>
 </ul>
 
 </div>
 <p>Diese Seite beschreibt, was ein FHIR-Server bereitstellen muss, damit <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s aus PCOR-MII <em>interpretierbar</em> und <em>validierbar</em> sind — und welche Optionen es für die initiale Befüllung des Servers gibt.</p>
+
+<h2 id="container-build-stack-im-pcor-mii-repo">Container-Build-Stack (im PCOR-MII Repo)</h2>
+
+<p>Im Verzeichnis <code class="language-plaintext highlighter-rouge">docker/</code> dieses Repos liegt eine Multi-Stage-Dockerfile, die einen kompletten HAPI FHIR Server mit MII PRO und PCOR-MII vorinstalliert baut. Build-Time-Bake → kein Cold-Start, kein Online-Download zur Laufzeit.</p>
+
+<pre><code class="language-mermaid">flowchart LR
+    subgraph Stage1 ["Stage 1: SUSHI"]
+        FSH["input/fsh/&lt;br/&gt;(FSH Sources)"]
+        FSHGEN["fsh-generated/&lt;br/&gt;resources/"]
+        FSH --&gt;|"sushi --snapshot"| FSHGEN
+    end
+
+    subgraph Stage2 ["Stage 2: Package-Builder"]
+        FSHGEN --&gt; PCOR["pcor-mii.tgz&lt;br/&gt;(lokales Package)"]
+        SIMPLIFIER[("Simplifier&lt;br/&gt;Package Registry")] --&gt;|"curl 2026.4.1"| MIIPRO["mii-pro.tgz"]
+    end
+
+    subgraph Stage3 ["Stage 3: HAPI Runtime"]
+        HAPI_BASE["hapiproject/hapi:v8.4.0&lt;br/&gt;(Spring Boot + JPA + H2)"]
+        PCOR --&gt; HAPI["HAPI Container&lt;br/&gt;:8080 → host :8097"]
+        MIIPRO --&gt; HAPI
+        HAPI_BASE --&gt; HAPI
+        APPYAML["application.yaml&lt;br/&gt;(IG-Preload + Tester-Config)"] --&gt; HAPI
+    end
+
+    HAPI --&gt;|"GET /fhir/metadata"| CLIENT["Client / Reviewer"]
+    HAPI --&gt;|"$validate, $expand"| CLIENT
+
+    style FSH fill:#e1f5ff
+    style FSHGEN fill:#e1f5ff
+    style PCOR fill:#fff4e1
+    style MIIPRO fill:#fff4e1
+    style HAPI fill:#ffe1e1
+</code></pre>
+
+<p>Erlaubt: lokale Validierung (siehe <a href="Validierung.html">Validierung</a>), Form-Rendering via <a href="https://lhcforms.nlm.nih.gov/">LHC-Forms</a>, Pilot-Datenaustausch (siehe unten).</p>
 
 <h2 id="das-problem-ein-qr-alleine-reicht-nicht">Das Problem: ein QR alleine reicht nicht</h2>
 
@@ -506,6 +544,62 @@ Content-Type: application/fhir+json
 
 <p><code class="language-plaintext highlighter-rouge">Questionnaire.version</code> (das Business-Feld) sollte in der QR-Referenz <strong>immer mitgeführt</strong> werden: <code class="language-plaintext highlighter-rouge">questionnaire = "https://.../mii-qst-pro-promis-29|2026.4.1"</code>. Damit kann ein zukünftiger Multi-Version-Server die korrekte Auflösung sauber abbilden, auch wenn der heutige Standard-Server die Version ignoriert.</p>
 
+<h2 id="pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</h2>
+
+<p>Im Pilot tauschen mehrere Sites PROMIS-Daten gegen einen zentralen PCOR-MII-Server aus:</p>
+
+<pre><code class="language-mermaid">flowchart TB
+    subgraph Sites ["Partner-Sites"]
+        SiteA["Site A&lt;br/&gt;ePRO-App"]
+        SiteB["Site B&lt;br/&gt;ePRO-App"]
+        SiteC["Site C&lt;br/&gt;ePRO-App"]
+    end
+
+    subgraph Pilot ["PCOR-MII Container (lokaler Pilot)"]
+        HAPI["HAPI FHIR :8097&lt;br/&gt;+ MII PRO 2026.4.1&lt;br/&gt;+ PCOR-MII&lt;br/&gt;+ SDC 3.0.0"]
+        DB[("H2 / Postgres&lt;br/&gt;QR-Storage")]
+        HAPI --- DB
+    end
+
+    subgraph Auswertung ["Score-Auswertung (extern, CQL geplant)"]
+        SCORES["Raw-Scores +&lt;br/&gt;T-Scores +&lt;br/&gt;PROPr Utility"]
+    end
+
+    Patient["Patient/in"] --&gt;|"Selbstauskunft"| SiteA
+    Patient2["Patient/in"] --&gt;|"Selbstauskunft"| SiteB
+    Patient3["Patient/in"] --&gt;|"Selbstauskunft"| SiteC
+
+    SiteA --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
+    SiteB --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
+    SiteC --&gt;|"POST Bundle&lt;br/&gt;(transaction)"| HAPI
+
+    HAPI --&gt;|"validiert vs&lt;br/&gt;PRO-QR-Profil"| HAPI
+    HAPI --&gt;|"GET /Questionnaire&lt;br/&gt;?url=…&amp;version=…"| Forscher["Forscher/in"]
+    HAPI --&gt;|"GET /QR?subject=…"| Auswertung
+
+    style HAPI fill:#ffe1e1
+    style DB fill:#ffe1e1
+    style SiteA fill:#e1f5ff
+    style SiteB fill:#e1f5ff
+    style SiteC fill:#e1f5ff
+    style SCORES fill:#e1ffe1
+</code></pre>
+
+<p><strong>Setup-Aufgaben pro Site</strong>:</p>
+<ol>
+  <li>ePRO-App rendert PROMIS-16 oder PROMIS-29+Cognitive Function (Questionnaire-Definitionen aus PCOR-MII-Container über <code class="language-plaintext highlighter-rouge">GET /Questionnaire?url=…</code>)</li>
+  <li>Patient füllt aus → App erzeugt <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> mit <code class="language-plaintext highlighter-rouge">meta.profile = mii-pr-pro-questionnaire-response|2026.4.1</code></li>
+  <li>App POSTet als Transaction-Bundle an <code class="language-plaintext highlighter-rouge">/fhir</code></li>
+  <li>PCOR-MII-Server validiert + speichert</li>
+</ol>
+
+<p><strong>Setup-Aufgaben zentral</strong>:</p>
+<ul>
+  <li>PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen (lokales LAN / Reverse-Proxy / Cloud — je nach Konsortiums-Datenschutz-Konzept)</li>
+  <li>Auth ergänzen vor produktivem Einsatz (HAPI-Defaults haben keine)</li>
+  <li>Persistente DB statt H2</li>
+</ul>
+
 <h2 id="empfehlung-für-pcor-mii-pilot">Empfehlung für PCOR-MII Pilot</h2>
 
 <p>Für die <a href="Implementation.html">50-First-Patients Pilot-Kohorte</a>:</p>
@@ -567,7 +661,7 @@ Content-Type: application/fhir+json
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 12:08:00 +0000">
+  <span title="2026-06-16 12:20:00 +0000">
     2026-06-16
   </span>
 
