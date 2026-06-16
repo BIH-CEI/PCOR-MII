@@ -1,5 +1,29 @@
 Diese Seite beschreibt, wie `Questionnaire`s und `QuestionnaireResponse`s im PCOR-MII Kontext validiert werden können.
 
+## Primärer Use Case: Mapping-Validierung
+
+Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier-Pencil + Eingabemaske) **oder** direkt in FHIR erfolgen (z.B. via LHC-Forms gegen den PCOR-MII Container). FHIR ist primär die **Ablage- und Austausch-Form** — nicht zwingend das Erfassungs-Frontend.
+
+In beiden Fällen ist der wichtigste Validierungs-Use-Case derselbe: **prüfe das FHIR-Bundle gegen das PRO-QR-Profil, bevor du es sendest**.
+
+```
+REDCap / LimeSurvey / eigene App
+            │
+            ▼
+        Mapper (Skript / ETL)
+            │
+            ▼ erzeugt FHIR-Bundle (QR + Observations)
+            │
+            ▼
+     ┌──────────────────────┐
+     │  $validate           │  ← genau hier kommt PCOR-MII ins Spiel
+     │  gegen PRO-QR-Profil │
+     └──────────────────────┘
+            │ wenn OK
+            ▼
+        Empfänger-Server (FDPG, Konsortiums-Knoten, …)
+```
+
 ## Validierungs-Architektur
 
 Ein `QuestionnaireResponse` ist nicht "alleine" validierbar — der Validator muss eine Auflösungskette durchlaufen, um zu wissen *gegen was* validiert wird:

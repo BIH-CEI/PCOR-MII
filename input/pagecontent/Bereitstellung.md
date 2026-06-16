@@ -223,56 +223,67 @@ Für den Pilot:
 
 ## Pilot-Datenfluss "50 First Patients"
 
-Im Pilot tauschen mehrere Sites PROMIS-Daten gegen einen zentralen PCOR-MII-Server aus:
+Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene ePRO-App, Papier+Eingabemaske) **oder** direkt in FHIR erfolgen (z.B. via LHC-Forms gegen einen PCOR-MII Container). FHIR ist primär die **Ablage- und Austausch-Form** zwischen Erhebung und Empfänger:
 
 ```mermaid
 flowchart TB
-    subgraph Sites ["Partner-Sites"]
-        SiteA["Site A<br/>ePRO-App"]
-        SiteB["Site B<br/>ePRO-App"]
-        SiteC["Site C<br/>ePRO-App"]
+    subgraph Sites ["Partner-Sites — Erhebung im jeweiligen Quell-System"]
+        direction TB
+        SiteA["Site A<br/>REDCap"]
+        SiteB["Site B<br/>LimeSurvey"]
+        SiteC["Site C<br/>eigene ePRO-App"]
     end
 
-    subgraph Pilot ["PCOR-MII Container (lokaler Pilot)"]
+    subgraph Transform ["Transform-Schicht (pro Site)"]
+        direction TB
+        Mapper["Mapper / ETL-Skript<br/>(Quelle → MII PRO Bundle)"]
+    end
+
+    subgraph Validate ["PCOR-MII Container (zentral oder pro Site)"]
+        direction TB
         HAPI["HAPI FHIR :8097<br/>+ MII PRO 2026.4.1<br/>+ PCOR-MII<br/>+ SDC 3.0.0"]
-        DB[("H2 / Postgres<br/>QR-Storage")]
-        HAPI --- DB
+        Validator["POST /\$validate"]
+        Storage[("Optional:<br/>QR-Storage<br/>H2 / Postgres")]
+        Validator --> HAPI
+        HAPI --- Storage
     end
 
-    subgraph Auswertung ["Score-Auswertung (extern, CQL geplant)"]
-        SCORES["Raw-Scores +<br/>T-Scores +<br/>PROPr Utility"]
+    subgraph Receiver ["Empfänger (z.B. FDPG, Konsortial-Knoten)"]
+        direction TB
+        FDPG["MII KDS Empfänger"]
     end
 
-    Patient["Patient/in"] -->|"Selbstauskunft"| SiteA
-    Patient2["Patient/in"] -->|"Selbstauskunft"| SiteB
-    Patient3["Patient/in"] -->|"Selbstauskunft"| SiteC
+    SiteA --> Mapper
+    SiteB --> Mapper
+    SiteC --> Mapper
 
-    SiteA -->|"POST Bundle<br/>(transaction)"| HAPI
-    SiteB -->|"POST Bundle<br/>(transaction)"| HAPI
-    SiteC -->|"POST Bundle<br/>(transaction)"| HAPI
+    Mapper -->|"FHIR-Bundle<br/>(QR + Score-Observations)"| Validator
+    Validator -->|"OperationOutcome:<br/>0 errors? → weiter"| Mapper
+    Mapper -->|"POST Bundle<br/>(validiertes Mapping)"| FDPG
 
-    HAPI -->|"validiert vs<br/>PRO-QR-Profil"| HAPI
-    HAPI -->|"GET /Questionnaire<br/>?url=…&version=…"| Forscher["Forscher/in"]
-    HAPI -->|"GET /QR?subject=…"| Auswertung
-
-    style HAPI fill:#ffe1e1
-    style DB fill:#ffe1e1
     style SiteA fill:#e1f5ff
     style SiteB fill:#e1f5ff
     style SiteC fill:#e1f5ff
-    style SCORES fill:#e1ffe1
+    style Mapper fill:#fff4e1
+    style HAPI fill:#ffe1e1
+    style Validator fill:#ffe1e1
+    style FDPG fill:#e1ffe1
 ```
 
 **Setup-Aufgaben pro Site**:
-1. ePRO-App rendert PROMIS-16 oder PROMIS-29+Cognitive Function (Questionnaire-Definitionen aus PCOR-MII-Container über `GET /Questionnaire?url=…`)
-2. Patient füllt aus → App erzeugt `QuestionnaireResponse` mit `meta.profile = mii-pr-pro-questionnaire-response|2026.4.1`
-3. App POSTet als Transaction-Bundle an `/fhir`
-4. PCOR-MII-Server validiert + speichert
+1. Datenexport aus dem Erhebungs-System (REDCap CSV-Export, LimeSurvey API, App-Backend, …)
+2. Mapper schreiben (Skript/ETL), das die Daten in ein MII-PRO-konformes FHIR-Bundle umwandelt:
+   - `QuestionnaireResponse` mit `meta.profile = mii-pr-pro-questionnaire-response|2026.4.1`
+   - referenziert den Questionnaire via `canonical|version`
+   - codierte Antworten gemäß den im Questionnaire definierten `answerValueSet`s
+3. Validierung gegen PCOR-MII Container (lokal oder zentral): `POST /\$validate`
+4. Wenn 0 errors: POST des Bundles an den Empfänger-Server
 
 **Setup-Aufgaben zentral**:
-- PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen (lokales LAN / Reverse-Proxy / Cloud — je nach Konsortiums-Datenschutz-Konzept)
-- Auth ergänzen vor produktivem Einsatz (HAPI-Defaults haben keine)
-- Persistente DB statt H2
+- PCOR-MII-Container in einer für Sites erreichbaren Umgebung deployen — oder jede Site läuft ihn lokal (Container ist klein und stateless für reine Validierung)
+- Empfänger-Server (FDPG, Konsortial-Knoten) ist eine **separate** FHIR-Instanz mit ggf. anderen Auth- und Persistenz-Anforderungen
+
+**Form-Rendering direkt aus FHIR** ist als Pfad gleichwertig: dieselben Validierungs-Garantien greifen (das Bundle ist das gleiche). Wenn deine Site mit LHC-Forms o.ä. arbeitet, fällt der Mapper-Schritt weg und das Bundle entsteht direkt im FHIR-Server. Beide Wege treffen sich bei `$validate`.
 
 ## Empfehlung für PCOR-MII Pilot
 
