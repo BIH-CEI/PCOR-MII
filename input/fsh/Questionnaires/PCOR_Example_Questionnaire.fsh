@@ -1,21 +1,31 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Beispiel-Questionnaire für PCOR-MII.
-// Demonstriert mehrere Item-Typen (group, choice mit answerOption, string, date).
-// Self-contained — ohne externe Package-Abhängigkeit, damit der Build grün bleibt.
+//
+// Demonstriert die Konventionen:
+//   - Konformanz zum PRO-Q-Profil aus dem MII PRO-Modul 2026.4.1 via meta.profile
+//   - Sprache: deutsch (language = de-DE)
+//   - Codierte Antworten via answerValueSet (KEIN valueString!)
+//   - Item-Typen: group, choice, date, string
+//
 // Als Vorlage gedacht: kopieren, umbenennen und mit eigenen Inhalten füllen.
 // ─────────────────────────────────────────────────────────────────────────────
 Instance: PcorExampleQuestionnaire
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "PCOR Beispiel-Fragebogen"
-Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires."
+Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.4.1."
+
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"
+* language = #de-DE
+
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire"
+* version = "0.1.0"
 * name = "PcorExampleQuestionnaire"
 * title = "PCOR Beispiel-Fragebogen"
 * status = #draft
 * experimental = true
 * subjectType = #Patient
-* date = "2026-06-04"
+* date = "2026-06-16"
 * publisher = "BIH-CEI"
 * description = "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben."
 
@@ -49,11 +59,7 @@ Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter 
     * text = "Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?"
     * type = #choice
     * required = true
-    * answerOption[+].valueString = "Ausgezeichnet"
-    * answerOption[+].valueString = "Sehr gut"
-    * answerOption[+].valueString = "Gut"
-    * answerOption[+].valueString = "Weniger gut"
-    * answerOption[+].valueString = "Schlecht"
+    * answerValueSet = "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health"
   * item[+]
     * linkId = "pro.comment"
     * text = "Weitere Anmerkungen"

@@ -28,7 +28,11 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-29-response`**](QuestionnaireResponse-pcor-mii-exa-promis-29-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 7 Domänen + Schmerzintensität, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/guide/mii-pro-v2026-de) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+Das MII PRO-Modul liefert ein vollständiges, professionell kuratiertes QR-Beispiel direkt mit:
+
+- [**`mii-exa-pro-promis-29-response`**](https://simplifier.net/guide/mii-pro-v2026-de) (Upstream, Simplifier) — vollständige Antwort über alle 7 Domänen + Schmerzintensität, konform zum `MII PR PRO QuestionnaireResponse`-Profil (validiert: 0 Errors).
+
+Diese Referenz wird hier bewusst **nicht dupliziert** — Pflege erfolgt zentral im MII PRO-Modul.
 
 ### Item-Tabelle
 
