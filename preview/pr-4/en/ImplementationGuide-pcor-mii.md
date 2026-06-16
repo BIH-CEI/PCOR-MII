@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-06-16T11:11:33+00:00",
+  "date" : "2026-06-16T11:48:44+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1221,6 +1221,24 @@
         }],
         "nameUrl" : "Implementation.html",
         "title" : "Anwendung",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Validierung.html"
+        }],
+        "nameUrl" : "Validierung.html",
+        "title" : "Validierung",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Bereitstellung.html"
+        }],
+        "nameUrl" : "Bereitstellung.html",
+        "title" : "Bereitstellung",
         "generation" : "markdown"
       },
       {

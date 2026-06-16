@@ -1,9 +1,9 @@
 PCOR_MII : Validation Results
 =========================================
 
-err = 8, warn = 37, info = 54
+err = 8, warn = 36, info = 54
 IG Publisher Version: 2.2.9
-Generated Tue Jun 16 11:12:56 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (canonical = https://bih-cei.github.io/PCOR-MII)
+Generated Tue Jun 16 11:50:05 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (canonical = https://bih-cei.github.io/PCOR-MII)
  Build Errors : 2 / 7 / 0
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-antwort : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-beziehungsstatus : 0 / 0 / 2
@@ -34,7 +34,7 @@ Generated Tue Jun 16 11:12:56 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (c
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-urbanizitaet-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-zigaretten-band-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-pcor-example-general-health : 0 / 0 / 2
- /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-example-response : 1 / 1 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-example-response : 1 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response : 1 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response : 1 / 0 / 2
 </table>
@@ -165,7 +165,6 @@ INFORMATION: ValueSet/dem-zigaretten-band-vs: ValueSet.expansion: This expansion
 INFORMATION: ValueSet/pcor-example-general-health: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == input/examples/QuestionnaireResponse-pcor-mii-exa-example-response.json ==
 ERROR: QuestionnaireResponse/pcor-mii-exa-example-response: QuestionnaireResponse.subject: Ressource 'Patient/pcor-mii-exa-patient' nicht auffindbar
-WARNING: QuestionnaireResponse/pcor-mii-exa-example-response: QuestionnaireResponse: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response.json ==
 ERROR: QuestionnaireResponse/pcor-mii-exa-promis-16-response: QuestionnaireResponse.subject: Ressource 'Patient/pcor-mii-exa-patient' nicht auffindbar
 == input/examples/QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.json ==

@@ -8,6 +8,8 @@
 
 -------
 
+Language: de-DE
+
 Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.4.1&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response) version: 2026.4.1
 
 * [LinkID](https://hl7.org/fhir/R4/formats.html#table): pcor-mii-exa-promis-cognitive-function-response
@@ -47,6 +49,7 @@ Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"]
   },
+  "language" : "de-DE",
   "questionnaire" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a",
   "status" : "completed",
   "subject" : {

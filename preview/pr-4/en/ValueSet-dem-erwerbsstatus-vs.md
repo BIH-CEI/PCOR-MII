@@ -33,7 +33,7 @@ Aktuelle Arbeitssituation (Q_OECDLIT5a).
   "title" : "DEM Erwerbsstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T11:11:33+00:00",
+  "date" : "2026-06-16T11:48:44+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
