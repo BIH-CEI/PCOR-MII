@@ -119,9 +119,56 @@ def find_questionnaire(resource_id, version):
     return None
 
 
+# Cache for resolved ValueSets to avoid repeated disk reads
+_VS_CACHE = {}
+
+
+def resolve_valueset_concepts(canonical_url, version):
+    """
+    Resolve a ValueSet canonical URL to a list of concepts (code, en-display, de-designation).
+
+    Looks up the ValueSet JSON in the FHIR package cache and walks compose.include[].concept[].
+    Returns a list of tuples (code, en_display, de_designation) or empty list if not found.
+    """
+    if canonical_url in _VS_CACHE:
+        return _VS_CACHE[canonical_url]
+
+    # Extract the ID portion of the canonical URL (after the last /ValueSet/ segment)
+    m = re.search(r"/ValueSet/([^|]+)", canonical_url)
+    if not m:
+        _VS_CACHE[canonical_url] = []
+        return []
+    vs_id = m.group(1)
+
+    cache = Path.home() / ".fhir" / "packages"
+    candidate = cache / f"{DEPENDENCY_PACKAGE}#{version}" / "package" / f"ValueSet-{vs_id}.json"
+    if not candidate.exists():
+        _VS_CACHE[canonical_url] = []
+        return []
+
+    try:
+        vs = json.loads(candidate.read_text(encoding="utf-8"))
+    except Exception:
+        _VS_CACHE[canonical_url] = []
+        return []
+
+    concepts = []
+    for include in vs.get("compose", {}).get("include", []):
+        for c in include.get("concept", []):
+            code = c.get("code", "")
+            en = c.get("display", "")
+            de = next(
+                (d.get("value") for d in c.get("designation", []) if d.get("language") == "de"),
+                None,
+            )
+            concepts.append((code, en, de))
+    _VS_CACHE[canonical_url] = concepts
+    return concepts
+
+
 # ─── Render a single Questionnaire ───────────────────────────────────────────
 
-def render_questionnaire(q):
+def render_questionnaire(q, version):
     """Produce the markdown section (between markers) for a Questionnaire."""
     lines = []
     lines.append(f"_Auto-generiert aus `{q.get('id')}` v{q.get('version')} ({DEPENDENCY_PACKAGE})._")
@@ -133,7 +180,7 @@ def render_questionnaire(q):
     )
 
     def format_options(opts):
-        """Render answer options as a single cell content with one option per line."""
+        """Render inline answerOption[] as a single cell content with one option per line."""
         if not opts:
             return ""
         rendered = []
@@ -151,6 +198,21 @@ def render_questionnaire(q):
             en_suffix = f" / {opt_en}" if (opt_de and opt_en) else ""
             rendered.append(
                 f"**{ord_val}**&nbsp;·&nbsp;{label}{en_suffix}&nbsp;(`{code}`)"
+            )
+        return "<br>".join(rendered)
+
+    def format_valueset(canonical_url, version):
+        """Resolve answerValueSet to its concepts and render same format as format_options."""
+        concepts = resolve_valueset_concepts(canonical_url, version)
+        if not concepts:
+            # Show the URL so reviewer knows the reference exists but couldn't be resolved
+            return f"_VS: `{canonical_url}` — Concepts nicht aus Package extrahierbar_"
+        rendered = []
+        for idx, (code, en, de) in enumerate(concepts, start=1):
+            label = de or en or ""
+            en_suffix = f" / {en}" if (de and en) else ""
+            rendered.append(
+                f"**{idx}**&nbsp;·&nbsp;{label}{en_suffix}&nbsp;(`{code}`)"
             )
         return "<br>".join(rendered)
 
@@ -203,7 +265,13 @@ def render_questionnaire(q):
                 # LOINC code.display als kanonischen englischen Namen.
                 if not en and loinc_display:
                     en = loinc_display
-                opts_cell = format_options(it.get("answerOption", []))
+                # Items can use either inline answerOption OR answerValueSet (canonical URL)
+                if it.get("answerOption"):
+                    opts_cell = format_options(it.get("answerOption", []))
+                elif it.get("answerValueSet"):
+                    opts_cell = format_valueset(it["answerValueSet"], version)
+                else:
+                    opts_cell = ""
                 row_buffer.append(
                     f"| `{lid}` | {code} | {md_cell(en)} | {md_cell(de)} | {opts_cell} |"
                 )
@@ -250,7 +318,7 @@ def main():
             continue
         print(f"  rendering {resource_id} → {page_name}")
         q = json.loads(q_path.read_text(encoding="utf-8"))
-        generated = render_questionnaire(q)
+        generated = render_questionnaire(q, version)
         update_page(target, generated)
 
 
