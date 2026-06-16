@@ -296,6 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#option-a-package-operation-fhir-native-empfohlen" id="markdown-toc-option-a-package-operation-fhir-native-empfohlen">Option A: $package-Operation (FHIR-Native, empfohlen)</a></li>
       <li><a href="#option-b-pre-built-hapi-image-mit-gemounteten-inhalten" id="markdown-toc-option-b-pre-built-hapi-image-mit-gemounteten-inhalten">Option B: Pre-built HAPI Image mit gemounteten Inhalten</a></li>
       <li><a href="#option-c-transaction-bundle-mit-allen-relevanten-resources" id="markdown-toc-option-c-transaction-bundle-mit-allen-relevanten-resources">Option C: Transaction-Bundle mit allen relevanten Resources</a></li>
+      <li><a href="#package-operation-bundle-automatisch-generieren-lassen" id="markdown-toc-package-operation-bundle-automatisch-generieren-lassen"><code class="language-plaintext highlighter-rouge">$package</code>-Operation: Bundle automatisch generieren lassen</a></li>
     </ul>
   </li>
   <li><a href="#put-post-und-das-problem-der-versions-koexistenz" id="markdown-toc-put-post-und-das-problem-der-versions-koexistenz">PUT, POST, und das Problem der Versions-Koexistenz</a>    <ul>
@@ -439,6 +440,41 @@ Content-Type: application/fhir+json
 <p>Pro: funktioniert mit <em>jedem</em> FHIR-Server. Volle Kontrolle über jede einzelne Ressource.</p>
 
 <p>Con: muss manuell zusammengestellt werden, keine automatische Versionsauflösung.</p>
+
+<h3 id="package-operation-bundle-automatisch-generieren-lassen"><code class="language-plaintext highlighter-rouge">$package</code>-Operation: Bundle automatisch generieren lassen</h3>
+
+<p>Wenn der <strong>Producer-Server</strong> die <a href="https://hl7.org/fhir/uv/crmi/">FHIR Crmi (Canonical Resource Management Infrastructure)</a> <code class="language-plaintext highlighter-rouge">$package</code>-Operation unterstützt, kann der Konsument das Bundle aus Option C <strong>automatisch erzeugen lassen</strong>:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [producer-base]/Questionnaire/mii-qst-pro-promis-16/$package
+</span></code></pre></div></div>
+
+<p>Antwort ist ein <code class="language-plaintext highlighter-rouge">Bundle</code> (transaction-fertig), das den Questionnaire <strong>plus alle transitiv referenzierten ValueSets, CodeSystems und Profile</strong> enthält — exakt der Set, den der Konsument braucht, um QRs gegen diesen Questionnaire interpretieren und validieren zu können.</p>
+
+<p>Konkret für PCOR-MII:</p>
+<ul>
+  <li>Producer = der PCOR-MII Container (<a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/</a>) — HAPI ab v6.x unterstützt <code class="language-plaintext highlighter-rouge">$package</code> via Clinical Reasoning Modul</li>
+  <li>Konsument lädt das Bundle und PUTet es auf seinen eigenen Server</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Producer → Bundle generieren lassen</span>
+curl http://pcor-mii-producer:8097/fhir/Questionnaire/mii-qst-pro-promis-16/<span class="se">\$</span>package <span class="o">&gt;</span> promis-16-bundle.json
+
+<span class="c"># Konsument → Bundle einspielen</span>
+curl <span class="nt">-X</span> POST http://localhost:8080/fhir <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> @promis-16-bundle.json
+</code></pre></div></div>
+
+<p>Pro: kein manuelles Bundle-Bauen, automatische Dependency-Auflösung, Versions-Pinning inkludiert (jede Canonical mit ihrer aktuellen <code class="language-plaintext highlighter-rouge">version</code>).</p>
+
+<p>Con: <code class="language-plaintext highlighter-rouge">$package</code>-Implementierung ist noch nicht universell — HAPI-CR-Variante (Clinical Reasoning) muss aktiv sein, Firely-Server unterstützt es, viele andere Server nicht. Im PCOR-MII Container nicht out-of-the-box aktiviert (HAPI-Default), kann via Plugin nachgezogen werden.</p>
+
+<p><strong>Wichtig</strong>: <code class="language-plaintext highlighter-rouge">$package</code> liefert ValueSets in ihrer <strong><code class="language-plaintext highlighter-rouge">compose</code>-Form</strong> (Definition, nicht Expansion). Wenn der Konsument die ausexpandierte Konzept-Liste benötigt (z.B. für Form-Rendering, ohne TerminologyServer-Roundtrip), muss er pro ValueSet separat <code class="language-plaintext highlighter-rouge">$expand</code> aufrufen:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/ValueSet/mii-vs-pro-promis-frequency-response-scale/$expand
+</span></code></pre></div></div>
+
+<p>Für die PROMIS-VS sind die Konzepte aber bereits inline in <code class="language-plaintext highlighter-rouge">compose.include[].concept[]</code> definiert (mit deutschen <code class="language-plaintext highlighter-rouge">designation</code>-Einträgen), so dass die Expansion trivial ist und keinen externen TerminologyServer braucht. Bei einigen Crmi-Implementierungen lässt sich <code class="language-plaintext highlighter-rouge">$package</code> mit <code class="language-plaintext highlighter-rouge">?includeExpansion=true</code> aufrufen, um beides in einem Schritt zu bekommen — nicht universell standardisiert.</p>
 
 <h2 id="put-post-und-das-problem-der-versions-koexistenz">PUT, POST, und das Problem der Versions-Koexistenz</h2>
 
@@ -663,7 +699,7 @@ Content-Type: application/fhir+json
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-16 12:20:00 +0000">
+  <span title="2026-06-16 12:25:00 +0000">
     2026-06-16
   </span>
 

@@ -135,6 +135,46 @@ Pro: funktioniert mit **jedem** FHIR-Server. Volle Kontrolle über jede einzelne
 
 Con: muss manuell zusammengestellt werden, keine automatische Versionsauflösung.
 
+### $package-Operation: Bundle automatisch generieren lassen
+
+Wenn der **Producer-Server** die [FHIR Crmi (Canonical Resource Management Infrastructure)](https://hl7.org/fhir/uv/crmi/) `$package`-Operation unterstützt, kann der Konsument das Bundle aus Option C **automatisch erzeugen lassen**:
+
+```
+GET [producer-base]/Questionnaire/mii-qst-pro-promis-16/$package
+
+```
+
+Antwort ist ein `Bundle` (transaction-fertig), das den Questionnaire **plus alle transitiv referenzierten ValueSets, CodeSystems und Profile** enthält — exakt der Set, den der Konsument braucht, um QRs gegen diesen Questionnaire interpretieren und validieren zu können.
+
+Konkret für PCOR-MII:
+
+* Producer = der PCOR-MII Container ([docker/](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker)) — HAPI ab v6.x unterstützt `$package` via Clinical Reasoning Modul
+* Konsument lädt das Bundle und PUTet es auf seinen eigenen Server
+
+```
+# Producer → Bundle generieren lassen
+curl http://pcor-mii-producer:8097/fhir/Questionnaire/mii-qst-pro-promis-16/\$package > promis-16-bundle.json
+
+# Konsument → Bundle einspielen
+curl -X POST http://localhost:8080/fhir \
+  -H "Content-Type: application/fhir+json" \
+  -d @promis-16-bundle.json
+
+```
+
+Pro: kein manuelles Bundle-Bauen, automatische Dependency-Auflösung, Versions-Pinning inkludiert (jede Canonical mit ihrer aktuellen `version`).
+
+Con: `$package`-Implementierung ist noch nicht universell — HAPI-CR-Variante (Clinical Reasoning) muss aktiv sein, Firely-Server unterstützt es, viele andere Server nicht. Im PCOR-MII Container nicht out-of-the-box aktiviert (HAPI-Default), kann via Plugin nachgezogen werden.
+
+**Wichtig**: `$package` liefert ValueSets in ihrer **`compose`-Form** (Definition, nicht Expansion). Wenn der Konsument die ausexpandierte Konzept-Liste benötigt (z.B. für Form-Rendering, ohne TerminologyServer-Roundtrip), muss er pro ValueSet separat `$expand` aufrufen:
+
+```
+GET [base]/ValueSet/mii-vs-pro-promis-frequency-response-scale/$expand
+
+```
+
+Für die PROMIS-VS sind die Konzepte aber bereits inline in `compose.include[].concept[]` definiert (mit deutschen `designation`-Einträgen), so dass die Expansion trivial ist und keinen externen TerminologyServer braucht. Bei einigen Crmi-Implementierungen lässt sich `$package` mit `?includeExpansion=true` aufrufen, um beides in einem Schritt zu bekommen — nicht universell standardisiert.
+
 ## PUT, POST, und das Problem der Versions-Koexistenz
 
 Auf Standard-FHIR-Servern entsteht ein praktisches Problem, sobald mehrere Versionen desselben Fragebogens im Spiel sind:
