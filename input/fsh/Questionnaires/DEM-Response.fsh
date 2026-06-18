@@ -2,8 +2,7 @@
 // DEM — Beispiel-QuestionnaireResponse (+ minimaler Patient als subject)
 // Ausgefülltes Beispiel zum DEM-Questionnaire (siehe DEM.fsh). Wird auf der
 // Seite Demographie.md zusätzlich zur leeren Form gerendert.
-// Hinweis: nur Items mit erfüllter enableWhen-Bedingung sind beantwortet
-//   (MEDHIMS6.land / MEDHIMS7.staat / GIPS57b bleiben hier ausgeblendet).
+// Hinweis: nur Items mit erfüllter enableWhen-Bedingung sind beantwortet.
 // DEM ist kein PRO -> kein MII-PRO-Profil auf der QR.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -21,26 +20,19 @@ Instance: DEMResponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "DEM — Beispielantwort"
-Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizinische Vorgeschichte)."
+Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
 * language = #de-DE
 * questionnaire = Canonical(DEM)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-16T10:00:00+02:00"
 
-// ── Körpermaße ────────────────────────────────────────────────────────────────
-* item[+]
-  * linkId = "anthropometrie"
-  * item[+]
-    * linkId = "Q_WB151"
-    * answer.valueDecimal = 72
-  * item[+]
-    * linkId = "Q_WB152"
-    * answer.valueDecimal = 178
-
 // ── Soziodemographie ──────────────────────────────────────────────────────────
 * item[+]
   * linkId = "soziodemographie"
+  * item[+]
+    * linkId = "AGE"
+    * answer.valueDate = "1985-03-12"
   * item[+]
     * linkId = "Q_ISCED"
     * answer.valueCoding = DemIscedCS#master "Master oder äquivalent (inkl. Diplom, staatl./kirchl. Prüfung)"
@@ -99,7 +91,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizi
 
 // ── Weitere Angaben ───────────────────────────────────────────────────────────
 * item[+]
-  * linkId = "medhist"
+  * linkId = "weitere"
   * item[+]
     * linkId = "GIPS04"
     * answer.valueCoding = DemBeziehungsstatusCS#feste "Feste Partnerschaft"
@@ -107,23 +99,5 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizi
     * linkId = "GIPS10"
     * answer.valueCoding = DemRentenstatusCS#keine "Keine Rente"
   * item[+]
-    * linkId = "GIPS57a"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
-  * item[+]
-    * linkId = "GIPS56a"
+    * linkId = "CPCOR_REQ"
     * answer.valueCoding = DemAntwortCS#ja "Ja"
-  * item[+]
-    * linkId = "GIPS56b1"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
-  * item[+]
-    * linkId = "GIPS56b2"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
-  * item[+]
-    * linkId = "GIPS56b3"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
-  * item[+]
-    * linkId = "GIPS56b4"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
-  * item[+]
-    * linkId = "GIPS58"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
