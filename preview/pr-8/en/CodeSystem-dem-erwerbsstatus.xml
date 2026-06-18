@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dem-erwerbsstatus"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-erwerbsstatus</b></p><a name="en-dem-erwerbsstatus"> </a><a name="en-hcdem-erwerbsstatus"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">selbststaendig<a name="en-dem-erwerbsstatus-selbststaendig"> </a></td><td>Selbstständigerwerbend</td></tr><tr><td style="white-space:nowrap">angestellt<a name="en-dem-erwerbsstatus-angestellt"> </a></td><td>Angestellt</td></tr><tr><td style="white-space:nowrap">arbeitssuchend<a name="en-dem-erwerbsstatus-arbeitssuchend"> </a></td><td>Arbeitssuchend</td></tr><tr><td style="white-space:nowrap">haushalt<a name="en-dem-erwerbsstatus-haushalt"> </a></td><td>Hausfrau/Hausmann</td></tr><tr><td style="white-space:nowrap">arbeitsunfaehig<a name="en-dem-erwerbsstatus-arbeitsunfaehig"> </a></td><td>Krankheitsbedingte Arbeitsunfähigkeit</td></tr><tr><td style="white-space:nowrap">pensioniert<a name="en-dem-erwerbsstatus-pensioniert"> </a></td><td>Pensioniert</td></tr><tr><td style="white-space:nowrap">student<a name="en-dem-erwerbsstatus-student"> </a></td><td>Student/in</td></tr><tr><td style="white-space:nowrap">nicht-arbeitend<a name="en-dem-erwerbsstatus-nicht-arbeitend"> </a></td><td>Nicht arbeitend und nicht arbeitssuchend</td></tr><tr><td style="white-space:nowrap">lernende<a name="en-dem-erwerbsstatus-lernende"> </a></td><td>Lernende/r</td></tr><tr><td style="white-space:nowrap">anderes<a name="en-dem-erwerbsstatus-anderes"> </a></td><td>Anderes</td></tr><tr><td style="white-space:nowrap">weiss-nicht<a name="en-dem-erwerbsstatus-weiss-nicht"> </a></td><td>Ich weiss es nicht</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"/>
+  <version value="0.1.0"/>
+  <name value="DemErwerbsstatusCS"/>
+  <title value="DEM Erwerbsstatus (OECD)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-18T08:19:43+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Aktuelle Arbeitssituation nach OECD Measuring Financial Literacy (Q_OECDLIT5a)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="11"/>
+  <concept>
+    <code value="selbststaendig"/>
+    <display value="Selbstständigerwerbend"/>
+  </concept>
+  <concept>
+    <code value="angestellt"/>
+    <display value="Angestellt"/>
+  </concept>
+  <concept>
+    <code value="arbeitssuchend"/>
+    <display value="Arbeitssuchend"/>
+  </concept>
+  <concept>
+    <code value="haushalt"/>
+    <display value="Hausfrau/Hausmann"/>
+  </concept>
+  <concept>
+    <code value="arbeitsunfaehig"/>
+    <display value="Krankheitsbedingte Arbeitsunfähigkeit"/>
+  </concept>
+  <concept>
+    <code value="pensioniert"/>
+    <display value="Pensioniert"/>
+  </concept>
+  <concept>
+    <code value="student"/>
+    <display value="Student/in"/>
+  </concept>
+  <concept>
+    <code value="nicht-arbeitend"/>
+    <display value="Nicht arbeitend und nicht arbeitssuchend"/>
+  </concept>
+  <concept>
+    <code value="lernende"/>
+    <display value="Lernende/r"/>
+  </concept>
+  <concept>
+    <code value="anderes"/>
+    <display value="Anderes"/>
+  </concept>
+  <concept>
+    <code value="weiss-nicht"/>
+    <display value="Ich weiss es nicht"/>
+  </concept>
+</CodeSystem>

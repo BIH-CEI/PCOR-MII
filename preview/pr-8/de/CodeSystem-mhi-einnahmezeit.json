@@ -1,0 +1,55 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mhi-einnahmezeit",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mhi-einnahmezeit</b></p><a name=\"mhi-einnahmezeit\"> </a><a name=\"hcmhi-einnahmezeit\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mhi-einnahmezeit-0\"> </a></td><td>morgens</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mhi-einnahmezeit-1\"> </a></td><td>mittags</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mhi-einnahmezeit-2\"> </a></td><td>abends</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mhi-einnahmezeit-3\"> </a></td><td>nachts</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mhi-einnahmezeit-4\"> </a></td><td>bei Bedarf</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
+  "version" : "0.1.0",
+  "name" : "MhiEinnahmezeitCS",
+  "title" : "MHI Einnahmezeitpunkt Medikament (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-18T08:19:43+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Tageszeit der Medikamenteneinnahme (medi_02_time).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "0",
+    "display" : "morgens"
+  },
+  {
+    "code" : "1",
+    "display" : "mittags"
+  },
+  {
+    "code" : "2",
+    "display" : "abends"
+  },
+  {
+    "code" : "3",
+    "display" : "nachts"
+  },
+  {
+    "code" : "4",
+    "display" : "bei Bedarf"
+  }]
+}

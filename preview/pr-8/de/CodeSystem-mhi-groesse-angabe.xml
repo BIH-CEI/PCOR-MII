@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mhi-groesse-angabe"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mhi-groesse-angabe</b></p><a name="mhi-groesse-angabe"> </a><a name="hcmhi-groesse-angabe"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">cm<a name="mhi-groesse-angabe-cm"> </a></td><td>cm</td></tr><tr><td style="white-space:nowrap">weiss-nicht<a name="mhi-groesse-angabe-weiss-nicht"> </a></td><td>Ich weiß es nicht</td></tr><tr><td style="white-space:nowrap">keine-angabe<a name="mhi-groesse-angabe-keine-angabe"> </a></td><td>Ich möchte es nicht sagen</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+  <version value="0.1.0"/>
+  <name value="MhiGroesseAngabeCS"/>
+  <title value="MHI Größenangabe (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-18T08:19:43+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Einheit/Angabe-Status für Körpergröße (Q_WB152)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="cm"/>
+    <display value="cm"/>
+  </concept>
+  <concept>
+    <code value="weiss-nicht"/>
+    <display value="Ich weiß es nicht"/>
+  </concept>
+  <concept>
+    <code value="keine-angabe"/>
+    <display value="Ich möchte es nicht sagen"/>
+  </concept>
+</CodeSystem>

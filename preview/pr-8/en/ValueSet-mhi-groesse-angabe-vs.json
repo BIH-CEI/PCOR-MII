@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mhi-groesse-angabe-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mhi-groesse-angabe-vs</b></p><a name=\"en-mhi-groesse-angabe-vs\"> </a><a name=\"en-hcmhi-groesse-angabe-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-mhi-groesse-angabe.html\">codesystem MHI Größenangabe (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 3 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"en-mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-cm\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-cm\">cm</a></td><td>cm</td></tr><tr><td><a name=\"en-mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-weiss-nicht\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-weiss-nicht\">weiss-nicht</a></td><td>Ich weiß es nicht</td></tr><tr><td><a name=\"en-mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-keine-angabe\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-keine-angabe\">keine-angabe</a></td><td>Ich möchte es nicht sagen</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-groesse-angabe-vs",
+  "version" : "0.1.0",
+  "name" : "MhiGroesseAngabeVS",
+  "title" : "MHI Größenangabe",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-18T08:19:43+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Einheit/Angabe-Status für Körpergröße (Q_WB152).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-17T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
+      "code" : "cm",
+      "display" : "cm"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
+      "code" : "weiss-nicht",
+      "display" : "Ich weiß es nicht"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
+      "code" : "keine-angabe",
+      "display" : "Ich möchte es nicht sagen"
+    }]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mhi-gewicht-angabe",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mhi-gewicht-angabe</b></p><a name=\"mhi-gewicht-angabe\"> </a><a name=\"hcmhi-gewicht-angabe\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">kg<a name=\"mhi-gewicht-angabe-kg\"> </a></td><td>kg</td></tr><tr><td style=\"white-space:nowrap\">weiss-nicht<a name=\"mhi-gewicht-angabe-weiss-nicht\"> </a></td><td>Ich weiß es nicht</td></tr><tr><td style=\"white-space:nowrap\">keine-angabe<a name=\"mhi-gewicht-angabe-keine-angabe\"> </a></td><td>Ich möchte es nicht sagen</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+  "version" : "0.1.0",
+  "name" : "MhiGewichtAngabeCS",
+  "title" : "MHI Gewichtsangabe (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-18T08:19:43+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Einheit/Angabe-Status für Gewicht (Q_WB151).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "kg",
+    "display" : "kg"
+  },
+  {
+    "code" : "weiss-nicht",
+    "display" : "Ich weiß es nicht"
+  },
+  {
+    "code" : "keine-angabe",
+    "display" : "Ich möchte es nicht sagen"
+  }]
+}
