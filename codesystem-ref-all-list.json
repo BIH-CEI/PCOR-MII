@@ -9,8 +9,8 @@
     "uses" : {
     },
     "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
-    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe"
+    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
+    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
@@ -121,6 +121,83 @@
     "uses" : {
     },
     "ValueSet-dem-zigaretten-band-vs.html" : "DEM Zigaretten pro Tag"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiAnSubtypCS",
+    "title" : "MHI Anorexia-nervosa-Subtyp (Codes)",
+    "description" : "Subtyp der Anorexia nervosa (AN_subtyp).",
+    "uses" : {
+    },
+    "ValueSet-mhi-an-subtyp-vs.html" : "MHI Anorexia-nervosa-Subtyp"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiChronischCS",
+    "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
+    "description" : "Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).",
+    "uses" : {
+    },
+    "ValueSet-mhi-chronisch-vs.html" : "MHI Chronische Erkrankungen (GIPS13)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiCpcorDiagCS",
+    "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
+    "description" : "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).",
+    "uses" : {
+    },
+    "ValueSet-mhi-cpcor-diag-vs.html" : "MHI Diagnosegruppe (CPCOR)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiEinnahmezeitCS",
+    "title" : "MHI Einnahmezeitpunkt Medikament (Codes)",
+    "description" : "Tageszeit der Medikamenteneinnahme (medi_02_time).",
+    "uses" : {
+    },
+    "ValueSet-mhi-einnahmezeit-vs.html" : "MHI Einnahmezeitpunkt Medikament"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiGewichtAngabeCS",
+    "title" : "MHI Gewichtsangabe (Codes)",
+    "description" : "Einheit/Angabe-Status für Gewicht (Q_WB151).",
+    "uses" : {
+    },
+    "ValueSet-mhi-gewicht-angabe-vs.html" : "MHI Gewichtsangabe"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiGewichtsmethodeCS",
+    "title" : "MHI Gewichtsmessung Methode (Codes)",
+    "description" : "Wie wurde das Gewicht ermittelt? (weight_outpatient_2).",
+    "uses" : {
+    },
+    "ValueSet-mhi-gewichtsmethode-vs.html" : "MHI Gewichtsmessung Methode"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MhiGroesseAngabeCS",
+    "title" : "MHI Größenangabe (Codes)",
+    "description" : "Einheit/Angabe-Status für Körpergröße (Q_WB152).",
+    "uses" : {
+    },
+    "ValueSet-mhi-groesse-angabe-vs.html" : "MHI Größenangabe"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",

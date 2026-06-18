@@ -1,9 +1,9 @@
 PCOR_MII : Validation Results
 =========================================
 
-err = 5, warn = 38, info = 77
-IG Publisher Version: 2.2.9 Out of date - current version is null
-Generated Tue Jun 16 13:25:26 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (canonical = https://bih-cei.github.io/PCOR-MII)
+err = 5, warn = 46, info = 94
+IG Publisher Version: 2.2.9
+Generated Thu Jun 18 09:14:53 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (canonical = https://bih-cei.github.io/PCOR-MII)
  Build Errors : 2 / 7 / 0
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-antwort : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-beziehungsstatus : 0 / 0 / 2
@@ -16,12 +16,21 @@ Generated Tue Jun 16 13:25:26 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (c
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-rentenstatus : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-urbanizitaet : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-zigaretten-band : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-an-subtyp : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-chronisch : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-cpcor-diag : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-einnahmezeit : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-gewicht-angabe : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-gewichtsmethode : 0 / 0 / 2
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-mhi-groesse-angabe : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-pcor-example-general-health : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ImplementationGuide-pcor-mii : 0 / 3 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Patient-pcor-mii-exa-patient : 0 / 1 / 1
- /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-DEM : 0 / 12 / 14
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-DEM : 0 / 9 / 11
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-MHI : 0 / 3 / 5
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Questionnaire-PcorExampleQuestionnaire : 3 / 1 / 3
- /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/QuestionnaireResponse-DEMResponse : 0 / 1 / 24
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/QuestionnaireResponse-DEMResponse : 0 / 1 / 18
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/QuestionnaireResponse-MHIResponse : 0 / 1 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-einkommen-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-erwerbsstatus-vs : 0 / 1 / 3
@@ -35,6 +44,13 @@ Generated Tue Jun 16 13:25:26 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.1.0 (c
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-rentenstatus-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-urbanizitaet-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-dem-zigaretten-band-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-an-subtyp-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-chronisch-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-cpcor-diag-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-einnahmezeit-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-gewicht-angabe-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-gewichtsmethode-vs : 0 / 1 / 3
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-mhi-groesse-angabe-vs : 0 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ValueSet-pcor-example-general-health : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-example-response : 0 / 0 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/input/examples/QuestionnaireResponse-pcor-mii-exa-promis-16-response : 0 / 0 / 2
@@ -72,6 +88,20 @@ INFORMATION: CodeSystem/dem-rentenstatus: CodeSystem.jurisdiction[0].coding[0].d
 INFORMATION: CodeSystem/dem-urbanizitaet: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == fsh-generated/resources/CodeSystem-dem-zigaretten-band.json ==
 INFORMATION: CodeSystem/dem-zigaretten-band: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-an-subtyp.json ==
+INFORMATION: CodeSystem/mhi-an-subtyp: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-chronisch.json ==
+INFORMATION: CodeSystem/mhi-chronisch: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-cpcor-diag.json ==
+INFORMATION: CodeSystem/mhi-cpcor-diag: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-einnahmezeit.json ==
+INFORMATION: CodeSystem/mhi-einnahmezeit: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-gewicht-angabe.json ==
+INFORMATION: CodeSystem/mhi-gewicht-angabe: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-gewichtsmethode.json ==
+INFORMATION: CodeSystem/mhi-gewichtsmethode: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+== fsh-generated/resources/CodeSystem-mhi-groesse-angabe.json ==
+INFORMATION: CodeSystem/mhi-groesse-angabe: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == fsh-generated/resources/CodeSystem-pcor-example-general-health.json ==
 INFORMATION: CodeSystem/pcor-example-general-health: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == fsh-generated/resources/ImplementationGuide-pcor-mii.json ==
@@ -83,30 +113,32 @@ WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[3]: The Imp
 WARNING: Patient/pcor-mii-exa-patient: Patient: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == fsh-generated/resources/Questionnaire-DEM.json ==
 INFORMATION: Questionnaire/DEM: Questionnaire.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[0].code[0]: There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language für 'http://loinc.org#82589-3'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[1].code[0].display: There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[1].code[0]: There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language für 'http://loinc.org#76691-5'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[3].code[0].display: There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[3].code[0]: There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language für 'http://loinc.org#67875-5'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[4].code[0].display: There are no valid display names found for the code http://loinc.org#108248-6 for language(s) 'de'. The display is 'Household income' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[4].code[0]: There are no valid display names found for the code http://loinc.org#108248-6 for language(s) 'de'. The display is 'Household income' which is a valid display for the default language für 'http://loinc.org#108248-6'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[6].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#88122-7 for language(s) 'de'. The display is 'Within the past 12 months we worried whether our food would run out before we got money to buy more' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[6].item[0].code[0]: There are no valid display names found for the code http://loinc.org#88122-7 for language(s) 'de'. The display is 'Within the past 12 months we worried whether our food would run out before we got money to buy more' which is a valid display for the default language für 'http://loinc.org#88122-7'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[7].code[0].display: There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[7].code[0]: There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language für 'http://loinc.org#78746-5'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[9].code[0].display: There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[9].code[0]: There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language für 'http://loinc.org#66476-3'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[13].code[0].display: There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[1].item[13].code[0]: There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language für 'http://loinc.org#104078-1'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[2].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#45404-1 for language(s) 'de'. The display is 'Marital status' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[2].item[0].code[0]: There are no valid display names found for the code http://loinc.org#45404-1 for language(s) 'de'. The display is 'Marital status' which is a valid display for the default language für 'http://loinc.org#45404-1'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[2].item[3].code[0].display: There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[2].item[3].code[0]: There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language für 'http://loinc.org#64218-1'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[2].item[4].code[0].display: There are no valid display names found for the code http://loinc.org#11331-6 for language(s) 'de'. The display is 'History of Alcohol use' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[2].item[4].code[0]: There are no valid display names found for the code http://loinc.org#11331-6 for language(s) 'de'. The display is 'History of Alcohol use' which is a valid display for the default language für 'http://loinc.org#11331-6'
-INFORMATION: Questionnaire/DEM: Questionnaire.item[2].item[9].code[0].display: There are no valid display names found for the code http://loinc.org#96873-5 for language(s) 'de'. The display is 'Illegal or recreational drug(s) used in past 3 months' which is a valid display for the default language
-WARNING: Questionnaire/DEM: Questionnaire.item[2].item[9].code[0]: There are no valid display names found for the code http://loinc.org#96873-5 for language(s) 'de'. The display is 'Illegal or recreational drug(s) used in past 3 months' which is a valid display for the default language für 'http://loinc.org#96873-5'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[1].code[0].display: There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[1].code[0]: There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language für 'http://loinc.org#82589-3'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[2].code[0].display: There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[2].code[0]: There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language für 'http://loinc.org#76691-5'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[4].code[0].display: There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[4].code[0]: There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language für 'http://loinc.org#67875-5'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[5].code[0].display: There are no valid display names found for the code http://loinc.org#108248-6 for language(s) 'de'. The display is 'Household income' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[5].code[0]: There are no valid display names found for the code http://loinc.org#108248-6 for language(s) 'de'. The display is 'Household income' which is a valid display for the default language für 'http://loinc.org#108248-6'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[7].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#88122-7 for language(s) 'de'. The display is 'Within the past 12 months we worried whether our food would run out before we got money to buy more' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[7].item[0].code[0]: There are no valid display names found for the code http://loinc.org#88122-7 for language(s) 'de'. The display is 'Within the past 12 months we worried whether our food would run out before we got money to buy more' which is a valid display for the default language für 'http://loinc.org#88122-7'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[8].code[0].display: There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[8].code[0]: There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language für 'http://loinc.org#78746-5'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[10].code[0].display: There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[10].code[0]: There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language für 'http://loinc.org#66476-3'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[0].item[14].code[0].display: There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[0].item[14].code[0]: There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language für 'http://loinc.org#104078-1'
+INFORMATION: Questionnaire/DEM: Questionnaire.item[1].item[0].code[0].display: There are no valid display names found for the code http://loinc.org#45404-1 for language(s) 'de'. The display is 'Marital status' which is a valid display for the default language
+WARNING: Questionnaire/DEM: Questionnaire.item[1].item[0].code[0]: There are no valid display names found for the code http://loinc.org#45404-1 for language(s) 'de'. The display is 'Marital status' which is a valid display for the default language für 'http://loinc.org#45404-1'
+== fsh-generated/resources/Questionnaire-MHI.json ==
+INFORMATION: Questionnaire/MHI: Questionnaire.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+INFORMATION: Questionnaire/MHI: Questionnaire.item[2].item[1].code[0].display: There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language
+WARNING: Questionnaire/MHI: Questionnaire.item[2].item[1].code[0]: There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language für 'http://loinc.org#64218-1'
+INFORMATION: Questionnaire/MHI: Questionnaire.item[2].item[2].code[0].display: There are no valid display names found for the code http://loinc.org#11331-6 for language(s) 'de'. The display is 'History of Alcohol use' which is a valid display for the default language
+WARNING: Questionnaire/MHI: Questionnaire.item[2].item[2].code[0]: There are no valid display names found for the code http://loinc.org#11331-6 for language(s) 'de'. The display is 'History of Alcohol use' which is a valid display for the default language für 'http://loinc.org#11331-6'
+INFORMATION: Questionnaire/MHI: Questionnaire.item[2].item[7].code[0].display: There are no valid display names found for the code http://loinc.org#96873-5 for language(s) 'de'. The display is 'Illegal or recreational drug(s) used in past 3 months' which is a valid display for the default language
+WARNING: Questionnaire/MHI: Questionnaire.item[2].item[7].code[0]: There are no valid display names found for the code http://loinc.org#96873-5 for language(s) 'de'. The display is 'Illegal or recreational drug(s) used in past 3 months' which is a valid display for the default language für 'http://loinc.org#96873-5'
 == fsh-generated/resources/Questionnaire-PcorExampleQuestionnaire.json ==
 ERROR: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Questionnaire.extension: mindestens erforderlich = 1, aber nur gefunden 0
 ERROR: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Slice 'Questionnaire.extension:capabilities' for extension 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-questionnaire-capabilities': a matching slice is required, but not found (from https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1). Note that other slices are allowed in addition to this required slice
@@ -114,30 +146,27 @@ ERROR: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Questionnaire.code
 INFORMATION: Questionnaire/PcorExampleQuestionnaire: Questionnaire.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de-DE'. The display is 'Germany' which is a valid display for the default language
 WARNING: Questionnaire/PcorExampleQuestionnaire: Questionnaire: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == fsh-generated/resources/QuestionnaireResponse-DEMResponse.json ==
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[3].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[4].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[5].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[6].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[7].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[7].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[7].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[8].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[9].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[10].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[14].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[0].item[14].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.1.0
+INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.1.0
 INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[3].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[4].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[5].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[6].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[7].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[8].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[9].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[13].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[1].item[13].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[1].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[2].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[3].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[4].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[5].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[6].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[7].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
-INFORMATION: QuestionnaireResponse/DEMResponse: QuestionnaireResponse.item[2].item[8].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0
 WARNING: QuestionnaireResponse/DEMResponse: QuestionnaireResponse: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
+== fsh-generated/resources/QuestionnaireResponse-MHIResponse.json ==
+INFORMATION: QuestionnaireResponse/MHIResponse: QuestionnaireResponse.item[0].item[0].answer[0].value.ofType(Coding): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.1.0
+WARNING: QuestionnaireResponse/MHIResponse: QuestionnaireResponse: Die Ressource hat eine Sprache (de-DE), und das XHTML hat eine Sprache (de), aber sie unterscheiden sich
 == fsh-generated/resources/ValueSet-dem-beziehungsstatus-vs.json ==
 INFORMATION: ValueSet/dem-beziehungsstatus-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 WARNING: ValueSet/dem-beziehungsstatus-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
@@ -190,6 +219,34 @@ INFORMATION: ValueSet/dem-urbanizitaet-vs: ValueSet.expansion: This expansion ha
 INFORMATION: ValueSet/dem-zigaretten-band-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 WARNING: ValueSet/dem-zigaretten-band-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
 INFORMATION: ValueSet/dem-zigaretten-band-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-an-subtyp-vs.json ==
+INFORMATION: ValueSet/mhi-an-subtyp-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-an-subtyp-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-an-subtyp-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-chronisch-vs.json ==
+INFORMATION: ValueSet/mhi-chronisch-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-chronisch-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-chronisch-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-cpcor-diag-vs.json ==
+INFORMATION: ValueSet/mhi-cpcor-diag-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-cpcor-diag-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-cpcor-diag-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-einnahmezeit-vs.json ==
+INFORMATION: ValueSet/mhi-einnahmezeit-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-einnahmezeit-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-einnahmezeit-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-gewicht-angabe-vs.json ==
+INFORMATION: ValueSet/mhi-gewicht-angabe-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-gewicht-angabe-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-gewicht-angabe-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-gewichtsmethode-vs.json ==
+INFORMATION: ValueSet/mhi-gewichtsmethode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-gewichtsmethode-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-gewichtsmethode-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
+== fsh-generated/resources/ValueSet-mhi-groesse-angabe-vs.json ==
+INFORMATION: ValueSet/mhi-groesse-angabe-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
+WARNING: ValueSet/mhi-groesse-angabe-vs: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+INFORMATION: ValueSet/mhi-groesse-angabe-vs: ValueSet.expansion: This expansion has no identifier. Identifiers are recommended to help with audit and traceability
 == fsh-generated/resources/ValueSet-pcor-example-general-health.json ==
 INFORMATION: ValueSet/pcor-example-general-health: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 == input/examples/QuestionnaireResponse-pcor-mii-exa-example-response.json ==

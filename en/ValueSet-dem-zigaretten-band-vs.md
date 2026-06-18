@@ -7,7 +7,7 @@ Zigaretten/Tag in Bändern (GIPS57b).
 
  **References** 
 
-* [DEM — Demographics & Medical History](Questionnaire-DEM.md)
+* [MHI — Medical History](Questionnaire-MHI.md)
 
 ### Logical Definition (CLD)
 
@@ -33,7 +33,7 @@ Zigaretten/Tag in Bändern (GIPS57b).
   "title" : "DEM Zigaretten pro Tag",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T13:23:35+00:00",
+  "date" : "2026-06-18T09:13:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

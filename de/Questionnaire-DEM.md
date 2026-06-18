@@ -3,7 +3,7 @@
 ## Questionnaire: DEM — Demographics & Medical History (Experimentell) 
 
  
-Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). Items aus MASTER_3EntitiesOverview.xlsx / Sheet Demo+MedHis. Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument. 
+Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument. 
 
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
@@ -13,7 +13,7 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
 
 ### Antworten zu diesem Fragebogen
 
-* Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie & medizinische Vorgeschichte)./a>
+* [Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie).](QuestionnaireResponse-DEMResponse.md)
 
 
 
@@ -42,7 +42,7 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). Items aus MASTER_3EntitiesOverview.xlsx / Sheet Demo+MedHis. Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument.",
+  "description" : "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -51,35 +51,20 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
     }]
   }],
   "item" : [{
-    "linkId" : "anthropometrie",
-    "text" : "Körpermaße",
-    "type" : "group",
-    "item" : [{
-      "linkId" : "Q_WB151",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "29463-7",
-        "display" : "Körpergewicht"
-      }],
-      "text" : "Wie viel wiegen Sie? (kg)",
-      "type" : "decimal"
-    },
-    {
-      "linkId" : "Q_WB152",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "8302-2",
-        "display" : "Körpergröße"
-      }],
-      "text" : "Wie gross sind Sie? (cm)",
-      "type" : "decimal"
-    }]
-  },
-  {
     "linkId" : "soziodemographie",
     "text" : "Soziodemographische Angaben",
     "type" : "group",
     "item" : [{
+      "linkId" : "AGE",
+      "code" : [{
+        "system" : "http://loinc.org",
+        "code" : "21112-8",
+        "display" : "Geburtsdatum"
+      }],
+      "text" : "Bitte geben Sie Ihr Geburtsdatum an",
+      "type" : "date"
+    },
+    {
       "linkId" : "Q_ISCED",
       "code" : [{
         "system" : "http://loinc.org",
@@ -175,8 +160,8 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
     },
     {
-      "linkId" : "MEDHIMS6.land",
-      "text" : "Wenn nein: In welchem Land sind Sie geboren?",
+      "linkId" : "MEDHIMS6_country",
+      "text" : "Bitte geben Sie an, in welchem Land Sie geboren sind",
       "type" : "string",
       "enableWhen" : [{
         "question" : "MEDHIMS6",
@@ -200,8 +185,8 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
     },
     {
-      "linkId" : "MEDHIMS7.staat",
-      "text" : "Wenn nein: Welche Staatsbürgerschaft besitzen Sie?",
+      "linkId" : "MEDHIMS7_nationality",
+      "text" : "Bitte geben Sie an, welche Staatsbürgerschaft Sie besitzen",
       "type" : "string",
       "enableWhen" : [{
         "question" : "MEDHIMS7",
@@ -258,7 +243,7 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
     }]
   },
   {
-    "linkId" : "medhist",
+    "linkId" : "weitere",
     "text" : "Weitere Angaben",
     "type" : "group",
     "item" : [{
@@ -279,115 +264,8 @@ Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). 
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-rentenstatus-vs"
     },
     {
-      "linkId" : "GIPS57a",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "72166-2",
-        "display" : "Raucherstatus"
-      }],
-      "text" : "Rauchen Sie (einschließlich E-Zigaretten)?",
-      "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS57b",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "64218-1",
-        "display" : "How many cigarettes do you smoke per day now [PhenX]"
-      }],
-      "text" : "Wenn ja: Wie viele Zigaretten rauchen Sie pro Tag?",
-      "type" : "choice",
-      "enableWhen" : [{
-        "question" : "GIPS57a",
-        "operator" : "=",
-        "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
-        }
-      }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-zigaretten-band-vs"
-    },
-    {
-      "linkId" : "GIPS56a",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "11331-6",
-        "display" : "History of Alcohol use"
-      }],
-      "text" : "Trinken Sie Alkohol?",
-      "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS56b1",
-      "text" : "Wenn ja: Haben Sie jemals daran gedacht, weniger zu trinken? (CAGE 1)",
-      "type" : "choice",
-      "enableWhen" : [{
-        "question" : "GIPS56a",
-        "operator" : "=",
-        "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
-        }
-      }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS56b2",
-      "text" : "Haben Sie sich schon einmal darüber geärgert, dass Sie von anderen wegen Ihres Alkoholkonsums kritisiert wurden? (CAGE 2)",
-      "type" : "choice",
-      "enableWhen" : [{
-        "question" : "GIPS56a",
-        "operator" : "=",
-        "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
-        }
-      }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS56b3",
-      "text" : "Haben Sie sich jemals wegen Ihres Trinkens schuldig gefühlt? (CAGE 3)",
-      "type" : "choice",
-      "enableWhen" : [{
-        "question" : "GIPS56a",
-        "operator" : "=",
-        "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
-        }
-      }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS56b4",
-      "text" : "Haben Sie jemals morgens als erstes Alkohol getrunken, um sich nervlich zu stabilisieren oder einen Kater loszuwerden? (CAGE 4 — Eye-opener)",
-      "type" : "choice",
-      "enableWhen" : [{
-        "question" : "GIPS56a",
-        "operator" : "=",
-        "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
-        }
-      }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
-    },
-    {
-      "linkId" : "GIPS58",
-      "code" : [{
-        "system" : "http://loinc.org",
-        "code" : "96873-5",
-        "display" : "Illegal or recreational drug(s) used in past 3 months"
-      }],
-      "text" : "Nutzen Sie hin und wieder eine der folgenden Substanzen: Cannabis, Ecstasy, Kokain, Amphetamine, Anabolika, Crystal?",
+      "linkId" : "CPCOR_REQ",
+      "text" : "Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
     }]

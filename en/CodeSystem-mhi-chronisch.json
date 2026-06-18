@@ -1,0 +1,135 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mhi-chronisch",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mhi-chronisch</b></p><a name=\"en-mhi-chronisch\"> </a><a name=\"en-hcmhi-chronisch\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"en-mhi-chronisch-0\"> </a></td><td>keine chronische Erkrankung</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-mhi-chronisch-1\"> </a></td><td>Herzerkrankung (z.B. Herzinfarkt)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-mhi-chronisch-2\"> </a></td><td>Bluthochdruck</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-mhi-chronisch-3\"> </a></td><td>Beinschmerz bei Laufen</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-mhi-chronisch-4\"> </a></td><td>Lungenerkrankung (z.B. Asthma)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"en-mhi-chronisch-5\"> </a></td><td>Diabetes</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"en-mhi-chronisch-6\"> </a></td><td>Nierenerkrankung</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"en-mhi-chronisch-7\"> </a></td><td>Lebererkrankung</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"en-mhi-chronisch-8\"> </a></td><td>Bluterkrankungen (z.B. Anämie)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"en-mhi-chronisch-9\"> </a></td><td>Schlaganfall</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"en-mhi-chronisch-10\"> </a></td><td>Nervenerkrankung (z.B. Parkinson)</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"en-mhi-chronisch-11\"> </a></td><td>Krebs (in den letzten 5 Jahren)</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"en-mhi-chronisch-12\"> </a></td><td>Arthritis (z.B. Rheuma)</td></tr><tr><td style=\"white-space:nowrap\">13<a name=\"en-mhi-chronisch-13\"> </a></td><td>Arthrose (z.B. Gelenkabnutzung)</td></tr><tr><td style=\"white-space:nowrap\">14<a name=\"en-mhi-chronisch-14\"> </a></td><td>Magen-Darm-Erkrankungen</td></tr><tr><td style=\"white-space:nowrap\">15<a name=\"en-mhi-chronisch-15\"> </a></td><td>Hauterkrankungen</td></tr><tr><td style=\"white-space:nowrap\">16<a name=\"en-mhi-chronisch-16\"> </a></td><td>Rückenschmerzen</td></tr><tr><td style=\"white-space:nowrap\">17<a name=\"en-mhi-chronisch-17\"> </a></td><td>Chronische Schmerzerkrankung</td></tr><tr><td style=\"white-space:nowrap\">18<a name=\"en-mhi-chronisch-18\"> </a></td><td>Depression</td></tr><tr><td style=\"white-space:nowrap\">19<a name=\"en-mhi-chronisch-19\"> </a></td><td>Angststörung</td></tr><tr><td style=\"white-space:nowrap\">20<a name=\"en-mhi-chronisch-20\"> </a></td><td>Suchterkrankung</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"en-mhi-chronisch-21\"> </a></td><td>Somatoforme Störung (unerklärte körperliche Beschwerden)</td></tr><tr><td style=\"white-space:nowrap\">22<a name=\"en-mhi-chronisch-22\"> </a></td><td>Persönlichkeitsstörung</td></tr><tr><td style=\"white-space:nowrap\">23<a name=\"en-mhi-chronisch-23\"> </a></td><td>Schizophrenie</td></tr><tr><td style=\"white-space:nowrap\">24<a name=\"en-mhi-chronisch-24\"> </a></td><td>sonstige</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch",
+  "version" : "0.1.0",
+  "name" : "MhiChronischCS",
+  "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-18T09:13:00+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 25,
+  "concept" : [{
+    "code" : "0",
+    "display" : "keine chronische Erkrankung"
+  },
+  {
+    "code" : "1",
+    "display" : "Herzerkrankung (z.B. Herzinfarkt)"
+  },
+  {
+    "code" : "2",
+    "display" : "Bluthochdruck"
+  },
+  {
+    "code" : "3",
+    "display" : "Beinschmerz bei Laufen"
+  },
+  {
+    "code" : "4",
+    "display" : "Lungenerkrankung (z.B. Asthma)"
+  },
+  {
+    "code" : "5",
+    "display" : "Diabetes"
+  },
+  {
+    "code" : "6",
+    "display" : "Nierenerkrankung"
+  },
+  {
+    "code" : "7",
+    "display" : "Lebererkrankung"
+  },
+  {
+    "code" : "8",
+    "display" : "Bluterkrankungen (z.B. Anämie)"
+  },
+  {
+    "code" : "9",
+    "display" : "Schlaganfall"
+  },
+  {
+    "code" : "10",
+    "display" : "Nervenerkrankung (z.B. Parkinson)"
+  },
+  {
+    "code" : "11",
+    "display" : "Krebs (in den letzten 5 Jahren)"
+  },
+  {
+    "code" : "12",
+    "display" : "Arthritis (z.B. Rheuma)"
+  },
+  {
+    "code" : "13",
+    "display" : "Arthrose (z.B. Gelenkabnutzung)"
+  },
+  {
+    "code" : "14",
+    "display" : "Magen-Darm-Erkrankungen"
+  },
+  {
+    "code" : "15",
+    "display" : "Hauterkrankungen"
+  },
+  {
+    "code" : "16",
+    "display" : "Rückenschmerzen"
+  },
+  {
+    "code" : "17",
+    "display" : "Chronische Schmerzerkrankung"
+  },
+  {
+    "code" : "18",
+    "display" : "Depression"
+  },
+  {
+    "code" : "19",
+    "display" : "Angststörung"
+  },
+  {
+    "code" : "20",
+    "display" : "Suchterkrankung"
+  },
+  {
+    "code" : "21",
+    "display" : "Somatoforme Störung (unerklärte körperliche Beschwerden)"
+  },
+  {
+    "code" : "22",
+    "display" : "Persönlichkeitsstörung"
+  },
+  {
+    "code" : "23",
+    "display" : "Schizophrenie"
+  },
+  {
+    "code" : "24",
+    "display" : "sonstige"
+  }]
+}

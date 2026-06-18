@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-06-16T13:23:35+00:00"/>
+  <date value="2026-06-18T09:13:00+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -855,7 +855,7 @@
         <reference value="QuestionnaireResponse/DEMResponse"/>
       </reference>
       <name value="DEM — Beispielantwort"/>
-      <description value="Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie &amp; medizinische Vorgeschichte)."/>
+      <description value="Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -866,7 +866,183 @@
         <reference value="Questionnaire/DEM"/>
       </reference>
       <name value="DEM — Demographics &amp; Medical History"/>
-      <description value="Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). Items aus MASTER_3EntitiesOverview.xlsx / Sheet Demo+MedHis. Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument."/>
+      <description value="Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-an-subtyp-vs"/>
+      </reference>
+      <name value="MHI Anorexia-nervosa-Subtyp"/>
+      <description value="Subtyp der Anorexia nervosa (AN_subtyp)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-an-subtyp"/>
+      </reference>
+      <name value="MHI Anorexia-nervosa-Subtyp (Codes)"/>
+      <description value="Subtyp der Anorexia nervosa (AN_subtyp)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-chronisch-vs"/>
+      </reference>
+      <name value="MHI Chronische Erkrankungen (GIPS13)"/>
+      <description value="Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-chronisch"/>
+      </reference>
+      <name value="MHI Chronische Erkrankungen (GIPS13) (Codes)"/>
+      <description value="Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-cpcor-diag-vs"/>
+      </reference>
+      <name value="MHI Diagnosegruppe (CPCOR)"/>
+      <description value="Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-cpcor-diag"/>
+      </reference>
+      <name value="MHI Diagnosegruppe (CPCOR) (Codes)"/>
+      <description value="Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-einnahmezeit-vs"/>
+      </reference>
+      <name value="MHI Einnahmezeitpunkt Medikament"/>
+      <description value="Tageszeit der Medikamenteneinnahme (medi_02_time)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-einnahmezeit"/>
+      </reference>
+      <name value="MHI Einnahmezeitpunkt Medikament (Codes)"/>
+      <description value="Tageszeit der Medikamenteneinnahme (medi_02_time)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-gewicht-angabe-vs"/>
+      </reference>
+      <name value="MHI Gewichtsangabe"/>
+      <description value="Einheit/Angabe-Status für Gewicht (Q_WB151)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-gewicht-angabe"/>
+      </reference>
+      <name value="MHI Gewichtsangabe (Codes)"/>
+      <description value="Einheit/Angabe-Status für Gewicht (Q_WB151)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-gewichtsmethode-vs"/>
+      </reference>
+      <name value="MHI Gewichtsmessung Methode"/>
+      <description value="Wie wurde das Gewicht ermittelt? (weight_outpatient_2)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-gewichtsmethode"/>
+      </reference>
+      <name value="MHI Gewichtsmessung Methode (Codes)"/>
+      <description value="Wie wurde das Gewicht ermittelt? (weight_outpatient_2)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-groesse-angabe-vs"/>
+      </reference>
+      <name value="MHI Größenangabe"/>
+      <description value="Einheit/Angabe-Status für Körpergröße (Q_WB152)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-groesse-angabe"/>
+      </reference>
+      <name value="MHI Größenangabe (Codes)"/>
+      <description value="Einheit/Angabe-Status für Körpergröße (Q_WB152)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/MHIResponse"/>
+      </reference>
+      <name value="MHI — Beispielantwort"/>
+      <description value="Beispielantwort zum MHI-Questionnaire (Medical History)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/MHI"/>
+      </reference>
+      <name value="MHI — Medical History"/>
+      <description value="Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -953,6 +1129,14 @@
         </extension>
         <nameUrl value="Demographie.html"/>
         <title value="Demographie"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="MHI.html"/>
+        </extension>
+        <nameUrl value="MHI.html"/>
+        <title value="MHI"/>
         <generation value="markdown"/>
       </page>
       <page>

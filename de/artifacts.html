@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -210,6 +210,9 @@ a[name="test"] + h3 + div {
     <ul class="dropdown-menu">
       <li>
         <a href="Demographie.html">Demographie</a>
+      </li>
+      <li>
+        <a href="MHI.html">MHI</a>
       </li>
       <li>
         <a href="PROMIS.html">PROMIS</a>
@@ -337,7 +340,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). Items aus MASTER_3EntitiesOverview.xlsx / Sheet Demo+MedHis. Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument.</p>
+<p>Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-MHI.html" title="Questionnaire/MHI">
+                  <span title="Questionnaire/MHI">MHI — Medical History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument.</p>
 </td>
          </tr>
          <tr>
@@ -515,6 +529,88 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-mhi-an-subtyp-vs.html" title="ValueSet/mhi-an-subtyp-vs">
+                  <span title="ValueSet/mhi-an-subtyp-vs">MHI Anorexia-nervosa-Subtyp
+</span>
+               </a>
+            </td>
+            <td>
+<p>Subtyp der Anorexia nervosa (AN_subtyp).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-chronisch-vs.html" title="ValueSet/mhi-chronisch-vs">
+                  <span title="ValueSet/mhi-chronisch-vs">MHI Chronische Erkrankungen (GIPS13)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-cpcor-diag-vs.html"
+                  title="ValueSet/mhi-cpcor-diag-vs">
+                  <span title="ValueSet/mhi-cpcor-diag-vs">MHI Diagnosegruppe (CPCOR)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-einnahmezeit-vs.html"
+                  title="ValueSet/mhi-einnahmezeit-vs">
+                  <span title="ValueSet/mhi-einnahmezeit-vs">MHI Einnahmezeitpunkt Medikament
+</span>
+               </a>
+            </td>
+            <td>
+<p>Tageszeit der Medikamenteneinnahme (medi_02_time).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-gewicht-angabe-vs.html"
+                  title="ValueSet/mhi-gewicht-angabe-vs">
+                  <span title="ValueSet/mhi-gewicht-angabe-vs">MHI Gewichtsangabe
+</span>
+               </a>
+            </td>
+            <td>
+<p>Einheit/Angabe-Status für Gewicht (Q_WB151).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-gewichtsmethode-vs.html"
+                  title="ValueSet/mhi-gewichtsmethode-vs">
+                  <span title="ValueSet/mhi-gewichtsmethode-vs">MHI Gewichtsmessung Methode
+</span>
+               </a>
+            </td>
+            <td>
+<p>Wie wurde das Gewicht ermittelt? (weight_outpatient_2).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mhi-groesse-angabe-vs.html"
+                  title="ValueSet/mhi-groesse-angabe-vs">
+                  <span title="ValueSet/mhi-groesse-angabe-vs">MHI Größenangabe
+</span>
+               </a>
+            </td>
+            <td>
+<p>Einheit/Angabe-Status für Körpergröße (Q_WB152).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-pcor-example-general-health.html"
                   title="ValueSet/pcor-example-general-health">
                   <span title="ValueSet/pcor-example-general-health">PCOR Example General Health Self-Assessment
@@ -663,6 +759,87 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-mhi-an-subtyp.html" title="CodeSystem/mhi-an-subtyp">
+                  <span title="CodeSystem/mhi-an-subtyp">MHI Anorexia-nervosa-Subtyp (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Subtyp der Anorexia nervosa (AN_subtyp).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-chronisch.html" title="CodeSystem/mhi-chronisch">
+                  <span title="CodeSystem/mhi-chronisch">MHI Chronische Erkrankungen (GIPS13) (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-cpcor-diag.html" title="CodeSystem/mhi-cpcor-diag">
+                  <span title="CodeSystem/mhi-cpcor-diag">MHI Diagnosegruppe (CPCOR) (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-einnahmezeit.html"
+                  title="CodeSystem/mhi-einnahmezeit">
+                  <span title="CodeSystem/mhi-einnahmezeit">MHI Einnahmezeitpunkt Medikament (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Tageszeit der Medikamenteneinnahme (medi_02_time).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-gewicht-angabe.html"
+                  title="CodeSystem/mhi-gewicht-angabe">
+                  <span title="CodeSystem/mhi-gewicht-angabe">MHI Gewichtsangabe (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Einheit/Angabe-Status für Gewicht (Q_WB151).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-gewichtsmethode.html"
+                  title="CodeSystem/mhi-gewichtsmethode">
+                  <span title="CodeSystem/mhi-gewichtsmethode">MHI Gewichtsmessung Methode (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Wie wurde das Gewicht ermittelt? (weight_outpatient_2).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mhi-groesse-angabe.html"
+                  title="CodeSystem/mhi-groesse-angabe">
+                  <span title="CodeSystem/mhi-groesse-angabe">MHI Größenangabe (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Einheit/Angabe-Status für Körpergröße (Q_WB152).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-pcor-example-general-health.html"
                   title="CodeSystem/pcor-example-general-health">
                   <span title="CodeSystem/pcor-example-general-health">PCOR Example General Health Self-Assessment
@@ -702,7 +879,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie &amp; medizinische Vorgeschichte).</p>
+<p>Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-MHIResponse.html"
+                  title="QuestionnaireResponse/MHIResponse">
+                  <span title="QuestionnaireResponse/MHIResponse">MHI — Beispielantwort
+</span>
+               </a>
+            </td>
+            <td>
+<p>Beispielantwort zum MHI-Questionnaire (Medical History).</p>
 </td>
          </tr>
          <tr>
@@ -792,8 +981,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-06-16 13:23:00 +0000">
-    2026-06-16
+  <span title="2026-06-18 09:13:00 +0000">
+    2026-06-18
   </span>
 
           <br/>

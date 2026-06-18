@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mhi-cpcor-diag",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mhi-cpcor-diag</b></p><a name=\"en-mhi-cpcor-diag\"> </a><a name=\"en-hcmhi-cpcor-diag\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-mhi-cpcor-diag-1\"> </a></td><td>Essstörung</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-mhi-cpcor-diag-2\"> </a></td><td>Nierenerkrankung</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-mhi-cpcor-diag-3\"> </a></td><td>Nierenspender</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-mhi-cpcor-diag-4\"> </a></td><td>Anhaltende körperliche Beschwerden</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+  "version" : "0.1.0",
+  "name" : "MhiCpcorDiagCS",
+  "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-18T09:13:00+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "1",
+    "display" : "Essstörung"
+  },
+  {
+    "code" : "2",
+    "display" : "Nierenerkrankung"
+  },
+  {
+    "code" : "3",
+    "display" : "Nierenspender"
+  },
+  {
+    "code" : "4",
+    "display" : "Anhaltende körperliche Beschwerden"
+  }]
+}

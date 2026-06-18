@@ -8,6 +8,7 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
+* [MHI — Medical History](Questionnaire-MHI.md)
 
 ### Logical Definition (CLD)
 
@@ -33,7 +34,7 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
   "title" : "DEM Ja/Nein",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-16T13:23:35+00:00",
+  "date" : "2026-06-18T09:13:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

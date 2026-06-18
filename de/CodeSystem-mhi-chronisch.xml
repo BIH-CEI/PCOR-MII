@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mhi-chronisch"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mhi-chronisch</b></p><a name="mhi-chronisch"> </a><a name="hcmhi-chronisch"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">0<a name="mhi-chronisch-0"> </a></td><td>keine chronische Erkrankung</td></tr><tr><td style="white-space:nowrap">1<a name="mhi-chronisch-1"> </a></td><td>Herzerkrankung (z.B. Herzinfarkt)</td></tr><tr><td style="white-space:nowrap">2<a name="mhi-chronisch-2"> </a></td><td>Bluthochdruck</td></tr><tr><td style="white-space:nowrap">3<a name="mhi-chronisch-3"> </a></td><td>Beinschmerz bei Laufen</td></tr><tr><td style="white-space:nowrap">4<a name="mhi-chronisch-4"> </a></td><td>Lungenerkrankung (z.B. Asthma)</td></tr><tr><td style="white-space:nowrap">5<a name="mhi-chronisch-5"> </a></td><td>Diabetes</td></tr><tr><td style="white-space:nowrap">6<a name="mhi-chronisch-6"> </a></td><td>Nierenerkrankung</td></tr><tr><td style="white-space:nowrap">7<a name="mhi-chronisch-7"> </a></td><td>Lebererkrankung</td></tr><tr><td style="white-space:nowrap">8<a name="mhi-chronisch-8"> </a></td><td>Bluterkrankungen (z.B. Anämie)</td></tr><tr><td style="white-space:nowrap">9<a name="mhi-chronisch-9"> </a></td><td>Schlaganfall</td></tr><tr><td style="white-space:nowrap">10<a name="mhi-chronisch-10"> </a></td><td>Nervenerkrankung (z.B. Parkinson)</td></tr><tr><td style="white-space:nowrap">11<a name="mhi-chronisch-11"> </a></td><td>Krebs (in den letzten 5 Jahren)</td></tr><tr><td style="white-space:nowrap">12<a name="mhi-chronisch-12"> </a></td><td>Arthritis (z.B. Rheuma)</td></tr><tr><td style="white-space:nowrap">13<a name="mhi-chronisch-13"> </a></td><td>Arthrose (z.B. Gelenkabnutzung)</td></tr><tr><td style="white-space:nowrap">14<a name="mhi-chronisch-14"> </a></td><td>Magen-Darm-Erkrankungen</td></tr><tr><td style="white-space:nowrap">15<a name="mhi-chronisch-15"> </a></td><td>Hauterkrankungen</td></tr><tr><td style="white-space:nowrap">16<a name="mhi-chronisch-16"> </a></td><td>Rückenschmerzen</td></tr><tr><td style="white-space:nowrap">17<a name="mhi-chronisch-17"> </a></td><td>Chronische Schmerzerkrankung</td></tr><tr><td style="white-space:nowrap">18<a name="mhi-chronisch-18"> </a></td><td>Depression</td></tr><tr><td style="white-space:nowrap">19<a name="mhi-chronisch-19"> </a></td><td>Angststörung</td></tr><tr><td style="white-space:nowrap">20<a name="mhi-chronisch-20"> </a></td><td>Suchterkrankung</td></tr><tr><td style="white-space:nowrap">21<a name="mhi-chronisch-21"> </a></td><td>Somatoforme Störung (unerklärte körperliche Beschwerden)</td></tr><tr><td style="white-space:nowrap">22<a name="mhi-chronisch-22"> </a></td><td>Persönlichkeitsstörung</td></tr><tr><td style="white-space:nowrap">23<a name="mhi-chronisch-23"> </a></td><td>Schizophrenie</td></tr><tr><td style="white-space:nowrap">24<a name="mhi-chronisch-24"> </a></td><td>sonstige</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch"/>
+  <version value="0.1.0"/>
+  <name value="MhiChronischCS"/>
+  <title value="MHI Chronische Erkrankungen (GIPS13) (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-18T09:13:00+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="25"/>
+  <concept>
+    <code value="0"/>
+    <display value="keine chronische Erkrankung"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Herzerkrankung (z.B. Herzinfarkt)"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Bluthochdruck"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Beinschmerz bei Laufen"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Lungenerkrankung (z.B. Asthma)"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Diabetes"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="Nierenerkrankung"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Lebererkrankung"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="Bluterkrankungen (z.B. Anämie)"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Schlaganfall"/>
+  </concept>
+  <concept>
+    <code value="10"/>
+    <display value="Nervenerkrankung (z.B. Parkinson)"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="Krebs (in den letzten 5 Jahren)"/>
+  </concept>
+  <concept>
+    <code value="12"/>
+    <display value="Arthritis (z.B. Rheuma)"/>
+  </concept>
+  <concept>
+    <code value="13"/>
+    <display value="Arthrose (z.B. Gelenkabnutzung)"/>
+  </concept>
+  <concept>
+    <code value="14"/>
+    <display value="Magen-Darm-Erkrankungen"/>
+  </concept>
+  <concept>
+    <code value="15"/>
+    <display value="Hauterkrankungen"/>
+  </concept>
+  <concept>
+    <code value="16"/>
+    <display value="Rückenschmerzen"/>
+  </concept>
+  <concept>
+    <code value="17"/>
+    <display value="Chronische Schmerzerkrankung"/>
+  </concept>
+  <concept>
+    <code value="18"/>
+    <display value="Depression"/>
+  </concept>
+  <concept>
+    <code value="19"/>
+    <display value="Angststörung"/>
+  </concept>
+  <concept>
+    <code value="20"/>
+    <display value="Suchterkrankung"/>
+  </concept>
+  <concept>
+    <code value="21"/>
+    <display value="Somatoforme Störung (unerklärte körperliche Beschwerden)"/>
+  </concept>
+  <concept>
+    <code value="22"/>
+    <display value="Persönlichkeitsstörung"/>
+  </concept>
+  <concept>
+    <code value="23"/>
+    <display value="Schizophrenie"/>
+  </concept>
+  <concept>
+    <code value="24"/>
+    <display value="sonstige"/>
+  </concept>
+</CodeSystem>
