@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // DEM — Demographics + Medical History (Screening)
-// Quelle: MASTER_3EntitiesOverview.xlsx, Sheet "Demo+MedHis" (31 Items).
+// Quelle: PCOR Item Level Dictionary (Kategorie DEM).
 // Terminologie-Mapping: docs/DEM-Terminology-Mapping.md (Stand 2026-06-09).
 //
 // ANTWORT-MUSTER: item.answerValueSet -> lokale (Top-Level) ValueSets.
@@ -523,7 +523,7 @@ Instance: DEM
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "DEM — Demographics & Medical History"
-Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgeschichte (DEM). Items aus MASTER_3EntitiesOverview.xlsx / Sheet Demo+MedHis. Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument."
+Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument."
 // SDC-Base-Profil (wie die MII-PRO-Questionnaires, die auf SDC aufsetzen).
 // NICHT mii-pr-pro-questionnaire: DEM ist Demographie/Anamnese, kein PRO.
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" //Isik!!!
@@ -537,26 +537,19 @@ Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgesc
 * publisher = "BIH-CEI"
 
 // ── Gruppe: Medizinische Vorgeschichte (Anthropometrie) ───────────────────────
-* item[+]
-  * linkId = "anthropometrie"
-  * text = "Körpermaße"
-  * type = #group
-  * item[+]
-    * linkId = "Q_WB151"
-    * text = "Wie viel wiegen Sie? (kg)"
-    * type = #decimal
-    * code = $LOINC#29463-7 "Körpergewicht"
-  * item[+]
-    * linkId = "Q_WB152"
-    * text = "Wie gross sind Sie? (cm)"
-    * type = #decimal
-    * code = $LOINC#8302-2 "Körpergröße"
+// Anthropometrie (Q_WB151/152) ist laut Item Level Dictionary Kategorie MHI
+// und liegt nun im Questionnaire MHI (siehe MHI.fsh).
 
 // ── Gruppe: Soziodemographie ──────────────────────────────────────────────────
 * item[+]
   * linkId = "soziodemographie"
   * text = "Soziodemographische Angaben"
   * type = #group
+  * item[+]
+    * linkId = "AGE"
+    * text = "Bitte geben Sie Ihr Geburtsdatum an"
+    * type = #date
+    * code = $LOINC#21112-8 "Geburtsdatum"
   * item[+]
     * linkId = "Q_ISCED"
     * text = "Was ist der höchste Bildungsabschluss, den Sie erreicht haben?"
@@ -621,8 +614,8 @@ Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgesc
     * code = $LOINC#78746-5 "Country of birth [Location]"
     * answerValueSet = Canonical(DemJaNeinVS)
   * item[+]
-    * linkId = "MEDHIMS6.land"
-    * text = "Wenn nein: In welchem Land sind Sie geboren?"
+    * linkId = "MEDHIMS6_country"
+    * text = "Bitte geben Sie an, in welchem Land Sie geboren sind"
     * type = #string
     * enableWhen[+].question = "MEDHIMS6"
     * enableWhen[=].operator = #=
@@ -634,8 +627,8 @@ Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgesc
     * code = $LOINC#66476-3 "Country of citizenship"
     * answerValueSet = Canonical(DemJaNeinVS)
   * item[+]
-    * linkId = "MEDHIMS7.staat"
-    * text = "Wenn nein: Welche Staatsbürgerschaft besitzen Sie?"
+    * linkId = "MEDHIMS7_nationality"
+    * text = "Bitte geben Sie an, welche Staatsbürgerschaft Sie besitzen"
     * type = #string
     * enableWhen[+].question = "MEDHIMS7"
     * enableWhen[=].operator = #=
@@ -675,9 +668,12 @@ Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgesc
       * type = #choice
       * answerValueSet = Canonical(DemLeichtigkeit6VS)
 
-// ── Gruppe: Medizinische Vorgeschichte (GIPS) ─────────────────────────────────
+// Rauchen/Alkohol/CAGE/Substanzen (GIPS57/56/58) sind laut Item Level Dictionary
+// Kategorie MHI und liegen nun im Questionnaire MHI (siehe MHI.fsh).
+
+// ── Gruppe: Weitere Angaben ───────────────────────────────────────────────────
 * item[+]
-  * linkId = "medhist"
+  * linkId = "weitere"
   * text = "Weitere Angaben"
   * type = #group
   * item[+]
@@ -691,68 +687,8 @@ Description: "Screening-Fragebogen zu Soziodemographie und medizinischer Vorgesc
     * text = "Rente"
     * type = #choice
     * answerValueSet = Canonical(DemRentenstatusVS)
-
-  // ── Rauchen ─────────────────────────────────────────────────────────────────
   * item[+]
-    * linkId = "GIPS57a"
-    * text = "Rauchen Sie (einschließlich E-Zigaretten)?"
+    * linkId = "CPCOR_REQ"
+    * text = "Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?"
     * type = #choice
-    * code = $LOINC#72166-2 "Raucherstatus"
-    * answerValueSet = Canonical(DemJaNeinVS)
-  * item[+]
-    * linkId = "GIPS57b"
-    * text = "Wenn ja: Wie viele Zigaretten rauchen Sie pro Tag?"
-    * type = #choice
-    * code = $LOINC#64218-1 "How many cigarettes do you smoke per day now [PhenX]"
-    * answerValueSet = Canonical(DemZigarettenBandVS)
-    * enableWhen[+].question = "GIPS57a"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
-
-  // ── Alkohol (Screening + CAGE) ──────────────────────────────────────────────
-  * item[+]
-    * linkId = "GIPS56a"
-    * text = "Trinken Sie Alkohol?"
-    * type = #choice
-    * code = $LOINC#11331-6 "History of Alcohol use"
-    * answerValueSet = Canonical(DemJaNeinVS)
-  * item[+]
-    * linkId = "GIPS56b1"
-    * text = "Wenn ja: Haben Sie jemals daran gedacht, weniger zu trinken? (CAGE 1)"
-    * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
-    * enableWhen[+].question = "GIPS56a"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
-  * item[+]
-    * linkId = "GIPS56b2"
-    * text = "Haben Sie sich schon einmal darüber geärgert, dass Sie von anderen wegen Ihres Alkoholkonsums kritisiert wurden? (CAGE 2)"
-    * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
-    * enableWhen[+].question = "GIPS56a"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
-  * item[+]
-    * linkId = "GIPS56b3"
-    * text = "Haben Sie sich jemals wegen Ihres Trinkens schuldig gefühlt? (CAGE 3)"
-    * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
-    * enableWhen[+].question = "GIPS56a"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
-  * item[+]
-    * linkId = "GIPS56b4"
-    * text = "Haben Sie jemals morgens als erstes Alkohol getrunken, um sich nervlich zu stabilisieren oder einen Kater loszuwerden? (CAGE 4 — Eye-opener)"
-    * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
-    * enableWhen[+].question = "GIPS56a"
-    * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
-
-  // ── Substanzkonsum ──────────────────────────────────────────────────────────
-  * item[+]
-    * linkId = "GIPS58"
-    * text = "Nutzen Sie hin und wieder eine der folgenden Substanzen: Cannabis, Ecstasy, Kokain, Amphetamine, Anabolika, Crystal?"
-    * type = #choice
-    * code = $LOINC#96873-5 "Illegal or recreational drug(s) used in past 3 months"
     * answerValueSet = Canonical(DemJaNeinVS)
