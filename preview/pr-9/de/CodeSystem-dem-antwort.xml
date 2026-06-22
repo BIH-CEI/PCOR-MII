@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dem-antwort"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-antwort</b></p><a name="dem-antwort"> </a><a name="hcdem-antwort"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">ja<a name="dem-antwort-ja"> </a></td><td>Ja</td></tr><tr><td style="white-space:nowrap">nein<a name="dem-antwort-nein"> </a></td><td>Nein</td></tr><tr><td style="white-space:nowrap">nicht-zutreffend<a name="dem-antwort-nicht-zutreffend"> </a></td><td>Nicht zutreffend</td></tr><tr><td style="white-space:nowrap">keine-angabe<a name="dem-antwort-keine-angabe"> </a></td><td>Möchte ich nicht sagen</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+  <version value="0.1.0"/>
+  <name value="DemAntwortCS"/>
+  <title value="DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-22T13:30:31+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="ja"/>
+    <display value="Ja"/>
+  </concept>
+  <concept>
+    <code value="nein"/>
+    <display value="Nein"/>
+  </concept>
+  <concept>
+    <code value="nicht-zutreffend"/>
+    <display value="Nicht zutreffend"/>
+  </concept>
+  <concept>
+    <code value="keine-angabe"/>
+    <display value="Möchte ich nicht sagen"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mhi-gewicht-angabe-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mhi-gewicht-angabe-vs</b></p><a name=\"mhi-gewicht-angabe-vs\"> </a><a name=\"hcmhi-gewicht-angabe-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-mhi-gewicht-angabe.html\">codesystem MHI Gewichtsangabe (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 3 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"mhi-gewicht-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe-kg\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-gewicht-angabe.html#mhi-gewicht-angabe-kg\">kg</a></td><td>kg</td></tr><tr><td><a name=\"mhi-gewicht-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe-weiss-nicht\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-gewicht-angabe.html#mhi-gewicht-angabe-weiss-nicht\">weiss-nicht</a></td><td>Ich weiß es nicht</td></tr><tr><td><a name=\"mhi-gewicht-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe-keine-angabe\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-gewicht-angabe.html#mhi-gewicht-angabe-keine-angabe\">keine-angabe</a></td><td>Ich möchte es nicht sagen</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-gewicht-angabe-vs",
+  "version" : "0.1.0",
+  "name" : "MhiGewichtAngabeVS",
+  "title" : "MHI Gewichtsangabe",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-22T13:30:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Einheit/Angabe-Status für Gewicht (Q_WB151).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-17T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+      "code" : "kg",
+      "display" : "kg"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+      "code" : "weiss-nicht",
+      "display" : "Ich weiß es nicht"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+      "code" : "keine-angabe",
+      "display" : "Ich möchte es nicht sagen"
+    }]
+  }
+}

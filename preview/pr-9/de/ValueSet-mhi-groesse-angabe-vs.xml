@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mhi-groesse-angabe-vs"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mhi-groesse-angabe-vs</b></p><a name="mhi-groesse-angabe-vs"> </a><a name="hcmhi-groesse-angabe-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-mhi-groesse-angabe.html">codesystem MHI Größenangabe (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 3 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-cm"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style="white-space:nowrap">  <a href="CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-cm">cm</a></td><td>cm</td></tr><tr><td><a name="mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-weiss-nicht"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style="white-space:nowrap">  <a href="CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-weiss-nicht">weiss-nicht</a></td><td>Ich weiß es nicht</td></tr><tr><td><a name="mhi-groesse-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe-keine-angabe"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe</code></td><td style="white-space:nowrap">  <a href="CodeSystem-mhi-groesse-angabe.html#mhi-groesse-angabe-keine-angabe">keine-angabe</a></td><td>Ich möchte es nicht sagen</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-groesse-angabe-vs"/>
+  <version value="0.1.0"/>
+  <name value="MhiGroesseAngabeVS"/>
+  <title value="MHI Größenangabe"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-22T13:30:31+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Einheit/Angabe-Status für Körpergröße (Q_WB152)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-06-17T00:00:00Z"/>
+    <parameter>
+      <name value="used-codesystem"/>
+      <valueUri value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.1.0"/>
+    </parameter>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+      <code value="cm"/>
+      <display value="cm"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+      <code value="weiss-nicht"/>
+      <display value="Ich weiß es nicht"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+      <code value="keine-angabe"/>
+      <display value="Ich möchte es nicht sagen"/>
+    </contains>
+  </expansion>
+</ValueSet>

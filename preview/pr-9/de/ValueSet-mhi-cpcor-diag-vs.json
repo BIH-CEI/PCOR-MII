@@ -1,0 +1,64 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mhi-cpcor-diag-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mhi-cpcor-diag-vs</b></p><a name=\"mhi-cpcor-diag-vs\"> </a><a name=\"hcmhi-cpcor-diag-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-mhi-cpcor-diag.html\">codesystem MHI Diagnosegruppe (CPCOR) (Codes) v0.1.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-1\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-1\">1</a></td><td>Essstörung</td></tr><tr><td><a name=\"mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-2\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-2\">2</a></td><td>Nierenerkrankung</td></tr><tr><td><a name=\"mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-3\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-3\">3</a></td><td>Nierenspender</td></tr><tr><td><a name=\"mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-4\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-4\">4</a></td><td>Anhaltende körperliche Beschwerden</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-cpcor-diag-vs",
+  "version" : "0.1.0",
+  "name" : "MhiCpcorDiagVS",
+  "title" : "MHI Diagnosegruppe (CPCOR)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-22T13:30:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-06-17T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+      "code" : "1",
+      "display" : "Essstörung"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+      "code" : "2",
+      "display" : "Nierenerkrankung"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+      "code" : "3",
+      "display" : "Nierenspender"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+      "code" : "4",
+      "display" : "Anhaltende körperliche Beschwerden"
+    }]
+  }
+}

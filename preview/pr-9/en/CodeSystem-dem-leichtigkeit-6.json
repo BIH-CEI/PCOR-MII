@@ -1,0 +1,59 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-leichtigkeit-6",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-leichtigkeit-6</b></p><a name=\"en-dem-leichtigkeit-6\"> </a><a name=\"en-hcdem-leichtigkeit-6\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">sehr-einfach<a name=\"en-dem-leichtigkeit-6-sehr-einfach\"> </a></td><td>Sehr einfach</td></tr><tr><td style=\"white-space:nowrap\">einfach<a name=\"en-dem-leichtigkeit-6-einfach\"> </a></td><td>Einfach</td></tr><tr><td style=\"white-space:nowrap\">weder-noch<a name=\"en-dem-leichtigkeit-6-weder-noch\"> </a></td><td>Weder einfach noch schwierig</td></tr><tr><td style=\"white-space:nowrap\">schwierig<a name=\"en-dem-leichtigkeit-6-schwierig\"> </a></td><td>Schwierig</td></tr><tr><td style=\"white-space:nowrap\">sehr-schwierig<a name=\"en-dem-leichtigkeit-6-sehr-schwierig\"> </a></td><td>Sehr schwierig</td></tr><tr><td style=\"white-space:nowrap\">nicht-zutreffend<a name=\"en-dem-leichtigkeit-6-nicht-zutreffend\"> </a></td><td>Nicht zutreffend</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
+  "version" : "0.1.0",
+  "name" : "DemLeichtigkeit6CS",
+  "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-22T13:30:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Skala zur erlebten Leichtigkeit, Unterstützung zu erhalten (WHODIS1/WHODIS2).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "sehr-einfach",
+    "display" : "Sehr einfach"
+  },
+  {
+    "code" : "einfach",
+    "display" : "Einfach"
+  },
+  {
+    "code" : "weder-noch",
+    "display" : "Weder einfach noch schwierig"
+  },
+  {
+    "code" : "schwierig",
+    "display" : "Schwierig"
+  },
+  {
+    "code" : "sehr-schwierig",
+    "display" : "Sehr schwierig"
+  },
+  {
+    "code" : "nicht-zutreffend",
+    "display" : "Nicht zutreffend"
+  }]
+}

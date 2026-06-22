@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dem-isced-de"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-isced-de</b></p><a name="dem-isced-de"> </a><a name="hcdem-isced-de"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">primar<a name="dem-isced-de-primar"> </a></td><td>Primarstufe (inkl. 4-6 Jahre Grund- o. Förderschule)</td></tr><tr><td style="white-space:nowrap">sek1<a name="dem-isced-de-sek1"> </a></td><td>Sekundarstufe I (inkl. Hauptschule, Realschule, Gymnasium, Gesamtschule)</td></tr><tr><td style="white-space:nowrap">sek2<a name="dem-isced-de-sek2"> </a></td><td>Sekundarstufe II (inkl. gymnasiale Oberstufe, (Berufliches) Gymnasium, Berufsschule und Betrieb, Berufsfachschule, Fachoberschule)</td></tr><tr><td style="white-space:nowrap">post-sek<a name="dem-isced-de-post-sek"> </a></td><td>Post-sekundäre, nicht-tertiäre Ausbildungen (inkl. einjährige Fachoberschule, zweijährige Berufsoberschule/Technische Oberschule, Kolleg, Abendgymnasium)</td></tr><tr><td style="white-space:nowrap">bachelor<a name="dem-isced-de-bachelor"> </a></td><td>Bachelor oder berufsqualifizierender Studienabschluss (inkl. Berufsakademie, Abschluss einer beruflichen Aufstiegsfortbildung, Geprüfte:r Berufsspezialist:in)</td></tr><tr><td style="white-space:nowrap">master<a name="dem-isced-de-master"> </a></td><td>Master oder äquivalent (inkl. Diplom, staatl./kirchl. Prüfung)</td></tr><tr><td style="white-space:nowrap">promotion<a name="dem-isced-de-promotion"> </a></td><td>Promotion oder äquivalent</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"/>
+  <version value="0.1.0"/>
+  <name value="DemIscedCS"/>
+  <title value="DEM Bildungsabschluss (ISCED-2011/KMK)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-22T13:30:31+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Höchster Bildungsabschluss nach ISCED-2011 / KMK-Systematik (Q_ISCED)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="primar"/>
+    <display value="Primarstufe (inkl. 4-6 Jahre Grund- o. Förderschule)"/>
+  </concept>
+  <concept>
+    <code value="sek1"/>
+    <display value="Sekundarstufe I (inkl. Hauptschule, Realschule, Gymnasium, Gesamtschule)"/>
+  </concept>
+  <concept>
+    <code value="sek2"/>
+    <display value="Sekundarstufe II (inkl. gymnasiale Oberstufe, (Berufliches) Gymnasium, Berufsschule und Betrieb, Berufsfachschule, Fachoberschule)"/>
+  </concept>
+  <concept>
+    <code value="post-sek"/>
+    <display value="Post-sekundäre, nicht-tertiäre Ausbildungen (inkl. einjährige Fachoberschule, zweijährige Berufsoberschule/Technische Oberschule, Kolleg, Abendgymnasium)"/>
+  </concept>
+  <concept>
+    <code value="bachelor"/>
+    <display value="Bachelor oder berufsqualifizierender Studienabschluss (inkl. Berufsakademie, Abschluss einer beruflichen Aufstiegsfortbildung, Geprüfte:r Berufsspezialist:in)"/>
+  </concept>
+  <concept>
+    <code value="master"/>
+    <display value="Master oder äquivalent (inkl. Diplom, staatl./kirchl. Prüfung)"/>
+  </concept>
+  <concept>
+    <code value="promotion"/>
+    <display value="Promotion oder äquivalent"/>
+  </concept>
+</CodeSystem>

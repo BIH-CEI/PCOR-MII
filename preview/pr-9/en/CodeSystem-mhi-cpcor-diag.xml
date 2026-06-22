@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mhi-cpcor-diag"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mhi-cpcor-diag</b></p><a name="en-mhi-cpcor-diag"> </a><a name="en-hcmhi-cpcor-diag"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="en-mhi-cpcor-diag-1"> </a></td><td>Essstörung</td></tr><tr><td style="white-space:nowrap">2<a name="en-mhi-cpcor-diag-2"> </a></td><td>Nierenerkrankung</td></tr><tr><td style="white-space:nowrap">3<a name="en-mhi-cpcor-diag-3"> </a></td><td>Nierenspender</td></tr><tr><td style="white-space:nowrap">4<a name="en-mhi-cpcor-diag-4"> </a></td><td>Anhaltende körperliche Beschwerden</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag"/>
+  <version value="0.1.0"/>
+  <name value="MhiCpcorDiagCS"/>
+  <title value="MHI Diagnosegruppe (CPCOR) (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-22T13:30:31+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="1"/>
+    <display value="Essstörung"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Nierenerkrankung"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Nierenspender"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Anhaltende körperliche Beschwerden"/>
+  </concept>
+</CodeSystem>

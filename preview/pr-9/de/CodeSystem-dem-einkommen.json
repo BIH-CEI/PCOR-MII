@@ -1,0 +1,55 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dem-einkommen",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-einkommen</b></p><a name=\"dem-einkommen\"> </a><a name=\"hcdem-einkommen\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">band-niedrig<a name=\"dem-einkommen-band-niedrig\"> </a></td><td>Bis zu 2.300 € pro Monat</td></tr><tr><td style=\"white-space:nowrap\">band-mittel<a name=\"dem-einkommen-band-mittel\"> </a></td><td>Zwischen 2.300 € und 5.200 € pro Monat</td></tr><tr><td style=\"white-space:nowrap\">band-hoch<a name=\"dem-einkommen-band-hoch\"> </a></td><td>5.200 € pro Monat oder mehr</td></tr><tr><td style=\"white-space:nowrap\">weiss-nicht<a name=\"dem-einkommen-weiss-nicht\"> </a></td><td>Ich weiss es nicht</td></tr><tr><td style=\"white-space:nowrap\">keine-angabe<a name=\"dem-einkommen-keine-angabe\"> </a></td><td>Möchte ich nicht sagen</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen",
+  "version" : "0.1.0",
+  "name" : "DemEinkommenCS",
+  "title" : "DEM Haushaltseinkommen (Bänder)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-22T13:30:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "band-niedrig",
+    "display" : "Bis zu 2.300 € pro Monat"
+  },
+  {
+    "code" : "band-mittel",
+    "display" : "Zwischen 2.300 € und 5.200 € pro Monat"
+  },
+  {
+    "code" : "band-hoch",
+    "display" : "5.200 € pro Monat oder mehr"
+  },
+  {
+    "code" : "weiss-nicht",
+    "display" : "Ich weiss es nicht"
+  },
+  {
+    "code" : "keine-angabe",
+    "display" : "Möchte ich nicht sagen"
+  }]
+}
