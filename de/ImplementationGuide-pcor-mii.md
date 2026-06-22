@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-06-18T09:13:00+00:00",
+  "date" : "2026-06-22T13:30:33+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1275,7 +1275,7 @@
         "reference" : "QuestionnaireResponse/MHIResponse"
       },
       "name" : "MHI — Beispielantwort",
-      "description" : "Beispielantwort zum MHI-Questionnaire (Medical History).",
+      "description" : "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History).",
       "exampleBoolean" : true
     },
     {

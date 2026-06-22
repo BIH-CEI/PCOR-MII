@@ -13,7 +13,7 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
 
 ### Responses for this Questionnaire
 
-* [Beispielantwort zum MHI-Questionnaire (Medical History).](QuestionnaireResponse-MHIResponse.md)
+* [Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History).](QuestionnaireResponse-MHIResponse.md)
 
 
 
