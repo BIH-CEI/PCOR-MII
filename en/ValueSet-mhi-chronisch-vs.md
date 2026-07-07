@@ -33,7 +33,7 @@ Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).
   "title" : "MHI Chronische Erkrankungen (GIPS13)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-06-22T13:30:33+00:00",
+  "date" : "2026-07-07T13:06:55+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
