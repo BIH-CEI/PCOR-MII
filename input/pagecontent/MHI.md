@@ -12,6 +12,5 @@ Der **MHI**-Fragebogen (*Medical History*) erfasst die medizinische Vorgeschicht
 Einige MHI-Items sind nicht in allen drei Szenarien (PSS, NTx, AN) zu erheben:
 
 - **Gewichtsverlauf** (`weight_outpatient_1/2`, `weight_inpatient`, `weight_discharge`) und **`AN_subtyp`** — nur im Szenario **Anorexia nervosa**.
-- **`GIPS13`** (chronische Erkrankungen) — in AN und NTx, nicht in PSS.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).
