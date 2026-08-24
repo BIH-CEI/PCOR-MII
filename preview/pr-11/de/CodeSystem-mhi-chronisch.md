@@ -7,7 +7,7 @@ Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [MhiChronischVS](ValueSet-mhi-chronisch-vs.md)
+* [MHI Chronische Erkrankungen (GIPS13)](ValueSet-mhi-chronisch-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

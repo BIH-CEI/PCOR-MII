@@ -7,7 +7,7 @@ Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln 
 
 This Code system is referenced in the definition of the following value sets:
 
-* [DemEinkommenVS](ValueSet-dem-einkommen-vs.md)
+* [DEM Haushaltseinkommen](ValueSet-dem-einkommen-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

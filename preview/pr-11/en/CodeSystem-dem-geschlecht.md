@@ -7,7 +7,7 @@ Selbstbeschriebenes Geschlecht (Q_SEX). HINWEIS: Im MII-Kontext bevorzugt an das
 
 This Code system is referenced in the definition of the following value sets:
 
-* [DemGeschlechtVS](ValueSet-dem-geschlecht-vs.md)
+* [DEM Geschlecht](ValueSet-dem-geschlecht-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Geschlecht (Selbstbeschreibung)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

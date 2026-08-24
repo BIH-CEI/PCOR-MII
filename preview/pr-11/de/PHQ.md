@@ -14,22 +14,28 @@ PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein ei
 | :--- | :--- | :--- | :--- |
 | **PHQ-9** | Depressivität (9 Items) | enthalten | [PHQ-9](PHQ-9.md) |
 | **PHQ-15** | somatische Symptomlast (15 Items) | enthalten (ab 2026.5.0) | [PHQ-15](PHQ-15.md) |
-| PHQ-8 | Depressivität ohne Suizid-Item | nicht enthalten (Stand 2026.5.2) | — |
+| PHQ-8 | Depressivität ohne Suizid-Item | kein eigener Questionnaire — vollständig im PHQ-9 enthalten | →[PHQ-9](PHQ-9.md) |
 | PHQ-4 | Ultrakurz-Screening (PHQ-2 + GAD-2) | nicht enthalten (Stand 2026.5.2) | — |
 | GAD-7 | Ängstlichkeit (7 Items) | nicht enthalten (Stand 2026.5.2) | — |
 
-PHQ-8, PHQ-4 und GAD-7 sind im MII PRO-Modul derzeit nicht enthalten — es existiert also weder ein Questionnaire noch eine Canonical-URL, auf die verwiesen werden könnte. Sie sind hier nur der Vollständigkeit halber genannt; Bedarf wäre an das MII PRO-Modul zu melden.
+Für den **PHQ-8** existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (`phq-phq2a…h`; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item `phq-phq2i`). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items `phq-phq2a…h` aus.
+
+PHQ-4 und GAD-7 sind im MII PRO-Modul derzeit nicht enthalten — es existiert also weder ein Questionnaire noch eine Canonical-URL, auf die verwiesen werden könnte. Sie sind hier nur der Vollständigkeit halber genannt; Bedarf wäre an das MII PRO-Modul zu melden.
 
 ### Gemeinsamer PHQ-D-Namespace
 
-Die Items der PHQ-Instrumente tragen `linkId`s aus einem gemeinsamen PHQ-D-Namespace (`phq-…`), statt pro Fragebogen neu vergebener IDs. Items, die in mehreren Instrumenten vorkommen, haben dadurch überall dieselbe `linkId`. Konkret teilen sich PHQ-9 und PHQ-15 zwei Items aus dem Depressions-Block:
+Die Items der PHQ-Instrumente tragen `linkId`s aus einem gemeinsamen PHQ-D-Namespace (`phq-…`), statt pro Fragebogen neu vergebener IDs. Items, die in mehreren Instrumenten vorkommen, haben dadurch überall dieselbe `linkId`. Die Überlappungen innerhalb der Familie (Items aus dem Depressions-Block):
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| `phq-phq2c` | Schlafstörungen / trouble sleeping | enthalten | enthalten |
-| `phq-phq2d` | Müdigkeit / feeling tired, low energy | enthalten | enthalten |
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `phq-phq2a` | Interessen-/Freudlosigkeit / little interest or pleasure | enthalten | enthalten | enthalten (PHQ-2) | — |
+| `phq-phq2b` | Niedergeschlagenheit / feeling down, depressed, hopeless | enthalten | enthalten | enthalten (PHQ-2) | — |
+| `phq-phq2c` | Schlafstörungen / trouble sleeping | enthalten | enthalten | — | enthalten |
+| `phq-phq2d` | Müdigkeit / feeling tired, low energy | enthalten | enthalten | — | enthalten |
 
-Werden PHQ-9 und PHQ-15 derselben Person verarbeitet und die QuestionnaireResponses allein über `item.linkId` zusammengeführt, kollidieren diese beiden Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.
+Darüber hinaus: Der **PHQ-8** besteht vollständig aus PHQ-9-Items (`phq-phq2a…h`, siehe oben), und die beiden **GAD-2**-Items des PHQ-4 sind zugleich die ersten beiden Items des **GAD-7**. Da PHQ-4 und GAD-7 im MII PRO-Modul nicht enthalten sind, existieren für die GAD-Items derzeit keine `linkId`s im Namespace.
+
+Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die QuestionnaireResponses allein über `item.linkId` zusammengeführt, kollidieren die geteilten Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.
 
 ### linkId-Migration PHQ-9 (2026.4.x → ab 2026.5.0)
 

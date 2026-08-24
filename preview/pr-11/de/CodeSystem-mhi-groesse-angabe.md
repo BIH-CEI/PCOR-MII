@@ -7,7 +7,7 @@ Einheit/Angabe-Status für Körpergröße (Q_WB152).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [MhiGroesseAngabeVS](ValueSet-mhi-groesse-angabe-vs.md)
+* [MHI Größenangabe](ValueSet-mhi-groesse-angabe-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Größenangabe (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

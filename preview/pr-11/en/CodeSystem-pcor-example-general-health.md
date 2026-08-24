@@ -7,7 +7,7 @@ Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesund
 
 This Code system is referenced in the definition of the following value sets:
 
-* [PcorExampleGeneralHealthVS](ValueSet-pcor-example-general-health.md)
+* [PCOR Example General Health Self-Assessment](ValueSet-pcor-example-general-health.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "PCOR Example General Health Self-Assessment",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

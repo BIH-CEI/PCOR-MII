@@ -7,7 +7,7 @@ Subtyp der Anorexia nervosa (AN_subtyp).
 
 This Code system is referenced in the definition of the following value sets:
 
-* [MhiAnSubtypVS](ValueSet-mhi-an-subtyp-vs.md)
+* [MHI Anorexia-nervosa-Subtyp](ValueSet-mhi-an-subtyp-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MHI Anorexia-nervosa-Subtyp (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

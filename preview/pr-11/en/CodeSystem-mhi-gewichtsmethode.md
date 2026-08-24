@@ -7,7 +7,7 @@ Wie wurde das Gewicht ermittelt? (weight_outpatient_2).
 
 This Code system is referenced in the definition of the following value sets:
 
-* [MhiGewichtsmethodeVS](ValueSet-mhi-gewichtsmethode-vs.md)
+* [MHI Gewichtsmessung Methode](ValueSet-mhi-gewichtsmethode-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MHI Gewichtsmessung Methode (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -7,7 +7,7 @@
 
 This Code system is referenced in the definition of the following value sets:
 
-* [DemHaeufigkeit5VS](ValueSet-dem-haeufigkeit-5-vs.md)
+* [DEM Häufigkeit (5-stufig)](ValueSet-dem-haeufigkeit-5-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

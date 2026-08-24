@@ -7,9 +7,9 @@ Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [DemJaNeinVS](ValueSet-dem-ja-nein.md)
-* [DemJaNeinKaVS](ValueSet-dem-ja-nein-ka-vs.md)
-* [DemJaNeinNzVS](ValueSet-dem-ja-nein-nz-vs.md)
+* [DEM Ja/Nein](ValueSet-dem-ja-nein.md)
+* [DEM Ja/Nein/Keine Angabe](ValueSet-dem-ja-nein-ka-vs.md)
+* [DEM Ja/Nein/Nicht zutreffend](ValueSet-dem-ja-nein-nz-vs.md)
 
 -------
 
@@ -29,7 +29,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

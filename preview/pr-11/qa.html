@@ -47,9 +47,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PCOR_MII</h1>
- <p>Generated Wed Aug 05 11:51:44 UTC 2026, FHIR version 4.0.1 for pcor-mii#0.2.0 (canonical = <a href="https://bih-cei.github.io/PCOR-MII">https://bih-cei.github.io/PCOR-MII</a> (<a href="https://bih-cei.github.io/PCOR-MII/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Mon Aug 24 14:31:34 UTC 2026, FHIR version 4.0.1 for pcor-mii#0.2.0 (canonical = <a href="https://bih-cei.github.io/PCOR-MII">https://bih-cei.github.io/PCOR-MII</a> (<a href="https://bih-cei.github.io/PCOR-MII/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.3.0</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.3.2</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = pcor-mii, Canonical = https://bih-cei.github.io/PCOR-MII</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: de. 8 of 50 (16%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
@@ -1054,50 +1054,50 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[1]&#8203;.code[0]&#8203;.display (l1&#8203;/c106051)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l14">log</a>, or see <a href="#vmi55" onClick="document.getElementById('vmi55').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi55" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#82589-3 ("Highest level of education")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#82589-3"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "82589-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#82589-3"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "82589-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[1]&#8203;.code[0] (l1&#8203;/c106051)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#82589-3 for language(s) 'de'. The display is 'Highest level of education' which is a valid display for the default language für 'http://loinc.org#82589-3'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l14">log</a>, or see <a href="#vmi56" onClick="document.getElementById('vmi56').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi56" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#82589-3 ("Highest level of education")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#82589-3"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "82589-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#82589-3"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "82589-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[2]&#8203;.code[0]&#8203;.display (l1&#8203;/c106318)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l15">log</a>, or see <a href="#vmi57" onClick="document.getElementById('vmi57').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi57" style="display:none"><br/><pre>0ms tx-op
-4ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#76691-5 ("Gender identity")]"
-4ms http://loinc.org/vs|2.82: Check "http://loinc.org#76691-5"
-5ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-5ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-5ms http://loinc.org/vs|2.82: Code "76691-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#76691-5 ("Gender identity")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#76691-5"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "76691-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[2]&#8203;.code[0] (l1&#8203;/c106318)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#76691-5 for language(s) 'de'. The display is 'Gender identity' which is a valid display for the default language für 'http://loinc.org#76691-5'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l15">log</a>, or see <a href="#vmi58" onClick="document.getElementById('vmi58').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi58" style="display:none"><br/><pre>0ms tx-op
-4ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#76691-5 ("Gender identity")]"
-4ms http://loinc.org/vs|2.82: Check "http://loinc.org#76691-5"
-5ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-5ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-5ms http://loinc.org/vs|2.82: Code "76691-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#76691-5 ("Gender identity")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#76691-5"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "76691-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[4]&#8203;.code[0]&#8203;.display (l1&#8203;/c106827)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l16">log</a>, or see <a href="#vmi59" onClick="document.getElementById('vmi59').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi59" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#67875-5 ("Employment status - current")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#67875-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "67875-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#67875-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "67875-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[4]&#8203;.code[0] (l1&#8203;/c106827)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#67875-5 for language(s) 'de'. The display is 'Employment status - current' which is a valid display for the default language für 'http://loinc.org#67875-5'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l16">log</a>, or see <a href="#vmi60" onClick="document.getElementById('vmi60').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi60" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#67875-5 ("Employment status - current")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#67875-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "67875-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#67875-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "67875-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[5]&#8203;.code[0]&#8203;.display (l1&#8203;/c107133)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#108248-6 for language(s) 'de'. The display is 'Household income' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l17">log</a>, or see <a href="#vmi61" onClick="document.getElementById('vmi61').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi61" style="display:none"><br/><pre>0ms tx-op
@@ -1134,23 +1134,23 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[8]&#8203;.code[0]&#8203;.display (l1&#8203;/c108668)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l19">log</a>, or see <a href="#vmi65" onClick="document.getElementById('vmi65').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi65" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#78746-5 ("Country of birth [Location]")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#78746-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "78746-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#78746-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "78746-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[8]&#8203;.code[0] (l1&#8203;/c108668)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#78746-5 for language(s) 'de'. The display is 'Country of birth [Location]' which is a valid display for the default language für 'http://loinc.org#78746-5'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l19">log</a>, or see <a href="#vmi66" onClick="document.getElementById('vmi66').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi66" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#78746-5 ("Country of birth [Location]")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#78746-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "78746-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#78746-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "78746-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[10]&#8203;.code[0]&#8203;.display (l1&#8203;/c109193)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l20">log</a>, or see <a href="#vmi67" onClick="document.getElementById('vmi67').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi67" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#66476-3 ("Country of citizenship")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#66476-3"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#66476-3"
 2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
 2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
 2ms http://loinc.org/vs|2.82: Code "66476-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
@@ -1158,26 +1158,26 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[10]&#8203;.code[0] (l1&#8203;/c109193)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#66476-3 for language(s) 'de'. The display is 'Country of citizenship' which is a valid display for the default language für 'http://loinc.org#66476-3'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l20">log</a>, or see <a href="#vmi68" onClick="document.getElementById('vmi68').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi68" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#66476-3 ("Country of citizenship")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#66476-3"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#66476-3"
 2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
 2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
 2ms http://loinc.org/vs|2.82: Code "66476-3" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[14]&#8203;.code[0]&#8203;.display (l1&#8203;/c110011)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l21">log</a>, or see <a href="#vmi69" onClick="document.getElementById('vmi69').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi69" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#104078-1 ("Number of underage persons in household")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#104078-1"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "104078-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#104078-1 ("Number of underage persons in household")]"
+3ms http://loinc.org/vs|2.82: Check "http://loinc.org#104078-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "104078-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[0]&#8203;.item[14]&#8203;.code[0] (l1&#8203;/c110011)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#104078-1 for language(s) 'de'. The display is 'Number of underage persons in household' which is a valid display for the default language für 'http://loinc.org#104078-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l21">log</a>, or see <a href="#vmi70" onClick="document.getElementById('vmi70').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi70" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#104078-1 ("Number of underage persons in household")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#104078-1"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "104078-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#104078-1 ("Number of underage persons in household")]"
+3ms http://loinc.org/vs|2.82: Check "http://loinc.org#104078-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "104078-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[1]&#8203;.item[0]&#8203;.code[0]&#8203;.display (l1&#8203;/c111007)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#45404-1 for language(s) 'de'. The display is 'Marital status' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l22">log</a>, or see <a href="#vmi71" onClick="document.getElementById('vmi71').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi71" style="display:none"><br/><pre>0ms tx-op
@@ -1227,18 +1227,18 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[2]&#8203;.item[1]&#8203;.code[0]&#8203;.display (l1&#8203;/c215269)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l26">log</a>, or see <a href="#vmi75" onClick="document.getElementById('vmi75').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi75" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#64218-1 ("How many cigarettes do you smoke per day now [PhenX]")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#64218-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "64218-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#64218-1"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "64218-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Questionnaire&#8203;.item[2]&#8203;.item[1]&#8203;.code[0] (l1&#8203;/c215269)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#64218-1 for language(s) 'de'. The display is 'How many cigarettes do you smoke per day now [PhenX]' which is a valid display for the default language für 'http://loinc.org#64218-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l26">log</a>, or see <a href="#vmi76" onClick="document.getElementById('vmi76').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi76" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#64218-1 ("How many cigarettes do you smoke per day now [PhenX]")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#64218-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "64218-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#64218-1"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "64218-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Questionnaire&#8203;.item[2]&#8203;.item[2]&#8203;.code[0]&#8203;.display (l1&#8203;/c215709)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#11331-6 for language(s) 'de'. The display is 'History of Alcohol use' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l27">log</a>, or see <a href="#vmi77" onClick="document.getElementById('vmi77').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi77" style="display:none"><br/><pre>0ms tx-op
@@ -1293,11 +1293,11 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Analysing http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1 for validation purposes
 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Parameters: disp-lang=de-DE, generate-narrative, default-to-latest
 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Prepare include[0]: "(urn:iso:std:iso:3166)"
-0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "urn:iso:std:iso:3166|2018"
-0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Prepare include[1]: "(urn:iso:std:iso:3166:-2)"
-0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "urn:iso:std:iso:3166:-2|2021"
-0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Prepare include[2]: "(http://unstats.un.org/unsd/methods/m49/m49.htm)(class=region)"
-0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "http://unstats.un.org/unsd/methods/m49/m49.htm|null"
+1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "urn:iso:std:iso:3166|2018"
+1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Prepare include[1]: "(urn:iso:std:iso:3166:-2)"
+1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "urn:iso:std:iso:3166:-2|2021"
+1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Prepare include[2]: "(http://unstats.un.org/unsd/methods/m49/m49.htm)(class=region)"
+1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: "http://unstats.un.org/unsd/methods/m49/m49.htm|null"
 1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Validate "[urn:iso:std:iso:3166#DE ("Germany")]"
 1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Check "urn:iso:std:iso:3166#DE"
 1ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: urn:iso:std:iso:3166|2018 for urn:iso:std:iso:3166
@@ -2239,67 +2239,67 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[1]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l31&#8203;/c137)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi214" onClick="document.getElementById('vmi214').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi214" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[1]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l31&#8203;/c137)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi215" onClick="document.getElementById('vmi215').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi215" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[1]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l32&#8203;/c140)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi216" onClick="document.getElementById('vmi216').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi216" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[1]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l32&#8203;/c140)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language für 'http://loinc.org#LA10082-8'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi217" onClick="document.getElementById('vmi217').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi217" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[2]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l38&#8203;/c140)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi218" onClick="document.getElementById('vmi218').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi218" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[2]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l38&#8203;/c140)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language für 'http://loinc.org#LA10082-8'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi219" onClick="document.getElementById('vmi219').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi219" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[2]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l39&#8203;/c135)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA6270-8 for language(s) 'de-DE'. The display is 'Never' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l39">log</a>, or see <a href="#vmi220" onClick="document.getElementById('vmi220').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi220" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA6270-8 ("Never")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6270-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA6270-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6270-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA6270-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[2]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l39&#8203;/c135)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA6270-8 for language(s) 'de-DE'. The display is 'Never' which is a valid display for the default language für 'http://loinc.org#LA6270-8'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l39">log</a>, or see <a href="#vmi221" onClick="document.getElementById('vmi221').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi221" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA6270-8 ("Never")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6270-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA6270-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6270-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA6270-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[3]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l45&#8203;/c139)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13863-8 for language(s) 'de-DE'. The display is 'A little bit' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l40">log</a>, or see <a href="#vmi222" onClick="document.getElementById('vmi222').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi222" style="display:none"><br/><pre>0ms tx-op
@@ -2321,17 +2321,17 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
      <td><b>QuestionnaireResponse&#8203;.item[3]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l46&#8203;/c135)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13909-9 for language(s) 'de-DE'. The display is 'Somewhat' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l41">log</a>, or see <a href="#vmi224" onClick="document.getElementById('vmi224').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi224" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA13909-9 ("Somewhat")]"
 2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA13909-9"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[3]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l46&#8203;/c135)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13909-9 for language(s) 'de-DE'. The display is 'Somewhat' which is a valid display for the default language für 'http://loinc.org#LA13909-9'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l41">log</a>, or see <a href="#vmi225" onClick="document.getElementById('vmi225').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi225" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA13909-9 ("Somewhat")]"
 2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA13909-9"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[4]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l52&#8203;/c143)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13863-8 for language(s) 'de-DE'. The display is 'A little bit' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l40">log</a>, or see <a href="#vmi226" onClick="document.getElementById('vmi226').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi226" style="display:none"><br/><pre>0ms tx-op
@@ -2351,51 +2351,51 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[4]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l53&#8203;/c137)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi228" onClick="document.getElementById('vmi228').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi228" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[4]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l53&#8203;/c137)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi229" onClick="document.getElementById('vmi229').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi229" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[5]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l59&#8203;/c143)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi230" onClick="document.getElementById('vmi230').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi230" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[5]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l59&#8203;/c143)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi231" onClick="document.getElementById('vmi231').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi231" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[5]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l60&#8203;/c143)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi232" onClick="document.getElementById('vmi232').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi232" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[5]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l60&#8203;/c143)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi233" onClick="document.getElementById('vmi233').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi233" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[6]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l66&#8203;/c143)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13863-8 for language(s) 'de-DE'. The display is 'A little bit' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l40">log</a>, or see <a href="#vmi234" onClick="document.getElementById('vmi234').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi234" style="display:none"><br/><pre>0ms tx-op
@@ -2416,18 +2416,18 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[6]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l67&#8203;/c141)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA6568-5 for language(s) 'de-DE'. The display is 'Not at all' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l42">log</a>, or see <a href="#vmi236" onClick="document.getElementById('vmi236').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi236" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA6568-5 ("Not at all")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6568-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA6568-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6568-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA6568-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[6]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l67&#8203;/c141)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA6568-5 for language(s) 'de-DE'. The display is 'Not at all' which is a valid display for the default language für 'http://loinc.org#LA6568-5'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l42">log</a>, or see <a href="#vmi237" onClick="document.getElementById('vmi237').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi237" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA6568-5 ("Not at all")]"
-2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6568-5"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA6568-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA6568-5"
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA6568-5" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[7]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l73&#8203;/c141)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13863-8 for language(s) 'de-DE'. The display is 'A little bit' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l40">log</a>, or see <a href="#vmi238" onClick="document.getElementById('vmi238').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi238" style="display:none"><br/><pre>0ms tx-op
@@ -2449,17 +2449,17 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
      <td><b>QuestionnaireResponse&#8203;.item[7]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l74&#8203;/c141)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13909-9 for language(s) 'de-DE'. The display is 'Somewhat' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l41">log</a>, or see <a href="#vmi240" onClick="document.getElementById('vmi240').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi240" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA13909-9 ("Somewhat")]"
 2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA13909-9"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[7]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l74&#8203;/c141)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA13909-9 for language(s) 'de-DE'. The display is 'Somewhat' which is a valid display for the default language für 'http://loinc.org#LA13909-9'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l41">log</a>, or see <a href="#vmi241" onClick="document.getElementById('vmi241').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi241" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA13909-9 ("Somewhat")]"
 2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA13909-9"
-3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-3ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+2ms http://loinc.org/vs|2.82: Code "LA13909-9" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.meta&#8203;.profile[0] (l1&#8203;/c2)</b></td><td><b>warning</b></td><td><b>Die Profilreferenz 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1' wurde nicht geprüft, weil sie unbekannt ist und der Validator so eingestellt ist, dass er keine unbekannten Profile abruft.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY</span></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
@@ -2479,67 +2479,67 @@ hl7.fhir.uv.sdc#3.0.0:     <a href="http://hl7.org/fhir/uv/sdc/STU3/Implementati
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l26&#8203;/c110)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi244" onClick="document.getElementById('vmi244').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi244" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[0]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l26&#8203;/c110)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi245" onClick="document.getElementById('vmi245').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi245" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l30&#8203;/c113)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi246" onClick="document.getElementById('vmi246').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi246" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[1]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l30&#8203;/c113)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language für 'http://loinc.org#LA10082-8'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi247" onClick="document.getElementById('vmi247').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi247" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[2]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l34&#8203;/c113)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi248" onClick="document.getElementById('vmi248').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi248" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[2]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l34&#8203;/c113)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10082-8 for language(s) 'de-DE'. The display is 'Sometimes' which is a valid display for the default language für 'http://loinc.org#LA10082-8'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l38">log</a>, or see <a href="#vmi249" onClick="document.getElementById('vmi249').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi249" style="display:none"><br/><pre>0ms tx-op
 1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10082-8 ("Sometimes")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10082-8"
+3ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+3ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+3ms http://loinc.org/vs|2.82: Code "LA10082-8" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[3]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.display (l38&#8203;/c110)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi250" onClick="document.getElementById('vmi250').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi250" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.item[0]&#8203;.item[3]&#8203;.answer[0]&#8203;.value&#8203;.ofType(Coding) (l38&#8203;/c110)</b></td><td><b>warning</b></td><td><b>There are no valid display names found for the code http://loinc.org#LA10066-1 for language(s) 'de-DE'. The display is 'Rarely' which is a valid display for the default language für 'http://loinc.org#LA10066-1'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi251" onClick="document.getElementById('vmi251').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_PassThrough_TX_Message</span><div id="vmi251" style="display:none"><br/><pre>0ms tx-op
-1ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
-1ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
-2ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
-2ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
-2ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+2ms http://loinc.org/vs|2.82: Validate "[http://loinc.org#LA10066-1 ("Rarely")]"
+2ms http://loinc.org/vs|2.82: Check "http://loinc.org#LA10066-1"
+4ms http://loinc.org/vs|2.82: CodeSystem found: http://loinc.org|2.82 for http://loinc.org|2.82
+4ms http://loinc.org/vs|2.82: check code in (http://loinc.org) at Coding
+4ms http://loinc.org/vs|2.82: Code "LA10066-1" found in http://loinc.org|2.82</pre></div></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>QuestionnaireResponse&#8203;.meta&#8203;.profile[0] (l1&#8203;/c2)</b></td><td><b>warning</b></td><td><b>Die Profilreferenz 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1' wurde nicht geprüft, weil sie unbekannt ist und der Validator so eingestellt ist, dass er keine unbekannten Profile abruft.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY</span></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>

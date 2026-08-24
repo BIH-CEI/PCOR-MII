@@ -361,8 +361,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PHQ-8</td>
       <td>Depressivität ohne Suizid-Item</td>
-      <td>nicht enthalten (Stand 2026.5.2)</td>
-      <td>—</td>
+      <td>kein eigener Questionnaire — vollständig im PHQ-9 enthalten</td>
+      <td>→ <a href="PHQ-9.html">PHQ-9</a></td>
     </tr>
     <tr>
       <td>PHQ-4</td>
@@ -379,11 +379,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>PHQ-8, PHQ-4 und GAD-7 sind im MII PRO-Modul derzeit nicht enthalten — es existiert also weder ein Questionnaire noch eine Canonical-URL, auf die verwiesen werden könnte. Sie sind hier nur der Vollständigkeit halber genannt; Bedarf wäre an das MII PRO-Modul zu melden.</p>
+<p>Für den <strong>PHQ-8</strong> existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (<code class="language-plaintext highlighter-rouge">phq-phq2a…h</code>; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code>). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items <code class="language-plaintext highlighter-rouge">phq-phq2a…h</code> aus.</p>
+
+<p>PHQ-4 und GAD-7 sind im MII PRO-Modul derzeit nicht enthalten — es existiert also weder ein Questionnaire noch eine Canonical-URL, auf die verwiesen werden könnte. Sie sind hier nur der Vollständigkeit halber genannt; Bedarf wäre an das MII PRO-Modul zu melden.</p>
 
 <h3 id="gemeinsamer-phq-d-namespace">Gemeinsamer PHQ-D-Namespace</h3>
 
-<p>Die Items der PHQ-Instrumente tragen <code class="language-plaintext highlighter-rouge">linkId</code>s aus einem gemeinsamen PHQ-D-Namespace (<code class="language-plaintext highlighter-rouge">phq-…</code>), statt pro Fragebogen neu vergebener IDs. Items, die in mehreren Instrumenten vorkommen, haben dadurch überall dieselbe <code class="language-plaintext highlighter-rouge">linkId</code>. Konkret teilen sich PHQ-9 und PHQ-15 zwei Items aus dem Depressions-Block:</p>
+<p>Die Items der PHQ-Instrumente tragen <code class="language-plaintext highlighter-rouge">linkId</code>s aus einem gemeinsamen PHQ-D-Namespace (<code class="language-plaintext highlighter-rouge">phq-…</code>), statt pro Fragebogen neu vergebener IDs. Items, die in mehreren Instrumenten vorkommen, haben dadurch überall dieselbe <code class="language-plaintext highlighter-rouge">linkId</code>. Die Überlappungen innerhalb der Familie (Items aus dem Depressions-Block):</p>
 
 <table>
   <thead>
@@ -391,14 +393,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <th><code class="language-plaintext highlighter-rouge">linkId</code></th>
       <th>Item</th>
       <th>PHQ-9</th>
+      <th>PHQ-8</th>
+      <th>PHQ-4</th>
       <th>PHQ-15</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2a</code></td>
+      <td>Interessen-/Freudlosigkeit / little interest or pleasure</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten (PHQ-2)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2b</code></td>
+      <td>Niedergeschlagenheit / feeling down, depressed, hopeless</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten (PHQ-2)</td>
+      <td>—</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">phq-phq2c</code></td>
       <td>Schlafstörungen / trouble sleeping</td>
       <td>enthalten</td>
+      <td>enthalten</td>
+      <td>—</td>
       <td>enthalten</td>
     </tr>
     <tr>
@@ -406,11 +428,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Müdigkeit / feeling tired, low energy</td>
       <td>enthalten</td>
       <td>enthalten</td>
+      <td>—</td>
+      <td>enthalten</td>
     </tr>
   </tbody>
 </table>
 
-<p>Werden PHQ-9 und PHQ-15 derselben Person verarbeitet und die QuestionnaireResponses allein über <code class="language-plaintext highlighter-rouge">item.linkId</code> zusammengeführt, kollidieren diese beiden Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.</p>
+<p>Darüber hinaus: Der <strong>PHQ-8</strong> besteht vollständig aus PHQ-9-Items (<code class="language-plaintext highlighter-rouge">phq-phq2a…h</code>, siehe oben), und die beiden <strong>GAD-2</strong>-Items des PHQ-4 sind zugleich die ersten beiden Items des <strong>GAD-7</strong>. Da PHQ-4 und GAD-7 im MII PRO-Modul nicht enthalten sind, existieren für die GAD-Items derzeit keine <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace.</p>
+
+<p>Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die QuestionnaireResponses allein über <code class="language-plaintext highlighter-rouge">item.linkId</code> zusammengeführt, kollidieren die geteilten Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.</p>
 
 <h3 id="linkid-migration-phq-9-20264x--ab-202650">linkId-Migration PHQ-9 (2026.4.x → ab 2026.5.0)</h3>
 
@@ -551,8 +577,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-08-05 11:48:00 +0000">
-    2026-08-05
+  <span title="2026-08-24 14:28:00 +0000">
+    2026-08-24
   </span>
 
           <br/>

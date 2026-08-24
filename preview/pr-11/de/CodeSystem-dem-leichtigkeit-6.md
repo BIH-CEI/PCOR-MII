@@ -7,7 +7,7 @@ Skala zur erlebten Leichtigkeit, Unterstützung zu erhalten (WHODIS1/WHODIS2).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [DemLeichtigkeit6VS](ValueSet-dem-leichtigkeit-6-vs.md)
+* [DEM Leichtigkeit Unterstützung (6-stufig)](ValueSet-dem-leichtigkeit-6-vs.md)
 
 -------
 
@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-05T11:48:58+00:00",
+  "date" : "2026-08-24T14:28:57+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
