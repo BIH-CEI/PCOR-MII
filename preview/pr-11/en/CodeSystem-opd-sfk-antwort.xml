@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="opd-sfk-antwort"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem opd-sfk-antwort</b></p><a name="en-opd-sfk-antwort"> </a><a name="en-hcopd-sfk-antwort"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal().</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style="white-space:nowrap">trifft-gar-nicht-zu<a name="en-opd-sfk-antwort-trifft-gar-nicht-zu"> </a></td><td>Trifft gar nicht zu</td><td>0</td></tr><tr><td style="white-space:nowrap">trifft-eher-nicht-zu<a name="en-opd-sfk-antwort-trifft-eher-nicht-zu"> </a></td><td>Trifft eher nicht zu</td><td>1</td></tr><tr><td style="white-space:nowrap">teils-teils<a name="en-opd-sfk-antwort-teils-teils"> </a></td><td>Teils/teils</td><td>2</td></tr><tr><td style="white-space:nowrap">trifft-eher-zu<a name="en-opd-sfk-antwort-trifft-eher-zu"> </a></td><td>Trifft eher zu</td><td>3</td></tr><tr><td style="white-space:nowrap">trifft-voellig-zu<a name="en-opd-sfk-antwort-trifft-voellig-zu"> </a></td><td>Trifft völlig zu</td><td>4</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
+  <version value="0.2.0"/>
+  <name value="OpdSfkAntwortCS"/>
+  <title value="OPD-SFK Antwortskala (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-01T21:19:43+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <property>
+    <code value="ordinalValue"/>
+    <uri value="http://hl7.org/fhir/StructureDefinition/ordinalValue"/>
+    <description value="Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal()."/>
+    <type value="decimal"/>
+  </property>
+  <concept>
+    <code value="trifft-gar-nicht-zu"/>
+    <display value="Trifft gar nicht zu"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="0"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="trifft-eher-nicht-zu"/>
+    <display value="Trifft eher nicht zu"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="teils-teils"/>
+    <display value="Teils/teils"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="2"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="trifft-eher-zu"/>
+    <display value="Trifft eher zu"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="3"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="trifft-voellig-zu"/>
+    <display value="Trifft völlig zu"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="4"/>
+    </property>
+  </concept>
+</CodeSystem>

@@ -241,6 +241,18 @@
     "Questionnaire-MHI.html" : "MHI — Medical History"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "OpdSfkAntwortVS",
+    "title" : "OPD-SFK Antwortskala",
+    "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"],
+    "uses" : {
+    },
+    "Questionnaire-OPDSFK.html" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health",
     "version" : "0.2.0",
     "status" : "draft",
@@ -251,5 +263,17 @@
     "uses" : {
     },
     "Questionnaire-PcorExampleQuestionnaire.html" : "PCOR Beispiel-Fragebogen"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "WaiSkala5VS",
+    "title" : "WAI Antwortskala 5-stufig",
+    "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5"],
+    "uses" : {
+    },
+    "Questionnaire-WAI.html" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)"
   }]
 }

@@ -125,11 +125,25 @@
   "name" : "MhiGroesseAngabeCS"
 },
 {
+  "id" : "opd-sfk-antwort",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
+  "version" : "0.2.0",
+  "name" : "OpdSfkAntwortCS"
+},
+{
   "id" : "pcor-example-general-health",
   "type" : "CodeSystem",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
   "version" : "0.2.0",
   "name" : "PcorExampleGeneralHealthCS"
+},
+{
+  "id" : "wai-skala-5",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",
+  "version" : "0.2.0",
+  "name" : "WaiSkala5CS"
 },
 {
   "id" : "pcor-mii",
@@ -146,6 +160,13 @@
   "name" : "DEM"
 },
 {
+  "id" : "GSLTPAQ",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ",
+  "version" : "0.2.0",
+  "name" : "GSLTPAQ"
+},
+{
   "id" : "MHI",
   "type" : "Questionnaire",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
@@ -153,11 +174,25 @@
   "name" : "MHI"
 },
 {
+  "id" : "OPDSFK",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
+  "version" : "0.2.0",
+  "name" : "OPDSFK"
+},
+{
   "id" : "PcorExampleQuestionnaire",
   "type" : "Questionnaire",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
   "version" : "0.2.0",
   "name" : "PcorExampleQuestionnaire"
+},
+{
+  "id" : "WAI",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI",
+  "version" : "0.2.0",
+  "name" : "WAI"
 },
 {
   "id" : "dem-beziehungsstatus-vs",
@@ -300,9 +335,23 @@
   "name" : "MhiGroesseAngabeVS"
 },
 {
+  "id" : "opd-sfk-antwort-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs",
+  "version" : "0.2.0",
+  "name" : "OpdSfkAntwortVS"
+},
+{
   "id" : "pcor-example-general-health",
   "type" : "ValueSet",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health",
   "version" : "0.2.0",
   "name" : "PcorExampleGeneralHealthVS"
+},
+{
+  "id" : "wai-skala-5-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",
+  "version" : "0.2.0",
+  "name" : "WaiSkala5VS"
 }]

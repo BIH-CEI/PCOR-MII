@@ -8,8 +8,8 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
     "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
+    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
     "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe"
   },
   {
@@ -200,6 +200,17 @@
     "ValueSet-mhi-groesse-angabe-vs.html" : "MHI Größenangabe"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "OpdSfkAntwortCS",
+    "title" : "OPD-SFK Antwortskala (Codes)",
+    "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+    "uses" : {
+    },
+    "ValueSet-opd-sfk-antwort-vs.html" : "OPD-SFK Antwortskala"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
     "version" : "0.2.0",
     "status" : "draft",
@@ -209,5 +220,16 @@
     "uses" : {
     },
     "ValueSet-pcor-example-general-health.html" : "PCOR Example General Health Self-Assessment"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "WaiSkala5CS",
+    "title" : "WAI Antwortskala 5-stufig (Codes)",
+    "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.",
+    "uses" : {
+    },
+    "ValueSet-wai-skala-5-vs.html" : "WAI Antwortskala 5-stufig"
   }]
 }
