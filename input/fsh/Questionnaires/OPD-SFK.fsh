@@ -92,13 +92,13 @@ Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 
 * ^expansion.contains[=].code = #trifft-voellig-zu
 * ^expansion.contains[=].display = "Trifft völlig zu"
 
-Instance: OPD-SFK
+Instance: OPDSFK
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"
 Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`."
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-* url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPD-SFK"
+* url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
 * version = "0.1.0"
 * status = #draft
