@@ -6,6 +6,25 @@ Kurzes Entscheidungslog für den PCOR-MII IG. Neueste Einträge oben.
 
 ## Offen — wartet auf Rückmeldung
 
+### ❓ PHQ-SADS — unterschiedlicher Recall bei geteilten Items
+**Status:** offen, **Roadmap 2027** (Stand 2026-09-02)
+
+Der PHQ-SADS ist die gemeinsame Auswertung von PHQ-15, GAD-7 und PHQ-9. Im geteilten
+PHQ-D-Namespace sind das 31 Items, aber nur **29 verschiedene `linkId`s**: `phq-phq2c`
+(Schlafstörungen) und `phq-phq2d` (Müdigkeit) gehören zu PHQ-15 **und** PHQ-9.
+
+**Problem:** PHQ-15 hat einen **4-Wochen-Recall**, PHQ-9 und GAD-7 einen **2-Wochen-Recall**.
+Das geteilte Item wird einmal beantwortet, fließt aber in zwei Scores mit unterschiedlichem
+Zeitbezug ein. Welchen Recall man dem Item auch gibt — eine der beiden Skalen erhält einen Wert
+unter einem Zeitfenster, für das sie nicht validiert ist.
+
+**Konsequenz:** Das ist auf Item-Ebene nicht lösbar; es muss sich in der **Score-Interpretation**
+niederschlagen. Zu klären, bevor ein PHQ-SADS-Artefakt gebaut wird — zusammen mit der offenen
+Frage, ob PHQ-SADS und PHQ-4 überhaupt als abgeleitete Subset-Questionnaires (`derivedFrom`)
+ausgeprägt werden oder nur über `linkId`s ausgewertet.
+
+Beschrieben im Abschnitt „PHQ-SADS" in `input/pagecontent/PHQ.md`.
+
 ### ❓ Welche Questionnaires werden übernommen?
 **Status:** offen (Stand 2026-06-04) — *„welche genau, kommt noch"*
 
