@@ -248,6 +248,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
       </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -346,6 +352,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#generischer-kern-alle-entitäten" id="markdown-toc-generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</a></li>
   <li><a href="#pss-spezifische-instrumente" id="markdown-toc-pss-spezifische-instrumente">PSS-spezifische Instrumente</a></li>
+  <li><a href="#phq-familie-in-pss" id="markdown-toc-phq-familie-in-pss">PHQ-Familie in PSS</a></li>
   <li><a href="#was-pss-von-an-und-ntx-unterscheidet" id="markdown-toc-was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</a></li>
   <li><a href="#rechtelage" id="markdown-toc-rechtelage">Rechtelage</a></li>
 </ul>
@@ -419,18 +426,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>MII PRO seit 2026.6.0</td>
     </tr>
     <tr>
-      <td><strong>PHQ-D</strong></td>
+      <td><strong>PHQ-D Panik-Block</strong></td>
       <td>MHA</td>
       <td style="text-align: right">4</td>
-      <td>Deutsche PHQ-Fassung, Teilmenge</td>
-      <td>offen</td>
+      <td>Angst-/Panikattacken (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>, ja/nein)</td>
+      <td>offen — kein Upstream-Artefakt</td>
     </tr>
     <tr>
       <td><strong>PHQ-SI</strong></td>
       <td>MHA</td>
       <td style="text-align: right">1</td>
-      <td>Suizidalität (Einzelitem)</td>
-      <td>offen</td>
+      <td>Suizidalität — das PHQ-9-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
+      <td>über <a href="PHQ-9.html">PHQ-9</a> abgedeckt</td>
     </tr>
     <tr>
       <td><strong>OPD-SFK</strong></td>
@@ -450,25 +457,55 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><strong>EXPECT</strong></td>
       <td>DCH</td>
       <td style="text-align: right">3</td>
-      <td>Behandlungserwartung (drei NRS-Einzelitems, kein standardisierter Fragebogen)</td>
-      <td>offen — Modellierung zu klären</td>
+      <td>Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen)</td>
+      <td><a href="EXPECT.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>IPQ-S</strong></td>
       <td>DCH</td>
       <td style="text-align: right">1</td>
-      <td>Krankheitswahrnehmung — nur eine offene Frage angelehnt an den B-IPQ</td>
-      <td>offen — Modellierung zu klären</td>
+      <td>Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ</td>
+      <td><a href="IPQ-S.html">Seite</a></td>
     </tr>
   </tbody>
 </table>
 
 <p>Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (<code class="language-plaintext highlighter-rouge">UKE-HCU</code>, <code class="language-plaintext highlighter-rouge">UKE-HCU2</code>, <code class="language-plaintext highlighter-rouge">UKE-PSE</code>, <code class="language-plaintext highlighter-rouge">UKE-TR</code>, <code class="language-plaintext highlighter-rouge">UKE-DOT</code>, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.</p>
 
+<h3 id="phq-familie-in-pss">PHQ-Familie in PSS</h3>
+
+<p>In PSS wird der <strong>PHQ-8</strong> erhoben (AN und NTx: PHQ-9) — also die acht Depressions-Items ohne das Suizid-Item. Dieses wird stattdessen <strong>separat als <code class="language-plaintext highlighter-rouge">PHQ-SI</code></strong> geführt. Beides sind Items derselben PHQ-9-Definition:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dictionary</th>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code>s</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHQ-8</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2a</code>–<code class="language-plaintext highlighter-rouge">phq-phq2h</code></td>
+      <td>Depressivität ohne Suizid-Item</td>
+    </tr>
+    <tr>
+      <td>PHQ-SI</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
+      <td>Suizidalität — genau das Item, das PHQ-9 vom PHQ-8 unterscheidet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9; die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität gesondert behandelbar), keine inhaltliche Abweichung. Siehe <a href="PHQ.html">PHQ-Übersicht</a>.</p>
+
+<p>Der <strong>PHQ-D-Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul <strong>kein Artefakt</strong> — weder Questionnaire noch <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace. Bedarf wäre dort anzumelden.</p>
+
 <h3 id="was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</h3>
 
 <ul>
-  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, PHQ-D, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. In der PHQ-Familie wird in PSS der <strong>PHQ-8</strong> erhoben, in AN und NTx der <strong>PHQ-9</strong>.</li>
+  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.</li>
   <li><strong>PSS und AN gemeinsam</strong>: OPD-SFK und PHQ-SI.</li>
   <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld.</li>
   <li><strong>Nur in NTx</strong>: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.</li>
@@ -537,7 +574,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:25:00 +0000">
+  <span title="2026-09-02 07:34:00 +0000">
     2026-09-02
   </span>
 

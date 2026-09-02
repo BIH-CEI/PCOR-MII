@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:25:29+00:00",
+  "date" : "2026-09-02T07:34:58+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

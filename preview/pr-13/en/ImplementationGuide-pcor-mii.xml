@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-09-02T07:25:29+00:00"/>
+  <date value="2026-09-02T07:34:58+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -874,10 +874,32 @@
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
+        <reference value="Questionnaire/EXPECT"/>
+      </reference>
+      <name value="EXPECT — Erwartung an den Verlauf der Körperbeschwerden"/>
+      <description value="Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden 6 Monate: erwartete Gesamtstärke der Körperbeschwerden, erwartete Beeinträchtigung und erwartete Bewältigung. Kein standardisierter Fragebogen und kein Gesamtscore — die Items sind einzeln auszuwerten und nicht gleichgerichtet. Quelle: PCOR-MII Item Level Dictionary (Entität PSS)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
         <reference value="Questionnaire/GSLTPAQ"/>
       </reference>
       <name value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"/>
       <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/IPQS"/>
+      </reference>
+      <name value="IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)"/>
+      <description value="Eine offene Frage nach den drei wichtigsten subjektiven Ursachen der Körperbeschwerden, angelehnt an Item 9 des Brief Illness Perception Questionnaire (B-IPQ). PCOR-MII erhebt NICHT den B-IPQ selbst; ein B-IPQ-Score ist aus diesem Item nicht ableitbar. Quelle: PCOR-MII Item Level Dictionary (Entität PSS)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1334,6 +1356,22 @@
         </extension>
         <nameUrl value="GSLTPAQ.html"/>
         <title value="GSLTPAQ (Freizeitaktivität)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="EXPECT.html"/>
+        </extension>
+        <nameUrl value="EXPECT.html"/>
+        <title value="EXPECT (Verlaufserwartung)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="IPQ-S.html"/>
+        </extension>
+        <nameUrl value="IPQ-S.html"/>
+        <title value="IPQ-S (Ursachenzuschreibung)"/>
         <generation value="markdown"/>
       </page>
       <page>

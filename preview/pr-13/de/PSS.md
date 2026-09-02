@@ -28,18 +28,31 @@ Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-
 | **SCOFF** | MHA | 5 | Essstörungs-Screening | MII PRO seit 2026.6.0 |
 | **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | MII PRO seit 2026.6.0 |
 | **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | MII PRO seit 2026.6.0 |
-| **PHQ-D** | MHA | 4 | Deutsche PHQ-Fassung, Teilmenge | offen |
-| **PHQ-SI** | MHA | 1 | Suizidalität (Einzelitem) | offen |
+| **PHQ-D Panik-Block** | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | offen — kein Upstream-Artefakt |
+| **PHQ-SI** | MHA | 1 | Suizidalität — das PHQ-9-Item`phq-phq2i` | über[PHQ-9](PHQ-9.md)abgedeckt |
 | **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.md) |
 | **GSLTPAQ** | TCH | 6 | Körperliche Freizeitaktivität | [Seite](GSLTPAQ.md) |
-| **EXPECT** | DCH | 3 | Behandlungserwartung (drei NRS-Einzelitems, kein standardisierter Fragebogen) | offen — Modellierung zu klären |
-| **IPQ-S** | DCH | 1 | Krankheitswahrnehmung — nur eine offene Frage angelehnt an den B-IPQ | offen — Modellierung zu klären |
+| **EXPECT** | DCH | 3 | Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen) | [Seite](EXPECT.md) |
+| **IPQ-S** | DCH | 1 | Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ | [Seite](IPQ-S.md) |
 
 Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (`UKE-HCU`, `UKE-HCU2`, `UKE-PSE`, `UKE-TR`, `UKE-DOT`, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.
 
+### PHQ-Familie in PSS
+
+In PSS wird der **PHQ-8** erhoben (AN und NTx: PHQ-9) — also die acht Depressions-Items ohne das Suizid-Item. Dieses wird stattdessen **separat als `PHQ-SI`** geführt. Beides sind Items derselben PHQ-9-Definition:
+
+| | | |
+| :--- | :--- | :--- |
+| PHQ-8 | `phq-phq2a`–`phq-phq2h` | Depressivität ohne Suizid-Item |
+| PHQ-SI | `phq-phq2i` | Suizidalität — genau das Item, das PHQ-9 vom PHQ-8 unterscheidet |
+
+Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9; die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität gesondert behandelbar), keine inhaltliche Abweichung. Siehe [PHQ-Übersicht](PHQ.md).
+
+Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul **kein Artefakt** — weder Questionnaire noch `linkId`s im Namespace. Bedarf wäre dort anzumelden.
+
 ### Was PSS von AN und NTx unterscheidet
 
-* **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, PHQ-D, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. In der PHQ-Familie wird in PSS der **PHQ-8** erhoben, in AN und NTx der **PHQ-9**.
+* **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.
 * **PSS und AN gemeinsam**: OPD-SFK und PHQ-SI.
 * **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld.
 * **Nur in NTx**: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.

@@ -243,6 +243,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
       </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -584,7 +590,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Mit 2026.5.0 wurden die PHQ-9-Item-<code class="language-plaintext highlighter-rouge">linkId</code>s vom alten, instrumentspezifischen Schema (<code class="language-plaintext highlighter-rouge">phq-phq9-q01…q10</code>) auf den geteilten PHQ-D-Block-Namespace (<code class="language-plaintext highlighter-rouge">phq-phq2a…i</code> sowie <code class="language-plaintext highlighter-rouge">phq-phq9-difficulty</code>) umgestellt. Standorte, die PHQ-9-Antworten vor 2026.5.0 erfasst haben, halten <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s mit den alten <code class="language-plaintext highlighter-rouge">linkId</code>s vor, die nicht mehr zur aktuellen Questionnaire-Definition passen.</p>
 
-<p><a name="l1183">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
+<p><a name="l1195">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
 
 <table>
   <thead>
@@ -663,7 +669,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="linkid-migration-gad-7-instrumentspezifisch--phq-d-namespace">linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)</h3>
 
-<p><a name="l1424">​</a>Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen <code class="language-plaintext highlighter-rouge">linkId</code>s (<code class="language-plaintext highlighter-rouge">gad7-q01</code>–<code class="language-plaintext highlighter-rouge">gad7-q07</code>) erfasst wurden, liefert das MII PRO-Modul die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids"><code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code></a>:</p>
+<p><a name="l1436">​</a>Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen <code class="language-plaintext highlighter-rouge">linkId</code>s (<code class="language-plaintext highlighter-rouge">gad7-q01</code>–<code class="language-plaintext highlighter-rouge">gad7-q07</code>) erfasst wurden, liefert das MII PRO-Modul die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids"><code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code></a>:</p>
 
 <table>
   <thead>
@@ -773,7 +779,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:25:00 +0000">
+  <span title="2026-09-02 07:34:00 +0000">
     2026-09-02
   </span>
 

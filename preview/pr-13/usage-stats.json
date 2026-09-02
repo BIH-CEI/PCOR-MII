@@ -7,13 +7,18 @@
   "profiles": {},
   "usage": {
     "http://hl7.org/fhir/StructureDefinition/maxValue": [
+      "Questionnaire.item",
       "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/minValue": [
       "Questionnaire.item",
       "Questionnaire.item.item"
     ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl": [
+      "Questionnaire.item"
+    ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue": [
+      "Questionnaire.item",
       "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-unit": [
