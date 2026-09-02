@@ -40,21 +40,21 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | PROMIS SF 4a (Physical Function, Cognitive Function, Fatigue, Sleep Disturbance, Anxiety, Depression, Pain Interference, Social Roles) | GHS | • | • | • | CPCOR-Vereinbarung | teils über [PROMIS-29](PROMIS-29.html) / [Cognitive Function](PROMIS-Cognitive-Function.html) |
 | PROMIS NRS – Pain Intensity 1a (3) | GHS | • | • | • | CPCOR-Vereinbarung | offen |
 | WHODAS 2.0, 12-Item (14) | GHS | • | • | • | WHO-lizenzpflichtig | [WHODAS 2.0](WHODAS-12.html) |
-| GAD-7 / GAD-2 / PHQ-4 (7) | GHS | • | • | • | frei | **folgt** — GAD-7 kommt mit der nächsten MII-PRO-Version |
+| GAD-7 / GAD-2 / PHQ-4 (7) | GHS | • | • | • | frei | [GAD-7](GAD-7.html) — seit MII PRO 2026.7.0 |
 | PHQ-15 (13) | GHS | • | • | • | frei | [PHQ-15](PHQ-15.html) |
 | PHQ-4 / PHQ-8 / PHQ-9 / PHQ-15 (8) | GHS | • (PHQ-8) | • (PHQ-9) | • (PHQ-9) | frei | [PHQ-Übersicht](PHQ.html), [PHQ-9](PHQ-9.html) |
-| EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | MII PRO 2026.6.0 — Seite offen |
+| EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | MII PRO seit 2026.6.0 — Seite offen |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **nicht veröffentlichbar** | [WAI](WAI.html) — metadata-only |
-| PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | offen |
-| PHQ-D (4) | MHA | • | — | — | frei | offen |
-| PC-PTSD (4) | MHA | • | — | — | frei | MII PRO 2026.6.0 — Seite offen |
+| PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | `phq-phq2i` aus [PHQ-9](PHQ-9.html) |
+| PHQ-D Panik-Block (4) | MHA | • | — | — | frei | offen — kein Upstream-Artefakt (`phq3a`–`phq3d`) |
+| PC-PTSD (4) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
 | OPD-SFK (12) | MHA | • | • | — | frei (nach Rücksprache) | [OPD-SFK](OPD-SFK.html) |
-| SCOFF (5) | MHA | • | — | — | frei | MII PRO 2026.6.0 — Seite offen |
-| ISR-Z (3) | MHA | • | — | — | frei | MII PRO 2026.6.0 — Seite offen |
-| SSD-12 (12) | DCH | • | — | — | frei | MII PRO 2026.6.0 — Seite offen |
-| WI-7 (7) | DCH | • | — | — | frei | MII PRO 2026.6.0 — Seite offen |
-| EXPECT (3) | DCH | • | — | — | ungeklärt | offen — keine standardisierte Skala, drei NRS-Einzelitems |
-| IPQ-S (1) | DCH | • | — | — | frei (nur 1 offene Frage) | offen |
+| SCOFF (5) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
+| ISR-Z (3) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
+| SSD-12 (12) | DCH | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
+| WI-7 (7) | DCH | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
+| EXPECT (3) | DCH | • | — | — | keine Angabe — keine standardisierte Skala | [EXPECT](EXPECT.html) |
+| IPQ-S (1) | DCH | • | — | — | frei — nur die offene B-IPQ-Ursachenfrage | [IPQ-S](IPQ-S.html) |
 | GSLTPAQ (6) | TCH | • | — | — | frei | [GSLTPAQ](GSLTPAQ.html) |
 | ERQ-6 (6) | DCH | — | • | — | frei | offen — nur trennschärfstes Item je Skala |
 | EDE-Q6 (6) | DCH | — | • | — | frei | offen — nur trennschärfstes Item je Skala |
@@ -69,8 +69,8 @@ Dazu kommen **standortspezifische Item-Gruppen**, die kein publiziertes Instrume
 
 ### Woher kommt welche Ressource?
 
-- **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2026.6.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS sowie seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7. PCOR-MII referenziert sie und baut sie nicht nach.
-- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen) sowie OPD-SFK, WAI und GSLTPAQ.
+- **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2026.7.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
+- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen) sowie OPD-SFK, WAI, GSLTPAQ, EXPECT und IPQ-S.
 
 ### Lizenz-Tiers
 
