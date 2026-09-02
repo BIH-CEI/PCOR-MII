@@ -37,7 +37,7 @@ Im **50-First-Patients Pilot-Datenaustausch** ist dieses Instrument zusammen mit
 
 ### Item-Tabelle
 
-**Auto-generiert aus `mii-qst-pro-promis-cognitive-function-sf4a` v2026.5.2 (de.medizininformatikinitiative.kerndatensatz.pros).**
+**Auto-generiert aus `mii-qst-pro-promis-cognitive-function-sf4a` v2026.6.0 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.
 

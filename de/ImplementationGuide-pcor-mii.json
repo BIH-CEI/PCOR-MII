@@ -11,7 +11,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-02T03:42:42+00:00",
+  "date" : "2026-09-02T07:19:25+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -52,9 +52,9 @@
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_pros",
-    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.pros",
-    "version" : "2026.5.2"
+    "version" : "2026.6.0"
   },
   {
     "id" : "hl7_fhir_uv_sdc",
@@ -1460,6 +1460,24 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Instrumente.html"
+        }],
+        "nameUrl" : "Instrumente.html",
+        "title" : "Instrumentenübersicht",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PSS.html"
+          }],
+          "nameUrl" : "PSS.html",
+          "title" : "PSS (Persistent Somatic Syndrome)",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "Demographie.html"
         }],
         "nameUrl" : "Demographie.html",
@@ -1554,6 +1572,33 @@
         }],
         "nameUrl" : "WHODAS-12.html",
         "title" : "WHODAS 2.0 (12-Item)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "OPD-SFK.html"
+        }],
+        "nameUrl" : "OPD-SFK.html",
+        "title" : "OPD-SFK (Strukturfragebogen, 12 Items)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "WAI.html"
+        }],
+        "nameUrl" : "WAI.html",
+        "title" : "WAI (Work Ability Score)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "GSLTPAQ.html"
+        }],
+        "nameUrl" : "GSLTPAQ.html",
+        "title" : "GSLTPAQ (Freizeitaktivität)",
         "generation" : "markdown"
       },
       {

@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5.1"}
-    h3,h4,h5,h6{--heading-prefix:"5.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.1"}
+    h3,h4,h5,h6{--heading-prefix:"6.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -204,6 +204,19 @@ a[name="test"] + h3 + div {
     <a href="index.html">Startseite</a>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Instrumente
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Instrumente.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="PSS.html">PSS</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
       <b class="caret"></b>
     </a>
@@ -222,6 +235,15 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="OPD-SFK.html">OPD-SFK</a>
+      </li>
+      <li>
+        <a href="WAI.html">WAI</a>
+      </li>
+      <li>
+        <a href="GSLTPAQ.html">GSLTPAQ</a>
       </li>
     </ul>
   </li>
@@ -333,7 +355,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
-<p>PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2026.5.2) mit; der Score wird als <code class="language-plaintext highlighter-rouge">Observation</code> abgelegt (LOINC <code class="language-plaintext highlighter-rouge">44261-6</code>, Summenscore 0–27). Die vollständige Spezifikation (Items, Antwortoptionen, Scoring-Logik, abgeleiteter PROMIS-Depression-T-Score) ist einmal im MII PRO-Modul gepflegt und wird hier bewusst nicht dupliziert: <a href="https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html">PHQ-9 im MII PRO IG</a>.</p>
+<p>PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2026.6.0) mit; der Score wird als <code class="language-plaintext highlighter-rouge">Observation</code> abgelegt (LOINC <code class="language-plaintext highlighter-rouge">44261-6</code>, Summenscore 0–27). Die vollständige Spezifikation (Items, Antwortoptionen, Scoring-Logik, abgeleiteter PROMIS-Depression-T-Score) ist einmal im MII PRO-Modul gepflegt und wird hier bewusst nicht dupliziert: <a href="https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html">PHQ-9 im MII PRO IG</a>.</p>
 
 <h3 id="canonical">Canonical</h3>
 
@@ -349,12 +371,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
 
-<p>Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.2"><code class="language-plaintext highlighter-rouge">mii-exa-pro-phq-9-response</code></a> (Upstream, Simplifier), sowie das Bundle <code class="language-plaintext highlighter-rouge">mii-exa-pro-phq-9-bundle</code> inklusive berechneter Score-<code class="language-plaintext highlighter-rouge">Observation</code>. Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.</p>
+<p>Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.6.0"><code class="language-plaintext highlighter-rouge">mii-exa-pro-phq-9-response</code></a> (Upstream, Simplifier), sowie das Bundle <code class="language-plaintext highlighter-rouge">mii-exa-pro-phq-9-bundle</code> inklusive berechneter Score-<code class="language-plaintext highlighter-rouge">Observation</code>. Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.</p>
 
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li><a href="https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html">PHQ-9 im MII PRO IG (Doku)</a> · <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.2">MII PRO Package 2026.5.2 (Simplifier)</a></li>
+  <li><a href="https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html">PHQ-9 im MII PRO IG (Doku)</a> · <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.6.0">MII PRO Package 2026.6.0 (Simplifier)</a></li>
   <li>Lizenz: PHQ / PHQ-9 © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung erforderlich. Deutsche Fassung: PHQ-D (Löwe, Spitzer, Zipfel &amp; Herzog 2002).</li>
   <li>Referenz: Kroenke K, Spitzer RL, Williams JBW. The PHQ-9. <em>J Gen Intern Med.</em> 2001;16(9):606–613.</li>
 </ul>
@@ -409,7 +431,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 03:42:00 +0000">
+  <span title="2026-09-02 07:19:00 +0000">
     2026-09-02
   </span>
 

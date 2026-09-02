@@ -4,7 +4,7 @@ PCOR_MII : Validation Results
 err = 10, warn = 122, info = 165
 $--
 Generated $--. FHIR version $-- for pcor-mii#$-- (canonical = https://bih-cei.github.io/PCOR-MII)
- Build Errors : 2 / 7 / 0
+ Build Errors : 4 / 7 / 0
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-antwort : 0 / 1 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-beziehungsstatus : 0 / 1 / 2
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-einkommen : 0 / 1 / 2
@@ -69,6 +69,8 @@ ERROR: There are multiple resources with the same title [PCOR Example General He
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/pcor-mii-exa-example-response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/pcor-mii-exa-promis-16-response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: de/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 465, column 52: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration' for "mii-cm-pro-phq-9-linkid-migration" cannot be resolved
+ERROR: en/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 467, column 52: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration' for "mii-cm-pro-phq-9-linkid-migration" cannot be resolved
 WARNING: 1: An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml, dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -142,8 +144,8 @@ ERROR: CodeSystem/wai-skala-5: CodeSystem.property[0]: Unknown CodeSystem Proper
 WARNING: Resource: The resource CodeSystem/wai-skala-5 should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ImplementationGuide-pcor-mii.json ==
 INFORMATION: ImplementationGuide/pcor-mii: ImplementationGuide.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
-WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2].uri: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro' kann nicht aufgelöst werden
-WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2]: The canonical URL https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro doesn't point to an actual ImplementationGuide resource
+WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2].uri: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro' kann nicht aufgelöst werden
+WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[2]: The canonical URL https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro doesn't point to an actual ImplementationGuide resource
 WARNING: ImplementationGuide/pcor-mii: ImplementationGuide.dependsOn[3]: The ImplementationGuide uses package hl7.fhir.uv.sdc#3.0.0 released on 2022-03-08, but the most recent appropriate version is 4.0.0. This reference is getting old and the more recent version should be considered
 INFORMATION: Resource: The resource ImplementationGuide/pcor-mii could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Patient-pcor-mii-exa-patient.json ==

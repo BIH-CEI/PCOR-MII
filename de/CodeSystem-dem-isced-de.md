@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Bildungsabschluss (ISCED-2011/KMK)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T03:42:42+00:00",
+  "date" : "2026-09-02T07:19:25+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

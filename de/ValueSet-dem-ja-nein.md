@@ -34,7 +34,7 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
   "title" : "DEM Ja/Nein",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T03:42:42+00:00",
+  "date" : "2026-09-02T07:19:25+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -8,15 +8,15 @@ Wer nur ein einzelnes Instrument umsetzt, muss sich mit dem gemeinsamen Namespac
 
 ### PHQ-Instrumente in PCOR-MII
 
-PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2026.5.2.
+PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2026.6.0.
 
 | | | | |
 | :--- | :--- | :--- | :--- |
 | **PHQ-9** | Depressivität (9 Items) | enthalten | [PHQ-9](PHQ-9.md) |
 | **PHQ-15** | somatische Symptomlast (15 Items) | enthalten (ab 2026.5.0) | [PHQ-15](PHQ-15.md) |
 | PHQ-8 | Depressivität ohne Suizid-Item | kein eigener Questionnaire — vollständig im PHQ-9 enthalten | →[PHQ-9](PHQ-9.md) |
-| PHQ-4 | Ultrakurz-Screening (PHQ-2 + GAD-2) | nicht enthalten (Stand 2026.5.2) | — |
-| GAD-7 | Ängstlichkeit (7 Items) | nicht enthalten (Stand 2026.5.2) | — |
+| PHQ-4 | Ultrakurz-Screening (PHQ-2 + GAD-2) | nicht enthalten (Stand 2026.6.0) | — |
+| GAD-7 | Ängstlichkeit (7 Items) | nicht enthalten (Stand 2026.6.0) | — |
 
 Für den **PHQ-8** existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (`phq-phq2a…h`; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item `phq-phq2i`). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items `phq-phq2a…h` aus.
 
@@ -60,7 +60,7 @@ Alle Zuordnungen sind 1:1 und `equal` — es ändert sich ausschließlich die `l
 
 ### Quellen
 
-* Raw-Package: [MII PRO Package 2026.5.2 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.2)
+* Raw-Package: [MII PRO Package 2026.6.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.6.0)
 * Lizenz: PHQ / PHQ-D © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
 * Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
 

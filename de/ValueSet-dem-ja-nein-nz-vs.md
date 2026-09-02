@@ -33,7 +33,7 @@ Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS.
   "title" : "DEM Ja/Nein/Nicht zutreffend",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T03:42:42+00:00",
+  "date" : "2026-09-02T07:19:25+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

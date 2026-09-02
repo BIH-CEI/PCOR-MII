@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-09-02T03:42:42+00:00"/>
+  <date value="2026-09-02T07:19:25+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -47,9 +47,9 @@
     <version value="5.3.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_pros">
-    <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.pros"/>
-    <version value="2026.5.2"/>
+    <version value="2026.6.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
@@ -1202,6 +1202,22 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Instrumente.html"/>
+        </extension>
+        <nameUrl value="Instrumente.html"/>
+        <title value="Instrumentenübersicht"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="PSS.html"/>
+          </extension>
+          <nameUrl value="PSS.html"/>
+          <title value="PSS (Persistent Somatic Syndrome)"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="Demographie.html"/>
         </extension>
         <nameUrl value="Demographie.html"/>
@@ -1286,6 +1302,30 @@
         </extension>
         <nameUrl value="WHODAS-12.html"/>
         <title value="WHODAS 2.0 (12-Item)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="OPD-SFK.html"/>
+        </extension>
+        <nameUrl value="OPD-SFK.html"/>
+        <title value="OPD-SFK (Strukturfragebogen, 12 Items)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="WAI.html"/>
+        </extension>
+        <nameUrl value="WAI.html"/>
+        <title value="WAI (Work Ability Score)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="GSLTPAQ.html"/>
+        </extension>
+        <nameUrl value="GSLTPAQ.html"/>
+        <title value="GSLTPAQ (Freizeitaktivität)"/>
         <generation value="markdown"/>
       </page>
       <page>
