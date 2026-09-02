@@ -13,6 +13,7 @@ PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein ei
 | PHQ-8 | Depressivität ohne Suizid-Item | kein eigener Questionnaire — vollständig im PHQ-9 enthalten | → [PHQ-9](PHQ-9.html) |
 | **GAD-7** | Ängstlichkeit (7 Items) | enthalten (ab 2026.7.0) | [GAD-7](GAD-7.html) |
 | PHQ-4 | Ultrakurz-Screening (PHQ-2 + GAD-2) | kein eigener Questionnaire — PHQ-2-Items im PHQ-9, GAD-2-Items im GAD-7 | → [PHQ-9](PHQ-9.html), [GAD-7](GAD-7.html) |
+| PHQ-SADS | Somatik + Angst + Depression kombiniert | kein eigener Questionnaire — Vereinigung von PHQ-15, GAD-7 und PHQ-9 | → siehe [PHQ-SADS](#phq-sads) |
 
 Für den **PHQ-8** existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (`phq-phq2a…h`; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item `phq-phq2i`). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items `phq-phq2a…h` aus.
 
@@ -29,14 +30,37 @@ Die Items der PHQ-Instrumente tragen `linkId`s aus einem gemeinsamen PHQ-D-Names
 | `phq-phq2c` | Schlafstörungen / trouble sleeping | enthalten | enthalten | — | enthalten |
 | `phq-phq2d` | Müdigkeit / feeling tired, low energy | enthalten | enthalten | — | enthalten |
 
-Der **GAD-7** nutzt seit 2026.7.0 den Block-5-Namespace (`phq-phq5a`–`phq-phq5g`). Damit gilt zusätzlich:
+Der **GAD-7** nutzt seit 2026.7.0 den Angst-Block des PHQ-D (`phq-phq5a`–`phq-phq5g`). Seine sieben Items sind zugleich die Item-Basis für GAD-2, PHQ-4 und den Angst-Teil des PHQ-SADS:
 
-| `linkId` | Item | GAD-7 | GAD-2 | PHQ-4 |
-|---|---|---|---|---|
-| `phq-phq5a` | Nervosität, Ängstlichkeit oder Anspannung | enthalten | enthalten | enthalten |
-| `phq-phq5b` | Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren | enthalten | enthalten | enthalten |
+| `linkId` | Item (deutsche Fassung) | GAD-7 | GAD-2 | PHQ-4 | PHQ-SADS |
+|---|---|---|---|---|---|
+| `phq-phq5a` | Nervosität, Ängstlichkeit oder Anspannung | enthalten | enthalten | enthalten | enthalten |
+| `phq-phq5b` | Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren | enthalten | enthalten | enthalten | enthalten |
+| `phq-phq5c` | Übermäßige Sorgen bezüglich verschiedener Angelegenheiten | enthalten | — | — | enthalten |
+| `phq-phq5d` | Schwierigkeiten zu entspannen | enthalten | — | — | enthalten |
+| `phq-phq5e` | Rastlosigkeit, so dass Stillsitzen schwer fällt | enthalten | — | — | enthalten |
+| `phq-phq5f` | Schnelle Verärgerung oder Gereiztheit | enthalten | — | — | enthalten |
+| `phq-phq5g` | Gefühl der Angst, so als würde etwas Schlimmes passieren | enthalten | — | — | enthalten |
 
 Darüber hinaus: Der **PHQ-8** besteht vollständig aus PHQ-9-Items (`phq-phq2a…h`, siehe oben), und der **PHQ-4** setzt sich aus PHQ-2 (`phq-phq2a`, `phq-phq2b`) und GAD-2 (`phq-phq5a`, `phq-phq5b`) zusammen — alle vier Items existieren im Namespace, ohne dass es einen eigenen PHQ-4-Questionnaire gibt.
+
+### PHQ-SADS
+
+Der **PHQ-SADS** (*Somatic, Anxiety and Depressive Symptoms*, Kroenke et al. 2010) ist kein eigener Fragebogen, sondern die gemeinsame Auswertung der drei Skalen **PHQ-15**, **GAD-7** und **PHQ-9** mit ihren jeweiligen Summenscores — es gibt bewusst keinen Gesamtscore über alle drei.
+
+Im geteilten Namespace ist er damit vollständig abgedeckt, ohne dass ein viertes Artefakt nötig wäre:
+
+| Skala | `linkId`s | Items | Score |
+|---|---|--:|---|
+| PHQ-15 (somatisch) | `phq-phq1a`–`phq-phq1m`, `phq-phq2c`, `phq-phq2d` | 15 | 0–30 |
+| GAD-7 (Angst) | `phq-phq5a`–`phq-phq5g` | 7 | 0–21 |
+| PHQ-9 (Depression) | `phq-phq2a`–`phq-phq2i` | 9 | 0–27 |
+
+Die drei Skalen umfassen zusammen **31 Items, aber nur 29 verschiedene `linkId`s**: `phq-phq2c` (Schlafstörungen) und `phq-phq2d` (Müdigkeit) gehören sowohl zum PHQ-15 als auch zum PHQ-9. Genau hier zahlt der geteilte Namespace ein — die beiden Items werden **einmal erhoben und in beide Scores eingerechnet**, statt sie doppelt abzufragen. Wer PHQ-SADS umsetzt, erhebt also 29 Items und berechnet daraus die drei Summenscores.
+
+Ob PHQ-SADS und PHQ-4 zusätzlich als **eigene abgeleitete Questionnaires** ausgeprägt werden (Subset-Definition mit `derivedFrom` auf die drei Basis-Questionnaires, statt sie nur über `linkId`s auszuwerten), ist offen. Nötig ist es für die Erhebung nicht — beide sind über die vorhandenen Definitionen vollständig abgedeckt.
+
+Zu beachten: Der PHQ-15 hat einen **4-Wochen-Recall**, PHQ-9 und GAD-7 einen **2-Wochen-Recall**. Die beiden geteilten Items stehen im PHQ-15 damit unter einem anderen Zeitbezug als im PHQ-9 — bei gemeinsamer Erhebung ist festzulegen, welcher Recall gilt, und die Abweichung zu dokumentieren.
 
 Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die QuestionnaireResponses allein über `item.linkId` zusammengeführt, kollidieren die geteilten Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.
 
@@ -82,3 +106,4 @@ Auch hier sind alle Zuordnungen 1:1; es ändert sich ausschließlich die `linkId
 - Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
 - Lizenz: PHQ / PHQ-D © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
 - Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
+- PHQ-SADS: Kroenke K, Spitzer RL, Williams JBW, Löwe B. *The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales: a systematic review*. Gen Hosp Psychiatry. 2010;32(4):345–359. [doi:10.1016/j.genhosppsych.2010.03.006](https://doi.org/10.1016/j.genhosppsych.2010.03.006)
