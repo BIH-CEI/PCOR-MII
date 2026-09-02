@@ -19,9 +19,14 @@ Zeitbezug ein. Welchen Recall man dem Item auch gibt — eine der beiden Skalen 
 unter einem Zeitfenster, für das sie nicht validiert ist.
 
 **Konsequenz:** Das ist auf Item-Ebene nicht lösbar; es muss sich in der **Score-Interpretation**
-niederschlagen. Zu klären, bevor ein PHQ-SADS-Artefakt gebaut wird — zusammen mit der offenen
-Frage, ob PHQ-SADS und PHQ-4 überhaupt als abgeleitete Subset-Questionnaires (`derivedFrom`)
-ausgeprägt werden oder nur über `linkId`s ausgewertet.
+niederschlagen.
+
+**Zuständigkeit: MII-PRO-Modul**, nicht PCOR-MII. Dort werden die PHQ-Questionnaires, der geteilte
+`linkId`-Namespace und die Score-`ObservationDefinition`s gepflegt — dort gehört auch die Regel hin,
+wie ein geteiltes Item unter zwei Recall-Zeiträumen zu werten ist. PCOR-MII dokumentiert den
+Konflikt nur und übernimmt die Lösung, sobald sie upstream getroffen ist. Offen bleibt dort zudem,
+ob PHQ-SADS und PHQ-4 als abgeleitete Subset-Questionnaires (`derivedFrom`) ausgeprägt werden oder
+nur über `linkId`s ausgewertet.
 
 Beschrieben im Abschnitt „PHQ-SADS" in `input/pagecontent/PHQ.md`.
 
