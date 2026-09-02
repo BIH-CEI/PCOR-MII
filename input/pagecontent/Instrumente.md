@@ -45,8 +45,8 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | PHQ-4 / PHQ-8 / PHQ-9 / PHQ-15 (8) | GHS | • (PHQ-8) | • (PHQ-9) | • (PHQ-9) | frei | [PHQ-Übersicht](PHQ.html), [PHQ-9](PHQ-9.html) |
 | EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | MII PRO seit 2026.6.0 — Seite offen |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **nicht veröffentlichbar** | [WAI](WAI.html) — metadata-only |
-| PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | offen |
-| PHQ-D (4) | MHA | • | — | — | frei | offen |
+| PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | `phq-phq2i` aus [PHQ-9](PHQ-9.html) |
+| PHQ-D Panik-Block (4) | MHA | • | — | — | frei | offen — kein Upstream-Artefakt (`phq3a`–`phq3d`) |
 | PC-PTSD (4) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
 | OPD-SFK (12) | MHA | • | • | — | frei (nach Rücksprache) | [OPD-SFK](OPD-SFK.html) |
 | SCOFF (5) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
