@@ -1,4 +1,4 @@
-# MHI Anorexia-nervosa-Subtyp - PCOR-MII Implementation Guide v0.1.0
+# MHI Anorexia-nervosa-Subtyp - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: MHI Anorexia-nervosa-Subtyp (Experimentell) 
 
@@ -28,12 +28,12 @@ Subtyp der Anorexia nervosa (AN_subtyp).
   "resourceType" : "ValueSet",
   "id" : "mhi-an-subtyp-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-an-subtyp-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MhiAnSubtypVS",
   "title" : "MHI Anorexia-nervosa-Subtyp",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

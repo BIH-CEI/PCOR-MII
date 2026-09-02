@@ -1,4 +1,4 @@
-# PROMIS-33 Profile v2.1 - PCOR-MII Implementation Guide v0.1.0
+# PROMIS-33 Profile v2.1 - PCOR-MII Implementation Guide v0.2.0
 
 ## PROMIS-33 Profile v2.1
 

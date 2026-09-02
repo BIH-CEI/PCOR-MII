@@ -1,4 +1,4 @@
-# DEM Ja/Nein/Keine Angabe - PCOR-MII Implementation Guide v0.1.0
+# DEM Ja/Nein/Keine Angabe - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: DEM Ja/Nein/Keine Angabe (Experimentell) 
 
@@ -28,12 +28,12 @@ Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS.
   "resourceType" : "ValueSet",
   "id" : "dem-ja-nein-ka-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemJaNeinKaVS",
   "title" : "DEM Ja/Nein/Keine Angabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

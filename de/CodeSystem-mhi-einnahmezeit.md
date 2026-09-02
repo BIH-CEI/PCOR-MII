@@ -1,4 +1,4 @@
-# MHI Einnahmezeitpunkt Medikament (Codes) - PCOR-MII Implementation Guide v0.1.0
+# MHI Einnahmezeitpunkt Medikament (Codes) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: MHI Einnahmezeitpunkt Medikament (Codes) (Experimentell) 
 
@@ -7,7 +7,7 @@ Tageszeit der Medikamenteneinnahme (medi_02_time).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [MhiEinnahmezeitVS](ValueSet-mhi-einnahmezeit-vs.md)
+* [MHI Einnahmezeitpunkt Medikament](ValueSet-mhi-einnahmezeit-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "mhi-einnahmezeit",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MhiEinnahmezeitCS",
   "title" : "MHI Einnahmezeitpunkt Medikament (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

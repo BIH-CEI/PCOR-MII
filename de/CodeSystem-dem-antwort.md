@@ -1,4 +1,4 @@
-# DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) - PCOR-MII Implementation Guide v0.1.0
+# DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) (Experimentell) 
 
@@ -7,9 +7,9 @@ Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [DemJaNeinVS](ValueSet-dem-ja-nein.md)
-* [DemJaNeinKaVS](ValueSet-dem-ja-nein-ka-vs.md)
-* [DemJaNeinNzVS](ValueSet-dem-ja-nein-nz-vs.md)
+* [DEM Ja/Nein](ValueSet-dem-ja-nein.md)
+* [DEM Ja/Nein/Keine Angabe](ValueSet-dem-ja-nein-ka-vs.md)
+* [DEM Ja/Nein/Nicht zutreffend](ValueSet-dem-ja-nein-nz-vs.md)
 
 -------
 
@@ -24,12 +24,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-antwort",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemAntwortCS",
   "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

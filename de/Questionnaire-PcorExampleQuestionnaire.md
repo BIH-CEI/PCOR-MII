@@ -1,4 +1,4 @@
-# PCOR Beispiel-Fragebogen - PCOR-MII Implementation Guide v0.1.0
+# PCOR Beispiel-Fragebogen - PCOR-MII Implementation Guide v0.2.0
 
 ## Questionnaire: PCOR Beispiel-Fragebogen (Experimentell) 
 
@@ -28,7 +28,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   },
   "language" : "de-DE",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PcorExampleQuestionnaire",
   "title" : "PCOR Beispiel-Fragebogen",
   "status" : "draft",

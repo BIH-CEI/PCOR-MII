@@ -1,4 +1,4 @@
-# MHI Diagnosegruppe (CPCOR) (Codes) - PCOR-MII Implementation Guide v0.1.0
+# MHI Diagnosegruppe (CPCOR) (Codes) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: MHI Diagnosegruppe (CPCOR) (Codes) (Experimentell) 
 
@@ -7,7 +7,7 @@ Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [MhiCpcorDiagVS](ValueSet-mhi-cpcor-diag-vs.md)
+* [MHI Diagnosegruppe (CPCOR)](ValueSet-mhi-cpcor-diag-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "mhi-cpcor-diag",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MhiCpcorDiagCS",
   "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

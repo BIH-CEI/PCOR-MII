@@ -1,4 +1,4 @@
-# MHI Gewichtsangabe - PCOR-MII Implementation Guide v0.1.0
+# MHI Gewichtsangabe - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: MHI Gewichtsangabe (Experimental) 
 
@@ -28,12 +28,12 @@ Einheit/Angabe-Status für Gewicht (Q_WB151).
   "resourceType" : "ValueSet",
   "id" : "mhi-gewicht-angabe-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-gewicht-angabe-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MhiGewichtAngabeVS",
   "title" : "MHI Gewichtsangabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

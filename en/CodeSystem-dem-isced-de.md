@@ -1,4 +1,4 @@
-# DEM Bildungsabschluss (ISCED-2011/KMK) - PCOR-MII Implementation Guide v0.1.0
+# DEM Bildungsabschluss (ISCED-2011/KMK) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: DEM Bildungsabschluss (ISCED-2011/KMK) (Experimental) 
 
@@ -7,7 +7,7 @@ Höchster Bildungsabschluss nach ISCED-2011 / KMK-Systematik (Q_ISCED).
 
 This Code system is referenced in the definition of the following value sets:
 
-* [DemIscedVS](ValueSet-dem-isced-vs.md)
+* [DEM Bildungsabschluss (ISCED)](ValueSet-dem-isced-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-isced-de",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemIscedCS",
   "title" : "DEM Bildungsabschluss (ISCED-2011/KMK)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

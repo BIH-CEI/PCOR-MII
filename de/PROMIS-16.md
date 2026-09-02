@@ -1,4 +1,4 @@
-# PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.1.0
+# PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.2.0
 
 ## PROMIS-16 Profile v2.1 (PROPr)
 
@@ -45,7 +45,7 @@ Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library `mii-l
 
 ### Item-Tabelle
 
-**Auto-generiert aus `mii-qst-pro-promis-16` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
+**Auto-generiert aus `mii-qst-pro-promis-16` v2026.5.2 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.
 

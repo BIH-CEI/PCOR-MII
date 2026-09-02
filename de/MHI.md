@@ -1,4 +1,4 @@
-# MHI - PCOR-MII Implementation Guide v0.1.0
+# MHI - PCOR-MII Implementation Guide v0.2.0
 
 ## MHI
 
@@ -16,7 +16,6 @@ Der **MHI**-Fragebogen (**Medical History**) erfasst die medizinische Vorgeschic
 Einige MHI-Items sind nicht in allen drei Szenarien (PSS, NTx, AN) zu erheben:
 
 * **Gewichtsverlauf** (`weight_outpatient_1/2`, `weight_inpatient`, `weight_discharge`) und **`AN_subtyp`** — nur im Szenario **Anorexia nervosa**.
-* **`GIPS13`** (chronische Erkrankungen) — in AN und NTx, nicht in PSS.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

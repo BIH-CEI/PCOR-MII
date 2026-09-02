@@ -1,4 +1,4 @@
-# DEM Beziehungsstatus - PCOR-MII Implementation Guide v0.1.0
+# DEM Beziehungsstatus - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: DEM Beziehungsstatus (Experimentell) 
 
@@ -28,12 +28,12 @@ Partnerschaftsstatus (GIPS04).
   "resourceType" : "ValueSet",
   "id" : "dem-beziehungsstatus-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-beziehungsstatus-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemBeziehungsstatusVS",
   "title" : "DEM Beziehungsstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

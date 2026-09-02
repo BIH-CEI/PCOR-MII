@@ -1,4 +1,4 @@
-# DEM Beziehungsstatus (Codes) - PCOR-MII Implementation Guide v0.1.0
+# DEM Beziehungsstatus (Codes) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: DEM Beziehungsstatus (Codes) (Experimental) 
 
@@ -7,7 +7,7 @@ Partnerschaftsstatus (GIPS04).
 
 This Code system is referenced in the definition of the following value sets:
 
-* [DemBeziehungsstatusVS](ValueSet-dem-beziehungsstatus-vs.md)
+* [DEM Beziehungsstatus](ValueSet-dem-beziehungsstatus-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-beziehungsstatus",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemBeziehungsstatusCS",
   "title" : "DEM Beziehungsstatus (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

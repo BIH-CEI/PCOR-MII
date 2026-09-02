@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name=\"pcor-mii\"> </a><a name=\"hcpcor-mii\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div>"
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -54,7 +54,7 @@
     "id" : "de_medizininformatikinitiative_kerndatensatz_pros",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.pros",
-    "version" : "2026.4.1"
+    "version" : "2026.5.2"
   },
   {
     "id" : "hl7_fhir_uv_sdc",
@@ -154,7 +154,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -165,7 +165,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -510,7 +510,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -521,7 +521,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -1098,6 +1098,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/GSLTPAQ"
+      },
+      "name" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
+      "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1290,6 +1302,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opd-sfk-antwort-vs"
+      },
+      "name" : "OPD-SFK Antwortskala",
+      "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/opd-sfk-antwort"
+      },
+      "name" : "OPD-SFK Antwortskala (Codes)",
+      "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/OPDSFK"
+      },
+      "name" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
+      "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       }],
       "reference" : {
@@ -1332,7 +1380,7 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-example-response"
       },
       "name" : "pcor-mii-exa-example-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1343,7 +1391,7 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-16-response"
       },
       "name" : "pcor-mii-exa-promis-16-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1354,7 +1402,43 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"
       },
       "name" : "pcor-mii-exa-promis-cognitive-function-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/wai-skala-5-vs"
+      },
+      "name" : "WAI Antwortskala 5-stufig",
+      "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/wai-skala-5"
+      },
+      "name" : "WAI Antwortskala 5-stufig (Codes)",
+      "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/WAI"
+      },
+      "name" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)",
+      "description" : "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original.",
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
@@ -1439,11 +1523,29 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "PHQ-15.html"
+          "valueUrl" : "PHQ.html"
         }],
-        "nameUrl" : "PHQ-15.html",
-        "title" : "PHQ-15",
-        "generation" : "markdown"
+        "nameUrl" : "PHQ.html",
+        "title" : "PHQ (Patient Health Questionnaire)",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PHQ-9.html"
+          }],
+          "nameUrl" : "PHQ-9.html",
+          "title" : "PHQ-9",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PHQ-15.html"
+          }],
+          "nameUrl" : "PHQ-15.html",
+          "title" : "PHQ-15",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{

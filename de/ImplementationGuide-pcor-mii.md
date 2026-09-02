@@ -10,11 +10,11 @@
   "id" : "pcor-mii",
   "language" : "de",
   "url" : "https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -41,7 +41,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -57,7 +57,7 @@
     "id" : "de_medizininformatikinitiative_kerndatensatz_pros",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.pros",
-    "version" : "2026.4.1"
+    "version" : "2026.5.2"
   },
   {
     "id" : "hl7_fhir_uv_sdc",
@@ -157,7 +157,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -168,7 +168,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -513,7 +513,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -524,7 +524,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -778,6 +778,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-pcor-mii-exa-patient.html"
       }],
       "reference" : {
         "reference" : "Patient/pcor-mii-exa-patient"
@@ -790,6 +794,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-antwort.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-antwort"
@@ -802,6 +810,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-beziehungsstatus-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-beziehungsstatus-vs"
@@ -814,6 +826,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-beziehungsstatus.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-beziehungsstatus"
@@ -826,6 +842,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-isced-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-isced-vs"
@@ -838,6 +858,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-isced-de.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-isced-de"
@@ -850,6 +874,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-erwerbsstatus-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-erwerbsstatus-vs"
@@ -862,6 +890,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-erwerbsstatus.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-erwerbsstatus"
@@ -874,6 +906,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-geschlecht-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-geschlecht-vs"
@@ -886,6 +922,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-geschlecht.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-geschlecht"
@@ -898,6 +938,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-einkommen-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-einkommen-vs"
@@ -910,6 +954,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-einkommen.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-einkommen"
@@ -922,6 +970,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-haeufigkeit-5-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-haeufigkeit-5-vs"
@@ -934,6 +986,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-haeufigkeit-5.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-haeufigkeit-5"
@@ -946,6 +1002,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-ja-nein.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-ja-nein"
@@ -958,6 +1018,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-ja-nein-ka-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-ja-nein-ka-vs"
@@ -970,6 +1034,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-ja-nein-nz-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-ja-nein-nz-vs"
@@ -982,6 +1050,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-leichtigkeit-6-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-leichtigkeit-6-vs"
@@ -994,6 +1066,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-leichtigkeit-6.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-leichtigkeit-6"
@@ -1006,6 +1082,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-rentenstatus-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-rentenstatus-vs"
@@ -1018,6 +1098,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-rentenstatus.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-rentenstatus"
@@ -1030,6 +1114,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-urbanizitaet-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-urbanizitaet-vs"
@@ -1042,6 +1130,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-urbanizitaet.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-urbanizitaet"
@@ -1054,6 +1146,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dem-zigaretten-band-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dem-zigaretten-band-vs"
@@ -1066,6 +1162,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dem-zigaretten-band.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dem-zigaretten-band"
@@ -1078,6 +1178,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-DEMResponse.html"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/DEMResponse"
@@ -1090,6 +1194,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-DEM.html"
       }],
       "reference" : {
         "reference" : "Questionnaire/DEM"
@@ -1101,7 +1209,27 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-GSLTPAQ.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/GSLTPAQ"
+      },
+      "name" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
+      "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-an-subtyp-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-an-subtyp-vs"
@@ -1114,6 +1242,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-an-subtyp.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-an-subtyp"
@@ -1126,6 +1258,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-chronisch-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-chronisch-vs"
@@ -1138,6 +1274,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-chronisch.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-chronisch"
@@ -1150,6 +1290,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-cpcor-diag-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-cpcor-diag-vs"
@@ -1162,6 +1306,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-cpcor-diag.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-cpcor-diag"
@@ -1174,6 +1322,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-einnahmezeit-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-einnahmezeit-vs"
@@ -1186,6 +1338,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-einnahmezeit.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-einnahmezeit"
@@ -1198,6 +1354,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-gewicht-angabe-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-gewicht-angabe-vs"
@@ -1210,6 +1370,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-gewicht-angabe.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-gewicht-angabe"
@@ -1222,6 +1386,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-gewichtsmethode-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-gewichtsmethode-vs"
@@ -1234,6 +1402,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-gewichtsmethode.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-gewichtsmethode"
@@ -1246,6 +1418,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-mhi-groesse-angabe-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/mhi-groesse-angabe-vs"
@@ -1258,6 +1434,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-mhi-groesse-angabe.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/mhi-groesse-angabe"
@@ -1270,6 +1450,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-MHIResponse.html"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/MHIResponse"
@@ -1282,6 +1466,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-MHI.html"
       }],
       "reference" : {
         "reference" : "Questionnaire/MHI"
@@ -1293,7 +1481,59 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-opd-sfk-antwort-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opd-sfk-antwort-vs"
+      },
+      "name" : "OPD-SFK Antwortskala",
+      "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-opd-sfk-antwort.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/opd-sfk-antwort"
+      },
+      "name" : "OPD-SFK Antwortskala (Codes)",
+      "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-OPDSFK.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/OPDSFK"
+      },
+      "name" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
+      "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-PcorExampleQuestionnaire.html"
       }],
       "reference" : {
         "reference" : "Questionnaire/PcorExampleQuestionnaire"
@@ -1306,6 +1546,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-pcor-example-general-health.html"
       }],
       "reference" : {
         "reference" : "ValueSet/pcor-example-general-health"
@@ -1318,6 +1562,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-pcor-example-general-health.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/pcor-example-general-health"
@@ -1330,34 +1578,94 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-example-response.html"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/pcor-mii-exa-example-response"
       },
       "name" : "pcor-mii-exa-example-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-16-response"
       },
       "name" : "pcor-mii-exa-promis-16-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"
       },
       "name" : "pcor-mii-exa-promis-cognitive-function-response",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-wai-skala-5-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/wai-skala-5-vs"
+      },
+      "name" : "WAI Antwortskala 5-stufig",
+      "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-wai-skala-5.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/wai-skala-5"
+      },
+      "name" : "WAI Antwortskala 5-stufig (Codes)",
+      "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-WAI.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/WAI"
+      },
+      "name" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)",
+      "description" : "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original.",
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
@@ -1442,11 +1750,29 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "PHQ-15.html"
+          "valueUrl" : "PHQ.html"
         }],
-        "nameUrl" : "PHQ-15.html",
-        "title" : "PHQ-15",
-        "generation" : "markdown"
+        "nameUrl" : "PHQ.html",
+        "title" : "PHQ (Patient Health Questionnaire)",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PHQ-9.html"
+          }],
+          "nameUrl" : "PHQ-9.html",
+          "title" : "PHQ-9",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "PHQ-15.html"
+          }],
+          "nameUrl" : "PHQ-15.html",
+          "title" : "PHQ-15",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{

@@ -7,11 +7,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="pcor-mii"> </a><a name="hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="en-pcor-mii"> </a><a name="en-hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div></div>
   </text>
   <url value="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/>
-  <version value="0.1.0"/>
+  <version value="0.2.0"/>
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-07-07T13:06:55+00:00"/>
+  <date value="2026-09-02T03:42:42+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -36,7 +36,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.2.0"/>
+    <version value="7.3.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -49,7 +49,7 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_pros">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-pro"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.pros"/>
-    <version value="2026.4.1"/>
+    <version value="2026.5.2"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
@@ -123,7 +123,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -131,7 +131,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueString value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -382,7 +382,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -390,7 +390,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="path-liquid"/>
+        <valueCode value="path-liquid-template"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -871,6 +871,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/GSLTPAQ"/>
+      </reference>
+      <name value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"/>
+      <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1047,6 +1058,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/opd-sfk-antwort-vs"/>
+      </reference>
+      <name value="OPD-SFK Antwortskala"/>
+      <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/opd-sfk-antwort"/>
+      </reference>
+      <name value="OPD-SFK Antwortskala (Codes)"/>
+      <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/OPDSFK"/>
+      </reference>
+      <name value="OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"/>
+      <description value="OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1086,7 +1130,7 @@
         <reference value="QuestionnaireResponse/pcor-mii-exa-example-response"/>
       </reference>
       <name value="pcor-mii-exa-example-response"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1096,7 +1140,7 @@
         <reference value="QuestionnaireResponse/pcor-mii-exa-promis-16-response"/>
       </reference>
       <name value="pcor-mii-exa-promis-16-response"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1106,7 +1150,40 @@
         <reference value="QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"/>
       </reference>
       <name value="pcor-mii-exa-promis-cognitive-function-response"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/wai-skala-5-vs"/>
+      </reference>
+      <name value="WAI Antwortskala 5-stufig"/>
+      <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/wai-skala-5"/>
+      </reference>
+      <name value="WAI Antwortskala 5-stufig (Codes)"/>
+      <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/WAI"/>
+      </reference>
+      <name value="WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)"/>
+      <description value="Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original."/>
+      <exampleBoolean value="false"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1181,11 +1258,27 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="PHQ-15.html"/>
+          <valueUrl value="PHQ.html"/>
         </extension>
-        <nameUrl value="PHQ-15.html"/>
-        <title value="PHQ-15"/>
+        <nameUrl value="PHQ.html"/>
+        <title value="PHQ (Patient Health Questionnaire)"/>
         <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="PHQ-9.html"/>
+          </extension>
+          <nameUrl value="PHQ-9.html"/>
+          <title value="PHQ-9"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="PHQ-15.html"/>
+          </extension>
+          <nameUrl value="PHQ-15.html"/>
+          <title value="PHQ-15"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

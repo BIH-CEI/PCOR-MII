@@ -1,40 +1,30 @@
-# PHQ-15 - PCOR-MII Implementation Guide v0.1.0
+# PHQ-15 - PCOR-MII Implementation Guide v0.2.0
 
 ## PHQ-15
 
 **Translated page. Original language: German.**
 
-Der **PHQ-15** (Patient Health Questionnaire-15) ist ein validiertes Screening-Instrument für die Schwere **somatischer Symptome**. 15 Items erfassen die Beeinträchtigung durch körperliche Beschwerden über vier Wochen auf einer dreistufigen Skala (0 = nicht, 1 = wenig, 2 = stark beeinträchtigt).
+Der **PHQ-15** (Patient Health Questionnaire-15) ist ein validiertes Screening-Instrument für die Schwere **somatischer Symptome** (15 Items, vier Wochen Recall, dreistufige Skala 0–2).
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Zwei der 15 Items (Müdigkeit, Schlaf) stammen aus dem Depressionsmodul und teilen sich über den gemeinsamen **PHQ-D-Itembank-Namespace** dieselben linkIds wie im PHQ-9 (`phq-phq2d` Müdigkeit, `phq-phq2c` Schlaf).
+PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.5.2) mit; der Score wird als `Observation` abgelegt (LOINC `70273-8`, Summenscore 0–30 mit Kroenke-Schweregraden 0–4 / 5–9 / 10–14 / ≥15). Die vollständige Spezifikation (Items, Antwortoptionen, Scoring-Logik) ist im MII PRO-Modul gepflegt (Paket 2026.5.2) und wird hier bewusst nicht dupliziert; eine eigene Doku-Seite im veröffentlichten MII-PRO-IG folgt mit dessen nächster Publikation.
 
 ### Canonical
 
 `https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15`
 
-### Quellen
-
-* IG-Doku-Seite: [PHQ-15 im MII PRO IG (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-15.page.md?version=current)
-* Raw-Resource: [MII PRO Package (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0)
-* Lizenz: PHQ / PHQ-15 © Pfizer Inc. — **frei verfügbar** (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
-* Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
-
-### Eigenschaften
-
-* **Items**: 15 (3-Punkt-Skala 0–2)
-* **Primärsprache**: Englisch mit deutscher `translation`-Extension (PHQ-D)
-* **Antwortmodellierung**: `answerValueSet` (`mii-vs-pro-phq-15-answers`) mit ordinalValue-Gewichten auf den CodeSystem-Konzepten
-* **Scoring**: Summenscore 0–30 mit Schweregrad-Kategorien (Kroenke et al. 2002: 0–4 / 5–9 / 10–14 / ≥15)
-* **Capabilities**: displayable, collectable, calculatable, extractable, domain-aligned
-
 ### Hinweise
 
-* Der Score wird als `ObservationDefinition` (`mii-obsdef-pro-score-phq-15`, LOINC `70273-8`, 0–30) mit Kroenke-Schweregrad-Referenzbereichen (`qualifiedInterval`) abgebildet.
-* Die Simplifier-Links lösen auf, sobald **v2026.5.0** des MII PRO-Moduls nach Simplifier publiziert ist (PHQ-15 ist ab 2026.5.0 enthalten); die Canonical-URL ist stabil.
+* PHQ-15 teilt zwei Items mit dem PHQ-9 über einen gemeinsamen Item-`linkId`-Namespace. Für die reine PHQ-15-Umsetzung ist das ohne Belang — relevant nur bei gemeinsamer Verarbeitung beider Instrumente. Details: [PHQ-Übersicht](PHQ.md).
 
 ### Beispiel-QuestionnaireResponse
 
-Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-15-response`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0) (Upstream, Simplifier). Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
+Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-15-response`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.2) (Upstream, Simplifier). Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
+
+### Quellen
+
+* [MII PRO Package 2026.5.2 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.2)
+* Lizenz: PHQ / PHQ-15 © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung erforderlich. Deutsche Fassung: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002).
+* Referenz: Kroenke K, Spitzer RL, Williams JBW. The PHQ-15. **Psychosom Med.** 2002;64(2):258–266.
 

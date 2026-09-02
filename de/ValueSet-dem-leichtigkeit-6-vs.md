@@ -1,4 +1,4 @@
-# DEM Leichtigkeit Unterstützung (6-stufig) - PCOR-MII Implementation Guide v0.1.0
+# DEM Leichtigkeit Unterstützung (6-stufig) - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: DEM Leichtigkeit Unterstützung (6-stufig) (Experimentell) 
 
@@ -28,12 +28,12 @@ Leichtigkeit, Unterstützung zu erhalten (WHODIS1/2).
   "resourceType" : "ValueSet",
   "id" : "dem-leichtigkeit-6-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-leichtigkeit-6-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemLeichtigkeit6VS",
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

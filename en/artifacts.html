@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - PCOR-MII Implementation Guide v0.1.0</title>
+    <title>Artifacts Summary - PCOR-MII Implementation Guide v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - draft
+            <span style="display:inline-block;">0.2.0 - draft
 
 
 
@@ -218,7 +218,7 @@ a[name="test"] + h3 + div {
         <a href="PROMIS.html">PROMIS</a>
       </li>
       <li>
-        <a href="PHQ-15.html">PHQ-15</a>
+        <a href="PHQ.html">PHQ</a>
       </li>
       <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
@@ -300,7 +300,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   <p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
@@ -358,6 +358,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Questionnaire-GSLTPAQ.html" title="Questionnaire/GSLTPAQ">
+                  <span title="Questionnaire/GSLTPAQ">GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire
+</span>
+               </a>
+            </td>
+            <td>
+<p>Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Questionnaire-MHI.html" title="Questionnaire/MHI">
                   <span title="Questionnaire/MHI">MHI — Medical History
 </span>
@@ -365,6 +376,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-OPDSFK.html" title="Questionnaire/OPDSFK">
+                  <span title="Questionnaire/OPDSFK">OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion
+</span>
+               </a>
+            </td>
+            <td>
+<p>OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu … trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe <code class="language-plaintext highlighter-rouge">copyright</code>.</p>
 </td>
          </tr>
          <tr>
@@ -377,6 +399,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.4.1.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-WAI.html" title="Questionnaire/WAI">
+                  <span title="Questionnaire/WAI">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original.</p>
 </td>
          </tr>
       </tbody>
@@ -624,6 +657,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-opd-sfk-antwort-vs.html"
+                  title="ValueSet/opd-sfk-antwort-vs">
+                  <span title="ValueSet/opd-sfk-antwort-vs">OPD-SFK Antwortskala
+</span>
+               </a>
+            </td>
+            <td>
+<p>5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu … 4 = trifft völlig zu).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-pcor-example-general-health.html"
                   title="ValueSet/pcor-example-general-health">
                   <span title="ValueSet/pcor-example-general-health">PCOR Example General Health Self-Assessment
@@ -632,6 +677,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-wai-skala-5-vs.html" title="ValueSet/wai-skala-5-vs">
+                  <span title="ValueSet/wai-skala-5-vs">WAI Antwortskala 5-stufig
+</span>
+               </a>
+            </td>
+            <td>
+<p>Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS.</p>
 </td>
          </tr>
       </tbody>
@@ -853,6 +909,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-opd-sfk-antwort.html"
+                  title="CodeSystem/opd-sfk-antwort">
+                  <span title="CodeSystem/opd-sfk-antwort">OPD-SFK Antwortskala (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu … 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-pcor-example-general-health.html"
                   title="CodeSystem/pcor-example-general-health">
                   <span title="CodeSystem/pcor-example-general-health">PCOR Example General Health Self-Assessment
@@ -861,6 +929,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-wai-skala-5.html" title="CodeSystem/wai-skala-5">
+                  <span title="CodeSystem/wai-skala-5">WAI Antwortskala 5-stufig (Codes)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.</p>
 </td>
          </tr>
       </tbody>
@@ -992,10 +1071,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-07 13:06:00 +0000">
-    2026-07-07
+  <span title="2026-09-02 03:42:00 +0000">
+    2026-09-02
   </span>
 
           <br/>

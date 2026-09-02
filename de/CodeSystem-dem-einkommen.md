@@ -1,4 +1,4 @@
-# DEM Haushaltseinkommen (Bänder) - PCOR-MII Implementation Guide v0.1.0
+# DEM Haushaltseinkommen (Bänder) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: DEM Haushaltseinkommen (Bänder) (Experimentell) 
 
@@ -7,7 +7,7 @@ Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [DemEinkommenVS](ValueSet-dem-einkommen-vs.md)
+* [DEM Haushaltseinkommen](ValueSet-dem-einkommen-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-einkommen",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemEinkommenCS",
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -1,4 +1,4 @@
-# PROMIS-29 Profile v2.1 - PCOR-MII Implementation Guide v0.1.0
+# PROMIS-29 Profile v2.1 - PCOR-MII Implementation Guide v0.2.0
 
 ## PROMIS-29 Profile v2.1
 
@@ -41,7 +41,7 @@ Diese Referenz wird hier bewusst **nicht dupliziert** — Pflege erfolgt zentral
 
 ### Item-Tabelle
 
-**Auto-generiert aus `mii-qst-pro-promis-29` v2026.4.1 (de.medizininformatikinitiative.kerndatensatz.pros).**
+**Auto-generiert aus `mii-qst-pro-promis-29` v2026.5.2 (de.medizininformatikinitiative.kerndatensatz.pros).**
 
 Wo Translation-Extensions auf den `text`-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.
 

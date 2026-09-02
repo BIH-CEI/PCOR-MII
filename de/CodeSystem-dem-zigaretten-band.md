@@ -1,4 +1,4 @@
-# DEM Zigaretten pro Tag (Bänder) - PCOR-MII Implementation Guide v0.1.0
+# DEM Zigaretten pro Tag (Bänder) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: DEM Zigaretten pro Tag (Bänder) (Experimentell) 
 
@@ -7,7 +7,7 @@ Anzahl Zigaretten pro Tag in Bändern (GIPS57b).
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
-* [DemZigarettenBandVS](ValueSet-dem-zigaretten-band-vs.md)
+* [DEM Zigaretten pro Tag](ValueSet-dem-zigaretten-band-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-zigaretten-band",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemZigarettenBandCS",
   "title" : "DEM Zigaretten pro Tag (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

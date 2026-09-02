@@ -1,4 +1,4 @@
-# MHI — Beispielantwort - PCOR-MII Implementation Guide v0.1.0
+# MHI — Beispielantwort - PCOR-MII Implementation Guide v0.2.0
 
 ## Example QuestionnaireResponse: MHI — Beispielantwort
 

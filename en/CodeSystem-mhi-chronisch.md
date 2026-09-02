@@ -1,4 +1,4 @@
-# MHI Chronische Erkrankungen (GIPS13) (Codes) - PCOR-MII Implementation Guide v0.1.0
+# MHI Chronische Erkrankungen (GIPS13) (Codes) - PCOR-MII Implementation Guide v0.2.0
 
 ## CodeSystem: MHI Chronische Erkrankungen (GIPS13) (Codes) (Experimental) 
 
@@ -7,7 +7,7 @@ Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).
 
 This Code system is referenced in the definition of the following value sets:
 
-* [MhiChronischVS](ValueSet-mhi-chronisch-vs.md)
+* [MHI Chronische Erkrankungen (GIPS13)](ValueSet-mhi-chronisch-vs.md)
 
 -------
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "mhi-chronisch",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MhiChronischCS",
   "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

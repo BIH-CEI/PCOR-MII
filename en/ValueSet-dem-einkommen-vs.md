@@ -1,4 +1,4 @@
-# DEM Haushaltseinkommen - PCOR-MII Implementation Guide v0.1.0
+# DEM Haushaltseinkommen - PCOR-MII Implementation Guide v0.2.0
 
 ## ValueSet: DEM Haushaltseinkommen (Experimental) 
 
@@ -28,12 +28,12 @@ Einkommensbänder (Q_OECDLIT7a).
   "resourceType" : "ValueSet",
   "id" : "dem-einkommen-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-einkommen-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DemEinkommenVS",
   "title" : "DEM Haushaltseinkommen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-07T13:06:55+00:00",
+  "date" : "2026-09-02T03:42:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -1,4 +1,4 @@
-# WHODAS 2.0 (12-Item) - PCOR-MII Implementation Guide v0.1.0
+# WHODAS 2.0 (12-Item) - PCOR-MII Implementation Guide v0.2.0
 
 ## WHODAS 2.0 (12-Item)
 

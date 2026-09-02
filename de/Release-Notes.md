@@ -1,4 +1,4 @@
-# Release Notes - PCOR-MII Implementation Guide v0.1.0
+# Release Notes - PCOR-MII Implementation Guide v0.2.0
 
 ## Release Notes
 
@@ -20,6 +20,18 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 * **`documentation`** — Dokumentationsänderungen ohne Auswirkung auf normative Aspekte
 
 -------
+
+### v0.2.0 (2026-08-05) — PHQ-Familie
+
+**`improve`** MII-PRO-Abhängigkeit auf 2026.5.2 angehoben (PHQ-9 neues `linkId`-Schema, PHQ-15, Migrations-ConceptMap)
+
+**`feature`** Neue Seite PHQ-9
+
+**`feature`** Neue PHQ-Übersicht mit `linkId`-Migrationstabelle (2026.4.x → ab 2026.5.0)
+
+**`documentation`** PHQ-15 und PHQ-9 als schlanke Referenzseiten (Details upstream statt dupliziert); toten Simplifier-Link entfernt
+
+**`fix`** MHI: falschen Hinweis „GIPS13 nicht in PSS" entfernt — GIPS13 ist in allen drei Szenarien enthalten
 
 ### v0.1.0 (2026-06-04) — Initial Draft
 

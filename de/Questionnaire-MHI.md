@@ -1,4 +1,4 @@
-# MHI — Medical History - PCOR-MII Implementation Guide v0.1.0
+# MHI — Medical History - PCOR-MII Implementation Guide v0.2.0
 
 ## Questionnaire: MHI — Medical History (Experimentell) 
 
@@ -27,7 +27,7 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "MHI",
   "title" : "MHI — Medical History",
   "status" : "draft",

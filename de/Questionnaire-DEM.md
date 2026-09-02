@@ -1,4 +1,4 @@
-# DEM — Demographics & Medical History - PCOR-MII Implementation Guide v0.1.0
+# DEM — Demographics & Medical History - PCOR-MII Implementation Guide v0.2.0
 
 ## Questionnaire: DEM — Demographics & Medical History (Experimentell) 
 
@@ -27,7 +27,7 @@ Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventione
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "DEM",
   "title" : "DEM — Demographics & Medical History",
   "status" : "draft",
