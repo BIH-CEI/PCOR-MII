@@ -1,0 +1,80 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "opd-sfk-antwort",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem opd-sfk-antwort</b></p><a name=\"opd-sfk-antwort\"> </a><a name=\"hcopd-sfk-antwort\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal().</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style=\"white-space:nowrap\">trifft-gar-nicht-zu<a name=\"opd-sfk-antwort-trifft-gar-nicht-zu\"> </a></td><td>Trifft gar nicht zu</td><td>0</td></tr><tr><td style=\"white-space:nowrap\">trifft-eher-nicht-zu<a name=\"opd-sfk-antwort-trifft-eher-nicht-zu\"> </a></td><td>Trifft eher nicht zu</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">teils-teils<a name=\"opd-sfk-antwort-teils-teils\"> </a></td><td>Teils/teils</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">trifft-eher-zu<a name=\"opd-sfk-antwort-trifft-eher-zu\"> </a></td><td>Trifft eher zu</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">trifft-voellig-zu<a name=\"opd-sfk-antwort-trifft-voellig-zu\"> </a></td><td>Trifft völlig zu</td><td>4</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem opd-sfk-antwort</b></p><a name=\"en-opd-sfk-antwort\"> </a><a name=\"en-hcopd-sfk-antwort\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal().</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style=\"white-space:nowrap\">trifft-gar-nicht-zu<a name=\"en-opd-sfk-antwort-trifft-gar-nicht-zu\"> </a></td><td>Trifft gar nicht zu</td><td>0</td></tr><tr><td style=\"white-space:nowrap\">trifft-eher-nicht-zu<a name=\"en-opd-sfk-antwort-trifft-eher-nicht-zu\"> </a></td><td>Trifft eher nicht zu</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">teils-teils<a name=\"en-opd-sfk-antwort-teils-teils\"> </a></td><td>Teils/teils</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">trifft-eher-zu<a name=\"en-opd-sfk-antwort-trifft-eher-zu\"> </a></td><td>Trifft eher zu</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">trifft-voellig-zu<a name=\"en-opd-sfk-antwort-trifft-voellig-zu\"> </a></td><td>Trifft völlig zu</td><td>4</td></tr></table></div></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
+  "version" : "0.2.0",
+  "name" : "OpdSfkAntwortCS",
+  "title" : "OPD-SFK Antwortskala (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-02T06:40:48+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "property" : [{
+    "code" : "ordinalValue",
+    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "description" : "Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal().",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "trifft-gar-nicht-zu",
+    "display" : "Trifft gar nicht zu",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 0
+    }]
+  },
+  {
+    "code" : "trifft-eher-nicht-zu",
+    "display" : "Trifft eher nicht zu",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 1
+    }]
+  },
+  {
+    "code" : "teils-teils",
+    "display" : "Teils/teils",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "trifft-eher-zu",
+    "display" : "Trifft eher zu",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 3
+    }]
+  },
+  {
+    "code" : "trifft-voellig-zu",
+    "display" : "Trifft völlig zu",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 4
+    }]
+  }]
+}
