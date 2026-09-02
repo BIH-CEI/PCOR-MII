@@ -9,21 +9,21 @@ Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:
 - [Demographie](Demographie.html) (DEM) und [MHI](MHI.html) — Soziodemographie und medizinische Vorgeschichte
 - [PROMIS](PROMIS.html) — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS
 - [WHODAS 2.0 (12-Item)](WHODAS-12.html) — Funktionsfähigkeit und Beeinträchtigung
-- [PHQ-15](PHQ-15.html), PHQ-8 (siehe [PHQ-Übersicht](PHQ.html)), GAD-7 / GAD-2 / PHQ-4
+- [PHQ-15](PHQ-15.html), PHQ-8 (siehe [PHQ-Übersicht](PHQ.html)), [GAD-7](GAD-7.html) / GAD-2 / PHQ-4
 - EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen
 - [WAI](WAI.html) — Arbeitsfähigkeit (metadata-only)
 
-> **GAD-7 folgt:** Der GAD-7 wird im MII-PRO-Modul gepflegt und ist in Version 2026.6.0 noch nicht enthalten. Sobald er upstream verfügbar ist, wird er hier und in der [PHQ-Übersicht](PHQ.html) verlinkt — PCOR-MII baut ihn nicht selbst nach.
+Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-Instrumente referenziert, nicht nachgebaut — siehe [GAD-7](GAD-7.html).
 
 ### PSS-spezifische Instrumente
 
 | Instrument | Kat. | Items | Erfasst | Status |
 |---|---|--:|---|---|
-| **SSD-12** | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | MII PRO 2026.6.0 |
-| **WI-7** | DCH | 7 | Gesundheitsangst (Whiteley-Index) | MII PRO 2026.6.0 |
-| **SCOFF** | MHA | 5 | Essstörungs-Screening | MII PRO 2026.6.0 |
-| **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | MII PRO 2026.6.0 |
-| **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | MII PRO 2026.6.0 |
+| **SSD-12** | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | MII PRO seit 2026.6.0 |
+| **WI-7** | DCH | 7 | Gesundheitsangst (Whiteley-Index) | MII PRO seit 2026.6.0 |
+| **SCOFF** | MHA | 5 | Essstörungs-Screening | MII PRO seit 2026.6.0 |
+| **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | MII PRO seit 2026.6.0 |
+| **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | MII PRO seit 2026.6.0 |
 | **PHQ-D** | MHA | 4 | Deutsche PHQ-Fassung, Teilmenge | offen |
 | **PHQ-SI** | MHA | 1 | Suizidalität (Einzelitem) | offen |
 | **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.html) |

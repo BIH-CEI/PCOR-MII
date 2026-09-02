@@ -19,6 +19,14 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`improve`** MII-PRO-Abhängigkeit auf 2026.7.0 angehoben (GAD-7 im PHQ-D-Namespace)
+
+**`feature`** Neue Seite GAD-7; PHQ-Übersicht um GAD-7, PHQ-4 und die ConceptMap `mii-cm-pro-gad-7-linkids` ergänzt
+
+**`documentation`** Neue Instrumentenübersicht über alle drei Entitäten und eigene PSS-Seite
+
+**`documentation`** Neue Seiten für die PCOR-MII-eigenen Instrumente OPD-SFK, WAI und GSLTPAQ
+
 **`improve`** MII-PRO-Abhängigkeit auf 2026.6.0 angehoben (rein additiv gegenüber 2026.5.2: neue Questionnaires EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12, WI-7 samt Score-`ObservationDefinition`s)
 
 **`feature`** OPD-SFK, WAI und GSLTPAQ als PCOR-MII-eigene Instrumente (nicht im MII-PRO-Modul enthalten)
