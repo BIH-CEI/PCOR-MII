@@ -23,6 +23,8 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 **`feature`** Neue Seite GAD-7; PHQ-Übersicht um GAD-7, PHQ-4 und die ConceptMap `mii-cm-pro-gad-7-linkids` ergänzt
 
+**`feature`** EXPECT und IPQ-S als PCOR-MII-eigene Ressourcen modelliert (beide nicht im MII-PRO-Modul); EXPECT bewusst ohne Gesamtscore, IPQ-S ausdrücklich als einzelne B-IPQ-Ursachenfrage und nicht als B-IPQ
+
 **`documentation`** Neue Instrumentenübersicht über alle drei Entitäten und eigene PSS-Seite
 
 **`documentation`** Neue Seiten für die PCOR-MII-eigenen Instrumente OPD-SFK, WAI und GSLTPAQ

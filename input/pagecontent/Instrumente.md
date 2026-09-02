@@ -53,8 +53,8 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | ISR-Z (3) | MHA | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
 | SSD-12 (12) | DCH | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
 | WI-7 (7) | DCH | • | — | — | frei | MII PRO seit 2026.6.0 — Seite offen |
-| EXPECT (3) | DCH | • | — | — | ungeklärt | offen — keine standardisierte Skala, drei NRS-Einzelitems |
-| IPQ-S (1) | DCH | • | — | — | frei (nur 1 offene Frage) | offen |
+| EXPECT (3) | DCH | • | — | — | keine Angabe — keine standardisierte Skala | [EXPECT](EXPECT.html) |
+| IPQ-S (1) | DCH | • | — | — | frei — nur die offene B-IPQ-Ursachenfrage | [IPQ-S](IPQ-S.html) |
 | GSLTPAQ (6) | TCH | • | — | — | frei | [GSLTPAQ](GSLTPAQ.html) |
 | ERQ-6 (6) | DCH | — | • | — | frei | offen — nur trennschärfstes Item je Skala |
 | EDE-Q6 (6) | DCH | — | • | — | frei | offen — nur trennschärfstes Item je Skala |
@@ -70,7 +70,7 @@ Dazu kommen **standortspezifische Item-Gruppen**, die kein publiziertes Instrume
 ### Woher kommt welche Ressource?
 
 - **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2026.7.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
-- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen) sowie OPD-SFK, WAI und GSLTPAQ.
+- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen) sowie OPD-SFK, WAI, GSLTPAQ, EXPECT und IPQ-S.
 
 ### Lizenz-Tiers
 

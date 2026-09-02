@@ -28,8 +28,8 @@ Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-
 | **PHQ-SI** | MHA | 1 | Suizidalität — das PHQ-9-Item `phq-phq2i` | über [PHQ-9](PHQ-9.html) abgedeckt |
 | **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.html) |
 | **GSLTPAQ** | TCH | 6 | Körperliche Freizeitaktivität | [Seite](GSLTPAQ.html) |
-| **EXPECT** | DCH | 3 | Behandlungserwartung (drei NRS-Einzelitems, kein standardisierter Fragebogen) | offen — Modellierung zu klären |
-| **IPQ-S** | DCH | 1 | Krankheitswahrnehmung — nur eine offene Frage angelehnt an den B-IPQ | offen — Modellierung zu klären |
+| **EXPECT** | DCH | 3 | Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen) | [Seite](EXPECT.html) |
+| **IPQ-S** | DCH | 1 | Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ | [Seite](IPQ-S.html) |
 
 Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (`UKE-HCU`, `UKE-HCU2`, `UKE-PSE`, `UKE-TR`, `UKE-DOT`, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.
 
