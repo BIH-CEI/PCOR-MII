@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="wai-skala-5"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem wai-skala-5</b></p><a name="wai-skala-5"> </a><a name="hcwai-skala-5"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (1-5); 5 = bester Wert.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style="white-space:nowrap">stufe-1<a name="wai-skala-5-stufe-1"> </a></td><td>Stufe 1</td><td>1</td></tr><tr><td style="white-space:nowrap">stufe-2<a name="wai-skala-5-stufe-2"> </a></td><td>Stufe 2</td><td>2</td></tr><tr><td style="white-space:nowrap">stufe-3<a name="wai-skala-5-stufe-3"> </a></td><td>Stufe 3</td><td>3</td></tr><tr><td style="white-space:nowrap">stufe-4<a name="wai-skala-5-stufe-4"> </a></td><td>Stufe 4</td><td>4</td></tr><tr><td style="white-space:nowrap">stufe-5<a name="wai-skala-5-stufe-5"> </a></td><td>Stufe 5</td><td>5</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5"/>
+  <version value="0.2.0"/>
+  <name value="WaiSkala5CS"/>
+  <title value="WAI Antwortskala 5-stufig (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-02T07:25:29+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <property>
+    <code value="ordinalValue"/>
+    <uri value="http://hl7.org/fhir/StructureDefinition/ordinalValue"/>
+    <description value="Numerischer Ordinalwert (1-5); 5 = bester Wert."/>
+    <type value="decimal"/>
+  </property>
+  <concept>
+    <code value="stufe-1"/>
+    <display value="Stufe 1"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-2"/>
+    <display value="Stufe 2"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="2"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-3"/>
+    <display value="Stufe 3"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="3"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-4"/>
+    <display value="Stufe 4"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="4"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-5"/>
+    <display value="Stufe 5"/>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="5"/>
+    </property>
+  </concept>
+</CodeSystem>
