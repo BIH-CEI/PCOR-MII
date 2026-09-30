@@ -41,8 +41,8 @@ CodeSystem: PcorItemDictionaryCS
 Id: pcor-item-dictionary
 Title: "PCOR-MII Item Level Dictionary — Variablen-IDs"
 Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit sich ein flach erhobener Datensatz maschinell auf die Instrumenten-Questionnaires verteilen lässt (ADR-011). Jedes Item trägt seine Variable in `item.code`; die Zuordnung ist damit eine Nachschlage-Operation und keine Abbildung. Enthält nur die modellierten Variablen — `content = fragment`."
+* insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary"
-* ^version = "0.1.0"
 * ^status = #draft
 * ^experimental = true
 * ^date = "2026-09-30"

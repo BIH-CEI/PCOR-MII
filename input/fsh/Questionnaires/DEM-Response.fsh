@@ -22,7 +22,7 @@ Usage: #example
 Title: "DEM — Beispielantwort"
 Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
 * language = #de-DE
-* questionnaire = Canonical(DEM)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-16T10:00:00+02:00"

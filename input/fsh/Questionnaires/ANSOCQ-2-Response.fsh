@@ -52,7 +52,7 @@ Title: "ANSOCQ-2 — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum ANSOCQ-2-Questionnaire. `language` ist `de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde — der Questionnaire selbst führt den englischen Originalwortlaut."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-CH
-* questionnaire = Canonical(ANSOCQ2)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-18T09:30:00+02:00"

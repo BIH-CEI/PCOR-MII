@@ -40,7 +40,7 @@ Title: "EDE-Q6 — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire, einschließlich der über `enableWhen` abhängigen Frage `edeq30`. Antwortmuster: residuelle Essstörungspathologie bei teilrestituiertem Gewicht."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
-* questionnaire = Canonical(EDEQ6)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-18T09:15:00+02:00"

@@ -37,7 +37,7 @@ Description: "Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT"
 * name = "EXPECT"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

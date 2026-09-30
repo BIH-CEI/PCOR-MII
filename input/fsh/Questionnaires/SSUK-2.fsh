@@ -163,6 +163,7 @@ CodeSystem: SsukAntwortCS
 Id: ssuk-antwort
 Title: "SSUK Antwortskala (Codes)"
 Description: "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -190,12 +191,13 @@ ValueSet: SsukAntwortVS
 Id: ssuk-antwort-vs
 Title: "SSUK Antwortskala"
 Description: "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system SsukAntwortCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "nie"
@@ -220,7 +222,7 @@ Description: "Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankhei
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2"
 * name = "SSUK2"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

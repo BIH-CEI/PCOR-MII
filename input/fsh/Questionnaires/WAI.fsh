@@ -40,6 +40,7 @@ CodeSystem: WaiSkala5CS
 Id: wai-skala-5
 Title: "WAI Antwortskala 5-stufig (Codes)"
 Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -67,12 +68,13 @@ ValueSet: WaiSkala5VS
 Id: wai-skala-5-vs
 Title: "WAI Antwortskala 5-stufig"
 Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system WaiSkala5CS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5"
 * ^expansion.contains[=].code = #stufe-1
 * ^expansion.contains[=].display = "Stufe 1"
@@ -101,7 +103,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI"
 * name = "WAI"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

@@ -46,6 +46,7 @@ InstanceOf: mii-pr-pro-score-blueprint
 Usage: #definition
 Title: "ERQ-S Neubewertung (Cognitive Reappraisal)"
 Description: "Subskala Neubewertung des ERQ-S: Summe der Items erq1, erq3 und erq8 (ERQ-S-Zählung 1, 3, 5), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Neubewertung an, was laut Instrument mit besserem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta & Gross (2023), Scoring Instructions zum ERQ-S."
+* insert ObsDefVersion
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"
 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#survey
@@ -66,6 +67,7 @@ InstanceOf: mii-pr-pro-score-blueprint
 Usage: #definition
 Title: "ERQ-S Unterdrückung (Expressive Suppression)"
 Description: "Subskala Unterdrückung des ERQ-S: Summe der Items erq2, erq6 und erq9 (ERQ-S-Zählung 2, 4, 6), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Unterdrückung an, was laut Instrument mit schlechterem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta & Gross (2023), Scoring Instructions zum ERQ-S."
+* insert ObsDefVersion
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"
 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#survey

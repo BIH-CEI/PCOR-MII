@@ -40,7 +40,7 @@ Title: "ERQ-S — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum ERQ-S-Questionnaire. Antwortmuster: niedrige Neubewertung (Summe 11) bei hoher Unterdrückung (Summe 19); die beiden Summen liegen als Score-Observations vor."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
-* questionnaire = Canonical(ERQ6)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-18T09:00:00+02:00"

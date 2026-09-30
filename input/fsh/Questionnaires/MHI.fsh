@@ -2,6 +2,7 @@ CodeSystem: MhiCpcorDiagCS
 Id: mhi-cpcor-diag
 Title: "MHI Diagnosegruppe (CPCOR) (Codes)"
 Description: "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -14,12 +15,13 @@ ValueSet: MhiCpcorDiagVS
 Id: mhi-cpcor-diag-vs
 Title: "MHI Diagnosegruppe (CPCOR)"
 Description: "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiCpcorDiagCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "Essstörung"
@@ -37,6 +39,7 @@ CodeSystem: MhiChronischCS
 Id: mhi-chronisch
 Title: "MHI Chronische Erkrankungen (GIPS13) (Codes)"
 Description: "Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -70,12 +73,13 @@ ValueSet: MhiChronischVS
 Id: mhi-chronisch-vs
 Title: "MHI Chronische Erkrankungen (GIPS13)"
 Description: "Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiChronischCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "keine chronische Erkrankung"
@@ -156,6 +160,7 @@ CodeSystem: MhiEinnahmezeitCS
 Id: mhi-einnahmezeit
 Title: "MHI Einnahmezeitpunkt Medikament (Codes)"
 Description: "Tageszeit der Medikamenteneinnahme (medi_02_time)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -169,12 +174,13 @@ ValueSet: MhiEinnahmezeitVS
 Id: mhi-einnahmezeit-vs
 Title: "MHI Einnahmezeitpunkt Medikament"
 Description: "Tageszeit der Medikamenteneinnahme (medi_02_time)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiEinnahmezeitCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "morgens"
@@ -195,6 +201,7 @@ CodeSystem: MhiGewichtsmethodeCS
 Id: mhi-gewichtsmethode
 Title: "MHI Gewichtsmessung Methode (Codes)"
 Description: "Wie wurde das Gewicht ermittelt? (weight_outpatient_2)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -209,12 +216,13 @@ ValueSet: MhiGewichtsmethodeVS
 Id: mhi-gewichtsmethode-vs
 Title: "MHI Gewichtsmessung Methode"
 Description: "Wie wurde das Gewicht ermittelt? (weight_outpatient_2)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiGewichtsmethodeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "Hausarzt"
@@ -238,6 +246,7 @@ CodeSystem: MhiAnSubtypCS
 Id: mhi-an-subtyp
 Title: "MHI Anorexia-nervosa-Subtyp (Codes)"
 Description: "Subtyp der Anorexia nervosa (AN_subtyp)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -250,12 +259,13 @@ ValueSet: MhiAnSubtypVS
 Id: mhi-an-subtyp-vs
 Title: "MHI Anorexia-nervosa-Subtyp"
 Description: "Subtyp der Anorexia nervosa (AN_subtyp)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiAnSubtypCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "restriktiver Typ (Kontrolle des Gewichts vorwiegend über geringe Nahrungsaufnahme und/oder Sport)"
@@ -273,6 +283,7 @@ CodeSystem: MhiGewichtAngabeCS
 Id: mhi-gewicht-angabe
 Title: "MHI Gewichtsangabe (Codes)"
 Description: "Einheit/Angabe-Status für Gewicht (Q_WB151)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -284,12 +295,13 @@ ValueSet: MhiGewichtAngabeVS
 Id: mhi-gewicht-angabe-vs
 Title: "MHI Gewichtsangabe"
 Description: "Einheit/Angabe-Status für Gewicht (Q_WB151)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiGewichtAngabeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe"
 * ^expansion.contains[=].code = #kg
 * ^expansion.contains[=].display = "kg"
@@ -304,6 +316,7 @@ CodeSystem: MhiGroesseAngabeCS
 Id: mhi-groesse-angabe
 Title: "MHI Größenangabe (Codes)"
 Description: "Einheit/Angabe-Status für Körpergröße (Q_WB152)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -315,12 +328,13 @@ ValueSet: MhiGroesseAngabeVS
 Id: mhi-groesse-angabe-vs
 Title: "MHI Größenangabe"
 Description: "Einheit/Angabe-Status für Körpergröße (Q_WB152)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system MhiGroesseAngabeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"
 * ^expansion.contains[=].code = #cm
 * ^expansion.contains[=].display = "cm"
@@ -348,7 +362,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI"
 * name = "MHI"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

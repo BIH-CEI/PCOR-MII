@@ -47,7 +47,7 @@ Title: "ACE — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum ACE-Questionnaire (erste fünf ACE-Fragen). Zwei bejahte Items in der emotionalen Dimension; die Anzahl der Ja-Antworten ist kein ACE-Score, weil die Fragen 6–10 nicht erhoben werden."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
-* questionnaire = Canonical(ACE)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-18T10:00:00+02:00"

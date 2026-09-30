@@ -204,6 +204,7 @@ CodeSystem: AnsocqKoerperteileCS
 Id: ansocq-koerperteile
 Title: "ANSOCQ Item 3 — Körperteile (Codes)"
 Description: "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -251,12 +252,13 @@ ValueSet: AnsocqKoerperteileVS
 Id: ansocq-koerperteile-vs
 Title: "ANSOCQ Item 3 — Körperteile"
 Description: "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system AnsocqKoerperteileCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "There is no way I would be prepared to gain weight on these body parts."
@@ -277,6 +279,7 @@ CodeSystem: AnsocqGedankenCS
 Id: ansocq-gedanken
 Title: "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)"
 Description: "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -324,12 +327,13 @@ ValueSet: AnsocqGedankenVS
 Id: ansocq-gedanken-vs
 Title: "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht"
 Description: "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system AnsocqGedankenCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "There is nothing wrong with the amount of time I spend thinking about food and my weight."
@@ -354,7 +358,7 @@ Description: "Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2"
 * name = "ANSOCQ2"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * language = #en

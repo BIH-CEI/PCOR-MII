@@ -63,7 +63,7 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6"
 * name = "ERQ6"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

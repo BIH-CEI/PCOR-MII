@@ -44,7 +44,7 @@ Title: "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds"
 Description: "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung."
 * url = "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids"
 * name = "PcorCmErqSLinkIds"
-* version = "0.1.0"
+* insert InstanceVersion
 * status = #draft
 * experimental = true
 * date = "2026-09-29"

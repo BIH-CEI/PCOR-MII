@@ -21,6 +21,7 @@ CodeSystem: PcorScoreCatalogueCS
 Id: pcor-score-catalogue
 Title: "PCOR-MII Score-Katalog (Codes)"
 Description: "Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen."
+* insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue"
 * ^status = #draft
 * ^experimental = true

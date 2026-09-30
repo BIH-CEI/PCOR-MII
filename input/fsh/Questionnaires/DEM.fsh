@@ -32,6 +32,7 @@ CodeSystem: DemAntwortCS
 Id: dem-antwort
 Title: "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)"
 Description: "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -52,6 +53,7 @@ CodeSystem: DemHaeufigkeit5CS
 Id: dem-haeufigkeit-5
 Title: "DEM Häufigkeit (5-stufig) (Codes)"
 Description: "5-stufige Häufigkeitsskala für finanzielle Sorgen (MONMEAL/MONRENT/MONBILLS). Quelle: Commonwealth Fund 2017."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -75,6 +77,7 @@ CodeSystem: DemLeichtigkeit6CS
 Id: dem-leichtigkeit-6
 Title: "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)"
 Description: "Skala zur erlebten Leichtigkeit, Unterstützung zu erhalten (WHODIS1/WHODIS2)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -101,6 +104,7 @@ CodeSystem: DemIscedCS
 Id: dem-isced-de
 Title: "DEM Bildungsabschluss (ISCED-2011/KMK)"
 Description: "Höchster Bildungsabschluss nach ISCED-2011 / KMK-Systematik (Q_ISCED)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -116,6 +120,7 @@ CodeSystem: DemErwerbsstatusCS
 Id: dem-erwerbsstatus
 Title: "DEM Erwerbsstatus (OECD)"
 Description: "Aktuelle Arbeitssituation nach OECD Measuring Financial Literacy (Q_OECDLIT5a)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -157,6 +162,7 @@ CodeSystem: DemEinkommenCS
 Id: dem-einkommen
 Title: "DEM Haushaltseinkommen (Bänder)"
 Description: "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -180,6 +186,7 @@ CodeSystem: DemUrbanizitaetCS
 Id: dem-urbanizitaet
 Title: "DEM Urbanizität (Codes)"
 Description: "Beschreibung des Wohnorts (Q_OECDLITii)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -200,6 +207,7 @@ CodeSystem: DemRentenstatusCS
 Id: dem-rentenstatus
 Title: "DEM Rentenstatus (Codes)"
 Description: "Rentenstatus (GIPS10)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -212,6 +220,7 @@ CodeSystem: DemZigarettenBandCS
 Id: dem-zigaretten-band
 Title: "DEM Zigaretten pro Tag (Bänder)"
 Description: "Anzahl Zigaretten pro Tag in Bändern (GIPS57b)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -224,6 +233,7 @@ CodeSystem: DemBeziehungsstatusCS
 Id: dem-beziehungsstatus
 Title: "DEM Beziehungsstatus (Codes)"
 Description: "Partnerschaftsstatus (GIPS04)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -234,6 +244,7 @@ CodeSystem: DemGeschlechtCS
 Id: dem-geschlecht
 Title: "DEM Geschlecht (Selbstbeschreibung)"
 Description: "Selbstbeschriebenes Geschlecht (Q_SEX). HINWEIS: Im MII-Kontext bevorzugt an das MII-Person-Modul (Geschlecht / gender-amtlich-de) angleichen."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -268,13 +279,14 @@ ValueSet: DemJaNeinVS
 Id: dem-ja-nein
 Title: "DEM Ja/Nein"
 Description: "Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * DemAntwortCS#ja "Ja"
 * DemAntwortCS#nein "Nein"
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
 * ^expansion.contains[0].code = #ja
 * ^expansion.contains[0].display = "Ja"
@@ -286,6 +298,7 @@ ValueSet: DemJaNeinNzVS
 Id: dem-ja-nein-nz-vs
 Title: "DEM Ja/Nein/Nicht zutreffend"
 Description: "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * DemAntwortCS#ja "Ja"
@@ -293,7 +306,7 @@ Description: "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS."
 * DemAntwortCS#nicht-zutreffend "Nicht zutreffend"
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
 * ^expansion.contains[0].code = #ja
 * ^expansion.contains[0].display = "Ja"
@@ -308,6 +321,7 @@ ValueSet: DemJaNeinKaVS
 Id: dem-ja-nein-ka-vs
 Title: "DEM Ja/Nein/Keine Angabe"
 Description: "Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * DemAntwortCS#ja "Ja"
@@ -315,7 +329,7 @@ Description: "Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAnt
 * DemAntwortCS#keine-angabe "Möchte ich nicht sagen"
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
 * ^expansion.contains[0].code = #ja
 * ^expansion.contains[0].display = "Ja"
@@ -330,12 +344,13 @@ ValueSet: DemHaeufigkeit5VS
 Id: dem-haeufigkeit-5-vs
 Title: "DEM Häufigkeit (5-stufig)"
 Description: "5-stufige Häufigkeitsskala (MONMEAL/MONRENT/MONBILLS)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemHaeufigkeit5CS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"
 * ^expansion.contains[0].code = #staendig
 * ^expansion.contains[0].display = "Always"
@@ -356,12 +371,13 @@ ValueSet: DemLeichtigkeit6VS
 Id: dem-leichtigkeit-6-vs
 Title: "DEM Leichtigkeit Unterstützung (6-stufig)"
 Description: "Leichtigkeit, Unterstützung zu erhalten (WHODIS1/2)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemLeichtigkeit6CS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"
 * ^expansion.contains[0].code = #sehr-einfach
 * ^expansion.contains[0].display = "Very easy"
@@ -385,12 +401,13 @@ ValueSet: DemIscedVS
 Id: dem-isced-vs
 Title: "DEM Bildungsabschluss (ISCED)"
 Description: "Höchster Bildungsabschluss (Q_ISCED)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemIscedCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"
 * ^expansion.contains[0].code = #primar
 * ^expansion.contains[0].display = "Primarstufe (inkl. 4-6 Jahre Grund- o. Förderschule)"
@@ -417,12 +434,13 @@ ValueSet: DemErwerbsstatusVS
 Id: dem-erwerbsstatus-vs
 Title: "DEM Erwerbsstatus"
 Description: "Aktuelle Arbeitssituation (Q_OECDLIT5a)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemErwerbsstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"
 * ^expansion.contains[0].code = #selbststaendig
 * ^expansion.contains[0].display = "Self-employed [work for yourself]"
@@ -461,12 +479,13 @@ ValueSet: DemEinkommenVS
 Id: dem-einkommen-vs
 Title: "DEM Haushaltseinkommen"
 Description: "Einkommensbänder (Q_OECDLIT7a)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemEinkommenCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen"
 * ^expansion.contains[0].code = #band-niedrig
 * ^expansion.contains[0].display = "Up to €2,300 a month"
@@ -487,12 +506,13 @@ ValueSet: DemUrbanizitaetVS
 Id: dem-urbanizitaet-vs
 Title: "DEM Urbanizität"
 Description: "Wohnort-Typ (Q_OECDLITii)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemUrbanizitaetCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"
 * ^expansion.contains[0].code = #stadt
 * ^expansion.contains[0].display = "City"
@@ -510,12 +530,13 @@ ValueSet: DemRentenstatusVS
 Id: dem-rentenstatus-vs
 Title: "DEM Rentenstatus"
 Description: "Rentenstatus (GIPS10)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemRentenstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus"
 * ^expansion.contains[0].code = #keine
 * ^expansion.contains[0].display = "Keine Rente"
@@ -533,12 +554,13 @@ ValueSet: DemZigarettenBandVS
 Id: dem-zigaretten-band-vs
 Title: "DEM Zigaretten pro Tag"
 Description: "Zigaretten/Tag in Bändern (GIPS57b)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemZigarettenBandCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"
 * ^expansion.contains[0].code = #b1
 * ^expansion.contains[0].display = "1-10"
@@ -556,12 +578,13 @@ ValueSet: DemBeziehungsstatusVS
 Id: dem-beziehungsstatus-vs
 Title: "DEM Beziehungsstatus"
 Description: "Partnerschaftsstatus (GIPS04)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemBeziehungsstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"
 * ^expansion.contains[0].code = #keine-feste
 * ^expansion.contains[0].display = "Keine feste Partnerschaft"
@@ -573,12 +596,13 @@ ValueSet: DemGeschlechtVS
 Id: dem-geschlecht-vs
 Title: "DEM Geschlecht"
 Description: "Selbstbeschriebenes Geschlecht (Q_SEX)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system DemGeschlechtCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"
 * ^expansion.contains[0].code = #weiblich
 * ^expansion.contains[0].display = "Female"
@@ -609,7 +633,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" //Isik!!!
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM"
 * name = "DEM"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

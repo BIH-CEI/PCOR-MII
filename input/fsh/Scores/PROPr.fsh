@@ -78,6 +78,7 @@ InstanceOf: mii-pr-pro-score-blueprint
 Usage: #definition
 Title: "PROPr — PROMIS-Preference Utility Score"
 Description: "Präferenzbasierter Nutzwert (Utility) über sieben PROMIS-Domänen: Cognitive Function-Abilities, Depression, Fatigue, Pain Interference, Physical Function, Sleep Disturbance sowie Ability to Participate in Social Roles and Activities. Die Anxiety-Domäne geht NICHT ein. Wertebereich -0,022 bis 1,0 (0 = tot, 1 = bestmögliche Gesundheit); höhere Werte zeigen bessere Gesundheit an. Berechnet wird aus Domänen-T-Scores (theta = (T-50)/10), nicht aus Items — damit aus PROMIS-16, PROMIS-29+2 oder CATs gleichermaßen ableitbar. PROMIS-spezifisch, aber nicht an ein einzelnes PROMIS-Profil gebunden. Quelle: Dewitt et al., Med Decis Making 2018;38(6):683-698. Vorläufig in PCOR-MII gepflegt; die Zuständigkeit liegt beim MII-PRO-Modul."
+* insert ObsDefVersion
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"
 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#survey

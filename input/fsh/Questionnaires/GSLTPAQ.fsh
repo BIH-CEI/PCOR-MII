@@ -93,7 +93,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 //   (Lindner et al. 2026) wird nach ADR-007 eine EIGENE Ressource im
 //   MII-PRO-Modul, keine Sprachebene und keine neue Version dieser hier.
 * language = #de
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

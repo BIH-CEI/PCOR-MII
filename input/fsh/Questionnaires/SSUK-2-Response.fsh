@@ -45,7 +45,7 @@ Title: "SSUK-2 — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire. Antwortmuster eines günstigen sozialen Umfelds: hoch bei der unterstützenden Zuwendung (`ssuk14`), niedrig bei der belastenden Interaktion (`ssuk10`)."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
-* questionnaire = Canonical(SSUK2)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-18T09:45:00+02:00"

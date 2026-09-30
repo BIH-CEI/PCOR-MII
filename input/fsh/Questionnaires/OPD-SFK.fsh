@@ -43,6 +43,7 @@ CodeSystem: OpdSfkAntwortCS
 Id: opd-sfk-antwort
 Title: "OPD-SFK Antwortskala (Codes)"
 Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -70,12 +71,13 @@ ValueSet: OpdSfkAntwortVS
 Id: opd-sfk-antwort-vs
 Title: "OPD-SFK Antwortskala"
 Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system OpdSfkAntwortCS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"
 * ^expansion.contains[=].code = #trifft-gar-nicht-zu
 * ^expansion.contains[=].display = "Trifft gar nicht zu"
@@ -100,7 +102,7 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

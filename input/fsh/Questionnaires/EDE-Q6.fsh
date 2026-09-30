@@ -133,6 +133,7 @@ CodeSystem: EdeQ6TageCS
 Id: ede-q6-tage
 Title: "EDE-Q6 Häufigkeit in 28 Tagen (Codes)"
 Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal()."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -166,12 +167,13 @@ ValueSet: EdeQ6TageVS
 Id: ede-q6-tage-vs
 Title: "EDE-Q6 Häufigkeit in 28 Tagen"
 Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system EdeQ6TageCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "kein Tag"
@@ -202,7 +204,7 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6"
 * name = "EDEQ6"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient

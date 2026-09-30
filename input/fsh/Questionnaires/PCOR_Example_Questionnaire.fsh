@@ -19,7 +19,7 @@ Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter 
 * language = #de-DE
 
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire"
-* version = "0.1.0"
+* insert Version
 * name = "PcorExampleQuestionnaire"
 * title = "PCOR Beispiel-Fragebogen"
 * status = #draft
