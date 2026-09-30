@@ -10,7 +10,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MHI Diagnosegruppe (CPCOR) - XML Representation - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>MHI Diagnosegruppe (CPCOR) - XML Representation - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -151,8 +151,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15.22"}
-    h3,h4,h5,h6{--heading-prefix:"15.22"}</style>
+    <style type="text/css">h2{--heading-prefix:"19.32"}
+    h3,h4,h5,h6{--heading-prefix:"19.32"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -172,7 +172,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -218,6 +218,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -238,7 +244,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -248,6 +275,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -259,6 +307,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -274,7 +325,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -320,7 +371,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -374,7 +425,7 @@ a[name="test"] + h3 + div {
           
 
             as of 
-2026-09-02
+2026-09-30
 
           
         
@@ -397,15 +448,15 @@ a[name="test"] + h3 + div {
   &lt;<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;English&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet mhi-cpcor-diag-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs&quot;&gt; &lt;/a&gt;&lt;a name=&quot;en-hcmhi-cpcor-diag-vs&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px&quot;&gt;Expansion based on codesystem MHI Diagnosegruppe (CPCOR) (Codes) version 0.1.0&lt;/p&gt;&lt;p&gt;This value set expansion contains 4 concepts.&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;System&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-1&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-1&quot;&gt;1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Essstörung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-2&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-2&quot;&gt;2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nierenerkrankung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-3&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-3&quot;&gt;3&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nierenspender&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-4&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-4&quot;&gt;4&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Anhaltende körperliche Beschwerden&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;English&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet mhi-cpcor-diag-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs&quot;&gt; &lt;/a&gt;&lt;a name=&quot;en-hcmhi-cpcor-diag-vs&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px&quot;&gt;Expansion based on &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html&quot;&gt;codesystem MHI Diagnosegruppe (CPCOR) (Codes) v0.3.0 (CodeSystem)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This value set expansion contains 4 concepts.&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;System&lt;/b&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-1&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-1&quot;&gt;1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Essstörung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-2&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-2&quot;&gt;2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nierenerkrankung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-3&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-3&quot;&gt;3&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nierenspender&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=&quot;en-mhi-cpcor-diag-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag-4&quot;&gt; &lt;/a&gt;&lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag&lt;/code&gt;&lt;/td&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;  &lt;a href=&quot;CodeSystem-mhi-cpcor-diag.html#mhi-cpcor-diag-4&quot;&gt;4&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Anhaltende körperliche Beschwerden&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-cpcor-diag-vs&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.2.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.3.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MhiCpcorDiagVS&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MHI Diagnosegruppe (CPCOR)&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-02T07:19:25+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-09-30T09:40:42+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BIH-CEI&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BIH-CEI&quot;/&gt;
@@ -433,7 +484,7 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter">parameter</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;used-codesystem&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.value_x_">valueUri</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.1.0&quot;/&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.3.0&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter">parameter</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.system">system</a>
@@ -513,10 +564,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

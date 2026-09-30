@@ -1,4 +1,4 @@
-# DEM Ja/Nein/Nicht zutreffend - PCOR-MII Implementation Guide v0.2.0
+# DEM Ja/Nein/Nicht zutreffend - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: DEM Ja/Nein/Nicht zutreffend (Experimental) 
 
@@ -28,12 +28,12 @@ Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS.
   "resourceType" : "ValueSet",
   "id" : "dem-ja-nein-nz-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-nz-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemJaNeinNzVS",
   "title" : "DEM Ja/Nein/Nicht zutreffend",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

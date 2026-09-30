@@ -1,32 +1,32 @@
-# Bereitstellung - PCOR-MII Implementation Guide v0.2.0
+# Bereitstellung - PCOR-MII Implementation Guide v0.3.0
 
 ## Bereitstellung
 
 **Translated page. Original language: German.**
 
-Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen konsumieren können** — Questionnaire-Definitionen, ValueSets, das PRO-QR-Profil und Beispiele.
+This page describes **how implementers can consume the PCOR-MII data definitions** — questionnaire definitions, ValueSets, the PRO QuestionnaireResponse profile and the examples.
 
-## Was du bekommst
+## What you get
 
 | | |
 | :--- | :--- |
-| Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`,`MII PR PRO Questionnaire`(aus dem MII PRO-Modul) |
-| Questionnaire-Definitionen | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR Beispiel (PCOR-MII + MII PRO-Modul) |
-| ValueSets | Frequency-/Intensity-/Physical-Function-Response-Scale + lokale PCOR-MII ValueSets |
-| Beispiele | validierte`QuestionnaireResponse`s (siehe[Validierung](Validierung.md)) |
+| Profiles (structural constraints) | `MII PR PRO QuestionnaireResponse`,`MII PR PRO Questionnaire`(from the MII PRO module) |
+| Questionnaire definitions | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR example (PCOR-MII plus the MII PRO module) |
+| ValueSets | frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets |
+| Examples | validated`QuestionnaireResponse`s (see[Validation](Validierung.md)) |
 
-## Wege, das zu bekommen
+## Ways to get it
 
-### 1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)
+### 1. PCOR-MII container (for mapper development and local testing)
 
-Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundle gegen `$validate` prüfen, Definitionen ad-hoc per FHIR-API ziehen.
+A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checking a bundle against `$validate` and pulling definitions ad hoc over the FHIR API.
 
 ```
 flowchart LR
-    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.4.1"| HAPI
-    REPO[("PCOR-MII Repo")] -->|"als Package"| HAPI
-    HAPI_BASE["hapiproject/hapi:v8.4.0"] --> HAPI["PCOR-MII Container<br/>localhost:8097"]
-    HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
+    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
+    REPO[("PCOR-MII repo")] -->|"as a package"| HAPI
+    HAPI_BASE["hapiproject/hapi:v8.4.0"] --> HAPI["PCOR-MII container<br/>localhost:8097"]
+    HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementer"]
 
     style HAPI fill:#ffe1e1
     style SIMPLIFIER fill:#e1f5ff
@@ -36,37 +36,37 @@ flowchart LR
 
 ```
 docker compose -f docker/docker-compose.yml up --build
-curl http://localhost:8097/fhir/Questionnaire?_summary=true            # alle Definitionen
-curl http://localhost:8097/fhir/Questionnaire?url=…/mii-qst-pro-promis-16   # gezielt
+curl http://localhost:8097/fhir/Questionnaire?_summary=true            # all definitions
+curl http://localhost:8097/fhir/Questionnaire?url=…/mii-qst-pro-promis-16   # one specific
 
 ```
 
 Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker)
 
-### 2. MII PRO Package via Simplifier (für Build-Pipelines)
+### 2. MII PRO package via Simplifier (for build pipelines)
 
-Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.
-
-```
-fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.4.1
-# entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1/
+The MII PRO module is published as a FHIR NPM package on Simplifier. Best for integration into SUSHI, IG Publisher and FHIR validator builds.
 
 ```
+fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
+# unpacks into ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/
 
-Beispiel `sushi-config.yaml`:
+```
+
+Example `sushi-config.yaml`:
 
 ```
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.4.1
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
   hl7.fhir.uv.sdc: 3.0.0
 
 ```
 
-PCOR-MII selbst ist (Stand 2026.06.) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
+PCOR-MII itself is **not** published as a package — anyone who only needs the PCOR-MII definitions should take route 1 or 3.
 
-### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
+### 3. Direct repository access (for scripting and documentation tools)
 
-Repo klonen, SUSHI laufen lassen, FHIR JSONs sind in `fsh-generated/resources/`:
+Clone the repository, run SUSHI, and the FHIR JSON files are in `fsh-generated/resources/`:
 
 ```
 git clone https://github.com/BIH-CEI/PCOR-MII
@@ -75,50 +75,52 @@ ls fsh-generated/resources/
 
 ```
 
-Best für: ad-hoc Lookup, Skripte (wie unser [extract-qst-translations](https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts)), CI-Integrationen.
+Best for ad-hoc lookups, scripts (such as our [extract-qst-translations](https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts)) and CI integrations.
 
-### 4. $package-Operation (für Bestückung eines fremden FHIR-Servers)
+### 4. The $package operation (for populating someone else's FHIR server)
 
-Wenn ein Producer-Server FHIR Crmi unterstützt:
+If a producing server supports FHIR CRMI:
 
 ```
 GET [producer]/Questionnaire/mii-qst-pro-promis-16/$package
 
 ```
 
-liefert ein transaction-fertiges Bundle mit dem Questionnaire + allen referenzierten ValueSets/CodeSystems/Profilen, versioniert. Konsument PUTet das auf seinen eigenen Server.
+returns a transaction-ready bundle with the questionnaire and every referenced ValueSet, CodeSystem and profile, all versioned. The consumer PUTs that onto its own server.
 
-ValueSets kommen im `compose`-Format. Für PROMIS reicht das, weil die Konzepte inline definiert sind. HAPI braucht für `$package` das Clinical-Reasoning-Modul (im PCOR-MII Container nicht out-of-the-box).
+ValueSets come in `compose` form. For PROMIS that is sufficient because the concepts are defined inline. For `$package`, HAPI needs the clinical-reasoning module, which is not enabled out of the box in the PCOR-MII container.
 
-## Versions-Koexistenz auf Empfänger-Servern
+## Version coexistence on recipient servers
 
-Auf Standard-HAPI: `PUT Questionnaire/promis-29` mit neuer `Questionnaire.version` **überschreibt** den existierenden Eintrag. Eine ältere QR mit `…|2026.3.0`-Referenz ist danach nicht mehr sauber resolvbar — pro `id` koexistiert nur eine Version.
+On a stock HAPI server, `PUT Questionnaire/promis-29` with a new `Questionnaire.version` **overwrites** the existing entry. An older response referencing `…|2026.3.0` can then no longer be resolved cleanly — only one version coexists per `id`.
 
-Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.4.1) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.4.1`).
+For the PCOR-MII pilot this does not matter: one PRO version (2026.7.0) throughout. For a later migration, either put a version suffix in the `id` (for example `promis-29-v2026-4-1`) or run HAPI in multi-version mode. In responses, always carry the version in the reference (`…|2026.7.0`).
 
-## Pilot-Datenfluss "50 First Patients"
+This is also why every PCOR-MII response pins its questionnaire version: `QuestionnaireResponse.questionnaire` is the only place where the wording actually shown to the respondent is recorded.
 
-Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene App) **oder** direkt in FHIR (LHC-Forms o.ä.). FHIR ist primär die **Ablage- und Austausch-Form**:
+## Pilot data flow, "50 First Patients"
+
+The capture system may sit outside FHIR (REDCap, LimeSurvey, an in-house app) **or** run directly in FHIR (LHC-Forms or similar). FHIR is primarily the **storage and exchange form**:
 
 ```
 flowchart LR
-    subgraph Sites ["Partner-Sites"]
+    subgraph Sites ["Partner sites"]
         direction TB
         SiteA["Site A<br/>REDCap"]
         SiteB["Site B<br/>LimeSurvey"]
-        SiteC["Site C<br/>eigene App"]
+        SiteC["Site C<br/>in-house app"]
     end
 
-    Mapper["Mapper / ETL<br/>Quelle → MII PRO Bundle"]
-    Validator["PCOR-MII Container<br/>$validate"]
-    FDPG["Empfänger<br/>(FDPG / KDS-Knoten)"]
+    Mapper["Mapper / ETL<br/>source → MII PRO bundle"]
+    Validator["PCOR-MII container<br/>$validate"]
+    FDPG["Recipient<br/>(FDPG / KDS node)"]
 
     SiteA --> Mapper
     SiteB --> Mapper
     SiteC --> Mapper
-    Mapper -->|"FHIR-Bundle"| Validator
-    Validator -->|"0 errors → weiter"| Mapper
-    Mapper -->|"POST validiertes Bundle"| FDPG
+    Mapper -->|"FHIR bundle"| Validator
+    Validator -->|"0 errors → continue"| Mapper
+    Mapper -->|"POST validated bundle"| FDPG
 
     style SiteA fill:#e1f5ff
     style SiteB fill:#e1f5ff
@@ -129,5 +131,7 @@ flowchart LR
 
 ```
 
-Site exportiert aus Quell-System → Mapper baut FHIR-Bundle → gegen Container validieren → ans FDPG/KDS senden. Bei Direkt-in-FHIR-Erfassung entfällt der Mapper-Schritt; beide Pfade treffen sich bei `$validate`.
+The site exports from its source system, the mapper builds a FHIR bundle, that bundle is validated against the container, and the result is sent to the FDPG or KDS node. Where capture happens directly in FHIR the mapper step falls away; both paths meet at `$validate`.
+
+One step deserves attention when the source is a single large form rather than one form per instrument: the mapper has to **split** it into one `QuestionnaireResponse` per instrument. Each PCOR-MII item carries its dictionary variable in `Questionnaire.item.code`, so that split is a lookup rather than a hand-maintained table — see [ADR-011](Designentscheidungen.md).
 

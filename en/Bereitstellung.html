@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Bereitstellung - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Bereitstellung - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"13"}
-    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -300,7 +351,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Release-Notes.html">next &gt;</a>
+          | <a href="Designentscheidungen.html">next &gt;</a>
 
           </span>
 
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Bereitstellung</h2>
   
 
@@ -343,61 +394,61 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#was-du-bekommst" id="markdown-toc-was-du-bekommst">Was du bekommst</a></li>
-  <li><a href="#wege-das-zu-bekommen" id="markdown-toc-wege-das-zu-bekommen">Wege, das zu bekommen</a>    <ul>
-      <li><a href="#1-pcor-mii-container-für-mapper-entwicklung-lokales-testen" id="markdown-toc-1-pcor-mii-container-für-mapper-entwicklung-lokales-testen">1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)</a></li>
-      <li><a href="#2-mii-pro-package-via-simplifier-für-build-pipelines" id="markdown-toc-2-mii-pro-package-via-simplifier-für-build-pipelines">2. MII PRO Package via Simplifier (für Build-Pipelines)</a></li>
-      <li><a href="#3-direkter-repo-zugriff-für-scripting-doku-tools" id="markdown-toc-3-direkter-repo-zugriff-für-scripting-doku-tools">3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)</a></li>
-      <li><a href="#4-package-operation-für-bestückung-eines-fremden-fhir-servers" id="markdown-toc-4-package-operation-für-bestückung-eines-fremden-fhir-servers">4. <code class="language-plaintext highlighter-rouge">$package</code>-Operation (für Bestückung eines fremden FHIR-Servers)</a></li>
+  <li><a href="#what-you-get" id="markdown-toc-what-you-get">What you get</a></li>
+  <li><a href="#ways-to-get-it" id="markdown-toc-ways-to-get-it">Ways to get it</a>    <ul>
+      <li><a href="#1-pcor-mii-container-for-mapper-development-and-local-testing" id="markdown-toc-1-pcor-mii-container-for-mapper-development-and-local-testing">1. PCOR-MII container (for mapper development and local testing)</a></li>
+      <li><a href="#2-mii-pro-package-via-simplifier-for-build-pipelines" id="markdown-toc-2-mii-pro-package-via-simplifier-for-build-pipelines">2. MII PRO package via Simplifier (for build pipelines)</a></li>
+      <li><a href="#3-direct-repository-access-for-scripting-and-documentation-tools" id="markdown-toc-3-direct-repository-access-for-scripting-and-documentation-tools">3. Direct repository access (for scripting and documentation tools)</a></li>
+      <li><a href="#4-the-package-operation-for-populating-someone-elses-fhir-server" id="markdown-toc-4-the-package-operation-for-populating-someone-elses-fhir-server">4. The <code class="language-plaintext highlighter-rouge">$package</code> operation (for populating someone else's FHIR server)</a></li>
     </ul>
   </li>
-  <li><a href="#versions-koexistenz-auf-empfänger-servern" id="markdown-toc-versions-koexistenz-auf-empfänger-servern">Versions-Koexistenz auf Empfänger-Servern</a></li>
-  <li><a href="#pilot-datenfluss-50-first-patients" id="markdown-toc-pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</a></li>
+  <li><a href="#version-coexistence-on-recipient-servers" id="markdown-toc-version-coexistence-on-recipient-servers">Version coexistence on recipient servers</a></li>
+  <li><a href="#pilot-data-flow-50-first-patients" id="markdown-toc-pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</a></li>
 </ul>
 
 </div>
-<p>Diese Seite beschreibt, <strong>wie Implementierer die PCOR-MII Datendefinitionen konsumieren können</strong> — Questionnaire-Definitionen, ValueSets, das PRO-QR-Profil und Beispiele.</p>
+<p>This page describes <strong>how implementers can consume the PCOR-MII data definitions</strong> — questionnaire definitions, ValueSets, the PRO QuestionnaireResponse profile and the examples.</p>
 
-<h2 id="was-du-bekommst">Was du bekommst</h2>
+<h2 id="what-you-get">What you get</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Kategorie</th>
+      <th>Category</th>
       <th>Resources</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Profile (Struktur-Constraints)</td>
-      <td><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">MII PR PRO Questionnaire</code> (aus dem MII PRO-Modul)</td>
+      <td>Profiles (structural constraints)</td>
+      <td><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">MII PR PRO Questionnaire</code> (from the MII PRO module)</td>
     </tr>
     <tr>
-      <td>Questionnaire-Definitionen</td>
-      <td>PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR Beispiel (PCOR-MII + MII PRO-Modul)</td>
+      <td>Questionnaire definitions</td>
+      <td>PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR example (PCOR-MII plus the MII PRO module)</td>
     </tr>
     <tr>
       <td>ValueSets</td>
-      <td>Frequency-/Intensity-/Physical-Function-Response-Scale + lokale PCOR-MII ValueSets</td>
+      <td>frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets</td>
     </tr>
     <tr>
-      <td>Beispiele</td>
-      <td>validierte <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s (siehe <a href="Validierung.html">Validierung</a>)</td>
+      <td>Examples</td>
+      <td>validated <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s (see <a href="Validierung.html">Validation</a>)</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="wege-das-zu-bekommen">Wege, das zu bekommen</h2>
+<h2 id="ways-to-get-it">Ways to get it</h2>
 
-<h3 id="1-pcor-mii-container-für-mapper-entwicklung-lokales-testen">1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)</h3>
+<h3 id="1-pcor-mii-container-for-mapper-development-and-local-testing">1. PCOR-MII container (for mapper development and local testing)</h3>
 
-<p>Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundle gegen <code class="language-plaintext highlighter-rouge">$validate</code> prüfen, Definitionen ad-hoc per FHIR-API ziehen.</p>
+<p>A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checking a bundle against <code class="language-plaintext highlighter-rouge">$validate</code> and pulling definitions ad hoc over the FHIR API.</p>
 
 <pre><code class="language-mermaid">flowchart LR
-    SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.4.1"| HAPI
-    REPO[("PCOR-MII Repo")] --&gt;|"als Package"| HAPI
-    HAPI_BASE["hapiproject/hapi:v8.4.0"] --&gt; HAPI["PCOR-MII Container&lt;br/&gt;localhost:8097"]
-    HAPI --&gt;|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
+    SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.7.0"| HAPI
+    REPO[("PCOR-MII repo")] --&gt;|"as a package"| HAPI
+    HAPI_BASE["hapiproject/hapi:v8.4.0"] --&gt; HAPI["PCOR-MII container&lt;br/&gt;localhost:8097"]
+    HAPI --&gt;|"$validate, GET Questionnaire?…"| CLIENT["Implementer"]
 
     style HAPI fill:#ffe1e1
     style SIMPLIFIER fill:#e1f5ff
@@ -405,78 +456,80 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </code></pre>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose <span class="nt">-f</span> docker/docker-compose.yml up <span class="nt">--build</span>
-curl http://localhost:8097/fhir/Questionnaire?_summary<span class="o">=</span><span class="nb">true</span>            <span class="c"># alle Definitionen</span>
-curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii-qst-pro-promis-16   <span class="c"># gezielt</span>
+curl http://localhost:8097/fhir/Questionnaire?_summary<span class="o">=</span><span class="nb">true</span>            <span class="c"># all definitions</span>
+curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii-qst-pro-promis-16   <span class="c"># one specific</span>
 </code></pre></div></div>
 
 <p>Details: <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/README.md</a></p>
 
-<h3 id="2-mii-pro-package-via-simplifier-für-build-pipelines">2. MII PRO Package via Simplifier (für Build-Pipelines)</h3>
+<h3 id="2-mii-pro-package-via-simplifier-for-build-pipelines">2. MII PRO package via Simplifier (for build pipelines)</h3>
 
-<p>Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.</p>
+<p>The MII PRO module is published as a FHIR NPM package on Simplifier. Best for integration into SUSHI, IG Publisher and FHIR validator builds.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir <span class="nb">install </span>de.medizininformatikinitiative.kerndatensatz.pros 2026.4.1
-<span class="c"># entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1/</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir <span class="nb">install </span>de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
+<span class="c"># unpacks into ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/</span>
 </code></pre></div></div>
 
-<p>Beispiel <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>:</p>
+<p>Example <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>:</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
-  <span class="na">de.medizininformatikinitiative.kerndatensatz.pros</span><span class="pi">:</span> <span class="s">2026.4.1</span>
+  <span class="na">de.medizininformatikinitiative.kerndatensatz.pros</span><span class="pi">:</span> <span class="s">2026.7.0</span>
   <span class="na">hl7.fhir.uv.sdc</span><span class="pi">:</span> <span class="s">3.0.0</span>
 </code></pre></div></div>
 
-<p>PCOR-MII selbst ist (Stand 2026.06.) <strong>nicht</strong> als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.</p>
+<p>PCOR-MII itself is <strong>not</strong> published as a package — anyone who only needs the PCOR-MII definitions should take route 1 or 3.</p>
 
-<h3 id="3-direkter-repo-zugriff-für-scripting-doku-tools">3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)</h3>
+<h3 id="3-direct-repository-access-for-scripting-and-documentation-tools">3. Direct repository access (for scripting and documentation tools)</h3>
 
-<p>Repo klonen, SUSHI laufen lassen, FHIR JSONs sind in <code class="language-plaintext highlighter-rouge">fsh-generated/resources/</code>:</p>
+<p>Clone the repository, run SUSHI, and the FHIR JSON files are in <code class="language-plaintext highlighter-rouge">fsh-generated/resources/</code>:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/BIH-CEI/PCOR-MII
 <span class="nb">cd </span>PCOR-MII <span class="o">&amp;&amp;</span> sushi <span class="nb">.</span>
 <span class="nb">ls </span>fsh-generated/resources/
 </code></pre></div></div>
 
-<p>Best für: ad-hoc Lookup, Skripte (wie unser <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">extract-qst-translations</a>), CI-Integrationen.</p>
+<p>Best for ad-hoc lookups, scripts (such as our <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">extract-qst-translations</a>) and CI integrations.</p>
 
-<h3 id="4-package-operation-für-bestückung-eines-fremden-fhir-servers">4. <code class="language-plaintext highlighter-rouge">$package</code>-Operation (für Bestückung eines fremden FHIR-Servers)</h3>
+<h3 id="4-the-package-operation-for-populating-someone-elses-fhir-server">4. The <code class="language-plaintext highlighter-rouge">$package</code> operation (for populating someone else's FHIR server)</h3>
 
-<p>Wenn ein Producer-Server FHIR Crmi unterstützt:</p>
+<p>If a producing server supports FHIR CRMI:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [producer]/Questionnaire/mii-qst-pro-promis-16/$package
 </code></pre></div></div>
 
-<p>liefert ein transaction-fertiges Bundle mit dem Questionnaire + allen referenzierten ValueSets/CodeSystems/Profilen, versioniert. Konsument PUTet das auf seinen eigenen Server.</p>
+<p>returns a transaction-ready bundle with the questionnaire and every referenced ValueSet, CodeSystem and profile, all versioned. The consumer PUTs that onto its own server.</p>
 
-<p>ValueSets kommen im <code class="language-plaintext highlighter-rouge">compose</code>-Format. Für PROMIS reicht das, weil die Konzepte inline definiert sind. HAPI braucht für <code class="language-plaintext highlighter-rouge">$package</code> das Clinical-Reasoning-Modul (im PCOR-MII Container nicht out-of-the-box).</p>
+<p>ValueSets come in <code class="language-plaintext highlighter-rouge">compose</code> form. For PROMIS that is sufficient because the concepts are defined inline. For <code class="language-plaintext highlighter-rouge">$package</code>, HAPI needs the clinical-reasoning module, which is not enabled out of the box in the PCOR-MII container.</p>
 
-<h2 id="versions-koexistenz-auf-empfänger-servern">Versions-Koexistenz auf Empfänger-Servern</h2>
+<h2 id="version-coexistence-on-recipient-servers">Version coexistence on recipient servers</h2>
 
-<p>Auf Standard-HAPI: <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code> mit neuer <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> <strong>überschreibt</strong> den existierenden Eintrag. Eine ältere QR mit <code class="language-plaintext highlighter-rouge">…|2026.3.0</code>-Referenz ist danach nicht mehr sauber resolvbar — pro <code class="language-plaintext highlighter-rouge">id</code> koexistiert nur eine Version.</p>
+<p>On a stock HAPI server, <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code> with a new <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> <strong>overwrites</strong> the existing entry. An older response referencing <code class="language-plaintext highlighter-rouge">…|2026.3.0</code> can then no longer be resolved cleanly — only one version coexists per <code class="language-plaintext highlighter-rouge">id</code>.</p>
 
-<p>Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.4.1) durchgehend. Bei späterer Migration: Versions-Suffix in der <code class="language-plaintext highlighter-rouge">id</code> (z.B. <code class="language-plaintext highlighter-rouge">promis-29-v2026-4-1</code>) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (<code class="language-plaintext highlighter-rouge">…|2026.4.1</code>).</p>
+<p>For the PCOR-MII pilot this does not matter: one PRO version (2026.7.0) throughout. For a later migration, either put a version suffix in the <code class="language-plaintext highlighter-rouge">id</code> (for example <code class="language-plaintext highlighter-rouge">promis-29-v2026-4-1</code>) or run HAPI in multi-version mode. In responses, always carry the version in the reference (<code class="language-plaintext highlighter-rouge">…|2026.7.0</code>).</p>
 
-<h2 id="pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</h2>
+<p>This is also why every PCOR-MII response pins its questionnaire version: <code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> is the only place where the wording actually shown to the respondent is recorded.</p>
 
-<p>Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene App) <strong>oder</strong> direkt in FHIR (LHC-Forms o.ä.). FHIR ist primär die <strong>Ablage- und Austausch-Form</strong>:</p>
+<h2 id="pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</h2>
+
+<p>The capture system may sit outside FHIR (REDCap, LimeSurvey, an in-house app) <strong>or</strong> run directly in FHIR (LHC-Forms or similar). FHIR is primarily the <strong>storage and exchange form</strong>:</p>
 
 <pre><code class="language-mermaid">flowchart LR
-    subgraph Sites ["Partner-Sites"]
+    subgraph Sites ["Partner sites"]
         direction TB
         SiteA["Site A&lt;br/&gt;REDCap"]
         SiteB["Site B&lt;br/&gt;LimeSurvey"]
-        SiteC["Site C&lt;br/&gt;eigene App"]
+        SiteC["Site C&lt;br/&gt;in-house app"]
     end
 
-    Mapper["Mapper / ETL&lt;br/&gt;Quelle → MII PRO Bundle"]
-    Validator["PCOR-MII Container&lt;br/&gt;$validate"]
-    FDPG["Empfänger&lt;br/&gt;(FDPG / KDS-Knoten)"]
+    Mapper["Mapper / ETL&lt;br/&gt;source → MII PRO bundle"]
+    Validator["PCOR-MII container&lt;br/&gt;$validate"]
+    FDPG["Recipient&lt;br/&gt;(FDPG / KDS node)"]
 
     SiteA --&gt; Mapper
     SiteB --&gt; Mapper
     SiteC --&gt; Mapper
-    Mapper --&gt;|"FHIR-Bundle"| Validator
-    Validator --&gt;|"0 errors → weiter"| Mapper
-    Mapper --&gt;|"POST validiertes Bundle"| FDPG
+    Mapper --&gt;|"FHIR bundle"| Validator
+    Validator --&gt;|"0 errors → continue"| Mapper
+    Mapper --&gt;|"POST validated bundle"| FDPG
 
     style SiteA fill:#e1f5ff
     style SiteB fill:#e1f5ff
@@ -486,7 +539,9 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
     style FDPG fill:#e1ffe1
 </code></pre>
 
-<p>Site exportiert aus Quell-System → Mapper baut FHIR-Bundle → gegen Container validieren → ans FDPG/KDS senden. Bei Direkt-in-FHIR-Erfassung entfällt der Mapper-Schritt; beide Pfade treffen sich bei <code class="language-plaintext highlighter-rouge">$validate</code>.</p>
+<p>The site exports from its source system, the mapper builds a FHIR bundle, that bundle is validated against the container, and the result is sent to the FDPG or KDS node. Where capture happens directly in FHIR the mapper step falls away; both paths meet at <code class="language-plaintext highlighter-rouge">$validate</code>.</p>
+
+<p>One step deserves attention when the source is a single large form rather than one form per instrument: the mapper has to <strong>split</strong> it into one <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> per instrument. Each PCOR-MII item carries its dictionary variable in <code class="language-plaintext highlighter-rouge">Questionnaire.item.code</code>, so that split is a lookup rather than a hand-maintained table — see <a href="Designentscheidungen.html">ADR-011</a>.</p>
 
 
 
@@ -522,7 +577,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Release-Notes.html">next ></a>
+                <a href="Designentscheidungen.html">next ></a>
 
               </td>
             </tr>
@@ -536,10 +591,10 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

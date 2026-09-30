@@ -1,4 +1,4 @@
-# WAI (Work Ability Score) - PCOR-MII Implementation Guide v0.2.0
+# WAI (Work Ability Score) - PCOR-MII Implementation Guide v0.3.0
 
 ## WAI (Work Ability Score)
 

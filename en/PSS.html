@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PSS (Persistent Somatic Syndrome) - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>PSS (Persistent Somatic Syndrome) - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -148,7 +148,7 @@ a[name="test"] + h3 + div {
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    h3,h4,h5,h6{--heading-prefix:"2.1.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -300,7 +351,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Demographie.html">next &gt;</a>
+          | <a href="SSD-12.html">next &gt;</a>
 
           </span>
 
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PSS (Persistent Somatic Syndrome)</h2>
   
 
@@ -345,12 +396,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#generischer-kern-alle-entitäten" id="markdown-toc-generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</a></li>
   <li><a href="#pss-spezifische-instrumente" id="markdown-toc-pss-spezifische-instrumente">PSS-spezifische Instrumente</a></li>
+  <li><a href="#phq-familie-in-pss" id="markdown-toc-phq-familie-in-pss">PHQ-Familie in PSS</a></li>
   <li><a href="#was-pss-von-an-und-ntx-unterscheidet" id="markdown-toc-was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</a></li>
   <li><a href="#rechtelage" id="markdown-toc-rechtelage">Rechtelage</a></li>
 </ul>
 
 </div>
-<p><strong>PSS</strong> (<em>Persistent Somatic Syndrome</em>) ist die psychosomatische Entität in PCOR-MII — neben Anorexia Nervosa (AN) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.</p>
+<p><strong>PSS</strong> (<em>Persistent Somatic Syndrome</em>) ist die psychosomatische Entität in PCOR-MII — neben <a href="AN.html">Anorexia Nervosa (AN)</a> und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.</p>
 
 <p>Die entitätsübergreifende Sicht steht unter <a href="Instrumente.html">Instrumente</a>; diese Seite beschreibt die PSS-Batterie.</p>
 
@@ -362,14 +414,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="Demographie.html">Demographie</a> (DEM) und <a href="MHI.html">MHI</a> — Soziodemographie und medizinische Vorgeschichte</li>
   <li><a href="PROMIS.html">PROMIS</a> — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS</li>
   <li><a href="WHODAS-12.html">WHODAS 2.0 (12-Item)</a> — Funktionsfähigkeit und Beeinträchtigung</li>
-  <li><a href="PHQ-15.html">PHQ-15</a>, PHQ-8 (siehe <a href="PHQ.html">PHQ-Übersicht</a>), GAD-7 / GAD-2 / PHQ-4</li>
+  <li><a href="PHQ-15.html">PHQ-15</a>, PHQ-8 (siehe <a href="PHQ.html">PHQ-Übersicht</a>), <a href="GAD-7.html">GAD-7</a> / GAD-2 / PHQ-4</li>
   <li>EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen</li>
   <li><a href="WAI.html">WAI</a> — Arbeitsfähigkeit (metadata-only)</li>
 </ul>
 
-<blockquote>
-  <p><strong>GAD-7 folgt:</strong> Der GAD-7 wird im MII-PRO-Modul gepflegt und ist in Version 2026.6.0 noch nicht enthalten. Sobald er upstream verfügbar ist, wird er hier und in der <a href="PHQ.html">PHQ-Übersicht</a> verlinkt — PCOR-MII baut ihn nicht selbst nach.</p>
-</blockquote>
+<p>Der <strong>GAD-7</strong> ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-Instrumente referenziert, nicht nachgebaut — siehe <a href="GAD-7.html">GAD-7</a>.</p>
 
 <h3 id="pss-spezifische-instrumente">PSS-spezifische Instrumente</h3>
 
@@ -389,49 +439,49 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>DCH</td>
       <td style="text-align: right">12</td>
       <td>B-Kriterien der somatischen Belastungsstörung</td>
-      <td>MII PRO 2026.6.0</td>
+      <td><a href="SSD-12.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>WI-7</strong></td>
       <td>DCH</td>
       <td style="text-align: right">7</td>
       <td>Gesundheitsangst (Whiteley-Index)</td>
-      <td>MII PRO 2026.6.0</td>
+      <td><a href="WI-7.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>SCOFF</strong></td>
       <td>MHA</td>
       <td style="text-align: right">5</td>
       <td>Essstörungs-Screening</td>
-      <td>MII PRO 2026.6.0</td>
+      <td><a href="SCOFF.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>ISR-Z</strong></td>
       <td>MHA</td>
       <td style="text-align: right">3</td>
       <td>ICD-10-Symptom-Rating, Zusatzskala</td>
-      <td>MII PRO 2026.6.0</td>
+      <td><a href="ISR-Z.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>PC-PTSD</strong></td>
       <td>MHA</td>
       <td style="text-align: right">4</td>
       <td>Posttraumatische Belastungsstörung, Primärversorgungs-Screen</td>
-      <td>MII PRO 2026.6.0</td>
+      <td><a href="PC-PTSD.html">Seite</a></td>
     </tr>
     <tr>
-      <td><strong>PHQ-D</strong></td>
+      <td><strong>PHQ-D Panik-Block</strong></td>
       <td>MHA</td>
       <td style="text-align: right">4</td>
-      <td>Deutsche PHQ-Fassung, Teilmenge</td>
-      <td>offen</td>
+      <td>Angst-/Panikattacken (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>, ja/nein)</td>
+      <td>offen — kein Upstream-Artefakt</td>
     </tr>
     <tr>
       <td><strong>PHQ-SI</strong></td>
       <td>MHA</td>
       <td style="text-align: right">1</td>
-      <td>Suizidalität (Einzelitem)</td>
-      <td>offen</td>
+      <td>Suizidalität — das PHQ-9-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
+      <td>über <a href="PHQ-9.html">PHQ-9</a> abgedeckt</td>
     </tr>
     <tr>
       <td><strong>OPD-SFK</strong></td>
@@ -451,27 +501,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><strong>EXPECT</strong></td>
       <td>DCH</td>
       <td style="text-align: right">3</td>
-      <td>Behandlungserwartung (drei NRS-Einzelitems, kein standardisierter Fragebogen)</td>
-      <td>offen — Modellierung zu klären</td>
+      <td>Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen)</td>
+      <td><a href="EXPECT.html">Seite</a></td>
     </tr>
     <tr>
       <td><strong>IPQ-S</strong></td>
       <td>DCH</td>
       <td style="text-align: right">1</td>
-      <td>Krankheitswahrnehmung — nur eine offene Frage angelehnt an den B-IPQ</td>
-      <td>offen — Modellierung zu klären</td>
+      <td>Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ</td>
+      <td><a href="IPQ-S.html">Seite</a></td>
     </tr>
   </tbody>
 </table>
 
 <p>Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (<code class="language-plaintext highlighter-rouge">UKE-HCU</code>, <code class="language-plaintext highlighter-rouge">UKE-HCU2</code>, <code class="language-plaintext highlighter-rouge">UKE-PSE</code>, <code class="language-plaintext highlighter-rouge">UKE-TR</code>, <code class="language-plaintext highlighter-rouge">UKE-DOT</code>, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.</p>
 
+<h3 id="phq-familie-in-pss">PHQ-Familie in PSS</h3>
+
+<p>In PSS wird der <strong>PHQ-8</strong> erhoben (AN und NTx: PHQ-9) — also die acht Depressions-Items ohne das Suizid-Item. Dieses wird stattdessen <strong>separat als <code class="language-plaintext highlighter-rouge">PHQ-SI</code></strong> geführt. Beides sind Items derselben PHQ-9-Definition:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dictionary</th>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code>s</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHQ-8</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2a</code>–<code class="language-plaintext highlighter-rouge">phq-phq2h</code></td>
+      <td>Depressivität ohne Suizid-Item</td>
+    </tr>
+    <tr>
+      <td>PHQ-SI</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
+      <td>Suizidalität — genau das Item, das PHQ-9 vom PHQ-8 unterscheidet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9; die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität gesondert behandelbar), keine inhaltliche Abweichung. Siehe <a href="PHQ.html">PHQ-Übersicht</a>.</p>
+
+<p>Der <strong>PHQ-D-Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul <strong>kein Artefakt</strong> — weder Questionnaire noch <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace. Bedarf wäre dort anzumelden.</p>
+
 <h3 id="was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</h3>
 
 <ul>
-  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, PHQ-D, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. In der PHQ-Familie wird in PSS der <strong>PHQ-8</strong> erhoben, in AN und NTx der <strong>PHQ-9</strong>.</li>
+  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.</li>
   <li><strong>PSS und AN gemeinsam</strong>: OPD-SFK und PHQ-SI.</li>
-  <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld.</li>
+  <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe <a href="AN.html">AN</a>.</li>
   <li><strong>Nur in NTx</strong>: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.</li>
 </ul>
 
@@ -522,7 +602,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Demographie.html">next ></a>
+                <a href="SSD-12.html">next ></a>
 
               </td>
             </tr>
@@ -536,10 +616,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

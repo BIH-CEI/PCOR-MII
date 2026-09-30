@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Instrumentenübersicht - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Instrumentenübersicht - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Instrumentenübersicht</h2>
   
 
@@ -343,54 +394,56 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#die-drei-entitäten" id="markdown-toc-die-drei-entitäten">Die drei Entitäten</a></li>
-  <li><a href="#kategorien" id="markdown-toc-kategorien">Kategorien</a></li>
-  <li><a href="#instrumentenübersicht" id="markdown-toc-instrumentenübersicht">Instrumentenübersicht</a></li>
-  <li><a href="#woher-kommt-welche-ressource" id="markdown-toc-woher-kommt-welche-ressource">Woher kommt welche Ressource?</a></li>
-  <li><a href="#lizenz-tiers" id="markdown-toc-lizenz-tiers">Lizenz-Tiers</a></li>
+  <li><a href="#the-three-entities" id="markdown-toc-the-three-entities">The three entities</a></li>
+  <li><a href="#categories" id="markdown-toc-categories">Categories</a></li>
+  <li><a href="#instrument-overview" id="markdown-toc-instrument-overview">Instrument overview</a></li>
+  <li><a href="#where-does-each-resource-come-from" id="markdown-toc-where-does-each-resource-come-from">Where does each resource come from?</a></li>
+  <li><a href="#licence-tiers" id="markdown-toc-licence-tiers">Licence tiers</a></li>
 </ul>
 
 </div>
-<p>Diese Seite gibt den <strong>Gesamtüberblick über alle Instrumente</strong>, die PCOR-MII abdeckt — quer über die drei Entitäten und unabhängig davon, ob die FHIR-Ressource in PCOR-MII selbst oder im MII-PRO-Modul gepflegt wird.</p>
+<p>This page gives the <strong>overall view of every instrument</strong> PCOR-MII covers — across all three entities, and regardless of whether the FHIR resource is maintained in PCOR-MII itself or in the MII PRO module.</p>
 
-<h3 id="die-drei-entitäten">Die drei Entitäten</h3>
+<h3 id="the-three-entities">The three entities</h3>
 
-<p>PCOR-MII erhebt patientenberichtete Daten in drei klinischen Entitäten:</p>
+<p>PCOR-MII collects patient-reported data in three clinical entities:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Kürzel</th>
-      <th>Entität</th>
+      <th>Code</th>
+      <th>Entity</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>PSS</strong></td>
-      <td>Persistent Somatic Syndrome — siehe <a href="PSS.html">PSS</a></td>
+      <td>Persistent Somatic Syndrome — see <a href="PSS.html">PSS</a></td>
     </tr>
     <tr>
       <td><strong>AN</strong></td>
-      <td>Anorexia Nervosa</td>
+      <td>Anorexia Nervosa — see <a href="AN.html">AN</a></td>
     </tr>
     <tr>
       <td><strong>NTx</strong></td>
-      <td>Nierentransplantation</td>
+      <td>Kidney transplantation</td>
     </tr>
   </tbody>
 </table>
 
-<p>Fachliche Referenz für Instrumentenauswahl und Item-Zuschnitt ist das <strong>Item Level Dictionary</strong> (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, je ein Blatt pro Entität; nicht Teil dieses Repositories). Die Rechte- und Lizenzangaben stammen aus der <strong>DIZ-Implementierungsliste PCOR-MII</strong>.</p>
+<p>The authoritative reference for instrument selection and item subsetting is the <strong>Item Level Dictionary</strong> (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, one sheet per entity; not part of this repository). Rights and licence information comes from the <strong>DIZ implementation list for PCOR-MII</strong>.</p>
 
-<h3 id="kategorien">Kategorien</h3>
+<p>Note that the data collection plan itself distinguishes <strong>four</strong> use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. See <a href="Essstoerungen.html">Eating Disorders</a>; the split is still to be reflected on this page.</p>
 
-<p>Jedes Item ist im Dictionary einer von acht Kategorien zugeordnet:</p>
+<h3 id="categories">Categories</h3>
+
+<p>Every item in the dictionary belongs to one of eight categories:</p>
 
 <table>
   <thead>
     <tr>
       <th>ID</th>
-      <th>Kategorie</th>
+      <th>Category</th>
     </tr>
   </thead>
   <tbody>
@@ -429,33 +482,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><strong>DEM</strong> und <strong>MHI</strong> sind in PCOR-MII nicht als Einzelinstrumente modelliert, sondern zu je einem Fragebogen zusammengefasst: <a href="Demographie.html">Demographie</a> bündelt die OECD-, GIPS- und CPCOR-Einzelitems der Kategorie DEM, <a href="MHI.html">MHI</a> die der Kategorie MHI. Beide sind in <strong>allen drei Entitäten</strong> identisch zu erheben (MHI mit AN-spezifischen Zusatzitems).</p>
+<p><strong>DEM</strong> and <strong>MHI</strong> are not modelled as individual instruments but bundled into one questionnaire each: <a href="Demographie.html">Demographics</a> collects the OECD, GI-PS and CPCOR single items of category DEM, <a href="MHI.html">MHI</a> those of category MHI. Both are collected identically in <strong>all three entities</strong> (MHI with AN-specific additional items). Why single items are bundled rather than each becoming its own resource is set out in <a href="Designentscheidungen.html">ADR-011</a>.</p>
 
-<h3 id="instrumentenübersicht">Instrumentenübersicht</h3>
+<h3 id="instrument-overview">Instrument overview</h3>
 
-<p>Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; die Zahl ist die Item-Anzahl laut Dictionary.</p>
+<p>A • marks that the instrument is collected in that entity; the number is the item count according to the dictionary.</p>
 
 <table>
   <thead>
     <tr>
       <th>Instrument</th>
-      <th>Kat.</th>
+      <th>Cat.</th>
       <th style="text-align: center">PSS</th>
       <th style="text-align: center">AN</th>
       <th style="text-align: center">NTx</th>
-      <th>Lizenz</th>
-      <th>Umsetzung</th>
+      <th>Licence</th>
+      <th>Implementation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>PROMIS Scale v1.2 – Global Health (2 Items)</td>
+      <td>PROMIS Scale v1.2 – Global Health (2 items)</td>
       <td>GHS</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>CPCOR-Vereinbarung</td>
-      <td><a href="PROMIS.html">PROMIS</a> (Subset offen)</td>
+      <td>CPCOR agreement</td>
+      <td><a href="PROMIS.html">PROMIS</a> (subset open)</td>
     </tr>
     <tr>
       <td>PROMIS-16</td>
@@ -463,7 +516,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>CPCOR-Vereinbarung</td>
+      <td>CPCOR agreement</td>
       <td><a href="PROMIS-16.html">PROMIS-16</a></td>
     </tr>
     <tr>
@@ -472,8 +525,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>CPCOR-Vereinbarung</td>
-      <td>teils über <a href="PROMIS-29.html">PROMIS-29</a> / <a href="PROMIS-Cognitive-Function.html">Cognitive Function</a></td>
+      <td>CPCOR agreement</td>
+      <td>partly via <a href="PROMIS-29.html">PROMIS-29</a> / <a href="PROMIS-Cognitive-Function.html">Cognitive Function</a></td>
     </tr>
     <tr>
       <td>PROMIS NRS – Pain Intensity 1a (3)</td>
@@ -481,16 +534,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>CPCOR-Vereinbarung</td>
-      <td>offen</td>
+      <td>CPCOR agreement</td>
+      <td>open</td>
     </tr>
     <tr>
-      <td>WHODAS 2.0, 12-Item (14)</td>
+      <td>WHODAS 2.0, 12-item (14)</td>
       <td>GHS</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>WHO-lizenzpflichtig</td>
+      <td>WHO licence required</td>
       <td><a href="WHODAS-12.html">WHODAS 2.0</a></td>
     </tr>
     <tr>
@@ -499,8 +552,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>frei</td>
-      <td><strong>folgt</strong> — GAD-7 kommt mit der nächsten MII-PRO-Version</td>
+      <td>free</td>
+      <td><a href="GAD-7.html">GAD-7</a> — since MII PRO 2026.7.0</td>
     </tr>
     <tr>
       <td>PHQ-15 (13)</td>
@@ -508,7 +561,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>frei</td>
+      <td>free</td>
       <td><a href="PHQ-15.html">PHQ-15</a></td>
     </tr>
     <tr>
@@ -517,17 +570,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">• (PHQ-8)</td>
       <td style="text-align: center">• (PHQ-9)</td>
       <td style="text-align: center">• (PHQ-9)</td>
-      <td>frei</td>
-      <td><a href="PHQ.html">PHQ-Übersicht</a>, <a href="PHQ-9.html">PHQ-9</a></td>
+      <td>free</td>
+      <td><a href="PHQ.html">PHQ overview</a>, <a href="PHQ-9.html">PHQ-9</a></td>
     </tr>
     <tr>
-      <td>EURONET-SOMA 1 + 2 (je 1)</td>
+      <td>EURONET-SOMA 1 + 2 (1 each)</td>
       <td>GHS</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="EURONET-SOMA.html">EURONET-SOMA</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>WAI / Work Ability Score (3)</td>
@@ -535,26 +588,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
-      <td><strong>nicht veröffentlichbar</strong></td>
+      <td><strong>not publishable</strong></td>
       <td><a href="WAI.html">WAI</a> — metadata-only</td>
     </tr>
     <tr>
-      <td>PHQ-SI (Suizidalität, 1)</td>
+      <td>PHQ-SI (suicidality, 1)</td>
       <td>MHA</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen</td>
+      <td>free</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2i</code> from <a href="PHQ-9.html">PHQ-9</a></td>
     </tr>
     <tr>
-      <td>PHQ-D (4)</td>
+      <td>PHQ-D panic block (4)</td>
       <td>MHA</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen</td>
+      <td>free</td>
+      <td>open — no upstream artefact (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>)</td>
     </tr>
     <tr>
       <td>PC-PTSD (4)</td>
@@ -562,8 +615,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="PC-PTSD.html">PC-PTSD</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>OPD-SFK (12)</td>
@@ -571,7 +624,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei (nach Rücksprache)</td>
+      <td>free (after consultation)</td>
       <td><a href="OPD-SFK.html">OPD-SFK</a></td>
     </tr>
     <tr>
@@ -580,8 +633,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="SCOFF.html">SCOFF</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>ISR-Z (3)</td>
@@ -589,8 +642,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="ISR-Z.html">ISR-Z</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>SSD-12 (12)</td>
@@ -598,8 +651,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="SSD-12.html">SSD-12</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>WI-7 (7)</td>
@@ -607,8 +660,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>MII PRO 2026.6.0 — Seite offen</td>
+      <td>free</td>
+      <td><a href="WI-7.html">Whiteley-7</a> — since MII PRO 2026.6.0</td>
     </tr>
     <tr>
       <td>EXPECT (3)</td>
@@ -616,8 +669,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>ungeklärt</td>
-      <td>offen — keine standardisierte Skala, drei NRS-Einzelitems</td>
+      <td>no statement — not a standardised scale</td>
+      <td><a href="EXPECT.html">EXPECT</a></td>
     </tr>
     <tr>
       <td>IPQ-S (1)</td>
@@ -625,8 +678,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei (nur 1 offene Frage)</td>
-      <td>offen</td>
+      <td>free — only the open B-IPQ causal question</td>
+      <td><a href="IPQ-S.html">IPQ-S</a></td>
     </tr>
     <tr>
       <td>GSLTPAQ (6)</td>
@@ -634,17 +687,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
+      <td>free</td>
       <td><a href="GSLTPAQ.html">GSLTPAQ</a></td>
     </tr>
     <tr>
-      <td>ERQ-6 (6)</td>
+      <td>ERQ-S (6)</td>
       <td>DCH</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen — nur trennschärfstes Item je Skala</td>
+      <td>free</td>
+      <td><a href="ERQ-6.html">ERQ-S</a> — the official ERQ short form, two subscale scores</td>
     </tr>
     <tr>
       <td>EDE-Q6 (6)</td>
@@ -652,8 +705,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen — nur trennschärfstes Item je Skala</td>
+      <td>provided free by the publisher; confirmation sought</td>
+      <td><a href="EDE-Q6.html">EDE-Q6</a> — one item per subscale plus two additional questions</td>
     </tr>
     <tr>
       <td>ANSOCQ-2 (2)</td>
@@ -661,8 +714,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen — nur trennschärfstes Item je Skala</td>
+      <td>free</td>
+      <td><a href="ANSOCQ-2.html">ANSOCQ-2</a> — most discriminating item per scale only</td>
     </tr>
     <tr>
       <td>SSUK-2 (2)</td>
@@ -670,8 +723,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen — nur trennschärfstes Item je Skala</td>
+      <td>free</td>
+      <td><a href="SSUK-2.html">SSUK-2</a> — most discriminating item per scale only</td>
     </tr>
     <tr>
       <td>ACE (5)</td>
@@ -679,8 +732,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>frei</td>
-      <td>offen — erste 5 Fragen</td>
+      <td>free — but see the open point on the German ACE-D</td>
+      <td><a href="ACE.html">ACE</a> — first five questions</td>
     </tr>
     <tr>
       <td>BAASIS (10)</td>
@@ -688,8 +741,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
-      <td>© Uni Basel, Items nicht publizierbar</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td>© University of Basel, items not publishable</td>
+      <td>open — metadata-only planned</td>
     </tr>
     <tr>
       <td>MTSOSD-R59 (126)</td>
@@ -697,8 +750,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
-      <td>© KU Leuven, Items nicht publizierbar</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td>© KU Leuven, items not publishable</td>
+      <td>open — metadata-only planned</td>
     </tr>
     <tr>
       <td>ABQ (16)</td>
@@ -706,32 +759,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
-      <td>Nutzung ohne Pharma-Beteiligung</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td>use without pharmaceutical-industry involvement</td>
+      <td>open — metadata-only planned</td>
     </tr>
   </tbody>
 </table>
 
-<p>Dazu kommen <strong>standortspezifische Item-Gruppen</strong>, die kein publiziertes Instrument abbilden und direkt aus dem Dictionary stammen — etwa <code class="language-plaintext highlighter-rouge">UKE-HCU/PSE/TR/DOT</code> (Versorgungsinanspruchnahme, PSS), <code class="language-plaintext highlighter-rouge">UKHD-BI/EDP/CTT/LE</code> (Körperbild, Essstörungspathologie, Umfeld, AN) und <code class="language-plaintext highlighter-rouge">MHH-DIAL/UTI/T/BP</code> (Verlaufsparameter, NTx).</p>
+<p>On top of these come <strong>site-specific item groups</strong> that do not correspond to any published instrument and come straight from the dictionary — for example <code class="language-plaintext highlighter-rouge">UKE-HCU/PSE/TR/DOT</code> (healthcare utilisation, PSS), <code class="language-plaintext highlighter-rouge">UKHD-BI/EDP/CTT/LE</code> (body image, eating disorder psychopathology, environment, AN) and <code class="language-plaintext highlighter-rouge">MHH-DIAL/UTI/T/BP</code> (follow-up parameters, NTx). For these the DIZ implementation list carries <strong>no entry at all</strong>, so no clearance is documented; see the open points in <a href="Designentscheidungen.html">Design Decisions</a>.</p>
 
-<h3 id="woher-kommt-welche-ressource">Woher kommt welche Ressource?</h3>
-
-<ul>
-  <li><strong>MII-PRO-Modul</strong> (<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code>, aktuell 2026.6.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS sowie seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7. PCOR-MII referenziert sie und baut sie nicht nach.</li>
-  <li><strong>PCOR-MII selbst</strong>: DEM und MHI (projektspezifische Zusammenstellungen) sowie OPD-SFK, WAI und GSLTPAQ.</li>
-</ul>
-
-<h3 id="lizenz-tiers">Lizenz-Tiers</h3>
-
-<p>Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wichtig es ist:</p>
+<h3 id="where-does-each-resource-come-from">Where does each resource come from?</h3>
 
 <ul>
-  <li><strong>frei</strong> — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.</li>
-  <li><strong>Nutzungsvereinbarung</strong> (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im <code class="language-plaintext highlighter-rouge">copyright</code>-Element.</li>
-  <li><strong>metadata-only</strong> — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft WAI (umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.</li>
+  <li><strong>MII PRO module</strong> (<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code>, currently 2026.7.0): every instrument reused module-wide — the PHQ family, WHODAS, PROMIS, and since 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 and WI-7, plus the GAD-7 since 2026.7.0. PCOR-MII references them rather than rebuilding them (<a href="Designentscheidungen.html">ADR-002</a>).</li>
+  <li><strong>PCOR-MII itself</strong>: DEM and MHI (project-specific compilations), OPD-SFK, WAI, GSLTPAQ, EXPECT and IPQ-S, and — provisionally, pending possible adoption into the MII PRO module — the AN instruments ERQ-S, EDE-Q6, ANSOCQ-2, SSUK-2 and ACE (see <a href="Designentscheidungen.html">ADR-003</a>).</li>
 </ul>
 
-<p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
+<h3 id="licence-tiers">Licence tiers</h3>
+
+<p>The rights situation determines how an instrument is modelled — not how important it is:</p>
+
+<ul>
+  <li><strong>free</strong> — complete questionnaire with item texts, answer options and scoring.</li>
+  <li><strong>Usage agreement</strong> (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the <code class="language-plaintext highlighter-rouge">copyright</code> element.</li>
+  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to WAI (implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.</li>
+</ul>
+
+<p>Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; all artefacts are listed under <a href="artifacts.html">Artifacts</a>.</p>
 
 
 
@@ -781,10 +834,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

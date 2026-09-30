@@ -1,4 +1,4 @@
-# MHI Gewichtsmessung Methode (Codes) - PCOR-MII Implementation Guide v0.2.0
+# MHI Gewichtsmessung Methode (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: MHI Gewichtsmessung Methode (Codes) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "mhi-gewichtsmethode",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "MhiGewichtsmethodeCS",
   "title" : "MHI Gewichtsmessung Methode (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

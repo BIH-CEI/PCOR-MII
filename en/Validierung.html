@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Validierung - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Validierung - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"12"}
-    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Validierung</h2>
   
 
@@ -343,43 +394,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#worum-gehts-beim-validieren" id="markdown-toc-worum-gehts-beim-validieren">Worum geht's beim Validieren?</a></li>
-  <li><a href="#drei-wege-zum-validierten-bundle" id="markdown-toc-drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</a>    <ul>
-      <li><a href="#a-container-validate-schnellste-schleife-beim-mapper-entwickeln" id="markdown-toc-a-container-validate-schnellste-schleife-beim-mapper-entwickeln">A. Container-<code class="language-plaintext highlighter-rouge">$validate</code> (schnellste Schleife beim Mapper-Entwickeln)</a></li>
-      <li><a href="#b-hl7-validator-cli-für-ci-pipelines" id="markdown-toc-b-hl7-validator-cli-für-ci-pipelines">B. HL7 Validator CLI (für CI-Pipelines)</a></li>
-      <li><a href="#c-ig-publisher-build-automatisch-in-deinem-ig" id="markdown-toc-c-ig-publisher-build-automatisch-in-deinem-ig">C. IG Publisher Build (automatisch in deinem IG)</a></li>
+  <li><a href="#what-validating-actually-checks" id="markdown-toc-what-validating-actually-checks">What validating actually checks</a></li>
+  <li><a href="#three-routes-to-a-validated-bundle" id="markdown-toc-three-routes-to-a-validated-bundle">Three routes to a validated bundle</a>    <ul>
+      <li><a href="#a-container-validate-fastest-loop-while-writing-a-mapper" id="markdown-toc-a-container-validate-fastest-loop-while-writing-a-mapper">A. Container <code class="language-plaintext highlighter-rouge">$validate</code> (fastest loop while writing a mapper)</a></li>
+      <li><a href="#b-hl7-validator-cli-for-ci-pipelines" id="markdown-toc-b-hl7-validator-cli-for-ci-pipelines">B. HL7 validator CLI (for CI pipelines)</a></li>
+      <li><a href="#c-ig-publisher-build-automatic-inside-your-own-ig" id="markdown-toc-c-ig-publisher-build-automatic-inside-your-own-ig">C. IG Publisher build (automatic inside your own IG)</a></li>
     </ul>
   </li>
-  <li><a href="#was-du-in-deiner-implementierung-sicherstellst" id="markdown-toc-was-du-in-deiner-implementierung-sicherstellst">Was du in deiner Implementierung sicherstellst</a></li>
-  <li><a href="#severity-interpretation" id="markdown-toc-severity-interpretation">Severity-Interpretation</a>    <ul>
-      <li><a href="#häufige-warnings--wann-ignorieren-wann-nicht" id="markdown-toc-häufige-warnings--wann-ignorieren-wann-nicht">Häufige Warnings — wann ignorieren, wann nicht</a></li>
+  <li><a href="#what-to-get-right-in-your-implementation" id="markdown-toc-what-to-get-right-in-your-implementation">What to get right in your implementation</a></li>
+  <li><a href="#reading-severities" id="markdown-toc-reading-severities">Reading severities</a>    <ul>
+      <li><a href="#common-warnings--when-to-ignore-them-and-when-not-to" id="markdown-toc-common-warnings--when-to-ignore-them-and-when-not-to">Common warnings — when to ignore them and when not to</a></li>
     </ul>
   </li>
-  <li><a href="#validierte-beispiele-als-referenz" id="markdown-toc-validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</a></li>
-  <li><a href="#wozu-validierung-in-der-pipeline" id="markdown-toc-wozu-validierung-in-der-pipeline">Wozu Validierung in der Pipeline?</a></li>
+  <li><a href="#validated-examples-for-reference" id="markdown-toc-validated-examples-for-reference">Validated examples for reference</a></li>
+  <li><a href="#why-validate-in-the-pipeline-at-all" id="markdown-toc-why-validate-in-the-pipeline-at-all">Why validate in the pipeline at all?</a></li>
 </ul>
 
 </div>
-<p>Diese Seite beantwortet die Frage: <strong>wie stelle ich sicher, dass meine Implementierung valide gegenüber den PRO- und PCOR-MII-Datendefinitionen ist?</strong></p>
+<p>This page answers one question: <strong>how do I make sure my implementation is valid against the PRO and PCOR-MII data definitions?</strong></p>
 
-<h2 id="worum-gehts-beim-validieren">Worum geht's beim Validieren?</h2>
+<h2 id="what-validating-actually-checks">What validating actually checks</h2>
 
-<p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:</p>
+<p>A <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> — or a FHIR bundle containing one — has to satisfy three things to count as valid:</p>
 
 <ol>
-  <li><strong>Strukturell</strong> dem <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
-  <li>Die <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen</li>
-  <li>Jede <strong>codierte Antwort</strong> muss aus dem <code class="language-plaintext highlighter-rouge">answerValueSet</code> (bzw. <code class="language-plaintext highlighter-rouge">answerOption</code>) des jeweiligen Items stammen</li>
+  <li><strong>Structurally</strong> conform to the <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code> profile</a>: data types, required elements, element constraints</li>
+  <li>Its <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> must match the item structure of the referenced questionnaire</li>
+  <li>Every <strong>coded answer</strong> must come from that item's <code class="language-plaintext highlighter-rouge">answerValueSet</code> (or <code class="language-plaintext highlighter-rouge">answerOption</code>)</li>
 </ol>
 
 <pre><code class="language-mermaid">flowchart TB
-    QR["QuestionnaireResponse&lt;br/&gt;(zu validieren)"]
+    QR["QuestionnaireResponse&lt;br/&gt;(to be validated)"]
     Profile["meta.profile&lt;br/&gt;MII PR PRO QR"]
-    Q["Questionnaire&lt;br/&gt;(z.B. mii-qst-pro-promis-16)"]
-    VS["ValueSet&lt;br/&gt;(z.B. frequency-response-scale)"]
+    Q["Questionnaire&lt;br/&gt;(e.g. mii-qst-pro-promis-16)"]
+    VS["ValueSet&lt;br/&gt;(e.g. frequency-response-scale)"]
     CS["CodeSystem&lt;br/&gt;(LOINC)"]
 
-    QR --&gt;|"validiert gegen"| Profile
+    QR --&gt;|"validated against"| Profile
     QR --&gt;|"questionnaire = canonical|version"| Q
     Q --&gt;|"item.answerValueSet"| VS
     VS --&gt;|"compose.include"| CS
@@ -391,143 +442,155 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     style CS fill:#e1ffe1
 </code></pre>
 
-<p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2026.4.1)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
+<p>For that to work the validator has to know all four resource levels — the <strong>MII PRO module package (2026.7.0)</strong> plus SDC plus LOINC. All the routes below arrange this automatically, either through <code class="language-plaintext highlighter-rouge">-ig</code> parameters or through the container preload.</p>
 
-<h2 id="drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</h2>
+<h2 id="three-routes-to-a-validated-bundle">Three routes to a validated bundle</h2>
 
-<h3 id="a-container-validate-schnellste-schleife-beim-mapper-entwickeln">A. Container-<code class="language-plaintext highlighter-rouge">$validate</code> (schnellste Schleife beim Mapper-Entwickeln)</h3>
+<h3 id="a-container-validate-fastest-loop-while-writing-a-mapper">A. Container <code class="language-plaintext highlighter-rouge">$validate</code> (fastest loop while writing a mapper)</h3>
 
-<p><a href="Bereitstellung.html">PCOR-MII Container</a> starten und das Bundle per HTTP gegen <code class="language-plaintext highlighter-rouge">$validate</code> werfen:</p>
+<p>Start the <a href="Bereitstellung.html">PCOR-MII container</a> and throw the bundle at <code class="language-plaintext highlighter-rouge">$validate</code> over HTTP:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST http://localhost:8097/fhir/QuestionnaireResponse/<span class="se">\$</span>validate <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
   <span class="nt">-d</span> @my-questionnaire-response.json
 </code></pre></div></div>
 
-<p>Antwort ist ein <code class="language-plaintext highlighter-rouge">OperationOutcome</code> mit <code class="language-plaintext highlighter-rouge">issue</code>-Liste, severity-getaggt. Praktisch für: iterative Mapper-Entwicklung in der Shell, schnelle Roundtrips ohne Java-Setup.</p>
+<p>The reply is an <code class="language-plaintext highlighter-rouge">OperationOutcome</code> with a severity-tagged <code class="language-plaintext highlighter-rouge">issue</code> list. Good for iterative mapper development in a shell and quick round trips without a Java setup.</p>
 
-<h3 id="b-hl7-validator-cli-für-ci-pipelines">B. HL7 Validator CLI (für CI-Pipelines)</h3>
+<h3 id="b-hl7-validator-cli-for-ci-pipelines">B. HL7 validator CLI (for CI pipelines)</h3>
 
-<p>Der offizielle Java-Validator. Empfohlen wenn dein Build-System keine HTTP-Endpoints aufrufen soll.</p>
+<p>The official Java validator. Preferable when your build system should not call HTTP endpoints.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Einmaliger Download</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># One-time download</span>
 curl <span class="nt">-L</span> <span class="s2">"https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar"</span> <span class="se">\</span>
   <span class="nt">-o</span> ~/.fhir/validator_cli.jar
 
-<span class="c"># Validieren</span>
+<span class="c"># Validate</span>
 java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-response.json <span class="se">\</span>
   <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 <span class="se">\</span>
+  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
   <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
   <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 </code></pre></div></div>
 
-<p>Best für: GitHub-Actions/GitLab-CI-Steps, Pre-Commit-Hooks, Mass-Validation großer Datensätze.</p>
+<p>Good for GitHub Actions and GitLab CI steps, pre-commit hooks, and mass validation of large data sets.</p>
 
-<h3 id="c-ig-publisher-build-automatisch-in-deinem-ig">C. IG Publisher Build (automatisch in deinem IG)</h3>
+<h3 id="c-ig-publisher-build-automatic-inside-your-own-ig">C. IG Publisher build (automatic inside your own IG)</h3>
 
-<p>Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: deklariere die Resources mit <code class="language-plaintext highlighter-rouge">meta.profile</code> — IG Publisher validiert dann beim Build automatisch und stoppt bei Errors. Output in <code class="language-plaintext highlighter-rouge">output/qa.html</code> und <code class="language-plaintext highlighter-rouge">output/qa.json</code>.</p>
+<p>If you build your own Implementation Guide that consumes PCOR-MII: declare your resources with <code class="language-plaintext highlighter-rouge">meta.profile</code> and the IG Publisher validates them during the build, stopping on errors. Output lands in <code class="language-plaintext highlighter-rouge">output/qa.html</code> and <code class="language-plaintext highlighter-rouge">output/qa.json</code>.</p>
 
-<h2 id="was-du-in-deiner-implementierung-sicherstellst">Was du in deiner Implementierung sicherstellst</h2>
+<h2 id="what-to-get-right-in-your-implementation">What to get right in your implementation</h2>
 
-<p>Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:</p>
+<p>A practical checklist for mappers, ePRO apps and populating a recipient server:</p>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code></li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.4.1</code></li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> der Answer-Items matchen <em>exakt</em> die im Questionnaire definierten linkIds</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Codierte Antworten</strong> mit System + Code aus dem im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code> (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe <a href="PROMIS-16.html">PROMIS-16</a> Item-Tabellen)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">status = completed</code></strong> (bzw. <code class="language-plaintext highlighter-rouge">in-progress</code>/<code class="language-plaintext highlighter-rouge">amended</code> je nach Lebenszyklus)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">subject</code>-Referenz</strong> auf den Patienten</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">authored</code></strong> Timestamp gesetzt</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">text.div</code></strong> narrative mit <code class="language-plaintext highlighter-rouge">xml:lang</code>/<code class="language-plaintext highlighter-rouge">lang</code> wenn <code class="language-plaintext highlighter-rouge">Resource.language</code> gesetzt (siehe Best-Practice-Block unten)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> set on the response — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.7.0</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code> reference</strong> with version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.7.0</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> of the answer items match <em>exactly</em> those defined in the questionnaire</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Coded answers</strong> with system and code from the item's <code class="language-plaintext highlighter-rouge">answerValueSet</code> (for the PROMIS value sets the LA codes are documented inline — see the item tables on <a href="PROMIS-16.html">PROMIS-16</a>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Item order</strong> follows the questionnaire, not your own grouping (see below — this one is easy to get wrong)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">status = completed</code></strong> (or <code class="language-plaintext highlighter-rouge">in-progress</code> / <code class="language-plaintext highlighter-rouge">amended</code>, depending on the lifecycle)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">subject</code></strong> reference to the patient</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">authored</code></strong> timestamp set</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">text.div</code></strong> narrative with <code class="language-plaintext highlighter-rouge">xml:lang</code> / <code class="language-plaintext highlighter-rouge">lang</code> when <code class="language-plaintext highlighter-rouge">Resource.language</code> is set (see the best-practice block below)</li>
 </ul>
 
-<h2 id="severity-interpretation">Severity-Interpretation</h2>
+<h2 id="reading-severities">Reading severities</h2>
 
 <table>
   <thead>
     <tr>
       <th>Severity</th>
-      <th>Bedeutung</th>
+      <th>Meaning</th>
       <th>Acceptable?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">error</code></td>
-      <td>FHIR-Konformanz verletzt</td>
-      <td>❌ Muss behoben werden</td>
+      <td>FHIR conformance violated</td>
+      <td>❌ must be fixed</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">warning</code></td>
-      <td>FHIR-Best-Practice verletzt</td>
-      <td>⚠️ Fall-by-Fall</td>
+      <td>FHIR best practice violated</td>
+      <td>⚠️ case by case</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">information</code> / <code class="language-plaintext highlighter-rouge">note</code></td>
-      <td>Hinweis (z.B. Terminologie-Server konnte Code nicht auflösen)</td>
-      <td>✓ meist OK</td>
+      <td>informational, e.g. the terminology server could not resolve a code</td>
+      <td>✓ usually fine</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="häufige-warnings--wann-ignorieren-wann-nicht">Häufige Warnings — wann ignorieren, wann nicht</h3>
+<h3 id="common-warnings--when-to-ignore-them-and-when-not-to">Common warnings — when to ignore them and when not to</h3>
 
 <table>
   <thead>
     <tr>
       <th>Warning</th>
-      <th>Was tun</th>
+      <th>What to do</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">dom-6: A resource should have narrative for robust management</code></td>
-      <td><code class="language-plaintext highlighter-rouge">text.div</code>-Element ergänzen (FHIR Best Practice). Bei reinen Maschine-zu-Maschine-Bundles oft ignorierbar</td>
+      <td>add a <code class="language-plaintext highlighter-rouge">text.div</code> element (FHIR best practice). Often ignorable for pure machine-to-machine bundles</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">Die Ressource hat eine language, aber das XHTML hat kein lang Tag</code></td>
-      <td>wenn <code class="language-plaintext highlighter-rouge">Resource.language</code> gesetzt, dann auch <code class="language-plaintext highlighter-rouge">xml:lang="de-DE" lang="de-DE"</code> am <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>-Element</td>
+      <td><code class="language-plaintext highlighter-rouge">The resource has a language, but the XHTML has no lang tag</code></td>
+      <td>if <code class="language-plaintext highlighter-rouge">Resource.language</code> is set, also set <code class="language-plaintext highlighter-rouge">xml:lang="de" lang="de"</code> on the <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> element</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">Wrong Display Name 'X' for http://loinc.org#LAxxx-y</code></td>
-      <td>Display weicht von der LOINC-Bezeichnung ab (z.B. deutsche Übersetzung). Bewusst akzeptabel, bei strict-display-Servern via Setting deaktivierbar</td>
+      <td>the display differs from the LOINC designation, e.g. a German translation. Deliberately acceptable; can be switched off on strict-display servers</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">Canonical URL ... kann nicht aufgelöst werden</code></td>
-      <td>Server hat den referenzierten Questionnaire nicht — entweder <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter ergänzen oder Server-Bestückung prüfen (siehe <a href="Bereitstellung.html">Bereitstellung</a>)</td>
+      <td><code class="language-plaintext highlighter-rouge">Canonical URL … cannot be resolved</code></td>
+      <td>the server does not have the referenced questionnaire — either add an <code class="language-plaintext highlighter-rouge">-ig</code> parameter or check how the server was populated (see <a href="Bereitstellung.html">Distribution</a>)</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h2>
+<h2 id="validated-examples-for-reference">Validated examples for reference</h2>
 
-<p>Drei vollständige Beispiele in diesem IG, alle mit <strong>0 errors, 0 warnings</strong>:</p>
+<p>The three original examples, all with <strong>0 errors, 0 warnings</strong>:</p>
 
 <ul>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a></li>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></a></li>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (für den Beispiel-Questionnaire)</li>
+  <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (for the example questionnaire)</li>
 </ul>
 
-<p>Reproduzieren:</p>
+<p>Plus the <strong>AN data set</strong> — five responses and two score observations from a single assessment session with the same patient (overview on the <a href="AN.html">AN</a> page): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a>, and <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> and <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
+
+<p>These seven are checked at <strong>0 errors</strong> but are not warning-free, and both remaining warnings are known and accepted:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dom-6</code> (missing narrative) on all seven — listed as ignorable in the table above</li>
+  <li>a <code class="language-plaintext highlighter-rouge">java.net.SocketTimeoutException</code> during the UCUM check of the two <code class="language-plaintext highlighter-rouge">valueQuantity</code> values — a network timeout against the terminology server, not a finding about the resource</li>
+</ul>
+
+<p><strong>One real defect found while validating:</strong> the ERQ-S example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: <em>"structural error: elements in the wrong order"</em>. A <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> must list its items in the <strong>order of the questionnaire</strong>; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.</p>
+
+<p>Reproduce:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>f <span class="k">in </span>input/examples/QuestionnaireResponse-<span class="k">*</span>.json<span class="p">;</span> <span class="k">do
   </span>java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span> <span class="se">\</span>
     <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 <span class="se">\</span>
+    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
     <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
     <span class="nt">-ig</span> fsh-generated/resources <span class="se">\</span>
     <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 <span class="k">done</span>
 </code></pre></div></div>
 
-<h2 id="wozu-validierung-in-der-pipeline">Wozu Validierung in der Pipeline?</h2>
+<h2 id="why-validate-in-the-pipeline-at-all">Why validate in the pipeline at all?</h2>
 
-<p>Validierung prüft strukturelle und Code-Bindungs-Konformanz, <strong>nicht</strong> klinische/inhaltliche Plausibilität. Sie schützt aber sehr zuverlässig vor den häufigsten Mapping-Fehlern: falsche LA-Codes (z.B. Frequency- vs Intensity-Skala verwechselt), fehlende Pflicht-Items, Versions-Mismatch zwischen <code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz und Server-Stand.</p>
+<p>Validation checks structural and code-binding conformance, <strong>not</strong> clinical plausibility. What it does reliably catch are the commonest mapping mistakes: wrong LA codes (a frequency scale confused with an intensity scale), missing required items, and a version mismatch between the <code class="language-plaintext highlighter-rouge">questionnaire</code> reference and what the server actually holds.</p>
 
-<p>Für den <a href="Implementation.html">50-First-Patients Pilot</a>: <strong>jeder Sender validiert lokal bevor er sendet</strong>, jeder Empfänger validiert nochmal beim Eingang. Das fängt 95% der Drift-Probleme bei wenig Aufwand.</p>
+<p>For the <a href="Implementation.html">50 First Patients pilot</a> the rule is simple: <strong>every sender validates locally before sending</strong>, and every recipient validates again on arrival. That catches the large majority of drift problems for very little effort.</p>
 
 
 
@@ -577,10 +640,10 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

@@ -1,4 +1,4 @@
-# DEM Erwerbsstatus (OECD) - PCOR-MII Implementation Guide v0.2.0
+# DEM Erwerbsstatus (OECD) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Erwerbsstatus (OECD) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-erwerbsstatus",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemErwerbsstatusCS",
   "title" : "DEM Erwerbsstatus (OECD)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,47 +49,91 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 11,
   "concept" : [{
     "code" : "selbststaendig",
-    "display" : "Selbstständigerwerbend"
+    "display" : "Self-employed [work for yourself]",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Selbstständigerwerbend"
+    }]
   },
   {
     "code" : "angestellt",
-    "display" : "Angestellt"
+    "display" : "In paid employment [work for someone else]",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Angestellt"
+    }]
   },
   {
     "code" : "arbeitssuchend",
-    "display" : "Arbeitssuchend"
+    "display" : "Looking for work",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Arbeitssuchend"
+    }]
   },
   {
     "code" : "haushalt",
-    "display" : "Hausfrau/Hausmann"
+    "display" : "Looking after the home",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Hausfrau/Hausmann"
+    }]
   },
   {
     "code" : "arbeitsunfaehig",
-    "display" : "Krankheitsbedingte Arbeitsunfähigkeit"
+    "display" : "Unable to work due to sickness or ill-health",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Krankheitsbedingte Arbeitsunfähigkeit"
+    }]
   },
   {
     "code" : "pensioniert",
-    "display" : "Pensioniert"
+    "display" : "Retired",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Pensioniert"
+    }]
   },
   {
     "code" : "student",
-    "display" : "Student/in"
+    "display" : "Student",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Student/in"
+    }]
   },
   {
     "code" : "nicht-arbeitend",
-    "display" : "Nicht arbeitend und nicht arbeitssuchend"
+    "display" : "Not working and not looking for work",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nicht arbeitend und nicht arbeitssuchend"
+    }]
   },
   {
     "code" : "lernende",
-    "display" : "Lernende/r"
+    "display" : "Apprentice",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Lernende/r"
+    }]
   },
   {
     "code" : "anderes",
-    "display" : "Anderes"
+    "display" : "Other",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Anderes"
+    }]
   },
   {
     "code" : "weiss-nicht",
-    "display" : "Ich weiss es nicht"
+    "display" : "Don't know",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ich weiss es nicht"
+    }]
   }]
 }
 

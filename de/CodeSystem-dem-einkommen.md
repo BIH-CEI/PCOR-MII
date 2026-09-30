@@ -1,4 +1,4 @@
-# DEM Haushaltseinkommen (Bänder) - PCOR-MII Implementation Guide v0.2.0
+# DEM Haushaltseinkommen (Bänder) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Haushaltseinkommen (Bänder) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-einkommen",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemEinkommenCS",
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,23 +49,43 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "count" : 5,
   "concept" : [{
     "code" : "band-niedrig",
-    "display" : "Bis zu 2.300 € pro Monat"
+    "display" : "Up to €2,300 a month",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Bis zu 2.300 € pro Monat"
+    }]
   },
   {
     "code" : "band-mittel",
-    "display" : "Zwischen 2.300 € und 5.200 € pro Monat"
+    "display" : "Between €2,300 and €5,200 a month",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Zwischen 2.300 € und 5.200 € pro Monat"
+    }]
   },
   {
     "code" : "band-hoch",
-    "display" : "5.200 € pro Monat oder mehr"
+    "display" : "€5,200 a month or more",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "5.200 € pro Monat oder mehr"
+    }]
   },
   {
     "code" : "weiss-nicht",
-    "display" : "Ich weiss es nicht"
+    "display" : "Don't know",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ich weiss es nicht"
+    }]
   },
   {
     "code" : "keine-angabe",
-    "display" : "Möchte ich nicht sagen"
+    "display" : "Prefer not to say",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Möchte ich nicht sagen"
+    }]
   }]
 }
 

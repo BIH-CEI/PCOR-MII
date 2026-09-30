@@ -1,4 +1,4 @@
-# DEM Ja/Nein - PCOR-MII Implementation Guide v0.2.0
+# DEM Ja/Nein - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: DEM Ja/Nein (Experimentell) 
 
@@ -7,7 +7,9 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
 
  **References** 
 
+* [ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)](Questionnaire-ACE.md)
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
+* [EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)](Questionnaire-EDEQ6.md)
 * [MHI — Medical History](Questionnaire-MHI.md)
 
 ### Logical Definition (CLD)
@@ -29,12 +31,12 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
   "resourceType" : "ValueSet",
   "id" : "dem-ja-nein",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemJaNeinVS",
   "title" : "DEM Ja/Nein",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

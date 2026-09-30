@@ -1,4 +1,4 @@
-# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.2.0
+# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) (Experimentell) 
 
@@ -26,8 +26,17 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
+  "language" : "de",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "WAI",
   "title" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)",
   "status" : "draft",
@@ -74,17 +83,29 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "valueInteger" : 1
       }],
       "linkId" : "WAI01",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI01"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit im Vergleich zur besten je erreichten Arbeitsfähigkeit, Skala 0-10 (0 = keine Arbeitsfähigkeit, 10 = beste je erreichte Arbeitsfähigkeit).",
       "type" : "integer"
     },
     {
       "linkId" : "WAI02a",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI02a"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die körperlichen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert).",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"
     },
     {
       "linkId" : "WAI02b",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI02b"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die psychischen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert).",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"

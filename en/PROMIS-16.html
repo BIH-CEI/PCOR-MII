@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PROMIS-16 Profile v2.1 (PROPr)</h2>
   
 
@@ -348,6 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
   <li><a href="#eigenschaften" id="markdown-toc-eigenschaften">Eigenschaften</a></li>
   <li><a href="#scoring" id="markdown-toc-scoring">Scoring</a></li>
+  <li><a href="#artefakt-propr-als-observationdefinition" id="markdown-toc-artefakt-propr-als-observationdefinition">Artefakt: PROPr als ObservationDefinition</a></li>
   <li><a href="#hinweise" id="markdown-toc-hinweise">Hinweise</a></li>
   <li><a href="#beispiel-questionnaireresponse" id="markdown-toc-beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</a></li>
   <li><a href="#item-tabelle" id="markdown-toc-item-tabelle">Item-Tabelle</a></li>
@@ -391,19 +443,74 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="scoring">Scoring</h3>
 
-<p>PROPr unterstützt zwei komplementäre Auswertungsformen:</p>
+<p>PROMIS-16 erlaubt <strong>drei</strong> Auswertungsformen:</p>
 
-<ol>
-  <li><strong>PROPr Utility Score</strong> — Multi-Attribute-Utility-Score (3-Stufen-Methodik) als gesundheitsökonomisches Summary-Maß</li>
-  <li><strong>8 Domain T-Scores</strong> — domänenspezifische Raw-Score → T-Score Conversion analog PROMIS-29</li>
-</ol>
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Umfang</th>
+      <th style="text-align: right">Wertebereich</th>
+      <th>Verfahren</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>8 Domänen-T-Scores</strong></td>
+      <td>je Domäne, Rohwert 2–10 aus zwei Items</td>
+      <td style="text-align: right">T ≈ 27–80 je nach Domäne</td>
+      <td>Umrechnungstabelle Rohwert → T-Score, oder genauer per Antwortmuster</td>
+    </tr>
+    <tr>
+      <td><strong>Physical/Mental Health Summary Scores</strong></td>
+      <td>zwei Summenmaße über die Domänen</td>
+      <td style="text-align: right">Z-Scores</td>
+      <td>nach Hays-Methodik</td>
+    </tr>
+    <tr>
+      <td><strong>PROPr Utility Score</strong></td>
+      <td><strong>7</strong> der 8 Domänen</td>
+      <td style="text-align: right"><strong>−0,022 bis 1,0</strong></td>
+      <td>multiplikatives Multi-Attribute-Utility-Modell</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Beide Scoring-Varianten werden im MII PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert. Bis dahin ist PROMIS-16 in PCOR-MII als Datenerfassungsinstrument nutzbar; die Score-Berechnung muss extern erfolgen.</p>
+<p><strong>Bemerkenswert am PROPr: Angst geht nicht ein.</strong> Der PROMIS-Preference-Score (Dewitt et al. 2018, <a href="https://doi.org/10.1177/0272989X18776637">doi:10.1177/0272989X18776637</a>) beruht auf sieben Domänen — Cognitive Function-Abilities, Depression, Fatigue, Pain Interference, Physical Function, Sleep Disturbance und Ability to Participate in Social Roles and Activities. Die Anxiety-Domäne des PROMIS-16 bleibt außen vor. Der Wertebereich beginnt knapp unterhalb von null, weil einzelne Zustände als „schlechter als tot" bewertet wurden (0 = tot, 1 = bestmögliche Gesundheit).</p>
+
+<p>Der PROPr rechnet dabei <strong>nicht auf Item-, sondern auf Domänenebene</strong>: Aus dem T-Score wird θ = (T − 50) / 10, und darauf setzt das Utility-Modell auf. Genau deshalb ist er aus dem PROMIS-16 berechenbar — die zwei Cognitive-Function-Items, die dem PROMIS-29 fehlen, liefern die letzte noch benötigte Domäne. Eine Agreement-Studie (Hanmer et al. 2025, <a href="https://doi.org/10.1007/s11136-024-03827-5">doi:10.1007/s11136-024-03827-5</a>) findet Korrelationen von 0,93–0,95 zwischen PROPr aus PROMIS-16 und aus PROMIS-29+2, mit leichter Überschätzung am oberen Ende.</p>
+
+<p><strong>Die Scoring-Grundlagen sind öffentlich</strong>, das Scoring ist also nicht an eine proprietäre Engine gebunden:</p>
+
+<ul>
+  <li>Umrechnungstabellen Rohwert → T-Score je 2a-Kurzform im <a href="https://healthmeasures.net/implement/scoring/manual-scoring-resources/promis-scoring-manuals/">PROMIS Adult Profile Scoring Manual</a> (HealthMeasures, Stand 15.07.2025)</li>
+  <li>Genauere Antwortmuster-Tabelle als Supplement S4 der Entwicklungspublikation (Edelen et al., <em>Qual Life Res</em> 2025;34(1):3–15, <a href="https://doi.org/10.1007/s11136-023-03597-6">doi:10.1007/s11136-023-03597-6</a>, Open Access)</li>
+  <li>Referenzimplementierung des PROPr in R, SAS, Stata und Python: <a href="https://github.com/janelhanmer/PROPr">github.com/janelhanmer/PROPr</a></li>
+</ul>
+
+<p>Zwei Fallstricke für eine spätere Implementierung: Bei <strong>fehlenden Antworten</strong> ist die Summenscore-Tabelle laut Manual ausdrücklich unzulässig. Und die <strong>Umpolung</strong> folgt nicht der Formulierungsrichtung — <em>Social Roles</em> ist trotz negativer Itemformulierung umzupolen, <em>Cognitive Function</em> trotz positiver Formulierung nicht; maßgeblich sind die offiziellen Antwort-Codewerte.</p>
+
+<p><a name="propr"></a></p>
+
+<h3 id="artefakt-propr-als-observationdefinition">Artefakt: PROPr als ObservationDefinition</h3>
+
+<p>Für den PROPr ist in PCOR-MII eine Score-Definition angelegt: <a href="ObservationDefinition-PcorObsDefProprUtility.html"><strong>PcorObsDefProprUtility</strong></a>. Sie konformiert gegen das <code class="language-plaintext highlighter-rouge">mii-pr-pro-score-blueprint</code> des MII-PRO-Moduls und hält Wertebereich (−0,022 bis 1,0), Einheit, Nachkommastellen und die Scoring-Richtung fest — höhere Werte bedeuten bessere Gesundheit, anders als bei den meisten Belastungs-Scores.</p>
+
+<p>Sie <strong>definiert</strong> den Score, sie <strong>berechnet</strong> ihn nicht: Das multiplikative Utility-Modell liegt als Referenzimplementierung in R, SAS, Stata und Python vor (<a href="https://github.com/janelhanmer/PROPr">github.com/janelhanmer/PROPr</a>). Das folgt der MDR-Abgrenzung aus <a href="Designentscheidungen.html">ADR-004</a>.</p>
+
+<p>Da PROPr weder in LOINC noch in SNOMED CT noch im MII-Score-Katalog einen Code hat (geprüft 2026-09-29), trägt die Definition den Code <code class="language-plaintext highlighter-rouge">promis-propr-utility</code> aus dem lokalen <a href="CodeSystem-pcor-score-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code></a>. Das ist profilkonform: Das Blueprint bindet den MII-Katalog nicht per ValueSet, sondern als Slice über <code class="language-plaintext highlighter-rouge">coding.system</code>, und das Slicing ist <strong>offen</strong> — Codings anderer Systeme sind ausdrücklich vorgesehen (siehe <a href="Designentscheidungen.html">ADR-004</a>). Migrierbar bleibt es ebenfalls: Ein künftiger MII-Code wird als <strong>zusätzliches</strong> <code class="language-plaintext highlighter-rouge">code.coding</code> ergänzt, nicht als Ersatz.</p>
+
+<p><strong>Die Zuständigkeit liegt gleichwohl upstream.</strong> PROPr ist PROMIS-spezifisch, und die PROMIS-Artefakte pflegt das MII-PRO-Modul. Dort wären nachzuziehen: der Code <code class="language-plaintext highlighter-rouge">promis-propr-utility</code> im Score-Katalog, eine <code class="language-plaintext highlighter-rouge">mii-obsdef-pro-score-promis-propr-utility</code> nach dem Muster des EQ-5D-5L-Index und ein Verweis vom PROMIS-16-Questionnaire auf den Score. Der lokale Code trägt bereits denselben Namen, damit die Ergänzung ein reines Hinzufügen bleibt. Was hier steht, ist eine arbeitsfähige Vorwegnahme für die Erprobung.</p>
+
+<p><strong>Stand 2026-09-29: keiner der beiden Scores ist verfügbar.</strong> Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2026.7.0 existiert upstream <strong>ausschließlich der Questionnaire</strong> — keine <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>, keine CQL Library, keine Score-Codes im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt <code class="language-plaintext highlighter-rouge">calculatable</code> ausdrücklich auf <code class="language-plaintext highlighter-rouge">false</code> mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen <strong>Roadmap 2027</strong>.</p>
+
+<p>Für PCOR-MII heißt das: PROMIS-16 ist als <strong>Datenerfassungsinstrument</strong> nutzbar, die Score-Berechnung muss extern erfolgen. Score-<code class="language-plaintext highlighter-rouge">Observation</code>s können hier auch nicht ersatzweise modelliert werden — nach <a href="Designentscheidungen.html">ADR-004</a> stammen Score-Codes aus dem MII-Score-Katalog, der für PROMIS-16 noch keine führt.</p>
 
 <h3 id="hinweise">Hinweise</h3>
 
 <ul>
-  <li>Item-Überlapp mit PROMIS-29: 14 der 16 Items aus PROMIS-16 finden sich auch in PROMIS-29. Die Cognitive-Function-Items sind die 2 zusätzlichen Items in PROMIS-16.</li>
+  <li><strong>Kein Schmerzintensitäts-Item.</strong> Anders als PROMIS-29 (28 Domänen-Items + Global07 auf 0–10) enthält PROMIS-16 keine numerische Schmerzintensität — die Schmerzdomäne ist allein über <em>Pain Interference</em> abgedeckt.</li>
+  <li>Item-Überlapp mit PROMIS-29: Laut Hanmer et al. 2025 teilen sich PROMIS-16 und PROMIS-29+2 <strong>11 der 16 Items</strong>. Die zwei Cognitive-Function-Items sind im PROMIS-29 nicht enthalten — im PROMIS-29+2 dagegen schon, dort sind sie genau das „+2".</li>
   <li>Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.</li>
 </ul>
 
@@ -415,7 +522,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <!-- BEGIN AUTO-TRANSLATION-TABLE -->
 
-<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-16</code> v2026.6.0 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
+<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-16</code> v2026.7.0 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
 
 <p>Wo Translation-Extensions auf den <code class="language-plaintext highlighter-rouge">text</code>-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.</p>
 
@@ -757,10 +864,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

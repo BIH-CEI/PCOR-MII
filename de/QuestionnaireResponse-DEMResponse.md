@@ -1,4 +1,4 @@
-# DEM — Beispielantwort - PCOR-MII Implementation Guide v0.2.0
+# DEM — Beispielantwort - PCOR-MII Implementation Guide v0.3.0
 
 ## Beispiel QuestionnaireResponse: DEM — Beispielantwort
 
@@ -125,7 +125,7 @@ Language: de-DE
   "resourceType" : "QuestionnaireResponse",
   "id" : "DEMResponse",
   "language" : "de-DE",
-  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM",
+  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
   "status" : "completed",
   "subject" : {
     "reference" : "Patient/pcor-mii-exa-patient"

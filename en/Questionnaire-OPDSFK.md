@@ -1,4 +1,4 @@
-# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.2.0
+# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion (Experimental) 
 
@@ -26,7 +26,16 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
+  "language" : "de",
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/variable",
     "valueExpression" : {
       "name" : "opdSfkSumme",
@@ -35,7 +44,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "OPDSFK",
   "title" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
   "status" : "draft",
@@ -66,72 +75,120 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   },
   {
     "linkId" : "OPDSFK01",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK01"
+    }],
     "text" : "Ich erlebe mich manchmal wie eine fremde Person.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK02",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK02"
+    }],
     "text" : "Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK03",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK03"
+    }],
     "text" : "Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK04",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK04"
+    }],
     "text" : "Ich kann mich anderen oft schwer verständlich machen.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK05",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK05"
+    }],
     "text" : "In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK06",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK06"
+    }],
     "text" : "Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK07",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK07"
+    }],
     "text" : "Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK08",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK08"
+    }],
     "text" : "Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK09",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK09"
+    }],
     "text" : "Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK10",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK10"
+    }],
     "text" : "Es fällt mir schwer, zu anderen Kontakt aufzunehmen.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK11",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK11"
+    }],
     "text" : "Ich habe kein gutes Selbstbewusstsein.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
     "linkId" : "OPDSFK12",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK12"
+    }],
     "text" : "Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"

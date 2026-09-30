@@ -7,11 +7,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="pcor-mii"> </a><a name="hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="en-pcor-mii"> </a><a name="en-hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div></div>
   </text>
   <url value="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/>
-  <version value="0.2.0"/>
+  <version value="0.3.0"/>
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-09-02T07:19:25+00:00"/>
+  <date value="2026-09-30T09:40:42+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -36,7 +36,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.3.0"/>
+    <version value="7.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -49,7 +49,7 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_pros">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.pros"/>
-    <version value="2026.6.0"/>
+    <version value="2026.7.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
@@ -574,6 +574,94 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ACEResponse"/>
+      </reference>
+      <name value="ACE — Beispielantwort"/>
+      <description value="Vollständig ausgefüllte Beispielantwort zum ACE-Questionnaire (erste fünf ACE-Fragen). Zwei bejahte Items in der emotionalen Dimension; die Anzahl der Ja-Antworten ist kein ACE-Score, weil die Fragen 6–10 nicht erhoben werden."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ACE"/>
+      </reference>
+      <name value="ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)"/>
+      <description value="Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebogens (ACE): emotionale und körperliche Misshandlung, sexueller Missbrauch, emotionale und körperliche Vernachlässigung vor dem 18. Lebensjahr, je ja/nein. Kein Score — die Summe über den 5-Item-Zuschnitt ist kein validierter ACE-Score. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items — und zusätzlich seinen LOINC-Code."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ansocq-gedanken-vs"/>
+      </reference>
+      <name value="ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht"/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ansocq-gedanken"/>
+      </reference>
+      <name value="ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)"/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ansocq-koerperteile-vs"/>
+      </reference>
+      <name value="ANSOCQ Item 3 — Körperteile"/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ansocq-koerperteile"/>
+      </reference>
+      <name value="ANSOCQ Item 3 — Körperteile (Codes)"/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ANSOCQ2Response"/>
+      </reference>
+      <name value="ANSOCQ-2 — Beispielantwort"/>
+      <description value="Vollständig ausgefüllte Beispielantwort zum ANSOCQ-2-Questionnaire. `language` ist `de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde — der Questionnaire selbst führt den englischen Originalwortlaut."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ANSOCQ2"/>
+      </reference>
+      <name value="ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)"/>
+      <description value="Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire (ANSOCQ): Bereitschaft zur Gewichtszunahme an sorgenbesetzten Körperteilen (Item 3) und Umgang mit der Zeit für Gedanken an Nahrung und Gewicht (Item 14). Je fünf Feststellungen entsprechend den Stadien der Veränderungsbereitschaft (1-5). Kein Score — für den Zuschnitt liegt keine validierte Scoring-Vorschrift vor. Quelle: PCOR-MII Item Level Dictionary (Entität AN)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -871,6 +959,138 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ede-q6-tage-vs"/>
+      </reference>
+      <name value="EDE-Q6 Häufigkeit in 28 Tagen"/>
+      <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ede-q6-tage"/>
+      </reference>
+      <name value="EDE-Q6 Häufigkeit in 28 Tagen (Codes)"/>
+      <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/EDEQ6Response"/>
+      </reference>
+      <name value="EDE-Q6 — Beispielantwort"/>
+      <description value="Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire, einschließlich der über `enableWhen` abhängigen Frage `edeq30`. Antwortmuster: residuelle Essstörungspathologie bei teilrestituiertem Gewicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/EDEQ6"/>
+      </reference>
+      <name value="EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)"/>
+      <description value="Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE-Q): drei 28-Tage-Häufigkeitsitems (Restriktion, gedankliche Beschäftigung, Abnehmwunsch), ein Item zum Körperunbehagen (0-6) sowie zwei Zusatzfragen zur Regelblutung. Kein Score — für den Zuschnitt liegt keine validierte Scoring-Vorschrift vor. Quelle: PCOR-MII Item Level Dictionary (Entität AN)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ObservationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ObservationDefinition/PcorObsDefErqsReappraisal"/>
+      </reference>
+      <name value="ERQ-S Neubewertung (Cognitive Reappraisal)"/>
+      <description value="Subskala Neubewertung des ERQ-S: Summe der Items erq1, erq3 und erq8 (ERQ-S-Zählung 1, 3, 5), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Neubewertung an, was laut Instrument mit besserem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta &amp; Gross (2023), Scoring Instructions zum ERQ-S."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ErqsReappraisalObservation"/>
+      </reference>
+      <name value="ERQ-S Neubewertung — Beispiel-Score"/>
+      <description value="Subskalen-Score Neubewertung (11 von 3–21), berechnet aus der ERQ-S-Beispielantwort. Gebunden an PcorObsDefErqsReappraisal über den Katalogcode `erq-s-reappraisal`."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ObservationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ObservationDefinition/PcorObsDefErqsSuppression"/>
+      </reference>
+      <name value="ERQ-S Unterdrückung (Expressive Suppression)"/>
+      <description value="Subskala Unterdrückung des ERQ-S: Summe der Items erq2, erq6 und erq9 (ERQ-S-Zählung 2, 4, 6), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Unterdrückung an, was laut Instrument mit schlechterem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta &amp; Gross (2023), Scoring Instructions zum ERQ-S."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ErqsSuppressionObservation"/>
+      </reference>
+      <name value="ERQ-S Unterdrückung — Beispiel-Score"/>
+      <description value="Subskalen-Score Unterdrückung (19 von 3–21), berechnet aus der ERQ-S-Beispielantwort. Gebunden an PcorObsDefErqsSuppression über den Katalogcode `erq-s-suppression`."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ERQ6Response"/>
+      </reference>
+      <name value="ERQ-S — Beispielantwort"/>
+      <description value="Vollständig ausgefüllte Beispielantwort zum ERQ-S-Questionnaire. Antwortmuster: niedrige Neubewertung (Summe 11) bei hoher Unterdrückung (Summe 19); die beiden Summen liegen als Score-Observations vor."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ERQ6"/>
+      </reference>
+      <name value="ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items)"/>
+      <description value="Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; Preece et al. 2023): sechs Items, 7-stufige Likert-Skala (1 = stimmt überhaupt nicht ... 7 = stimmt vollkommen). Zwei Subskalen mit je drei Items, Wertebereich 3-21: Neubewertung (erq1, erq3, erq8) und Unterdrückung (erq2, erq6, erq9). Kein Gesamtscore. linkIds sind die Original-ERQ-Itemnummern; deutsche Wortlaute aus der autorisierten Fassung von Abler &amp; Kessler (2009). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. ACHTUNG: Sie ist hier NICHT die Itemnummer. Dictionary erq4/erq5/erq6 liegen auf den ERQ-Items 6/8/9; die Original-Itemnummer steht im linkId."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/pcor-cm-erq-s-linkids"/>
+      </reference>
+      <name value="ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds"/>
+      <description value="Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/EXPECT"/>
+      </reference>
+      <name value="EXPECT — Erwartung an den Verlauf der Körperbeschwerden"/>
+      <description value="Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden 6 Monate: erwartete Gesamtstärke der Körperbeschwerden, erwartete Beeinträchtigung und erwartete Bewältigung. Kein standardisierter Fragebogen und kein Gesamtscore — die Items sind einzeln auszuwerten und nicht gleichgerichtet. Quelle: PCOR-MII Item Level Dictionary (Entität PSS)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -878,6 +1098,17 @@
       </reference>
       <name value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"/>
       <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/IPQS"/>
+      </reference>
+      <name value="IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)"/>
+      <description value="Eine offene Frage nach den drei wichtigsten subjektiven Ursachen der Körperbeschwerden, angelehnt an Item 9 des Brief Illness Perception Questionnaire (B-IPQ). PCOR-MII erhebt NICHT den B-IPQ selbst; ein B-IPQ-Score ist aus diesem Item nicht ableitbar. Quelle: PCOR-MII Item Level Dictionary (Entität PSS)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1124,6 +1355,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pcor-item-dictionary"/>
+      </reference>
+      <name value="PCOR-MII Item Level Dictionary — Variablen-IDs"/>
+      <description value="Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit sich ein flach erhobener Datensatz maschinell auf die Instrumenten-Questionnaires verteilen lässt (ADR-011). Jedes Item trägt seine Variable in `item.code`; die Zuordnung ist damit eine Nachschlage-Operation und keine Abbildung. Enthält nur die modellierten Variablen — `content = fragment`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pcor-score-catalogue"/>
+      </reference>
+      <name value="PCOR-MII Score-Katalog (Codes)"/>
+      <description value="Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="QuestionnaireResponse"/>
       </extension>
       <reference>
@@ -1151,6 +1404,61 @@
       </reference>
       <name value="pcor-mii-exa-promis-cognitive-function-response"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ObservationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ObservationDefinition/PcorObsDefProprUtility"/>
+      </reference>
+      <name value="PROPr — PROMIS-Preference Utility Score"/>
+      <description value="Präferenzbasierter Nutzwert (Utility) über sieben PROMIS-Domänen: Cognitive Function-Abilities, Depression, Fatigue, Pain Interference, Physical Function, Sleep Disturbance sowie Ability to Participate in Social Roles and Activities. Die Anxiety-Domäne geht NICHT ein. Wertebereich -0,022 bis 1,0 (0 = tot, 1 = bestmögliche Gesundheit); höhere Werte zeigen bessere Gesundheit an. Berechnet wird aus Domänen-T-Scores (theta = (T-50)/10), nicht aus Items — damit aus PROMIS-16, PROMIS-29+2 oder CATs gleichermaßen ableitbar. PROMIS-spezifisch, aber nicht an ein einzelnes PROMIS-Profil gebunden. Quelle: Dewitt et al., Med Decis Making 2018;38(6):683-698. Vorläufig in PCOR-MII gepflegt; die Zuständigkeit liegt beim MII-PRO-Modul."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ssuk-antwort-vs"/>
+      </reference>
+      <name value="SSUK Antwortskala"/>
+      <description value="5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ssuk-antwort"/>
+      </reference>
+      <name value="SSUK Antwortskala (Codes)"/>
+      <description value="5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/SSUK2Response"/>
+      </reference>
+      <name value="SSUK-2 — Beispielantwort"/>
+      <description value="Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire. Antwortmuster eines günstigen sozialen Umfelds: hoch bei der unterstützenden Zuwendung (`ssuk14`), niedrig bei der belastenden Interaktion (`ssuk10`)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/SSUK2"/>
+      </reference>
+      <name value="SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)"/>
+      <description value="Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je ein Item zur positiven Unterstützung (aufmuntern/trösten) und zur belastenden Interaktion (Auswirkung der Erkrankung herunterspielen), 5-stufige Häufigkeitsskala (0 = nie ... 4 = immer). Kein Score — die beiden Items sind gegenläufig gepolt und einzeln auszuwerten. Quelle: PCOR-MII Item Level Dictionary (Entität AN)."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1214,6 +1522,102 @@
           <nameUrl value="PSS.html"/>
           <title value="PSS (Persistent Somatic Syndrome)"/>
           <generation value="markdown"/>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="SSD-12.html"/>
+            </extension>
+            <nameUrl value="SSD-12.html"/>
+            <title value="SSD-12 (B-Kriterien somatische Belastungsstörung)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="WI-7.html"/>
+            </extension>
+            <nameUrl value="WI-7.html"/>
+            <title value="Whiteley-7 (Gesundheitsangst)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="SCOFF.html"/>
+            </extension>
+            <nameUrl value="SCOFF.html"/>
+            <title value="SCOFF (Essstörungs-Screening)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="ISR-Z.html"/>
+            </extension>
+            <nameUrl value="ISR-Z.html"/>
+            <title value="ISR-Z (Zwang)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="PC-PTSD.html"/>
+            </extension>
+            <nameUrl value="PC-PTSD.html"/>
+            <title value="PC-PTSD (PTBS-Screening)"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="AN.html"/>
+          </extension>
+          <nameUrl value="AN.html"/>
+          <title value="AN (Anorexia Nervosa)"/>
+          <generation value="markdown"/>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="Essstoerungen.html"/>
+            </extension>
+            <nameUrl value="Essstoerungen.html"/>
+            <title value="Essstörungen — Erhebungsplan"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="ERQ-6.html"/>
+            </extension>
+            <nameUrl value="ERQ-6.html"/>
+            <title value="ERQ-S (Emotionsregulation)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="EDE-Q6.html"/>
+            </extension>
+            <nameUrl value="EDE-Q6.html"/>
+            <title value="EDE-Q6 (Essstörungspathologie)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="ANSOCQ-2.html"/>
+            </extension>
+            <nameUrl value="ANSOCQ-2.html"/>
+            <title value="ANSOCQ-2 (Veränderungsmotivation)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="SSUK-2.html"/>
+            </extension>
+            <nameUrl value="SSUK-2.html"/>
+            <title value="SSUK-2 (Soziale Unterstützung)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="ACE.html"/>
+            </extension>
+            <nameUrl value="ACE.html"/>
+            <title value="ACE (Belastende Kindheitserfahrungen)"/>
+            <generation value="markdown"/>
+          </page>
         </page>
       </page>
       <page>
@@ -1295,6 +1699,14 @@
           <title value="PHQ-15"/>
           <generation value="markdown"/>
         </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="GAD-7.html"/>
+          </extension>
+          <nameUrl value="GAD-7.html"/>
+          <title value="GAD-7"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1302,6 +1714,14 @@
         </extension>
         <nameUrl value="WHODAS-12.html"/>
         <title value="WHODAS 2.0 (12-Item)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="EURONET-SOMA.html"/>
+        </extension>
+        <nameUrl value="EURONET-SOMA.html"/>
+        <title value="EURONET-SOMA (2 Einzelitems)"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -1330,6 +1750,22 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="EXPECT.html"/>
+        </extension>
+        <nameUrl value="EXPECT.html"/>
+        <title value="EXPECT (Verlaufserwartung)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="IPQ-S.html"/>
+        </extension>
+        <nameUrl value="IPQ-S.html"/>
+        <title value="IPQ-S (Ursachenzuschreibung)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="Implementation.html"/>
         </extension>
         <nameUrl value="Implementation.html"/>
@@ -1350,6 +1786,14 @@
         </extension>
         <nameUrl value="Bereitstellung.html"/>
         <title value="Bereitstellung"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Designentscheidungen.html"/>
+        </extension>
+        <nameUrl value="Designentscheidungen.html"/>
+        <title value="Designentscheidungen"/>
         <generation value="markdown"/>
       </page>
       <page>

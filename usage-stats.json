@@ -1,23 +1,43 @@
 {
   "package": "pcor-mii",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [],
   "profiles": {},
   "usage": {
+    "http://hl7.org/fhir/StructureDefinition/artifact-version": [
+      "ObservationDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "Questionnaire"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/designNote": [
+      "Questionnaire",
+      "Questionnaire.item"
+    ],
     "http://hl7.org/fhir/StructureDefinition/maxValue": [
+      "Questionnaire.item",
       "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/minValue": [
       "Questionnaire.item",
       "Questionnaire.item.item"
     ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl": [
+      "Questionnaire.item"
+    ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue": [
+      "Questionnaire.item",
       "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-unit": [
       "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "Questionnaire.item.item.item.text",
+      "Questionnaire.item.item.text",
+      "Questionnaire.item.text"
     ],
     "http://hl7.org/fhir/StructureDefinition/variable": [
       "Questionnaire"
@@ -28,7 +48,8 @@
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page",
-      "ImplementationGuide.definition.page.page.page"
+      "ImplementationGuide.definition.page.page.page",
+      "ImplementationGuide.definition.page.page.page.page"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
@@ -41,6 +62,9 @@
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression": [
       "Questionnaire.item"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-score-score-health-correlation": [
+      "ObservationDefinition.qualifiedInterval.range"
     ]
   }
 }

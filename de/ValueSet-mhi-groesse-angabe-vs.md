@@ -1,4 +1,4 @@
-# MHI Größenangabe - PCOR-MII Implementation Guide v0.2.0
+# MHI Größenangabe - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: MHI Größenangabe (Experimentell) 
 
@@ -28,12 +28,12 @@ Einheit/Angabe-Status für Körpergröße (Q_WB152).
   "resourceType" : "ValueSet",
   "id" : "mhi-groesse-angabe-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-groesse-angabe-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "MhiGroesseAngabeVS",
   "title" : "MHI Größenangabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

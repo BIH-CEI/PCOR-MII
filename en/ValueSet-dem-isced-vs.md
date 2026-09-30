@@ -1,4 +1,4 @@
-# DEM Bildungsabschluss (ISCED) - PCOR-MII Implementation Guide v0.2.0
+# DEM Bildungsabschluss (ISCED) - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: DEM Bildungsabschluss (ISCED) (Experimental) 
 
@@ -28,12 +28,12 @@ Höchster Bildungsabschluss (Q_ISCED).
   "resourceType" : "ValueSet",
   "id" : "dem-isced-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-isced-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemIscedVS",
   "title" : "DEM Bildungsabschluss (ISCED)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

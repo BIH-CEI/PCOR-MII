@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Validierung - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Validierung - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"12"}
-    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,13 +321,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge English" src="assets/images/lang-de.png"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge de" src="assets/images/lang-de.png"/>Deutsch</div>
 
-    <div><a href="../en/Validierung.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/Validierung.html"><img class="flag" src="assets/images/lang-en.png" alt="Flagge en"/>English</a></div>
 
   </div>
 </div>
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Validierung</h2>
   
 
@@ -389,7 +440,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     style CS fill:#e1ffe1
 </code></pre>
 
-<p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2026.4.1)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
+<p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2026.7.0)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
 
 <h2 id="drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</h2>
 
@@ -415,7 +466,7 @@ curl <span class="nt">-L</span> <span class="s2">"https://github.com/hapifhir/or
 <span class="c"># Validieren</span>
 java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-response.json <span class="se">\</span>
   <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 <span class="se">\</span>
+  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
   <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
   <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 </code></pre></div></div>
@@ -431,8 +482,8 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 <p>Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:</p>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code></li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.4.1</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.7.0</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.7.0</code></li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> der Answer-Items matchen <em>exakt</em> die im Questionnaire definierten linkIds</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Codierte Antworten</strong> mit System + Code aus dem im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code> (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe <a href="PROMIS-16.html">PROMIS-16</a> Item-Tabellen)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">status = completed</code></strong> (bzw. <code class="language-plaintext highlighter-rouge">in-progress</code>/<code class="language-plaintext highlighter-rouge">amended</code> je nach Lebenszyklus)</li>
@@ -501,7 +552,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <h2 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h2>
 
-<p>Drei vollständige Beispiele in diesem IG, alle mit <strong>0 errors, 0 warnings</strong>:</p>
+<p>Die drei ursprünglichen Beispiele, alle mit <strong>0 errors, 0 warnings</strong>:</p>
 
 <ul>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a></li>
@@ -509,12 +560,23 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (für den Beispiel-Questionnaire)</li>
 </ul>
 
+<p>Dazu der <strong>AN-Beispieldatensatz</strong> — fünf Beispielantworten und zwei Score-Observations, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite <a href="AN.html">AN</a>): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> sowie <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> und <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
+
+<p>Diese sieben sind mit <strong>0 errors</strong> geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dom-6</code> (fehlende Narrative) auf allen sieben — steht oben in der Tabelle als ignorierbar</li>
+  <li>ein <code class="language-plaintext highlighter-rouge">java.net.SocketTimeoutException</code> beim UCUM-Check der beiden <code class="language-plaintext highlighter-rouge">valueQuantity</code> — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource</li>
+</ul>
+
+<p><strong>Ein echter Fund beim Prüfen:</strong> Die ERQ-S-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — <em>„Struktureller Fehler: Elemente in falscher Reihenfolge"</em>. Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> muss ihre Items in der <strong>Reihenfolge des Questionnaire</strong> führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.</p>
+
 <p>Reproduzieren:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>f <span class="k">in </span>input/examples/QuestionnaireResponse-<span class="k">*</span>.json<span class="p">;</span> <span class="k">do
   </span>java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span> <span class="se">\</span>
     <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 <span class="se">\</span>
+    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
     <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
     <span class="nt">-ig</span> fsh-generated/resources <span class="se">\</span>
     <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
@@ -575,10 +637,10 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

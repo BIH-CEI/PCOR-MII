@@ -1,4 +1,4 @@
-# Validierung - PCOR-MII Implementation Guide v0.2.0
+# Validierung - PCOR-MII Implementation Guide v0.3.0
 
 ## Validierung
 
@@ -33,7 +33,7 @@ flowchart TB
 
 ```
 
-Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.4.1)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
+Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.7.0)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
 
 ## Drei Wege zum validierten Bundle
 
@@ -62,7 +62,7 @@ curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/
 # Validieren
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 
@@ -78,8 +78,8 @@ Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: dekla
 
 Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
-* **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.4.1`
-* **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.4.1`
+* **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.7.0`
+* **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.7.0`
 * **`linkId`s** der Answer-Items matchen **exakt** die im Questionnaire definierten linkIds
 * **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.md) Item-Tabellen)
 * **`status = completed`** (bzw. `in-progress`/`amended` je nach Lebenszyklus)
@@ -106,11 +106,20 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
 ## Validierte Beispiele als Referenz
 
-Drei vollständige Beispiele in diesem IG, alle mit **0 errors, 0 warnings**:
+Die drei ursprünglichen Beispiele, alle mit **0 errors, 0 warnings**:
 
 * [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md)
 * [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md)
 * [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) (für den Beispiel-Questionnaire)
+
+Dazu der **AN-Beispieldatensatz** — fünf Beispielantworten und zwei Score-Observations, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite [AN](AN.md)): [ERQ6Response](QuestionnaireResponse-ERQ6Response.md), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md), [SSUK2Response](QuestionnaireResponse-SSUK2Response.md), [ACEResponse](QuestionnaireResponse-ACEResponse.md) sowie [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.md) und [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.md).
+
+Diese sieben sind mit **0 errors** geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:
+
+* `dom-6` (fehlende Narrative) auf allen sieben — steht oben in der Tabelle als ignorierbar
+* ein `java.net.SocketTimeoutException` beim UCUM-Check der beiden `valueQuantity` — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource
+
+**Ein echter Fund beim Prüfen:** Die ERQ-S-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — **„Struktureller Fehler: Elemente in falscher Reihenfolge"**. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
 
 Reproduzieren:
 
@@ -118,7 +127,7 @@ Reproduzieren:
 for f in input/examples/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
-    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
     -ig hl7.fhir.uv.sdc#3.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response

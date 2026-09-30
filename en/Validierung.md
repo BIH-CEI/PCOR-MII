@@ -1,28 +1,28 @@
-# Validierung - PCOR-MII Implementation Guide v0.2.0
+# Validierung - PCOR-MII Implementation Guide v0.3.0
 
 ## Validierung
 
 **Translated page. Original language: German.**
 
-Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implementierung valide gegenüber den PRO- und PCOR-MII-Datendefinitionen ist?**
+This page answers one question: **how do I make sure my implementation is valid against the PRO and PCOR-MII data definitions?**
 
-## Worum geht's beim Validieren?
+## What validating actually checks
 
-Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
+A `QuestionnaireResponse` — or a FHIR bundle containing one — has to satisfy three things to count as valid:
 
-1. **Strukturell**dem[`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
-1. Die**`linkId`s**müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen
-1. Jede**codierte Antwort**muss aus dem`answerValueSet`(bzw.`answerOption`) des jeweiligen Items stammen
+1. **Structurally**conform to the[`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1): data types, required elements, element constraints
+1. Its**`linkId`s**must match the item structure of the referenced questionnaire
+1. Every**coded answer**must come from that item's`answerValueSet`(or`answerOption`)
 
 ```
 flowchart TB
-    QR["QuestionnaireResponse<br/>(zu validieren)"]
+    QR["QuestionnaireResponse<br/>(to be validated)"]
     Profile["meta.profile<br/>MII PR PRO QR"]
-    Q["Questionnaire<br/>(z.B. mii-qst-pro-promis-16)"]
-    VS["ValueSet<br/>(z.B. frequency-response-scale)"]
+    Q["Questionnaire<br/>(e.g. mii-qst-pro-promis-16)"]
+    VS["ValueSet<br/>(e.g. frequency-response-scale)"]
     CS["CodeSystem<br/>(LOINC)"]
 
-    QR -->|"validiert gegen"| Profile
+    QR -->|"validated against"| Profile
     QR -->|"questionnaire = canonical|version"| Q
     Q -->|"item.answerValueSet"| VS
     VS -->|"compose.include"| CS
@@ -35,13 +35,13 @@ flowchart TB
 
 ```
 
-Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.4.1)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
+For that to work the validator has to know all four resource levels — the **MII PRO module package (2026.7.0)** plus SDC plus LOINC. All the routes below arrange this automatically, either through `-ig` parameters or through the container preload.
 
-## Drei Wege zum validierten Bundle
+## Three routes to a validated bundle
 
-### A. Container-$validate (schnellste Schleife beim Mapper-Entwickeln)
+### A. Container $validate (fastest loop while writing a mapper)
 
-[PCOR-MII Container](Bereitstellung.md) starten und das Bundle per HTTP gegen `$validate` werfen:
+Start the [PCOR-MII container](Bereitstellung.md) and throw the bundle at `$validate` over HTTP:
 
 ```
 curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
@@ -50,77 +50,87 @@ curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
 
 ```
 
-Antwort ist ein `OperationOutcome` mit `issue`-Liste, severity-getaggt. Praktisch für: iterative Mapper-Entwicklung in der Shell, schnelle Roundtrips ohne Java-Setup.
+The reply is an `OperationOutcome` with a severity-tagged `issue` list. Good for iterative mapper development in a shell and quick round trips without a Java setup.
 
-### B. HL7 Validator CLI (für CI-Pipelines)
+### B. HL7 validator CLI (for CI pipelines)
 
-Der offizielle Java-Validator. Empfohlen wenn dein Build-System keine HTTP-Endpoints aufrufen soll.
+The official Java validator. Preferable when your build system should not call HTTP endpoints.
 
 ```
-# Einmaliger Download
+# One-time download
 curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar" \
   -o ~/.fhir/validator_cli.jar
 
-# Validieren
+# Validate
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 
 ```
 
-Best für: GitHub-Actions/GitLab-CI-Steps, Pre-Commit-Hooks, Mass-Validation großer Datensätze.
+Good for GitHub Actions and GitLab CI steps, pre-commit hooks, and mass validation of large data sets.
 
-### C. IG Publisher Build (automatisch in deinem IG)
+### C. IG Publisher build (automatic inside your own IG)
 
-Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: deklariere die Resources mit `meta.profile` — IG Publisher validiert dann beim Build automatisch und stoppt bei Errors. Output in `output/qa.html` und `output/qa.json`.
+If you build your own Implementation Guide that consumes PCOR-MII: declare your resources with `meta.profile` and the IG Publisher validates them during the build, stopping on errors. Output lands in `output/qa.html` and `output/qa.json`.
 
-## Was du in deiner Implementierung sicherstellst
+## What to get right in your implementation
 
-Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
+A practical checklist for mappers, ePRO apps and populating a recipient server:
 
-* **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.4.1`
-* **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.4.1`
-* **`linkId`s** der Answer-Items matchen **exakt** die im Questionnaire definierten linkIds
-* **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.md) Item-Tabellen)
-* **`status = completed`** (bzw. `in-progress`/`amended` je nach Lebenszyklus)
-* **`subject`-Referenz** auf den Patienten
-* **`authored`** Timestamp gesetzt
-* **`text.div`** narrative mit `xml:lang`/`lang` wenn `Resource.language` gesetzt (siehe Best-Practice-Block unten)
+* **`meta.profile`** set on the response — `mii-pr-pro-questionnaire-response|2026.7.0`
+* **`questionnaire` reference** with version — `…/mii-qst-pro-promis-16|2026.7.0`
+* **`linkId`s** of the answer items match **exactly** those defined in the questionnaire
+* **Coded answers** with system and code from the item's `answerValueSet` (for the PROMIS value sets the LA codes are documented inline — see the item tables on [PROMIS-16](PROMIS-16.md))
+* **Item order** follows the questionnaire, not your own grouping (see below — this one is easy to get wrong)
+* **`status = completed`** (or `in-progress` / `amended`, depending on the lifecycle)
+* **`subject`** reference to the patient
+* **`authored`** timestamp set
+* **`text.div`** narrative with `xml:lang` / `lang` when `Resource.language` is set (see the best-practice block below)
 
-## Severity-Interpretation
+## Reading severities
 
 | | | |
 | :--- | :--- | :--- |
-| `error` | FHIR-Konformanz verletzt | ❌ Muss behoben werden |
-| `warning` | FHIR-Best-Practice verletzt | ⚠️ Fall-by-Fall |
-| `information`/`note` | Hinweis (z.B. Terminologie-Server konnte Code nicht auflösen) | ✓ meist OK |
+| `error` | FHIR conformance violated | ❌ must be fixed |
+| `warning` | FHIR best practice violated | ⚠️ case by case |
+| `information`/`note` | informational, e.g. the terminology server could not resolve a code | ✓ usually fine |
 
-### Häufige Warnings — wann ignorieren, wann nicht
+### Common warnings — when to ignore them and when not to
 
 | | |
 | :--- | :--- |
-| `dom-6: A resource should have narrative for robust management` | `text.div`-Element ergänzen (FHIR Best Practice). Bei reinen Maschine-zu-Maschine-Bundles oft ignorierbar |
-| `Die Ressource hat eine language, aber das XHTML hat kein lang Tag` | wenn`Resource.language`gesetzt, dann auch`xml:lang="de-DE" lang="de-DE"`am`<div>`-Element |
-| `Wrong Display Name 'X' for http://loinc.org#LAxxx-y` | Display weicht von der LOINC-Bezeichnung ab (z.B. deutsche Übersetzung). Bewusst akzeptabel, bei strict-display-Servern via Setting deaktivierbar |
-| `Canonical URL ... kann nicht aufgelöst werden` | Server hat den referenzierten Questionnaire nicht — entweder`-ig`-Parameter ergänzen oder Server-Bestückung prüfen (siehe[Bereitstellung](Bereitstellung.md)) |
+| `dom-6: A resource should have narrative for robust management` | add a`text.div`element (FHIR best practice). Often ignorable for pure machine-to-machine bundles |
+| `The resource has a language, but the XHTML has no lang tag` | if`Resource.language`is set, also set`xml:lang="de" lang="de"`on the`<div>`element |
+| `Wrong Display Name 'X' for http://loinc.org#LAxxx-y` | the display differs from the LOINC designation, e.g. a German translation. Deliberately acceptable; can be switched off on strict-display servers |
+| `Canonical URL … cannot be resolved` | the server does not have the referenced questionnaire — either add an`-ig`parameter or check how the server was populated (see[Distribution](Bereitstellung.md)) |
 
-## Validierte Beispiele als Referenz
+## Validated examples for reference
 
-Drei vollständige Beispiele in diesem IG, alle mit **0 errors, 0 warnings**:
+The three original examples, all with **0 errors, 0 warnings**:
 
 * [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md)
 * [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md)
-* [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) (für den Beispiel-Questionnaire)
+* [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) (for the example questionnaire)
 
-Reproduzieren:
+Plus the **AN data set** — five responses and two score observations from a single assessment session with the same patient (overview on the [AN](AN.md) page): [ERQ6Response](QuestionnaireResponse-ERQ6Response.md), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md), [SSUK2Response](QuestionnaireResponse-SSUK2Response.md), [ACEResponse](QuestionnaireResponse-ACEResponse.md), and [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.md) and [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.md).
+
+These seven are checked at **0 errors** but are not warning-free, and both remaining warnings are known and accepted:
+
+* `dom-6` (missing narrative) on all seven — listed as ignorable in the table above
+* a `java.net.SocketTimeoutException` during the UCUM check of the two `valueQuantity` values — a network timeout against the terminology server, not a finding about the resource
+
+**One real defect found while validating:** the ERQ-S example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: **"structural error: elements in the wrong order"**. A `QuestionnaireResponse` must list its items in the **order of the questionnaire**; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.
+
+Reproduce:
 
 ```
 for f in input/examples/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
-    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
     -ig hl7.fhir.uv.sdc#3.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
@@ -128,9 +138,9 @@ done
 
 ```
 
-## Wozu Validierung in der Pipeline?
+## Why validate in the pipeline at all?
 
-Validierung prüft strukturelle und Code-Bindungs-Konformanz, **nicht** klinische/inhaltliche Plausibilität. Sie schützt aber sehr zuverlässig vor den häufigsten Mapping-Fehlern: falsche LA-Codes (z.B. Frequency- vs Intensity-Skala verwechselt), fehlende Pflicht-Items, Versions-Mismatch zwischen `questionnaire`-Referenz und Server-Stand.
+Validation checks structural and code-binding conformance, **not** clinical plausibility. What it does reliably catch are the commonest mapping mistakes: wrong LA codes (a frequency scale confused with an intensity scale), missing required items, and a version mismatch between the `questionnaire` reference and what the server actually holds.
 
-Für den [50-First-Patients Pilot](Implementation.md): **jeder Sender validiert lokal bevor er sendet**, jeder Empfänger validiert nochmal beim Eingang. Das fängt 95% der Drift-Probleme bei wenig Aufwand.
+For the [50 First Patients pilot](Implementation.md) the rule is simple: **every sender validates locally before sending**, and every recipient validates again on arrival. That catches the large majority of drift problems for very little effort.
 

@@ -1,4 +1,4 @@
-# Release Notes - PCOR-MII Implementation Guide v0.2.0
+# Release Notes - PCOR-MII Implementation Guide v0.3.0
 
 ## Release Notes
 
@@ -12,24 +12,32 @@ This IG follows [Semantic Versioning 2.0.0](https://semver.org/):
 * **MINOR** — new questionnaires, items, examples, or backward-compatible improvements
 * **PATCH** — fixes to errors in normative content (wrong codes, incorrect constraints)
 
-Versions `0.x.y` indicate initial development — the specification is not yet stable. Version `1.0.0` will mark the first stable release after expert review and formal publication.
+Versions `0.x.y` indicate early development — the specification is not yet stable. Version `1.0.0` will mark the first stable release after expert review and formal publication.
 
-Each change is tagged with one of the following categories:
+Every change is tagged with one of the following categories:
 
 * **`feature`** — new content (questionnaires, items, ValueSets, examples)
 * **`improve`** — refinement or extension of existing normative content
 * **`fix`** — correction of errors in normative content
-* **`documentation`** — documentation changes with no impact on normative aspects
+* **`documentation`** — documentation changes with no effect on normative aspects
+
+Versions are maintained in one place, `input/fsh/rulesets/version.fsh`, and apply to every resource: questionnaires, CodeSystems, ValueSets, ObservationDefinitions and the ConceptMap all carry the IG version. Responses reference their questionnaire as a versioned canonical. Data instances — `Observation`, `Patient`, `QuestionnaireResponse` — deliberately carry no version, since they are not definitional artefacts.
 
 -------
 
-### v0.1.0 (2026-06-04) — Initial Draft
+### Releases
 
-**`feature`** Initial setup of the PCOR-MII Implementation Guide with BIH corporate design template, multi-language support (German default, English translation), and CI/CD pipeline (GitHub Actions → GitHub Pages)
+| | | |
+| :--- | :--- | :--- |
+| **0.3.0** | 2026-09-30 | AN battery, design decisions, item mapping |
+| **0.2.0** | 2026-08-05 | PHQ family |
+| **0.1.0** | 2026-06-04 | Initial draft |
 
-**`feature`** Example questionnaire `PcorExampleQuestionnaire` as a template (item types `group`, `choice`, `date`, `string`)
+**The detailed change log is maintained in German only.** Switch the page language to German to read it: each release lists its individual changes with the category tags above, including the reasoning behind design decisions and the source verification behind each instrument. Translating that log has been deliberately skipped — it grows with every release, and a lagging translation of a change log is more misleading than none.
 
-**`documentation`** Page structure: Home, Questionnaires, Implementation (QuestionnaireResponse, population, extraction), Release Notes
+What an English-speaking reader most likely wants instead is on these pages:
 
-**`documentation`** CC-BY-4.0 license
+* [Design Decisions](Designentscheidungen.md) — ADR-001 to ADR-011, the architectural decisions and the open rights questions
+* [Instrument overview](Instrumente.md) — which instruments are covered, where each resource is maintained, and the licence tier for each
+* [Implementation](Implementation.md) and [Validation](Validierung.md) — how to use and check the definitions
 

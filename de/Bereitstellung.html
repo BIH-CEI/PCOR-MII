@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Bereitstellung - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Bereitstellung - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"13"}
-    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,13 +321,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge English" src="assets/images/lang-de.png"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge de" src="assets/images/lang-de.png"/>Deutsch</div>
 
-    <div><a href="../en/Bereitstellung.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/Bereitstellung.html"><img class="flag" src="assets/images/lang-en.png" alt="Flagge en"/>English</a></div>
 
   </div>
 </div>
@@ -300,7 +351,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">Ende</a>
 
-          | <a href="Release-Notes.html">weiter &gt;</a>
+          | <a href="Designentscheidungen.html">weiter &gt;</a>
 
           </span>
 
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Bereitstellung</h2>
   
 
@@ -392,7 +443,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundle gegen <code class="language-plaintext highlighter-rouge">$validate</code> prüfen, Definitionen ad-hoc per FHIR-API ziehen.</p>
 
 <pre><code class="language-mermaid">flowchart LR
-    SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.4.1"| HAPI
+    SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.7.0"| HAPI
     REPO[("PCOR-MII Repo")] --&gt;|"als Package"| HAPI
     HAPI_BASE["hapiproject/hapi:v8.4.0"] --&gt; HAPI["PCOR-MII Container&lt;br/&gt;localhost:8097"]
     HAPI --&gt;|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
@@ -413,13 +464,13 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir <span class="nb">install </span>de.medizininformatikinitiative.kerndatensatz.pros 2026.4.1
-<span class="c"># entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1/</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir <span class="nb">install </span>de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
+<span class="c"># entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/</span>
 </code></pre></div></div>
 
 <p>Beispiel <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>:</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
-  <span class="na">de.medizininformatikinitiative.kerndatensatz.pros</span><span class="pi">:</span> <span class="s">2026.4.1</span>
+  <span class="na">de.medizininformatikinitiative.kerndatensatz.pros</span><span class="pi">:</span> <span class="s">2026.7.0</span>
   <span class="na">hl7.fhir.uv.sdc</span><span class="pi">:</span> <span class="s">3.0.0</span>
 </code></pre></div></div>
 
@@ -451,7 +502,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>Auf Standard-HAPI: <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code> mit neuer <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> <strong>überschreibt</strong> den existierenden Eintrag. Eine ältere QR mit <code class="language-plaintext highlighter-rouge">…|2026.3.0</code>-Referenz ist danach nicht mehr sauber resolvbar — pro <code class="language-plaintext highlighter-rouge">id</code> koexistiert nur eine Version.</p>
 
-<p>Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.4.1) durchgehend. Bei späterer Migration: Versions-Suffix in der <code class="language-plaintext highlighter-rouge">id</code> (z.B. <code class="language-plaintext highlighter-rouge">promis-29-v2026-4-1</code>) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (<code class="language-plaintext highlighter-rouge">…|2026.4.1</code>).</p>
+<p>Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. Bei späterer Migration: Versions-Suffix in der <code class="language-plaintext highlighter-rouge">id</code> (z.B. <code class="language-plaintext highlighter-rouge">promis-29-v2026-4-1</code>) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (<code class="language-plaintext highlighter-rouge">…|2026.7.0</code>).</p>
 
 <h2 id="pilot-datenfluss-50-first-patients">Pilot-Datenfluss "50 First Patients"</h2>
 
@@ -520,7 +571,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Release-Notes.html">weiter ></a>
+                <a href="Designentscheidungen.html">weiter ></a>
 
               </td>
             </tr>
@@ -534,10 +585,10 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

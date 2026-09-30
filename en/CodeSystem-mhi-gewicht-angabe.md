@@ -1,4 +1,4 @@
-# MHI Gewichtsangabe (Codes) - PCOR-MII Implementation Guide v0.2.0
+# MHI Gewichtsangabe (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: MHI Gewichtsangabe (Codes) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "mhi-gewicht-angabe",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "MhiGewichtAngabeCS",
   "title" : "MHI Gewichtsangabe (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

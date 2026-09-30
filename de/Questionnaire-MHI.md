@@ -1,4 +1,4 @@
-# MHI — Medical History - PCOR-MII Implementation Guide v0.2.0
+# MHI — Medical History - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: MHI — Medical History (Experimentell) 
 
@@ -13,7 +13,7 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
 
 ### Antworten zu diesem Fragebogen
 
-* [Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History).](QuestionnaireResponse-MHIResponse.md)
+Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in diesem IG definiert.
 
 
 
@@ -26,8 +26,17 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
+  "language" : "de",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "MHI",
   "title" : "MHI — Medical History",
   "status" : "draft",
@@ -50,6 +59,7 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       "display" : "Germany"
     }]
   }],
+  "copyright" : "Die Items `GIPS13`, `GIPS56a`, `GIPS56b1`–`GIPS56b4`, `GIPS57a`, `GIPS57b` und `GIPS58` stammen aus dem GI-PS (doi:10.13109/zptm.2023.69.1.56). Die Eigentums-, Urheber-, Weitergabe- und Veröffentlichungsrechte verbleiben bei den jeweiligen Testautor:innen; das GI-PS oder Teile davon dürfen ohne deren Zustimmung nicht modifiziert, übersetzt oder an Dritte weitergegeben werden. Für PCOR-MII ist diese Zustimmung noch nicht dokumentiert — siehe Designentscheidungen. Die Verantwortung für Durchführung, Berechnung und Interpretation der Befragungsergebnisse liegt bei den Nutzenden. Der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
   "item" : [{
     "linkId" : "anthropometrie",
     "text" : "Körpermaße",
@@ -68,6 +78,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "Q_WB151a",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "Q_WB151a"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "29463-7",
         "display" : "Körpergewicht"
@@ -98,6 +112,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "Q_WB152a",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "Q_WB152a"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "8302-2",
         "display" : "Körpergröße"
@@ -121,6 +139,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     "type" : "group",
     "item" : [{
       "linkId" : "CPCOR-DIAG",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "CPCOR-DIAG"
+      }],
       "text" : "Zu welcher Gruppe würden Sie sich zuordnen?",
       "type" : "choice",
       "repeats" : true,
@@ -128,11 +150,19 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "CPCOR_ONSET",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "CPCOR_ONSET"
+      }],
       "text" : "Bitte geben Sie an, in welchem Jahr Sie Ihre Diagnose erhalten haben",
       "type" : "integer"
     },
     {
       "linkId" : "GIPS13",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS13"
+      }],
       "text" : "Welche chronischen Erkrankungen haben Sie?",
       "type" : "choice",
       "repeats" : true,
@@ -146,6 +176,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     "item" : [{
       "linkId" : "GIPS57a",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS57a"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "72166-2",
         "display" : "Raucherstatus"
@@ -157,6 +191,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "GIPS57b",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS57b"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "64218-1",
         "display" : "How many cigarettes do you smoke per day now [PhenX]"
@@ -177,6 +215,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "GIPS56a",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS56a"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "11331-6",
         "display" : "History of Alcohol use"
@@ -187,6 +229,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "GIPS56b1",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS56b1"
+      }],
       "text" : "Haben Sie jemals daran gedacht, weniger zu trinken? (CAGE 1)",
       "type" : "choice",
       "enableWhen" : [{
@@ -202,6 +248,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "GIPS56b2",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS56b2"
+      }],
       "text" : "Haben Sie sich schon einmal darüber geärgert, dass Sie von anderen wegen Ihres Alkoholkonsums kritisiert wurden? (CAGE 2)",
       "type" : "choice",
       "enableWhen" : [{
@@ -217,6 +267,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "GIPS56b3",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS56b3"
+      }],
       "text" : "Haben Sie sich jemals wegen Ihres Trinkens schuldig gefühlt? (CAGE 3)",
       "type" : "choice",
       "enableWhen" : [{
@@ -232,6 +286,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "GIPS56b4",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS56b4"
+      }],
       "text" : "Haben Sie jemals morgens als erstes Alkohol getrunken, um sich nervlich zu stabilisieren oder einen Kater loszuwerden? (CAGE 4 — Eye-opener)",
       "type" : "choice",
       "enableWhen" : [{
@@ -248,6 +306,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "GIPS58",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "GIPS58"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "96873-5",
         "display" : "Illegal or recreational drug(s) used in past 3 months"
@@ -263,12 +325,20 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     "type" : "group",
     "item" : [{
       "linkId" : "medication1",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "medication1"
+      }],
       "text" : "Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
     },
     {
       "linkId" : "medication_text",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "medication_text"
+      }],
       "text" : "Bitte nennen Sie alle Medikamente, die Sie aktuell regelmäßig oder bei Bedarf einnehmen.",
       "type" : "text",
       "enableWhen" : [{
@@ -283,6 +353,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "MEDI_01",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "MEDI_01"
+      }],
       "text" : "Wie viele Medikamente nehmen Sie insgesamt momentan ein?",
       "type" : "integer",
       "enableWhen" : [{
@@ -310,27 +384,47 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       }],
       "item" : [{
         "linkId" : "medi_02_name_01",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_name_01"
+        }],
         "text" : "Name des Medikaments",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_onset_01",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_onset_01"
+        }],
         "text" : "Seit wann nehmen Sie dieses Medikament ein?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_dose_01",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_dose_01"
+        }],
         "text" : "Falls bekannt: Wie ist die Dosierung dieses Medikaments?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_time_01",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_time_01"
+        }],
         "text" : "Wann nehmen Sie dieses Medikament ein?",
         "type" : "choice",
         "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs"
       },
       {
         "linkId" : "medi_02_frequency_01",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_frequency_01"
+        }],
         "text" : "Wie häufig nehmen Sie dieses Medikament pro Woche ein?",
         "type" : "string"
       }]
@@ -350,27 +444,47 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       }],
       "item" : [{
         "linkId" : "medi_02_name_02",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_name_02"
+        }],
         "text" : "Name des Medikaments",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_onset_02",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_onset_02"
+        }],
         "text" : "Seit wann nehmen Sie dieses Medikament ein?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_dose_02",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_dose_02"
+        }],
         "text" : "Falls bekannt: Wie ist die Dosierung dieses Medikaments?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_time_02",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_time_02"
+        }],
         "text" : "Wann nehmen Sie dieses Medikament ein?",
         "type" : "choice",
         "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs"
       },
       {
         "linkId" : "medi_02_frequency_02",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_frequency_02"
+        }],
         "text" : "Wie häufig nehmen Sie dieses Medikament pro Woche ein?",
         "type" : "string"
       }]
@@ -390,27 +504,47 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       }],
       "item" : [{
         "linkId" : "medi_02_name_03",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_name_03"
+        }],
         "text" : "Name des Medikaments",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_onset_03",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_onset_03"
+        }],
         "text" : "Seit wann nehmen Sie dieses Medikament ein?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_dose_03",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_dose_03"
+        }],
         "text" : "Falls bekannt: Wie ist die Dosierung dieses Medikaments?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_time_03",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_time_03"
+        }],
         "text" : "Wann nehmen Sie dieses Medikament ein?",
         "type" : "choice",
         "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs"
       },
       {
         "linkId" : "medi_02_frequency_03",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_frequency_03"
+        }],
         "text" : "Wie häufig nehmen Sie dieses Medikament pro Woche ein?",
         "type" : "string"
       }]
@@ -430,27 +564,47 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       }],
       "item" : [{
         "linkId" : "medi_02_name_04",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_name_04"
+        }],
         "text" : "Name des Medikaments",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_onset_04",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_onset_04"
+        }],
         "text" : "Seit wann nehmen Sie dieses Medikament ein?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_dose_04",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_dose_04"
+        }],
         "text" : "Falls bekannt: Wie ist die Dosierung dieses Medikaments?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_time_04",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_time_04"
+        }],
         "text" : "Wann nehmen Sie dieses Medikament ein?",
         "type" : "choice",
         "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs"
       },
       {
         "linkId" : "medi_02_frequency_04",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_frequency_04"
+        }],
         "text" : "Wie häufig nehmen Sie dieses Medikament pro Woche ein?",
         "type" : "string"
       }]
@@ -470,27 +624,47 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
       }],
       "item" : [{
         "linkId" : "medi_02_name_05",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_name_05"
+        }],
         "text" : "Name des Medikaments",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_onset_05",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_onset_05"
+        }],
         "text" : "Seit wann nehmen Sie dieses Medikament ein?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_dose_05",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_dose_05"
+        }],
         "text" : "Falls bekannt: Wie ist die Dosierung dieses Medikaments?",
         "type" : "string"
       },
       {
         "linkId" : "medi_02_time_05",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_time_05"
+        }],
         "text" : "Wann nehmen Sie dieses Medikament ein?",
         "type" : "choice",
         "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs"
       },
       {
         "linkId" : "medi_02_frequency_05",
+        "code" : [{
+          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+          "code" : "medi_02_frequency_05"
+        }],
         "text" : "Wie häufig nehmen Sie dieses Medikament pro Woche ein?",
         "type" : "string"
       }]
@@ -503,6 +677,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     "item" : [{
       "linkId" : "weight_outpatient_1",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "weight_outpatient_1"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "29463-7",
         "display" : "Körpergewicht"
@@ -512,6 +690,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "weight_outpatient_2",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "weight_outpatient_2"
+      }],
       "text" : "Wie haben Sie das oben genannte Gewicht ermittelt?",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-gewichtsmethode-vs"
@@ -519,6 +701,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "weight_inpatient",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "weight_inpatient"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "29463-7",
         "display" : "Körpergewicht"
@@ -529,6 +715,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     {
       "linkId" : "weight_discharge",
       "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "weight_discharge"
+      },
+      {
         "system" : "http://loinc.org",
         "code" : "29463-7",
         "display" : "Körpergewicht"
@@ -538,6 +728,10 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
     },
     {
       "linkId" : "AN_subtyp",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "AN_subtyp"
+      }],
       "text" : "Welchem Subtyp der Anorexia nervosa würden Sie sich zuordnen?",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-an-subtyp-vs"

@@ -1,4 +1,4 @@
-# DEM Häufigkeit (5-stufig) (Codes) - PCOR-MII Implementation Guide v0.2.0
+# DEM Häufigkeit (5-stufig) (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Häufigkeit (5-stufig) (Codes) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-haeufigkeit-5",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemHaeufigkeit5CS",
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,23 +49,43 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 5,
   "concept" : [{
     "code" : "staendig",
-    "display" : "Ständig"
+    "display" : "Always",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ständig"
+    }]
   },
   {
     "code" : "meistens",
-    "display" : "Meistens"
+    "display" : "Often",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Meistens"
+    }]
   },
   {
     "code" : "manchmal",
-    "display" : "Manchmal"
+    "display" : "Sometimes",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Manchmal"
+    }]
   },
   {
     "code" : "selten",
-    "display" : "Selten"
+    "display" : "Rarely",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Selten"
+    }]
   },
   {
     "code" : "nie",
-    "display" : "Nie"
+    "display" : "Never",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nie"
+    }]
   }]
 }
 

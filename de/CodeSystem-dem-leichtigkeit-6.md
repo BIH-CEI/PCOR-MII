@@ -1,4 +1,4 @@
-# DEM Leichtigkeit Unterstützung (6-stufig) (Codes) - PCOR-MII Implementation Guide v0.2.0
+# DEM Leichtigkeit Unterstützung (6-stufig) (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Leichtigkeit Unterstützung (6-stufig) (Codes) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-leichtigkeit-6",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemLeichtigkeit6CS",
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,27 +49,51 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "count" : 6,
   "concept" : [{
     "code" : "sehr-einfach",
-    "display" : "Sehr einfach"
+    "display" : "Very easy",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Sehr einfach"
+    }]
   },
   {
     "code" : "einfach",
-    "display" : "Einfach"
+    "display" : "Easy",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Einfach"
+    }]
   },
   {
     "code" : "weder-noch",
-    "display" : "Weder einfach noch schwierig"
+    "display" : "Neither easy nor difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Weder einfach noch schwierig"
+    }]
   },
   {
     "code" : "schwierig",
-    "display" : "Schwierig"
+    "display" : "Difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Schwierig"
+    }]
   },
   {
     "code" : "sehr-schwierig",
-    "display" : "Sehr schwierig"
+    "display" : "Very difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Sehr schwierig"
+    }]
   },
   {
     "code" : "nicht-zutreffend",
-    "display" : "Nicht zutreffend"
+    "display" : "Not applicable",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nicht zutreffend"
+    }]
   }]
 }
 

@@ -1,4 +1,4 @@
-# PCOR Beispiel-Fragebogen - PCOR-MII Implementation Guide v0.2.0
+# PCOR Beispiel-Fragebogen - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: PCOR Beispiel-Fragebogen (Experimentell) 
 
@@ -26,9 +26,17 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"]
   },
-  "language" : "de-DE",
+  "language" : "de",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "PcorExampleQuestionnaire",
   "title" : "PCOR Beispiel-Fragebogen",
   "status" : "draft",

@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Startseite - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Startseite - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Startseite</h2>
   
 
@@ -335,7 +386,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii|0.2.0"/></span>
+      <span class="copy-text">0.3.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii|0.3.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
@@ -360,7 +411,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             as of 
-2026-09-02
+2026-09-30
 
           
         
@@ -392,49 +443,56 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#objective-of-the-implementation-guide" id="markdown-toc-objective-of-the-implementation-guide">Objective of the Implementation Guide</a></li>
-  <li><a href="#target-groups" id="markdown-toc-target-groups">Target Groups</a></li>
-  <li><a href="#structure-of-the-implementation-guide" id="markdown-toc-structure-of-the-implementation-guide">Structure of the Implementation Guide</a></li>
+  <li><a href="#purpose-of-this-implementation-guide" id="markdown-toc-purpose-of-this-implementation-guide">Purpose of this Implementation Guide</a></li>
+  <li><a href="#audience" id="markdown-toc-audience">Audience</a></li>
+  <li><a href="#how-this-guide-is-organised" id="markdown-toc-how-this-guide-is-organised">How this guide is organised</a></li>
+  <li><a href="#a-note-on-language" id="markdown-toc-a-note-on-language">A note on language</a></li>
   <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
 </ul>
 
 </div>
-<p>The PCOR-MII Implementation Guide defines standardized <strong>FHIR R4 Questionnaires</strong> for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the <a href="https://www.medizininformatik-initiative.de/">German Medical Informatics Initiative (MII)</a> and explains their application.</p>
+<p>The PCOR-MII Implementation Guide defines standardised <strong>FHIR R4 Questionnaires</strong> for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the German <a href="https://www.medizininformatik-initiative.de/">Medical Informatics Initiative (MII)</a>, and explains how to use them.</p>
 
-<h3 id="objective-of-the-implementation-guide">Objective of the Implementation Guide</h3>
+<h3 id="purpose-of-this-implementation-guide">Purpose of this Implementation Guide</h3>
 
-<p>This IG provides uniform, interoperable questionnaires that allow patient-reported information to be collected in a structured, cross-site comparable, and machine-readable way. It defines:</p>
+<p>This IG provides uniform, interoperable questionnaires with which patient-reported information can be captured in a structured, cross-site comparable and machine-readable way. It defines:</p>
 
 <ul>
-  <li><strong>Questionnaires</strong> – FHIR questionnaire definitions with unique <code class="language-plaintext highlighter-rouge">linkId</code>s, item types, and answer options</li>
-  <li><strong>Application guidance</strong> – how the questionnaires are filled in (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>), pre-populated, and evaluated</li>
-  <li><strong>Terminology bindings</strong> – where required, links to LOINC, SNOMED CT, and project-specific CodeSystems/ValueSets</li>
+  <li><strong>Questionnaires</strong> — FHIR questionnaire definitions with stable <code class="language-plaintext highlighter-rouge">linkId</code>s, item types and answer options</li>
+  <li><strong>Implementation guidance</strong> — how the questionnaires are completed (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>), pre-populated and evaluated</li>
+  <li><strong>Terminology bindings</strong> — where required, bindings to LOINC, SNOMED CT and project-specific CodeSystems and ValueSets</li>
 </ul>
 
-<h3 id="target-groups">Target Groups</h3>
+<h3 id="audience">Audience</h3>
 
-<p><strong>Primary target groups:</strong></p>
+<p><strong>Primary:</strong></p>
 <ul>
-  <li>Software developers and system integrators embedding questionnaires into research and care systems</li>
-  <li>Data Integration Centers of the MII sites</li>
+  <li>Software developers and system integrators embedding questionnaires into study and care systems</li>
+  <li>Data Integration Centres (DIZ) at the MII sites</li>
 </ul>
 
-<p><strong>Secondary target groups:</strong></p>
+<p><strong>Secondary:</strong></p>
 <ul>
-  <li>Researchers evaluating patient-reported outcomes</li>
-  <li>Vendors of ePRO / study software</li>
+  <li>Researchers analysing patient-reported outcomes</li>
+  <li>Vendors of ePRO and study software</li>
 </ul>
 
-<h3 id="structure-of-the-implementation-guide">Structure of the Implementation Guide</h3>
+<h3 id="how-this-guide-is-organised">How this guide is organised</h3>
 
-<p>Accessible via the menu bar:</p>
+<p>Reachable from the menu bar:</p>
 
 <ol>
-  <li><strong>Questionnaires</strong> – overview of the defined questionnaires and their structure</li>
-  <li><strong>Implementation</strong> – detailed description of how the questionnaires are filled in and evaluated</li>
-  <li><strong>Release Notes</strong> – versioning and change history</li>
-  <li><strong>Artifacts</strong> – machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)</li>
+  <li><strong>Questionnaires</strong> — the defined questionnaires and how they are built</li>
+  <li><strong>Implementation</strong> — how the questionnaires are completed and evaluated</li>
+  <li><strong>Release Notes</strong> — versioning and change history</li>
+  <li><strong>Artifacts</strong> — the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)</li>
 </ol>
+
+<h3 id="a-note-on-language">A note on language</h3>
+
+<p>German is the <strong>default language</strong> of this guide, because its primary audience are the German MII sites. English pages are maintained as a translation; where a translation does not yet exist, the German page is shown instead.</p>
+
+<p>That split also runs through the questionnaires themselves, and there it is a deliberate modelling decision rather than a matter of convenience: where an instrument's original is English, the English wording is the primary <code class="language-plaintext highlighter-rouge">item.text</code> and the German wording hangs off it as a <code class="language-plaintext highlighter-rouge">translation</code> extension. Where an instrument was developed in German, German is primary. The reasoning is recorded in <a href="Designentscheidungen.html">Design Decisions</a>, ADR-005 and ADR-010.</p>
 
 <h3 id="contact">Contact</h3>
 
@@ -492,10 +550,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

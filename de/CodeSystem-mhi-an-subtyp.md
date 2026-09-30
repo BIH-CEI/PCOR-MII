@@ -1,4 +1,4 @@
-# MHI Anorexia-nervosa-Subtyp (Codes) - PCOR-MII Implementation Guide v0.2.0
+# MHI Anorexia-nervosa-Subtyp (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: MHI Anorexia-nervosa-Subtyp (Codes) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "mhi-an-subtyp",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "MhiAnSubtypCS",
   "title" : "MHI Anorexia-nervosa-Subtyp (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

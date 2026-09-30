@@ -1,4 +1,4 @@
-# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.2.0
+# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire (Experimentell) 
 
@@ -26,8 +26,17 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
+  "language" : "de",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "GSLTPAQ",
   "title" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
   "status" : "draft",
@@ -69,6 +78,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_01_w",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_01_w"
+    }],
     "text" : "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport",
     "type" : "integer"
   },
@@ -86,6 +99,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_01_m",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_01_m"
+    }],
     "text" : "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport",
     "type" : "integer"
   },
@@ -103,6 +120,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_02_w",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_02_w"
+    }],
     "text" : "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen",
     "type" : "integer"
   },
@@ -120,6 +141,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_02_m",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_02_m"
+    }],
     "text" : "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen",
     "type" : "integer"
   },
@@ -137,6 +162,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_03_w",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_03_w"
+    }],
     "text" : "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln",
     "type" : "integer"
   },
@@ -154,6 +183,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "GSLTPAQ_03_m",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "GSLTPAQ_03_m"
+    }],
     "text" : "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln",
     "type" : "integer"
   },

@@ -1,4 +1,4 @@
-# WAI Antwortskala 5-stufig - PCOR-MII Implementation Guide v0.2.0
+# WAI Antwortskala 5-stufig - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: WAI Antwortskala 5-stufig (Experimentell) 
 
@@ -28,12 +28,12 @@ Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wer
   "resourceType" : "ValueSet",
   "id" : "wai-skala-5-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "WaiSkala5VS",
   "title" : "WAI Antwortskala 5-stufig",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

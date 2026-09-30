@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Release Notes - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Release Notes - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14"}
-    h3,h4,h5,h6{--heading-prefix:"14"}</style>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -234,7 +240,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -244,6 +271,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -255,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -270,7 +321,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
@@ -296,7 +347,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Bereitstellung.html">&lt; prev</a> | 
+            <a href="Designentscheidungen.html">&lt; prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -322,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Release Notes</h2>
   
 
@@ -344,7 +395,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#versioning" id="markdown-toc-versioning">Versioning</a></li>
-  <li><a href="#v010-2026-06-04--initial-draft" id="markdown-toc-v010-2026-06-04--initial-draft">v0.1.0 (2026-06-04) — Initial Draft</a></li>
+  <li><a href="#releases" id="markdown-toc-releases">Releases</a></li>
 </ul>
 
 </div>
@@ -358,28 +409,59 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>PATCH</strong> — fixes to errors in normative content (wrong codes, incorrect constraints)</li>
 </ul>
 
-<p>Versions <code class="language-plaintext highlighter-rouge">0.x.y</code> indicate initial development — the specification is not yet stable. Version <code class="language-plaintext highlighter-rouge">1.0.0</code> will mark the first stable release after expert review and formal publication.</p>
+<p>Versions <code class="language-plaintext highlighter-rouge">0.x.y</code> indicate early development — the specification is not yet stable. Version <code class="language-plaintext highlighter-rouge">1.0.0</code> will mark the first stable release after expert review and formal publication.</p>
 
-<p>Each change is tagged with one of the following categories:</p>
+<p>Every change is tagged with one of the following categories:</p>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> — new content (questionnaires, items, ValueSets, examples)</li>
   <li><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> — refinement or extension of existing normative content</li>
   <li><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> — correction of errors in normative content</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> — documentation changes with no impact on normative aspects</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> — documentation changes with no effect on normative aspects</li>
 </ul>
+
+<p>Versions are maintained in one place, <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/version.fsh</code>, and apply to every resource: questionnaires, CodeSystems, ValueSets, ObservationDefinitions and the ConceptMap all carry the IG version. Responses reference their questionnaire as a versioned canonical. Data instances — <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> — deliberately carry no version, since they are not definitional artefacts.</p>
 
 <hr />
 
-<h3 id="v010-2026-06-04--initial-draft">v0.1.0 (2026-06-04) — Initial Draft</h3>
+<h3 id="releases">Releases</h3>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Initial setup of the PCOR-MII Implementation Guide with BIH corporate design template, multi-language support (German default, English translation), and CI/CD pipeline (GitHub Actions → GitHub Pages)</p>
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Theme</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>0.3.0</strong></td>
+      <td>2026-09-30</td>
+      <td>AN battery, design decisions, item mapping</td>
+    </tr>
+    <tr>
+      <td><strong>0.2.0</strong></td>
+      <td>2026-08-05</td>
+      <td>PHQ family</td>
+    </tr>
+    <tr>
+      <td><strong>0.1.0</strong></td>
+      <td>2026-06-04</td>
+      <td>Initial draft</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Example questionnaire <code class="language-plaintext highlighter-rouge">PcorExampleQuestionnaire</code> as a template (item types <code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">choice</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">string</code>)</p>
+<p><strong>The detailed change log is maintained in German only.</strong> Switch the page language to German to read it: each release lists its individual changes with the category tags above, including the reasoning behind design decisions and the source verification behind each instrument. Translating that log has been deliberately skipped — it grows with every release, and a lagging translation of a change log is more misleading than none.</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Page structure: Home, Questionnaires, Implementation (QuestionnaireResponse, population, extraction), Release Notes</p>
+<p>What an English-speaking reader most likely wants instead is on these pages:</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> CC-BY-4.0 license</p>
+<ul>
+  <li><a href="Designentscheidungen.html">Design Decisions</a> — ADR-001 to ADR-011, the architectural decisions and the open rights questions</li>
+  <li><a href="Instrumente.html">Instrument overview</a> — which instruments are covered, where each resource is maintained, and the licence tier for each</li>
+  <li><a href="Implementation.html">Implementation</a> and <a href="Validierung.html">Validation</a> — how to use and check the definitions</li>
+</ul>
 
 
 
@@ -407,7 +489,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Bereitstellung.html">&lt; prev</a>
+                <a href="Designentscheidungen.html">&lt; prev</a>
 
               </td>
               <td style="text-align:center">
@@ -429,10 +511,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

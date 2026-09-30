@@ -1,4 +1,4 @@
-# DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) - PCOR-MII Implementation Guide v0.2.0
+# DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) (Experimental) 
 
@@ -24,12 +24,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-antwort",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemAntwortCS",
   "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,19 +51,35 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 4,
   "concept" : [{
     "code" : "ja",
-    "display" : "Ja"
+    "display" : "Ja",
+    "designation" : [{
+      "language" : "en",
+      "value" : "Yes"
+    }]
   },
   {
     "code" : "nein",
-    "display" : "Nein"
+    "display" : "Nein",
+    "designation" : [{
+      "language" : "en",
+      "value" : "No"
+    }]
   },
   {
     "code" : "nicht-zutreffend",
-    "display" : "Nicht zutreffend"
+    "display" : "Nicht zutreffend",
+    "designation" : [{
+      "language" : "en",
+      "value" : "Not applicable"
+    }]
   },
   {
     "code" : "keine-angabe",
-    "display" : "Möchte ich nicht sagen"
+    "display" : "Möchte ich nicht sagen",
+    "designation" : [{
+      "language" : "en",
+      "value" : "Prefer not to say"
+    }]
   }]
 }
 

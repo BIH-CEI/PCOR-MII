@@ -1,4 +1,4 @@
-# DEM Urbanizität (Codes) - PCOR-MII Implementation Guide v0.2.0
+# DEM Urbanizität (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Urbanizität (Codes) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-urbanizitaet",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemUrbanizitaetCS",
   "title" : "DEM Urbanizität (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,19 +49,35 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 4,
   "concept" : [{
     "code" : "stadt",
-    "display" : "Stadt"
+    "display" : "City",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Stadt"
+    }]
   },
   {
     "code" : "dorf-vorort",
-    "display" : "Dorf oder Vorort"
+    "display" : "Town or suburb",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Dorf oder Vorort"
+    }]
   },
   {
     "code" : "laendlich",
-    "display" : "Ländliche Region"
+    "display" : "Rural area",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ländliche Region"
+    }]
   },
   {
     "code" : "weiss-nicht",
-    "display" : "Ich weiss es nicht"
+    "display" : "Don't know",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ich weiss es nicht"
+    }]
   }]
 }
 

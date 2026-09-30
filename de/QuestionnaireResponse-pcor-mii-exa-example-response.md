@@ -1,4 +1,4 @@
-# pcor-mii-exa-example-response - PCOR-MII Implementation Guide v0.2.0
+# pcor-mii-exa-example-response - PCOR-MII Implementation Guide v0.3.0
 
 ## Beispiel QuestionnaireResponse: pcor-mii-exa-example-response
 
@@ -10,7 +10,7 @@
 
 Language: de-DE
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.6.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1)
+Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1)
 
 * [LinkID](https://hl7.org/fhir/R4/formats.html#table): pcor-mii-exa-example-response
   * [Text](https://hl7.org/fhir/R4/formats.html#table): 

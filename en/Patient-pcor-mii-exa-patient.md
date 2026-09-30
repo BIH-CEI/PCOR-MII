@@ -1,4 +1,4 @@
-# Beispiel-Patientin (DEM) - PCOR-MII Implementation Guide v0.2.0
+# Beispiel-Patientin (DEM) - PCOR-MII Implementation Guide v0.3.0
 
 ## Example Patient: Beispiel-Patientin (DEM)
 

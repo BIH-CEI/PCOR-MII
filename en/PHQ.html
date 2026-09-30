@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -163,7 +163,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -209,6 +209,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -229,7 +235,28 @@ a[name="test"] + h3 + div {
         <a href="PHQ.html">PHQ</a>
       </li>
       <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
         <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
       </li>
       <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
@@ -239,6 +266,27 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
       </li>
     </ul>
   </li>
@@ -250,6 +298,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -265,7 +316,7 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;" id="select_flg" class="flaglist">
-    <div><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</div>
+    <div><img src="assets/images/lang-en.png" alt="flag English" class="flag"/>English</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;" id="flaglist" class="flaglist">
@@ -317,7 +368,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://bih-cei.github.io/PCOR-MII/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://bih-cei.github.io/PCOR-MII/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>PHQ (Patient Health Questionnaire)</h2>
   
 
@@ -340,7 +391,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#phq-instrumente-in-pcor-mii" id="markdown-toc-phq-instrumente-in-pcor-mii">PHQ-Instrumente in PCOR-MII</a></li>
   <li><a href="#gemeinsamer-phq-d-namespace" id="markdown-toc-gemeinsamer-phq-d-namespace">Gemeinsamer PHQ-D-Namespace</a></li>
+  <li><a href="#phq-sads" id="markdown-toc-phq-sads">PHQ-SADS</a></li>
   <li><a href="#linkid-migration-phq-9-20264x--ab-202650" id="markdown-toc-linkid-migration-phq-9-20264x--ab-202650">linkId-Migration PHQ-9 (2026.4.x → ab 2026.5.0)</a></li>
+  <li><a href="#linkid-migration-gad-7-instrumentspezifisch--phq-d-namespace" id="markdown-toc-linkid-migration-gad-7-instrumentspezifisch--phq-d-namespace">linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)</a></li>
   <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
 </ul>
 
@@ -351,7 +404,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="phq-instrumente-in-pcor-mii">PHQ-Instrumente in PCOR-MII</h3>
 
-<p>PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2026.6.0.</p>
+<p>PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2026.7.0.</p>
 
 <table>
   <thead>
@@ -382,23 +435,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>→ <a href="PHQ-9.html">PHQ-9</a></td>
     </tr>
     <tr>
-      <td>PHQ-4</td>
-      <td>Ultrakurz-Screening (PHQ-2 + GAD-2)</td>
-      <td>nicht enthalten (Stand 2026.6.0)</td>
-      <td>—</td>
+      <td><strong>GAD-7</strong></td>
+      <td>Ängstlichkeit (7 Items)</td>
+      <td>enthalten (ab 2026.7.0)</td>
+      <td><a href="GAD-7.html">GAD-7</a></td>
     </tr>
     <tr>
-      <td>GAD-7</td>
-      <td>Ängstlichkeit (7 Items)</td>
-      <td>nicht enthalten (Stand 2026.6.0)</td>
-      <td>—</td>
+      <td>PHQ-4</td>
+      <td>Ultrakurz-Screening (PHQ-2 + GAD-2)</td>
+      <td>kein eigener Questionnaire — PHQ-2-Items im PHQ-9, GAD-2-Items im GAD-7</td>
+      <td>→ <a href="PHQ-9.html">PHQ-9</a>, <a href="GAD-7.html">GAD-7</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-SADS</td>
+      <td>Somatik + Angst + Depression kombiniert</td>
+      <td>kein eigener Questionnaire — Vereinigung von PHQ-15, GAD-7 und PHQ-9</td>
+      <td>→ siehe <a href="#phq-sads">PHQ-SADS</a></td>
     </tr>
   </tbody>
 </table>
 
 <p>Für den <strong>PHQ-8</strong> existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (<code class="language-plaintext highlighter-rouge">phq-phq2a…h</code>; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code>). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items <code class="language-plaintext highlighter-rouge">phq-phq2a…h</code> aus.</p>
 
-<p>PHQ-4 und GAD-7 sind im MII PRO-Modul derzeit nicht enthalten — es existiert also weder ein Questionnaire noch eine Canonical-URL, auf die verwiesen werden könnte. Sie sind hier nur der Vollständigkeit halber genannt; Bedarf wäre an das MII PRO-Modul zu melden.</p>
+<p>Für den <strong>PHQ-4</strong> existiert ebenfalls kein eigener Questionnaire. Er besteht aus PHQ-2 (<code class="language-plaintext highlighter-rouge">phq-phq2a</code>, <code class="language-plaintext highlighter-rouge">phq-phq2b</code>) und GAD-2 (<code class="language-plaintext highlighter-rouge">phq-phq5a</code>, <code class="language-plaintext highlighter-rouge">phq-phq5b</code>) — alle vier Items sind über die PHQ-9- bzw. GAD-7-Definition verfügbar. Wer PHQ-4 erheben will, wertet diese vier <code class="language-plaintext highlighter-rouge">linkId</code>s aus; ein eigener Questionnaire wäre im MII PRO-Modul anzumelden, falls ein eigenständiges Artefakt gebraucht wird.</p>
 
 <h3 id="gemeinsamer-phq-d-namespace">Gemeinsamer PHQ-D-Namespace</h3>
 
@@ -451,7 +510,123 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Darüber hinaus: Der <strong>PHQ-8</strong> besteht vollständig aus PHQ-9-Items (<code class="language-plaintext highlighter-rouge">phq-phq2a…h</code>, siehe oben), und die beiden <strong>GAD-2</strong>-Items des PHQ-4 sind zugleich die ersten beiden Items des <strong>GAD-7</strong>. Da PHQ-4 und GAD-7 im MII PRO-Modul nicht enthalten sind, existieren für die GAD-Items derzeit keine <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace.</p>
+<p>Der <strong>GAD-7</strong> nutzt seit 2026.7.0 den Angst-Block des PHQ-D (<code class="language-plaintext highlighter-rouge">phq-phq5a</code>–<code class="language-plaintext highlighter-rouge">phq-phq5g</code>). Seine sieben Items sind zugleich die Item-Basis für GAD-2, PHQ-4 und den Angst-Teil des PHQ-SADS:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code></th>
+      <th>Item (deutsche Fassung)</th>
+      <th>GAD-7</th>
+      <th>GAD-2</th>
+      <th>PHQ-4</th>
+      <th>PHQ-SADS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5a</code></td>
+      <td>Nervosität, Ängstlichkeit oder Anspannung</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5b</code></td>
+      <td>Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5c</code></td>
+      <td>Übermäßige Sorgen bezüglich verschiedener Angelegenheiten</td>
+      <td>enthalten</td>
+      <td>—</td>
+      <td>—</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5d</code></td>
+      <td>Schwierigkeiten zu entspannen</td>
+      <td>enthalten</td>
+      <td>—</td>
+      <td>—</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5e</code></td>
+      <td>Rastlosigkeit, so dass Stillsitzen schwer fällt</td>
+      <td>enthalten</td>
+      <td>—</td>
+      <td>—</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5f</code></td>
+      <td>Schnelle Verärgerung oder Gereiztheit</td>
+      <td>enthalten</td>
+      <td>—</td>
+      <td>—</td>
+      <td>enthalten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5g</code></td>
+      <td>Gefühl der Angst, so als würde etwas Schlimmes passieren</td>
+      <td>enthalten</td>
+      <td>—</td>
+      <td>—</td>
+      <td>enthalten</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Darüber hinaus: Der <strong>PHQ-8</strong> besteht vollständig aus PHQ-9-Items (<code class="language-plaintext highlighter-rouge">phq-phq2a…h</code>, siehe oben), und der <strong>PHQ-4</strong> setzt sich aus PHQ-2 (<code class="language-plaintext highlighter-rouge">phq-phq2a</code>, <code class="language-plaintext highlighter-rouge">phq-phq2b</code>) und GAD-2 (<code class="language-plaintext highlighter-rouge">phq-phq5a</code>, <code class="language-plaintext highlighter-rouge">phq-phq5b</code>) zusammen — alle vier Items existieren im Namespace, ohne dass es einen eigenen PHQ-4-Questionnaire gibt.</p>
+
+<h3 id="phq-sads">PHQ-SADS</h3>
+
+<p>Der <strong>PHQ-SADS</strong> (<em>Somatic, Anxiety and Depressive Symptoms</em>, Kroenke et al. 2010) ist kein eigener Fragebogen, sondern die gemeinsame Auswertung der drei Skalen <strong>PHQ-15</strong>, <strong>GAD-7</strong> und <strong>PHQ-9</strong> mit ihren jeweiligen Summenscores — es gibt bewusst keinen Gesamtscore über alle drei.</p>
+
+<p>Im geteilten Namespace ist er damit vollständig abgedeckt, ohne dass ein viertes Artefakt nötig wäre:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Skala</th>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code>s</th>
+      <th style="text-align: right">Items</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHQ-15 (somatisch)</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq1a</code>–<code class="language-plaintext highlighter-rouge">phq-phq1m</code>, <code class="language-plaintext highlighter-rouge">phq-phq2c</code>, <code class="language-plaintext highlighter-rouge">phq-phq2d</code></td>
+      <td style="text-align: right">15</td>
+      <td>0–30</td>
+    </tr>
+    <tr>
+      <td>GAD-7 (Angst)</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5a</code>–<code class="language-plaintext highlighter-rouge">phq-phq5g</code></td>
+      <td style="text-align: right">7</td>
+      <td>0–21</td>
+    </tr>
+    <tr>
+      <td>PHQ-9 (Depression)</td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq2a</code>–<code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
+      <td style="text-align: right">9</td>
+      <td>0–27</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die drei Skalen umfassen zusammen <strong>31 Items, aber nur 29 verschiedene <code class="language-plaintext highlighter-rouge">linkId</code>s</strong>: <code class="language-plaintext highlighter-rouge">phq-phq2c</code> (Schlafstörungen) und <code class="language-plaintext highlighter-rouge">phq-phq2d</code> (Müdigkeit) gehören sowohl zum PHQ-15 als auch zum PHQ-9. Genau hier zahlt der geteilte Namespace ein — die beiden Items werden <strong>einmal erhoben und in beide Scores eingerechnet</strong>, statt sie doppelt abzufragen. Wer PHQ-SADS umsetzt, erhebt also 29 Items und berechnet daraus die drei Summenscores.</p>
+
+<p>Ob PHQ-SADS und PHQ-4 zusätzlich als <strong>eigene abgeleitete Questionnaires</strong> ausgeprägt werden (Subset-Definition mit <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf die drei Basis-Questionnaires, statt sie nur über <code class="language-plaintext highlighter-rouge">linkId</code>s auszuwerten), ist offen. Nötig ist es für die Erhebung nicht — beide sind über die vorhandenen Definitionen vollständig abgedeckt.</p>
+
+<p>Zu beachten: Der PHQ-15 hat einen <strong>4-Wochen-Recall</strong>, PHQ-9 und GAD-7 einen <strong>2-Wochen-Recall</strong>. Die beiden geteilten Items stehen im PHQ-15 damit unter einem anderen Zeitbezug als im PHQ-9 — bei gemeinsamer Erhebung ist festzulegen, welcher Recall gilt, und die Abweichung zu dokumentieren.</p>
 
 <p>Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die QuestionnaireResponses allein über <code class="language-plaintext highlighter-rouge">item.linkId</code> zusammengeführt, kollidieren die geteilten Items. Bei getrennter Verarbeitung (Regelfall) hat der geteilte Namespace keine Auswirkung.</p>
 
@@ -459,7 +634,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Mit 2026.5.0 wurden die PHQ-9-Item-<code class="language-plaintext highlighter-rouge">linkId</code>s vom alten, instrumentspezifischen Schema (<code class="language-plaintext highlighter-rouge">phq-phq9-q01…q10</code>) auf den geteilten PHQ-D-Block-Namespace (<code class="language-plaintext highlighter-rouge">phq-phq2a…i</code> sowie <code class="language-plaintext highlighter-rouge">phq-phq9-difficulty</code>) umgestellt. Standorte, die PHQ-9-Antworten vor 2026.5.0 erfasst haben, halten <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s mit den alten <code class="language-plaintext highlighter-rouge">linkId</code>s vor, die nicht mehr zur aktuellen Questionnaire-Definition passen.</p>
 
-<p><a name="l776">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
+<p><a name="l1283">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
 
 <table>
   <thead>
@@ -536,12 +711,66 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Alle Zuordnungen sind 1:1 und <code class="language-plaintext highlighter-rouge">equal</code> — es ändert sich ausschließlich die <code class="language-plaintext highlighter-rouge">linkId</code>, nicht die Bedeutung, die Antwortoptionen oder die ordinalen Gewichte. Die berechneten Items (<code class="language-plaintext highlighter-rouge">phq-phq9-score-total</code>, <code class="language-plaintext highlighter-rouge">phq-phq9-promis-tscore</code>) sind nicht Teil der Migration, da sie in Antworten nicht patientenseitig erhoben werden.</p>
 
+<h3 id="linkid-migration-gad-7-instrumentspezifisch--phq-d-namespace">linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)</h3>
+
+<p><a name="l1524">​</a>Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen <code class="language-plaintext highlighter-rouge">linkId</code>s (<code class="language-plaintext highlighter-rouge">gad7-q01</code>–<code class="language-plaintext highlighter-rouge">gad7-q07</code>) erfasst wurden, liefert das MII PRO-Modul die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids"><code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code></a>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alt (<code class="language-plaintext highlighter-rouge">linkId</code>)</th>
+      <th>Neu (<code class="language-plaintext highlighter-rouge">linkId</code>)</th>
+      <th>Item</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q01</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5a</code></td>
+      <td>Nervosität, Ängstlichkeit oder Anspannung</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q02</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5b</code></td>
+      <td>Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q03</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5c</code></td>
+      <td>Übermäßige Sorgen bezüglich verschiedener Angelegenheiten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q04</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5d</code></td>
+      <td>Schwierigkeiten zu entspannen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q05</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5e</code></td>
+      <td>Rastlosigkeit, so dass Stillsitzen schwer fällt</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q06</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5f</code></td>
+      <td>Schnelle Verärgerung oder Gereiztheit</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gad7-q07</code></td>
+      <td><code class="language-plaintext highlighter-rouge">phq-phq5g</code></td>
+      <td>Gefühl der Angst, so als würde etwas Schlimmes passieren</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Auch hier sind alle Zuordnungen 1:1; es ändert sich ausschließlich die <code class="language-plaintext highlighter-rouge">linkId</code>.</p>
+
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>Raw-Package: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.6.0">MII PRO Package 2026.6.0 (Simplifier)</a></li>
+  <li>Raw-Package: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0">MII PRO Package 2026.7.0 (Simplifier)</a></li>
   <li>Lizenz: PHQ / PHQ-D &copy; Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.</li>
   <li>Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel &amp; Herzog 2002)</li>
+  <li>PHQ-SADS: Kroenke K, Spitzer RL, Williams JBW, Löwe B. <em>The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales: a systematic review</em>. Gen Hosp Psychiatry. 2010;32(4):345–359. <a href="https://doi.org/10.1016/j.genhosppsych.2010.03.006">doi:10.1016/j.genhosppsych.2010.03.006</a></li>
 </ul>
 
 
@@ -592,10 +821,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 07:19:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 09:40:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

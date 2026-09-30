@@ -1,4 +1,4 @@
-# DEM Geschlecht (Selbstbeschreibung) - PCOR-MII Implementation Guide v0.2.0
+# DEM Geschlecht (Selbstbeschreibung) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Geschlecht (Selbstbeschreibung) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-geschlecht",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemGeschlechtCS",
   "title" : "DEM Geschlecht (Selbstbeschreibung)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:19:25+00:00",
+  "date" : "2026-09-30T09:40:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,23 +49,43 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "count" : 5,
   "concept" : [{
     "code" : "weiblich",
-    "display" : "Weiblich"
+    "display" : "Female",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Weiblich"
+    }]
   },
   {
     "code" : "maennlich",
-    "display" : "Männlich"
+    "display" : "Male",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Männlich"
+    }]
   },
   {
     "code" : "nicht-binaer",
-    "display" : "Nicht-binär"
+    "display" : "Non-binary",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nicht-binär"
+    }]
   },
   {
     "code" : "andere",
-    "display" : "Andere"
+    "display" : "Other",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Andere"
+    }]
   },
   {
     "code" : "keine-angabe",
-    "display" : "Möchte ich nicht sagen"
+    "display" : "Prefer not to say",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Möchte ich nicht sagen"
+    }]
   }]
 }
 

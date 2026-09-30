@@ -4,15 +4,15 @@
   <id value="dem-antwort"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-antwort</b></p><a name="dem-antwort"> </a><a name="hcdem-antwort"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">ja<a name="dem-antwort-ja"> </a></td><td>Ja</td></tr><tr><td style="white-space:nowrap">nein<a name="dem-antwort-nein"> </a></td><td>Nein</td></tr><tr><td style="white-space:nowrap">nicht-zutreffend<a name="dem-antwort-nicht-zutreffend"> </a></td><td>Nicht zutreffend</td></tr><tr><td style="white-space:nowrap">keine-angabe<a name="dem-antwort-keine-angabe"> </a></td><td>Möchte ich nicht sagen</td></tr></table></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem dem-antwort</b></p><a name="dem-antwort"> </a><a name="hcdem-antwort"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>English (English, en)</b></td></tr><tr><td style="white-space:nowrap">ja<a name="dem-antwort-ja"> </a></td><td>Ja</td><td>Yes</td></tr><tr><td style="white-space:nowrap">nein<a name="dem-antwort-nein"> </a></td><td>Nein</td><td>No</td></tr><tr><td style="white-space:nowrap">nicht-zutreffend<a name="dem-antwort-nicht-zutreffend"> </a></td><td>Nicht zutreffend</td><td>Not applicable</td></tr><tr><td style="white-space:nowrap">keine-angabe<a name="dem-antwort-keine-angabe"> </a></td><td>Möchte ich nicht sagen</td><td>Prefer not to say</td></tr></table></div>
   </text>
   <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
-  <version value="0.2.0"/>
+  <version value="0.3.0"/>
   <name value="DemAntwortCS"/>
   <title value="DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-09-02T07:19:25+00:00"/>
+  <date value="2026-09-30T09:40:42+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -35,17 +35,33 @@
   <concept>
     <code value="ja"/>
     <display value="Ja"/>
+    <designation>
+      <language value="en"/>
+      <value value="Yes"/>
+    </designation>
   </concept>
   <concept>
     <code value="nein"/>
     <display value="Nein"/>
+    <designation>
+      <language value="en"/>
+      <value value="No"/>
+    </designation>
   </concept>
   <concept>
     <code value="nicht-zutreffend"/>
     <display value="Nicht zutreffend"/>
+    <designation>
+      <language value="en"/>
+      <value value="Not applicable"/>
+    </designation>
   </concept>
   <concept>
     <code value="keine-angabe"/>
     <display value="Möchte ich nicht sagen"/>
+    <designation>
+      <language value="en"/>
+      <value value="Prefer not to say"/>
+    </designation>
   </concept>
 </CodeSystem>
