@@ -185,7 +185,7 @@ Language: de-DE
   "resourceType" : "QuestionnaireResponse",
   "id" : "MHIResponse",
   "language" : "de-DE",
-  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
+  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
   "status" : "completed",
   "subject" : {
     "reference" : "Patient/pcor-mii-exa-patient"

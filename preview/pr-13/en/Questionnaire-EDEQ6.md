@@ -13,7 +13,7 @@ Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE-Q): drei 28-T
 
 ### Responses for this Questionnaire
 
-* [Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire, einschließlich der über `enableWhen` abhängigen Frage `edeq30`. Antwortmuster: residuelle Essstörungspathologie bei teilrestituiertem Gewicht.](QuestionnaireResponse-EDEQ6Response.md)
+There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.
 
 
 
@@ -27,6 +27,14 @@ Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE-Q): drei 28-T
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Standardzusammensetzung des EDE-Q nachgeprüft — die vier Skalen-Items sind je eines pro Subskala (Restraint, Eating Concern, Weight Concern, Shape Concern). Der Zuschnitt ist damit nach einem psychometrischen Kriterium gebildet, nicht willkürlich gekürzt; ein trennschärfstes Item bildet die Skala aber nicht ab, daher kein Score. (1) `linkId`s = Original-EDE-Q-Itemnummern (1, 7, 12, 27, 29, 30) — **verifiziert** über die Subskalen-zuordnung: Die vier Skalen-Items sind je eines pro Subskala (Restraint `edeq1`, Eating Concern `edeq7`, Weight Concern `edeq12`, Shape Concern `edeq27`), was die Angabe „ein Item je Skala“ der DIZ-Liste wörtlich bestätigt. (1a) **Keine offizielle Kurzform:** Vom EDE-Q gibt es zwar validierte Kurzfassungen (EDE-QS, EDE-Q-13, EDE-Q-8), aber keine 4-Item-Version je Subskala — anders als beim ERQ-S ist dieser Zuschnitt projektspezifisch, daher kein Score. (2) Kein Score: Der EDE-Q wird über Subskalen-/Global-Mittelwerte ausgewertet; für den 6-Item-Zuschnitt liegt keine validierte Scoring-Vorschrift vor, `edeq29`/`edeq30` sind nicht skalenbildend. (3) Kein `Questionnaire.code`: SNOMED `446825002` bezeichnet das Vollinstrument und wird dem Zuschnitt nicht zugewiesen. (4) `edeq27` als integer+Slider nach dem Original-Antwortblock (0 = überhaupt nicht … 6 = deutlich). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],

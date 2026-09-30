@@ -13,7 +13,7 @@ Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebogens (ACE): emo
 
 ### Responses for this Questionnaire
 
-* [Vollständig ausgefüllte Beispielantwort zum ACE-Questionnaire (erste fünf ACE-Fragen). Zwei bejahte Items in der emotionalen Dimension; die Anzahl der Ja-Antworten ist kein ACE-Score, weil die Fragen 6–10 nicht erhoben werden.](QuestionnaireResponse-ACEResponse.md)
+There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.
 
 
 
@@ -27,6 +27,14 @@ Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebogens (ACE): emo
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* hier **nicht** die Trennschärfe-Formel der übrigen AN-Zuschnitte, sondern *„die ersten 5 Fragen“*. Der Zuschnitt ist also der vordere Block des Instruments (Misshandlung und Vernachlässigung) ohne die Haushalts-Dysfunktions-Fragen 6-10, keine psychometrische Auswahl. (1) `linkId`s = Original-ACE-Fragennummern (1–5); die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. (2) Kein Score: Der ACE-Score ist die Anzahl der Ja-Antworten über alle 10 Fragen — eine Summe über den 5-Fragen-Zuschnitt ist kein validierter ACE-Score. (3) Kein `Questionnaire.code`: LOINC `82813-7` bezeichnet das 10-Fragen-Panel. (4) Ja/Nein über das projektweite `DemJaNeinVS`; Dictionary-Kodierung 1 = ja / 0 = nein nur dokumentarisch. (5) Governance der Auswertung (hochsensible Inhalte, analog PHQ-SI) fachlich zu klären. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],

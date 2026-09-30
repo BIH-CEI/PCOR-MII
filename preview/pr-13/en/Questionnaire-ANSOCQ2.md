@@ -13,7 +13,7 @@ Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire (ANSOCQ): Ber
 
 ### Responses for this Questionnaire
 
-* [Vollständig ausgefüllte Beispielantwort zum ANSOCQ-2-Questionnaire. `language` ist `de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde — der Questionnaire selbst führt den englischen Originalwortlaut.](QuestionnaireResponse-ANSOCQ2Response.md)
+There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG.
 
 
 
@@ -28,6 +28,14 @@ Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire (ANSOCQ): Ber
   },
   "language" : "en",
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Faktorenstruktur der deutschen Validierung nachgeprüft (Pauli et al. 2017) — je ein hochladendes Item pro Faktor. Die „Skalen“ der DIZ-Angabe sind hier die Faktoren der deutschen Validierung, nicht Subskalen des Originals; das ANSOCQ wird im Original über einen Gesamtwert ausgewertet. (1) `linkId`s = Itemnummern der **20-Item-Fassung** (3, 14) — in beiden Sprachen identisch, verifiziert gegen den im Volltext abgedruckten Originalbogen bei Rieger et al. 2002 (doi:10.1002/eat.10056) und gegen Pauli et al. 2017. Zwei Fassungen existieren: Rieger 2000 mit 23 Items, Rieger 2002 mit 20 — die deutsche Übersetzung folgt der 20-Item-Revision. (1a) **Drei Sprachebenen** (ADR-005): `en` = Originalwortlaut (Rieger et al. 2002); `de-CH` = die validierte Schweizer Übersetzung, wortgleich übernommen — **bei der Erhebung maßgeblich**; `de` = eine PCOR-MII-eigene, orthografisch und grammatisch bereinigte Fassung für den Einsatz in Deutschland, **keine validierte Übersetzung**. Unterschiede de-CH → de: „Gesäss“→„Gesäß“, „Sie Sich“→„Sie sich“ sowie in Stufe 1 der Körperteile „bereit an … zunehmen“→„bereit, an … zuzunehmen“. Letzteres ist ein **editorialer Druckfehler der Vorlage** (Stufen 2–4 desselben Items sagen korrekt „zuzunehmen“): `de-CH` bildet bewusst ab, was den Befragten vorlag, und bleibt unverändert — korrigiert wird ausschließlich in `de`. (2) Kein Score: Das ANSOCQ wird über den Mittelwert der 20 Items ausgewertet; für den 2-Item-Zuschnitt liegt keine validierte Vorschrift vor. Die Antwortcodes tragen `ordinalValue` 1–5 (Stadienlogik). (3) **Einfachauswahl — bewusste Abweichung vom Original.** Das Original erlaubt ausdrücklich mehrere Feststellungen je Item und mittelt sie: „If the individual endorses more than one statement per item, the average score for the item is calculated“ (Rieger et al. 2002); Item 17 der Langform instruiert es sogar. Der Zusatz „oder mehrere Feststellungen“ im Instruktionstext ist damit eine getreue Übersetzung. Einfachauswahl ist hier dennoch umgesetzt, weil das Item Level Dictionary beide Items als „Single Answer“ führt und die Standorte sie so erheben — modelliert wird, was erhoben wird. Die Abweichung ist fachlich zu bestätigen; sie schränkt die Vergleichbarkeit mit Erhebungen nach Originalvorschrift ein, weil dort ein Item-Wert ein Mittelwert sein kann. Ein früher hier behauptetes arithmetisches Argument (Mehrfachauswahl sprenge den Bereich 20–100) ist **zurückgezogen** — die Mittelung innerhalb des Items hält jedes Item bei 1–5. (3a) Die deutsche Fassung ist die **Schweizer** Übersetzung (Zürich, Validierung an Schweizer Stichprobe; im Text sichtbar an „Gesäss“) — deshalb als `de-CH` ausgewiesen, nicht als `de`. (4) Kein `Questionnaire.code`: SNOMED `443321009` bezeichnet das Vollinstrument. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],

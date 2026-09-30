@@ -13,7 +13,7 @@ Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventione
 
 ### Antworten zu diesem Fragebogen
 
-* [Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie).](QuestionnaireResponse-DEMResponse.md)
+Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in diesem IG definiert.
 
 
 
@@ -27,6 +27,14 @@ Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventione
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Wortlaut wird unverändert übernommen.** Der deutsche Text der PaRIS-Blöcke stammt aus der **Schweizer** PaRIS-Fassung (Belege: „einschliesslich“ in `WHODIS1`, sechsmal „Ich weiss es nicht“, CHF-Einkommensbänder im Layoutblatt des Item Level Dictionary). Die Helvetismen werden **bewusst beibehalten** und nicht eingedeutscht. Drei Gründe: (1) **Validierung** — der Wortlaut ist im TRAPD-Verfahren sprachlich validiert; eine Änderung macht aus dem validierten Item ein anderes. (2) **Rechte** — eine unveränderte Übernahme bleibt Nachnutzung von OECD-Material; eine Bearbeitung würde PCOR-MII zum Urheber einer Adaption machen und den Adaptions-Disclaimer der OECD-Bedingungen auslösen. (3) **Vergleichbarkeit** — der Wortlaut entspricht dem, unter dem die Schweizer PaRIS-Daten erhoben wurden.\n\n**Mehrsprachigkeit — umgesetzt (2026-09-29):** `item.text` trägt den englischen Originalwortlaut aus dem publizierten PaRIS-PQ; die Schweizer Fassung hängt als `translation`-Extension mit `de-CH` daran (19 Items). Ebenso tragen die sechs DEM-eigenen Antwortskalen englische Displays mit `de-CH`-Designation (36 Konzepte). Muster und RuleSets stammen aus dem MII-PRO-Modul.\n\n**Bewusst deutsch-primär geblieben:** `AGE` (in PCOR-MII auf Geburtsdatum umgestellt, entspricht nicht mehr dem PaRIS-Altersband), `Q_GENDERID` (im PaRIS-PQ nur als länderspezifische Frage ohne Wortlaut geführt), `Zipcode` und `CPCOR_REQ` (nicht aus PaRIS), `GIPS04`/`GIPS10` samt ihrer Antwortskalen (GI-PS — dessen Lizenz untersagt eine Übersetzung ausdrücklich), `DemIscedCS` (Bildungsabschlüsse nach deutschem KMK-System, keine Übersetzung des PaRIS-Wortlauts, sondern eigenständige Anpassung) sowie `DemAntwortCS` (projektweit von MHI, ACE und EDE-Q6 mitgenutzt; dort nur englische Designations ergänzt, eine Umstellung wäre ein IG-weiter Schritt). Siehe <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>."
   }],

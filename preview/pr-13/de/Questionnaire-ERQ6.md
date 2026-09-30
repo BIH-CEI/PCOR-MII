@@ -13,7 +13,7 @@ Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; Preece et al. 2
 
 ### Antworten zu diesem Fragebogen
 
-* [Vollständig ausgefüllte Beispielantwort zum ERQ-S-Questionnaire. Antwortmuster: niedrige Neubewertung (Summe 11) bei hoher Unterdrückung (Summe 19); die beiden Summen liegen als Score-Observations vor.](QuestionnaireResponse-ERQ6Response.md)
+Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in diesem IG definiert.
 
 
 
@@ -27,6 +27,14 @@ Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; Preece et al. 2
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* die Formel *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Im Singular trifft das hier **nicht** zu — es sind drei Items je Subskala; die Formel wirkt bei diesem Eintrag durchkopiert. Der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform ERQ-S, und deshalb der einzige AN-Zuschnitt mit validiertem Scoring. (1) Dieser Bogen ist die **offizielle Kurzform ERQ-S** (Preece et al. 2023) — verifiziert am 2026-09-29 gegen den Originalbogen der Autor:innen: Die sechs ERQ-S-Items sind die ERQ-Items 1, 2, 3, 6, 8, 9, also exakt die hier modellierten `linkId`s. (2) `linkId`s = Original-ERQ-Itemnummern; die Dictionary-Variablen-IDs laufen sequenziell — Mapping: erq4→`erq6`, erq5→`erq8`, erq6→`erq9`. (3) **Scoring vorhanden:** Neubewertung = `erq1`+`erq3`+`erq8`, Unterdrückung = `erq2`+`erq6`+`erq9`, je 3–21; kein Gesamtscore. Als `ObservationDefinition` modelliert. (4) US-Normwerte bewusst nicht als Referenzintervalle hinterlegt — es sind keine deutschen Normen. (5) Keine Terminologie-Codes: LOINC und SNOMED CT kennen den ERQ nicht. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   },

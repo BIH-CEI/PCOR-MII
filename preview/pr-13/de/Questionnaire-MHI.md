@@ -13,7 +13,7 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
 
 ### Antworten zu diesem Fragebogen
 
-* [Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History).](QuestionnaireResponse-MHIResponse.md)
+Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in diesem IG definiert.
 
 
 
@@ -26,6 +26,14 @@ Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometr
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
   "version" : "0.3.0",
   "name" : "MHI",

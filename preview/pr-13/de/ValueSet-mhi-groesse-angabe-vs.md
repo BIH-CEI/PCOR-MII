@@ -33,7 +33,7 @@ Einheit/Angabe-Status für Körpergröße (Q_WB152).
   "title" : "MHI Größenangabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T08:17:00+00:00",
+  "date" : "2026-09-30T08:27:17+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

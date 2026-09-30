@@ -10,6 +10,8 @@
 
 Profile: [MII PR PRO Score Blueprint / Template](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint)
 
+**ArtifactVersion**: 0.3.0
+
 **category**: Survey
 
 **code**: PROMIS-Preference (PROPr) Utility Score
@@ -43,6 +45,10 @@ Profile: [MII PR PRO Score Blueprint / Template](https://simplifier.net/resolve?
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"]
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-version",
+    "valueString" : "0.3.0"
+  }],
   "category" : [{
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",

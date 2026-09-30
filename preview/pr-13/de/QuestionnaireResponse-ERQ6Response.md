@@ -54,7 +54,7 @@ Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"]
   },
   "language" : "de-DE",
-  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6",
+  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0",
   "status" : "completed",
   "subject" : {
     "reference" : "Patient/pcor-mii-exa-patient"

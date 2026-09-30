@@ -457,6 +457,14 @@ a[name="test"] + h3 + div {
   },
   "<a href="http://hl7.org/fhir/R4/domainresource.html#Questionnaire.extension">extension</a>" : [
     {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/version-algorithm",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "semver",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Semantic Versioning"
+      }
+    },
+    {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/designNote",
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Faktorenstruktur der deutschen Validierung nachgeprüft (Pauli et al. 2017) — je ein hochladendes Item pro Faktor. Die „Skalen“ der DIZ-Angabe sind hier die Faktoren der deutschen Validierung, nicht Subskalen des Originals; das ANSOCQ wird im Original über einen Gesamtwert ausgewertet. (1) `linkId`s = Itemnummern der **20-Item-Fassung** (3, 14) — in beiden Sprachen identisch, verifiziert gegen den im Volltext abgedruckten Originalbogen bei Rieger et al. 2002 (doi:10.1002/eat.10056) und gegen Pauli et al. 2017. Zwei Fassungen existieren: Rieger 2000 mit 23 Items, Rieger 2002 mit 20 — die deutsche Übersetzung folgt der 20-Item-Revision. (1a) **Drei Sprachebenen** (ADR-005): `en` = Originalwortlaut (Rieger et al. 2002); `de-CH` = die validierte Schweizer Übersetzung, wortgleich übernommen — **bei der Erhebung maßgeblich**; `de` = eine PCOR-MII-eigene, orthografisch und grammatisch bereinigte Fassung für den Einsatz in Deutschland, **keine validierte Übersetzung**. Unterschiede de-CH → de: „Gesäss“→„Gesäß“, „Sie Sich“→„Sie sich“ sowie in Stufe 1 der Körperteile „bereit an … zunehmen“→„bereit, an … zuzunehmen“. Letzteres ist ein **editorialer Druckfehler der Vorlage** (Stufen 2–4 desselben Items sagen korrekt „zuzunehmen“): `de-CH` bildet bewusst ab, was den Befragten vorlag, und bleibt unverändert — korrigiert wird ausschließlich in `de`. (2) Kein Score: Das ANSOCQ wird über den Mittelwert der 20 Items ausgewertet; für den 2-Item-Zuschnitt liegt keine validierte Vorschrift vor. Die Antwortcodes tragen `ordinalValue` 1–5 (Stadienlogik). (3) **Einfachauswahl — bewusste Abweichung vom Original.** Das Original erlaubt ausdrücklich mehrere Feststellungen je Item und mittelt sie: „If the individual endorses more than one statement per item, the average score for the item is calculated“ (Rieger et al. 2002); Item 17 der Langform instruiert es sogar. Der Zusatz „oder mehrere Feststellungen“ im Instruktionstext ist damit eine getreue Übersetzung. Einfachauswahl ist hier dennoch umgesetzt, weil das Item Level Dictionary beide Items als „Single Answer“ führt und die Standorte sie so erheben — modelliert wird, was erhoben wird. Die Abweichung ist fachlich zu bestätigen; sie schränkt die Vergleichbarkeit mit Erhebungen nach Originalvorschrift ein, weil dort ein Item-Wert ein Mittelwert sein kann. Ein früher hier behauptetes arithmetisches Argument (Mehrfachauswahl sprenge den Bereich 20–100) ist **zurückgezogen** — die Mittelung innerhalb des Items hält jedes Item bei 1–5. (3a) Die deutsche Fassung ist die **Schweizer** Übersetzung (Zürich, Validierung an Schweizer Stichprobe; im Text sichtbar an „Gesäss“) — deshalb als `de-CH` ausgewiesen, nicht als `de`. (4) Kein `Questionnaire.code`: SNOMED `443321009` bezeichnet das Vollinstrument. Details: &lt;https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html&gt;"
     }
@@ -582,7 +590,7 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 08:17:00 +0000">
+  <span title="2026-09-30 08:27:00 +0000">
     2026-09-30
   </span>
 

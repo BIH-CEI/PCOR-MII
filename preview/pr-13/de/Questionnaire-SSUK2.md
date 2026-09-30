@@ -13,7 +13,7 @@ Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je e
 
 ### Antworten zu diesem Fragebogen
 
-* [Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire. Antwortmuster eines günstigen sozialen Umfelds: hoch bei der unterstützenden Zuwendung (`ssuk14`), niedrig bei der belastenden Interaktion (`ssuk10`).](QuestionnaireResponse-SSUK2Response.md)
+Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in diesem IG definiert.
 
 
 
@@ -27,6 +27,14 @@ Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je e
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Geht hier auf: Die SSUK hat zwei gegenläufige Dimensionen, und ssuk14 (unterstützend) und ssuk10 (belastend) bedienen genau je eine. Ein trennschärfstes Item bildet die Skala nicht ab, daher kein Score — und die beiden Items dürfen nicht summiert werden, weil sie Gegenläufiges messen. (1) `linkId`s = **Itemnummern der SSUK-Langfassung — verifiziert** gegen Tabelle 2 bei Müller, Mehnert & Koch (*Z Med Psychol* 2004, doi:10.3233/zmp-2004-13_4_03): Item 14 ist „Sie aufmuntert oder tröstet“ (Positive Unterstützung), Item 10 „die Auswirkung Ihrer Erkrankung herunterspielt“ (Belastende Interaktion). Die Langfassung hat 26 Items (17 + 9). **Verifiziert** ist dagegen, dass beide Items echte SSUK-Items sind: `ssuk14` wörtlich Item 3 der SSUK-8, `ssuk10` ein Item der 9-Item-Skala „Belastende Interaktion“ der Langfassung, das in der Kurzform entfiel. (2) Kein Score: Die beiden Items messen gegenläufige Konstrukte (positive Unterstützung vs. belastende Interaktion) — ein Summenwert wäre ohne Umpolung falsch, und für eine Umpolung des Zuschnitts fehlt die validierte Grundlage. (3) Gemeinsamer Fragestamm als `group`-Item, damit die Item-Texte wortgleich bleiben. (4) Keine Terminologie-Codes: LOINC/SNOMED kennen die SSUK nicht. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],

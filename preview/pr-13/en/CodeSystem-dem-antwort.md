@@ -29,7 +29,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T08:17:00+00:00",
+  "date" : "2026-09-30T08:27:17+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -457,6 +457,14 @@ a[name="test"] + h3 + div {
   },
   "<a href="http://hl7.org/fhir/R4/domainresource.html#Questionnaire.extension">extension</a>" : [
     {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/version-algorithm",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "semver",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Semantic Versioning"
+      }
+    },
+    {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/designNote",
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "**Wortlaut wird unverändert übernommen.** Der deutsche Text der PaRIS-Blöcke stammt aus der **Schweizer** PaRIS-Fassung (Belege: „einschliesslich“ in `WHODIS1`, sechsmal „Ich weiss es nicht“, CHF-Einkommensbänder im Layoutblatt des Item Level Dictionary). Die Helvetismen werden **bewusst beibehalten** und nicht eingedeutscht. Drei Gründe: (1) **Validierung** — der Wortlaut ist im TRAPD-Verfahren sprachlich validiert; eine Änderung macht aus dem validierten Item ein anderes. (2) **Rechte** — eine unveränderte Übernahme bleibt Nachnutzung von OECD-Material; eine Bearbeitung würde PCOR-MII zum Urheber einer Adaption machen und den Adaptions-Disclaimer der OECD-Bedingungen auslösen. (3) **Vergleichbarkeit** — der Wortlaut entspricht dem, unter dem die Schweizer PaRIS-Daten erhoben wurden.\n\n**Mehrsprachigkeit — umgesetzt (2026-09-29):** `item.text` trägt den englischen Originalwortlaut aus dem publizierten PaRIS-PQ; die Schweizer Fassung hängt als `translation`-Extension mit `de-CH` daran (19 Items). Ebenso tragen die sechs DEM-eigenen Antwortskalen englische Displays mit `de-CH`-Designation (36 Konzepte). Muster und RuleSets stammen aus dem MII-PRO-Modul.\n\n**Bewusst deutsch-primär geblieben:** `AGE` (in PCOR-MII auf Geburtsdatum umgestellt, entspricht nicht mehr dem PaRIS-Altersband), `Q_GENDERID` (im PaRIS-PQ nur als länderspezifische Frage ohne Wortlaut geführt), `Zipcode` und `CPCOR_REQ` (nicht aus PaRIS), `GIPS04`/`GIPS10` samt ihrer Antwortskalen (GI-PS — dessen Lizenz untersagt eine Übersetzung ausdrücklich), `DemIscedCS` (Bildungsabschlüsse nach deutschem KMK-System, keine Übersetzung des PaRIS-Wortlauts, sondern eigenständige Anpassung) sowie `DemAntwortCS` (projektweit von MHI, ACE und EDE-Q6 mitgenutzt; dort nur englische Designations ergänzt, eine Umstellung wäre ein IG-weiter Schritt). Siehe &lt;https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html&gt;."
     }
@@ -917,7 +925,7 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 08:17:00 +0000">
+  <span title="2026-09-30 08:27:00 +0000">
     2026-09-30
   </span>
 

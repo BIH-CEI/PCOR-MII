@@ -27,6 +27,14 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"]
   },
   "language" : "de-DE",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "Semantic Versioning"
+    }
+  }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
   "version" : "0.3.0",
   "name" : "PcorExampleQuestionnaire",
