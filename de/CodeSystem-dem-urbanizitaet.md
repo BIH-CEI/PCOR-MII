@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Urbanizität (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,7 +51,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "stadt",
     "display" : "City",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Stadt"
     }]
   },
@@ -59,7 +59,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "dorf-vorort",
     "display" : "Town or suburb",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Dorf oder Vorort"
     }]
   },
@@ -67,7 +67,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "laendlich",
     "display" : "Rural area",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Ländliche Region"
     }]
   },
@@ -75,7 +75,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "weiss-nicht",
     "display" : "Don't know",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Ich weiss es nicht"
     }]
   }]

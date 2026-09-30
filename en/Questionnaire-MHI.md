@@ -32,7 +32,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",
       "code" : "semver",
-      "display" : "Semantic Versioning"
+      "display" : "SemVer"
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",

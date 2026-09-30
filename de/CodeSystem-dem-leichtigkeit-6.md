@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,7 +51,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "sehr-einfach",
     "display" : "Very easy",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Sehr einfach"
     }]
   },
@@ -59,7 +59,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "einfach",
     "display" : "Easy",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Einfach"
     }]
   },
@@ -67,7 +67,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "weder-noch",
     "display" : "Neither easy nor difficult",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Weder einfach noch schwierig"
     }]
   },
@@ -75,7 +75,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "schwierig",
     "display" : "Difficult",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Schwierig"
     }]
   },
@@ -83,7 +83,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "sehr-schwierig",
     "display" : "Very difficult",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Sehr schwierig"
     }]
   },
@@ -91,7 +91,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "nicht-zutreffend",
     "display" : "Not applicable",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Nicht zutreffend"
     }]
   }]

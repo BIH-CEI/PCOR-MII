@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1091,7 +1091,7 @@
         "reference" : "CodeSystem/dem-einkommen"
       },
       "name" : "DEM Haushaltseinkommen (Bänder)",
-      "description" : "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen).",
+      "description" : "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). Die ursprüngliche deutsche Übersetzung liegt in de-CH vor (Schweizer PaRIS-Fassung, Bänder bis CHF 3630 / zwischen CHF 3630 und CHF 6050 / ab CHF 6050 pro Monat). Für PCOR-MII sind die Bänder auf deutsche Gehaltsdaten angepasst: EUR-Terzile nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen). Das ist KEINE Währungsumrechnung, sondern eine eigenständige Skala — CHF 3630 entspräche grob 3.800 EUR, nicht 2.300 EUR. Weil der Wortlaut damit deutsch und nicht schweizerisch ist, tragen die Designations hier de-DE; die übrigen DEM-Antwortskalen behalten ihren Schweizer Wortlaut nach ADR-005 bewusst bei.",
       "exampleBoolean" : false
     },
     {

@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Erwerbsstatus (OECD)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,7 +51,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "selbststaendig",
     "display" : "Self-employed [work for yourself]",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Selbstständigerwerbend"
     }]
   },
@@ -59,7 +59,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "angestellt",
     "display" : "In paid employment [work for someone else]",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Angestellt"
     }]
   },
@@ -67,7 +67,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "arbeitssuchend",
     "display" : "Looking for work",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Arbeitssuchend"
     }]
   },
@@ -75,7 +75,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "haushalt",
     "display" : "Looking after the home",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Hausfrau/Hausmann"
     }]
   },
@@ -83,7 +83,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "arbeitsunfaehig",
     "display" : "Unable to work due to sickness or ill-health",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Krankheitsbedingte Arbeitsunfähigkeit"
     }]
   },
@@ -91,7 +91,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "pensioniert",
     "display" : "Retired",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Pensioniert"
     }]
   },
@@ -99,7 +99,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "student",
     "display" : "Student",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Student/in"
     }]
   },
@@ -107,7 +107,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "nicht-arbeitend",
     "display" : "Not working and not looking for work",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Nicht arbeitend und nicht arbeitssuchend"
     }]
   },
@@ -115,7 +115,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "lernende",
     "display" : "Apprentice",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Lernende/r"
     }]
   },
@@ -123,7 +123,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "anderes",
     "display" : "Other",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Anderes"
     }]
   },
@@ -131,7 +131,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "weiss-nicht",
     "display" : "Don't know",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de",
       "value" : "Ich weiss es nicht"
     }]
   }]

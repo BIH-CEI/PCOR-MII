@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,7 +51,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "staendig",
     "display" : "Always",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Ständig"
     }]
   },
@@ -59,7 +59,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "meistens",
     "display" : "Often",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Meistens"
     }]
   },
@@ -67,7 +67,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "manchmal",
     "display" : "Sometimes",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Manchmal"
     }]
   },
@@ -75,7 +75,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "selten",
     "display" : "Rarely",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Selten"
     }]
   },
@@ -83,7 +83,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "nie",
     "display" : "Never",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Nie"
     }]
   }]

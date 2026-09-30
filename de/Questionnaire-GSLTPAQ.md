@@ -32,7 +32,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "valueCoding" : {
       "system" : "http://hl7.org/fhir/version-algorithm",
       "code" : "semver",
-      "display" : "Semantic Versioning"
+      "display" : "SemVer"
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ",

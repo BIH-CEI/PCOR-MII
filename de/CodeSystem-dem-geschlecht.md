@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Geschlecht (Selbstbeschreibung)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:42:59+00:00",
+  "date" : "2026-09-30T19:54:40+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -51,7 +51,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "weiblich",
     "display" : "Female",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Weiblich"
     }]
   },
@@ -59,7 +59,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "maennlich",
     "display" : "Male",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Männlich"
     }]
   },
@@ -67,7 +67,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "nicht-binaer",
     "display" : "Non-binary",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Nicht-binär"
     }]
   },
@@ -75,7 +75,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "andere",
     "display" : "Other",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Andere"
     }]
   },
@@ -83,7 +83,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "keine-angabe",
     "display" : "Prefer not to say",
     "designation" : [{
-      "language" : "de-CH",
+      "language" : "de-DE",
       "value" : "Möchte ich nicht sagen"
     }]
   }]
