@@ -57,7 +57,7 @@ RUN curl -L --fail "https://packages.simplifier.net/de.medizininformatikinitiati
        -o /mii-pro.tgz
 
 # ─── Stage 3: HAPI Runtime ───────────────────────────────────────────────────
-FROM hapiproject/hapi:v8.4.0
+FROM hapiproject/hapi:v8.12.0-1
 
 # Pre-load: Packages in HAPI's package cache mount
 COPY --from=package-build /pcor-mii.tgz   /opt/hapi/packages/pcor-mii.tgz

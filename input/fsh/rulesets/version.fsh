@@ -31,7 +31,7 @@
 RuleSet: Version
 * version = "0.3.0"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
-* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "Semantic Versioning"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 
 // Fuer CodeSystem- und ValueSet-Definitionen (Caret-Notation).
 // Diese trugen bisher GAR KEINE Version — 26 CodeSystems und 27 ValueSets.
