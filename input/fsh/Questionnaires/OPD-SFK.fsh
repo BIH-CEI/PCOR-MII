@@ -43,6 +43,7 @@ CodeSystem: OpdSfkAntwortCS
 Id: opd-sfk-antwort
 Title: "OPD-SFK Antwortskala (Codes)"
 Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -70,12 +71,13 @@ ValueSet: OpdSfkAntwortVS
 Id: opd-sfk-antwort-vs
 Title: "OPD-SFK Antwortskala"
 Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu)."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system OpdSfkAntwortCS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"
 * ^expansion.contains[=].code = #trifft-gar-nicht-zu
 * ^expansion.contains[=].display = "Trifft gar nicht zu"
@@ -100,7 +102,8 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
-* version = "0.1.0"
+* language = #de
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient
@@ -124,61 +127,73 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 // ── 12 Items (linkId = PCOR-Variablen-ID OPDSFK01-12) ─────────────────────────
 * item[+]
   * linkId = "OPDSFK01"
+  * code[+] = PcorItemDictionaryCS#OPDSFK01
   * text = "Ich erlebe mich manchmal wie eine fremde Person."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK02"
+  * code[+] = PcorItemDictionaryCS#OPDSFK02
   * text = "Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK03"
+  * code[+] = PcorItemDictionaryCS#OPDSFK03
   * text = "Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK04"
+  * code[+] = PcorItemDictionaryCS#OPDSFK04
   * text = "Ich kann mich anderen oft schwer verständlich machen."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK05"
+  * code[+] = PcorItemDictionaryCS#OPDSFK05
   * text = "In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK06"
+  * code[+] = PcorItemDictionaryCS#OPDSFK06
   * text = "Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK07"
+  * code[+] = PcorItemDictionaryCS#OPDSFK07
   * text = "Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK08"
+  * code[+] = PcorItemDictionaryCS#OPDSFK08
   * text = "Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK09"
+  * code[+] = PcorItemDictionaryCS#OPDSFK09
   * text = "Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK10"
+  * code[+] = PcorItemDictionaryCS#OPDSFK10
   * text = "Es fällt mir schwer, zu anderen Kontakt aufzunehmen."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK11"
+  * code[+] = PcorItemDictionaryCS#OPDSFK11
   * text = "Ich habe kein gutes Selbstbewusstsein."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
   * linkId = "OPDSFK12"
+  * code[+] = PcorItemDictionaryCS#OPDSFK12
   * text = "Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)

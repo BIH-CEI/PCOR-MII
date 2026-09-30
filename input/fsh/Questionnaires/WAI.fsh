@@ -40,6 +40,7 @@ CodeSystem: WaiSkala5CS
 Id: wai-skala-5
 Title: "WAI Antwortskala 5-stufig (Codes)"
 Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
@@ -67,12 +68,13 @@ ValueSet: WaiSkala5VS
 Id: wai-skala-5-vs
 Title: "WAI Antwortskala 5-stufig"
 Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * include codes from system WaiSkala5CS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.1.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.3.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5"
 * ^expansion.contains[=].code = #stufe-1
 * ^expansion.contains[=].display = "Stufe 1"
@@ -101,13 +103,14 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI"
 * name = "WAI"
-* version = "0.1.0"
+* language = #de
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient
 * date = "2026-09-01"
 * publisher = "BIH-CEI"
-* code = $SCT#446174004 "Assessment using work ability index"
+* code[+] = $SCT#446174004 "Assessment using work ability index"
 * copyright = "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5) — die Publikationsrechte am WAI sind ungeklärt (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Rechteinhaber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi et al. 1998). Die vollständige, wortgleiche Originalversion des WAI/Work Ability Score darf ausschließlich über die berechtigte Bezugsquelle (FIOH bzw. deren lizenzierte Vertriebspartner) bezogen und genutzt werden."
 
 * item[+]
@@ -116,6 +119,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
   * type = #group
   * item[+]
     * linkId = "WAI01"
+    * code[+] = PcorItemDictionaryCS#WAI01
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit im Vergleich zur besten je erreichten Arbeitsfähigkeit, Skala 0-10 (0 = keine Arbeitsfähigkeit, 10 = beste je erreichte Arbeitsfähigkeit)."
     * type = #integer
     * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -126,11 +130,13 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
     * extension[=].valueInteger = 1
   * item[+]
     * linkId = "WAI02a"
+    * code[+] = PcorItemDictionaryCS#WAI02a
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die körperlichen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."
     * type = #choice
     * answerValueSet = Canonical(WaiSkala5VS)
   * item[+]
     * linkId = "WAI02b"
+    * code[+] = PcorItemDictionaryCS#WAI02b
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die psychischen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."
     * type = #choice
     * answerValueSet = Canonical(WaiSkala5VS)

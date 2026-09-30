@@ -12,7 +12,7 @@ Usage: #example
 Title: "MHI — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History)."
 * language = #de-DE
-* questionnaire = Canonical(MHI)
+* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI)
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-17T10:00:00+02:00"

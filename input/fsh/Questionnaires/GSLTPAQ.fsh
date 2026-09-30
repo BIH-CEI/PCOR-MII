@@ -81,7 +81,19 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ"
 * name = "GSLTPAQ"
-* version = "0.1.0"
+// SPRACHE — bewusst DEUTSCH PRIMAER, abweichend von ADR-005:
+//   ADR-005 verlangt normalerweise die Sprache des Originals als item.text
+//   (hier Englisch, Godin & Shephard) und die Uebersetzung als translation-
+//   Extension. Das setzt aber voraus, dass die deutsche Fassung eine getreue
+//   Wiedergabe eines autorisierten Wortlauts ist. Hier ist sie das NICHT: Es
+//   ist eine hausinterne Eigenuebersetzung ohne linguistische Validierung.
+//   Diese Ressource dokumentiert genau diese Fassung — also was den Befragten
+//   tatsaechlich vorlag —, deshalb ist Deutsch hier das Primaere und nicht eine
+//   Uebersetzungsebene. Die validierte deutsch-oesterreichische Fassung
+//   (Lindner et al. 2026) wird nach ADR-007 eine EIGENE Ressource im
+//   MII-PRO-Modul, keine Sprachebene und keine neue Version dieser hier.
+* language = #de
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient
@@ -96,6 +108,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Anstrengende körperliche Aktivität ──────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_01_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_01_w
   * text = "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -104,6 +117,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_01_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_01_m
   * text = "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -114,6 +128,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Mäßige körperliche Aktivität ────────────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_02_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_02_w
   * text = "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -122,6 +137,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_02_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_02_m
   * text = "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -132,6 +148,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Leichte körperliche Aktivität ───────────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_03_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_03_w
   * text = "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -140,6 +157,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_03_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_03_m
   * text = "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"

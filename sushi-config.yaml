@@ -9,7 +9,7 @@ name: PCOR_MII
 title: PCOR-MII Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: draft
@@ -29,7 +29,7 @@ publisher:
 # (PHQ-9, GAD-7, PROMIS-29, EQ-5D-5L, EORTC QLQ-C30, …) werden referenziert,
 # nicht nachgebaut. SDC ist die Basis der MII-PRO-Profile.
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.6.0
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
   hl7.fhir.uv.sdc: 3.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -43,6 +43,30 @@ pages:
     title: Instrumentenübersicht
     PSS.md:
       title: PSS (Persistent Somatic Syndrome)
+      SSD-12.md:
+        title: SSD-12 (B-Kriterien somatische Belastungsstörung)
+      WI-7.md:
+        title: Whiteley-7 (Gesundheitsangst)
+      SCOFF.md:
+        title: SCOFF (Essstörungs-Screening)
+      ISR-Z.md:
+        title: ISR-Z (Zwang)
+      PC-PTSD.md:
+        title: PC-PTSD (PTBS-Screening)
+    AN.md:
+      title: AN (Anorexia Nervosa)
+      Essstoerungen.md:
+        title: Essstörungen — Erhebungsplan
+      ERQ-6.md:
+        title: ERQ-S (Emotionsregulation)
+      EDE-Q6.md:
+        title: EDE-Q6 (Essstörungspathologie)
+      ANSOCQ-2.md:
+        title: ANSOCQ-2 (Veränderungsmotivation)
+      SSUK-2.md:
+        title: SSUK-2 (Soziale Unterstützung)
+      ACE.md:
+        title: ACE (Belastende Kindheitserfahrungen)
   Demographie.md:
     title: Demographie
   MHI.md:
@@ -63,20 +87,30 @@ pages:
       title: PHQ-9
     PHQ-15.md:
       title: PHQ-15
+    GAD-7.md:
+      title: GAD-7
   WHODAS-12.md:
     title: WHODAS 2.0 (12-Item)
+  EURONET-SOMA.md:
+    title: EURONET-SOMA (2 Einzelitems)
   OPD-SFK.md:
     title: OPD-SFK (Strukturfragebogen, 12 Items)
   WAI.md:
     title: WAI (Work Ability Score)
   GSLTPAQ.md:
     title: GSLTPAQ (Freizeitaktivität)
+  EXPECT.md:
+    title: EXPECT (Verlaufserwartung)
+  IPQ-S.md:
+    title: IPQ-S (Ursachenzuschreibung)
   Implementation.md:
     title: Anwendung
   Validierung.md:
     title: Validierung
   Bereitstellung.md:
     title: Bereitstellung
+  Designentscheidungen.md:
+    title: Designentscheidungen
   Release-Notes.md:
     title: Release Notes
 
@@ -102,18 +136,35 @@ menu:
   Instrumente:
     Übersicht: Instrumente.html
     PSS: PSS.html
+    AN: AN.html
+    Essstörungen — Erhebungsplan: Essstoerungen.html
   Fragebögen:
     Demographie: Demographie.html
     MHI: MHI.html
     PROMIS: PROMIS.html
     PHQ: PHQ.html
+    GAD-7: GAD-7.html
     WHODAS 2.0: WHODAS-12.html
+    EURONET-SOMA: EURONET-SOMA.html
+    SSD-12: SSD-12.html
+    Whiteley-7: WI-7.html
+    SCOFF: SCOFF.html
+    ISR-Z: ISR-Z.html
+    PC-PTSD: PC-PTSD.html
     OPD-SFK: OPD-SFK.html
     WAI: WAI.html
     GSLTPAQ: GSLTPAQ.html
+    EXPECT: EXPECT.html
+    IPQ-S: IPQ-S.html
+    ERQ-S: ERQ-6.html
+    EDE-Q6: EDE-Q6.html
+    ANSOCQ-2: ANSOCQ-2.html
+    SSUK-2: SSUK-2.html
+    ACE: ACE.html
   Anwendung: Implementation.html
   Validierung: Validierung.html
   Bereitstellung: Bereitstellung.html
+  Designentscheidungen: Designentscheidungen.html
   Release Notes: Release-Notes.html
   Artefakte: artifacts.html
 

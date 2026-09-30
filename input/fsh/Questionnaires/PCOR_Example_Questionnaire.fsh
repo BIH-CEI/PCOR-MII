@@ -16,10 +16,10 @@ Title: "PCOR Beispiel-Fragebogen"
 Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.4.1."
 
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"
-* language = #de-DE
+* language = #de
 
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire"
-* version = "0.1.0"
+* insert Version
 * name = "PcorExampleQuestionnaire"
 * title = "PCOR Beispiel-Fragebogen"
 * status = #draft
