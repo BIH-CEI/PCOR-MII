@@ -33,7 +33,7 @@ Wie wurde das Gewicht ermittelt? (weight_outpatient_2).
   "title" : "MHI Gewichtsmessung Methode",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:08:36+00:00",
+  "date" : "2026-09-30T09:23:41+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

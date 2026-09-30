@@ -345,6 +345,10 @@ Copyright/Rechtliches: Quelle: Ehrenthal JC, Dinger U, Schauenburg H, Horsch L, 
 )
       </li>
       <li>
+Die englischen Wortlaute sind beschafft, nicht erinnert: ERQ aus dem Originalbogen des Stanford Psychophysiology Laboratory, EDE-Q aus dem autorisierten Bogen EDE-Q 6.0 (&copy; Fairburn and Beglin 2008, CREDO Oxford), ACE aus einem an Felitti et al. 1998 zitierenden Exemplar. (        <a href="de/Release-Notes.html">src</a>
+)
+      </li>
+      <li>
 EURONET-SOMA-Items &copy; Rief, Burton, Frostholm et al. 2017 (Psychosomatic Medicine, American Psychosomatic Society). Abbildung 1 der Publikation empfiehlt diese beiden Items ausdrücklich für die Verwendung in klinischen Studien; Übersetzungen in mehr als 20 Sprachen liegen als Supplement bei. Die deutsche Fassung ist in der Originalpublikation enthalten. (        <a href="en/EURONET-SOMA.html">src</a>
 )
       </li>
@@ -423,6 +427,10 @@ PROMIS&reg;-29 Profile v2.1 ist das umfassende Multi-Domain-Instrument zur Erfas
       </li>
       <li>
 PROMIS&reg;-33 Profile v2.1 ergänzt PROMIS-29 um die Cognitive-Function-Domäne. In PCOR-MII wird keine eigenständige PROMIS-33-Implementierung vorgesehen — stattdessen wird die PROMIS-33-Abdeckung durch die getrennte Verwendung der zwei bereits verfügbaren Instrumente erreicht: (        <a href="en/PROMIS-33.html">src</a>
+)
+      </li>
+      <li>
+Questionnaire.language steht auf en: Das EDE-Q-Original ist englisch (Fairburn &amp; Beglin 1994). item.text und die sieben Antwortkonzepte tragen den Wortlaut des autorisierten Bogens EDE-Q 6.0 (&copy; Fairburn and Beglin 2008), frei bereitgestellt vom Centre for Research on Eating Disorders at Oxford; die deutsche dgvt-Fassung hängt als translation bzw. designation mit lang = de daran. (        <a href="en/EDE-Q6.html">src</a>
 )
       </li>
       <li>
@@ -557,7 +565,7 @@ verlegt (dgvt-Verlag, &copy; Anja Hilbert, alle Rechte vorbehalten) (        <a 
           Package pcor-mii#0.3.0 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Erstellt 
-            <span title="2026-09-30 09:08:00 +0000">
+            <span title="2026-09-30 09:23:00 +0000">
     2026-09-30
   </span>
 
@@ -885,6 +893,26 @@ Die           <strong>DIZ-Implementierungsliste PCOR-MII</strong>
  nennt in der Zeile „ERQ-6" als Entwicklungspaper ausdrücklich           <a href="https://doi.org/10.1016/j.jad.2023.08.076">doi:10.1016/j.jad.2023.08.076</a>
 , also die ERQ-S-Publikation, und als Übersetzungspaper           <a href="https://doi.org/10.1026/0012-1924.55.3.144">Abler &amp; Kessler 2009</a>
 . Der Zuschnitt wurde also bewusst als ERQ-S übernommen, nur anders benannt.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/ERQ-6.html">web</a>
+        </td>
+        <td>
+          <a href="https://spl.stanford.edu/resources">spl.stanford.edu</a>
+        </td>
+        <td>
+          <code class="language-plaintext highlighter-rouge">Questionnaire.language</code>
+ steht auf           <strong>
+<code class="language-plaintext highlighter-rouge">en</code>          </strong>
+: Das ERQ-Original ist englisch (Gross &amp; John 2003), also trägt           <code class="language-plaintext highlighter-rouge">item.text</code>
+ den englischen Originalwortlaut und die autorisierte deutsche Fassung von           <strong>Abler &amp; Kessler (2009)</strong>
+ hängt als           <code class="language-plaintext highlighter-rouge">translation</code>
+-Extension mit           <code class="language-plaintext highlighter-rouge">lang = de</code>
+ daran — bei allen sechs Items und den sechs Skalenankern. Beide Bögen stellt das           <a href="https://spl.stanford.edu/resources">Stanford Psychophysiology Laboratory</a>
+ frei bereit; die deutsche Fassung ist dort ausdrücklich als           <em>„autorisiert von den Autoren der englischen Originalversion“</em>
+ ausgewiesen.
         </td>
       </tr>
       <tr>
@@ -1361,6 +1389,19 @@ Dieser IG folgt           <a href="https://semver.org/">Semantic Versioning 2.0.
       </tr>
       <tr>
         <td>
+          <a href="de/Release-Notes.html">web</a>
+        </td>
+        <td>
+          <a href="https://spl.stanford.edu/resources">spl.stanford.edu</a>
+        </td>
+        <td>
+Die englischen Wortlaute sind           <strong>beschafft, nicht erinnert</strong>
+: ERQ aus dem Originalbogen des           <a href="https://spl.stanford.edu/resources">Stanford Psychophysiology Laboratory</a>
+, EDE-Q aus dem autorisierten Bogen EDE-Q 6.0 (&copy; Fairburn and Beglin 2008, CREDO Oxford), ACE aus einem an Felitti et al. 1998 zitierenden Exemplar.
+        </td>
+      </tr>
+      <tr>
+        <td>
           <a href="de/SCOFF.html">web</a>
         </td>
         <td>
@@ -1487,7 +1528,7 @@ Dieser Implementation Guide wird vom           <a href="https://www.bihealth.org
           Package pcor-mii#0.3.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Generated 
-            <span title="2026-09-30 09:08:00 +0000">
+            <span title="2026-09-30 09:23:00 +0000">
     2026-09-30
   </span>
 

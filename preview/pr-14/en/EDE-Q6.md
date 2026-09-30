@@ -10,6 +10,14 @@
 
 Der EDE-Q6 ist ein **projektspezifischer Zuschnitt** des EDE-Q (Fairburn & Beglin 1994; deutsche Fassung Hilbert, Tuschen-Caffier, Karwautz et al., **Diagnostica** 2007). Die Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie DCH) und werden **vorläufig in PCOR-MII** gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe [ADR-003](Designentscheidungen.md)). Erhoben nur im Szenario [AN](AN.md).
 
+### Sprachebenen
+
+`Questionnaire.language` steht auf **`en`**: Das EDE-Q-Original ist englisch (Fairburn & Beglin 1994). `item.text` und die sieben Antwortkonzepte tragen den Wortlaut des autorisierten Bogens **EDE-Q 6.0** (© Fairburn and Beglin 2008), frei bereitgestellt vom Centre for Research on Eating Disorders at Oxford; die deutsche dgvt-Fassung hängt als `translation` bzw. `designation` mit `lang = de` daran.
+
+**Das verbessert hier zugleich die Rechtelage.** Der englische Wortlaut ist frei bereitgestellt, der deutsche steht unter dem dgvt-Rechtevorbehalt (siehe unten und [ADR-006](Designentscheidungen.md)). Englisch primär verschiebt den heikleren Teil damit in eine Übersetzungsebene, statt ihn zum Hauptinhalt zu machen.
+
+**Ein Fund beim Abgleich mit dem Originalbogen:** Zwei Dinge, die man kennen sollte. Item 12 heißt im Original **„Have you had a **strong** desire to lose weight?“** — unsere deutsche Fassung sagt passend **„einen **starken** Wunsch“**. Und die Fragen `edeq29` und `edeq30` sind im englischen EDE-Q 6.0 **gar nicht nummeriert**: Sie stehen in einem unnummerierten Schlussblock nach Item 28, zusammen mit Gewicht, Größe und der Frage nach der Pille. Die Nummern 29 und 30 stammen aus der deutschen Ausgabe; die `linkId`s folgen also der deutschen Zählung, nicht dem Originalbogen.
+
 ### Artefakte
 
 * **Fragebogen:** [Questionnaire-EDEQ6](Questionnaire-EDEQ6.md)

@@ -395,6 +395,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
@@ -417,6 +418,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Erhoben wird der Bogen nur im Szenario <a href="AN.html">AN</a>. Gepflegt wird er <strong>vorläufig in PCOR-MII</strong>; eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen (siehe <a href="Designentscheidungen.html">ADR-003</a>).</p>
 
 <p><strong>Eine Ungenauigkeit der DIZ-Liste am Rande:</strong> In der Spalte <em>„verkürzte Version?“</em> steht beim ERQ-6 dieselbe Formel wie bei <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a> und <a href="SSUK-2.html">SSUK-2</a> — <em>„nur das Item mit der höchsten Trennschärfe pro Skala“</em>. Im Singular trifft das hier nicht zu: Es sind <strong>drei</strong> Items je Subskala, nicht eines. Die Formel wirkt durchkopiert. Inhaltlich ist die Sache aber eher stärker als dort — der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform, und deshalb der einzige der fünf AN-Zuschnitte mit validiertem Scoring.</p>
+
+<h3 id="sprachebenen">Sprachebenen</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Questionnaire.language</code> steht auf <strong><code class="language-plaintext highlighter-rouge">en</code></strong>: Das ERQ-Original ist englisch (Gross &amp; John 2003), also trägt <code class="language-plaintext highlighter-rouge">item.text</code> den englischen Originalwortlaut und die autorisierte deutsche Fassung von <strong>Abler &amp; Kessler (2009)</strong> hängt als <code class="language-plaintext highlighter-rouge">translation</code>-Extension mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran — bei allen sechs Items und den sechs Skalenankern. Beide Bögen stellt das <a href="https://spl.stanford.edu/resources">Stanford Psychophysiology Laboratory</a> frei bereit; die deutsche Fassung ist dort ausdrücklich als <em>„autorisiert von den Autoren der englischen Originalversion“</em> ausgewiesen.</p>
+
+<p>Das folgt <a href="Designentscheidungen.html">ADR-005</a> und ist gleichzeitig Voraussetzung für eine Aufnahme ins MII-PRO-Modul, das durchgehend so arbeitet.</p>
+
+<p><strong>Nur die sechs ERQ-S-Items sind modelliert, nicht der ERQ-10.</strong> Die Langform darf nach <a href="Designentscheidungen.html">ADR-008</a> mitmodelliert werden und ist inzwischen vollständig beschafft — englischer Originalbogen und autorisierte deutsche Fassung, jeweils zehn Items —, ist aber nicht Bestandteil dieses Release. Für diesen Bogen ist sie vor allem die <strong>Quelle des deutschen Wortlauts</strong>: Die Kurzform-Publikation nennt nur Itemnummern und Psychometrie, keinen übersetzten Text.</p>
 
 <h3 id="artefakte">Artefakte</h3>
 
@@ -576,7 +585,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 09:08:00 +0000">
+  <span title="2026-09-30 09:23:00 +0000">
     2026-09-30
   </span>
 

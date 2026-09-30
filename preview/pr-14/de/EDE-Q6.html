@@ -393,6 +393,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
@@ -410,6 +411,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
 <p>Der EDE-Q6 ist ein <strong>projektspezifischer Zuschnitt</strong> des EDE-Q (Fairburn &amp; Beglin 1994; deutsche Fassung Hilbert, Tuschen-Caffier, Karwautz et al., <em>Diagnostica</em> 2007). Die Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie DCH) und werden <strong>vorläufig in PCOR-MII</strong> gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe <a href="Designentscheidungen.html">ADR-003</a>). Erhoben nur im Szenario <a href="AN.html">AN</a>.</p>
+
+<h3 id="sprachebenen">Sprachebenen</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Questionnaire.language</code> steht auf <strong><code class="language-plaintext highlighter-rouge">en</code></strong>: Das EDE-Q-Original ist englisch (Fairburn &amp; Beglin 1994). <code class="language-plaintext highlighter-rouge">item.text</code> und die sieben Antwortkonzepte tragen den Wortlaut des autorisierten Bogens <strong>EDE-Q 6.0</strong> (© Fairburn and Beglin 2008), frei bereitgestellt vom Centre for Research on Eating Disorders at Oxford; die deutsche dgvt-Fassung hängt als <code class="language-plaintext highlighter-rouge">translation</code> bzw. <code class="language-plaintext highlighter-rouge">designation</code> mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran.</p>
+
+<p><strong>Das verbessert hier zugleich die Rechtelage.</strong> Der englische Wortlaut ist frei bereitgestellt, der deutsche steht unter dem dgvt-Rechtevorbehalt (siehe unten und <a href="Designentscheidungen.html">ADR-006</a>). Englisch primär verschiebt den heikleren Teil damit in eine Übersetzungsebene, statt ihn zum Hauptinhalt zu machen.</p>
+
+<p><strong>Ein Fund beim Abgleich mit dem Originalbogen:</strong> Zwei Dinge, die man kennen sollte. Item 12 heißt im Original <em>„Have you had a <strong>strong</strong> desire to lose weight?“</em> — unsere deutsche Fassung sagt passend <em>„einen <strong>starken</strong> Wunsch“</em>. Und die Fragen <code class="language-plaintext highlighter-rouge">edeq29</code> und <code class="language-plaintext highlighter-rouge">edeq30</code> sind im englischen EDE-Q 6.0 <strong>gar nicht nummeriert</strong>: Sie stehen in einem unnummerierten Schlussblock nach Item 28, zusammen mit Gewicht, Größe und der Frage nach der Pille. Die Nummern 29 und 30 stammen aus der deutschen Ausgabe; die <code class="language-plaintext highlighter-rouge">linkId</code>s folgen also der deutschen Zählung, nicht dem Originalbogen.</p>
 
 <h3 id="artefakte">Artefakte</h3>
 
@@ -599,7 +608,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:08:00 +0000">
+  <span title="2026-09-30 09:23:00 +0000">
     2026-09-30
   </span>
 

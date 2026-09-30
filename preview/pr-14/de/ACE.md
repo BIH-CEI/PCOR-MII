@@ -8,6 +8,16 @@
 
 Der PCOR-Zuschnitt umfasst die **ersten 5 der 10 ACE-Fragen** (Felitti et al., **Am J Prev Med** 1998; deutsche Fassung Wingenfeld et al., **PPmP** 2010): emotionale Misshandlung, körperliche Misshandlung, sexueller Missbrauch, emotionale Vernachlässigung, körperliche Vernachlässigung. Die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. Die Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie EFA) und werden **vorläufig in PCOR-MII** gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe [ADR-003](Designentscheidungen.md)). Erhoben nur im Szenario [AN](AN.md).
 
+### Sprachebenen
+
+`Questionnaire.language` steht auf **`en`**: Das ACE-Original ist englisch (Felitti et al. 1998, Kaiser Permanente / CDC). `item.text` trägt den englischen Originalwortlaut, die deutsche Fassung **ACE-D** hängt als `translation`-Extension mit `lang = de` daran.
+
+**Hier ist die Anordnung auch rechtlich die bessere**, denn die Rechtelage ist **nicht symmetrisch**: Das englische Original ist ein breit frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen (siehe unten). Englisch primär verschiebt den ungeklärten Teil in eine Übersetzungsebene.
+
+Zur Quelle des englischen Wortlauts: ein an die Originalpublikation zitierendes Exemplar, nicht der Verlagsabdruck. Der Wortlaut der zehn Items ist seit 1998 unverändert und vielfach identisch reproduziert.
+
+**Nur die ersten fünf Items sind modelliert, nicht der ACE-10.** Die Langform darf nach [ADR-008](Designentscheidungen.md) mitmodelliert werden, ist aber nicht Bestandteil dieses Release — und der deutsche Wortlaut der Items 6 bis 10 liegt ohnehin nicht vor.
+
 ### Artefakte
 
 * **Fragebogen:** [Questionnaire-ACE](Questionnaire-ACE.md)

@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:08:36+00:00",
+  "date" : "2026-09-30T09:23:41+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -55,7 +55,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "concept" : [{
     "code" : "0",
-    "display" : "kein Tag",
+    "display" : "No days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "kein Tag"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 0
@@ -63,7 +67,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "1",
-    "display" : "1–5 Tage",
+    "display" : "1-5 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "1–5 Tage"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 1
@@ -71,7 +79,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "2",
-    "display" : "6–12 Tage",
+    "display" : "6-12 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "6–12 Tage"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 2
@@ -79,7 +91,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "3",
-    "display" : "13–15 Tage",
+    "display" : "13-15 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "13–15 Tage"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 3
@@ -87,7 +103,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "4",
-    "display" : "16–22 Tage",
+    "display" : "16-22 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "16–22 Tage"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 4
@@ -95,7 +115,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "5",
-    "display" : "23–27 Tage",
+    "display" : "23-27 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "23–27 Tage"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 5
@@ -103,7 +127,11 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   },
   {
     "code" : "6",
-    "display" : "jeden Tag",
+    "display" : "Every day",
+    "designation" : [{
+      "language" : "de",
+      "value" : "jeden Tag"
+    }],
     "property" : [{
       "code" : "ordinalValue",
       "valueDecimal" : 6

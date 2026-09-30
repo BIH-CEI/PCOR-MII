@@ -393,6 +393,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
@@ -407,6 +408,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
 <p>Der PCOR-Zuschnitt umfasst die <strong>ersten 5 der 10 ACE-Fragen</strong> (Felitti et al., <em>Am J Prev Med</em> 1998; deutsche Fassung Wingenfeld et al., <em>PPmP</em> 2010): emotionale Misshandlung, körperliche Misshandlung, sexueller Missbrauch, emotionale Vernachlässigung, körperliche Vernachlässigung. Die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. Die Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie EFA) und werden <strong>vorläufig in PCOR-MII</strong> gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe <a href="Designentscheidungen.html">ADR-003</a>). Erhoben nur im Szenario <a href="AN.html">AN</a>.</p>
+
+<h3 id="sprachebenen">Sprachebenen</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Questionnaire.language</code> steht auf <strong><code class="language-plaintext highlighter-rouge">en</code></strong>: Das ACE-Original ist englisch (Felitti et al. 1998, Kaiser Permanente / CDC). <code class="language-plaintext highlighter-rouge">item.text</code> trägt den englischen Originalwortlaut, die deutsche Fassung <strong>ACE-D</strong> hängt als <code class="language-plaintext highlighter-rouge">translation</code>-Extension mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran.</p>
+
+<p><strong>Hier ist die Anordnung auch rechtlich die bessere</strong>, denn die Rechtelage ist <strong>nicht symmetrisch</strong>: Das englische Original ist ein breit frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen (siehe unten). Englisch primär verschiebt den ungeklärten Teil in eine Übersetzungsebene.</p>
+
+<p>Zur Quelle des englischen Wortlauts: ein an die Originalpublikation zitierendes Exemplar, nicht der Verlagsabdruck. Der Wortlaut der zehn Items ist seit 1998 unverändert und vielfach identisch reproduziert.</p>
+
+<p><strong>Nur die ersten fünf Items sind modelliert, nicht der ACE-10.</strong> Die Langform darf nach <a href="Designentscheidungen.html">ADR-008</a> mitmodelliert werden, ist aber nicht Bestandteil dieses Release — und der deutsche Wortlaut der Items 6 bis 10 liegt ohnehin nicht vor.</p>
 
 <h3 id="artefakte">Artefakte</h3>
 
@@ -534,7 +545,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:08:00 +0000">
+  <span title="2026-09-30 09:23:00 +0000">
     2026-09-30
   </span>
 
