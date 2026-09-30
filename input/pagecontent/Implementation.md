@@ -29,11 +29,11 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
   "resourceType": "QuestionnaireResponse",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.7.0"
     ]
   },
-  "language": "de-DE",
-  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
+  "language": "de",
+  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.3.0",
   "status": "completed",
   "subject": { "reference": "Patient/pcor-mii-exa-patient" },
   "authored": "2026-06-16T10:00:00+02:00",
@@ -67,7 +67,7 @@ Vollständige, validierte Beispiele:
 ```bash
 fhir validate <qr.json> \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```

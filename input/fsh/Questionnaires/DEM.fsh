@@ -633,6 +633,14 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" //Isik!!!
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM"
 * name = "DEM"
+// SPRACHE — en, weil der PaRIS-Anteil primaer englisch ist: 19 der 27 Items
+//   tragen den englischen Originalwortlaut als item.text mit der Schweizer
+//   Fassung als de-CH-translation (ADR-005). DEM ist bewusst GEMISCHT —
+//   deutsch-primaer bleiben die Nicht-PaRIS-Items (AGE, Q_GENDERID, Zipcode,
+//   CPCOR_REQ) sowie die GI-PS-Items, deren Lizenz eine Uebersetzung
+//   ausdruecklich untersagt. Resource.language nennt die BASISSPRACHE, und das
+//   ist hier mit Mehrheit Englisch.
+* language = #en
 * insert Version
 * status = #draft
 * experimental = true

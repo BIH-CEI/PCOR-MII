@@ -28,7 +28,7 @@ flowchart TB
     style CS fill:#e1ffe1
 ```
 
-Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.4.1)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
+Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.7.0)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
 
 ## Drei Wege zum validierten Bundle
 
@@ -56,7 +56,7 @@ curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/
 # Validieren
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
@@ -71,8 +71,8 @@ Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: dekla
 
 Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
-- [ ] **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.4.1`
-- [ ] **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.4.1`
+- [ ] **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.7.0`
+- [ ] **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.7.0`
 - [ ] **`linkId`s** der Answer-Items matchen *exakt* die im Questionnaire definierten linkIds
 - [ ] **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.html) Item-Tabellen)
 - [ ] **`status = completed`** (bzw. `in-progress`/`amended` je nach Lebenszyklus)
@@ -120,7 +120,7 @@ Reproduzieren:
 for f in input/examples/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
-    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1 \
+    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
     -ig hl7.fhir.uv.sdc#3.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response

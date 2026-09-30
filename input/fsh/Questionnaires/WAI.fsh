@@ -103,6 +103,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI"
 * name = "WAI"
+* language = #de
 * insert Version
 * status = #draft
 * experimental = true

@@ -204,6 +204,7 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6"
 * name = "EDEQ6"
+* language = #de
 * insert Version
 * status = #draft
 * experimental = true

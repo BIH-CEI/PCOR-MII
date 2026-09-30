@@ -102,6 +102,7 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
+* language = #de
 * insert Version
 * status = #draft
 * experimental = true

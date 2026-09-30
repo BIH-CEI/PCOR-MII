@@ -17,7 +17,7 @@ Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundl
 
 ```mermaid
 flowchart LR
-    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.4.1"| HAPI
+    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
     REPO[("PCOR-MII Repo")] -->|"als Package"| HAPI
     HAPI_BASE["hapiproject/hapi:v8.4.0"] --> HAPI["PCOR-MII Container<br/>localhost:8097"]
     HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
@@ -40,14 +40,14 @@ Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker
 Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.
 
 ```bash
-fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.4.1
-# entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.4.1/
+fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
+# entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/
 ```
 
 Beispiel `sushi-config.yaml`:
 ```yaml
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.4.1
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
   hl7.fhir.uv.sdc: 3.0.0
 ```
 
@@ -81,7 +81,7 @@ ValueSets kommen im `compose`-Format. Für PROMIS reicht das, weil die Konzepte 
 
 Auf Standard-HAPI: `PUT Questionnaire/promis-29` mit neuer `Questionnaire.version` **überschreibt** den existierenden Eintrag. Eine ältere QR mit `…|2026.3.0`-Referenz ist danach nicht mehr sauber resolvbar — pro `id` koexistiert nur eine Version.
 
-Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.4.1) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.4.1`).
+Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.7.0`).
 
 ## Pilot-Datenfluss "50 First Patients"
 

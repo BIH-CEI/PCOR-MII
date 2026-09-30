@@ -362,6 +362,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI"
 * name = "MHI"
+* language = #de
 * insert Version
 * status = #draft
 * experimental = true

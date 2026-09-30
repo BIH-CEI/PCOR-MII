@@ -80,6 +80,7 @@ Description: "Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebog
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE"
 * name = "ACE"
+* language = #de
 * insert Version
 * status = #draft
 * experimental = true
