@@ -48,6 +48,7 @@ Description: "Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden
 // ── Erwartete Gesamtstärke der Beschwerden ──────────────────────────────────
 * item[+]
   * linkId = "EXPECT_01"
+  * code[+] = PcorItemDictionaryCS#EXPECT_01
   * text = "Welche Gesamtstärke Ihrer Körperbeschwerden erwarten Sie in 6 Monaten?"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -66,6 +67,7 @@ Description: "Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden
 // ── Erwartete Beeinträchtigung ──────────────────────────────────────────────
 * item[+]
   * linkId = "EXPECT_02"
+  * code[+] = PcorItemDictionaryCS#EXPECT_02
   * text = "Wie sehr erwarten Sie in 6 Monaten durch Körperbeschwerden beeinträchtigt zu sein?"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -84,6 +86,7 @@ Description: "Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden
 // ── Erwartete Bewältigung (umgekehrt gepolt) ────────────────────────────────
 * item[+]
   * linkId = "EXPECT_03"
+  * code[+] = PcorItemDictionaryCS#EXPECT_03
   * text = "Wie gut erwarten Sie, in 6 Monaten mit möglichen Körperbeschwerden umgehen zu können?"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"

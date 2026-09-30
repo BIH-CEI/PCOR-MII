@@ -355,6 +355,12 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
 * date = "2026-06-17"
 * publisher = "BIH-CEI"
 
+// RECHTE: Die GI-PS-Items (GIPS13, GIPS56a, GIPS56b1-4, GIPS57a/b, GIPS58)
+//   unterliegen einem Weitergabevorbehalt der Testautor:innen. Klärung offen —
+//   siehe Designentscheidungen; ohne Zustimmung wären sie auf metadata-only
+//   umzustellen (Muster WAI).
+* copyright = "Die Items `GIPS13`, `GIPS56a`, `GIPS56b1`–`GIPS56b4`, `GIPS57a`, `GIPS57b` und `GIPS58` stammen aus dem GI-PS (doi:10.13109/zptm.2023.69.1.56). Die Eigentums-, Urheber-, Weitergabe- und Veröffentlichungsrechte verbleiben bei den jeweiligen Testautor:innen; das GI-PS oder Teile davon dürfen ohne deren Zustimmung nicht modifiziert, übersetzt oder an Dritte weitergegeben werden. Für PCOR-MII ist diese Zustimmung noch nicht dokumentiert — siehe Designentscheidungen. Die Verantwortung für Durchführung, Berechnung und Interpretation der Befragungsergebnisse liegt bei den Nutzenden. Der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
+
 * item[+]
   * linkId = "anthropometrie"
   * text = "Körpermaße"
@@ -363,13 +369,14 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * linkId = "Q_WB151"
     * text = "Wie viel wiegen Sie?"
     * type = #choice
-    * code = $LOINC#29463-7 "Körpergewicht"
+    * code[+] = $LOINC#29463-7 "Körpergewicht"
     * answerValueSet = Canonical(MhiGewichtAngabeVS)
   * item[+]
     * linkId = "Q_WB151a"
+    * code[+] = PcorItemDictionaryCS#Q_WB151a
     * text = "Wie viel wiegen Sie? (kg)"
     * type = #decimal
-    * code = $LOINC#29463-7 "Körpergewicht"
+    * code[+] = $LOINC#29463-7 "Körpergewicht"
     * enableWhen[+].question = "Q_WB151"
     * enableWhen[=].operator = #=
     * enableWhen[=].answerCoding = MhiGewichtAngabeCS#kg "kg"
@@ -377,13 +384,14 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * linkId = "Q_WB152"
     * text = "Wie groß sind Sie?"
     * type = #choice
-    * code = $LOINC#8302-2 "Körpergröße"
+    * code[+] = $LOINC#8302-2 "Körpergröße"
     * answerValueSet = Canonical(MhiGroesseAngabeVS)
   * item[+]
     * linkId = "Q_WB152a"
+    * code[+] = PcorItemDictionaryCS#Q_WB152a
     * text = "Wie groß sind Sie? (cm)"
     * type = #decimal
-    * code = $LOINC#8302-2 "Körpergröße"
+    * code[+] = $LOINC#8302-2 "Körpergröße"
     * enableWhen[+].question = "Q_WB152"
     * enableWhen[=].operator = #=
     * enableWhen[=].answerCoding = MhiGroesseAngabeCS#cm "cm"
@@ -394,16 +402,19 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
   * type = #group
   * item[+]
     * linkId = "CPCOR-DIAG"
+    * code[+] = PcorItemDictionaryCS#CPCOR-DIAG
     * text = "Zu welcher Gruppe würden Sie sich zuordnen?"
     * type = #choice
     * repeats = true
     * answerValueSet = Canonical(MhiCpcorDiagVS)
   * item[+]
     * linkId = "CPCOR_ONSET"
+    * code[+] = PcorItemDictionaryCS#CPCOR_ONSET
     * text = "Bitte geben Sie an, in welchem Jahr Sie Ihre Diagnose erhalten haben"
     * type = #integer
   * item[+]
     * linkId = "GIPS13"
+    * code[+] = PcorItemDictionaryCS#GIPS13
     * text = "Welche chronischen Erkrankungen haben Sie?"
     * type = #choice
     * repeats = true
@@ -415,27 +426,31 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
   * type = #group
   * item[+]
     * linkId = "GIPS57a"
+    * code[+] = PcorItemDictionaryCS#GIPS57a
     * text = "Rauchen Sie (einschließlich E-Zigaretten)?"
     * type = #choice
-    * code = $LOINC#72166-2 "Raucherstatus"
+    * code[+] = $LOINC#72166-2 "Raucherstatus"
     * answerValueSet = Canonical(DemJaNeinVS)
   * item[+]
     * linkId = "GIPS57b"
+    * code[+] = PcorItemDictionaryCS#GIPS57b
     * text = "Wenn ja: Wie viele Zigaretten rauchen Sie pro Tag?"
     * type = #choice
-    * code = $LOINC#64218-1 "How many cigarettes do you smoke per day now [PhenX]"
+    * code[+] = $LOINC#64218-1 "How many cigarettes do you smoke per day now [PhenX]"
     * answerValueSet = Canonical(DemZigarettenBandVS)
     * enableWhen[+].question = "GIPS57a"
     * enableWhen[=].operator = #=
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "GIPS56a"
+    * code[+] = PcorItemDictionaryCS#GIPS56a
     * text = "Trinken Sie Alkohol?"
     * type = #choice
-    * code = $LOINC#11331-6 "History of Alcohol use"
+    * code[+] = $LOINC#11331-6 "History of Alcohol use"
     * answerValueSet = Canonical(DemJaNeinVS)
   * item[+]
     * linkId = "GIPS56b1"
+    * code[+] = PcorItemDictionaryCS#GIPS56b1
     * text = "Haben Sie jemals daran gedacht, weniger zu trinken? (CAGE 1)"
     * type = #choice
     * answerValueSet = Canonical(DemJaNeinVS)
@@ -444,6 +459,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "GIPS56b2"
+    * code[+] = PcorItemDictionaryCS#GIPS56b2
     * text = "Haben Sie sich schon einmal darüber geärgert, dass Sie von anderen wegen Ihres Alkoholkonsums kritisiert wurden? (CAGE 2)"
     * type = #choice
     * answerValueSet = Canonical(DemJaNeinVS)
@@ -452,6 +468,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "GIPS56b3"
+    * code[+] = PcorItemDictionaryCS#GIPS56b3
     * text = "Haben Sie sich jemals wegen Ihres Trinkens schuldig gefühlt? (CAGE 3)"
     * type = #choice
     * answerValueSet = Canonical(DemJaNeinVS)
@@ -460,6 +477,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "GIPS56b4"
+    * code[+] = PcorItemDictionaryCS#GIPS56b4
     * text = "Haben Sie jemals morgens als erstes Alkohol getrunken, um sich nervlich zu stabilisieren oder einen Kater loszuwerden? (CAGE 4 — Eye-opener)"
     * type = #choice
     * answerValueSet = Canonical(DemJaNeinVS)
@@ -468,9 +486,10 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "GIPS58"
+    * code[+] = PcorItemDictionaryCS#GIPS58
     * text = "Nutzen Sie hin und wieder eine der folgenden Substanzen: Cannabis, Ecstasy, Kokain, Amphetamine, Anabolika, Crystal?"
     * type = #choice
-    * code = $LOINC#96873-5 "Illegal or recreational drug(s) used in past 3 months"
+    * code[+] = $LOINC#96873-5 "Illegal or recreational drug(s) used in past 3 months"
     * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
@@ -479,11 +498,13 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
   * type = #group
   * item[+]
     * linkId = "medication1"
+    * code[+] = PcorItemDictionaryCS#medication1
     * text = "Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?"
     * type = #choice
     * answerValueSet = Canonical(DemJaNeinVS)
   * item[+]
     * linkId = "medication_text"
+    * code[+] = PcorItemDictionaryCS#medication_text
     * text = "Bitte nennen Sie alle Medikamente, die Sie aktuell regelmäßig oder bei Bedarf einnehmen."
     * type = #text
     * enableWhen[+].question = "medication1"
@@ -491,6 +512,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
   * item[+]
     * linkId = "MEDI_01"
+    * code[+] = PcorItemDictionaryCS#MEDI_01
     * text = "Wie viele Medikamente nehmen Sie insgesamt momentan ein?"
     * type = #integer
     * enableWhen[+].question = "medication1"
@@ -505,23 +527,28 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
     * item[+]
       * linkId = "medi_02_name_01"
+      * code[+] = PcorItemDictionaryCS#medi_02_name_01
       * text = "Name des Medikaments"
       * type = #string
     * item[+]
       * linkId = "medi_02_onset_01"
+      * code[+] = PcorItemDictionaryCS#medi_02_onset_01
       * text = "Seit wann nehmen Sie dieses Medikament ein?"
       * type = #string
     * item[+]
       * linkId = "medi_02_dose_01"
+      * code[+] = PcorItemDictionaryCS#medi_02_dose_01
       * text = "Falls bekannt: Wie ist die Dosierung dieses Medikaments?"
       * type = #string
     * item[+]
       * linkId = "medi_02_time_01"
+      * code[+] = PcorItemDictionaryCS#medi_02_time_01
       * text = "Wann nehmen Sie dieses Medikament ein?"
       * type = #choice
       * answerValueSet = Canonical(MhiEinnahmezeitVS)
     * item[+]
       * linkId = "medi_02_frequency_01"
+      * code[+] = PcorItemDictionaryCS#medi_02_frequency_01
       * text = "Wie häufig nehmen Sie dieses Medikament pro Woche ein?"
       * type = #string
   * item[+]
@@ -533,23 +560,28 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
     * item[+]
       * linkId = "medi_02_name_02"
+      * code[+] = PcorItemDictionaryCS#medi_02_name_02
       * text = "Name des Medikaments"
       * type = #string
     * item[+]
       * linkId = "medi_02_onset_02"
+      * code[+] = PcorItemDictionaryCS#medi_02_onset_02
       * text = "Seit wann nehmen Sie dieses Medikament ein?"
       * type = #string
     * item[+]
       * linkId = "medi_02_dose_02"
+      * code[+] = PcorItemDictionaryCS#medi_02_dose_02
       * text = "Falls bekannt: Wie ist die Dosierung dieses Medikaments?"
       * type = #string
     * item[+]
       * linkId = "medi_02_time_02"
+      * code[+] = PcorItemDictionaryCS#medi_02_time_02
       * text = "Wann nehmen Sie dieses Medikament ein?"
       * type = #choice
       * answerValueSet = Canonical(MhiEinnahmezeitVS)
     * item[+]
       * linkId = "medi_02_frequency_02"
+      * code[+] = PcorItemDictionaryCS#medi_02_frequency_02
       * text = "Wie häufig nehmen Sie dieses Medikament pro Woche ein?"
       * type = #string
   * item[+]
@@ -561,23 +593,28 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
     * item[+]
       * linkId = "medi_02_name_03"
+      * code[+] = PcorItemDictionaryCS#medi_02_name_03
       * text = "Name des Medikaments"
       * type = #string
     * item[+]
       * linkId = "medi_02_onset_03"
+      * code[+] = PcorItemDictionaryCS#medi_02_onset_03
       * text = "Seit wann nehmen Sie dieses Medikament ein?"
       * type = #string
     * item[+]
       * linkId = "medi_02_dose_03"
+      * code[+] = PcorItemDictionaryCS#medi_02_dose_03
       * text = "Falls bekannt: Wie ist die Dosierung dieses Medikaments?"
       * type = #string
     * item[+]
       * linkId = "medi_02_time_03"
+      * code[+] = PcorItemDictionaryCS#medi_02_time_03
       * text = "Wann nehmen Sie dieses Medikament ein?"
       * type = #choice
       * answerValueSet = Canonical(MhiEinnahmezeitVS)
     * item[+]
       * linkId = "medi_02_frequency_03"
+      * code[+] = PcorItemDictionaryCS#medi_02_frequency_03
       * text = "Wie häufig nehmen Sie dieses Medikament pro Woche ein?"
       * type = #string
   * item[+]
@@ -589,23 +626,28 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
     * item[+]
       * linkId = "medi_02_name_04"
+      * code[+] = PcorItemDictionaryCS#medi_02_name_04
       * text = "Name des Medikaments"
       * type = #string
     * item[+]
       * linkId = "medi_02_onset_04"
+      * code[+] = PcorItemDictionaryCS#medi_02_onset_04
       * text = "Seit wann nehmen Sie dieses Medikament ein?"
       * type = #string
     * item[+]
       * linkId = "medi_02_dose_04"
+      * code[+] = PcorItemDictionaryCS#medi_02_dose_04
       * text = "Falls bekannt: Wie ist die Dosierung dieses Medikaments?"
       * type = #string
     * item[+]
       * linkId = "medi_02_time_04"
+      * code[+] = PcorItemDictionaryCS#medi_02_time_04
       * text = "Wann nehmen Sie dieses Medikament ein?"
       * type = #choice
       * answerValueSet = Canonical(MhiEinnahmezeitVS)
     * item[+]
       * linkId = "medi_02_frequency_04"
+      * code[+] = PcorItemDictionaryCS#medi_02_frequency_04
       * text = "Wie häufig nehmen Sie dieses Medikament pro Woche ein?"
       * type = #string
   * item[+]
@@ -617,23 +659,28 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
     * item[+]
       * linkId = "medi_02_name_05"
+      * code[+] = PcorItemDictionaryCS#medi_02_name_05
       * text = "Name des Medikaments"
       * type = #string
     * item[+]
       * linkId = "medi_02_onset_05"
+      * code[+] = PcorItemDictionaryCS#medi_02_onset_05
       * text = "Seit wann nehmen Sie dieses Medikament ein?"
       * type = #string
     * item[+]
       * linkId = "medi_02_dose_05"
+      * code[+] = PcorItemDictionaryCS#medi_02_dose_05
       * text = "Falls bekannt: Wie ist die Dosierung dieses Medikaments?"
       * type = #string
     * item[+]
       * linkId = "medi_02_time_05"
+      * code[+] = PcorItemDictionaryCS#medi_02_time_05
       * text = "Wann nehmen Sie dieses Medikament ein?"
       * type = #choice
       * answerValueSet = Canonical(MhiEinnahmezeitVS)
     * item[+]
       * linkId = "medi_02_frequency_05"
+      * code[+] = PcorItemDictionaryCS#medi_02_frequency_05
       * text = "Wie häufig nehmen Sie dieses Medikament pro Woche ein?"
       * type = #string
 
@@ -643,26 +690,31 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
   * type = #group
   * item[+]
     * linkId = "weight_outpatient_1"
+    * code[+] = PcorItemDictionaryCS#weight_outpatient_1
     * text = "Ambulant gemessenes Körpergewicht (kg) — empfohlen beim Hausarzt mit geeichter Waage"
     * type = #decimal
-    * code = $LOINC#29463-7 "Körpergewicht"
+    * code[+] = $LOINC#29463-7 "Körpergewicht"
   * item[+]
     * linkId = "weight_outpatient_2"
+    * code[+] = PcorItemDictionaryCS#weight_outpatient_2
     * text = "Wie haben Sie das oben genannte Gewicht ermittelt?"
     * type = #choice
     * answerValueSet = Canonical(MhiGewichtsmethodeVS)
   * item[+]
     * linkId = "weight_inpatient"
+    * code[+] = PcorItemDictionaryCS#weight_inpatient
     * text = "Stationäres Körpergewicht — wie viel wiegen Sie aktuell in kg?"
     * type = #decimal
-    * code = $LOINC#29463-7 "Körpergewicht"
+    * code[+] = $LOINC#29463-7 "Körpergewicht"
   * item[+]
     * linkId = "weight_discharge"
+    * code[+] = PcorItemDictionaryCS#weight_discharge
     * text = "Körpergewicht bei Entlassung — wie viel wiegen Sie aktuell in kg?"
     * type = #decimal
-    * code = $LOINC#29463-7 "Körpergewicht"
+    * code[+] = $LOINC#29463-7 "Körpergewicht"
   * item[+]
     * linkId = "AN_subtyp"
+    * code[+] = PcorItemDictionaryCS#AN_subtyp
     * text = "Welchem Subtyp der Anorexia nervosa würden Sie sich zuordnen?"
     * type = #choice
     * answerValueSet = Canonical(MhiAnSubtypVS)

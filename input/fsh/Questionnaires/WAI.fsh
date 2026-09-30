@@ -107,7 +107,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * subjectType = #Patient
 * date = "2026-09-01"
 * publisher = "BIH-CEI"
-* code = $SCT#446174004 "Assessment using work ability index"
+* code[+] = $SCT#446174004 "Assessment using work ability index"
 * copyright = "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5) — die Publikationsrechte am WAI sind ungeklärt (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Rechteinhaber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi et al. 1998). Die vollständige, wortgleiche Originalversion des WAI/Work Ability Score darf ausschließlich über die berechtigte Bezugsquelle (FIOH bzw. deren lizenzierte Vertriebspartner) bezogen und genutzt werden."
 
 * item[+]
@@ -116,6 +116,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
   * type = #group
   * item[+]
     * linkId = "WAI01"
+    * code[+] = PcorItemDictionaryCS#WAI01
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit im Vergleich zur besten je erreichten Arbeitsfähigkeit, Skala 0-10 (0 = keine Arbeitsfähigkeit, 10 = beste je erreichte Arbeitsfähigkeit)."
     * type = #integer
     * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -126,11 +127,13 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
     * extension[=].valueInteger = 1
   * item[+]
     * linkId = "WAI02a"
+    * code[+] = PcorItemDictionaryCS#WAI02a
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die körperlichen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."
     * type = #choice
     * answerValueSet = Canonical(WaiSkala5VS)
   * item[+]
     * linkId = "WAI02b"
+    * code[+] = PcorItemDictionaryCS#WAI02b
     * text = "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die psychischen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."
     * type = #choice
     * answerValueSet = Canonical(WaiSkala5VS)

@@ -47,5 +47,6 @@ Description: "Eine offene Frage nach den drei wichtigsten subjektiven Ursachen d
 
 * item[+]
   * linkId = "IPQ_S1"
+  * code[+] = PcorItemDictionaryCS#IPQ_S1
   * text = "Bitte führen Sie nun die drei wichtigsten Gründe auf, die Ihrer Meinung nach Ihre vorher genannten körperlichen Beschwerden verursacht haben. Die wichtigsten Ursachen meiner Beschwerden sind:"
   * type = #text
