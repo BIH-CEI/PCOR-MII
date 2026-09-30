@@ -58,19 +58,19 @@ Description: "5-stufige Häufigkeitsskala für finanzielle Sorgen (MONMEAL/MONRE
 * ^experimental = true
 * ^caseSensitive = true
 * #staendig "Always"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Ständig"
 * #meistens "Often"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Meistens"
 * #manchmal "Sometimes"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Manchmal"
 * #selten "Rarely"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Selten"
 * #nie "Never"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Nie"
 
 CodeSystem: DemLeichtigkeit6CS
@@ -82,22 +82,22 @@ Description: "Skala zur erlebten Leichtigkeit, Unterstützung zu erhalten (WHODI
 * ^experimental = true
 * ^caseSensitive = true
 * #sehr-einfach "Very easy"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Sehr einfach"
 * #einfach "Easy"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Einfach"
 * #weder-noch "Neither easy nor difficult"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Weder einfach noch schwierig"
 * #schwierig "Difficult"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Schwierig"
 * #sehr-schwierig "Very difficult"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Sehr schwierig"
 * #nicht-zutreffend "Not applicable"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Nicht zutreffend"
 
 CodeSystem: DemIscedCS
@@ -125,61 +125,61 @@ Description: "Aktuelle Arbeitssituation nach OECD Measuring Financial Literacy (
 * ^experimental = true
 * ^caseSensitive = true
 * #selbststaendig "Self-employed [work for yourself]"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Selbstständigerwerbend"
 * #angestellt "In paid employment [work for someone else]"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Angestellt"
 * #arbeitssuchend "Looking for work"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Arbeitssuchend"
 * #haushalt "Looking after the home"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Hausfrau/Hausmann"
 * #arbeitsunfaehig "Unable to work due to sickness or ill-health"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Krankheitsbedingte Arbeitsunfähigkeit"
 * #pensioniert "Retired"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Pensioniert"
 * #student "Student"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Student/in"
 * #nicht-arbeitend "Not working and not looking for work"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Nicht arbeitend und nicht arbeitssuchend"
 * #lernende "Apprentice"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Lernende/r"
 * #anderes "Other"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Anderes"
 * #weiss-nicht "Don't know"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Ich weiss es nicht"
 
 CodeSystem: DemEinkommenCS
 Id: dem-einkommen
 Title: "DEM Haushaltseinkommen (Bänder)"
-Description: "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). EUR-Bänder nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen)."
+Description: "Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). Die ursprüngliche deutsche Übersetzung liegt in de-CH vor (Schweizer PaRIS-Fassung, Bänder bis CHF 3630 / zwischen CHF 3630 und CHF 6050 / ab CHF 6050 pro Monat). Für PCOR-MII sind die Bänder auf deutsche Gehaltsdaten angepasst: EUR-Terzile nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen). Das ist KEINE Währungsumrechnung, sondern eine eigenständige Skala — CHF 3630 entspräche grob 3.800 EUR, nicht 2.300 EUR. Weil der Wortlaut damit deutsch und nicht schweizerisch ist, tragen die Designations hier de-DE; die übrigen DEM-Antwortskalen behalten ihren Schweizer Wortlaut nach ADR-005 bewusst bei."
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
 * #band-niedrig "Up to €2,300 a month"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Bis zu 2.300 € pro Monat"
 * #band-mittel "Between €2,300 and €5,200 a month"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Zwischen 2.300 € und 5.200 € pro Monat"
 * #band-hoch "€5,200 a month or more"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "5.200 € pro Monat oder mehr"
 * #weiss-nicht "Don't know"
-  * ^designation[+].language = #de-CH
-  * ^designation[=].value = "Ich weiss es nicht"
+  * ^designation[+].language = #de-DE
+  * ^designation[=].value = "Ich weiß es nicht"
 * #keine-angabe "Prefer not to say"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Möchte ich nicht sagen"
 
 CodeSystem: DemUrbanizitaetCS
@@ -191,16 +191,16 @@ Description: "Beschreibung des Wohnorts (Q_OECDLITii)."
 * ^experimental = true
 * ^caseSensitive = true
 * #stadt "City"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Stadt"
 * #dorf-vorort "Town or suburb"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Dorf oder Vorort"
 * #laendlich "Rural area"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Ländliche Region"
 * #weiss-nicht "Don't know"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de
   * ^designation[=].value = "Ich weiss es nicht"
 
 CodeSystem: DemRentenstatusCS
@@ -249,19 +249,19 @@ Description: "Selbstbeschriebenes Geschlecht (Q_SEX). HINWEIS: Im MII-Kontext be
 * ^experimental = true
 * ^caseSensitive = true
 * #weiblich "Female"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Weiblich"
 * #maennlich "Male"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Männlich"
 * #nicht-binaer "Non-binary"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Nicht-binär"
 * #andere "Other"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Andere"
 * #keine-angabe "Prefer not to say"
-  * ^designation[+].language = #de-CH
+  * ^designation[+].language = #de-DE
   * ^designation[=].value = "Möchte ich nicht sagen"
 
 
