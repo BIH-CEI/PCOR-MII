@@ -39,14 +39,16 @@ Der Code bezeichnet das **Erhebungsfeld**. Hier stimmt es mit der Itemnummer üb
 
 ### Items
 
-| | | |
-| :--- | :--- | :--- |
-| `edeq1` | Nahrungsmenge bewusst begrenzt (Figur/Gewicht)? | 0–6 (kein Tag … jeden Tag) |
-| `edeq7` | Nachdenken über Nahrung/Essen/Kalorien erschwert Konzentration? | 0–6 (kein Tag … jeden Tag) |
-| `edeq12` | Starker Wunsch abzunehmen? | 0–6 (kein Tag … jeden Tag) |
-| `edeq27` | Unwohlsein beim Anblick des eigenen Körpers? | 0–6 (überhaupt nicht … deutlich) |
-| `edeq29` | Regelblutung in den letzten 3–4 Monaten ausgeblieben? (Für Frauen) | ja/nein |
-| `edeq30` | Wenn ja: wie viele Regelblutungen ausgeblieben? | Zahl (`integer`) |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `edeq1` | `edeq1` | Nahrungsmenge bewusst begrenzt (Figur/Gewicht)? | 0–6 (kein Tag … jeden Tag) |
+| `edeq7` | `edeq7` | Nachdenken über Nahrung/Essen/Kalorien erschwert Konzentration? | 0–6 (kein Tag … jeden Tag) |
+| `edeq12` | `edeq12` | Starker Wunsch abzunehmen? | 0–6 (kein Tag … jeden Tag) |
+| `edeq27` | `edeq27` | Unwohlsein beim Anblick des eigenen Körpers? | 0–6 (überhaupt nicht … deutlich) |
+| `edeq29` | `edeq29` | Regelblutung in den letzten 3–4 Monaten ausgeblieben? (Für Frauen) | ja/nein |
+| `edeq30` | `edeq30` | Wenn ja: wie viele Regelblutungen ausgeblieben? | Zahl (`integer`) |
+
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.md) ausdrücklich **nicht**.
 
 ### Die Auswahl folgt den vier Subskalen
 

@@ -46,10 +46,12 @@ Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer üb
 
 Beide Items teilen den Fragestamm **„Unter den Menschen, die Ihnen nahe stehen, gibt es jemanden, der/die.."** — im Questionnaire als `group`-Item modelliert, damit die Item-Texte wortgleich aus dem Dictionary übernommen bleiben:
 
-| | | |
-| :--- | :--- | :--- |
-| `ssuk14` | Sie aufmuntert oder tröstet | positive Unterstützung |
-| `ssuk10` | die Auswirkung Ihrer Erkrankung herunterspielt. | belastende Interaktion |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `ssuk14` | `ssuk14` | Sie aufmuntert oder tröstet | positive Unterstützung |
+| `ssuk10` | `ssuk10` | die Auswirkung Ihrer Erkrankung herunterspielt. | belastende Interaktion |
+
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.md) ausdrücklich **nicht**. Die beiden Items messen **Gegenläufiges** und dürfen nicht summiert werden.
 
 Die `linkId`s **sind** die Itemnummern der SSUK-Langfassung — verifiziert gegen die Primärquelle:
 

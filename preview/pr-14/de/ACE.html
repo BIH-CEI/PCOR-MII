@@ -446,36 +446,52 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="items">Items</h3>
 
+<p>Jedes Item trägt <strong>zwei</strong> <code class="language-plaintext highlighter-rouge">item.code</code>-Codings — die Dictionary-Variable und den item-genauen LOINC-Code:</p>
+
 <table>
   <thead>
     <tr>
       <th><code class="language-plaintext highlighter-rouge">linkId</code></th>
+      <th><code class="language-plaintext highlighter-rouge">item.code</code> (Dictionary)</th>
+      <th><code class="language-plaintext highlighter-rouge">item.code</code> (LOINC)</th>
       <th>Thema</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ace1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ace1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">82814-5</code></td>
       <td>Emotionale Misshandlung (beschimpft/erniedrigt; Angst vor Verletzung)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ace2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ace2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">82815-2</code></td>
       <td>Körperliche Misshandlung (gestoßen/geschlagen; Verletzungsspuren)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ace3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ace3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">82816-0</code></td>
       <td>Sexueller Missbrauch</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ace4</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ace4</code></td>
+      <td><code class="language-plaintext highlighter-rouge">82817-8</code></td>
       <td>Emotionale Vernachlässigung (nicht geliebt; kein Zusammenhalt)</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ace5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ace5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">82818-6</code></td>
       <td>Körperliche Vernachlässigung (Essen/Kleidung/Schutz; Eltern intoxikiert)</td>
     </tr>
   </tbody>
 </table>
+
+<p>Die LOINC-Codes sind die Panel-Komponenten von <code class="language-plaintext highlighter-rouge">82813-7</code>; der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt bewusst nicht zugewiesen. <code class="language-plaintext highlighter-rouge">linkId</code> und Dictionary-Variable stimmen hier überein — beim <a href="ERQ-6.html">ERQ-S</a> ausdrücklich <strong>nicht</strong>.</p>
 
 <p>Die Fragetexte sind wortgleich aus dem Item Level Dictionary übernommen; lediglich Layout-Artefakte der Excel-Zellen (Zeilenumbrüche, Mehrfach-Leerzeichen, inkonsistente führende Item-Nummern) wurden normalisiert. Ein gemeinsamer Instruktionstext steht als <code class="language-plaintext highlighter-rouge">display</code>-Item voran. <strong>Hinweis zur Erhebung:</strong> Die Items betreffen hochsensible Inhalte (Missbrauch, Vernachlässigung) — die Governance der Auswertung (analog PHQ-SI) ist fachlich zu klären.</p>
 
@@ -557,7 +573,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:31:00 +0000">
+  <span title="2026-09-30 09:36:00 +0000">
     2026-09-30
   </span>
 

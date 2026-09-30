@@ -27,10 +27,12 @@ Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer üb
 
 ### Items
 
-| | | |
-| :--- | :--- | :--- |
-| `ansocq3` | Körperteile, über die man sich bei Gewichtszunahme besonders Sorgen macht | 5 Feststellungen, Stadium 1–5 |
-| `ansocq14` | Zeit, die mit Gedanken an Nahrung und Gewicht verbracht wird | 5 Feststellungen, Stadium 1–5 |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `ansocq3` | `ansocq3` | Körperteile, über die man sich bei Gewichtszunahme besonders Sorgen macht | 5 Feststellungen, Stadium 1–5 |
+| `ansocq14` | `ansocq14` | Zeit, die mit Gedanken an Nahrung und Gewicht verbracht wird | 5 Feststellungen, Stadium 1–5 |
+
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.md) ausdrücklich **nicht**.
 
 Die `linkId`s sind die Dictionary-Variablen-IDs und entsprechen den Itemnummern des ANSOCQ. Feststellungs-Texte und Instruktionstext sind wortgleich aus dem Item Level Dictionary übernommen; jedem Antwortcode (1–5) ist per `ordinalValue` das Stadium der Veränderungsbereitschaft zugeordnet (1 ≈ Precontemplation … 5 ≈ Maintenance).
 

@@ -439,6 +439,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <thead>
     <tr>
       <th><code class="language-plaintext highlighter-rouge">linkId</code></th>
+      <th><code class="language-plaintext highlighter-rouge">item.code</code> (Dictionary)</th>
       <th>Thema</th>
       <th>Antwort</th>
     </tr>
@@ -446,16 +447,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ansocq3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ansocq3</code></td>
       <td>Körperteile, über die man sich bei Gewichtszunahme besonders Sorgen macht</td>
       <td>5 Feststellungen, Stadium 1–5</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">ansocq14</code></td>
       <td><code class="language-plaintext highlighter-rouge">ansocq14</code></td>
       <td>Zeit, die mit Gedanken an Nahrung und Gewicht verbracht wird</td>
       <td>5 Feststellungen, Stadium 1–5</td>
     </tr>
   </tbody>
 </table>
+
+<p><code class="language-plaintext highlighter-rouge">linkId</code> und <code class="language-plaintext highlighter-rouge">item.code</code> stimmen hier überein — beim <a href="ERQ-6.html">ERQ-S</a> ausdrücklich <strong>nicht</strong>.</p>
 
 <p>Die <code class="language-plaintext highlighter-rouge">linkId</code>s sind die Dictionary-Variablen-IDs und entsprechen den Itemnummern des ANSOCQ. Feststellungs-Texte und Instruktionstext sind wortgleich aus dem Item Level Dictionary übernommen; jedem Antwortcode (1–5) ist per <code class="language-plaintext highlighter-rouge">ordinalValue</code> das Stadium der Veränderungsbereitschaft zugeordnet (1 ≈ Precontemplation … 5 ≈ Maintenance).</p>
 
@@ -713,7 +718,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:31:00 +0000">
+  <span title="2026-09-30 09:36:00 +0000">
     2026-09-30
   </span>
 

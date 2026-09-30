@@ -40,13 +40,17 @@ Ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Die D
 
 ### Items
 
-| | |
-| :--- | :--- |
-| `ace1` | Emotionale Misshandlung (beschimpft/erniedrigt; Angst vor Verletzung) |
-| `ace2` | Körperliche Misshandlung (gestoßen/geschlagen; Verletzungsspuren) |
-| `ace3` | Sexueller Missbrauch |
-| `ace4` | Emotionale Vernachlässigung (nicht geliebt; kein Zusammenhalt) |
-| `ace5` | Körperliche Vernachlässigung (Essen/Kleidung/Schutz; Eltern intoxikiert) |
+Jedes Item trägt **zwei** `item.code`-Codings — die Dictionary-Variable und den item-genauen LOINC-Code:
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| `ace1` | `ace1` | `82814-5` | Emotionale Misshandlung (beschimpft/erniedrigt; Angst vor Verletzung) |
+| `ace2` | `ace2` | `82815-2` | Körperliche Misshandlung (gestoßen/geschlagen; Verletzungsspuren) |
+| `ace3` | `ace3` | `82816-0` | Sexueller Missbrauch |
+| `ace4` | `ace4` | `82817-8` | Emotionale Vernachlässigung (nicht geliebt; kein Zusammenhalt) |
+| `ace5` | `ace5` | `82818-6` | Körperliche Vernachlässigung (Essen/Kleidung/Schutz; Eltern intoxikiert) |
+
+Die LOINC-Codes sind die Panel-Komponenten von `82813-7`; der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt bewusst nicht zugewiesen. `linkId` und Dictionary-Variable stimmen hier überein — beim [ERQ-S](ERQ-6.md) ausdrücklich **nicht**.
 
 Die Fragetexte sind wortgleich aus dem Item Level Dictionary übernommen; lediglich Layout-Artefakte der Excel-Zellen (Zeilenumbrüche, Mehrfach-Leerzeichen, inkonsistente führende Item-Nummern) wurden normalisiert. Ein gemeinsamer Instruktionstext steht als `display`-Item voran. **Hinweis zur Erhebung:** Die Items betreffen hochsensible Inhalte (Missbrauch, Vernachlässigung) — die Governance der Auswertung (analog PHQ-SI) ist fachlich zu klären.
 

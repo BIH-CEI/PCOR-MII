@@ -885,6 +885,22 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <p>Das CodeSystem ist <strong>generiert</strong> und trägt <code class="language-plaintext highlighter-rouge">content = #fragment</code>: Es enthält nur die modellierten Variablen, während das Dictionary 454 über drei Entitäten führt. <code class="language-plaintext highlighter-rouge">#complete</code> wäre eine Falschaussage, und das CodeSystem wächst mit der Modellierung. Jedes Konzept trägt die Properties <code class="language-plaintext highlighter-rouge">instrument</code>, <code class="language-plaintext highlighter-rouge">category</code> und <code class="language-plaintext highlighter-rouge">entity</code> aus dem Dictionary — so ist auch ohne Questionnaire-Lookup erkennbar, wohin eine Variable gehört.</p>
 
+<p><strong>Warum <code class="language-plaintext highlighter-rouge">item.code</code> und nicht <code class="language-plaintext highlighter-rouge">item.definition</code> — und wann sich das ändern sollte.</strong> FHIR hat für „dieses Item <em>ist</em> jenes Datenelement" ein eigenes Element, und das ist nicht <code class="language-plaintext highlighter-rouge">item.code</code>, sondern <strong><code class="language-plaintext highlighter-rouge">item.definition</code></strong>. Es wäre der SDC-idiomatische Weg, und er ist ausdrücklich offengehalten.</p>
+
+<p>Nur genügt dafür kein Canonical, das man sich ausdenkt. R4 verlangt eine auflösbare Element-Definition:</p>
+
+<blockquote>
+  <p>„The uri refers to an ElementDefinition in a StructureDefinition and always starts with the canonical URL for the target resource. […] a fragment identifier is used to specify the element definition by its id."</p>
+</blockquote>
+
+<p>Eine URL wie <code class="language-plaintext highlighter-rouge">…/PCOR-MII/item#erq4</code> ohne StructureDefinition dahinter wäre also wirkungslos — und würde den Zweck verfehlen, denn laut Spec <strong>dürfen</strong> Consumer aus der Element-Definition <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">type</code> und <code class="language-plaintext highlighter-rouge">required</code> ableiten, wenn das Item sie nicht selbst trägt.</p>
+
+<p>Richtig gemacht heißt: ein <strong>Logical Model</strong> für das Item Level Dictionary (<code class="language-plaintext highlighter-rouge">StructureDefinition</code>, <code class="language-plaintext highlighter-rouge">kind = logical</code>), eine Element-Definition je Variable, und dann <code class="language-plaintext highlighter-rouge">item.definition = "…/StructureDefinition/pcor-item-dictionary-model#PcorItemDictionary.erq4"</code>. Was das bringt: Es ist die Grundlage für definitionsbasiertes <code class="language-plaintext highlighter-rouge">$populate</code> und <code class="language-plaintext highlighter-rouge">$extract</code>, es gibt dafür den SDC-Suchparameter <code class="language-plaintext highlighter-rouge">definition</code>, und <code class="language-plaintext highlighter-rouge">type</code> sowie <code class="language-plaintext highlighter-rouge">required</code> müssten nicht mehr an jedem Item wiederholt werden.</p>
+
+<p>Was dagegen spricht, es jetzt zu tun: Ein Logical Model mit über 114 Elementen wäre parallel zum Dictionary zu pflegen, und der Nutzen entsteht erst, wenn Extraktion und Vorbefüllung real werden — beides ist laut <a href="Implementation.html">Anwendung</a> bisher ausdrücklich Zukunft.</p>
+
+<p><strong>Die beiden Mechanismen schließen sich nicht aus.</strong> Die Spec sagt zu <code class="language-plaintext highlighter-rouge">item.code</code>: <em>„The value may come from the ElementDefinition referred to by .definition."</em> Ein späteres Logical Model würde die Codes also <strong>ergänzen</strong>, nicht ersetzen — die jetzt gesetzten 114 <code class="language-plaintext highlighter-rouge">item.code</code>s bleiben gültig und wären dann der Terminologie-Anteil derselben Aussage.</p>
+
 <p><strong>Entscheidung 3 — ein Erhebungsereignis wird zu N <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s, zusammengehalten über Encounter und Zeitstempel.</strong> <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> hat in R4 <strong>kein <code class="language-plaintext highlighter-rouge">partOf</code></strong>, es gibt also keinen eingebauten Elternknoten. Die Zusammengehörigkeit wird deshalb so ausgedrückt:</p>
 
 <ol>
@@ -1356,7 +1372,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 09:31:00 +0000">
+  <span title="2026-09-30 09:36:00 +0000">
     2026-09-30
   </span>
 
