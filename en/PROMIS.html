@@ -218,6 +218,9 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
+        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+      </li>
+      <li>
         <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
       </li>
     </ul>
@@ -431,7 +434,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="item-überlapp">Item-Überlapp</h3>
 
-<p>PROMIS-29 und PROMIS-16 überlappen sich in 14 Items (PROMIS-16 ist quasi ein PROMIS-29-Subset plus 2 Cognitive-Function-Items). Bei kombinierter Erfassung sollten Items nicht doppelt erhoben werden — eine Item-basierte Score-Architektur ist im MII PRO-Modul für 2027 geplant.</p>
+<p>PROMIS-29 und PROMIS-16 überlappen sich in <strong>11 der 16 PROMIS-16-Items</strong> (gegen die Questionnaires im Dependency-Paket verifiziert): <code class="language-plaintext highlighter-rouge">pfa21</code>, <code class="language-plaintext highlighter-rouge">pfa23</code>, <code class="language-plaintext highlighter-rouge">edanx40</code>, <code class="language-plaintext highlighter-rouge">edanx41</code>, <code class="language-plaintext highlighter-rouge">eddep29</code>, <code class="language-plaintext highlighter-rouge">eddep41</code>, <code class="language-plaintext highlighter-rouge">hi7</code>, <code class="language-plaintext highlighter-rouge">an3</code>, <code class="language-plaintext highlighter-rouge">srpper46-caps</code>, <code class="language-plaintext highlighter-rouge">painin9</code>, <code class="language-plaintext highlighter-rouge">painin31</code>.</p>
+
+<p><strong>PROMIS-16 ist kein PROMIS-29-Subset.</strong> Fünf Items sind PROMIS-16-spezifisch, und sie verteilen sich auf drei Domänen — nicht nur auf Cognitive Function: <code class="language-plaintext highlighter-rouge">sleep25</code> und <code class="language-plaintext highlighter-rouge">sleep90</code> (Sleep), <code class="language-plaintext highlighter-rouge">srpper31-caps</code> (Social Roles), <code class="language-plaintext highlighter-rouge">pc27r</code> und <code class="language-plaintext highlighter-rouge">pc-caps3r</code> (Cognitive Function). Praktische Konsequenz: Wer <strong>PROMIS-29 + Cognitive Function SF 4a</strong> erhebt, kann daraus <strong>keinen vollständigen PROMIS-16 rekonstruieren</strong> — auch nicht die Cognitive-Function-Domäne, denn die SF 4a nutzt vier andere Items (<code class="language-plaintext highlighter-rouge">pc2r</code>, <code class="language-plaintext highlighter-rouge">pc35r</code>, <code class="language-plaintext highlighter-rouge">pc36r</code>, <code class="language-plaintext highlighter-rouge">pc42r</code>).</p>
+
+<p>Bei kombinierter Erfassung sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine Item-basierte Score-Architektur ist im MII PRO-Modul für 2027 geplant.</p>
 
 <h3 id="quellen">Quellen</h3>
 
@@ -491,7 +498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 09:40:00 +0000">
+  <span title="2026-09-30 19:42:00 +0000">
     2026-09-30
   </span>
 

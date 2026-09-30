@@ -218,6 +218,9 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
+        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+      </li>
+      <li>
         <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
       </li>
     </ul>
@@ -396,6 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
   <li><a href="#eigenschaften" id="markdown-toc-eigenschaften">Eigenschaften</a></li>
+  <li><a href="#domänen-im-vergleich-zu-promis-29" id="markdown-toc-domänen-im-vergleich-zu-promis-29">Domänen im Vergleich zu PROMIS-29</a></li>
   <li><a href="#scoring" id="markdown-toc-scoring">Scoring</a></li>
   <li><a href="#artefakt-propr-als-observationdefinition" id="markdown-toc-artefakt-propr-als-observationdefinition">Artefakt: PROPr als ObservationDefinition</a></li>
   <li><a href="#hinweise" id="markdown-toc-hinweise">Hinweise</a></li>
@@ -438,6 +442,114 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Primärsprache</strong>: Englisch mit deutscher <code class="language-plaintext highlighter-rouge">translation</code>-Extension</li>
   <li><strong>Capabilities</strong>: displayable, collectable (Scoring im MII PRO-Modul bewusst auf v2026.5.0 verschoben)</li>
 </ul>
+
+<h3 id="domänen-im-vergleich-zu-promis-29">Domänen im Vergleich zu PROMIS-29</h3>
+
+<p>Auf <strong>Domänenebene</strong> unterscheiden sich die beiden Profile in genau zwei Punkten — PROMIS-16 hat Cognitive Function, PROMIS-29 hat die Schmerzintensität:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Domäne</th>
+      <th style="text-align: right">PROMIS-29</th>
+      <th style="text-align: right">PROMIS-16</th>
+      <th>LOINC T-Score, Bank-Ebene</th>
+      <th>LOINC T-Score, PROMIS-29-spezifisch</th>
+      <th>upstream verwendet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Physical Function</td>
+      <td style="text-align: right">4 Items</td>
+      <td style="text-align: right">2 Items</td>
+      <td><a href="https://loinc.org/91721-1"><code class="language-plaintext highlighter-rouge">91721-1</code></a></td>
+      <td><a href="https://loinc.org/71959-1"><code class="language-plaintext highlighter-rouge">71959-1</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Anxiety</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77862-1"><code class="language-plaintext highlighter-rouge">77862-1</code></a></td>
+      <td><a href="https://loinc.org/71967-4"><code class="language-plaintext highlighter-rouge">71967-4</code></a></td>
+      <td><strong>PROMIS-29</strong></td>
+    </tr>
+    <tr>
+      <td>Depression</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77861-3"><code class="language-plaintext highlighter-rouge">77861-3</code></a></td>
+      <td><a href="https://loinc.org/71965-8"><code class="language-plaintext highlighter-rouge">71965-8</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Fatigue</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77864-7"><code class="language-plaintext highlighter-rouge">77864-7</code></a></td>
+      <td><a href="https://loinc.org/71963-3"><code class="language-plaintext highlighter-rouge">71963-3</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Sleep Disturbance</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77860-5"><code class="language-plaintext highlighter-rouge">77860-5</code></a></td>
+      <td><a href="https://loinc.org/71955-9"><code class="language-plaintext highlighter-rouge">71955-9</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Ability to Participate in Social Roles</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77854-8"><code class="language-plaintext highlighter-rouge">77854-8</code></a></td>
+      <td>(<a href="https://loinc.org/71957-5"><code class="language-plaintext highlighter-rouge">71957-5</code></a> — andere Domäne¹)</td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Pain Interference</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77865-4"><code class="language-plaintext highlighter-rouge">77865-4</code></a></td>
+      <td><a href="https://loinc.org/71961-7"><code class="language-plaintext highlighter-rouge">71961-7</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td><strong>Cognitive Function — Abilities</strong></td>
+      <td style="text-align: right">—</td>
+      <td style="text-align: right"><strong>2</strong></td>
+      <td><a href="https://loinc.org/81538-1"><code class="language-plaintext highlighter-rouge">81538-1</code></a></td>
+      <td>—</td>
+      <td>Bank (via SF 4a)</td>
+    </tr>
+    <tr>
+      <td><strong>Pain Intensity</strong> (NRS 0–10)</td>
+      <td style="text-align: right"><strong>1</strong> (<code class="language-plaintext highlighter-rouge">global07</code>)</td>
+      <td style="text-align: right">—</td>
+      <td><a href="https://loinc.org/75261-8"><code class="language-plaintext highlighter-rouge">75261-8</code></a> (Item-Code)</td>
+      <td>—</td>
+      <td>Item-Code</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>¹ <code class="language-plaintext highlighter-rouge">71957-5</code> heißt „PROMIS-29 Satisfaction with participation in social roles score T-score" und benennt damit die Domäne des <strong>PROMIS-29 v1.0</strong>. Ab v2.0 heißt sie <em>Ability to Participate in Social Roles and Activities</em> — eine andere Domäne mit eigener Kalibrierung, nicht bloß umbenannt. Für ein v2.1-Profil ist der Bank-Code <code class="language-plaintext highlighter-rouge">77854-8</code> daher der richtige.</p>
+
+<p><strong>Auf Score-Ebene sind die Profile dagegen durchweg verschieden — auch in den sieben gemeinsamen Domänen.</strong> Die Domäne ist dieselbe, die Kurzform nicht: PROMIS-29 scort über vier Items per Summenscore und Rohwert-Lookup, PROMIS-16 über zwei Items per Antwortmuster-Lookup (5 × 5 = 25 Werte, Supplement S4 von Edelen et al.). Ein <code class="language-plaintext highlighter-rouge">promis-29-…-tscore</code>-Code steht deshalb <strong>nicht</strong> für einen PROMIS-16-T-Score derselben Domäne, und die acht upstream geführten <code class="language-plaintext highlighter-rouge">promis-29-*</code>-Score-Codes sind für PROMIS-16 nicht wiederverwendbar. Vergleichbar sind die Werte nur insofern, als beide auf die <strong>gemeinsame T-Score-Metrik der jeweiligen Item-Bank</strong> kalibriert sind (Mean 50, SD 10) — ein Score-Crosswalk zwischen den Profilen ist upstream ausdrücklich als späteres Arbeitspaket benannt.</p>
+
+<p><strong>Bei LOINC ist die Lage asymmetrisch</strong>, und das ist der praktisch wichtigste Befund dieses Vergleichs (geprüft 2026-09-30 gegen LOINC 2.83). LOINC führt zwei Ebenen nebeneinander:</p>
+
+<ul>
+  <li><strong>Bank-Ebene</strong> — z. B. <code class="language-plaintext highlighter-rouge">PROMIS emotional distress - anxiety - version 1.0 Tscore</code>. Bezeichnet Item-Bank und T-Score-Metrik, <strong>nicht</strong> die Kurzform, und gilt damit für jedes Profil, das auf diese Bank kalibriert ist.</li>
+  <li><strong>Instrumenten-Ebene</strong> — z. B. <code class="language-plaintext highlighter-rouge">PROMIS-29 Anxiety score T-score</code>. Für PROMIS-29 existiert dieser Satz <strong>vollständig</strong> über alle sieben Domänen (<code class="language-plaintext highlighter-rouge">71955-9</code>–<code class="language-plaintext highlighter-rouge">71967-4</code>).</li>
+</ul>
+
+<p><strong>Für PROMIS-16 gibt es die instrumentenspezifische Ebene nicht</strong> — die Suche nach „PROMIS-16" liefert in LOINC 2.83 <strong>null Treffer</strong>, weder Panel- noch Score- noch Item-Codes (upstream sind entsprechend auch die fünf PROMIS-16-spezifischen Item-Codes im FSH noch als TODO markiert). Ein PROMIS-16-T-Score kann also nur den <strong>Bank-Code</strong> tragen — denselben, den ein PROMIS-29-T-Score derselben Domäne trägt. Die Unterscheidung der Kurzform muss damit zwingend über den <strong>MII-Katalogcode</strong> und <code class="language-plaintext highlighter-rouge">method.text</code> laufen; LOINC allein kann sie nicht leisten. Wer PROMIS-16- und PROMIS-29-Werte nur über <code class="language-plaintext highlighter-rouge">Observation.code.coding[loinc]</code> filtert, mischt sie unbemerkt.</p>
+
+<p><strong>Upstream ist die Wahl zwischen beiden Ebenen inkonsistent.</strong> Die PROMIS-29-ObservationDefinitions nutzen bei sechs von sieben Domänen den Bank-Code, bei <strong>Anxiety</strong> dagegen den instrumentenspezifischen <code class="language-plaintext highlighter-rouge">71967-4</code> — obwohl mit <code class="language-plaintext highlighter-rouge">77862-1</code> ein Bank-Code vorliegt. Bei Social Roles ist der Bank-Code sachlich zwingend (siehe Fußnote), bei Anxiety ist die Abweichung nicht begründet. Für PCOR-MII ist das derzeit folgenlos, weil hier keine PROMIS-Score-Observations modelliert werden; für einen späteren Cross-Walk ist es eine Fußangel und gehört auf die Upstream-Liste.</p>
+
+<p><strong>Zur Sleep-Domäne, weil die Itemauswahl irritiert:</strong> PROMIS-16 nimmt <code class="language-plaintext highlighter-rouge">sleep90</code> („I had trouble sleeping") aus der Sleep-Disturbance-Bank und <code class="language-plaintext highlighter-rouge">sleep25</code> („I had problems during the day because of poor sleep") aus der Bank <em>Sleep-Related Impairment</em> — LOINC führt für beide Bänke getrennte T-Scores (<a href="https://loinc.org/77860-5"><code class="language-plaintext highlighter-rouge">77860-5</code></a> vs. <a href="https://loinc.org/77859-7"><code class="language-plaintext highlighter-rouge">77859-7</code></a>), und der Sektionstitel des Questionnaire lautet entsprechend zweideutig „Sleep-related Impairment / Sleep Disturbance". Die Entwicklungspublikation ist hier aber eindeutig: Die Domäne heißt <strong>Sleep Disturbance</strong>, und die Itemparameter des SRI-Items wurden ausdrücklich <em>auf die Sleep-Disturbance-Items kalibriert</em> („parameters for the sleep-related impairment item were generated based on calibration to the sleep disturbance items", Edelen et al. 2024). Ein PROMIS-16-Sleep-T-Score gehört damit unter <strong>Sleep Disturbance</strong> (<code class="language-plaintext highlighter-rouge">77860-5</code>), nicht unter SRI. Zu beachten ist zudem, dass die T-Score-Zentrierung dieser einen Domäne — anders als bei den übrigen sieben — nicht auf einer reinen Allgemeinbevölkerungsstichprobe beruht, sondern auf einer kombinierten Allgemeinbevölkerungs- und klinischen Stichprobe.</p>
 
 <h3 id="scoring">Scoring</h3>
 
@@ -502,14 +614,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Stand 2026-09-29: keiner der beiden Scores ist verfügbar.</strong> Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2026.7.0 existiert upstream <strong>ausschließlich der Questionnaire</strong> — keine <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>, keine CQL Library, keine Score-Codes im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt <code class="language-plaintext highlighter-rouge">calculatable</code> ausdrücklich auf <code class="language-plaintext highlighter-rouge">false</code> mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen <strong>Roadmap 2027</strong>.</p>
 
-<p>Für PCOR-MII heißt das: PROMIS-16 ist als <strong>Datenerfassungsinstrument</strong> nutzbar, die Score-Berechnung muss extern erfolgen. Score-<code class="language-plaintext highlighter-rouge">Observation</code>s können hier auch nicht ersatzweise modelliert werden — nach <a href="Designentscheidungen.html">ADR-004</a> stammen Score-Codes aus dem MII-Score-Katalog, der für PROMIS-16 noch keine führt.</p>
+<p>Für PCOR-MII heißt das: PROMIS-16 ist als <strong>Datenerfassungsinstrument</strong> nutzbar, die Score-Berechnung muss extern erfolgen.</p>
+
+<p><strong>Die acht Domänen-T-Scores werden in PCOR-MII bewusst nicht lokal angelegt</strong> (Entscheidung 2026-09-30). Möglich wäre es — der PROPr oben zeigt den Weg über einen Code aus dem lokalen <a href="CodeSystem-pcor-score-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code></a>, und das Blueprint-Slicing lässt das ausdrücklich zu. Der PROPr rechtfertigt diese Vorwegnahme aber durch etwas, das die Domänen-T-Scores nicht haben: Er ist <strong>profilunabhängig</strong> (er rechnet auf Domänen-θ, nicht auf Items) und damit ein stabiles Artefakt, egal welches PROMIS-Profil ihn speist. Die PROMIS-16-Domänen-T-Scores sind das Gegenteil — sie sind an die <strong>2-Item-Kurzform</strong> gebunden, und damit an genau die Antwortmuster-Tabelle, die upstream noch nicht implementiert ist. Acht lokale Codes vorwegzunehmen, deren Berechnungsvorschrift upstream erst 2027 festgelegt wird, würde Migrationsschulden erzeugen statt Arbeitsfähigkeit herstellen.</p>
+
+<p><strong>Nachzuziehen upstream im MII-PRO-Modul</strong> (vollständige Liste, damit sie als Ticket verwendbar ist):</p>
+
+<ol>
+  <li>Acht Codes <code class="language-plaintext highlighter-rouge">promis-16-&lt;domäne&gt;-tscore</code> im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> — parallel zu den bestehenden <code class="language-plaintext highlighter-rouge">promis-29-*</code>-Codes und aus demselben Grund instrumentenbezogen benannt (verschiedene Kurzform ⇒ verschiedene Rohwert-/Muster-Tabelle).</li>
+  <li>Acht <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s gegen <code class="language-plaintext highlighter-rouge">mii-pr-pro-score-blueprint</code>, mit dem <strong>bank-ebenen LOINC-T-Score</strong> als <code class="language-plaintext highlighter-rouge">code.coding[loinc]</code> — für PROMIS-16 gibt es keine andere Wahl (siehe Tabelle oben) — und der Kurzform-Unterscheidung in <code class="language-plaintext highlighter-rouge">method.text</code>. Für Cognitive Function ist das <code class="language-plaintext highlighter-rouge">81538-1</code>, derselbe Code wie bei der SF 4a.</li>
+  <li>Für Sleep den Code <strong><code class="language-plaintext highlighter-rouge">77860-5</code> (Sleep Disturbance)</strong>, nicht <code class="language-plaintext highlighter-rouge">77859-7</code> (SRI) — Begründung und Belegstelle oben.</li>
+  <li><strong>Anxiety bei PROMIS-29 auf den Bank-Code <code class="language-plaintext highlighter-rouge">77862-1</code> umstellen</strong> (oder die Abweichung begründen): Die bestehende <code class="language-plaintext highlighter-rouge">mii-obsdef-pro-promis-29-anxiety-tscore</code> nutzt als einzige der sieben den instrumentenspezifischen <code class="language-plaintext highlighter-rouge">71967-4</code>. Solange das so bleibt, tragen PROMIS-29- und PROMIS-16-Anxiety-Scores LOINC-Codes verschiedener Ebenen, was einen Cross-Walk unnötig erschwert.</li>
+  <li>Optional die beiden <strong>Summary Scores</strong> (Physical/Mental Health, Hays-Methodik) und den <strong>PROPr</strong> (<code class="language-plaintext highlighter-rouge">promis-propr-utility</code>, vgl. Abschnitt oben).</li>
+  <li>Die fünf noch offenen LOINC-Item-Codes (<code class="language-plaintext highlighter-rouge">sleep25</code>, <code class="language-plaintext highlighter-rouge">sleep90</code>, <code class="language-plaintext highlighter-rouge">srpper31-caps</code>, <code class="language-plaintext highlighter-rouge">pc27r</code>, <code class="language-plaintext highlighter-rouge">pc-caps3r</code>), upstream im FSH als TODO markiert.</li>
+  <li>Die CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> für den Muster-Lookup, sowie <code class="language-plaintext highlighter-rouge">calculatable = true</code> am Questionnaire, sobald sie vorliegt.</li>
+</ol>
 
 <h3 id="hinweise">Hinweise</h3>
 
 <ul>
   <li><strong>Kein Schmerzintensitäts-Item.</strong> Anders als PROMIS-29 (28 Domänen-Items + Global07 auf 0–10) enthält PROMIS-16 keine numerische Schmerzintensität — die Schmerzdomäne ist allein über <em>Pain Interference</em> abgedeckt.</li>
-  <li>Item-Überlapp mit PROMIS-29: Laut Hanmer et al. 2025 teilen sich PROMIS-16 und PROMIS-29+2 <strong>11 der 16 Items</strong>. Die zwei Cognitive-Function-Items sind im PROMIS-29 nicht enthalten — im PROMIS-29+2 dagegen schon, dort sind sie genau das „+2".</li>
-  <li>Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.</li>
+  <li><strong>Item-Überlapp mit PROMIS-29: 11 der 16 Items</strong> — gegen die Questionnaires im Dependency-Paket verifiziert (2026-09-30) und deckungsgleich mit Hanmer et al. 2025 für PROMIS-29+2. Gemeinsam: <code class="language-plaintext highlighter-rouge">pfa21</code>, <code class="language-plaintext highlighter-rouge">pfa23</code>, <code class="language-plaintext highlighter-rouge">edanx40</code>, <code class="language-plaintext highlighter-rouge">edanx41</code>, <code class="language-plaintext highlighter-rouge">eddep29</code>, <code class="language-plaintext highlighter-rouge">eddep41</code>, <code class="language-plaintext highlighter-rouge">hi7</code>, <code class="language-plaintext highlighter-rouge">an3</code>, <code class="language-plaintext highlighter-rouge">srpper46-caps</code>, <code class="language-plaintext highlighter-rouge">painin9</code>, <code class="language-plaintext highlighter-rouge">painin31</code>.</li>
+  <li><strong>PROMIS-16 ist kein PROMIS-29-Subset</strong> — die fünf spezifischen Items liegen in <em>drei</em> Domänen, nicht nur in Cognitive Function: <code class="language-plaintext highlighter-rouge">sleep25</code> und <code class="language-plaintext highlighter-rouge">sleep90</code> (die Sleep-Domäne hat mit PROMIS-29 <strong>kein</strong> Item gemeinsam), <code class="language-plaintext highlighter-rouge">srpper31-caps</code> (Social Roles) sowie <code class="language-plaintext highlighter-rouge">pc27r</code> und <code class="language-plaintext highlighter-rouge">pc-caps3r</code> (Cognitive Function). Im PROMIS-29+2 sind die zwei Cognitive-Function-Items dagegen enthalten — dort sind sie genau das „+2".</li>
+  <li><strong>Aus PROMIS-29 + Cognitive Function SF 4a lässt sich kein PROMIS-16 rekonstruieren.</strong> Die SF 4a nutzt vier andere Items (<code class="language-plaintext highlighter-rouge">pc2r</code>, <code class="language-plaintext highlighter-rouge">pc35r</code>, <code class="language-plaintext highlighter-rouge">pc36r</code>, <code class="language-plaintext highlighter-rouge">pc42r</code>), und die fünf PROMIS-16-spezifischen Items fehlen. Das betrifft auch die in <a href="PROMIS-33.html">PROMIS-33</a> beschriebene Abdeckung: Sie ersetzt funktional das PROMIS-33, <strong>nicht</strong> das PROMIS-16.</li>
+  <li>Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.</li>
 </ul>
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
@@ -864,7 +992,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:40:00 +0000">
+  <span title="2026-09-30 19:42:00 +0000">
     2026-09-30
   </span>
 

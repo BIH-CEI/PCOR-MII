@@ -11,7 +11,7 @@ PCOR-MII erhebt patientenberichtete Daten in drei klinischen Entitäten:
 | | |
 | :--- | :--- |
 | **PSS** | Persistent Somatic Syndrome — siehe[PSS](PSS.md) |
-| **AN** | Anorexia Nervosa — siehe[AN](AN.md) |
+| **AN** | Anorexia Nervosa — siehe[AN](AN.md), Nachschlagetabelle:[Instrumentenliste](AN-Instrumentenliste.md) |
 | **NTx** | Nierentransplantation |
 
 Fachliche Referenz für Instrumentenauswahl und Item-Zuschnitt ist das **Item Level Dictionary** (`MASTER_3EntitiesOverview.xlsx`, je ein Blatt pro Entität; nicht Teil dieses Repositories). Die Rechte- und Lizenzangaben stammen aus der **DIZ-Implementierungsliste PCOR-MII**.

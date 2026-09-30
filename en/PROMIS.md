@@ -30,7 +30,11 @@ Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://sim
 
 ### Item-Überlapp
 
-PROMIS-29 und PROMIS-16 überlappen sich in 14 Items (PROMIS-16 ist quasi ein PROMIS-29-Subset plus 2 Cognitive-Function-Items). Bei kombinierter Erfassung sollten Items nicht doppelt erhoben werden — eine Item-basierte Score-Architektur ist im MII PRO-Modul für 2027 geplant.
+PROMIS-29 und PROMIS-16 überlappen sich in **11 der 16 PROMIS-16-Items** (gegen die Questionnaires im Dependency-Paket verifiziert): `pfa21`, `pfa23`, `edanx40`, `edanx41`, `eddep29`, `eddep41`, `hi7`, `an3`, `srpper46-caps`, `painin9`, `painin31`.
+
+**PROMIS-16 ist kein PROMIS-29-Subset.** Fünf Items sind PROMIS-16-spezifisch, und sie verteilen sich auf drei Domänen — nicht nur auf Cognitive Function: `sleep25` und `sleep90` (Sleep), `srpper31-caps` (Social Roles), `pc27r` und `pc-caps3r` (Cognitive Function). Praktische Konsequenz: Wer **PROMIS-29 + Cognitive Function SF 4a** erhebt, kann daraus **keinen vollständigen PROMIS-16 rekonstruieren** — auch nicht die Cognitive-Function-Domäne, denn die SF 4a nutzt vier andere Items (`pc2r`, `pc35r`, `pc36r`, `pc42r`).
+
+Bei kombinierter Erfassung sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine Item-basierte Score-Architektur ist im MII PRO-Modul für 2027 geplant.
 
 ### Quellen
 

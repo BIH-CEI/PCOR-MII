@@ -27,6 +27,37 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 * **Primärsprache**: Englisch mit deutscher `translation`-Extension
 * **Capabilities**: displayable, collectable (Scoring im MII PRO-Modul bewusst auf v2026.5.0 verschoben)
 
+### Domänen im Vergleich zu PROMIS-29
+
+Auf **Domänenebene** unterscheiden sich die beiden Profile in genau zwei Punkten — PROMIS-16 hat Cognitive Function, PROMIS-29 hat die Schmerzintensität:
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Physical Function | 4 Items | 2 Items | [`91721-1`](https://loinc.org/91721-1) | [`71959-1`](https://loinc.org/71959-1) | Bank |
+| Anxiety | 4 | 2 | [`77862-1`](https://loinc.org/77862-1) | [`71967-4`](https://loinc.org/71967-4) | **PROMIS-29** |
+| Depression | 4 | 2 | [`77861-3`](https://loinc.org/77861-3) | [`71965-8`](https://loinc.org/71965-8) | Bank |
+| Fatigue | 4 | 2 | [`77864-7`](https://loinc.org/77864-7) | [`71963-3`](https://loinc.org/71963-3) | Bank |
+| Sleep Disturbance | 4 | 2 | [`77860-5`](https://loinc.org/77860-5) | [`71955-9`](https://loinc.org/71955-9) | Bank |
+| Ability to Participate in Social Roles | 4 | 2 | [`77854-8`](https://loinc.org/77854-8) | ([`71957-5`](https://loinc.org/71957-5)— andere Domäne¹) | Bank |
+| Pain Interference | 4 | 2 | [`77865-4`](https://loinc.org/77865-4) | [`71961-7`](https://loinc.org/71961-7) | Bank |
+| **Cognitive Function — Abilities** | — | **2** | [`81538-1`](https://loinc.org/81538-1) | — | Bank (via SF 4a) |
+| **Pain Intensity**(NRS 0–10) | **1**(`global07`) | — | [`75261-8`](https://loinc.org/75261-8)(Item-Code) | — | Item-Code |
+
+¹ `71957-5` heißt „PROMIS-29 Satisfaction with participation in social roles score T-score" und benennt damit die Domäne des **PROMIS-29 v1.0**. Ab v2.0 heißt sie **Ability to Participate in Social Roles and Activities** — eine andere Domäne mit eigener Kalibrierung, nicht bloß umbenannt. Für ein v2.1-Profil ist der Bank-Code `77854-8` daher der richtige.
+
+**Auf Score-Ebene sind die Profile dagegen durchweg verschieden — auch in den sieben gemeinsamen Domänen.** Die Domäne ist dieselbe, die Kurzform nicht: PROMIS-29 scort über vier Items per Summenscore und Rohwert-Lookup, PROMIS-16 über zwei Items per Antwortmuster-Lookup (5 × 5 = 25 Werte, Supplement S4 von Edelen et al.). Ein `promis-29-…-tscore`-Code steht deshalb **nicht** für einen PROMIS-16-T-Score derselben Domäne, und die acht upstream geführten `promis-29-*`-Score-Codes sind für PROMIS-16 nicht wiederverwendbar. Vergleichbar sind die Werte nur insofern, als beide auf die **gemeinsame T-Score-Metrik der jeweiligen Item-Bank** kalibriert sind (Mean 50, SD 10) — ein Score-Crosswalk zwischen den Profilen ist upstream ausdrücklich als späteres Arbeitspaket benannt.
+
+**Bei LOINC ist die Lage asymmetrisch**, und das ist der praktisch wichtigste Befund dieses Vergleichs (geprüft 2026-09-30 gegen LOINC 2.83). LOINC führt zwei Ebenen nebeneinander:
+
+* **Bank-Ebene** — z. B. `PROMIS emotional distress - anxiety - version 1.0 Tscore`. Bezeichnet Item-Bank und T-Score-Metrik, **nicht** die Kurzform, und gilt damit für jedes Profil, das auf diese Bank kalibriert ist.
+* **Instrumenten-Ebene** — z. B. `PROMIS-29 Anxiety score T-score`. Für PROMIS-29 existiert dieser Satz **vollständig** über alle sieben Domänen (`71955-9`–`71967-4`).
+
+**Für PROMIS-16 gibt es die instrumentenspezifische Ebene nicht** — die Suche nach „PROMIS-16" liefert in LOINC 2.83 **null Treffer**, weder Panel- noch Score- noch Item-Codes (upstream sind entsprechend auch die fünf PROMIS-16-spezifischen Item-Codes im FSH noch als TODO markiert). Ein PROMIS-16-T-Score kann also nur den **Bank-Code** tragen — denselben, den ein PROMIS-29-T-Score derselben Domäne trägt. Die Unterscheidung der Kurzform muss damit zwingend über den **MII-Katalogcode** und `method.text` laufen; LOINC allein kann sie nicht leisten. Wer PROMIS-16- und PROMIS-29-Werte nur über `Observation.code.coding[loinc]` filtert, mischt sie unbemerkt.
+
+**Upstream ist die Wahl zwischen beiden Ebenen inkonsistent.** Die PROMIS-29-ObservationDefinitions nutzen bei sechs von sieben Domänen den Bank-Code, bei **Anxiety** dagegen den instrumentenspezifischen `71967-4` — obwohl mit `77862-1` ein Bank-Code vorliegt. Bei Social Roles ist der Bank-Code sachlich zwingend (siehe Fußnote), bei Anxiety ist die Abweichung nicht begründet. Für PCOR-MII ist das derzeit folgenlos, weil hier keine PROMIS-Score-Observations modelliert werden; für einen späteren Cross-Walk ist es eine Fußangel und gehört auf die Upstream-Liste.
+
+**Zur Sleep-Domäne, weil die Itemauswahl irritiert:** PROMIS-16 nimmt `sleep90` („I had trouble sleeping") aus der Sleep-Disturbance-Bank und `sleep25` („I had problems during the day because of poor sleep") aus der Bank **Sleep-Related Impairment** — LOINC führt für beide Bänke getrennte T-Scores ([`77860-5`](https://loinc.org/77860-5) vs. [`77859-7`](https://loinc.org/77859-7)), und der Sektionstitel des Questionnaire lautet entsprechend zweideutig „Sleep-related Impairment / Sleep Disturbance". Die Entwicklungspublikation ist hier aber eindeutig: Die Domäne heißt **Sleep Disturbance**, und die Itemparameter des SRI-Items wurden ausdrücklich **auf die Sleep-Disturbance-Items kalibriert** („parameters for the sleep-related impairment item were generated based on calibration to the sleep disturbance items", Edelen et al. 2024). Ein PROMIS-16-Sleep-T-Score gehört damit unter **Sleep Disturbance** (`77860-5`), nicht unter SRI. Zu beachten ist zudem, dass die T-Score-Zentrierung dieser einen Domäne — anders als bei den übrigen sieben — nicht auf einer reinen Allgemeinbevölkerungsstichprobe beruht, sondern auf einer kombinierten Allgemeinbevölkerungs- und klinischen Stichprobe.
+
 ### Scoring
 
 PROMIS-16 erlaubt **drei** Auswertungsformen:
@@ -61,13 +92,27 @@ Da PROPr weder in LOINC noch in SNOMED CT noch im MII-Score-Katalog einen Code h
 
 **Stand 2026-09-29: keiner der beiden Scores ist verfügbar.** Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library `mii-lib-promis-16` implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2026.7.0 existiert upstream **ausschließlich der Questionnaire** — keine `ObservationDefinition`, keine CQL Library, keine Score-Codes im `mii-cs-pro-score-catalogue` (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt `calculatable` ausdrücklich auf `false` mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen **Roadmap 2027**.
 
-Für PCOR-MII heißt das: PROMIS-16 ist als **Datenerfassungsinstrument** nutzbar, die Score-Berechnung muss extern erfolgen. Score-`Observation`s können hier auch nicht ersatzweise modelliert werden — nach [ADR-004](Designentscheidungen.md) stammen Score-Codes aus dem MII-Score-Katalog, der für PROMIS-16 noch keine führt.
+Für PCOR-MII heißt das: PROMIS-16 ist als **Datenerfassungsinstrument** nutzbar, die Score-Berechnung muss extern erfolgen.
+
+**Die acht Domänen-T-Scores werden in PCOR-MII bewusst nicht lokal angelegt** (Entscheidung 2026-09-30). Möglich wäre es — der PROPr oben zeigt den Weg über einen Code aus dem lokalen [`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.md), und das Blueprint-Slicing lässt das ausdrücklich zu. Der PROPr rechtfertigt diese Vorwegnahme aber durch etwas, das die Domänen-T-Scores nicht haben: Er ist **profilunabhängig** (er rechnet auf Domänen-θ, nicht auf Items) und damit ein stabiles Artefakt, egal welches PROMIS-Profil ihn speist. Die PROMIS-16-Domänen-T-Scores sind das Gegenteil — sie sind an die **2-Item-Kurzform** gebunden, und damit an genau die Antwortmuster-Tabelle, die upstream noch nicht implementiert ist. Acht lokale Codes vorwegzunehmen, deren Berechnungsvorschrift upstream erst 2027 festgelegt wird, würde Migrationsschulden erzeugen statt Arbeitsfähigkeit herstellen.
+
+**Nachzuziehen upstream im MII-PRO-Modul** (vollständige Liste, damit sie als Ticket verwendbar ist):
+
+1. Acht Codes`promis-16-<domäne>-tscore`im`mii-cs-pro-score-catalogue`— parallel zu den bestehenden`promis-29-*`-Codes und aus demselben Grund instrumentenbezogen benannt (verschiedene Kurzform ⇒ verschiedene Rohwert-/Muster-Tabelle).
+1. Acht`ObservationDefinition`s gegen`mii-pr-pro-score-blueprint`, mit dem**bank-ebenen LOINC-T-Score**als`code.coding[loinc]`— für PROMIS-16 gibt es keine andere Wahl (siehe Tabelle oben) — und der Kurzform-Unterscheidung in`method.text`. Für Cognitive Function ist das`81538-1`, derselbe Code wie bei der SF 4a.
+1. Für Sleep den Code**`77860-5` (Sleep Disturbance)**, nicht`77859-7`(SRI) — Begründung und Belegstelle oben.
+1. **Anxiety bei PROMIS-29 auf den Bank-Code `77862-1` umstellen**(oder die Abweichung begründen): Die bestehende`mii-obsdef-pro-promis-29-anxiety-tscore`nutzt als einzige der sieben den instrumentenspezifischen`71967-4`. Solange das so bleibt, tragen PROMIS-29- und PROMIS-16-Anxiety-Scores LOINC-Codes verschiedener Ebenen, was einen Cross-Walk unnötig erschwert.
+1. Optional die beiden**Summary Scores**(Physical/Mental Health, Hays-Methodik) und den**PROPr**(`promis-propr-utility`, vgl. Abschnitt oben).
+1. Die fünf noch offenen LOINC-Item-Codes (`sleep25`,`sleep90`,`srpper31-caps`,`pc27r`,`pc-caps3r`), upstream im FSH als TODO markiert.
+1. Die CQL Library`mii-lib-promis-16`für den Muster-Lookup, sowie`calculatable = true`am Questionnaire, sobald sie vorliegt.
 
 ### Hinweise
 
 * **Kein Schmerzintensitäts-Item.** Anders als PROMIS-29 (28 Domänen-Items + Global07 auf 0–10) enthält PROMIS-16 keine numerische Schmerzintensität — die Schmerzdomäne ist allein über **Pain Interference** abgedeckt.
-* Item-Überlapp mit PROMIS-29: Laut Hanmer et al. 2025 teilen sich PROMIS-16 und PROMIS-29+2 **11 der 16 Items**. Die zwei Cognitive-Function-Items sind im PROMIS-29 nicht enthalten — im PROMIS-29+2 dagegen schon, dort sind sie genau das „+2".
-* Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.
+* **Item-Überlapp mit PROMIS-29: 11 der 16 Items** — gegen die Questionnaires im Dependency-Paket verifiziert (2026-09-30) und deckungsgleich mit Hanmer et al. 2025 für PROMIS-29+2. Gemeinsam: `pfa21`, `pfa23`, `edanx40`, `edanx41`, `eddep29`, `eddep41`, `hi7`, `an3`, `srpper46-caps`, `painin9`, `painin31`.
+* **PROMIS-16 ist kein PROMIS-29-Subset** — die fünf spezifischen Items liegen in **drei** Domänen, nicht nur in Cognitive Function: `sleep25` und `sleep90` (die Sleep-Domäne hat mit PROMIS-29 **kein** Item gemeinsam), `srpper31-caps` (Social Roles) sowie `pc27r` und `pc-caps3r` (Cognitive Function). Im PROMIS-29+2 sind die zwei Cognitive-Function-Items dagegen enthalten — dort sind sie genau das „+2".
+* **Aus PROMIS-29 + Cognitive Function SF 4a lässt sich kein PROMIS-16 rekonstruieren.** Die SF 4a nutzt vier andere Items (`pc2r`, `pc35r`, `pc36r`, `pc42r`), und die fünf PROMIS-16-spezifischen Items fehlen. Das betrifft auch die in [PROMIS-33](PROMIS-33.md) beschriebene Abdeckung: Sie ersetzt funktional das PROMIS-33, **nicht** das PROMIS-16.
+* Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.
 
 ### Beispiel-QuestionnaireResponse
 

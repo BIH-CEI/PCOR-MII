@@ -33,7 +33,7 @@ Subtyp der Anorexia nervosa (AN_subtyp).
   "title" : "MHI Anorexia-nervosa-Subtyp",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:40:42+00:00",
+  "date" : "2026-09-30T19:42:59+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

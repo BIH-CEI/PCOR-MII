@@ -6,7 +6,7 @@
 
 Diese Seite erklärt den **Erhebungsplan für den Use Case Essstörungen** (Anorexia Nervosa, AN): welche Domänen wann mit welcher Priorität erhoben werden, welche Instrumente dafür vorgesehen sind und wie sich der Plan zu dem verhält, was in PCOR-MII bereits als FHIR-Ressource vorliegt.
 
-Die FHIR-Artefakte der AN-Batterie stehen auf der Seite [AN](AN.md); dort geht es um `Questionnaire`s, `linkId`s und Beispielantworten. Hier geht es um das **Studienvorhaben dahinter**.
+Die FHIR-Artefakte der AN-Batterie stehen auf der Seite [AN](AN.md); dort geht es um `Questionnaire`s, `linkId`s und Beispielantworten. Die reine Nachschlagetabelle „welches Instrument liegt wo“ ist die [AN — Instrumentenliste](AN-Instrumentenliste.md). Hier geht es um das **Studienvorhaben dahinter**.
 
 Quelle ist das Blatt **Domain Overview** des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories) samt seiner Handanweisung. Alle Prioritäten, Frequenzen und Itemzahlen unten sind daraus abgelesen, nicht interpretiert.
 

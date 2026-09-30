@@ -14,7 +14,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-* IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0.page.md?version=current)
+* IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current)
 * Raw-Resource: [MII PRO Package (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0)
 * Offizielle Quelle: WHO. **Measuring Health and Disability: Manual for WHODAS 2.0**. Genf: WHO; 2010. ISBN 9789241547598.
 * Deutsche Wortlaute: validiertes PCOR-MII Item Level Dictionary

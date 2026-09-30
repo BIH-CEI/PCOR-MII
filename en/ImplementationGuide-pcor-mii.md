@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-30T09:40:42+00:00",
+  "date" : "2026-09-30T19:42:59+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -2203,6 +2203,15 @@
           "title" : "AN (Anorexia Nervosa)",
           "generation" : "markdown",
           "page" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "AN-Instrumentenliste.html"
+            }],
+            "nameUrl" : "AN-Instrumentenliste.html",
+            "title" : "AN — Instrumentenliste mit Links",
+            "generation" : "markdown"
+          },
+          {
             "extension" : [{
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl" : "Essstoerungen.html"
