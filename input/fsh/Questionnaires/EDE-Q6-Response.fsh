@@ -48,13 +48,13 @@ Description: "Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire
 // ── Die vier Skalen-Items (je eines pro EDE-Q-Subskala) ───────────────────────
 * item[+]
   * linkId = "edeq1"
-  * answer.valueCoding = EdeQ6TageCS#3 "13–15 Tage"
+  * answer.valueCoding = EdeQ6TageCS#3 "13-15 days"
 * item[+]
   * linkId = "edeq7"
-  * answer.valueCoding = EdeQ6TageCS#4 "16–22 Tage"
+  * answer.valueCoding = EdeQ6TageCS#4 "16-22 days"
 * item[+]
   * linkId = "edeq12"
-  * answer.valueCoding = EdeQ6TageCS#4 "16–22 Tage"
+  * answer.valueCoding = EdeQ6TageCS#4 "16-22 days"
 * item[+]
   * linkId = "edeq27"
   * answer.valueInteger = 4

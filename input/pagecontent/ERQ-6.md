@@ -11,6 +11,14 @@ Erhoben wird der Bogen nur im Szenario [AN](AN.html). Gepflegt wird er **vorläu
 
 **Eine Ungenauigkeit der DIZ-Liste am Rande:** In der Spalte *„verkürzte Version?“* steht beim ERQ-6 dieselbe Formel wie bei [EDE-Q6](EDE-Q6.html), [ANSOCQ-2](ANSOCQ-2.html) und [SSUK-2](SSUK-2.html) — *„nur das Item mit der höchsten Trennschärfe pro Skala“*. Im Singular trifft das hier nicht zu: Es sind **drei** Items je Subskala, nicht eines. Die Formel wirkt durchkopiert. Inhaltlich ist die Sache aber eher stärker als dort — der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform, und deshalb der einzige der fünf AN-Zuschnitte mit validiertem Scoring.
 
+### Sprachebenen
+
+`Questionnaire.language` steht auf **`en`**: Das ERQ-Original ist englisch (Gross & John 2003), also trägt `item.text` den englischen Originalwortlaut und die autorisierte deutsche Fassung von **Abler & Kessler (2009)** hängt als `translation`-Extension mit `lang = de` daran — bei allen sechs Items und den sechs Skalenankern. Beide Bögen stellt das [Stanford Psychophysiology Laboratory](https://spl.stanford.edu/resources) frei bereit; die deutsche Fassung ist dort ausdrücklich als *„autorisiert von den Autoren der englischen Originalversion“* ausgewiesen.
+
+Das folgt [ADR-005](Designentscheidungen.html) und ist gleichzeitig Voraussetzung für eine Aufnahme ins MII-PRO-Modul, das durchgehend so arbeitet.
+
+**Nur die sechs ERQ-S-Items sind modelliert, nicht der ERQ-10.** Die Langform darf nach [ADR-008](Designentscheidungen.html) mitmodelliert werden und ist inzwischen vollständig beschafft — englischer Originalbogen und autorisierte deutsche Fassung, jeweils zehn Items —, ist aber nicht Bestandteil dieses Release. Für diesen Bogen ist sie vor allem die **Quelle des deutschen Wortlauts**: Die Kurzform-Publikation nennt nur Itemnummern und Psychometrie, keinen übersetzten Text.
+
 ### Artefakte
 
 - **Fragebogen:** [Questionnaire-ERQ6](Questionnaire-ERQ6.html)

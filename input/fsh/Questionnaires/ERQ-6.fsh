@@ -63,7 +63,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6"
 * name = "ERQ6"
-* language = #de
+// SPRACHE — en primaer nach ADR-005: Das ERQ-Original ist englisch
+//   (Gross & John 2003, J Pers Soc Psychol 85:348-362). item.text traegt
+//   deshalb den englischen Originalwortlaut, die autorisierte deutsche Fassung
+//   von Abler & Kessler (2009) haengt als translation-Extension daran. Beide
+//   Wortlaute stammen vom Stanford Psychophysiology Laboratory, das die
+//   Originalbogen frei bereitstellt und die deutsche Fassung ausdruecklich als
+//   "autorisiert von den Autoren der englischen Originalversion" ausweist.
+//
+//   NUR DIE SECHS ERQ-S-ITEMS sind hier abgebildet, nicht der ERQ-10. Die
+//   Langform darf nach ADR-008 mitmodelliert werden und ist dafuer auch
+//   vollstaendig beschafft (englisch und deutsch) — sie ist aber NICHT
+//   Bestandteil dieses Release: Gebraucht werden zunaechst die Short Forms.
+//   Fuer diesen Bogen ist die Langform vor allem die QUELLE des Wortlauts,
+//   denn die Kurzform-Publikation (Preece et al. 2023) nennt nur Itemnummern
+//   und Psychometrie, keinen deutschen Text.
+* language = #en
 * insert Version
 * status = #draft
 * experimental = true
@@ -74,7 +89,7 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
 
 // Designentscheidungen direkt am Questionnaire (designNote, ADR-003)
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* die Formel *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Im Singular trifft das hier **nicht** zu — es sind drei Items je Subskala; die Formel wirkt bei diesem Eintrag durchkopiert. Der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform ERQ-S, und deshalb der einzige AN-Zuschnitt mit validiertem Scoring. (1) Dieser Bogen ist die **offizielle Kurzform ERQ-S** (Preece et al. 2023) — verifiziert am 2026-09-29 gegen den Originalbogen der Autor:innen: Die sechs ERQ-S-Items sind die ERQ-Items 1, 2, 3, 6, 8, 9, also exakt die hier modellierten `linkId`s. (2) `linkId`s = Original-ERQ-Itemnummern; die Dictionary-Variablen-IDs laufen sequenziell — Mapping: erq4→`erq6`, erq5→`erq8`, erq6→`erq9`. (3) **Scoring vorhanden:** Neubewertung = `erq1`+`erq3`+`erq8`, Unterdrückung = `erq2`+`erq6`+`erq9`, je 3–21; kein Gesamtscore. Als `ObservationDefinition` modelliert. (4) US-Normwerte bewusst nicht als Referenzintervalle hinterlegt — es sind keine deutschen Normen. (5) Keine Terminologie-Codes: LOINC und SNOMED CT kennen den ERQ nicht. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+* extension[=].valueMarkdown = "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* die Formel *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Im Singular trifft das hier **nicht** zu — es sind drei Items je Subskala; die Formel wirkt bei diesem Eintrag durchkopiert. Der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform ERQ-S, und deshalb der einzige AN-Zuschnitt mit validiertem Scoring. (1) Dieser Bogen ist die **offizielle Kurzform ERQ-S** (Preece et al. 2023) — verifiziert am 2026-09-29 gegen den Originalbogen der Autor:innen: Die sechs ERQ-S-Items sind die ERQ-Items 1, 2, 3, 6, 8, 9, also exakt die hier modellierten `linkId`s. (2) `linkId`s = Original-ERQ-Itemnummern; die Dictionary-Variablen-IDs laufen sequenziell — Mapping: erq4→`erq6`, erq5→`erq8`, erq6→`erq9`. (3) **Scoring vorhanden:** Neubewertung = `erq1`+`erq3`+`erq8`, Unterdrückung = `erq2`+`erq6`+`erq9`, je 3–21; kein Gesamtscore. Als `ObservationDefinition` modelliert. (4) US-Normwerte bewusst nicht als Referenzintervalle hinterlegt — es sind keine deutschen Normen. (5a) **Englisch primär** (ADR-005): `item.text` trägt den englischen Originalwortlaut (Gross & John 2003), die autorisierte deutsche Fassung von Abler & Kessler (2009) hängt als `translation`-Extension mit `lang = de` daran. Beide Bögen stellt das Stanford Psychophysiology Laboratory frei bereit. **Nur die sechs ERQ-S-Items sind modelliert, nicht der ERQ-10.** Die Langform darf nach ADR-008 mitmodelliert werden und ist vollständig beschafft, ist aber nicht Bestandteil dieses Release; für diesen Bogen ist sie vor allem die **Quelle des deutschen Wortlauts**, den die Kurzform-Publikation nicht enthält. (5) Keine Terminologie-Codes: LOINC und SNOMED CT kennen den ERQ nicht. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
 
 // FHIR variables: die beiden Subskalen-Summen (ERQ-S Scoring Instructions).
 // Muster wie OPD-SFK. Items sind hier type=integer, daher .value.sum().
@@ -91,7 +106,12 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
 * item[+]
   * linkId = "erq1"
   * code[+] = PcorItemDictionaryCS#erq1
-  * text = "Wenn ich mehr positive Gefühle (wie Freude oder Heiterkeit) empfinden möchte, ändere ich, woran ich denke."
+  * text = "When I want to feel more positive emotion (such as joy or amusement), I change what I’m thinking about."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Wenn ich mehr positive Gefühle (wie Freude oder Heiterkeit) empfinden möchte, ändere ich, woran ich denke."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -103,12 +123,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq1-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display
 * item[+]
   * linkId = "erq2"
   * code[+] = PcorItemDictionaryCS#erq2
-  * text = "Ich behalte meine Gefühle für mich."
+  * text = "I keep my emotions to myself."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Ich behalte meine Gefühle für mich."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -120,12 +150,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq2-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display
 * item[+]
   * linkId = "erq3"
   * code[+] = PcorItemDictionaryCS#erq3
-  * text = "Wenn ich weniger negative Gefühle (wie Traurigkeit oder Ärger) empfinden möchte, ändere ich, woran ich denke."
+  * text = "When I want to feel less negative emotion (such as sadness or anger), I change what I’m thinking about."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Wenn ich weniger negative Gefühle (wie Traurigkeit oder Ärger) empfinden möchte, ändere ich, woran ich denke."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -137,12 +177,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq3-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display
 * item[+]
   * linkId = "erq6"
   * code[+] = PcorItemDictionaryCS#erq4
-  * text = "Ich halte meine Gefühle unter Kontrolle, indem ich sie nicht nach außen zeige."
+  * text = "I control my emotions by not expressing them."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Ich halte meine Gefühle unter Kontrolle, indem ich sie nicht nach außen zeige."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -154,12 +204,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq6-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display
 * item[+]
   * linkId = "erq8"
   * code[+] = PcorItemDictionaryCS#erq5
-  * text = "Ich halte meine Gefühle unter Kontrolle, indem ich über meine aktuelle Situation anders nachdenke."
+  * text = "I control my emotions by changing the way I think about the situation I’m in."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Ich halte meine Gefühle unter Kontrolle, indem ich über meine aktuelle Situation anders nachdenke."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -171,12 +231,22 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq8-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display
 * item[+]
   * linkId = "erq9"
   * code[+] = PcorItemDictionaryCS#erq6
-  * text = "Wenn ich negative Gefühle empfinde, sorge ich dafür, sie nicht nach außen zu zeigen."
+  * text = "When I am feeling negative emotions, I make sure not to express them."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Wenn ich negative Gefühle empfinde, sorge ich dafür, sie nicht nach außen zu zeigen."
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 1
@@ -188,5 +258,10 @@ Description: "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; P
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "erq9-anchors"
-    * text = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
+    * text = "1 = strongly disagree, 4 = neutral, 7 = strongly agree"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen"
     * type = #display

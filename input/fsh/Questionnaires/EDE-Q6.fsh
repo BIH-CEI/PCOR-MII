@@ -141,25 +141,39 @@ Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 T
 * ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
 * ^property[=].description = "Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal()."
 * ^property[=].type = #decimal
-* #0 "kein Tag"
+* #0 "No days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "kein Tag"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 0
-* #1 "1–5 Tage"
+* #1 "1-5 days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "1–5 Tage"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 1
-* #2 "6–12 Tage"
+* #2 "6-12 days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "6–12 Tage"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 2
-* #3 "13–15 Tage"
+* #3 "13-15 days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "13–15 Tage"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 3
-* #4 "16–22 Tage"
+* #4 "16-22 days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "16–22 Tage"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 4
-* #5 "23–27 Tage"
+* #5 "23-27 days"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "23–27 Tage"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 5
-* #6 "jeden Tag"
+* #6 "Every day"
+  * ^designation[+].language = #de
+  * ^designation[=].value = "jeden Tag"
   * ^property[+].code = #ordinalValue
   * ^property[=].valueDecimal = 6
 
@@ -204,7 +218,23 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6"
 * name = "EDEQ6"
-* language = #de
+// SPRACHE — en primaer nach ADR-005: Das EDE-Q-Original ist englisch
+//   (Fairburn & Beglin 1994; Bogen EDE-Q 6.0, (c) Fairburn and Beglin 2008,
+//   frei bereitgestellt vom Centre for Research on Eating Disorders at Oxford,
+//   https://www.credo-oxford.com/pdfs/EDE-Q_6.0.pdf). item.text traegt den
+//   englischen Originalwortlaut, die autorisierte deutsche Fassung
+//   (Hilbert & Tuschen-Caffier, dgvt-Verlag 2016) haengt als
+//   translation-Extension daran.
+//
+//   NEBENEFFEKT FUER DIE RECHTELAGE: Der englische Wortlaut ist frei
+//   bereitgestellt, der deutsche steht unter dem dgvt-Rechtevorbehalt
+//   (ADR-006). Englisch primaer verschiebt also den heikleren Teil in eine
+//   Uebersetzungsebene, statt ihn zum Hauptinhalt zu machen.
+//
+//   NUR DIE SECHS ITEMS sind abgebildet, nicht der EDE-Q-28. Die Langform darf
+//   nach ADR-008 mitmodelliert werden, ist aber nicht Bestandteil dieses
+//   Release — und beim EDE-Q ausserdem rechtlich zu klaeren.
+* language = #en
 * insert Version
 * status = #draft
 * experimental = true
@@ -215,31 +245,51 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 
 // Designentscheidungen direkt am Questionnaire (designNote, ADR-003)
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Standardzusammensetzung des EDE-Q nachgeprüft — die vier Skalen-Items sind je eines pro Subskala (Restraint, Eating Concern, Weight Concern, Shape Concern). Der Zuschnitt ist damit nach einem psychometrischen Kriterium gebildet, nicht willkürlich gekürzt; ein trennschärfstes Item bildet die Skala aber nicht ab, daher kein Score. (1) `linkId`s = Original-EDE-Q-Itemnummern (1, 7, 12, 27, 29, 30) — **verifiziert** über die Subskalen-zuordnung: Die vier Skalen-Items sind je eines pro Subskala (Restraint `edeq1`, Eating Concern `edeq7`, Weight Concern `edeq12`, Shape Concern `edeq27`), was die Angabe „ein Item je Skala“ der DIZ-Liste wörtlich bestätigt. (1a) **Keine offizielle Kurzform:** Vom EDE-Q gibt es zwar validierte Kurzfassungen (EDE-QS, EDE-Q-13, EDE-Q-8), aber keine 4-Item-Version je Subskala — anders als beim ERQ-S ist dieser Zuschnitt projektspezifisch, daher kein Score. (2) Kein Score: Der EDE-Q wird über Subskalen-/Global-Mittelwerte ausgewertet; für den 6-Item-Zuschnitt liegt keine validierte Scoring-Vorschrift vor, `edeq29`/`edeq30` sind nicht skalenbildend. (3) Kein `Questionnaire.code`: SNOMED `446825002` bezeichnet das Vollinstrument und wird dem Zuschnitt nicht zugewiesen. (4) `edeq27` als integer+Slider nach dem Original-Antwortblock (0 = überhaupt nicht … 6 = deutlich). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+* extension[=].valueMarkdown = "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Standardzusammensetzung des EDE-Q nachgeprüft — die vier Skalen-Items sind je eines pro Subskala (Restraint, Eating Concern, Weight Concern, Shape Concern). Der Zuschnitt ist damit nach einem psychometrischen Kriterium gebildet, nicht willkürlich gekürzt; ein trennschärfstes Item bildet die Skala aber nicht ab, daher kein Score. (1) `linkId`s = Original-EDE-Q-Itemnummern (1, 7, 12, 27, 29, 30) — **verifiziert** über die Subskalen-zuordnung: Die vier Skalen-Items sind je eines pro Subskala (Restraint `edeq1`, Eating Concern `edeq7`, Weight Concern `edeq12`, Shape Concern `edeq27`), was die Angabe „ein Item je Skala“ der DIZ-Liste wörtlich bestätigt. (1a) **Keine offizielle Kurzform:** Vom EDE-Q gibt es zwar validierte Kurzfassungen (EDE-QS, EDE-Q-13, EDE-Q-8), aber keine 4-Item-Version je Subskala — anders als beim ERQ-S ist dieser Zuschnitt projektspezifisch, daher kein Score. (2) Kein Score: Der EDE-Q wird über Subskalen-/Global-Mittelwerte ausgewertet; für den 6-Item-Zuschnitt liegt keine validierte Scoring-Vorschrift vor, `edeq29`/`edeq30` sind nicht skalenbildend. (3a) **Englisch primär** (ADR-005): `item.text` und die sieben Antwortkonzepte tragen den Wortlaut des autorisierten Bogens EDE-Q 6.0 (© Fairburn and Beglin 2008, frei bereitgestellt von CREDO Oxford); die deutsche Fassung hängt als `translation` bzw. `designation` mit `lang = de` daran. Das verschiebt zugleich den rechtlich heikleren deutschen Wortlaut aus dem Hauptinhalt in eine Übersetzungsebene. (3b) **Zur Nummerierung von `edeq29` und `edeq30`:** Im englischen EDE-Q 6.0 sind diese beiden Fragen **nicht nummeriert** — sie stehen in einem unnummerierten Schlussblock nach Item 28, zusammen mit Gewicht, Größe und der Frage nach der Pille. Die Nummern 29 und 30 stammen aus der deutschen Ausgabe. Die `linkId`s folgen damit der deutschen Zählung, nicht dem Originalbogen. (3) Kein `Questionnaire.code`: SNOMED `446825002` bezeichnet das Vollinstrument und wird dem Zuschnitt nicht zugewiesen. (4) `edeq27` als integer+Slider nach dem Original-Antwortblock (0 = überhaupt nicht … 6 = deutlich). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
 
 // ── Instruktionstext (28-Tage-Bezug) ─────────────────────────────────────────
 * item[+]
   * linkId = "edeq-intro"
-  * text = "Die folgenden Fragen beziehen sich ausschließlich auf die letzten vier Wochen (28 Tage)."
+  * text = "The following questions are concerned with the past four weeks (28 days) only."
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Die folgenden Fragen beziehen sich ausschließlich auf die letzten vier Wochen (28 Tage)."
   * type = #display
 
 // ── Häufigkeitsitems (linkId = Dictionary-Variablen-ID = EDE-Q-Itemnummer) ───
 * item[+]
   * linkId = "edeq1"
   * code[+] = PcorItemDictionaryCS#edeq1
-  * text = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Haben Sie bewusst versucht, die Nahrungsmenge, die Sie essen, zu begrenzen, um Ihre Figur oder Ihr Gewicht zu beeinflussen (unabhängig davon, ob es Ihnen tatsächlich gelungen ist)?"
+  * text = "ON HOW MANY OF THE PAST 28 DAYS … Have you been deliberately trying to limit the amount of food you eat to influence your shape or weight (whether or not you have succeeded)?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Haben Sie bewusst versucht, die Nahrungsmenge, die Sie essen, zu begrenzen, um Ihre Figur oder Ihr Gewicht zu beeinflussen (unabhängig davon, ob es Ihnen tatsächlich gelungen ist)?"
   * type = #choice
   * answerValueSet = Canonical(EdeQ6TageVS)
 * item[+]
   * linkId = "edeq7"
   * code[+] = PcorItemDictionaryCS#edeq7
-  * text = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Hat das Nachdenken über Nahrung, Essen oder Kalorien es Ihnen sehr schwer gemacht, sich auf Dinge zu konzentrieren, die Sie interessieren (z. B. arbeiten, einem Gespräch folgen oder lesen)?"
+  * text = "ON HOW MANY OF THE PAST 28 DAYS … Has thinking about food, eating or calories made it very difficult to concentrate on things you are interested in (for example, working, following a conversation, or reading)?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Hat das Nachdenken über Nahrung, Essen oder Kalorien es Ihnen sehr schwer gemacht, sich auf Dinge zu konzentrieren, die Sie interessieren (z. B. arbeiten, einem Gespräch folgen oder lesen)?"
   * type = #choice
   * answerValueSet = Canonical(EdeQ6TageVS)
 * item[+]
   * linkId = "edeq12"
   * code[+] = PcorItemDictionaryCS#edeq12
-  * text = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Hatten Sie einen starken Wunsch abzunehmen?"
+  * text = "ON HOW MANY OF THE PAST 28 DAYS … Have you had a strong desire to lose weight?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "AN WIE VIELEN DER LETZTEN 28 TAGE ... Hatten Sie einen starken Wunsch abzunehmen?"
   * type = #choice
   * answerValueSet = Canonical(EdeQ6TageVS)
 
@@ -247,7 +297,12 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 * item[+]
   * linkId = "edeq27"
   * code[+] = PcorItemDictionaryCS#edeq27
-  * text = "WÄHREND DER LETZTEN VIER WOCHEN (28 TAGE) ... Wie unwohl haben Sie sich gefühlt, wenn Sie Ihren Körper gesehen haben (z. B. im Spiegel, Ihr Spiegelbild im Schaufenster, beim Ausziehen, Baden oder Duschen)?"
+  * text = "OVER THE PAST 28 DAYS … How uncomfortable have you felt seeing your body (for example, seeing your shape in the mirror, in a shop window reflection, while undressing or taking a bath or shower)?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "WÄHREND DER LETZTEN VIER WOCHEN (28 TAGE) ... Wie unwohl haben Sie sich gefühlt, wenn Sie Ihren Körper gesehen haben (z. B. im Spiegel, Ihr Spiegelbild im Schaufenster, beim Ausziehen, Baden oder Duschen)?"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
@@ -259,24 +314,44 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
   * extension[=].valueCodeableConcept = $questionnaire-item-control#slider "Slider"
   * item[+]
     * linkId = "edeq27-anchors"
-    * text = "0 = überhaupt nicht, 1–2 = leicht, 3–4 = mäßig, 5–6 = deutlich"
+    * text = "0 = not at all, 1–2 = slightly, 3–4 = moderately, 5–6 = markedly"
+    * text.extension[+].url = $translation
+    * text.extension[=].extension[+].url = "lang"
+    * text.extension[=].extension[=].valueCode = #de
+    * text.extension[=].extension[+].url = "content"
+    * text.extension[=].extension[=].valueString = "0 = überhaupt nicht, 1–2 = leicht, 3–4 = mäßig, 5–6 = deutlich"
     * type = #display
 
 // ── Zusatzfragen Regelblutung (Für Frauen) ───────────────────────────────────
 * item[+]
   * linkId = "edeq-frauen-intro"
-  * text = "Für Frauen:"
+  * text = "If female:"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Für Frauen:"
   * type = #display
 * item[+]
   * linkId = "edeq29"
   * code[+] = PcorItemDictionaryCS#edeq29
-  * text = "Ist Ihre Regelblutung während der letzten drei bis vier Monate ausgeblieben?"
+  * text = "Over the past three-to-four months have you missed any menstrual periods?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Ist Ihre Regelblutung während der letzten drei bis vier Monate ausgeblieben?"
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 * item[+]
   * linkId = "edeq30"
   * code[+] = PcorItemDictionaryCS#edeq30
-  * text = "Wenn ja, wie viele Regelblutungen sind ausgeblieben?"
+  * text = "If so, how many?"
+  * text.extension[+].url = $translation
+  * text.extension[=].extension[+].url = "lang"
+  * text.extension[=].extension[=].valueCode = #de
+  * text.extension[=].extension[+].url = "content"
+  * text.extension[=].extension[=].valueString = "Wenn ja, wie viele Regelblutungen sind ausgeblieben?"
   * type = #integer
   * extension[+].url = $designNote
   * extension[=].valueMarkdown = "Das Item Level Dictionary nennt als Bedingung „If edeq31 = 1“; eine Variable `edeq31` existiert im AN-Blatt nicht (Erratum). Umgesetzt als `enableWhen` auf `edeq29` = ja — die Ja/Nein-Frage direkt davor."
