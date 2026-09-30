@@ -54,7 +54,7 @@ Wozu der Code überhaupt dient: Ein flach erhobener Studiendatensatz lässt sich
 
 Die `linkId`s sind die **Original-ERQ-Itemnummern** (`linkId`-Regel, [ADR-003](Designentscheidungen.html)) — verifiziert gegen den von Gross/John autorisierten [deutschen Originalbogen](https://spl.stanford.edu/sites/g/files/sbiybj19321/files/media/file/german.pdf) (Abler/Kessler, Universität Ulm): alle sechs Fragetexte wortgleich. Die Dictionary-Variablen-IDs laufen dagegen sequenziell durch:
 
-| `linkId` (= ERQ-Item) | Dictionary-Variable | Frage | Skala |
+| `linkId` (= ERQ-Item) | `item.code` (Dictionary-Variable) | Frage | Skala |
 |---|---|---|---|
 | `erq1` | `erq1` | Wenn ich mehr positive Gefühle (wie Freude oder Heiterkeit) empfinden möchte, ändere ich, woran ich denke. | Neubewertung |
 | `erq2` | `erq2` | Ich behalte meine Gefühle für mich. | Unterdrückung |

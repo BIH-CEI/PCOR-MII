@@ -256,6 +256,20 @@ Der Rename fällt also **gratis** mit ab, und es gibt keine zweite Quelle der Wa
 
 Das CodeSystem ist **generiert** und trägt `content = #fragment`: Es enthält nur die modellierten Variablen, während das Dictionary 454 über drei Entitäten führt. `#complete` wäre eine Falschaussage, und das CodeSystem wächst mit der Modellierung. Jedes Konzept trägt die Properties `instrument`, `category` und `entity` aus dem Dictionary — so ist auch ohne Questionnaire-Lookup erkennbar, wohin eine Variable gehört.
 
+**Warum `item.code` und nicht `item.definition` — und wann sich das ändern sollte.** FHIR hat für „dieses Item *ist* jenes Datenelement" ein eigenes Element, und das ist nicht `item.code`, sondern **`item.definition`**. Es wäre der SDC-idiomatische Weg, und er ist ausdrücklich offengehalten.
+
+Nur genügt dafür kein Canonical, das man sich ausdenkt. R4 verlangt eine auflösbare Element-Definition:
+
+> „The uri refers to an ElementDefinition in a StructureDefinition and always starts with the canonical URL for the target resource. […] a fragment identifier is used to specify the element definition by its id."
+
+Eine URL wie `…/PCOR-MII/item#erq4` ohne StructureDefinition dahinter wäre also wirkungslos — und würde den Zweck verfehlen, denn laut Spec **dürfen** Consumer aus der Element-Definition `code`, `type` und `required` ableiten, wenn das Item sie nicht selbst trägt.
+
+Richtig gemacht heißt: ein **Logical Model** für das Item Level Dictionary (`StructureDefinition`, `kind = logical`), eine Element-Definition je Variable, und dann `item.definition = "…/StructureDefinition/pcor-item-dictionary-model#PcorItemDictionary.erq4"`. Was das bringt: Es ist die Grundlage für definitionsbasiertes `$populate` und `$extract`, es gibt dafür den SDC-Suchparameter `definition`, und `type` sowie `required` müssten nicht mehr an jedem Item wiederholt werden.
+
+Was dagegen spricht, es jetzt zu tun: Ein Logical Model mit über 114 Elementen wäre parallel zum Dictionary zu pflegen, und der Nutzen entsteht erst, wenn Extraktion und Vorbefüllung real werden — beides ist laut [Anwendung](Implementation.html) bisher ausdrücklich Zukunft.
+
+**Die beiden Mechanismen schließen sich nicht aus.** Die Spec sagt zu `item.code`: *„The value may come from the ElementDefinition referred to by .definition."* Ein späteres Logical Model würde die Codes also **ergänzen**, nicht ersetzen — die jetzt gesetzten 114 `item.code`s bleiben gültig und wären dann der Terminologie-Anteil derselben Aussage.
+
 **Entscheidung 3 — ein Erhebungsereignis wird zu N `QuestionnaireResponse`s, zusammengehalten über Encounter und Zeitstempel.** `QuestionnaireResponse` hat in R4 **kein `partOf`**, es gibt also keinen eingebauten Elternknoten. Die Zusammengehörigkeit wird deshalb so ausgedrückt:
 
 1. identische `subject`-Referenz,
