@@ -16,7 +16,7 @@
     "status" : "draft",
     "name" : "AnsocqKoerperteileCS",
     "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
-    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept.",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ansocq-koerperteile-vs.html" : "ANSOCQ Item 3 — Körperteile"
@@ -150,7 +150,7 @@
     "status" : "draft",
     "name" : "EdeQ6TageCS",
     "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
-    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal().",
+    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ede-q6-tage-vs.html" : "EDE-Q6 Häufigkeit in 28 Tagen"
@@ -276,7 +276,7 @@
     "status" : "draft",
     "name" : "SsukAntwortCS",
     "title" : "SSUK Antwortskala (Codes)",
-    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept.",
+    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ssuk-antwort-vs.html" : "SSUK Antwortskala"

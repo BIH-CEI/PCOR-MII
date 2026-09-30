@@ -395,6 +395,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
   <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
+  <li><a href="#der-pcor-mii-code-eines-items-ist-die-dictionary-variable" id="markdown-toc-der-pcor-mii-code-eines-items-ist-die-dictionary-variable">Der PCOR-MII-Code eines Items ist die Dictionary-Variable</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
   <li><a href="#die-auswahl-folgt-den-vier-subskalen" id="markdown-toc-die-auswahl-folgt-den-vier-subskalen">Die Auswahl folgt den vier Subskalen</a></li>
@@ -430,6 +431,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>Die Ja/Nein-Frage <code class="language-plaintext highlighter-rouge">edeq29</code> nutzt das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a>.</p>
+
+<h3 id="der-pcor-mii-code-eines-items-ist-die-dictionary-variable">Der PCOR-MII-Code eines Items ist die Dictionary-Variable</h3>
+
+<p>Jedes Item trägt in <code class="language-plaintext highlighter-rouge">item.code</code> seine Variable aus dem Item Level Dictionary, gegen das CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a>. <strong>Das ist der PCOR-MII-Code des Items</strong> — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.</p>
+
+<p>Der Code bezeichnet das <strong>Erhebungsfeld</strong>. Hier stimmt es mit der Itemnummer überein (<code class="language-plaintext highlighter-rouge">edeq1</code>, <code class="language-plaintext highlighter-rouge">edeq7</code>, <code class="language-plaintext highlighter-rouge">edeq12</code>, <code class="language-plaintext highlighter-rouge">edeq27</code>, <code class="language-plaintext highlighter-rouge">edeq29</code>, <code class="language-plaintext highlighter-rouge">edeq30</code>); beim <a href="ERQ-6.html">ERQ-S</a> ist das ausdrücklich <strong>nicht</strong> so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (<a href="Designentscheidungen.html">ADR-011</a>).</p>
 
 <h3 id="canonical">Canonical</h3>
 
@@ -608,7 +615,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:23:00 +0000">
+  <span title="2026-09-30 09:31:00 +0000">
     2026-09-30
   </span>
 

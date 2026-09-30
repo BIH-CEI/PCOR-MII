@@ -17,6 +17,12 @@ Der ANSOCQ-2 ist ein **projektspezifischer Zuschnitt**: 2 der 20 ANSOCQ-Items (R
 * **CodeSysteme:** [ansocq-koerperteile](CodeSystem-ansocq-koerperteile.md), [ansocq-gedanken](CodeSystem-ansocq-gedanken.md) — je fünf Feststellungen mit `ordinalValue` 1–5 (Stadienlogik)
 * **ValueSets:** [ansocq-koerperteile-vs](ValueSet-ansocq-koerperteile-vs.md), [ansocq-gedanken-vs](ValueSet-ansocq-gedanken-vs.md)
 
+### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
+
+Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
+
+Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ansocq3`, `ansocq14`); beim [ERQ-S](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
+
 ### Canonical
 
 `https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2`

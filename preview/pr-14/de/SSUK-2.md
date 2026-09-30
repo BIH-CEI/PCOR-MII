@@ -32,6 +32,12 @@ Am Rande: Eine **validierte Kurzform existiert** — die 8-Item-SSUK (Mehnert et
 * **CodeSystem:** [ssuk-antwort](CodeSystem-ssuk-antwort.md) — 0 = nie … 4 = immer, `ordinalValue` 0–4
 * **ValueSet:** [ssuk-antwort-vs](ValueSet-ssuk-antwort-vs.md)
 
+### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
+
+Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
+
+Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ssuk14`, `ssuk10`); beim [ERQ-S](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
+
 ### Canonical
 
 `https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2`

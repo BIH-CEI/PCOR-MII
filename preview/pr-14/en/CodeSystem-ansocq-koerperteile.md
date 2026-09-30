@@ -3,7 +3,7 @@
 ## CodeSystem: ANSOCQ Item 3 — Körperteile (Codes) (Experimental) 
 
  
-Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. 
+Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein. 
 
 This Code system is referenced in the definition of the following value sets:
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:23:41+00:00",
+  "date" : "2026-09-30T09:31:14+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -36,7 +36,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept.",
+  "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -395,6 +395,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
   <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
+  <li><a href="#die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander" id="markdown-toc-die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander">Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
   <li><a href="#wortlaut--vollständig-verifiziert" id="markdown-toc-wortlaut--vollständig-verifiziert">Wortlaut — vollständig verifiziert</a></li>
@@ -427,6 +428,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>Alle fünf Items nutzen das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a>. Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist im Mapping auf <code class="language-plaintext highlighter-rouge">DemAntwortCS</code> dokumentarisch, nicht strukturell.</p>
+
+<h3 id="die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander">Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander</h3>
+
+<p>Jedes Item trägt <strong>zwei</strong> Codings, und genau dafür ist <code class="language-plaintext highlighter-rouge">item.code</code> <code class="language-plaintext highlighter-rouge">0..*</code>:</p>
+
+<ul>
+  <li>die Variable aus dem Item Level Dictionary gegen <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> — <strong>das ist der PCOR-MII-Code des Items</strong></li>
+  <li>den item-genauen <strong>LOINC-Code</strong> (<code class="language-plaintext highlighter-rouge">82814-5</code> bis <code class="language-plaintext highlighter-rouge">82818-6</code>)</li>
+</ul>
+
+<p>Ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Die Dictionary-Variable bezeichnet das <strong>Erhebungsfeld</strong> und stimmt hier mit der Itemnummer überein; beim <a href="ERQ-6.html">ERQ-S</a> ist das ausdrücklich <strong>nicht</strong> so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (<a href="Designentscheidungen.html">ADR-011</a>).</p>
 
 <h3 id="canonical">Canonical</h3>
 
@@ -545,7 +557,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:23:00 +0000">
+  <span title="2026-09-30 09:31:00 +0000">
     2026-09-30
   </span>
 

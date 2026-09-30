@@ -397,6 +397,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
   <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
+  <li><a href="#der-pcor-mii-code-eines-items-ist-die-dictionary-variable" id="markdown-toc-der-pcor-mii-code-eines-items-ist-die-dictionary-variable">Der PCOR-MII-Code eines Items ist die Dictionary-Variable</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
   <li><a href="#scoring--zwei-subskalen" id="markdown-toc-scoring--zwei-subskalen">Scoring — zwei Subskalen</a></li>
@@ -436,6 +437,51 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>Kodierte Antwortoptionen gibt es nicht; alle sechs Items sind numerisch (<code class="language-plaintext highlighter-rouge">integer</code>, 1–7) mit Slider und Anker-<code class="language-plaintext highlighter-rouge">display</code>-Item — im Dictionary ist die Skala als Grafik geführt (Anker: 1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen).</p>
+
+<h3 id="der-pcor-mii-code-eines-items-ist-die-dictionary-variable">Der PCOR-MII-Code eines Items ist die Dictionary-Variable</h3>
+
+<p>Jedes Item trägt in <code class="language-plaintext highlighter-rouge">item.code</code> seine Variable aus dem Item Level Dictionary, gegen das CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a>. <strong>Das ist der PCOR-MII-Code des Items</strong> — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht, weil es nur Ambiguität stiften würde.</p>
+
+<p><strong>Bei diesem Bogen ist dabei eine Falle</strong>, und sie ist die einzige ihrer Art im Projekt: Der Code bezeichnet das <strong>Erhebungsfeld</strong>, nicht die Itemnummer — und hier fällt beides auseinander.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code> (= ERQ-Itemnummer)</th>
+      <th><code class="language-plaintext highlighter-rouge">item.code</code> (Dictionary-Variable)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">erq1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">erq2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">erq3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq6</code></td>
+      <td><strong><code class="language-plaintext highlighter-rouge">erq4</code></strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq8</code></td>
+      <td><strong><code class="language-plaintext highlighter-rouge">erq5</code></strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">erq9</code></td>
+      <td><strong><code class="language-plaintext highlighter-rouge">erq6</code></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Wer den Code für eine Itemnummer nimmt, ordnet also falsch zu — und zwar unauffällig, weil <code class="language-plaintext highlighter-rouge">erq6</code> in beiden Spalten vorkommt und dort Verschiedenes bezeichnet. Die Original-Itemnummer steht im <code class="language-plaintext highlighter-rouge">linkId</code> (<a href="Designentscheidungen.html">ADR-008</a>), die Abbildung zusätzlich maschinenlesbar in der ConceptMap <a href="ConceptMap-pcor-cm-erq-s-linkids.html">pcor-cm-erq-s-linkids</a>.</p>
+
+<p>Wozu der Code überhaupt dient: Ein flach erhobener Studiendatensatz lässt sich damit maschinell auf die Instrumenten-Questionnaires verteilen — Nachschlagen statt Abbilden, siehe <a href="Designentscheidungen.html">ADR-011</a>.</p>
 
 <h3 id="canonical">Canonical</h3>
 
@@ -585,7 +631,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 09:23:00 +0000">
+  <span title="2026-09-30 09:31:00 +0000">
     2026-09-30
   </span>
 

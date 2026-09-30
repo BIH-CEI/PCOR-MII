@@ -429,6 +429,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="v030-2026-09-30--an-batterie-designentscheidungen-und-item-zuordnung">v0.3.0 (2026-09-30) — AN-Batterie, Designentscheidungen und Item-Zuordnung</h3>
 
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Bei allen fünf AN-Instrumenten ist jetzt in <code class="language-plaintext highlighter-rouge">designNote</code>, <code class="language-plaintext highlighter-rouge">Questionnaire.description</code> und auf der Instrumentenseite festgehalten, dass der <strong>PCOR-MII-Code eines Items die Dictionary-Variable ist</strong> — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Der Code bezeichnet das <strong>Erhebungsfeld</strong>, nicht die Itemnummer. Beim <a href="ERQ-6.html">ERQ-S</a> fällt beides auseinander, und das ist die einzige Falle dieser Art im Projekt: Dictionary <code class="language-plaintext highlighter-rouge">erq4</code>, <code class="language-plaintext highlighter-rouge">erq5</code> und <code class="language-plaintext highlighter-rouge">erq6</code> liegen auf den ERQ-Items <strong>6, 8 und 9</strong>. Weil <code class="language-plaintext highlighter-rouge">erq6</code> in beiden Spalten vorkommt und dort Verschiedenes bezeichnet, fällt eine Fehlzuordnung nicht auf — die Seite zeigt die Zuordnung deshalb als Tabelle. Beim ACE stehen Dictionary-Variable und LOINC-Code nebeneinander; genau dafür ist <code class="language-plaintext highlighter-rouge">item.code</code> <code class="language-plaintext highlighter-rouge">0..*</code></p>
+
 <p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> ERQ-S, EDE-Q6 und ACE auf <strong>Englisch als Primärsprache</strong> umgestellt (ADR-005) — alle drei haben ein englisches Original, waren aber deutsch-primär ohne Übersetzungsebene. <code class="language-plaintext highlighter-rouge">item.text</code> trägt jetzt den Originalwortlaut, die deutsche Fassung hängt als <code class="language-plaintext highlighter-rouge">translation</code> mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran; beim EDE-Q6 zusätzlich die sieben Antwortkonzepte mit <code class="language-plaintext highlighter-rouge">designation</code>. Damit sind fünf der dreizehn Bögen englisch-primär (dazu DEM und ANSOCQ-2). Deutsch-primär bleiben die deutsch entwickelten und die projekteigenen Instrumente — beim <a href="SSUK-2.html">SSUK-2</a> ausdrücklich begründet, weil sich die Items nicht als wörtliche ISSS-Items belegen lassen.</p>
 
 <p>Die englischen Wortlaute sind <strong>beschafft, nicht erinnert</strong>: ERQ aus dem Originalbogen des <a href="https://spl.stanford.edu/resources">Stanford Psychophysiology Laboratory</a>, EDE-Q aus dem autorisierten Bogen EDE-Q 6.0 (© Fairburn and Beglin 2008, CREDO Oxford), ACE aus einem an Felitti et al. 1998 zitierenden Exemplar.</p>
@@ -597,7 +599,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 09:23:00 +0000">
+  <span title="2026-09-30 09:31:00 +0000">
     2026-09-30
   </span>
 

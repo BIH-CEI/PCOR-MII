@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:23:41+00:00",
+  "date" : "2026-09-30T09:31:14+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

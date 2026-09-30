@@ -3,7 +3,7 @@
 ## CodeSystem: SSUK Antwortskala (Codes) (Experimental) 
 
  
-5-stufige Häufigkeitsskala der SSUK (0 = nie … 4 = immer). ordinalValue-Property je Konzept. 
+5-stufige Häufigkeitsskala der SSUK (0 = nie … 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein. 
 
 This Code system is referenced in the definition of the following value sets:
 
@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "SSUK Antwortskala (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T09:23:41+00:00",
+  "date" : "2026-09-30T09:31:14+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -36,7 +36,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept.",
+  "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

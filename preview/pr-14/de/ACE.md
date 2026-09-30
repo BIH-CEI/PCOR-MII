@@ -25,6 +25,15 @@ Zur Quelle des englischen Wortlauts: ein an die Originalpublikation zitierendes 
 
 Alle fünf Items nutzen das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.md). Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist im Mapping auf `DemAntwortCS` dokumentarisch, nicht strukturell.
 
+### Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander
+
+Jedes Item trägt **zwei** Codings, und genau dafür ist `item.code` `0..*`:
+
+* die Variable aus dem Item Level Dictionary gegen [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md) — **das ist der PCOR-MII-Code des Items**
+* den item-genauen **LOINC-Code** (`82814-5` bis `82818-6`)
+
+Ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Die Dictionary-Variable bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein; beim [ERQ-S](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
+
 ### Canonical
 
 `https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE`

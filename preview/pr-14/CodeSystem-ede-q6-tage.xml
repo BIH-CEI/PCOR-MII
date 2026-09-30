@@ -11,7 +11,7 @@
   <title value="EDE-Q6 Häufigkeit in 28 Tagen (Codes)"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-09-30T09:23:41+00:00"/>
+  <date value="2026-09-30T09:31:14+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -20,7 +20,7 @@
       <value value="https://www.bihealth.org/"/>
     </telecom>
   </contact>
-  <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal()."/>
+  <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

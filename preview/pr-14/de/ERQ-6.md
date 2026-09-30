@@ -31,6 +31,25 @@ Das folgt [ADR-005](Designentscheidungen.md) und ist gleichzeitig Voraussetzung 
 
 Kodierte Antwortoptionen gibt es nicht; alle sechs Items sind numerisch (`integer`, 1–7) mit Slider und Anker-`display`-Item — im Dictionary ist die Skala als Grafik geführt (Anker: 1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen).
 
+### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
+
+Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht, weil es nur Ambiguität stiften würde.
+
+**Bei diesem Bogen ist dabei eine Falle**, und sie ist die einzige ihrer Art im Projekt: Der Code bezeichnet das **Erhebungsfeld**, nicht die Itemnummer — und hier fällt beides auseinander.
+
+| | |
+| :--- | :--- |
+| `erq1` | `erq1` |
+| `erq2` | `erq2` |
+| `erq3` | `erq3` |
+| `erq6` | **`erq4`** |
+| `erq8` | **`erq5`** |
+| `erq9` | **`erq6`** |
+
+Wer den Code für eine Itemnummer nimmt, ordnet also falsch zu — und zwar unauffällig, weil `erq6` in beiden Spalten vorkommt und dort Verschiedenes bezeichnet. Die Original-Itemnummer steht im `linkId` ([ADR-008](Designentscheidungen.md)), die Abbildung zusätzlich maschinenlesbar in der ConceptMap [pcor-cm-erq-s-linkids](ConceptMap-pcor-cm-erq-s-linkids.md).
+
+Wozu der Code überhaupt dient: Ein flach erhobener Studiendatensatz lässt sich damit maschinell auf die Instrumenten-Questionnaires verteilen — Nachschlagen statt Abbilden, siehe [ADR-011](Designentscheidungen.md).
+
 ### Canonical
 
 `https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6`

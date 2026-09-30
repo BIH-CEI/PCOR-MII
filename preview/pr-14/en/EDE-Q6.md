@@ -27,6 +27,12 @@ Der EDE-Q6 ist ein **projektspezifischer Zuschnitt** des EDE-Q (Fairburn & Begli
 
 Die Ja/Nein-Frage `edeq29` nutzt das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.md).
 
+### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
+
+Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
+
+Der Code bezeichnet das **Erhebungsfeld**. Hier stimmt es mit der Itemnummer überein (`edeq1`, `edeq7`, `edeq12`, `edeq27`, `edeq29`, `edeq30`); beim [ERQ-S](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
+
 ### Canonical
 
 `https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6`
