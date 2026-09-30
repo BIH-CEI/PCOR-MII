@@ -1,5 +1,29 @@
 {
   "codeSystems" : [{
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-gedanken-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "AnsocqGedankenVS",
+    "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken"],
+    "uses" : {
+    },
+    "Questionnaire-ANSOCQ2.html" : "ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-koerperteile-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "AnsocqKoerperteileVS",
+    "title" : "ANSOCQ Item 3 — Körperteile",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile"],
+    "uses" : {
+    },
+    "Questionnaire-ANSOCQ2.html" : "ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-beziehungsstatus-vs",
     "version" : "0.2.0",
     "status" : "draft",
@@ -81,6 +105,8 @@
     "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
     "uses" : {
     },
+    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
+    "Questionnaire-ACE.html" : "ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)",
     "Questionnaire-MHI.html" : "MHI — Medical History",
     "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
@@ -155,6 +181,18 @@
     "uses" : {
     },
     "Questionnaire-MHI.html" : "MHI — Medical History"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ede-q6-tage-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "EdeQ6TageVS",
+    "title" : "EDE-Q6 Häufigkeit in 28 Tagen",
+    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"],
+    "uses" : {
+    },
+    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-an-subtyp-vs",
@@ -263,6 +301,18 @@
     "uses" : {
     },
     "Questionnaire-PcorExampleQuestionnaire.html" : "PCOR Beispiel-Fragebogen"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ssuk-antwort-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "SsukAntwortVS",
+    "title" : "SSUK Antwortskala",
+    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort"],
+    "uses" : {
+    },
+    "Questionnaire-SSUK2.html" : "SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",

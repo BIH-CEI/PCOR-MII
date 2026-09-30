@@ -75,6 +75,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "EXPECT_01",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "EXPECT_01"
+    }],
     "text" : "Welche Gesamtstärke Ihrer Körperbeschwerden erwarten Sie in 6 Monaten?",
     "type" : "integer",
     "item" : [{
@@ -107,6 +111,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "EXPECT_02",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "EXPECT_02"
+    }],
     "text" : "Wie sehr erwarten Sie in 6 Monaten durch Körperbeschwerden beeinträchtigt zu sein?",
     "type" : "integer",
     "item" : [{
@@ -139,6 +147,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }
     }],
     "linkId" : "EXPECT_03",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "EXPECT_03"
+    }],
     "text" : "Wie gut erwarten Sie, in 6 Monaten mit möglichen Körperbeschwerden umgehen zu können?",
     "type" : "integer",
     "item" : [{

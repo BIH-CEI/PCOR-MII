@@ -59,17 +59,29 @@
         <valueInteger value="1"/>
       </extension>
       <linkId value="WAI01"/>
+      <code>
+        <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary"/>
+        <code value="WAI01"/>
+      </code>
       <text value="Selbsteinschätzung der derzeitigen Arbeitsfähigkeit im Vergleich zur besten je erreichten Arbeitsfähigkeit, Skala 0-10 (0 = keine Arbeitsfähigkeit, 10 = beste je erreichte Arbeitsfähigkeit)."/>
       <type value="integer"/>
     </item>
     <item>
       <linkId value="WAI02a"/>
+      <code>
+        <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary"/>
+        <code value="WAI02a"/>
+      </code>
       <text value="Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die körperlichen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."/>
       <type value="choice"/>
       <answerValueSet value="https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"/>
     </item>
     <item>
       <linkId value="WAI02b"/>
+      <code>
+        <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary"/>
+        <code value="WAI02b"/>
+      </code>
       <text value="Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die psychischen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert)."/>
       <type value="choice"/>
       <answerValueSet value="https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"/>

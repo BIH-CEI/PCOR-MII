@@ -1,4 +1,18 @@
 [{
+  "id" : "ansocq-gedanken",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
+  "version" : "0.2.0",
+  "name" : "AnsocqGedankenCS"
+},
+{
+  "id" : "ansocq-koerperteile",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
+  "version" : "0.2.0",
+  "name" : "AnsocqKoerperteileCS"
+},
+{
   "id" : "dem-antwort",
   "type" : "CodeSystem",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
@@ -76,6 +90,13 @@
   "name" : "DemZigarettenBandCS"
 },
 {
+  "id" : "ede-q6-tage",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+  "version" : "0.2.0",
+  "name" : "EdeQ6TageCS"
+},
+{
   "id" : "mhi-an-subtyp",
   "type" : "CodeSystem",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
@@ -139,11 +160,39 @@
   "name" : "PcorExampleGeneralHealthCS"
 },
 {
+  "id" : "pcor-item-dictionary",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+  "version" : "0.2.0",
+  "name" : "PcorItemDictionaryCS"
+},
+{
+  "id" : "pcor-score-catalogue",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue",
+  "version" : "0.2.0",
+  "name" : "PcorScoreCatalogueCS"
+},
+{
+  "id" : "ssuk-antwort",
+  "type" : "CodeSystem",
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+  "version" : "0.2.0",
+  "name" : "SsukAntwortCS"
+},
+{
   "id" : "wai-skala-5",
   "type" : "CodeSystem",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",
   "version" : "0.2.0",
   "name" : "WaiSkala5CS"
+},
+{
+  "id" : "pcor-cm-erq-s-linkids",
+  "type" : "ConceptMap",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids",
+  "version" : "0.2.0",
+  "name" : "PcorCmErqSLinkIds"
 },
 {
   "id" : "pcor-mii",
@@ -153,11 +202,39 @@
   "name" : "PCOR_MII"
 },
 {
+  "id" : "ACE",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE",
+  "version" : "0.2.0",
+  "name" : "ACE"
+},
+{
+  "id" : "ANSOCQ2",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2",
+  "version" : "0.2.0",
+  "name" : "ANSOCQ2"
+},
+{
   "id" : "DEM",
   "type" : "Questionnaire",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM",
   "version" : "0.2.0",
   "name" : "DEM"
+},
+{
+  "id" : "EDEQ6",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6",
+  "version" : "0.2.0",
+  "name" : "EDEQ6"
+},
+{
+  "id" : "ERQ6",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6",
+  "version" : "0.2.0",
+  "name" : "ERQ6"
 },
 {
   "id" : "EXPECT",
@@ -202,11 +279,32 @@
   "name" : "PcorExampleQuestionnaire"
 },
 {
+  "id" : "SSUK2",
+  "type" : "Questionnaire",
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2",
+  "version" : "0.2.0",
+  "name" : "SSUK2"
+},
+{
   "id" : "WAI",
   "type" : "Questionnaire",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI",
   "version" : "0.2.0",
   "name" : "WAI"
+},
+{
+  "id" : "ansocq-gedanken-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-gedanken-vs",
+  "version" : "0.2.0",
+  "name" : "AnsocqGedankenVS"
+},
+{
+  "id" : "ansocq-koerperteile-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-koerperteile-vs",
+  "version" : "0.2.0",
+  "name" : "AnsocqKoerperteileVS"
 },
 {
   "id" : "dem-beziehungsstatus-vs",
@@ -300,6 +398,13 @@
   "name" : "DemZigarettenBandVS"
 },
 {
+  "id" : "ede-q6-tage-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ede-q6-tage-vs",
+  "version" : "0.2.0",
+  "name" : "EdeQ6TageVS"
+},
+{
   "id" : "mhi-an-subtyp-vs",
   "type" : "ValueSet",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-an-subtyp-vs",
@@ -361,6 +466,13 @@
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health",
   "version" : "0.2.0",
   "name" : "PcorExampleGeneralHealthVS"
+},
+{
+  "id" : "ssuk-antwort-vs",
+  "type" : "ValueSet",
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ssuk-antwort-vs",
+  "version" : "0.2.0",
+  "name" : "SsukAntwortVS"
 },
 {
   "id" : "wai-skala-5-vs",

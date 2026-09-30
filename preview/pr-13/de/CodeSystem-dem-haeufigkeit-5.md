@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:34:58+00:00",
+  "date" : "2026-09-30T07:33:31+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,23 +49,43 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "count" : 5,
   "concept" : [{
     "code" : "staendig",
-    "display" : "Ständig"
+    "display" : "Always",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ständig"
+    }]
   },
   {
     "code" : "meistens",
-    "display" : "Meistens"
+    "display" : "Often",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Meistens"
+    }]
   },
   {
     "code" : "manchmal",
-    "display" : "Manchmal"
+    "display" : "Sometimes",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Manchmal"
+    }]
   },
   {
     "code" : "selten",
-    "display" : "Selten"
+    "display" : "Rarely",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Selten"
+    }]
   },
   {
     "code" : "nie",
-    "display" : "Nie"
+    "display" : "Never",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nie"
+    }]
   }]
 }
 

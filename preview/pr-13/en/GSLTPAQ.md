@@ -34,6 +34,10 @@ Grund: Die vorliegenden Studiendaten wurden bereits mit dieser Eigenübersetzung
 
 Die validierte Fassung — Lindner A, Bamberger EM, Crutzen R, Kulnik ST. **Translation to German (Austrian) and qualitative linguistic validation of the Godin-Shephard Leisure-Time Physical Activity Questionnaire.** Measurement and Evaluations in Cancer Care 2026;4:100027. [doi:10.1016/j.ymecc.2026.100027](https://doi.org/10.1016/j.ymecc.2026.100027) — soll perspektivisch **separat als kanonische GSLTPAQ-Version im MII-PRO-Modul** gepflegt werden, dort mit dem validierten Wortlaut, nicht in PCOR-MII.
 
+**Wie die beiden Fassungen auseinandergehalten werden — entschieden:** als **zwei getrennte `Questionnaire`-Ressourcen** mit eigenen Canonicals, nicht als zwei Sprachebenen einer Ressource und nicht als zwei Versionen. Ein Sprachtag würde eine sprachliche Varietät behaupten statt eines Validierungsunterschieds; ein Versionssprung würde Ablösung behaupten, obwohl die Eigenübersetzung für die bestehende Zeitreihe gültig bleibt. Beide Fassungen tragen **dieselben `linkId`s** und denselben Katalogcode, sodass sie als zwei Fassungen eines Instruments erkennbar sind; die Zusammenführung von Antworten aus beiden bleibt eine bewusste Entscheidung der Auswertung. Begründung und Umsetzungsregeln in [ADR-007](Designentscheidungen.md).
+
+**Zu bedenken beim Wechsel:** Die validierte Übersetzung ist deutsch-**österreichisch**. Für eine Erhebung in Deutschland ist auch sie damit nicht im strengen Sinn kontextvalidiert — sie ist linguistisch validiert, die Eigenübersetzung ist es nicht, aber ein Restunterschied bleibt.
+
 ### Scoring-Entscheidungen
 
 * Die **Dauer-Items (`_m`) gehen nicht in den Score ein**: Sie sind nicht Teil des offiziellen Godin-Scores (die Dauer wird im Original-GSLTPAQ gar nicht erhoben). Ihre Aufnahme ins Item Level Dictionary ist eine PCOR-MII-spezifische Erweiterung für explorative Zwecke.

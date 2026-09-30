@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:34:58+00:00",
+  "date" : "2026-09-30T07:33:31+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,27 +49,51 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 6,
   "concept" : [{
     "code" : "sehr-einfach",
-    "display" : "Sehr einfach"
+    "display" : "Very easy",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Sehr einfach"
+    }]
   },
   {
     "code" : "einfach",
-    "display" : "Einfach"
+    "display" : "Easy",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Einfach"
+    }]
   },
   {
     "code" : "weder-noch",
-    "display" : "Weder einfach noch schwierig"
+    "display" : "Neither easy nor difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Weder einfach noch schwierig"
+    }]
   },
   {
     "code" : "schwierig",
-    "display" : "Schwierig"
+    "display" : "Difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Schwierig"
+    }]
   },
   {
     "code" : "sehr-schwierig",
-    "display" : "Sehr schwierig"
+    "display" : "Very difficult",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Sehr schwierig"
+    }]
   },
   {
     "code" : "nicht-zutreffend",
-    "display" : "Nicht zutreffend"
+    "display" : "Not applicable",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nicht zutreffend"
+    }]
   }]
 }
 

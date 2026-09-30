@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -240,6 +246,24 @@ a[name="test"] + h3 + div {
         <a href="WHODAS-12.html">WHODAS 2.0</a>
       </li>
       <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
+      </li>
+      <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
       </li>
       <li>
@@ -254,6 +278,21 @@ a[name="test"] + h3 + div {
       <li>
         <a href="IPQ-S.html">IPQ-S</a>
       </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -264,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,13 +321,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge English" src="assets/images/lang-de.png"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge de" src="assets/images/lang-de.png"/>Deutsch</div>
 
-    <div><a href="../en/MHI.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/MHI.html"><img class="flag" src="assets/images/lang-en.png" alt="Flagge en"/>English</a></div>
 
   </div>
 </div>
@@ -352,6 +394,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#szenario-spezifische-items" id="markdown-toc-szenario-spezifische-items">Szenario-spezifische Items</a></li>
+  <li><a href="#standortspezifische-items--freigabe-nicht-dokumentiert" id="markdown-toc-standortspezifische-items--freigabe-nicht-dokumentiert">Standortspezifische Items — Freigabe nicht dokumentiert</a></li>
 </ul>
 
 </div>
@@ -375,6 +418,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Gewichtsverlauf</strong> (<code class="language-plaintext highlighter-rouge">weight_outpatient_1/2</code>, <code class="language-plaintext highlighter-rouge">weight_inpatient</code>, <code class="language-plaintext highlighter-rouge">weight_discharge</code>) und <strong><code class="language-plaintext highlighter-rouge">AN_subtyp</code></strong> — nur im Szenario <strong>Anorexia nervosa</strong>.</li>
 </ul>
+
+<h3 id="standortspezifische-items--freigabe-nicht-dokumentiert">Standortspezifische Items — Freigabe nicht dokumentiert</h3>
+
+<p>34 der MHI-Items stammen nicht aus einem publizierten Instrument, sondern sind <strong>Eigenentwicklungen der Standorte</strong>: Körpergewichtsverlauf und AN-Subtyp aus Heidelberg (<code class="language-plaintext highlighter-rouge">UKHD-W</code>, <code class="language-plaintext highlighter-rouge">UKHD-AN</code>), die Medikationsfragen aus Heidelberg und Hamburg (<code class="language-plaintext highlighter-rouge">UKHD-MEDI</code>, <code class="language-plaintext highlighter-rouge">UKE-MEDI</code>). Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente und <strong>kennt diese Gruppen nicht</strong> — es gibt für sie also keine dokumentierte Freigabe.</p>
+
+<p>Aufgenommen sind sie trotzdem, weil es durchweg <strong>triviale Faktenfragen</strong> sind („Wie viel wiegen Sie aktuell in kg?", „Name des Medikaments") — keine schutzfähigen Schöpfungen, und ohne den Wortlaut könnten die Datenintegrationszentren sie nicht einheitlich implementieren. Für die <strong>entworfenen Item-Batterien</strong> derselben Standorte (etwa <code class="language-plaintext highlighter-rouge">UKHD-EDP</code>, <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>) gilt das ausdrücklich nicht; sie sind bis zu einer Freigabe nicht aufgenommen. Beides steht als <a href="Designentscheidungen.html">offener Punkt</a> im Entscheidungslog und ist mit den Standorten zu bestätigen.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -428,8 +477,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:34:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 07:33:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ObservationDefinition xmlns="http://hl7.org/fhir">
+  <id value="PcorObsDefErqsSuppression"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ObservationDefinition PcorObsDefErqsSuppression</b></p><a name="PcorObsDefErqsSuppression"> </a><a name="hcPcorObsDefErqsSuppression"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint">MII PR PRO Score Blueprint / Template</a></p></div><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue erq-s-suppression}">ERQ-S Expressive Suppression Subscale Score (3-21)</span></p><p><b>permittedDataType</b>: Quantity</p><p><b>multipleResultsAllowed</b>: false</p><h3>QuantitativeDetails</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Unit</b></td><td><b>DecimalPrecision</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://unitsofmeasure.org 1}">1</span></td><td>0</td></tr></table><h3>QualifiedIntervals</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Category</b></td><td><b>Range</b></td></tr><tr><td style="display: none">*</td><td>absolute range</td><td>3-21</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ObservationDefinition PcorObsDefErqsSuppression</b></p><a name="en-PcorObsDefErqsSuppression"> </a><a name="en-hcPcorObsDefErqsSuppression"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint">MII PR PRO Score Blueprint / Template</a></p></div><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue erq-s-suppression}">ERQ-S Expressive Suppression Subscale Score (3-21)</span></p><p><b>permittedDataType</b>: Quantity</p><p><b>multipleResultsAllowed</b>: false</p><h3>QuantitativeDetails</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Unit</b></td><td><b>DecimalPrecision</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://unitsofmeasure.org 1}">1</span></td><td>0</td></tr></table><h3>QualifiedIntervals</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Category</b></td><td><b>Range</b></td></tr><tr><td style="display: none">*</td><td>absolute range</td><td>3-21</td></tr></table></div></div>
+  </text>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue"/>
+      <code value="erq-s-suppression"/>
+      <display value="ERQ-S Expressive Suppression Subscale Score (3-21)"/>
+    </coding>
+  </code>
+  <permittedDataType value="Quantity"/>
+  <multipleResultsAllowed value="false"/>
+  <quantitativeDetails>
+    <unit>
+      <coding>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </coding>
+    </unit>
+    <decimalPrecision value="0"/>
+  </quantitativeDetails>
+  <qualifiedInterval>
+    <category value="absolute"/>
+    <range>
+      <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-score-score-health-correlation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="decrease"/>
+          </coding>
+          <text value="Higher score indicates more frequent use of expressive suppression, which is associated with poorer well-being"/>
+        </valueCodeableConcept>
+      </extension>
+      <low>
+        <value value="3"/>
+      </low>
+      <high>
+        <value value="21"/>
+      </high>
+    </range>
+  </qualifiedInterval>
+</ObservationDefinition>

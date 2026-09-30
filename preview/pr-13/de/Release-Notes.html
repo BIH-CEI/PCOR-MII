@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"16"}
-    h3,h4,h5,h6{--heading-prefix:"16"}</style>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -240,6 +246,24 @@ a[name="test"] + h3 + div {
         <a href="WHODAS-12.html">WHODAS 2.0</a>
       </li>
       <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
+      </li>
+      <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
       </li>
       <li>
@@ -254,6 +278,21 @@ a[name="test"] + h3 + div {
       <li>
         <a href="IPQ-S.html">IPQ-S</a>
       </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -264,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,13 +321,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge English" src="assets/images/lang-de.png"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge de" src="assets/images/lang-de.png"/>Deutsch</div>
 
-    <div><a href="../en/Release-Notes.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/Release-Notes.html"><img class="flag" src="assets/images/lang-en.png" alt="Flagge en"/>English</a></div>
 
   </div>
 </div>
@@ -305,7 +347,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Bereitstellung.html">&lt; zurück</a> | 
+            <a href="Designentscheidungen.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -382,6 +424,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
 
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> ANSOCQ-2 um eine <code class="language-plaintext highlighter-rouge">de</code>-Ebene ergänzt: orthografisch und grammatisch bereinigte deutsche Fassung neben der validierten <code class="language-plaintext highlighter-rouge">de-CH</code>-Übersetzung, ausdrücklich als nicht-validiert gekennzeichnet. Dabei ein <strong>editorialer Druckfehler der Schweizer Vorlage</strong> eingeordnet (Stufe 1 der Körperteile: „bereit an … zunehmen“ statt „zuzunehmen“): <code class="language-plaintext highlighter-rouge">de-CH</code> bleibt bewusst unverändert, weil es abbildet, was den Befragten vorlag — korrigiert wird ausschließlich in <code class="language-plaintext highlighter-rouge">de</code></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> ANSOCQ-2 auf Englisch als Primärsprache umgestellt (ADR-005): <code class="language-plaintext highlighter-rouge">item.text</code> und die zehn Antwortkonzepte tragen den englischen Originalwortlaut aus Rieger et al. 2002, die Schweizer Fassung hängt als <code class="language-plaintext highlighter-rouge">de-CH</code>-Übersetzung bzw. -Designation daran</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> ANSOCQ-2: Wortlaut und Nummerierung gegen den im Volltext abgedruckten Originalbogen verifiziert. Zwei Fassungen aufgeklärt — Rieger 2000 mit 23 Items, Rieger 2002 mit 20; die deutsche Übersetzung folgt der 20-Item-Revision, die Nummern 3 und 14 gelten in beiden Sprachen</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> ANSOCQ-2: Auswahllogik und Nummerierung verifiziert — Pauli et al. (<em>J Eat Disord</em> 2017) nennen <code class="language-plaintext highlighter-rouge">item 3</code> als hochladend auf Faktor „weight gain and control" und <code class="language-plaintext highlighter-rouge">item 14</code> auf Faktor „attitudes and feelings"; die „Skalen" der DIZ-Angabe sind damit die Faktoren der deutschen Validierung. Dazu die Vergleichsarbeit von Wietersheim &amp; Hoffmann (2011) als Kontext zur Instrumentenwahl ergänzt</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> SSUK-2: Itemnummerierung verifiziert statt nur festgelegt — Müller, Mehnert &amp; Koch (<em>Z Med Psychol</em> 2004) belegen in Tabelle 2 Item 14 („aufmuntert oder tröstet") und Item 10 („Auswirkung der Erkrankung herunterspielt"). Langfassung umfasst 26 Items (17 Positive Unterstützung + 9 Belastende Interaktion)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> ACE: Wortlaut aller fünf Items gegen die deutsche Fassung ACE-D verifiziert — wortgleich; die Anführungszeichen um „high" in <code class="language-plaintext highlighter-rouge">ace5</code> an die typografische Form des Originals angeglichen. Nummerierung bestätigt: <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace5</code> sind die Items 1–5 des zehnteiligen Bogens</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> EDE-Q6: Wortlaut aller sechs Items und der Antwortskala gegen die autorisierte deutsche Übersetzung (Hilbert &amp; Tuschen-Caffier, dgvt-Verlag 2016) verifiziert — wortgleich. Quellenkorrektur: Die DIZ-Liste nennt die <em>Diagnostica</em>-Evaluation von 2007, maßgeblich für den Wortlaut ist die dgvt-Ausgabe</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> ADR-006: Der EDE-Q6-Wortlaut wird aufgenommen, gestützt auf die freie Bereitstellung des Fragebogens durch den Verlag selbst; der Rechtevorbehalt der Publikation bleibt im <code class="language-plaintext highlighter-rouge">copyright</code> ausgewiesen, eine Bestätigung der Rechteinhaberin wird angestrebt. Trägt ausdrücklich nicht für GI-PS</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> EDE-Q6: Auswahllogik verifiziert — die vier Skalen-Items sind je eines pro Subskala (Restraint, Eating Concern, Weight Concern, Shape Concern); damit sind die <code class="language-plaintext highlighter-rouge">linkId</code>s als Original-EDE-Q-Nummern belegt</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> ConceptMap <code class="language-plaintext highlighter-rouge">pcor-cm-erq-s-linkids</code>: bildet die sequenziellen Dictionary-Variablen-IDs des ERQ auf die FHIR-<code class="language-plaintext highlighter-rouge">linkId</code>s ab. Nötig wegen einer Kollision — <code class="language-plaintext highlighter-rouge">erq6</code> existiert in beiden Systemen und bezeichnet dort verschiedene Items</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Quellenlage aller AN-Instrumente verifiziert: Entwicklungs- und Übersetzungspaper je Instrument aufgelöst und in <code class="language-plaintext highlighter-rouge">copyright</code> sowie auf den Seiten nachgetragen. Zwei Korrekturen — die <strong>SSUK</strong> ist die deutsche Adaptation der englischen <em>Illness-specific Social Support Scale</em> (Revenson et al. 1991), kein deutsches Original; beim <strong>ANSOCQ-2</strong> verweist die DIZ-Liste auf das Stadienmodell (Prochaska &amp; DiClemente 1982) statt auf das Instrument (Rieger et al. 2000). Außer dem ERQ-S ist keiner der Zuschnitte eine offizielle Kurzform</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> ERQ-S als offizielle ERQ-Kurzform identifiziert und mit validiertem Scoring modelliert: zwei Subskalen-<code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s (Neubewertung <code class="language-plaintext highlighter-rouge">erq1</code>+<code class="language-plaintext highlighter-rouge">erq3</code>+<code class="language-plaintext highlighter-rouge">erq8</code>, Unterdrückung <code class="language-plaintext highlighter-rouge">erq2</code>+<code class="language-plaintext highlighter-rouge">erq6</code>+<code class="language-plaintext highlighter-rouge">erq9</code>, je 3–21) sowie FHIRPath-<code class="language-plaintext highlighter-rouge">variable</code>s im Questionnaire. US-Normwerte bewusst nicht als Referenzintervalle hinterlegt</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> ACE: item-genaue LOINC-Codes ergänzt (<code class="language-plaintext highlighter-rouge">82814-5</code> bis <code class="language-plaintext highlighter-rouge">82818-6</code> aus den Panel-Komponenten von <code class="language-plaintext highlighter-rouge">82813-7</code>) — der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt weiterhin nicht zugewiesen</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> AN-Instrumente ERQ-S, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE als PCOR-MII-eigene Questionnaires vorbereitet — vorläufig zum Testen, spätere Aufnahme ins MII-PRO-Modul möglich; ohne Vollinstrument-Codes und (außer beim ERQ-S) ohne Scores, da für die Zuschnitte keine validierte Vorschrift vorliegt (ADR-003)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Neue Seiten: AN-Entitätsseite, je eine Seite pro AN-Instrument sowie Designentscheidungen (Entscheidungslog aus <code class="language-plaintext highlighter-rouge">docs/decisions.md</code> in den IG umgezogen)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> ADR-004: Score-Artefakte gehören der Zuständigkeit nach ins MII-PRO-Modul. Ein lokaler Katalogcode ist aber zulässig, wo weder LOINC noch SNOMED CT noch der MII-Katalog einen führt — das Blueprint-Profil bindet <code class="language-plaintext highlighter-rouge">code.coding</code> nicht, sondern sliced offen, sodass ein künftiger MII-Code ergänzt statt ersetzt wird</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> Designentscheidungen zusätzlich maschinenlesbar in den Questionnaires abgelegt (<code class="language-plaintext highlighter-rouge">designNote</code>-Extension, bogen- und itemweit)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> PROPr (PROMIS-Preference Utility Score) als <code class="language-plaintext highlighter-rouge">ObservationDefinition</code> <code class="language-plaintext highlighter-rouge">PcorObsDefProprUtility</code> samt lokalem Score-Katalog <code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code> — konform zum <code class="language-plaintext highlighter-rouge">mii-pr-pro-score-blueprint</code>, Wertebereich −0,022 bis 1,0, ohne ausführbare Berechnung (MDR-Abgrenzung). Vorläufig hier gepflegt; Zuständigkeit liegt beim MII-PRO-Modul</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> PROMIS-16-Seite korrigiert: drei statt zwei Scores, PROPr nutzt nur sieben der acht Domänen (ohne Anxiety), kein Schmerzintensitäts-Item, Item-Überlapp mit PROMIS-29+2 sind 11 statt 14 Items; die Zusage „Scoring in MII PRO 2026.5.0" ist upstream inzwischen Roadmap 2027</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> DEM mehrsprachig nach MII-PRO-Konvention: 19 Items tragen den englischen PaRIS-Originalwortlaut als <code class="language-plaintext highlighter-rouge">item.text</code> mit der Schweizer Fassung als <code class="language-plaintext highlighter-rouge">de-CH</code>-<code class="language-plaintext highlighter-rouge">translation</code>; sechs DEM-eigene Antwortskalen englische Displays mit <code class="language-plaintext highlighter-rouge">de-CH</code>-Designation. Der übernommene Wortlaut bleibt dabei unverändert (ADR-005)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> ADR-005: Übernommener Wortlaut wird nicht eingedeutscht — Erhalt der TRAPD-Validierung, Nachnutzung statt Adaption; Schweizer Herkunft wird stattdessen als <code class="language-plaintext highlighter-rouge">de-CH</code> ausgewiesen</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> Rechteangaben ergänzt: DEM hatte bisher kein <code class="language-plaintext highlighter-rouge">copyright</code>-Element — jetzt mit OECD-PaRIS-Nennung, Link auf den Originalbogen und dem von der OECD vorgeschriebenen Übersetzungs-Disclaimer; MHI und DEM weisen zusätzlich den offenen GI-PS-Weitergabevorbehalt aus</p>
+
 <p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> MII-PRO-Abhängigkeit auf 2026.7.0 angehoben (GAD-7 im PHQ-D-Namespace)</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Neue Seite GAD-7; PHQ-Übersicht um GAD-7, PHQ-4 und die ConceptMap <code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code> ergänzt</p>
@@ -444,7 +530,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Bereitstellung.html">&lt; zurück</a>
+                <a href="Designentscheidungen.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -468,8 +554,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:34:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 07:33:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

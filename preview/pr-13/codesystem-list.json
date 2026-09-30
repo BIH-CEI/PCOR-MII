@@ -1,5 +1,27 @@
 {
   "codeSystems" : [{
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "AnsocqGedankenCS",
+    "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept.",
+    "uses" : {
+    },
+    "ValueSet-ansocq-gedanken-vs.html" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "AnsocqKoerperteileCS",
+    "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept.",
+    "uses" : {
+    },
+    "ValueSet-ansocq-koerperteile-vs.html" : "ANSOCQ Item 3 — Körperteile"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
     "version" : "0.2.0",
     "status" : "draft",
@@ -8,9 +30,9 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
+    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
     "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
-    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein"
+    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
@@ -123,6 +145,17 @@
     "ValueSet-dem-zigaretten-band-vs.html" : "DEM Zigaretten pro Tag"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "EdeQ6TageCS",
+    "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
+    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal().",
+    "uses" : {
+    },
+    "ValueSet-ede-q6-tage-vs.html" : "EDE-Q6 Häufigkeit in 28 Tagen"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
     "version" : "0.2.0",
     "status" : "draft",
@@ -220,6 +253,33 @@
     "uses" : {
     },
     "ValueSet-pcor-example-general-health.html" : "PCOR Example General Health Self-Assessment"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PcorItemDictionaryCS",
+    "title" : "PCOR-MII Item Level Dictionary — Variablen-IDs",
+    "description" : "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit sich ein flach erhobener Datensatz maschinell auf die Instrumenten-Questionnaires verteilen lässt (ADR-011). Jedes Item trägt seine Variable in `item.code`; die Zuordnung ist damit eine Nachschlage-Operation und keine Abbildung. Enthält nur die modellierten Variablen — `content = fragment`."
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PcorScoreCatalogueCS",
+    "title" : "PCOR-MII Score-Katalog (Codes)",
+    "description" : "Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen."
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "SsukAntwortCS",
+    "title" : "SSUK Antwortskala (Codes)",
+    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept.",
+    "uses" : {
+    },
+    "ValueSet-ssuk-antwort-vs.html" : "SSUK Antwortskala"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",

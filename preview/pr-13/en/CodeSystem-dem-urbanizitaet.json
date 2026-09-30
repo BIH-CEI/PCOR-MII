@@ -4,7 +4,7 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-urbanizitaet</b></p><a name=\"en-dem-urbanizitaet\"> </a><a name=\"en-hcdem-urbanizitaet\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">stadt<a name=\"en-dem-urbanizitaet-stadt\"> </a></td><td>Stadt</td></tr><tr><td style=\"white-space:nowrap\">dorf-vorort<a name=\"en-dem-urbanizitaet-dorf-vorort\"> </a></td><td>Dorf oder Vorort</td></tr><tr><td style=\"white-space:nowrap\">laendlich<a name=\"en-dem-urbanizitaet-laendlich\"> </a></td><td>Ländliche Region</td></tr><tr><td style=\"white-space:nowrap\">weiss-nicht<a name=\"en-dem-urbanizitaet-weiss-nicht\"> </a></td><td>Ich weiss es nicht</td></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-urbanizitaet</b></p><a name=\"en-dem-urbanizitaet\"> </a><a name=\"en-hcdem-urbanizitaet\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Deutsch (Schweiz) (German (Switzerland), de)</b></td></tr><tr><td style=\"white-space:nowrap\">stadt<a name=\"en-dem-urbanizitaet-stadt\"> </a></td><td>City</td><td>Stadt</td></tr><tr><td style=\"white-space:nowrap\">dorf-vorort<a name=\"en-dem-urbanizitaet-dorf-vorort\"> </a></td><td>Town or suburb</td><td>Dorf oder Vorort</td></tr><tr><td style=\"white-space:nowrap\">laendlich<a name=\"en-dem-urbanizitaet-laendlich\"> </a></td><td>Rural area</td><td>Ländliche Region</td></tr><tr><td style=\"white-space:nowrap\">weiss-nicht<a name=\"en-dem-urbanizitaet-weiss-nicht\"> </a></td><td>Don't know</td><td>Ich weiss es nicht</td></tr></table></div>"
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet",
   "version" : "0.2.0",
@@ -12,7 +12,7 @@
   "title" : "DEM Urbanizität (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:34:58+00:00",
+  "date" : "2026-09-30T07:33:31+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -34,18 +34,34 @@
   "count" : 4,
   "concept" : [{
     "code" : "stadt",
-    "display" : "Stadt"
+    "display" : "City",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Stadt"
+    }]
   },
   {
     "code" : "dorf-vorort",
-    "display" : "Dorf oder Vorort"
+    "display" : "Town or suburb",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Dorf oder Vorort"
+    }]
   },
   {
     "code" : "laendlich",
-    "display" : "Ländliche Region"
+    "display" : "Rural area",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ländliche Region"
+    }]
   },
   {
     "code" : "weiss-nicht",
-    "display" : "Ich weiss es nicht"
+    "display" : "Don't know",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ich weiss es nicht"
+    }]
   }]
 }

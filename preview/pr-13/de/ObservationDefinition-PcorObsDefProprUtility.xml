@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ObservationDefinition xmlns="http://hl7.org/fhir">
+  <id value="PcorObsDefProprUtility"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ObservationDefinition PcorObsDefProprUtility</b></p><a name="PcorObsDefProprUtility"> </a><a name="hcPcorObsDefProprUtility"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint">MII PR PRO Score Blueprint / Template</a></p></div><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue promis-propr-utility}">PROMIS-Preference (PROPr) Utility Score</span></p><p><b>permittedDataType</b>: Quantity</p><p><b>multipleResultsAllowed</b>: false</p><h3>QuantitativeDetails</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Unit</b></td><td><b>DecimalPrecision</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://unitsofmeasure.org 1}">1</span></td><td>3</td></tr></table><h3>QualifiedIntervals</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Category</b></td><td><b>Range</b></td></tr><tr><td style="display: none">*</td><td>absolute range</td><td>-0.022-1</td></tr></table></div>
+  </text>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue"/>
+      <code value="promis-propr-utility"/>
+      <display value="PROMIS-Preference (PROPr) Utility Score"/>
+    </coding>
+  </code>
+  <permittedDataType value="Quantity"/>
+  <multipleResultsAllowed value="false"/>
+  <quantitativeDetails>
+    <unit>
+      <coding>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </coding>
+    </unit>
+    <decimalPrecision value="3"/>
+  </quantitativeDetails>
+  <qualifiedInterval>
+    <category value="absolute"/>
+    <range>
+      <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-score-score-health-correlation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
+            <code value="increase"/>
+          </coding>
+          <text value="Higher score indicates better health status"/>
+        </valueCodeableConcept>
+      </extension>
+      <low>
+        <value value="-0.022"/>
+      </low>
+      <high>
+        <value value="1"/>
+      </high>
+    </range>
+  </qualifiedInterval>
+</ObservationDefinition>

@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:34:58+00:00",
+  "date" : "2026-09-30T07:33:31+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -49,23 +49,43 @@ This Code system is referenced in the definition of the following value sets:
   "count" : 5,
   "concept" : [{
     "code" : "band-niedrig",
-    "display" : "Bis zu 2.300 € pro Monat"
+    "display" : "Up to €2,300 a month",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Bis zu 2.300 € pro Monat"
+    }]
   },
   {
     "code" : "band-mittel",
-    "display" : "Zwischen 2.300 € und 5.200 € pro Monat"
+    "display" : "Between €2,300 and €5,200 a month",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Zwischen 2.300 € und 5.200 € pro Monat"
+    }]
   },
   {
     "code" : "band-hoch",
-    "display" : "5.200 € pro Monat oder mehr"
+    "display" : "€5,200 a month or more",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "5.200 € pro Monat oder mehr"
+    }]
   },
   {
     "code" : "weiss-nicht",
-    "display" : "Ich weiss es nicht"
+    "display" : "Don't know",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ich weiss es nicht"
+    }]
   },
   {
     "code" : "keine-angabe",
-    "display" : "Möchte ich nicht sagen"
+    "display" : "Prefer not to say",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Möchte ich nicht sagen"
+    }]
   }]
 }
 

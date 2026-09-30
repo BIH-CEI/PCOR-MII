@@ -4,7 +4,7 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-haeufigkeit-5</b></p><a name=\"en-dem-haeufigkeit-5\"> </a><a name=\"en-hcdem-haeufigkeit-5\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">staendig<a name=\"en-dem-haeufigkeit-5-staendig\"> </a></td><td>Ständig</td></tr><tr><td style=\"white-space:nowrap\">meistens<a name=\"en-dem-haeufigkeit-5-meistens\"> </a></td><td>Meistens</td></tr><tr><td style=\"white-space:nowrap\">manchmal<a name=\"en-dem-haeufigkeit-5-manchmal\"> </a></td><td>Manchmal</td></tr><tr><td style=\"white-space:nowrap\">selten<a name=\"en-dem-haeufigkeit-5-selten\"> </a></td><td>Selten</td></tr><tr><td style=\"white-space:nowrap\">nie<a name=\"en-dem-haeufigkeit-5-nie\"> </a></td><td>Nie</td></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dem-haeufigkeit-5</b></p><a name=\"en-dem-haeufigkeit-5\"> </a><a name=\"en-hcdem-haeufigkeit-5\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Deutsch (Schweiz) (German (Switzerland), de)</b></td></tr><tr><td style=\"white-space:nowrap\">staendig<a name=\"en-dem-haeufigkeit-5-staendig\"> </a></td><td>Always</td><td>Ständig</td></tr><tr><td style=\"white-space:nowrap\">meistens<a name=\"en-dem-haeufigkeit-5-meistens\"> </a></td><td>Often</td><td>Meistens</td></tr><tr><td style=\"white-space:nowrap\">manchmal<a name=\"en-dem-haeufigkeit-5-manchmal\"> </a></td><td>Sometimes</td><td>Manchmal</td></tr><tr><td style=\"white-space:nowrap\">selten<a name=\"en-dem-haeufigkeit-5-selten\"> </a></td><td>Rarely</td><td>Selten</td></tr><tr><td style=\"white-space:nowrap\">nie<a name=\"en-dem-haeufigkeit-5-nie\"> </a></td><td>Never</td><td>Nie</td></tr></table></div>"
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
   "version" : "0.2.0",
@@ -12,7 +12,7 @@
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-02T07:34:58+00:00",
+  "date" : "2026-09-30T07:33:31+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -34,22 +34,42 @@
   "count" : 5,
   "concept" : [{
     "code" : "staendig",
-    "display" : "Ständig"
+    "display" : "Always",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Ständig"
+    }]
   },
   {
     "code" : "meistens",
-    "display" : "Meistens"
+    "display" : "Often",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Meistens"
+    }]
   },
   {
     "code" : "manchmal",
-    "display" : "Manchmal"
+    "display" : "Sometimes",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Manchmal"
+    }]
   },
   {
     "code" : "selten",
-    "display" : "Selten"
+    "display" : "Rarely",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Selten"
+    }]
   },
   {
     "code" : "nie",
-    "display" : "Nie"
+    "display" : "Never",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Nie"
+    }]
   }]
 }

@@ -4,7 +4,7 @@
 
 **Translated page. Original language: German.**
 
-**PSS** (**Persistent Somatic Syndrome**) ist die psychosomatische Entität in PCOR-MII — neben Anorexia Nervosa (AN) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.
+**PSS** (**Persistent Somatic Syndrome**) ist die psychosomatische Entität in PCOR-MII — neben [Anorexia Nervosa (AN)](AN.md) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.
 
 Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.md); diese Seite beschreibt die PSS-Batterie.
 
@@ -25,11 +25,11 @@ Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| **SSD-12** | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | MII PRO seit 2026.6.0 |
-| **WI-7** | DCH | 7 | Gesundheitsangst (Whiteley-Index) | MII PRO seit 2026.6.0 |
-| **SCOFF** | MHA | 5 | Essstörungs-Screening | MII PRO seit 2026.6.0 |
-| **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | MII PRO seit 2026.6.0 |
-| **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | MII PRO seit 2026.6.0 |
+| **SSD-12** | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | [Seite](SSD-12.md) |
+| **WI-7** | DCH | 7 | Gesundheitsangst (Whiteley-Index) | [Seite](WI-7.md) |
+| **SCOFF** | MHA | 5 | Essstörungs-Screening | [Seite](SCOFF.md) |
+| **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | [Seite](ISR-Z.md) |
+| **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | [Seite](PC-PTSD.md) |
 | **PHQ-D Panik-Block** | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | offen — kein Upstream-Artefakt |
 | **PHQ-SI** | MHA | 1 | Suizidalität — das PHQ-9-Item`phq-phq2i` | über[PHQ-9](PHQ-9.md)abgedeckt |
 | **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.md) |
@@ -56,7 +56,7 @@ Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier 
 
 * **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.
 * **PSS und AN gemeinsam**: OPD-SFK und PHQ-SI.
-* **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld.
+* **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe [AN](AN.md).
 * **Nur in NTx**: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.
 
 ### Rechtelage

@@ -1,0 +1,91 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "pcor-cm-erq-s-linkids",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap pcor-cm-erq-s-linkids</b></p><a name=\"pcor-cm-erq-s-linkids\"> </a><a name=\"hcpcor-cm-erq-s-linkids\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p>Mapping from <code>https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/ERQ-6</code> to <code>https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/ERQ6</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>erq1 (Dictionary erq1 — Mehr positive Gefühle: ändere, woran ich denke)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq1 (ERQ-Item 1 (Neubewertung))</td></tr><tr><td>erq2 (Dictionary erq2 — Ich behalte meine Gefühle für mich)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq2 (ERQ-Item 2 (Unterdrückung))</td></tr><tr><td>erq3 (Dictionary erq3 — Weniger negative Gefühle: ändere, woran ich denke)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq3 (ERQ-Item 3 (Neubewertung))</td></tr><tr><td>erq4 (Dictionary erq4 — Kontrolle, indem ich Gefühle nicht nach außen zeige)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq6 (ERQ-Item 6 (Unterdrückung))</td></tr><tr><td>erq5 (Dictionary erq5 — Kontrolle, indem ich über die Situation anders nachdenke)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq8 (ERQ-Item 8 (Neubewertung))</td></tr><tr><td>erq6 (Dictionary erq6 — Bei negativen Gefühlen: sorge dafür, sie nicht zu zeigen (ACHTUNG: NICHT auf linkId erq6 abbilden))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\" title=\"equal\">is equal to</a></td><td>erq9 (ERQ-Item 9 (Unterdrückung))</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids",
+  "version" : "0.2.0",
+  "name" : "PcorCmErqSLinkIds",
+  "title" : "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-29",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-S-Questionnaire.",
+  "group" : [{
+    "source" : "https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/ERQ-6",
+    "target" : "https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/ERQ6",
+    "element" : [{
+      "code" : "erq1",
+      "display" : "Dictionary erq1 — Mehr positive Gefühle: ändere, woran ich denke",
+      "target" : [{
+        "code" : "erq1",
+        "display" : "ERQ-Item 1 (Neubewertung)",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "erq2",
+      "display" : "Dictionary erq2 — Ich behalte meine Gefühle für mich",
+      "target" : [{
+        "code" : "erq2",
+        "display" : "ERQ-Item 2 (Unterdrückung)",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "erq3",
+      "display" : "Dictionary erq3 — Weniger negative Gefühle: ändere, woran ich denke",
+      "target" : [{
+        "code" : "erq3",
+        "display" : "ERQ-Item 3 (Neubewertung)",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "erq4",
+      "display" : "Dictionary erq4 — Kontrolle, indem ich Gefühle nicht nach außen zeige",
+      "target" : [{
+        "code" : "erq6",
+        "display" : "ERQ-Item 6 (Unterdrückung)",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "erq5",
+      "display" : "Dictionary erq5 — Kontrolle, indem ich über die Situation anders nachdenke",
+      "target" : [{
+        "code" : "erq8",
+        "display" : "ERQ-Item 8 (Neubewertung)",
+        "equivalence" : "equal"
+      }]
+    },
+    {
+      "code" : "erq6",
+      "display" : "Dictionary erq6 — Bei negativen Gefühlen: sorge dafür, sie nicht zu zeigen (ACHTUNG: NICHT auf linkId erq6 abbilden)",
+      "target" : [{
+        "code" : "erq9",
+        "display" : "ERQ-Item 9 (Unterdrückung)",
+        "equivalence" : "equal"
+      }]
+    }]
+  }]
+}

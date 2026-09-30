@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14"}
-    h3,h4,h5,h6{--heading-prefix:"14"}</style>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -214,6 +214,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -240,6 +246,24 @@ a[name="test"] + h3 + div {
         <a href="WHODAS-12.html">WHODAS 2.0</a>
       </li>
       <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
+      </li>
+      <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
       </li>
       <li>
@@ -254,6 +278,21 @@ a[name="test"] + h3 + div {
       <li>
         <a href="IPQ-S.html">IPQ-S</a>
       </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -264,6 +303,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,13 +321,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag en" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge English" src="assets/images/lang-de.png"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
-    <div><img class="flag" alt="flag de" src="assets/images/lang-de.png"/>Deutsch</div>
+    <div><img class="flag" alt="Flagge de" src="assets/images/lang-de.png"/>Deutsch</div>
 
-    <div><a href="../en/Validierung.html"><img class="flag" src="assets/images/lang-en.png" alt="flag en"/>English</a></div>
+    <div><a href="../en/Validierung.html"><img class="flag" src="assets/images/lang-en.png" alt="Flagge en"/>English</a></div>
 
   </div>
 </div>
@@ -510,13 +552,24 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <h2 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h2>
 
-<p>Drei vollständige Beispiele in diesem IG, alle mit <strong>0 errors, 0 warnings</strong>:</p>
+<p>Die drei ursprünglichen Beispiele, alle mit <strong>0 errors, 0 warnings</strong>:</p>
 
 <ul>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a></li>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></a></li>
   <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (für den Beispiel-Questionnaire)</li>
 </ul>
+
+<p>Dazu der <strong>AN-Beispieldatensatz</strong> — fünf Beispielantworten und zwei Score-Observations, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite <a href="AN.html">AN</a>): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> sowie <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> und <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
+
+<p>Diese sieben sind mit <strong>0 errors</strong> geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dom-6</code> (fehlende Narrative) auf allen sieben — steht oben in der Tabelle als ignorierbar</li>
+  <li>ein <code class="language-plaintext highlighter-rouge">java.net.SocketTimeoutException</code> beim UCUM-Check der beiden <code class="language-plaintext highlighter-rouge">valueQuantity</code> — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource</li>
+</ul>
+
+<p><strong>Ein echter Fund beim Prüfen:</strong> Die ERQ-S-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — <em>„Struktureller Fehler: Elemente in falscher Reihenfolge"</em>. Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> muss ihre Items in der <strong>Reihenfolge des Questionnaire</strong> führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.</p>
 
 <p>Reproduzieren:</p>
 
@@ -586,8 +639,8 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:34:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 07:33:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

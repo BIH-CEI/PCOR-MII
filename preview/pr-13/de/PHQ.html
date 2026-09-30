@@ -209,6 +209,12 @@ a[name="test"] + h3 + div {
       <li>
         <a href="PSS.html">PSS</a>
       </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -235,6 +241,24 @@ a[name="test"] + h3 + div {
         <a href="WHODAS-12.html">WHODAS 2.0</a>
       </li>
       <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
+      </li>
+      <li>
         <a href="OPD-SFK.html">OPD-SFK</a>
       </li>
       <li>
@@ -249,6 +273,21 @@ a[name="test"] + h3 + div {
       <li>
         <a href="IPQ-S.html">IPQ-S</a>
       </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -259,6 +298,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -274,13 +316,13 @@ a[name="test"] + h3 + div {
 
 <div style="float: var(--ig-right);padding: 8px 0px;" id="language">
   <div style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;" id="select_flg" class="flaglist">
-    <div><img src="assets/images/lang-de.png" alt="flag en" class="flag"/>Deutsch</div>
+    <div><img src="assets/images/lang-de.png" alt="Flagge English" class="flag"/>Deutsch</div>
   </div>
   <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
  	<div style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;" id="flaglist" class="flaglist">
-    <div><img src="assets/images/lang-de.png" alt="flag de" class="flag"/>Deutsch</div>
+    <div><img src="assets/images/lang-de.png" alt="Flagge de" class="flag"/>Deutsch</div>
 
-    <div><a href="../en/PHQ.html"><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</a></div>
+    <div><a href="../en/PHQ.html"><img src="assets/images/lang-en.png" alt="Flagge en" class="flag"/>English</a></div>
 
   </div>
 </div>
@@ -590,7 +632,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Mit 2026.5.0 wurden die PHQ-9-Item-<code class="language-plaintext highlighter-rouge">linkId</code>s vom alten, instrumentspezifischen Schema (<code class="language-plaintext highlighter-rouge">phq-phq9-q01…q10</code>) auf den geteilten PHQ-D-Block-Namespace (<code class="language-plaintext highlighter-rouge">phq-phq2a…i</code> sowie <code class="language-plaintext highlighter-rouge">phq-phq9-difficulty</code>) umgestellt. Standorte, die PHQ-9-Antworten vor 2026.5.0 erfasst haben, halten <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s mit den alten <code class="language-plaintext highlighter-rouge">linkId</code>s vor, die nicht mehr zur aktuellen Questionnaire-Definition passen.</p>
 
-<p><a name="l1195">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
+<p><a name="l1279">​</a>Das MII PRO-Modul liefert dafür die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration"><code class="language-plaintext highlighter-rouge">mii-cm-pro-phq-9-linkid-migration</code></a>. Angewendet auf bestehende PHQ-9-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s bringt sie deren <code class="language-plaintext highlighter-rouge">item.linkId</code> wieder mit dem aktuellen Questionnaire in Einklang:</p>
 
 <table>
   <thead>
@@ -669,7 +711,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="linkid-migration-gad-7-instrumentspezifisch--phq-d-namespace">linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)</h3>
 
-<p><a name="l1436">​</a>Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen <code class="language-plaintext highlighter-rouge">linkId</code>s (<code class="language-plaintext highlighter-rouge">gad7-q01</code>–<code class="language-plaintext highlighter-rouge">gad7-q07</code>) erfasst wurden, liefert das MII PRO-Modul die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids"><code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code></a>:</p>
+<p><a name="l1520">​</a>Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen <code class="language-plaintext highlighter-rouge">linkId</code>s (<code class="language-plaintext highlighter-rouge">gad7-q01</code>–<code class="language-plaintext highlighter-rouge">gad7-q07</code>) erfasst wurden, liefert das MII PRO-Modul die ConceptMap <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids"><code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code></a>:</p>
 
 <table>
   <thead>
@@ -779,8 +821,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-02 07:34:00 +0000">
-    2026-09-02
+  <span title="2026-09-30 07:33:00 +0000">
+    2026-09-30
   </span>
 
           <br/>

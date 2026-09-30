@@ -53,6 +53,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "copyright" : "Die erhobene Frage ist an Item 9 des Brief Illness Perception Questionnaire (B-IPQ) angelehnt: Broadbent E, Petrie KJ, Main J, Weinman J. The Brief Illness Perception Questionnaire. J Psychosom Res. 2006;60(6):631-637. doi:10.1016/j.jpsychores.2005.10.020. Deutsche Fassung: Gaab J. Deutsche Version des Brief Illness Perception Questionnaire. Z Gesundheitspsychol. 2009;17(4):158-165. doi:10.1026/0943-8149.17.4.158. PCOR-MII verwendet ausschließlich diese eine offene Frage und nicht das vollständige Instrument; Rechte am B-IPQ verbleiben bei den Autor:innen. Der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
   "item" : [{
     "linkId" : "IPQ_S1",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "IPQ_S1"
+    }],
     "text" : "Bitte führen Sie nun die drei wichtigsten Gründe auf, die Ihrer Meinung nach Ihre vorher genannten körperlichen Beschwerden verursacht haben. Die wichtigsten Ursachen meiner Beschwerden sind:",
     "type" : "text"
   }]

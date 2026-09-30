@@ -57,17 +57,29 @@
         "valueInteger" : 1
       }],
       "linkId" : "WAI01",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI01"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit im Vergleich zur besten je erreichten Arbeitsfähigkeit, Skala 0-10 (0 = keine Arbeitsfähigkeit, 10 = beste je erreichte Arbeitsfähigkeit).",
       "type" : "integer"
     },
     {
       "linkId" : "WAI02a",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI02a"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die körperlichen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert).",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"
     },
     {
       "linkId" : "WAI02b",
+      "code" : [{
+        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+        "code" : "WAI02b"
+      }],
       "text" : "Selbsteinschätzung der derzeitigen Arbeitsfähigkeit in Bezug auf die psychischen Anforderungen der Arbeitstätigkeit, 5-stufig (Stufe 1 = schlechtester Wert, Stufe 5 = bester Wert).",
       "type" : "choice",
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs"
