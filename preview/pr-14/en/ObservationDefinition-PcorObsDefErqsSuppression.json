@@ -1,0 +1,61 @@
+{
+  "resourceType" : "ObservationDefinition",
+  "id" : "PcorObsDefErqsSuppression",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ObservationDefinition PcorObsDefErqsSuppression</b></p><a name=\"en-PcorObsDefErqsSuppression\"> </a><a name=\"en-hcPcorObsDefErqsSuppression\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint\">MII PR PRO Score Blueprint / Template</a></p></div><p><b>ArtifactVersion</b>: 0.3.0</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue erq-s-suppression}\">ERQ-S Expressive Suppression Subscale Score (3-21)</span></p><p><b>permittedDataType</b>: Quantity</p><p><b>multipleResultsAllowed</b>: false</p><h3>QuantitativeDetails</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Unit</b></td><td><b>DecimalPrecision</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://unitsofmeasure.org 1}\">1</span></td><td>0</td></tr></table><h3>QualifiedIntervals</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Category</b></td><td><b>Range</b></td></tr><tr><td style=\"display: none\">*</td><td>absolute range</td><td>3-21</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-version",
+    "valueString" : "0.3.0"
+  }],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue",
+      "code" : "erq-s-suppression",
+      "display" : "ERQ-S Expressive Suppression Subscale Score (3-21)"
+    }]
+  },
+  "permittedDataType" : ["Quantity"],
+  "multipleResultsAllowed" : false,
+  "quantitativeDetails" : {
+    "unit" : {
+      "coding" : [{
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      }]
+    },
+    "decimalPrecision" : 0
+  },
+  "qualifiedInterval" : [{
+    "category" : "absolute",
+    "range" : {
+      "extension" : [{
+        "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-score-score-health-correlation",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+            "code" : "decrease"
+          }],
+          "text" : "Higher score indicates more frequent use of expressive suppression, which is associated with poorer well-being"
+        }
+      }],
+      "low" : {
+        "value" : 3
+      },
+      "high" : {
+        "value" : 21
+      }
+    }
+  }]
+}
