@@ -1,0 +1,90 @@
+Diese Seite ist die **Arbeitsliste für den Use Case AN** (Anorexia Nervosa): jedes zu erhebende Instrument in einer Zeile, mit dem Link dorthin, wo die FHIR-Ressource tatsächlich liegt — im **PCOR-MII-IG** oder im **MII-PRO-IG**.
+
+Sie beantwortet eine einzige Frage: *Wo finde ich den Fragebogen, den ich erheben soll?* Die fachliche Begründung der Batterie steht auf [AN](AN.html), der Erhebungsplan mit Phasen, Prioritäten und Frequenzen auf [Essstörungen — Erhebungsplan](Essstoerungen.html), die entitätsübergreifende Sicht auf [Instrumente](Instrumente.html).
+
+### Wie die Links zu lesen sind
+
+Die Spalte **Ressource** führt immer zur Ressource selbst, nicht zur Beschreibung:
+
+- **PCOR-MII** — der `Questionnaire` ist in diesem IG definiert; der Link geht auf die Artefaktseite mit Snapshot, `linkId`s und Downloads.
+- **MII PRO** — der `Questionnaire` kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` **2026.7.0** mit. PCOR-MII baut ihn **nicht** nach; der Link geht in den veröffentlichten MII-PRO-IG auf Simplifier.
+- **offen** — für diese Zeile des Erhebungsplans existiert noch **kein** Artefakt, weder hier noch upstream.
+
+Die Spalte **Doku** verweist auf die PCOR-MII-Seite des Instruments, wo es eine gibt — dort stehen Rechtelage, Scoring und AN-spezifische Besonderheiten.
+
+### Generischer Kern — in PSS, AN und NTx identisch
+
+| Instrument | Kat. | Items | Ressource | Doku |
+|---|---|--:|---|---|
+| Demographie (DEM) | DEM | 23¹ | **PCOR-MII** → [`DEM`](Questionnaire-DEM.html) | [Demographie](Demographie.html) |
+| Medical History (MHI) — **mit AN-Zusatzitems** | MHI | 48¹ | **PCOR-MII** → [`MHI`](Questionnaire-MHI.html) | [MHI](MHI.html) |
+| PROMIS Scale v1.2 — Global Health | GHS | 2 | **offen** — kein Artefakt, Subset noch nicht festgelegt | [PROMIS](PROMIS.html) |
+| PROMIS-16 Profile v2.1 | GHS | 16 | **MII PRO** → [PROMIS-16](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [PROMIS-16](PROMIS-16.html) |
+| PROMIS Short Forms 4a (8 Domänen) | GHS | 4 je Domäne | **teilweise MII PRO** — s. Hinweis unten | [Cognitive Function](PROMIS-Cognitive-Function.html) |
+| PROMIS NRS — Pain Intensity 1a | GHS | 3 | **offen** — als Einzelinstrument nicht modelliert; das Item steckt im PROMIS-29 (`promis-global07`) | [PROMIS-29](PROMIS-29.html) |
+| WHODAS 2.0, 12-Item | GHS | 14 | **MII PRO** → [WHODAS 2.0 (12-Item)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current) | [WHODAS 2.0](WHODAS-12.html) |
+| GAD-7 (auch GAD-2 / PHQ-4 als Teilmengen) | GHS | 7 | **MII PRO** (ab 2026.7.0) → [GAD-7](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/GAD-7?version=current) | [GAD-7](GAD-7.html) |
+| PHQ-15 | GHS | 13 | **MII PRO** → [PHQ-15](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-15?version=current) | [PHQ-15](PHQ-15.html) |
+| PHQ-9 — in AN **vollständig** (PSS: PHQ-8) | GHS | 9 | **MII PRO** → [PHQ-9](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current) | [PHQ-9](PHQ-9.html) |
+| EURONET-SOMA 1 + 2 | GHS | 2 | **MII PRO** (ab 2026.6.0) → [EURONET-SOMA](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EURONET-SOMA?version=current) | [EURONET-SOMA](EURONET-SOMA.html) |
+| WAI / Work Ability Score | GHS | 3 | **PCOR-MII** → [`WAI`](Questionnaire-WAI.html) — **metadata-only**, keine Itemtexte | [WAI](WAI.html) |
+| PHQ-SI — Suizidalität, stationär | MHA | 1 | **MII PRO** — Item `phq-phq2i` aus dem [PHQ-9](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current), kein eigener Bogen | [PHQ-9](PHQ-9.html) |
+| OPD-SFK — Persönlichkeitsfunktion, Prio **C** | MHA | 12 | **PCOR-MII** → [`OPDSFK`](Questionnaire-OPDSFK.html) | [OPD-SFK](OPD-SFK.html) |
+
+¹ Bei DEM und MHI sind das die **Blatt-Items des PCOR-MII-Questionnaire**, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen, und im MHI kommen die beiden PCOR-MII-eigenen Hilfsitems zur Einheitenauswahl hinzu. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.
+
+**Zum Eintrag „PROMIS Short Forms 4a":** Der Erhebungsplan führt für acht Domänen je eine 4-Item-Kurzform. Upstream sind davon **zwei** als eigener `Questionnaire` vorhanden — [Cognitive Function SF 4a](PROMIS-Cognitive-Function.html) und PROMIS Depression SF 4a ([PRO-IG](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-Depression.page.md?version=current)). Die übrigen sechs Domänen sind **nur über den [PROMIS-29](PROMIS-29.html)** abgedeckt, der je Domäne vier Items enthält — inhaltlich nicht durchweg dieselben Items wie die jeweilige SF 4a. Wer streng nach Plan die SF-4a-Variante braucht, hat für sechs Domänen kein passendes Artefakt.
+
+### AN-spezifische Instrumente
+
+Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen Aufnahme ins MII-PRO-Modul (siehe [ADR-003](Designentscheidungen.html)). Vier davon sind Zuschnitte nach dem Kriterium „trennschärfstes Item je Skala"; nur der ERQ-S ist eine von den Original-Autor:innen publizierte Kurzform und trägt deshalb als einziger einen Score.
+
+| Instrument | Kat. | Items | Ressource | Doku | Beispielantwort |
+|---|---|--:|---|---|---|
+| ERQ-S — Emotionsregulation | DCH | 6 | **PCOR-MII** → [`ERQ6`](Questionnaire-ERQ6.html) | [ERQ-S](ERQ-6.html) | [ERQ6Response](QuestionnaireResponse-ERQ6Response.html) |
+| EDE-Q6 — Essstörungspathologie | DCH | 6 | **PCOR-MII** → [`EDEQ6`](Questionnaire-EDEQ6.html) | [EDE-Q6](EDE-Q6.html) | [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html) |
+| ANSOCQ-2 — Veränderungsmotivation | TCH | 2 | **PCOR-MII** → [`ANSOCQ2`](Questionnaire-ANSOCQ2.html) | [ANSOCQ-2](ANSOCQ-2.html) | [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html) |
+| SSUK-2 — Soziale Unterstützung | EFA | 2 | **PCOR-MII** → [`SSUK2`](Questionnaire-SSUK2.html) | [SSUK-2](SSUK-2.html) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) |
+| ACE — Belastende Kindheitserfahrungen | EFA | 5 | **PCOR-MII** → [`ACE`](Questionnaire-ACE.html) | [ACE](ACE.html) | [ACEResponse](QuestionnaireResponse-ACEResponse.html) |
+
+Die fünf Beispielantworten gehören zu **einem** Erhebungstermin derselben Beispiel-Patientin (`pcor-mii-exa-patient`) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf [AN](AN.html).
+
+### Scores
+
+| Score | Ressource | Doku |
+|---|---|---|
+| ERQ-S Cognitive Reappraisal | **PCOR-MII** → [`PcorObsDefErqsReappraisal`](ObservationDefinition-PcorObsDefErqsReappraisal.html) · Beispiel: [Observation](Observation-ErqsReappraisalObservation.html) | [ERQ-S](ERQ-6.html) |
+| ERQ-S Expressive Suppression | **PCOR-MII** → [`PcorObsDefErqsSuppression`](ObservationDefinition-PcorObsDefErqsSuppression.html) · Beispiel: [Observation](Observation-ErqsSuppressionObservation.html) | [ERQ-S](ERQ-6.html) |
+| PROPr — PROMIS-Preference Utility | **PCOR-MII** → [`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.html) — vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.html#propr) |
+| PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO** — acht `ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.html) |
+| PROMIS-Domänen-T-Scores (PROMIS-16) | **offen** — upstream Roadmap 2027; die acht Codes des PROMIS-29 gelten **nicht** für PROMIS-16 | [PROMIS-16](PROMIS-16.html) |
+| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen** — im Plan Prio A, kein Artefakt | [Erhebungsplan](Essstoerungen.html) |
+| EQ-5D-5L Index (nur Outcome) | **MII PRO** → [EQ-5D-5L](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EQ-5D-5L?version=current) — upstream vorhanden, in PCOR-MII bisher nicht referenziert | — |
+
+Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, **obwohl upstream ein vollständiges Artefakt vorliegt** (inklusive Index-Score und CQL). Hier fehlt nur die Referenzierung in PCOR-MII, nicht das Artefakt.
+
+### Standortspezifische Item-Gruppen (UKHD) — nicht modelliert
+
+Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan, sämtlich ohne FHIR-Ressource — weil ihnen eine dokumentierte Freigabe fehlt, nicht weil sie unwichtig wären.
+
+| Gruppe | Erfasst | Items | Status |
+|---|---|--:|---|
+| `UKHD-EDP` | Essstörungspathologie | 11 | **Rechtelage unbewertet** — je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste **nicht geführt** |
+| `UKHD-BI` | Körperbild | 3 | offen — Freigabe UKHD fehlt |
+| `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | offen — Freigabe UKHD fehlt |
+| `UKHD-LE` | Lebensereignisse | 2–4 | offen — Freigabe UKHD fehlt |
+| `UKHD-ANB` | AN-spezifische Anamnese | 2 | offen — Freigabe UKHD fehlt |
+| `UKHD-PT` | Vorbehandlung | 2 | offen — Freigabe UKHD fehlt |
+| `UKHD-ND` | Neue Diagnosen | 3 | offen — Freigabe UKHD fehlt |
+
+Der `UKHD-EDP`-Block ist der Sonderfall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [Essstörungen — Erhebungsplan](Essstoerungen.html).
+
+### Nicht in AN erhoben
+
+Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Gesamtübersicht daneben stehen: **PSS-only** sind PHQ-D Panik-Block, [PC-PTSD](PC-PTSD.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [SSD-12](SSD-12.html), [Whiteley-7](WI-7.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html) und [GSLTPAQ](GSLTPAQ.html). **NTx-only** sind BAASIS, MTSOSD-R59 und ABQ (alle drei metadata-only vorgesehen, bisher nicht modelliert).
+
+### Woher diese Seite ihre Angaben hat
+
+Instrumentenzuordnung und Itemzahlen: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), wie auf [Instrumente](Instrumente.html) und [Essstörungen — Erhebungsplan](Essstoerungen.html) ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).
+
+Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

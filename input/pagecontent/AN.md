@@ -2,6 +2,8 @@
 
 Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.html); diese Seite beschreibt die AN-Batterie.
 
+**Wer nur wissen will, wo welcher Fragebogen liegt**, ist auf der [AN — Instrumentenliste](AN-Instrumentenliste.html) schneller: eine Tabelle, jede Zeile ein Instrument, jeder Link direkt auf die Ressource — im PCOR-MII-IG oder im MII-PRO-IG.
+
 ### Generischer Kern (alle Entitäten)
 
 Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:
