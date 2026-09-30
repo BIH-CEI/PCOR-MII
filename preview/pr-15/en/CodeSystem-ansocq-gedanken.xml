@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ansocq-gedanken"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem ansocq-gedanken</b></p><a name="en-ansocq-gedanken"> </a><a name="en-hcansocq-gedanken"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Stadium der Veränderungsbereitschaft (1-5).</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style="white-space:nowrap">1<a name="en-ansocq-gedanken-1"> </a></td><td>There is nothing wrong with the amount of time I spend thinking about food and my weight.</td><td>1</td></tr><tr><td style="white-space:nowrap">2<a name="en-ansocq-gedanken-2"> </a></td><td>The amount of time I spend thinking about food and my weight is a problem sometimes.</td><td>2</td></tr><tr><td style="white-space:nowrap">3<a name="en-ansocq-gedanken-3"> </a></td><td>I have decided that I need to use strategies to help me reduce the amount of time I spend thinking about food and my weight.</td><td>3</td></tr><tr><td style="white-space:nowrap">4<a name="en-ansocq-gedanken-4"> </a></td><td>I am using strategies to help me reduce the amount of time I spend thinking about food and my weight.</td><td>4</td></tr><tr><td style="white-space:nowrap">5<a name="en-ansocq-gedanken-5"> </a></td><td>I used to spend too much time thinking about food and my weight which I have managed to reduce and am working to keep it this way.</td><td>5</td></tr></table><p><b>Additional Language Displays</b></p><table class="codes"><tr><td><b>Code</b></td><td><b>Deutsch (German, de)</b></td><td><b>Deutsch (Schweiz) (German (Switzerland), de)</b></td></tr><tr><td>1</td><td>Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist völlig in Ordnung.</td><td>Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist völlig in Ordnung.</td></tr><tr><td>2</td><td>Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist manchmal ein Problem für mich.</td><td>Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist manchmal ein Problem für mich.</td></tr><tr><td>3</td><td>Ich habe mich entschieden, dass ich Strategien entwickeln muss, um die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe.</td><td>Ich habe mich entschieden, dass ich Strategien entwickeln muss, um die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe.</td></tr><tr><td>4</td><td>Ich benutze Strategien, die mir helfen, die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe.</td><td>Ich benutze Strategien, die mir helfen, die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe.</td></tr><tr><td>5</td><td>Ich verbrachte früher zu viel Zeit mit Gedanken an Nahrung und Gewicht, was ich nun reduzieren konnte, und ich arbeite daran, dass dies so bleibt.</td><td>Ich verbrachte früher zu viel Zeit mit Gedanken an Nahrung und Gewicht, was ich nun reduzieren konnte, und ich arbeite daran, dass dies so bleibt.</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken"/>
+  <version value="0.3.0"/>
+  <name value="AnsocqGedankenCS"/>
+  <title value="ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-09-30T16:58:12+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <property>
+    <code value="ordinalValue"/>
+    <uri value="http://hl7.org/fhir/StructureDefinition/ordinalValue"/>
+    <description value="Stadium der Veränderungsbereitschaft (1-5)."/>
+    <type value="decimal"/>
+  </property>
+  <concept>
+    <code value="1"/>
+    <display value="There is nothing wrong with the amount of time I spend thinking about food and my weight."/>
+    <designation>
+      <language value="de-CH"/>
+      <value value="Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist völlig in Ordnung."/>
+    </designation>
+    <designation>
+      <language value="de"/>
+      <value value="Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist völlig in Ordnung."/>
+    </designation>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="The amount of time I spend thinking about food and my weight is a problem sometimes."/>
+    <designation>
+      <language value="de-CH"/>
+      <value value="Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist manchmal ein Problem für mich."/>
+    </designation>
+    <designation>
+      <language value="de"/>
+      <value value="Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist manchmal ein Problem für mich."/>
+    </designation>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="2"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="I have decided that I need to use strategies to help me reduce the amount of time I spend thinking about food and my weight."/>
+    <designation>
+      <language value="de-CH"/>
+      <value value="Ich habe mich entschieden, dass ich Strategien entwickeln muss, um die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."/>
+    </designation>
+    <designation>
+      <language value="de"/>
+      <value value="Ich habe mich entschieden, dass ich Strategien entwickeln muss, um die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."/>
+    </designation>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="3"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="I am using strategies to help me reduce the amount of time I spend thinking about food and my weight."/>
+    <designation>
+      <language value="de-CH"/>
+      <value value="Ich benutze Strategien, die mir helfen, die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."/>
+    </designation>
+    <designation>
+      <language value="de"/>
+      <value value="Ich benutze Strategien, die mir helfen, die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."/>
+    </designation>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="4"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="I used to spend too much time thinking about food and my weight which I have managed to reduce and am working to keep it this way."/>
+    <designation>
+      <language value="de-CH"/>
+      <value value="Ich verbrachte früher zu viel Zeit mit Gedanken an Nahrung und Gewicht, was ich nun reduzieren konnte, und ich arbeite daran, dass dies so bleibt."/>
+    </designation>
+    <designation>
+      <language value="de"/>
+      <value value="Ich verbrachte früher zu viel Zeit mit Gedanken an Nahrung und Gewicht, was ich nun reduzieren konnte, und ich arbeite daran, dass dies so bleibt."/>
+    </designation>
+    <property>
+      <code value="ordinalValue"/>
+      <valueDecimal value="5"/>
+    </property>
+  </concept>
+</CodeSystem>
