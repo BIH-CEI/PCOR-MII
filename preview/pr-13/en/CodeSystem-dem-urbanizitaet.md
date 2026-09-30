@@ -1,4 +1,4 @@
-# DEM Urbanizität (Codes) - PCOR-MII Implementation Guide v0.2.0
+# DEM Urbanizität (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Urbanizität (Codes) (Experimental) 
 
@@ -22,12 +22,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-urbanizitaet",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemUrbanizitaetCS",
   "title" : "DEM Urbanizität (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

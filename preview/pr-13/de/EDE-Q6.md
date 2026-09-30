@@ -1,4 +1,4 @@
-# EDE-Q6 (Essstörungspathologie) - PCOR-MII Implementation Guide v0.2.0
+# EDE-Q6 (Essstörungspathologie) - PCOR-MII Implementation Guide v0.3.0
 
 ## EDE-Q6 (Essstörungspathologie)
 

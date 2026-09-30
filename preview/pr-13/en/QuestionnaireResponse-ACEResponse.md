@@ -1,4 +1,4 @@
-# ACE — Beispielantwort - PCOR-MII Implementation Guide v0.2.0
+# ACE — Beispielantwort - PCOR-MII Implementation Guide v0.3.0
 
 ## Example QuestionnaireResponse: ACE — Beispielantwort
 

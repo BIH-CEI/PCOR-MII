@@ -1,4 +1,4 @@
-# ERQ-S Neubewertung (Cognitive Reappraisal) - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S Neubewertung (Cognitive Reappraisal) - PCOR-MII Implementation Guide v0.3.0
 
 ## ObservationDefinition: ERQ-S Neubewertung (Cognitive Reappraisal) 
 

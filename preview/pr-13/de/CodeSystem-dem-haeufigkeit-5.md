@@ -1,4 +1,4 @@
-# DEM Häufigkeit (5-stufig) (Codes) - PCOR-MII Implementation Guide v0.2.0
+# DEM Häufigkeit (5-stufig) (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: DEM Häufigkeit (5-stufig) (Codes) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "dem-haeufigkeit-5",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemHaeufigkeit5CS",
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

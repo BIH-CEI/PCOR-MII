@@ -1,4 +1,4 @@
-# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.2.0
+# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion (Experimentell) 
 
@@ -35,7 +35,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "OPDSFK",
   "title" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
   "status" : "draft",

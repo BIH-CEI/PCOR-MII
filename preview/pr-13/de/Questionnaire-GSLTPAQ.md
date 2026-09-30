@@ -1,4 +1,4 @@
-# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.2.0
+# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire (Experimentell) 
 
@@ -28,7 +28,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   },
   "language" : "de",
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "GSLTPAQ",
   "title" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
   "status" : "draft",

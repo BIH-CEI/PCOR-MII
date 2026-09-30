@@ -1,4 +1,4 @@
-# Whiteley-7 (Gesundheitsangst) - PCOR-MII Implementation Guide v0.2.0
+# Whiteley-7 (Gesundheitsangst) - PCOR-MII Implementation Guide v0.3.0
 
 ## Whiteley-7 (Gesundheitsangst)
 

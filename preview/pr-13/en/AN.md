@@ -1,4 +1,4 @@
-# AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.2.0
+# AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.3.0
 
 ## AN (Anorexia Nervosa)
 

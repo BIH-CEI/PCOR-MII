@@ -1,4 +1,4 @@
-# ANSOCQ Item 3 — Körperteile (Codes) - PCOR-MII Implementation Guide v0.2.0
+# ANSOCQ Item 3 — Körperteile (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: ANSOCQ Item 3 — Körperteile (Codes) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ansocq-koerperteile",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "AnsocqKoerperteileCS",
   "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

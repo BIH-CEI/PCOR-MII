@@ -1,4 +1,4 @@
-# ANSOCQ-2 — Beispielantwort - PCOR-MII Implementation Guide v0.2.0
+# ANSOCQ-2 — Beispielantwort - PCOR-MII Implementation Guide v0.3.0
 
 ## Beispiel QuestionnaireResponse: ANSOCQ-2 — Beispielantwort
 

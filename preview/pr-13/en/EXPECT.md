@@ -1,4 +1,4 @@
-# EXPECT (Verlaufserwartung) - PCOR-MII Implementation Guide v0.2.0
+# EXPECT (Verlaufserwartung) - PCOR-MII Implementation Guide v0.3.0
 
 ## EXPECT (Verlaufserwartung)
 

@@ -1,4 +1,4 @@
-# Release Notes - PCOR-MII Implementation Guide v0.2.0
+# Release Notes - PCOR-MII Implementation Guide v0.3.0
 
 ## Release Notes
 
@@ -22,6 +22,32 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 -------
 
 ### Unveröffentlicht
+
+**(noch keine Einträge)**
+
+### v0.3.0 (2026-09-30) — AN-Batterie, Designentscheidungen und Item-Zuordnung
+
+**`feature`** Dictionary-Variablen als `item.code` in allen zwölf PCOR-MII-Questionnaires hinterlegt (114 Items), gegen das neue generierte CodeSystem `pcor-item-dictionary` (`content = fragment`). Damit lässt sich ein flach erhobener Studiendatensatz maschinell auf die Instrumenten-Questionnaires verteilen. Der Mechanismus ist bewusst **nicht** der `linkId` und **nicht** eine ConceptMap: `linkId`s sind nur **innerhalb** eines Questionnaire eindeutig und können die Frage, zu welchem Instrument eine Variable gehört, grundsätzlich nicht beantworten — beim ERQ ordnet ein Abgleich über Namensgleichheit sogar still falsch zu. Ohne Code bleiben genau die Items, die keine Dictionary-Variablen sind: Gruppen-Items, berechnete Scores und PCOR-MII-eigene Hilfsitems wie die Einheitenauswahl `Q_WB151`/`Q_WB152` im MHI
+
+**`documentation`** Fünf neue Designentscheidungen. **ADR-007**: Zwei unabhängige Übersetzungen werden zwei Questionnaires — ein Sprachtag behauptete eine sprachliche Varietät statt eines Validierungsunterschieds, ein Versionssprung behauptete Ablösung. **ADR-008**: Short Forms tragen Original-`linkId`s, ihr Wortlaut kommt aus der autorisierten Quelle der **Langform** (nicht aus der Kurzform-Publikation, die typischerweise nur Itemnummern nennt), und die Langform wird mitmodelliert, soweit beschaffbar. **ADR-009**: `derivedFrom` ist `canonical(Questionnaire)` und kann daher nicht auf einen Artikel zeigen; zwei Übersetzungen desselben Instruments sind Geschwister, nicht Eltern und Kind. **ADR-010**: sprachliche Anpassung nur als zusätzliche Ebene, mit vier getrennt behandelten Fällen — Helvetismus, Reform 1996, Getrennt-/Zusammenschreibung (nicht anfassen) und editorialer Druckfehler. **ADR-011**: Erhebungseinheit ist nicht Instrumenteneinheit — eigene Ressource nur für publizierte mehritemige Instrumente, Einzelitems in Sammelbögen
+
+**`documentation`** Vier Rechte-Befunde aufgenommen, alle als offen markiert. **`UKHD-EDP`** ist trotz Standort-Präfix vermutlich kein Eigenbau, sondern ein EDI-2-Zuschnitt (je ein Item pro Subskala) — deutsch ein Hogrefe-Testverfahren, in der DIZ-Liste gar nicht geführt; die Zuordnung stützt sich auf Inhalt und Antwortformat, nicht auf einen Wortlautabgleich. Der Planungseintrag „EDEQ/EDP (UKHD)“ mit 17 Items sind damit **zwei** Instrumente, nicht eines. Die **deutsche ACE-D-Fassung ist nicht frei publizierbar** — das **Deutsche Ärzteblatt** druckt nur zwei von zehn Items und verweist für den Gesamtbogen auf den Rechteinhaber; das betrifft rückwirkend die fünf publizierten Items. Die **Standort-Itemgruppen** von UKHD, UKE und MHH führt die DIZ-Liste überhaupt nicht, 34 davon publiziert PCOR-MII bereits
+
+**`fix`** ANSOCQ-2: Die Begründung der Einfachauswahl korrigiert. Rieger et al. 2002 erlauben ausdrücklich mehrere Feststellungen je Item und mitteln sie; Item 17 der Langform instruiert es sogar. Das frühere Argument, Mehrfachauswahl sprenge den Scorebereich 20–100, ist damit **zurückgezogen** — die Mittelung innerhalb des Items hält jedes Item bei 1–5. Einfachauswahl bleibt umgesetzt, aber als bewusste Abweichung vom Original, weil das Dictionary beide Items als „Single Answer“ führt
+
+**`feature`** Beispieldatensatz für die AN-Batterie: fünf `QuestionnaireResponse`s und zwei ERQ-S-Score-`Observation`s als ein zusammenhängendes Szenario — dieselbe Beispiel-Patientin, die DEM und MHI schon nutzen, ein Erhebungstermin, gestaffelte Uhrzeiten. Die Antwortwerte sind begründet gewählt, nicht zufällig; ein durchgängig mittleres Profil hätte beim ERQ-S beide Subskalen-Summen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Alle sieben mit dem FHIR-Validator geprüft: 0 errors
+
+**`fix`** Beim Validieren ein Strukturfehler gefunden und behoben: Die ERQ-S-Beispielantwort hatte ihre Items nach Subskala gruppiert, was der Validator zurückweist („Elemente in falscher Reihenfolge“) — eine `QuestionnaireResponse` muss die Reihenfolge des Questionnaire einhalten. SUSHI fängt das nicht; jetzt auf der Validierungsseite dokumentiert
+
+**`documentation`** Sechs neue Seiten für die upstream gepflegten spezifischen Instrumente: SCOFF, Whiteley-7, SSD-12, ISR-Z, PC-PTSD und EURONET-SOMA — referenziert, nicht nachgebaut (ADR-002). Drei Eigenheiten dabei festgehalten: Der **ISR-Z bildet einen Mittelwert** (0–4), keine Summe — die einzige Abweichung unter den sechs; der **Whiteley-7 hat zwei Cut-offs** (0/1 und 1/2), beide als Referenzintervall, weil der eine Sensitivität und der andere Spezifität maximiert; **EURONET-SOMA** setzt `calculatable = false`, weil zwei Einzelitems keine Skala sind und nicht summiert werden dürfen
+
+**`documentation`** Neue Seite Essstörungen — der Erhebungsplan der AN-Batterie, ausgewertet aus dem Blatt `Domain Overview` des Item Level Dictionary: drei Phasen, Prioritäten A/B/C, Frequenzen, Itembudget, die Datenquellen PRO/CRO/EHR und die geplanten Scores. Zwei Befunde ordnen den Umsetzungsstand neu: Es sind **vier** Use Cases, nicht drei (NTx spaltet in Empfänger und Spender), und die „Langformen“ des Plans sind **nicht** die Vollinstrumente — ERQ-6 und ACE-5 **sind** bereits die größte vorgesehene Variante, ein EDE-Q-28, SSUK-26 oder ACE-10 kommt im Plan nirgends vor
+
+**`documentation`** Die Auswahlregel der Zuschnitte („trennschärfstes Item je Skala“ laut DIZ-Implementierungsliste) auf allen betroffenen Seiten und maschinenlesbar in allen fünf `designNote`s hinterlegt — bisher stand sie nur bei EDE-Q6 und ANSOCQ-2. Für drei der vier ist sie gegen die publizierte Struktur des Originalinstruments nachgeprüft. Beim ERQ-S trifft der Singular nicht zu (drei Items je Subskala), beim ACE gilt stattdessen „die ersten 5 Fragen“; beides ist jetzt ausdrücklich vermerkt
+
+**`documentation`** Wortlaut und Scoring des **ERQ-10** vollständig beschafft — englisches Original und die von Gross und John autorisierte deutsche Fassung (Abler & Kessler 2009), beide über das Stanford Psychophysiology Laboratory. Der offizielle Bogen nennt „no reversals“ und die Item-Zuordnung, aber **nicht** die Aggregation; er schreibt zudem die **Itemreihenfolge normativ** fest, weil Items 1 und 3 die Begriffe „positive“ und „negative emotion“ definieren
+
+**`improve`** GSLTPAQ trägt jetzt `language = de` — bisher war es nicht gesetzt, obwohl der Text deutsch ist. Mit ausdrücklicher Begründung, warum hier von ADR-005 abgewichen wird: Die hausinterne Eigenübersetzung ist keine getreue Wiedergabe eines autorisierten Wortlauts, also ist Deutsch hier das Primäre und keine Übersetzungsebene
 
 **`feature`** ANSOCQ-2 um eine `de`-Ebene ergänzt: orthografisch und grammatisch bereinigte deutsche Fassung neben der validierten `de-CH`-Übersetzung, ausdrücklich als nicht-validiert gekennzeichnet. Dabei ein **editorialer Druckfehler der Schweizer Vorlage** eingeordnet (Stufe 1 der Körperteile: „bereit an … zunehmen“ statt „zuzunehmen“): `de-CH` bleibt bewusst unverändert, weil es abbildet, was den Befragten vorlag — korrigiert wird ausschließlich in `de`
 

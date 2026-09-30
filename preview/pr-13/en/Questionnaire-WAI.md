@@ -1,4 +1,4 @@
-# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.2.0
+# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) (Experimental) 
 
@@ -27,7 +27,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "WAI",
   "title" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)",
   "status" : "draft",

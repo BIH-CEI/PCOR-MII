@@ -1,4 +1,4 @@
-# ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items) - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items) (Experimentell) 
 
@@ -47,7 +47,7 @@ Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; Preece et al. 2
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "ERQ6",
   "title" : "ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items)",
   "status" : "draft",

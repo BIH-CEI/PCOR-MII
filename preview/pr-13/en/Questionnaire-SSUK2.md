@@ -1,4 +1,4 @@
-# SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) - PCOR-MII Implementation Guide v0.2.0
+# SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) (Experimental) 
 
@@ -31,7 +31,7 @@ Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je e
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Geht hier auf: Die SSUK hat zwei gegenläufige Dimensionen, und ssuk14 (unterstützend) und ssuk10 (belastend) bedienen genau je eine. Ein trennschärfstes Item bildet die Skala nicht ab, daher kein Score — und die beiden Items dürfen nicht summiert werden, weil sie Gegenläufiges messen. (1) `linkId`s = **Itemnummern der SSUK-Langfassung — verifiziert** gegen Tabelle 2 bei Müller, Mehnert & Koch (*Z Med Psychol* 2004, doi:10.3233/zmp-2004-13_4_03): Item 14 ist „Sie aufmuntert oder tröstet“ (Positive Unterstützung), Item 10 „die Auswirkung Ihrer Erkrankung herunterspielt“ (Belastende Interaktion). Die Langfassung hat 26 Items (17 + 9). **Verifiziert** ist dagegen, dass beide Items echte SSUK-Items sind: `ssuk14` wörtlich Item 3 der SSUK-8, `ssuk10` ein Item der 9-Item-Skala „Belastende Interaktion“ der Langfassung, das in der Kurzform entfiel. (2) Kein Score: Die beiden Items messen gegenläufige Konstrukte (positive Unterstützung vs. belastende Interaktion) — ein Summenwert wäre ohne Umpolung falsch, und für eine Umpolung des Zuschnitts fehlt die validierte Grundlage. (3) Gemeinsamer Fragestamm als `group`-Item, damit die Item-Texte wortgleich bleiben. (4) Keine Terminologie-Codes: LOINC/SNOMED kennen die SSUK nicht. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "SSUK2",
   "title" : "SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)",
   "status" : "draft",

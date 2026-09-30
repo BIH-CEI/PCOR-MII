@@ -1,4 +1,4 @@
-# IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage) - PCOR-MII Implementation Guide v0.2.0
+# IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage) (Experimental) 
 
@@ -27,7 +27,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "IPQS",
   "title" : "IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)",
   "status" : "draft",

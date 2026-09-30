@@ -1,4 +1,4 @@
-# ERQ-S (Emotionsregulation) - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S (Emotionsregulation) - PCOR-MII Implementation Guide v0.3.0
 
 ## ERQ-S (Emotionsregulation)
 

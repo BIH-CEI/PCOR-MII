@@ -1,4 +1,4 @@
-# PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.2.0
+# PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.3.0
 
 ## PROMIS-16 Profile v2.1 (PROPr)
 

@@ -1,4 +1,4 @@
-# OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.2.0
+# OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.3.0
 
 ## OPD-SFK (Strukturfragebogen, 12 Items)
 

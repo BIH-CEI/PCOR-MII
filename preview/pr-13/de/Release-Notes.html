@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Release Notes - PCOR-MII Implementation Guide v0.2.0</title>
+    <title>Release Notes - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - draft
+            <span style="display:inline-block;">0.3.0 - draft
 
 
 
@@ -373,7 +373,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Release Notes</h2>
   
 
@@ -394,6 +394,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#versionierung" id="markdown-toc-versionierung">Versionierung</a></li>
   <li><a href="#unveröffentlicht" id="markdown-toc-unveröffentlicht">Unveröffentlicht</a></li>
+  <li><a href="#v030-2026-09-30--an-batterie-designentscheidungen-und-item-zuordnung" id="markdown-toc-v030-2026-09-30--an-batterie-designentscheidungen-und-item-zuordnung">v0.3.0 (2026-09-30) — AN-Batterie, Designentscheidungen und Item-Zuordnung</a></li>
   <li><a href="#v020-2026-08-05--phq-familie" id="markdown-toc-v020-2026-08-05--phq-familie">v0.2.0 (2026-08-05) — PHQ-Familie</a></li>
   <li><a href="#v010-2026-06-04--initial-draft" id="markdown-toc-v010-2026-06-04--initial-draft">v0.1.0 (2026-06-04) — Initial Draft</a></li>
 </ul>
@@ -423,6 +424,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <hr />
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
+
+<p><em>(noch keine Einträge)</em></p>
+
+<h3 id="v030-2026-09-30--an-batterie-designentscheidungen-und-item-zuordnung">v0.3.0 (2026-09-30) — AN-Batterie, Designentscheidungen und Item-Zuordnung</h3>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Dictionary-Variablen als <code class="language-plaintext highlighter-rouge">item.code</code> in allen zwölf PCOR-MII-Questionnaires hinterlegt (114 Items), gegen das neue generierte CodeSystem <code class="language-plaintext highlighter-rouge">pcor-item-dictionary</code> (<code class="language-plaintext highlighter-rouge">content = fragment</code>). Damit lässt sich ein flach erhobener Studiendatensatz maschinell auf die Instrumenten-Questionnaires verteilen. Der Mechanismus ist bewusst <strong>nicht</strong> der <code class="language-plaintext highlighter-rouge">linkId</code> und <strong>nicht</strong> eine ConceptMap: <code class="language-plaintext highlighter-rouge">linkId</code>s sind nur <em>innerhalb</em> eines Questionnaire eindeutig und können die Frage, zu welchem Instrument eine Variable gehört, grundsätzlich nicht beantworten — beim ERQ ordnet ein Abgleich über Namensgleichheit sogar still falsch zu. Ohne Code bleiben genau die Items, die keine Dictionary-Variablen sind: Gruppen-Items, berechnete Scores und PCOR-MII-eigene Hilfsitems wie die Einheitenauswahl <code class="language-plaintext highlighter-rouge">Q_WB151</code>/<code class="language-plaintext highlighter-rouge">Q_WB152</code> im MHI</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Fünf neue Designentscheidungen. <strong>ADR-007</strong>: Zwei unabhängige Übersetzungen werden zwei Questionnaires — ein Sprachtag behauptete eine sprachliche Varietät statt eines Validierungsunterschieds, ein Versionssprung behauptete Ablösung. <strong>ADR-008</strong>: Short Forms tragen Original-<code class="language-plaintext highlighter-rouge">linkId</code>s, ihr Wortlaut kommt aus der autorisierten Quelle der <strong>Langform</strong> (nicht aus der Kurzform-Publikation, die typischerweise nur Itemnummern nennt), und die Langform wird mitmodelliert, soweit beschaffbar. <strong>ADR-009</strong>: <code class="language-plaintext highlighter-rouge">derivedFrom</code> ist <code class="language-plaintext highlighter-rouge">canonical(Questionnaire)</code> und kann daher nicht auf einen Artikel zeigen; zwei Übersetzungen desselben Instruments sind Geschwister, nicht Eltern und Kind. <strong>ADR-010</strong>: sprachliche Anpassung nur als zusätzliche Ebene, mit vier getrennt behandelten Fällen — Helvetismus, Reform 1996, Getrennt-/Zusammenschreibung (nicht anfassen) und editorialer Druckfehler. <strong>ADR-011</strong>: Erhebungseinheit ist nicht Instrumenteneinheit — eigene Ressource nur für publizierte mehritemige Instrumente, Einzelitems in Sammelbögen</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Vier Rechte-Befunde aufgenommen, alle als offen markiert. <strong><code class="language-plaintext highlighter-rouge">UKHD-EDP</code></strong> ist trotz Standort-Präfix vermutlich kein Eigenbau, sondern ein EDI-2-Zuschnitt (je ein Item pro Subskala) — deutsch ein Hogrefe-Testverfahren, in der DIZ-Liste gar nicht geführt; die Zuordnung stützt sich auf Inhalt und Antwortformat, nicht auf einen Wortlautabgleich. Der Planungseintrag „EDEQ/EDP (UKHD)“ mit 17 Items sind damit <strong>zwei</strong> Instrumente, nicht eines. Die <strong>deutsche ACE-D-Fassung ist nicht frei publizierbar</strong> — das <em>Deutsche Ärzteblatt</em> druckt nur zwei von zehn Items und verweist für den Gesamtbogen auf den Rechteinhaber; das betrifft rückwirkend die fünf publizierten Items. Die <strong>Standort-Itemgruppen</strong> von UKHD, UKE und MHH führt die DIZ-Liste überhaupt nicht, 34 davon publiziert PCOR-MII bereits</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> ANSOCQ-2: Die Begründung der Einfachauswahl korrigiert. Rieger et al. 2002 erlauben ausdrücklich mehrere Feststellungen je Item und mitteln sie; Item 17 der Langform instruiert es sogar. Das frühere Argument, Mehrfachauswahl sprenge den Scorebereich 20–100, ist damit <strong>zurückgezogen</strong> — die Mittelung innerhalb des Items hält jedes Item bei 1–5. Einfachauswahl bleibt umgesetzt, aber als bewusste Abweichung vom Original, weil das Dictionary beide Items als „Single Answer“ führt</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Beispieldatensatz für die AN-Batterie: fünf <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s und zwei ERQ-S-Score-<code class="language-plaintext highlighter-rouge">Observation</code>s als ein zusammenhängendes Szenario — dieselbe Beispiel-Patientin, die DEM und MHI schon nutzen, ein Erhebungstermin, gestaffelte Uhrzeiten. Die Antwortwerte sind begründet gewählt, nicht zufällig; ein durchgängig mittleres Profil hätte beim ERQ-S beide Subskalen-Summen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Alle sieben mit dem FHIR-Validator geprüft: 0 errors</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> Beim Validieren ein Strukturfehler gefunden und behoben: Die ERQ-S-Beispielantwort hatte ihre Items nach Subskala gruppiert, was der Validator zurückweist („Elemente in falscher Reihenfolge“) — eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> muss die Reihenfolge des Questionnaire einhalten. SUSHI fängt das nicht; jetzt auf der Validierungsseite dokumentiert</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Sechs neue Seiten für die upstream gepflegten spezifischen Instrumente: SCOFF, Whiteley-7, SSD-12, ISR-Z, PC-PTSD und EURONET-SOMA — referenziert, nicht nachgebaut (ADR-002). Drei Eigenheiten dabei festgehalten: Der <strong>ISR-Z bildet einen Mittelwert</strong> (0–4), keine Summe — die einzige Abweichung unter den sechs; der <strong>Whiteley-7 hat zwei Cut-offs</strong> (0/1 und 1/2), beide als Referenzintervall, weil der eine Sensitivität und der andere Spezifität maximiert; <strong>EURONET-SOMA</strong> setzt <code class="language-plaintext highlighter-rouge">calculatable = false</code>, weil zwei Einzelitems keine Skala sind und nicht summiert werden dürfen</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Neue Seite Essstörungen — der Erhebungsplan der AN-Batterie, ausgewertet aus dem Blatt <code class="language-plaintext highlighter-rouge">Domain Overview</code> des Item Level Dictionary: drei Phasen, Prioritäten A/B/C, Frequenzen, Itembudget, die Datenquellen PRO/CRO/EHR und die geplanten Scores. Zwei Befunde ordnen den Umsetzungsstand neu: Es sind <strong>vier</strong> Use Cases, nicht drei (NTx spaltet in Empfänger und Spender), und die „Langformen“ des Plans sind <strong>nicht</strong> die Vollinstrumente — ERQ-6 und ACE-5 <em>sind</em> bereits die größte vorgesehene Variante, ein EDE-Q-28, SSUK-26 oder ACE-10 kommt im Plan nirgends vor</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Die Auswahlregel der Zuschnitte („trennschärfstes Item je Skala“ laut DIZ-Implementierungsliste) auf allen betroffenen Seiten und maschinenlesbar in allen fünf <code class="language-plaintext highlighter-rouge">designNote</code>s hinterlegt — bisher stand sie nur bei EDE-Q6 und ANSOCQ-2. Für drei der vier ist sie gegen die publizierte Struktur des Originalinstruments nachgeprüft. Beim ERQ-S trifft der Singular nicht zu (drei Items je Subskala), beim ACE gilt stattdessen „die ersten 5 Fragen“; beides ist jetzt ausdrücklich vermerkt</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Wortlaut und Scoring des <strong>ERQ-10</strong> vollständig beschafft — englisches Original und die von Gross und John autorisierte deutsche Fassung (Abler &amp; Kessler 2009), beide über das Stanford Psychophysiology Laboratory. Der offizielle Bogen nennt „no reversals“ und die Item-Zuordnung, aber <strong>nicht</strong> die Aggregation; er schreibt zudem die <strong>Itemreihenfolge normativ</strong> fest, weil Items 1 und 3 die Begriffe „positive“ und „negative emotion“ definieren</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> GSLTPAQ trägt jetzt <code class="language-plaintext highlighter-rouge">language = de</code> — bisher war es nicht gesetzt, obwohl der Text deutsch ist. Mit ausdrücklicher Begründung, warum hier von ADR-005 abgewichen wird: Die hausinterne Eigenübersetzung ist keine getreue Wiedergabe eines autorisierten Wortlauts, also ist Deutsch hier das Primäre und keine Übersetzungsebene</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> ANSOCQ-2 um eine <code class="language-plaintext highlighter-rouge">de</code>-Ebene ergänzt: orthografisch und grammatisch bereinigte deutsche Fassung neben der validierten <code class="language-plaintext highlighter-rouge">de-CH</code>-Übersetzung, ausdrücklich als nicht-validiert gekennzeichnet. Dabei ein <strong>editorialer Druckfehler der Schweizer Vorlage</strong> eingeordnet (Stufe 1 der Körperteile: „bereit an … zunehmen“ statt „zuzunehmen“): <code class="language-plaintext highlighter-rouge">de-CH</code> bleibt bewusst unverändert, weil es abbildet, was den Befragten vorlag — korrigiert wird ausschließlich in <code class="language-plaintext highlighter-rouge">de</code></p>
 
@@ -552,9 +579,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.2.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 07:33:00 +0000">
+  <span title="2026-09-30 08:17:00 +0000">
     2026-09-30
   </span>
 

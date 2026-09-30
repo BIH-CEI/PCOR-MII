@@ -1,4 +1,4 @@
-# SSUK Antwortskala - PCOR-MII Implementation Guide v0.2.0
+# SSUK Antwortskala - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: SSUK Antwortskala (Experimentell) 
 
@@ -28,12 +28,12 @@
   "resourceType" : "ValueSet",
   "id" : "ssuk-antwort-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ssuk-antwort-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "SsukAntwortVS",
   "title" : "SSUK Antwortskala",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

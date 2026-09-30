@@ -1,4 +1,4 @@
-# PROPr — PROMIS-Preference Utility Score - PCOR-MII Implementation Guide v0.2.0
+# PROPr — PROMIS-Preference Utility Score - PCOR-MII Implementation Guide v0.3.0
 
 ## ObservationDefinition: PROPr — PROMIS-Preference Utility Score 
 

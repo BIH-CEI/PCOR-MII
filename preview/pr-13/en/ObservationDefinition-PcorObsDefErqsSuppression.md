@@ -1,4 +1,4 @@
-# ERQ-S Unterdrückung (Expressive Suppression) - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S Unterdrückung (Expressive Suppression) - PCOR-MII Implementation Guide v0.3.0
 
 ## ObservationDefinition: ERQ-S Unterdrückung (Expressive Suppression) 
 

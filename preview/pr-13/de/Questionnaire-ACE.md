@@ -1,4 +1,4 @@
-# ACE — Belastende Kindheitserfahrungen (erste 5 Fragen) - PCOR-MII Implementation Guide v0.2.0
+# ACE — Belastende Kindheitserfahrungen (erste 5 Fragen) - PCOR-MII Implementation Guide v0.3.0
 
 ## Questionnaire: ACE — Belastende Kindheitserfahrungen (erste 5 Fragen) (Experimentell) 
 
@@ -31,7 +31,7 @@ Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebogens (ACE): emo
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* hier **nicht** die Trennschärfe-Formel der übrigen AN-Zuschnitte, sondern *„die ersten 5 Fragen“*. Der Zuschnitt ist also der vordere Block des Instruments (Misshandlung und Vernachlässigung) ohne die Haushalts-Dysfunktions-Fragen 6-10, keine psychometrische Auswahl. (1) `linkId`s = Original-ACE-Fragennummern (1–5); die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. (2) Kein Score: Der ACE-Score ist die Anzahl der Ja-Antworten über alle 10 Fragen — eine Summe über den 5-Fragen-Zuschnitt ist kein validierter ACE-Score. (3) Kein `Questionnaire.code`: LOINC `82813-7` bezeichnet das 10-Fragen-Panel. (4) Ja/Nein über das projektweite `DemJaNeinVS`; Dictionary-Kodierung 1 = ja / 0 = nein nur dokumentarisch. (5) Governance der Auswertung (hochsensible Inhalte, analog PHQ-SI) fachlich zu klären. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "ACE",
   "title" : "ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)",
   "status" : "draft",

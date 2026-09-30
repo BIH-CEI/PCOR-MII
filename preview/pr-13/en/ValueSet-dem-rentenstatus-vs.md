@@ -1,4 +1,4 @@
-# DEM Rentenstatus - PCOR-MII Implementation Guide v0.2.0
+# DEM Rentenstatus - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: DEM Rentenstatus (Experimental) 
 
@@ -28,12 +28,12 @@ Rentenstatus (GIPS10).
   "resourceType" : "ValueSet",
   "id" : "dem-rentenstatus-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-rentenstatus-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "DemRentenstatusVS",
   "title" : "DEM Rentenstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

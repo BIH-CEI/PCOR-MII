@@ -1,4 +1,4 @@
-# EDE-Q6 Häufigkeit in 28 Tagen (Codes) - PCOR-MII Implementation Guide v0.2.0
+# EDE-Q6 Häufigkeit in 28 Tagen (Codes) - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: EDE-Q6 Häufigkeit in 28 Tagen (Codes) (Experimentell) 
 
@@ -22,12 +22,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ede-q6-tage",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "EdeQ6TageCS",
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

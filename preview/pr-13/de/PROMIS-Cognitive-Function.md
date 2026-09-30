@@ -1,4 +1,4 @@
-# PROMIS Cognitive Function SF 4a - PCOR-MII Implementation Guide v0.2.0
+# PROMIS Cognitive Function SF 4a - PCOR-MII Implementation Guide v0.3.0
 
 ## PROMIS Cognitive Function SF 4a
 

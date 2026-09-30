@@ -1,4 +1,4 @@
-# pcor-mii-exa-example-response - PCOR-MII Implementation Guide v0.2.0
+# pcor-mii-exa-example-response - PCOR-MII Implementation Guide v0.3.0
 
 ## Example QuestionnaireResponse: pcor-mii-exa-example-response
 

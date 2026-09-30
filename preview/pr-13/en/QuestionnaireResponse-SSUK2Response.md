@@ -1,4 +1,4 @@
-# SSUK-2 — Beispielantwort - PCOR-MII Implementation Guide v0.2.0
+# SSUK-2 — Beispielantwort - PCOR-MII Implementation Guide v0.3.0
 
 ## Example QuestionnaireResponse: SSUK-2 — Beispielantwort
 

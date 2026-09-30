@@ -1,4 +1,4 @@
-# MHI - PCOR-MII Implementation Guide v0.2.0
+# MHI - PCOR-MII Implementation Guide v0.3.0
 
 ## MHI
 

@@ -1,4 +1,4 @@
-# PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.2.0
+# PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.3.0
 
 ## CodeSystem: PCOR-MII Item Level Dictionary — Variablen-IDs (Experimentell) 
 
@@ -22,7 +22,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "pcor-item-dictionary",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "PcorItemDictionaryCS",
   "title" : "PCOR-MII Item Level Dictionary — Variablen-IDs",
   "status" : "draft",

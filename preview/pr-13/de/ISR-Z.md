@@ -1,4 +1,4 @@
-# ISR-Z (Zwang) - PCOR-MII Implementation Guide v0.2.0
+# ISR-Z (Zwang) - PCOR-MII Implementation Guide v0.3.0
 
 ## ISR-Z (Zwang)
 

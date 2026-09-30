@@ -1,4 +1,4 @@
-# pcor-mii-exa-promis-cognitive-function-response - PCOR-MII Implementation Guide v0.2.0
+# pcor-mii-exa-promis-cognitive-function-response - PCOR-MII Implementation Guide v0.3.0
 
 ## Beispiel QuestionnaireResponse: pcor-mii-exa-promis-cognitive-function-response
 

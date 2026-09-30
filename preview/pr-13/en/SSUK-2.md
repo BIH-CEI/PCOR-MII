@@ -1,4 +1,4 @@
-# SSUK-2 (Soziale Unterstützung) - PCOR-MII Implementation Guide v0.2.0
+# SSUK-2 (Soziale Unterstützung) - PCOR-MII Implementation Guide v0.3.0
 
 ## SSUK-2 (Soziale Unterstützung)
 

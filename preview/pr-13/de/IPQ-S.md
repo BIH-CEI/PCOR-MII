@@ -1,4 +1,4 @@
-# IPQ-S (Ursachenzuschreibung) - PCOR-MII Implementation Guide v0.2.0
+# IPQ-S (Ursachenzuschreibung) - PCOR-MII Implementation Guide v0.3.0
 
 ## IPQ-S (Ursachenzuschreibung)
 

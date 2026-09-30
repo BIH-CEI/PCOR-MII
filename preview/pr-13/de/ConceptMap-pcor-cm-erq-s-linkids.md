@@ -1,4 +1,4 @@
-# ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds - PCOR-MII Implementation Guide v0.3.0
 
 ## ConceptMap: ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds (Experimentell) 
 
@@ -14,7 +14,7 @@ Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1�
   "resourceType" : "ConceptMap",
   "id" : "pcor-cm-erq-s-linkids",
   "url" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "PcorCmErqSLinkIds",
   "title" : "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds",
   "status" : "draft",

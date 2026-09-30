@@ -1,4 +1,4 @@
-# EURONET-SOMA (2 Einzelitems) - PCOR-MII Implementation Guide v0.2.0
+# EURONET-SOMA (2 Einzelitems) - PCOR-MII Implementation Guide v0.3.0
 
 ## EURONET-SOMA (2 Einzelitems)
 

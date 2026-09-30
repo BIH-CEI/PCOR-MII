@@ -1,4 +1,4 @@
-# ERQ-S Unterdrückung — Beispiel-Score - PCOR-MII Implementation Guide v0.2.0
+# ERQ-S Unterdrückung — Beispiel-Score - PCOR-MII Implementation Guide v0.3.0
 
 ## Beispiel Observation: ERQ-S Unterdrückung — Beispiel-Score
 

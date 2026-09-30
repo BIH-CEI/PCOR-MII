@@ -1,4 +1,4 @@
-# Essstörungen — Erhebungsplan - PCOR-MII Implementation Guide v0.2.0
+# Essstörungen — Erhebungsplan - PCOR-MII Implementation Guide v0.3.0
 
 ## Essstörungen — Erhebungsplan
 

@@ -1,4 +1,4 @@
-# SSD-12 (B-Kriterien somatische Belastungsstörung) - PCOR-MII Implementation Guide v0.2.0
+# SSD-12 (B-Kriterien somatische Belastungsstörung) - PCOR-MII Implementation Guide v0.3.0
 
 ## SSD-12 (B-Kriterien somatische Belastungsstörung)
 

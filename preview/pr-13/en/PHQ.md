@@ -1,4 +1,4 @@
-# PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.2.0
+# PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.3.0
 
 ## PHQ (Patient Health Questionnaire)
 

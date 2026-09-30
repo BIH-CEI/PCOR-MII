@@ -1,4 +1,4 @@
-# Anwendung - PCOR-MII Implementation Guide v0.2.0
+# Anwendung - PCOR-MII Implementation Guide v0.3.0
 
 ## Anwendung
 

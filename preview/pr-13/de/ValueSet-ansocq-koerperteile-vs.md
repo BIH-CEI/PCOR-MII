@@ -1,4 +1,4 @@
-# ANSOCQ Item 3 — Körperteile - PCOR-MII Implementation Guide v0.2.0
+# ANSOCQ Item 3 — Körperteile - PCOR-MII Implementation Guide v0.3.0
 
 ## ValueSet: ANSOCQ Item 3 — Körperteile (Experimentell) 
 
@@ -28,12 +28,12 @@ Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stad
   "resourceType" : "ValueSet",
   "id" : "ansocq-koerperteile-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-koerperteile-vs",
-  "version" : "0.2.0",
+  "version" : "0.3.0",
   "name" : "AnsocqKoerperteileVS",
   "title" : "ANSOCQ Item 3 — Körperteile",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T07:33:31+00:00",
+  "date" : "2026-09-30T08:17:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
