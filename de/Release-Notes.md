@@ -23,6 +23,18 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`fix`** **Der ERQ-6 ist nicht der ERQ-S — Identifikation und Scores zurückgezogen.** Bis Release 0.3.0 war der Bogen als die offizielle Kurzform ERQ-S (Preece et al. 2023) ausgewiesen und trug zwei validierte Subskalen-Scores. Beides war falsch.
+
+Tabelle 1 der Publikation gibt die Zuordnung an: Der **ERQ-S besteht aus den ERQ-Items 2, 6, 7, 8, 9 und 10** (Cognitive Reappraisal 7, 8, 10; Expressive Suppression 2, 6, 9). PCOR-MII führt die **ERQ-Items 1, 2, 3, 6, 8 und 9**. Vier Items überschneiden sich, die Unterdrückungs-Items sind sogar identisch — die **Neubewertungs-Items aber nicht**: PCOR-MII hat 1 und 3, der ERQ-S hat 7 und 10. Es sind zwei verschiedene Zuschnitte desselben Instruments.
+
+Wie der Fehler entstand: Die ERQ-S-Scoring-Angabe nennt „sum items 1, 3, and 5“ in **ERQ-S-Zählung**. Diese Nummern wurden als ERQ-Nummern gelesen und über eine **angenommene** Zuordnung übersetzt, statt gegen Tabelle 1 geprüft zu werden. Zwei teilweise überlappende Nummernsysteme sind genau die Konstellation, in der ein Abgleich plausibel aussieht und trotzdem falsch ist — dieselbe Falle wie bei `erq6` im Dictionary gegen `erq6` im Questionnaire.
+
+**Zurückgezogen:** die beiden `ObservationDefinition`s `PcorObsDefErqsReappraisal` und `PcorObsDefErqsSuppression`, die beiden Beispiel-`Observation`s, die Katalogcodes `erq-s-reappraisal` und `erq-s-suppression` sowie die beiden FHIRPath-`variable`s im Questionnaire. Damit trägt **kein** AN-Instrument mehr einen Score.
+
+**Unverändert geblieben** — und das ist der Punkt: der Bogen selbst. Wortlaut, `linkId`s, `item.code`s und Sprachebenen sind dictionary-treu und korrekt; die `linkId`s sind nach wie vor die Original-ERQ-Itemnummern. Falsch war nur, was über den Bogen behauptet wurde.
+
+**`documentation`** Titel und Beschreibungen auf „ERQ-6“ umgestellt (zuvor „ERQ-S“), auf allen betroffenen Seiten und in `designNote`, `Description` und `copyright`. Die Id der ConceptMap `pcor-cm-erq-s-linkids` bleibt dagegen unverändert: Sie ist eine in 0.3.0 veröffentlichte Canonical, und eine Id ist ein Identifikator, keine Aussage — die Aussage steht in Titel und Beschreibung
+
 **`feature`** Neue Seite **[AN — Instrumentenliste](AN-Instrumentenliste.md)**: eine Nachschlagetabelle für den Use Case AN, die je Instrument direkt auf die Ressource verlinkt — PCOR-MII-Artefaktseite oder MII-PRO-IG. Die drei bestehenden AN-Seiten beantworten die Frage „wo liegt der Fragebogen, den ich erheben soll" jeweils nur teilweise: [AN](AN.md) beschreibt die Batterie fachlich, [Essstörungen](Essstoerungen.md) den Erhebungsplan, [Instrumente](Instrumente.md) alle drei Entitäten gemischt. Die neue Seite trennt Ressource (wo liegt sie) von Doku (was steht drin) in eigene Spalten und weist die drei Zustände **PCOR-MII / MII PRO / offen** explizit aus, statt sie in Prosa zu verstecken. Enthält zusätzlich die Scores, die UKHD-Itemgruppen mit ihrem Freigabestatus und einen Abgrenzungsabschnitt, was in AN **nicht** erhoben wird
 
 **`fix`** Toter Link auf [WHODAS 2.0](WHODAS-12.md) korrigiert. Die IG-Doku-Seite im MII-PRO-IG trug ein `.page.md` zu viel und lieferte **404**. Instrumentenseiten liegen dort als Abschnitts-URL ohne `.page.md` (`…/PRO-Bibliothek/WHODAS-2.0?version=current`), nur echte Unterseiten tragen das Suffix — deshalb funktioniert der PROMIS-16-Link (`…/PROMIS/PROMIS-16.page.md`) und der WHODAS-Link nicht. Alle Upstream-Links der neuen Instrumentenliste sind einzeln gegen den veröffentlichten Guide geprüft, nicht aus dem Muster abgeleitet
@@ -101,7 +113,7 @@ Die sieben `QuestionnaireResponse`s referenzieren ihren Questionnaire jetzt **ve
 
 **`documentation`** Quellenlage aller AN-Instrumente verifiziert: Entwicklungs- und Übersetzungspaper je Instrument aufgelöst und in `copyright` sowie auf den Seiten nachgetragen. Zwei Korrekturen — die **SSUK** ist die deutsche Adaptation der englischen **Illness-specific Social Support Scale** (Revenson et al. 1991), kein deutsches Original; beim **ANSOCQ-2** verweist die DIZ-Liste auf das Stadienmodell (Prochaska & DiClemente 1982) statt auf das Instrument (Rieger et al. 2000). Außer dem ERQ-S ist keiner der Zuschnitte eine offizielle Kurzform
 
-**`feature`** ERQ-S als offizielle ERQ-Kurzform identifiziert und mit validiertem Scoring modelliert: zwei Subskalen-`ObservationDefinition`s (Neubewertung `erq1`+`erq3`+`erq8`, Unterdrückung `erq2`+`erq6`+`erq9`, je 3–21) sowie FHIRPath-`variable`s im Questionnaire. US-Normwerte bewusst nicht als Referenzintervalle hinterlegt
+**`feature`** ERQ-S als offizielle ERQ-Kurzform identifiziert und mit validiertem Scoring modelliert — **diese Aussage war falsch und ist am 01.10.2026 zurückgezogen, siehe oben unter Unveröffentlicht.** Ursprünglicher Eintrag: zwei Subskalen-`ObservationDefinition`s (Neubewertung `erq1`+`erq3`+`erq8`, Unterdrückung `erq2`+`erq6`+`erq9`, je 3–21) sowie FHIRPath-`variable`s im Questionnaire. US-Normwerte bewusst nicht als Referenzintervalle hinterlegt
 
 **`fix`** ACE: item-genaue LOINC-Codes ergänzt (`82814-5` bis `82818-6` aus den Panel-Komponenten von `82813-7`) — der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt weiterhin nicht zugewiesen
 

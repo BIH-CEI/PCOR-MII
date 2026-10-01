@@ -429,7 +429,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="an-spezifische-instrumente">AN-spezifische Instrumente</h3>
 
-<p>Vier der fünf sind <strong>projektspezifische Zuschnitte</strong> publizierter Instrumente (beim ACE die ersten fünf Fragen). Der <strong>ERQ-S</strong> ist die Ausnahme: Er ist die von den Original-Autor:innen publizierte offizielle Kurzform und hat deshalb als einziger ein validiertes Scoring.</p>
+<p>Alle fünf sind <strong>projektspezifische Zuschnitte</strong> publizierter Instrumente (beim ACE die ersten fünf Fragen), und <strong>keiner</strong> von ihnen trägt einen Score. Der ERQ-6 galt bis Release 0.3.0 als Ausnahme — er war fälschlich als die offizielle Kurzform ERQ-S ausgewiesen; die Korrektur steht auf der <a href="ERQ-6.html">ERQ-6-Seite</a>.</p>
 
 <table>
   <thead>
@@ -443,10 +443,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><strong>ERQ-S</strong></td>
+      <td><strong>ERQ-6</strong></td>
       <td>DCH</td>
       <td style="text-align: right">6</td>
-      <td>Emotionsregulation — Neubewertung und Unterdrückung, je ein Subskalen-Score</td>
+      <td>Emotionsregulation — sechs ERQ-Items, kein Score</td>
       <td><a href="ERQ-6.html">Seite</a></td>
     </tr>
     <tr>
@@ -492,11 +492,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Das ist wichtiger, als es aussieht: Die Zuschnitte sind damit <strong>nicht willkürlich gekürzt</strong>, sondern nach einem angegebenen psychometrischen Kriterium gebildet — je Skala oder Faktor das trennschärfste Item. Für drei der vier ist diese Regel in PCOR-MII gegen die publizierte Struktur des Originalinstruments nachgeprüft: beim <a href="EDE-Q6.html">EDE-Q6</a> gegen die vier EDE-Q-Subskalen, beim <a href="ANSOCQ-2.html">ANSOCQ-2</a> gegen die zwei Faktoren der deutschen Validierung, beim <a href="SSUK-2.html">SSUK-2</a> gegen die zwei gegenläufigen SSUK-Dimensionen. Sie trifft jeweils zu.</p>
 
-<p><strong>Eine Ausnahme, die man kennen muss:</strong> Beim <a href="ERQ-6.html">ERQ-S</a> passt die Formulierung <em>„das Item … pro Skala“</em> im Singular nicht — dort sind es <strong>drei</strong> Items je Subskala. Der Zuschnitt ist dort keine projekteigene Auswahl, sondern die von den Original-Autor:innen publizierte Kurzform ERQ-S. Deshalb ist er auch der einzige mit validiertem Scoring.</p>
+<p><strong>Eine Ausnahme, die man kennen muss:</strong> Beim <a href="ERQ-6.html">ERQ-6</a> passt die Formulierung <em>„das Item … pro Skala“</em> im Singular nicht — dort sind es <strong>drei</strong> Items je Subskala des Vollinstruments. Bis Release 0.3.0 stand hier, der Bogen sei die publizierte Kurzform ERQ-S und trage deshalb als einziger ein validiertes Scoring. <strong>Das war falsch</strong> — der ERQ-S besteht aus anderen ERQ-Items; der Score ist zurückgezogen.</p>
 
 <p>Der <a href="ACE.html">ACE</a> trägt in derselben Spalte eine andere Angabe — <em>„die ersten 5 Fragen“</em> —, ist also keine Trennschärfe-Auswahl, sondern der vordere Block des Instruments (Misshandlung und Vernachlässigung ohne die Haushalts-Dysfunktions-Fragen).</p>
 
-<p>Für die Auswertung folgt daraus durchgehend dasselbe: <strong>Ein trennschärfstes Item je Skala bildet die Skala nicht ab.</strong> Deshalb trägt keiner dieser Zuschnitte einen Score außer dem ERQ-S — Einzelheiten auf den jeweiligen Instrumentenseiten und in <a href="Designentscheidungen.html">ADR-003</a>.</p>
+<p>Für die Auswertung folgt daraus durchgehend dasselbe: <strong>Ein trennschärfstes Item je Skala bildet die Skala nicht ab.</strong> Deshalb trägt <strong>keiner</strong> dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in <a href="Designentscheidungen.html">ADR-003</a>.</p>
 
 <h3 id="ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</h3>
 
@@ -512,7 +512,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a></td>
-      <td>niedrige Neubewertung (11) bei hoher Unterdrückung (19) — das für AN beschriebene Muster</td>
+      <td>niedrige Neubewertung bei hoher Unterdrückung — das für AN beschriebene Muster</td>
     </tr>
     <tr>
       <td><a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a></td>
@@ -533,9 +533,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Dazu die beiden Score-Observations zum ERQ-S — <a href="Observation-ErqsReappraisalObservation.html">Neubewertung</a> und <a href="Observation-ErqsSuppressionObservation.html">Unterdrückung</a> —, beide <code class="language-plaintext highlighter-rouge">derivedFrom</code> die ERQ-S-Beispielantwort und über den Katalogcode an ihre <code class="language-plaintext highlighter-rouge">ObservationDefinition</code> gebunden. Sie sind die einzigen Score-Instanzen im AN-Block, weil der ERQ-S das einzige Instrument mit validierter Scoring-Vorschrift ist.</p>
+<p><strong>Score-Observations gibt es im AN-Block nicht.</strong> Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe <a href="ERQ-6.html">ERQ-6</a>).</p>
 
-<p>Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-S beide Subskalen-Summen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.</p>
+<p>Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.</p>
 
 <p>Alle sieben Instanzen sind mit dem FHIR-Validator geprüft: <strong>0 errors</strong> (Details unter <a href="Validierung.html">Validierung</a>).</p>
 
@@ -599,8 +599,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 19:54:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 09:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

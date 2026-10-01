@@ -32,7 +32,7 @@ Jedes Item trägt **zwei** Codings, und genau dafür ist `item.code` `0..*`:
 * die Variable aus dem Item Level Dictionary gegen [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md) — **das ist der PCOR-MII-Code des Items**
 * den item-genauen **LOINC-Code** (`82814-5` bis `82818-6`)
 
-Ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Die Dictionary-Variable bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein; beim [ERQ-S](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
+Ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht. Die Dictionary-Variable bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein; beim [ERQ-6](ERQ-6.md) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.md)).
 
 ### Canonical
 
@@ -50,7 +50,7 @@ Jedes Item trägt **zwei** `item.code`-Codings — die Dictionary-Variable und d
 | `ace4` | `ace4` | `82817-8` | Emotionale Vernachlässigung (nicht geliebt; kein Zusammenhalt) |
 | `ace5` | `ace5` | `82818-6` | Körperliche Vernachlässigung (Essen/Kleidung/Schutz; Eltern intoxikiert) |
 
-Die LOINC-Codes sind die Panel-Komponenten von `82813-7`; der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt bewusst nicht zugewiesen. `linkId` und Dictionary-Variable stimmen hier überein — beim [ERQ-S](ERQ-6.md) ausdrücklich **nicht**.
+Die LOINC-Codes sind die Panel-Komponenten von `82813-7`; der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt bewusst nicht zugewiesen. `linkId` und Dictionary-Variable stimmen hier überein — beim [ERQ-6](ERQ-6.md) ausdrücklich **nicht**.
 
 Die Fragetexte sind wortgleich aus dem Item Level Dictionary übernommen; lediglich Layout-Artefakte der Excel-Zellen (Zeilenumbrüche, Mehrfach-Leerzeichen, inkonsistente führende Item-Nummern) wurden normalisiert. Ein gemeinsamer Instruktionstext steht als `display`-Item voran. **Hinweis zur Erhebung:** Die Items betreffen hochsensible Inhalte (Missbrauch, Vernachlässigung) — die Governance der Auswertung (analog PHQ-SI) ist fachlich zu klären.
 

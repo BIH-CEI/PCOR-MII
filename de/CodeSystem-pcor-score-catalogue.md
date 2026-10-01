@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "PCOR-MII Score-Katalog (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:54:40+00:00",
+  "date" : "2026-10-01T09:59:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -46,18 +46,10 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 3,
+  "count" : 1,
   "concept" : [{
     "code" : "promis-propr-utility",
     "display" : "PROMIS-Preference (PROPr) Utility Score"
-  },
-  {
-    "code" : "erq-s-reappraisal",
-    "display" : "ERQ-S Cognitive Reappraisal Subscale Score (3-21)"
-  },
-  {
-    "code" : "erq-s-suppression",
-    "display" : "ERQ-S Expressive Suppression Subscale Score (3-21)"
   }]
 }
 

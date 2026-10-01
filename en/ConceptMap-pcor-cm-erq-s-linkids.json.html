@@ -10,7 +10,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds - JSON Representation - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds - JSON Representation - PCOR-MII Implementation Guide v0.3.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -350,7 +350,7 @@ a[name="test"] + h3 + div {
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds</b></li>
 
           <span style="float: var(--ig-right);">
 
@@ -358,7 +358,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="ObservationDefinition-PcorObsDefErqsReappraisal.html">next &gt;</a>
+          | <a href="ObservationDefinition-PcorObsDefProprUtility.html">next &gt;</a>
 
           </span>
 
@@ -417,7 +417,7 @@ a[name="test"] + h3 + div {
 
 
 
-<h2 id="root">: ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds</h2>
+<h2 id="root">: ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds</h2>
 
   <table class="colsd" data-fhir="generated">
     <tr>
@@ -456,7 +456,7 @@ a[name="test"] + h3 + div {
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "0.3.0",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "PcorCmErqSLinkIds",
-  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>" : "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>" : "ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a>" : true,
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a>" : "2026-09-29",
@@ -472,7 +472,7 @@ a[name="test"] + h3 + div {
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.html)).",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -484,7 +484,7 @@ a[name="test"] + h3 + div {
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.purpose">purpose</a>" : "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-S-Questionnaire.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.purpose">purpose</a>" : "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-6-Questionnaire.",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>" : "https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/ERQ-6",
@@ -598,7 +598,7 @@ a[name="test"] + h3 + div {
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="ObservationDefinition-PcorObsDefErqsReappraisal.html">next ></a>
+                <a href="ObservationDefinition-PcorObsDefProprUtility.html">next ></a>
 
               </td>
             </tr>
@@ -614,8 +614,8 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 19:54:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 09:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

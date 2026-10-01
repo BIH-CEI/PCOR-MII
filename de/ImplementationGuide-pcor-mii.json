@@ -11,7 +11,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-09-30T19:54:40+00:00",
+  "date" : "2026-10-01T09:59:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1242,61 +1242,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ObservationDefinition"
-      }],
-      "reference" : {
-        "reference" : "ObservationDefinition/PcorObsDefErqsReappraisal"
-      },
-      "name" : "ERQ-S Neubewertung (Cognitive Reappraisal)",
-      "description" : "Subskala Neubewertung des ERQ-S: Summe der Items erq1, erq3 und erq8 (ERQ-S-Zählung 1, 3, 5), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Neubewertung an, was laut Instrument mit besserem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta & Gross (2023), Scoring Instructions zum ERQ-S.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ErqsReappraisalObservation"
-      },
-      "name" : "ERQ-S Neubewertung — Beispiel-Score",
-      "description" : "Subskalen-Score Neubewertung (11 von 3–21), berechnet aus der ERQ-S-Beispielantwort. Gebunden an PcorObsDefErqsReappraisal über den Katalogcode `erq-s-reappraisal`.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ObservationDefinition"
-      }],
-      "reference" : {
-        "reference" : "ObservationDefinition/PcorObsDefErqsSuppression"
-      },
-      "name" : "ERQ-S Unterdrückung (Expressive Suppression)",
-      "description" : "Subskala Unterdrückung des ERQ-S: Summe der Items erq2, erq6 und erq9 (ERQ-S-Zählung 2, 4, 6), je 1-7. Wertebereich 3-21. Höhere Werte zeigen häufigere Nutzung der Unterdrückung an, was laut Instrument mit schlechterem Wohlbefinden assoziiert ist. Quelle: Preece, Petrova, Mehta & Gross (2023), Scoring Instructions zum ERQ-S.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ErqsSuppressionObservation"
-      },
-      "name" : "ERQ-S Unterdrückung — Beispiel-Score",
-      "description" : "Subskalen-Score Unterdrückung (19 von 3–21), berechnet aus der ERQ-S-Beispielantwort. Gebunden an PcorObsDefErqsSuppression über den Katalogcode `erq-s-suppression`.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
       }],
       "reference" : {
         "reference" : "QuestionnaireResponse/ERQ6Response"
       },
-      "name" : "ERQ-S — Beispielantwort",
-      "description" : "Vollständig ausgefüllte Beispielantwort zum ERQ-S-Questionnaire. Antwortmuster: niedrige Neubewertung (Summe 11) bei hoher Unterdrückung (Summe 19); die beiden Summen liegen als Score-Observations vor.",
+      "name" : "ERQ-6 — Beispielantwort",
+      "description" : "Vollständig ausgefüllte Beispielantwort zum ERQ-6-Questionnaire. Antwortmuster: niedrige Neubewertung bei hoher Unterdrückung — das für Anorexia nervosa beschriebene Muster. Kein Score: Der Bogen ist nicht der ERQ-S — dieser besteht aus anderen ERQ-Items (2, 6, 7, 8, 9, 10), die publizierten Kennwerte gelten daher nicht.",
       "exampleBoolean" : true
     },
     {
@@ -1307,8 +1259,8 @@
       "reference" : {
         "reference" : "Questionnaire/ERQ6"
       },
-      "name" : "ERQ-S — Emotion Regulation Questionnaire, Kurzform (6 Items)",
-      "description" : "Offizielle Kurzform des Emotion Regulation Questionnaire (ERQ-S; Preece et al. 2023): sechs Items, 7-stufige Likert-Skala (1 = stimmt überhaupt nicht ... 7 = stimmt vollkommen). Zwei Subskalen mit je drei Items, Wertebereich 3-21: Neubewertung (erq1, erq3, erq8) und Unterdrückung (erq2, erq6, erq9). Kein Gesamtscore. linkIds sind die Original-ERQ-Itemnummern; deutsche Wortlaute aus der autorisierten Fassung von Abler & Kessler (2009). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. ACHTUNG: Sie ist hier NICHT die Itemnummer. Dictionary erq4/erq5/erq6 liegen auf den ERQ-Items 6/8/9; die Original-Itemnummer steht im linkId.",
+      "name" : "ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt",
+      "description" : "Projektspezifischer 6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ; Gross & John 2003): die ERQ-Items 1, 2, 3, 6, 8 und 9 im unveränderten Originalwortlaut, 7-stufige Likert-Skala (1 = stimmt überhaupt nicht ... 7 = stimmt vollkommen). NICHT der ERQ-S: Dieser besteht laut Preece et al. (2023, Tabelle 1) aus den ERQ-Items 2, 6, 7, 8, 9 und 10. Vier Items überschneiden sich, die Neubewertungs-Items nicht — PCOR-MII hat 1 und 3, der ERQ-S hat 7 und 10. Daher KEIN Score — die publizierten ERQ-S-Kennwerte gelten für den ERQ-S-Wortlaut, nicht für diesen Satz. linkIds sind die Original-ERQ-Itemnummern; deutsche Wortlaute aus der autorisierten Fassung von Abler & Kessler (2009), englische aus dem ERQ-Originalbogen (Gross & John). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. ACHTUNG: Sie ist hier NICHT die Itemnummer. Dictionary erq4/erq5/erq6 liegen auf den ERQ-Items 6/8/9; die Original-Itemnummer steht im linkId.",
       "exampleBoolean" : false
     },
     {
@@ -1319,8 +1271,8 @@
       "reference" : {
         "reference" : "ConceptMap/pcor-cm-erq-s-linkids"
       },
-      "name" : "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds",
-      "description" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung.",
+      "name" : "ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds",
+      "description" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.html)).",
       "exampleBoolean" : false
     },
     {

@@ -543,7 +543,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="an-spezifische-instrumente">AN-spezifische Instrumente</h3>
 
-<p>Alle fünf sind <strong>vorläufig in PCOR-MII</strong> gepflegt — bis zu einer möglichen Aufnahme ins MII-PRO-Modul (siehe <a href="Designentscheidungen.html">ADR-003</a>). Vier davon sind Zuschnitte nach dem Kriterium „trennschärfstes Item je Skala"; nur der ERQ-S ist eine von den Original-Autor:innen publizierte Kurzform und trägt deshalb als einziger einen Score.</p>
+<p>Alle fünf sind <strong>vorläufig in PCOR-MII</strong> gepflegt — bis zu einer möglichen Aufnahme ins MII-PRO-Modul (siehe <a href="Designentscheidungen.html">ADR-003</a>). Vier davon sind Zuschnitte nach dem Kriterium „trennschärfstes Item je Skala“, beim ACE sind es die ersten fünf Fragen. <strong>Keiner der fünf trägt einen Score.</strong> Der ERQ-6 galt bis Release 0.3.0 als Ausnahme, war aber fälschlich als Kurzform ERQ-S ausgewiesen — siehe <a href="ERQ-6.html">ERQ-6</a>.</p>
 
 <table>
   <thead>
@@ -558,11 +558,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>ERQ-S — Emotionsregulation</td>
+      <td>ERQ-6 — Emotionsregulation</td>
       <td>DCH</td>
       <td style="text-align: right">6</td>
       <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ERQ6.html"><code class="language-plaintext highlighter-rouge">ERQ6</code></a></td>
-      <td><a href="ERQ-6.html">ERQ-S</a></td>
+      <td><a href="ERQ-6.html">ERQ-6</a></td>
       <td><a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a></td>
     </tr>
     <tr>
@@ -613,16 +613,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>ERQ-S Cognitive Reappraisal</td>
-      <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefErqsReappraisal.html"><code class="language-plaintext highlighter-rouge">PcorObsDefErqsReappraisal</code></a> · Beispiel: <a href="Observation-ErqsReappraisalObservation.html">Observation</a></td>
-      <td><a href="ERQ-6.html">ERQ-S</a></td>
-    </tr>
-    <tr>
-      <td>ERQ-S Expressive Suppression</td>
-      <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefErqsSuppression.html"><code class="language-plaintext highlighter-rouge">PcorObsDefErqsSuppression</code></a> · Beispiel: <a href="Observation-ErqsSuppressionObservation.html">Observation</a></td>
-      <td><a href="ERQ-6.html">ERQ-S</a></td>
-    </tr>
     <tr>
       <td>PROPr — PROMIS-Preference Utility</td>
       <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefProprUtility.html"><code class="language-plaintext highlighter-rouge">PcorObsDefProprUtility</code></a> — vorläufig, Zuständigkeit upstream</td>
@@ -774,8 +764,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 19:54:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 09:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

@@ -441,7 +441,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Jedes Item trägt in <code class="language-plaintext highlighter-rouge">item.code</code> seine Variable aus dem Item Level Dictionary, gegen das CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a>. <strong>Das ist der PCOR-MII-Code des Items</strong> — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.</p>
 
-<p>Der Code bezeichnet das <strong>Erhebungsfeld</strong>. Hier stimmt es mit der Itemnummer überein (<code class="language-plaintext highlighter-rouge">edeq1</code>, <code class="language-plaintext highlighter-rouge">edeq7</code>, <code class="language-plaintext highlighter-rouge">edeq12</code>, <code class="language-plaintext highlighter-rouge">edeq27</code>, <code class="language-plaintext highlighter-rouge">edeq29</code>, <code class="language-plaintext highlighter-rouge">edeq30</code>); beim <a href="ERQ-6.html">ERQ-S</a> ist das ausdrücklich <strong>nicht</strong> so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (<a href="Designentscheidungen.html">ADR-011</a>).</p>
+<p>Der Code bezeichnet das <strong>Erhebungsfeld</strong>. Hier stimmt es mit der Itemnummer überein (<code class="language-plaintext highlighter-rouge">edeq1</code>, <code class="language-plaintext highlighter-rouge">edeq7</code>, <code class="language-plaintext highlighter-rouge">edeq12</code>, <code class="language-plaintext highlighter-rouge">edeq27</code>, <code class="language-plaintext highlighter-rouge">edeq29</code>, <code class="language-plaintext highlighter-rouge">edeq30</code>); beim <a href="ERQ-6.html">ERQ-6</a> ist das ausdrücklich <strong>nicht</strong> so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (<a href="Designentscheidungen.html">ADR-011</a>).</p>
 
 <h3 id="canonical">Canonical</h3>
 
@@ -498,7 +498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><code class="language-plaintext highlighter-rouge">linkId</code> und <code class="language-plaintext highlighter-rouge">item.code</code> stimmen hier überein — beim <a href="ERQ-6.html">ERQ-S</a> ausdrücklich <strong>nicht</strong>.</p>
+<p><code class="language-plaintext highlighter-rouge">linkId</code> und <code class="language-plaintext highlighter-rouge">item.code</code> stimmen hier überein — beim <a href="ERQ-6.html">ERQ-6</a> ausdrücklich <strong>nicht</strong>.</p>
 
 <h3 id="die-auswahl-folgt-den-vier-subskalen">Die Auswahl folgt den vier Subskalen</h3>
 
@@ -538,7 +538,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Abgeglichen gegen die Standardzusammensetzung des EDE-Q (Restraint 1–5; Eating Concern 7, 9, 19–21; Weight Concern 8, 12, 22, 24, 25; Shape Concern 6, 8, 10, 11, 23, 26–28). Damit bestätigt sich die Angabe der DIZ-Implementierungsliste — <em>„nur das Item mit der höchsten Trennschärfe pro Skala"</em> — hier wörtlich. <code class="language-plaintext highlighter-rouge">edeq29</code> und <code class="language-plaintext highlighter-rouge">edeq30</code> sind keine Skalen-Items, sondern die beiden Zusatzfragen zur Regelblutung.</p>
 
-<p><strong>Keine offizielle Kurzform.</strong> Vom EDE-Q existieren mehrere validierte Kurzfassungen (EDE-QS mit 12 Items, EDE-Q-13, EDE-Q-8, EDE-Q-7), aber keine Vier-Item-Version mit je einem Item pro Subskala. Anders als beim <a href="ERQ-6.html">ERQ-S</a>, wo sich der Zuschnitt als publizierte Kurzform herausstellte, ist dieser hier projektspezifisch — deshalb auch kein Score.</p>
+<p><strong>Keine offizielle Kurzform.</strong> Vom EDE-Q existieren mehrere validierte Kurzfassungen (EDE-QS mit 12 Items, EDE-Q-13, EDE-Q-8, EDE-Q-7), aber keine Vier-Item-Version mit je einem Item pro Subskala. Anders als beim <a href="ERQ-6.html">ERQ-6</a>, wo sich der Zuschnitt als publizierte Kurzform herausstellte, ist dieser hier projektspezifisch — deshalb auch kein Score.</p>
 
 <h3 id="wortlaut--vollständig-verifiziert">Wortlaut — vollständig verifiziert</h3>
 
@@ -629,8 +629,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 19:54:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 09:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

@@ -122,7 +122,7 @@ These seven are checked at **0 errors** but are not warning-free, and both remai
 * `dom-6` (missing narrative) on all seven — listed as ignorable in the table above
 * a `java.net.SocketTimeoutException` during the UCUM check of the two `valueQuantity` values — a network timeout against the terminology server, not a finding about the resource
 
-**One real defect found while validating:** the ERQ-S example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: **"structural error: elements in the wrong order"**. A `QuestionnaireResponse` must list its items in the **order of the questionnaire**; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.
+**One real defect found while validating:** the ERQ-6 example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: **"structural error: elements in the wrong order"**. A `QuestionnaireResponse` must list its items in the **order of the questionnaire**; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.
 
 Reproduce:
 

@@ -25,11 +25,11 @@ In AN wird — anders als in PSS — der **vollständige PHQ-9** erhoben (PSS: P
 
 ### AN-spezifische Instrumente
 
-Vier der fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim ACE die ersten fünf Fragen). Der **ERQ-S** ist die Ausnahme: Er ist die von den Original-Autor:innen publizierte offizielle Kurzform und hat deshalb als einziger ein validiertes Scoring.
+Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim ACE die ersten fünf Fragen), und **keiner** von ihnen trägt einen Score. Der ERQ-6 galt bis Release 0.3.0 als Ausnahme — er war fälschlich als die offizielle Kurzform ERQ-S ausgewiesen; die Korrektur steht auf der [ERQ-6-Seite](ERQ-6.md).
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| **ERQ-S** | DCH | 6 | Emotionsregulation — Neubewertung und Unterdrückung, je ein Subskalen-Score | [Seite](ERQ-6.md) |
+| **ERQ-6** | DCH | 6 | Emotionsregulation — sechs ERQ-Items, kein Score | [Seite](ERQ-6.md) |
 | **EDE-Q6** | DCH | 6 | Essstörungspathologie inkl. Regelblutung | [Seite](EDE-Q6.md) |
 | **ANSOCQ-2** | TCH | 2 | Veränderungsmotivation (Stages of Change) | [Seite](ANSOCQ-2.md) |
 | **SSUK-2** | EFA | 2 | Soziale Unterstützung / belastende Interaktion | [Seite](SSUK-2.md) |
@@ -45,11 +45,11 @@ Vier der fünf AN-Instrumente sind Zuschnitte, und die DIZ-Implementierungsliste
 
 Das ist wichtiger, als es aussieht: Die Zuschnitte sind damit **nicht willkürlich gekürzt**, sondern nach einem angegebenen psychometrischen Kriterium gebildet — je Skala oder Faktor das trennschärfste Item. Für drei der vier ist diese Regel in PCOR-MII gegen die publizierte Struktur des Originalinstruments nachgeprüft: beim [EDE-Q6](EDE-Q6.md) gegen die vier EDE-Q-Subskalen, beim [ANSOCQ-2](ANSOCQ-2.md) gegen die zwei Faktoren der deutschen Validierung, beim [SSUK-2](SSUK-2.md) gegen die zwei gegenläufigen SSUK-Dimensionen. Sie trifft jeweils zu.
 
-**Eine Ausnahme, die man kennen muss:** Beim [ERQ-S](ERQ-6.md) passt die Formulierung **„das Item … pro Skala“** im Singular nicht — dort sind es **drei** Items je Subskala. Der Zuschnitt ist dort keine projekteigene Auswahl, sondern die von den Original-Autor:innen publizierte Kurzform ERQ-S. Deshalb ist er auch der einzige mit validiertem Scoring.
+**Eine Ausnahme, die man kennen muss:** Beim [ERQ-6](ERQ-6.md) passt die Formulierung **„das Item … pro Skala“** im Singular nicht — dort sind es **drei** Items je Subskala des Vollinstruments. Bis Release 0.3.0 stand hier, der Bogen sei die publizierte Kurzform ERQ-S und trage deshalb als einziger ein validiertes Scoring. **Das war falsch** — der ERQ-S besteht aus anderen ERQ-Items; der Score ist zurückgezogen.
 
 Der [ACE](ACE.md) trägt in derselben Spalte eine andere Angabe — **„die ersten 5 Fragen“** —, ist also keine Trennschärfe-Auswahl, sondern der vordere Block des Instruments (Misshandlung und Vernachlässigung ohne die Haushalts-Dysfunktions-Fragen).
 
-Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes Item je Skala bildet die Skala nicht ab.** Deshalb trägt keiner dieser Zuschnitte einen Score außer dem ERQ-S — Einzelheiten auf den jeweiligen Instrumentenseiten und in [ADR-003](Designentscheidungen.md).
+Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes Item je Skala bildet die Skala nicht ab.** Deshalb trägt **keiner** dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in [ADR-003](Designentscheidungen.md).
 
 ### Ein zusammenhängender Beispieldatensatz
 
@@ -57,15 +57,15 @@ Für alle fünf AN-Instrumente liegen ausgefüllte Beispielantworten vor — und
 
 | | |
 | :--- | :--- |
-| [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) | niedrige Neubewertung (11) bei hoher Unterdrückung (19) — das für AN beschriebene Muster |
+| [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) | niedrige Neubewertung bei hoher Unterdrückung — das für AN beschriebene Muster |
 | [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md) | residuelle Pathologie; belegt die über`enableWhen`abhängige Frage`edeq30` |
 | [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) | mittlere Veränderungsmotivation;`language`=`de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde |
 | [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) | gegenläufige Items: hoch bei der unterstützenden, niedrig bei der belastenden Interaktion |
 | [ACEResponse](QuestionnaireResponse-ACEResponse.md) | zwei bejahte Items in der emotionalen Dimension |
 
-Dazu die beiden Score-Observations zum ERQ-S — [Neubewertung](Observation-ErqsReappraisalObservation.md) und [Unterdrückung](Observation-ErqsSuppressionObservation.md) —, beide `derivedFrom` die ERQ-S-Beispielantwort und über den Katalogcode an ihre `ObservationDefinition` gebunden. Sie sind die einzigen Score-Instanzen im AN-Block, weil der ERQ-S das einzige Instrument mit validierter Scoring-Vorschrift ist.
+**Score-Observations gibt es im AN-Block nicht.** Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe [ERQ-6](ERQ-6.md)).
 
-Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-S beide Subskalen-Summen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.
+Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.
 
 Alle sieben Instanzen sind mit dem FHIR-Validator geprüft: **0 errors** (Details unter [Validierung](Validierung.md)).
 

@@ -395,31 +395,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#verwendung-in-pcor-mii--und-warum-das-nicht-der-erq-s-ist" id="markdown-toc-verwendung-in-pcor-mii--und-warum-das-nicht-der-erq-s-ist">Verwendung in PCOR-MII — und warum das nicht der ERQ-S ist</a></li>
   <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#der-pcor-mii-code-eines-items-ist-die-dictionary-variable" id="markdown-toc-der-pcor-mii-code-eines-items-ist-die-dictionary-variable">Der PCOR-MII-Code eines Items ist die Dictionary-Variable</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
-  <li><a href="#scoring--zwei-subskalen" id="markdown-toc-scoring--zwei-subskalen">Scoring — zwei Subskalen</a></li>
+  <li><a href="#kein-score" id="markdown-toc-kein-score">Kein Score</a></li>
   <li><a href="#terminologie" id="markdown-toc-terminologie">Terminologie</a></li>
 </ul>
 
 </div>
-<p><strong>ERQ-S</strong> erfasst die <strong>Emotionsregulation</strong> über sechs Items auf einer 7-stufigen Likert-Skala (1 = stimmt überhaupt nicht … 7 = stimmt vollkommen). Die im Item Level Dictionary verwendete Bezeichnung „ERQ-6" ist projektintern — es handelt sich um die <strong>offizielle Kurzform ERQ-S</strong> des <em>Emotion Regulation Questionnaire</em>.</p>
+<p><strong>ERQ-6</strong> erfasst die <strong>Emotionsregulation</strong> über sechs Items des <em>Emotion Regulation Questionnaire</em> (ERQ) auf einer 7-stufigen Likert-Skala (1 = stimmt überhaupt nicht … 7 = stimmt vollkommen). Es ist ein <strong>projektspezifischer Zuschnitt</strong> des ERQ — die ERQ-Items 1, 2, 3, 6, 8 und 9 im unveränderten Originalwortlaut.</p>
 
-<h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
+<blockquote>
+  <p><strong>Korrektur vom 01.10.2026.</strong> Dieser Bogen war in PCOR-MII bis Release 0.3.0 als die offizielle Kurzform <strong>ERQ-S</strong> ausgewiesen, mit zwei validierten Subskalen-Scores. <strong>Das war falsch.</strong> Der ERQ-S besteht aus anderen ERQ-Items; die Scores sind deshalb zurückgezogen. Einzelheiten im nächsten Abschnitt.</p>
+</blockquote>
 
-<p>Der ERQ-S ist die von den Original-Autor:innen publizierte 6-Item-Kurzform des ERQ (Preece, Petrova, Mehta &amp; Gross 2023). Das ist <strong>belegt, nicht erschlossen</strong> — gleich zweifach:</p>
-
-<ol>
-  <li>Die <strong>DIZ-Implementierungsliste PCOR-MII</strong> nennt in der Zeile „ERQ-6" als Entwicklungspaper ausdrücklich <a href="https://doi.org/10.1016/j.jad.2023.08.076">doi:10.1016/j.jad.2023.08.076</a>, also die ERQ-S-Publikation, und als Übersetzungspaper <a href="https://doi.org/10.1026/0012-1924.55.3.144">Abler &amp; Kessler 2009</a>. Der Zuschnitt wurde also bewusst als ERQ-S übernommen, nur anders benannt.</li>
-  <li>Ein <strong>Item-Abgleich</strong> gegen den von den Autor:innen publizierten Originalbogen (<em>ERQ-S: Copy of Questionnaire and Scoring Instructions</em>, © Stanford Psychophysiology Laboratory) bestätigt es unabhängig: Die sechs ERQ-S-Items sind der Reihe nach die ERQ-Items 1, 2, 3, 6, 8, 9 — exakt die hier modellierten <code class="language-plaintext highlighter-rouge">linkId</code>s.</li>
-</ol>
+<h3 id="verwendung-in-pcor-mii--und-warum-das-nicht-der-erq-s-ist">Verwendung in PCOR-MII — und warum das nicht der ERQ-S ist</h3>
 
 <p>Erhoben wird der Bogen nur im Szenario <a href="AN.html">AN</a>. Gepflegt wird er <strong>vorläufig in PCOR-MII</strong>; eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen (siehe <a href="Designentscheidungen.html">ADR-003</a>).</p>
 
-<p><strong>Eine Ungenauigkeit der DIZ-Liste am Rande:</strong> In der Spalte <em>„verkürzte Version?“</em> steht beim ERQ-6 dieselbe Formel wie bei <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a> und <a href="SSUK-2.html">SSUK-2</a> — <em>„nur das Item mit der höchsten Trennschärfe pro Skala“</em>. Im Singular trifft das hier nicht zu: Es sind <strong>drei</strong> Items je Subskala, nicht eines. Die Formel wirkt durchkopiert. Inhaltlich ist die Sache aber eher stärker als dort — der Zuschnitt ist keine projekteigene Auswahl, sondern die publizierte Kurzform, und deshalb der einzige der fünf AN-Zuschnitte mit validiertem Scoring.</p>
+<p>Die Verwechslung mit dem ERQ-S lag nahe, und die DIZ-Implementierungsliste legt sie sogar nahe: Sie nennt in der Zeile „ERQ-6" als Entwicklungspaper <a href="https://doi.org/10.1016/j.jad.2023.08.076">doi:10.1016/j.jad.2023.08.076</a> — also die ERQ-S-Publikation. Die Items im Item Level Dictionary sind aber <strong>andere</strong>.</p>
+
+<p><strong>Tabelle 1 der Publikation gibt die Zuordnung an</strong>, und sie ist eindeutig:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Cognitive Reappraisal</th>
+      <th>Expressive Suppression</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ERQ-S</strong> (Preece et al. 2023)</td>
+      <td>ERQ-Items <strong>7, 8, 10</strong></td>
+      <td>ERQ-Items <strong>2, 6, 9</strong></td>
+    </tr>
+    <tr>
+      <td><strong>PCOR-MII ERQ-6</strong></td>
+      <td>ERQ-Items <strong>1, 3, 8</strong></td>
+      <td>ERQ-Items <strong>2, 6, 9</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Vier der sechs Items überschneiden sich, und die <strong>Unterdrückungs-Items sind sogar identisch</strong>. Die <strong>Neubewertungs-Items sind es nicht</strong>: PCOR-MII führt die Items 1 und 3 („<em>ändere ich, woran ich denke</em>"), der ERQ-S die Items 7 und 10 („<em>versuche ich über die Situation anders zu denken</em>"). Das sind im ERQ zwei verschiedene Itempaare, nicht zwei Schreibweisen desselben.</p>
+
+<p>Es handelt sich also um <strong>zwei verschiedene Zuschnitte desselben Instruments</strong>. Der PCOR-MII-Bogen ist keiner der publizierten Kurzformen.</p>
+
+<p><strong>Was daraus folgt, und was nicht.</strong> Die <code class="language-plaintext highlighter-rouge">linkId</code>s bleiben richtig — sie sind die Original-ERQ-Itemnummern, und die Items sind wortgleich aus dem Item Level Dictionary übernommen. Der Wortlaut bleibt unverändert. Weg fällt der <strong>Score</strong>: Die publizierten ERQ-S-Kennwerte gelten für dessen Itemsatz, nicht für diesen. Bezogen auf das Vollinstrument ist der Satz ohnehin ein Zuschnitt — drei der sechs Neubewertungs- und drei der vier Unterdrückungs-Items des ERQ-10 —, für den keine Scoring-Vorschrift publiziert ist. Nach <a href="Designentscheidungen.html">ADR-003</a> Punkt 3 gibt es daher keinen Score.</p>
+
+<p><strong>Wie der Fehler entstanden ist</strong>, weil es ein lehrreicher Fall ist: Die Scoring Instructions des ERQ-S nennen <em>„Cognitive reappraisal: sum items 1, 3, and 5"</em> — das sind <strong>ERQ-S-Itemnummern</strong>. Diese Nummern wurden hier zunächst als ERQ-Nummern gelesen und über eine <em>angenommene</em> Zuordnung übersetzt, statt gegen Tabelle 1 der Publikation geprüft zu werden. Zwei Nummernsysteme, die sich teilweise überlappen, sind genau die Konstellation, in der ein Abgleich „sieht ja passend aus" ergibt und trotzdem falsch ist — dieselbe Falle wie bei <code class="language-plaintext highlighter-rouge">erq6</code> im Dictionary gegen <code class="language-plaintext highlighter-rouge">erq6</code> im Questionnaire.</p>
 
 <h3 id="sprachebenen">Sprachebenen</h3>
 
@@ -427,14 +456,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Das folgt <a href="Designentscheidungen.html">ADR-005</a> und ist gleichzeitig Voraussetzung für eine Aufnahme ins MII-PRO-Modul, das durchgehend so arbeitet.</p>
 
-<p><strong>Nur die sechs ERQ-S-Items sind modelliert, nicht der ERQ-10.</strong> Die Langform darf nach <a href="Designentscheidungen.html">ADR-008</a> mitmodelliert werden und ist inzwischen vollständig beschafft — englischer Originalbogen und autorisierte deutsche Fassung, jeweils zehn Items —, ist aber nicht Bestandteil dieses Release. Für diesen Bogen ist sie vor allem die <strong>Quelle des deutschen Wortlauts</strong>: Die Kurzform-Publikation nennt nur Itemnummern und Psychometrie, keinen übersetzten Text.</p>
+<p><strong>Nur sechs der zehn ERQ-Items sind modelliert.</strong> Die Langform darf nach <a href="Designentscheidungen.html">ADR-008</a> mitmodelliert werden und ist inzwischen vollständig beschafft — englischer Originalbogen und autorisierte deutsche Fassung, jeweils zehn Items —, ist aber nicht Bestandteil dieses Release. Für diesen Bogen ist sie vor allem die <strong>Quelle des deutschen Wortlauts</strong>: Die Kurzform-Publikation nennt nur Itemnummern und Psychometrie, keinen übersetzten Text.</p>
 
 <h3 id="artefakte">Artefakte</h3>
 
 <ul>
   <li><strong>Fragebogen:</strong> <a href="Questionnaire-ERQ6.html">Questionnaire-ERQ6</a></li>
-  <li><strong>Beispielantwort:</strong> <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a> — ausgefülltes Beispiel; Neubewertung 11, Unterdrückung 19</li>
-  <li><strong>Beispiel-Scores:</strong> <a href="Observation-ErqsReappraisalObservation.html">Neubewertung</a>, <a href="Observation-ErqsSuppressionObservation.html">Unterdrückung</a> — beide <code class="language-plaintext highlighter-rouge">derivedFrom</code> die Beispielantwort</li>
+  <li><strong>Beispielantwort:</strong> <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a> — ausgefülltes Beispiel</li>
 </ul>
 
 <p>Kodierte Antwortoptionen gibt es nicht; alle sechs Items sind numerisch (<code class="language-plaintext highlighter-rouge">integer</code>, 1–7) mit Slider und Anker-<code class="language-plaintext highlighter-rouge">display</code>-Item — im Dictionary ist die Skala als Grafik geführt (Anker: 1 = stimmt überhaupt nicht, 4 = neutral, 7 = stimmt vollkommen).</p>
@@ -543,38 +571,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Beim Mapping in die Studiendatenhaltung</strong> ist die Spalte „Dictionary-Variable" maßgeblich — insbesondere <code class="language-plaintext highlighter-rouge">erq6</code> bezeichnet im Dictionary ein anderes Item als im Questionnaire.</p>
 
-<h3 id="scoring--zwei-subskalen">Scoring — zwei Subskalen</h3>
+<h3 id="kein-score">Kein Score</h3>
 
-<p>Die Scoring Instructions zum ERQ-S nennen zwei Skalenwerte, keinen Gesamtscore: <em>„Cognitive reappraisal: sum items 1, 3, and 5. Expressive suppression: sum items 2, 4, and 6."</em> Da die <code class="language-plaintext highlighter-rouge">linkId</code>s hier die <strong>Original-ERQ-Nummern</strong> tragen und nicht die ERQ-S-Zählung, ergibt sich:</p>
+<p>Für diesen Zuschnitt liegt <strong>keine validierte Scoring-Vorschrift</strong> vor, und bis Release 0.3.0 war hier fälschlich eine ausgewiesen.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Subskala</th>
-      <th>Items (<code class="language-plaintext highlighter-rouge">linkId</code>)</th>
-      <th style="text-align: right">Bereich</th>
-      <th>Richtung</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Neubewertung</strong> (Cognitive Reappraisal)</td>
-      <td><code class="language-plaintext highlighter-rouge">erq1</code> + <code class="language-plaintext highlighter-rouge">erq3</code> + <code class="language-plaintext highlighter-rouge">erq8</code></td>
-      <td style="text-align: right">3–21</td>
-      <td>höher = häufigere Nutzung, laut Instrument mit besserem Wohlbefinden assoziiert</td>
-    </tr>
-    <tr>
-      <td><strong>Unterdrückung</strong> (Expressive Suppression)</td>
-      <td><code class="language-plaintext highlighter-rouge">erq2</code> + <code class="language-plaintext highlighter-rouge">erq6</code> + <code class="language-plaintext highlighter-rouge">erq9</code></td>
-      <td style="text-align: right">3–21</td>
-      <td>höher = häufigere Nutzung, mit schlechterem Wohlbefinden assoziiert</td>
-    </tr>
-  </tbody>
-</table>
+<p>Das Vollinstrument bildet zwei Subskalen — Neubewertung (ERQ-Items 1, 3, 5, 7, 8, 10) und Unterdrückung (2, 4, 6, 9). Dieser Bogen enthält davon <strong>drei der sechs</strong> Neubewertungs- und <strong>drei der vier</strong> Unterdrückungs-Items. Für keine der beiden Teilmengen gibt es publizierte Kennwerte.</p>
 
-<p>Beide sind als Score-Definition modelliert: <a href="ObservationDefinition-PcorObsDefErqsReappraisal.html">ERQ-S Neubewertung</a> und <a href="ObservationDefinition-PcorObsDefErqsSuppression.html">ERQ-S Unterdrückung</a>. Der Questionnaire trägt die beiden Summen zusätzlich als FHIRPath-<code class="language-plaintext highlighter-rouge">variable</code> (<code class="language-plaintext highlighter-rouge">erqsReappraisal</code>, <code class="language-plaintext highlighter-rouge">erqsSuppression</code>).</p>
+<p>Die Kennwerte des <strong>ERQ-S</strong> gelten dafür nicht: Dessen Neubewertungs-Skala besteht aus den ERQ-Items 7, 8 und 10, nicht aus 1, 3 und 8. Nur die Unterdrückungs-Items stimmen überein — ein Score aus der einen Hälfte eines Instruments, dessen andere Hälfte abweicht, wäre keine Übertragung, sondern eine Behauptung.</p>
 
-<p><strong>Keine Referenzintervalle hinterlegt.</strong> Die Scoring Instructions geben US-Normwerte an (General Community Sample, N = 508: Neubewertung M = 14,39 / SD = 4,06 / α = .87; Unterdrückung M = 12,25 / SD = 4,46 / α = .76) und definieren „hoch" als mindestens eine Standardabweichung über dem Mittelwert — nach diesen Normen 19+ bzw. 17+. Das ist hier bewusst <strong>nicht</strong> als Referenzintervall modelliert: Es sind US-Normen, die für eine deutsche Stichprobe nicht ohne Weiteres gelten; außerdem folgt es der MDR-Abgrenzung aus <a href="Designentscheidungen.html">ADR-004</a>.</p>
+<p><strong>Zurückgezogen wurden am 01.10.2026:</strong> die beiden <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s, die beiden Beispiel-<code class="language-plaintext highlighter-rouge">Observation</code>s, die Katalogcodes <code class="language-plaintext highlighter-rouge">erq-s-reappraisal</code> und <code class="language-plaintext highlighter-rouge">erq-s-suppression</code> sowie die FHIRPath-<code class="language-plaintext highlighter-rouge">variable</code>s im Questionnaire. Die Antwortwerte bleiben als <code class="language-plaintext highlighter-rouge">integer</code> 1–7 erhalten, eine spätere Auswertung ist damit jederzeit möglich — sie ist nur keine validierte.</p>
+
+<p>Falls ein validierter Score gewünscht ist, gibt es zwei saubere Wege: den <strong>ERQ-S</strong> als eigenen Bogen mit seinen Items 2, 6, 7, 8, 9, 10 modellieren, oder den <strong>vollständigen ERQ-10</strong>. Wortlaut und Scoring beider liegen beschafft vor (siehe <a href="Designentscheidungen.html">ADR-008</a>); beides würde aber von dem abweichen, was laut Item Level Dictionary tatsächlich erhoben wird.</p>
 
 <h3 id="terminologie">Terminologie</h3>
 
@@ -632,8 +639,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-09-30 19:54:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 09:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

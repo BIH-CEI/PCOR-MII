@@ -27,7 +27,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Beziehungsstatus (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-30T19:54:40+00:00",
+  "date" : "2026-10-01T09:59:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

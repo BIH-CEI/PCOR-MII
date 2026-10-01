@@ -22,7 +22,7 @@ Auf die PCOR-MII-Instrumente angewandt:
 
 | | | |
 | :--- | :--- | :--- |
-| [ERQ-S](ERQ-6.md) | publiziert**und**von den Autor:innen selbst frei bereitgestellt (Stanford Psychophysiology Laboratory) | nutzbar |
+| [ERQ-6](ERQ-6.md) | publiziert**und**von den Autor:innen selbst frei bereitgestellt (Stanford Psychophysiology Laboratory) | nutzbar |
 | [ACE](ACE.md)— englisches Original | publiziert, Public-Health-Standard (Felitti 1998, Kaiser/CDC) | nutzbar |
 | [ACE](ACE.md)—**deutsche Fassung ACE-D** | © Schäfer, Wingenfeld & Spitzer 2009;**Gesamtbogen nur über den Autor beziehbar** | Zustimmung nötig — siehe offener Punkt |
 | [ANSOCQ-2](ANSOCQ-2.md) | publiziert; deutsche Fassung von den Validierungs-Autor:innen | nutzbar |
@@ -177,7 +177,7 @@ Nicht betroffen: Die AN-Instrumente sind in der Liste sämtlich als „frei verf
 
 Die fünf AN-spezifischen Instrumente ([ERQ-6](ERQ-6.md), [EDE-Q6](EDE-Q6.md), [ANSOCQ-2](ANSOCQ-2.md), [SSUK-2](SSUK-2.md), [ACE](ACE.md)) sind vorbereitet (siehe ADR-003), tragen aber dokumentierte offene Punkte:
 
-* **Quellenverifikation — weitgehend abgeschlossen (Stand 2026-09-29).** Für drei der fünf Instrumente ist der Wortlaut gegen die maßgebliche Quelle geprüft: [ERQ-S](ERQ-6.md) gegen den Originalbogen der Autor:innen, [EDE-Q6](EDE-Q6.md) gegen die dgvt-Ausgabe (alle sechs Items und die Antwortskala) und [ACE](ACE.md) gegen den ACE-D (alle fünf Items). Alle drei: wortgleich. Bei [SSUK-2](SSUK-2.md) ist die **Itemnummerierung** inzwischen ebenfalls verifiziert: Müller, Mehnert & Koch (**Z Med Psychol** 2004) listen in Tabelle 2 die Items der Langfassung mit Nummern — Item 14 ist „Sie aufmuntert oder tröstet", Item 10 „die Auswirkung Ihrer Erkrankung herunterspielt". Die frühere Festlegung ist damit durch die Primärquelle ersetzt. Bei [ANSOCQ-2](ANSOCQ-2.md) ist die **Auswahllogik und die Nummerierung** inzwischen ebenfalls belegt: Pauli et al. (**J Eat Disord** 2017, Open Access) nennen in ihrer Faktorenanalyse ausdrücklich „item 3" als hochladend auf Faktor 1 („weight gain and control") und „item 14" auf Faktor 2 („attitudes and feelings"). Damit ist auch hier die DIZ-Angabe „ein Item je Skala" wörtlich bestätigt — wobei die „Skalen" die Faktoren der deutschen Validierung sind, nicht Subskalen des Originals. **ANSOCQ-2 ebenfalls abgeschlossen (2026-09-29):** Der englische Originalbogen ist bei Rieger et al. 2002 ([doi:10.1002/eat.10056](https://doi.org/10.1002/eat.10056), Charité-Volltextzugang) im Wortlaut abgedruckt. Beide Items samt ihrer fünf Feststellungen stimmen mit der deutschen Fassung überein; die Nummern 3 und 14 gelten in beiden Sprachen. Damit ist auch die zwischenzeitlich vermutete Zählungsdifferenz erledigt: Es gibt zwei Fassungen — Rieger 2000 mit 23 Items, Rieger 2002 mit **20** —, und die deutsche Übersetzung folgt der 20-Item-Revision. [ANSOCQ-2](ANSOCQ-2.md) ist daraufhin auf Englisch als Primärsprache mit `de-CH`-Übersetzung umgestellt (ADR-005).
+* **Quellenverifikation — weitgehend abgeschlossen (Stand 2026-09-29).** Für drei der fünf Instrumente ist der Wortlaut gegen die maßgebliche Quelle geprüft: [ERQ-6](ERQ-6.md) gegen den ERQ-Originalbogen (Wortlaut wortgleich — die **Identifikation** als ERQ-S war allerdings falsch, siehe Eintrag unten), [EDE-Q6](EDE-Q6.md) gegen die dgvt-Ausgabe (alle sechs Items und die Antwortskala) und [ACE](ACE.md) gegen den ACE-D (alle fünf Items). Alle drei: wortgleich. Bei [SSUK-2](SSUK-2.md) ist die **Itemnummerierung** inzwischen ebenfalls verifiziert: Müller, Mehnert & Koch (**Z Med Psychol** 2004) listen in Tabelle 2 die Items der Langfassung mit Nummern — Item 14 ist „Sie aufmuntert oder tröstet", Item 10 „die Auswirkung Ihrer Erkrankung herunterspielt". Die frühere Festlegung ist damit durch die Primärquelle ersetzt. Bei [ANSOCQ-2](ANSOCQ-2.md) ist die **Auswahllogik und die Nummerierung** inzwischen ebenfalls belegt: Pauli et al. (**J Eat Disord** 2017, Open Access) nennen in ihrer Faktorenanalyse ausdrücklich „item 3" als hochladend auf Faktor 1 („weight gain and control") und „item 14" auf Faktor 2 („attitudes and feelings"). Damit ist auch hier die DIZ-Angabe „ein Item je Skala" wörtlich bestätigt — wobei die „Skalen" die Faktoren der deutschen Validierung sind, nicht Subskalen des Originals. **ANSOCQ-2 ebenfalls abgeschlossen (2026-09-29):** Der englische Originalbogen ist bei Rieger et al. 2002 ([doi:10.1002/eat.10056](https://doi.org/10.1002/eat.10056), Charité-Volltextzugang) im Wortlaut abgedruckt. Beide Items samt ihrer fünf Feststellungen stimmen mit der deutschen Fassung überein; die Nummern 3 und 14 gelten in beiden Sprachen. Damit ist auch die zwischenzeitlich vermutete Zählungsdifferenz erledigt: Es gibt zwei Fassungen — Rieger 2000 mit 23 Items, Rieger 2002 mit **20** —, und die deutsche Übersetzung folgt der 20-Item-Revision. [ANSOCQ-2](ANSOCQ-2.md) ist daraufhin auf Englisch als Primärsprache mit `de-CH`-Übersetzung umgestellt (ADR-005).
 
 **Damit sind alle fünf AN-Instrumente quellenverifiziert.**
 
@@ -193,7 +193,16 @@ Die fünf AN-spezifischen Instrumente ([ERQ-6](ERQ-6.md), [EDE-Q6](EDE-Q6.md), [
 
 
   **Keine weitere verborgene Kurzform.** Anders als beim ERQ verweist keines der vier auf eine offizielle Short-Form-Publikation — es sind echte projektspezifische Zuschnitte. Damit bleibt es bei ihnen bei der Regel aus ADR-003: kein Score ohne validierte Vorschrift.
-* **ERQ-S — erledigt ✅ (2026-09-29).** Der als „ERQ-6" geführte Bogen ist die offizielle Kurzform **ERQ-S**. Zwei unabhängige Belege: Die DIZ-Implementierungsliste nennt in der ERQ-Zeile als Entwicklungspaper [doi:10.1016/j.jad.2023.08.076](https://doi.org/10.1016/j.jad.2023.08.076) — die ERQ-S-Publikation; und ein Item-Abgleich gegen den Originalbogen der Autor:innen bestätigt, dass die sechs ERQ-S-Items die ERQ-Items 1, 2, 3, 6, 8, 9 sind, also exakt die modellierten `linkId`s. Damit liegt eine **validierte Scoring-Vorschrift** vor (zwei Subskalen, je 3–21), umgesetzt als `ObservationDefinition` — siehe [ERQ-S](ERQ-6.md). Der ERQ-S ist damit der **erste Kandidat für eine Einreichung ins MII-PRO-Modul** (ADR-003).
+* **ERQ-6 — Identifikation als ERQ-S war FALSCH, korrigiert am 2026-10-01 ❌.** Hier stand bis dahin, der als „ERQ-6“ geführte Bogen **sei** die offizielle Kurzform **ERQ-S**, belegt durch zwei unabhängige Quellen, und trage deshalb eine validierte Scoring-Vorschrift. Beides ist unzutreffend.
+
+
+  **Tabelle 1 bei Preece et al. 2023** gibt die Zuordnung an: Der ERQ-S besteht aus den **ERQ-Items 2, 6, 7, 8, 9 und 10** — Cognitive Reappraisal 7, 8, 10 und Expressive Suppression 2, 6, 9. PCOR-MII führt die **ERQ-Items 1, 2, 3, 6, 8 und 9**. Vier Items überschneiden sich, die Unterdrückungs-Items sind sogar identisch — die Neubewertungs-Items aber nicht.
+
+
+  **Keiner der beiden vermeintlichen Belege trug.** Die DIZ-Implementierungsliste nennt in der ERQ-Zeile zwar die ERQ-S-Publikation als Entwicklungspaper, aber die im Dictionary erhobenen Items sind andere — die Liste beschreibt also eine Absicht, nicht den Bestand. Und der angebliche **Item-Abgleich gegen den Originalbogen** war keiner: Die ERQ-S-Scoring-Angabe nennt **„sum items 1, 3, and 5“** in **ERQ-S-Zählung**; diese Nummern wurden als ERQ-Nummern gelesen und über eine angenommene Zuordnung übersetzt, statt gegen Tabelle 1 geprüft zu werden. Zwei teilweise überlappende Nummernsysteme sind genau die Konstellation, in der ein Abgleich plausibel aussieht und trotzdem falsch ist.
+
+
+  **Folge:** Die beiden `ObservationDefinition`s, die beiden Beispiel-`Observation`s, die Katalogcodes und die FHIRPath-`variable`s sind zurückgezogen. Der Bogen selbst bleibt **unverändert** — Wortlaut und `linkId`s sind dictionary-treu und korrekt. Einzelheiten auf der [ERQ-6-Seite](ERQ-6.md).
 * **Scoring:** Alle fünf sind Zuschnitte („trennschärfstes Item je Skala" bzw. „erste 5 Fragen"), für die keine validierte Scoring-Vorschrift vorliegt. Bewusst kein Score-Item — bis eine Auswertungsregel fachlich abgestimmt ist (Antwortcodes tragen vorsorglich `ordinalValue`).
 * **ANSOCQ-2 — Einfachauswahl: entschieden ✅ (2026-09-29).** Die deutsche Validierung (Pauli et al., **J Eat Disord** 2017) beschreibt **„participants can choose between five answers"**, und der dort genannte Gesamtscore-Bereich 20–100 bei 20 Items geht nur bei genau einer Antwort je Item auf. Umgesetzt ist Einfachauswahl; der Zusatz „oder mehrere Feststellungen" bleibt als übernommener Wortlaut im Instruktionstext. **Nebenbefund:** Der deutsche ANSOCQ-Wortlaut stammt aus der **Schweizer** Fassung (Übersetzung Zürich, Schweizer Validierungsstichprobe; sichtbar an „Gesäss") — `language` ist auf `de-CH` gesetzt. Damit ist ANSOCQ-2 nach DEM der zweite Bogen mit Schweizer Herkunft.
 * **EDE-Q6 — Erratum im Dictionary:** Die Bedingung für `edeq30` lautet dort „If edeq31 = 1"; eine Variable `edeq31` existiert im AN-Blatt nicht. Umgesetzt als `enableWhen` auf `edeq29` (die Ja/Nein-Frage direkt davor) — im Dictionary zu korrigieren.
@@ -344,7 +353,7 @@ Bei **Druckfehler in der Vorlage** bleibt die übernommene Fassung unverändert.
 
 **Wichtige Abgrenzung: eine Übersetzung ist kein `derivedFrom` auf eine andere Übersetzung.** Zwei Übersetzungen desselben Instruments sind **Geschwister**, nicht Eltern und Kind — beide leiten sich vom Original ab, nicht voneinander. Beim [GSLTPAQ](GSLTPAQ.md) heißt das: Die PCOR-MII-Eigenübersetzung zeigt **nicht** auf die validierte deutsch-österreichische Fassung und umgekehrt auch nicht; beide zeigen, sobald es sie als Ressource gibt, auf das englische Original.
 
-**Und der Wortlaut folgt der Rechtekette, nicht der Zitationskette.** Wo die Übersetzung herkommt, ist eine andere Frage als wo das Instrument herkommt, und die DIZ-Implementierungsliste vermischt beides in einer Zelle. Zwei Beispiele aus diesem Projekt: Beim [EDE-Q6](EDE-Q6.md) nennt die Liste als Übersetzungspaper die psychometrische **Evaluation** — der Wortlaut stammt aber aus der dgvt-Publikation. Beim [ERQ-S](ERQ-6.md) liefert das Übersetzungspaper (Abler & Kessler 2009) die **Langform**, aus der die sechs Items entnommen sind. In beiden Fällen ist die Wortlautquelle in `copyright` zu nennen, nicht bloß das Paper, das die Liste angibt.
+**Und der Wortlaut folgt der Rechtekette, nicht der Zitationskette.** Wo die Übersetzung herkommt, ist eine andere Frage als wo das Instrument herkommt, und die DIZ-Implementierungsliste vermischt beides in einer Zelle. Zwei Beispiele aus diesem Projekt: Beim [EDE-Q6](EDE-Q6.md) nennt die Liste als Übersetzungspaper die psychometrische **Evaluation** — der Wortlaut stammt aber aus der dgvt-Publikation. Beim [ERQ-6](ERQ-6.md) liefert das Übersetzungspaper (Abler & Kessler 2009) die **Langform**, aus der die sechs Items entnommen sind — während das dort genannte **Entwicklungspaper** ein anderes Instrument beschreibt als das erhobene. In beiden Fällen ist die Wortlautquelle in `copyright` zu nennen, nicht bloß das Paper, das die Liste angibt.
 
 #### ✅ ADR-008 — Short Forms: Original-linkIds, Wortlaut aus der autorisierten Langform-Quelle, Langform mitmodellieren
 
@@ -352,13 +361,15 @@ Bei **Druckfehler in der Vorlage** bleibt die übernommene Fassung unverändert.
 
 Ein Zuschnitt oder eine Short Form ist in PCOR-MII nach drei Regeln zu modellieren. Sie hängen zusammen — einzeln angewandt ergeben sie eine Ressource, die technisch stimmt und fachlich in die Irre führt.
 
-**Regel 1 — `linkId`s sind die Original-Itemnummern.** Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die `linkId`s sie (`edeq1/7/12/27/29/30`, `ansocq3/14`, `ssuk14/10`, `ace1`–`ace5`, ERQ-S `erq1/2/3/6/8/9`). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.
+**Regel 1 — `linkId`s sind die Original-Itemnummern.** Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die `linkId`s sie (`edeq1/7/12/27/29/30`, `ansocq3/14`, `ssuk14/10`, `ace1`–`ace5`, ERQ-6 `erq1/2/3/6/8/9`). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.
 
 Weicht das Item Level Dictionary davon ab, ist die Abbildung **maschinenlesbar** zu hinterlegen, nicht nur als Tabelle auf der Seite. Beim ERQ-S tut das [`pcor-cm-erq-s-linkids`](ConceptMap-pcor-cm-erq-s-linkids.md), und zwar aus einem konkreten Grund: Dictionary-`erq6` und FHIR-`erq6` bezeichnen **verschiedene Items**, beide sind Unterdrückungs-Items, sie klingen ähnlich, und ein Mapping über Namensgleichheit fällt bei einer Sichtprüfung nicht auf. Wo eine solche Kollision möglich ist, ist die ConceptMap Pflicht.
 
 **Regel 2 — der Wortlaut kommt aus der autorisierten Quelle der Langform, nicht aus der Kurzform-Publikation.** Das ist die Regel, die am leichtesten übersehen wird, weil sie kontraintuitiv ist: Die Publikation, die eine Short Form definiert, nennt typischerweise nur die **Itemnummern** und die Psychometrie — den übersetzten Wortlaut enthält sie nicht.
 
-Beim [ERQ-S](ERQ-6.md) sieht man beides nebeneinander: Die Kurzform-Definition steht bei Preece et al. 2023, der deutsche Wortlaut in der von Gross und John **autorisierten** Übersetzung von Abler & Kessler 2009 — also im Bogen der **Langform**, aus dem die sechs Items entnommen sind. Wer den Wortlaut aus der Kurzform-Publikation nehmen wollte, fände ihn dort nicht.
+Beim [ERQ-6](ERQ-6.md) sieht man das: Der deutsche Wortlaut steht nicht in einer Kurzform-Publikation, sondern in der von Gross und John **autorisierten** Übersetzung von Abler & Kessler 2009 — also im Bogen der **Langform**, aus dem die sechs Items entnommen sind.
+
+Derselbe Bogen liefert auch das Gegenbeispiel, warum die Auswahlquelle getrennt zu führen ist: Die DIZ-Implementierungsliste nennt dort als Entwicklungspaper die ERQ-S-Publikation, obwohl die erhobenen Items **nicht** die des ERQ-S sind. Wer die Auswahlquelle ungeprüft übernimmt, modelliert ein anderes Instrument, als er zu modellieren glaubt — genau das ist hier bis Release 0.3.0 passiert.
 
 Praktisch heißt das: Für jeden Zuschnitt sind **zwei** Quellen zu führen und beide in `copyright` zu nennen — die Quelle der **Auswahl** (welche Items, nach welchem Kriterium) und die Quelle des **Wortlauts**. Sie fallen selten zusammen.
 
@@ -375,13 +386,13 @@ Vier Gründe, und der letzte ist der eigentliche:
 
 | | | |
 | :--- | :--- | :--- |
-| **ERQ-10** | Original und autorisierte deutsche Fassung vollständig beschafft (Stanford Psychophysiology Laboratory) | modellierbar |
+| **ERQ-10** | Original und autorisierte deutsche Fassung vollständig beschafft (Stanford Psychophysiology Laboratory) | modellierbar — und seit der ERQ-S-Korrektur der einzige Weg zu einem validierten ERQ-Score |
 | **ANSOCQ-20** | Englisch vollständig (Rieger et al. 2002); deutsch nur 2 von 20 | nur englisch-primär modellierbar |
 | **ACE-10** | deutsche ACE-D-Fassung**nur über den Rechteinhaber beziehbar** | nicht modellierbar, siehe offener Punkt |
 | **EDE-Q-28** | vorhanden, aber dgvt-Rechtevorbehalt | nicht ohne Zustimmung |
 | **SSUK** | deutsch nur 2 Items; Quelle identifiziert (Ramm & Hasenbring 2003) | offen |
 
-**Und kein Score ohne validierte Grundlage** — ADR-003 Punkt 3 gilt unverändert. Die Langform bringt ihre Scoring-Vorschrift mit; auf den Zuschnitt überträgt sie sich **nicht**. Ein trennschärfstes Item je Skala bildet die Skala nicht ab, und eine Summe über fünf von zehn ACE-Fragen ist kein ACE-Score. Die einzige Ausnahme im Projekt ist der ERQ-S — weil er keine projekteigene Auswahl ist, sondern eine **publizierte** Kurzform mit eigener Validierung.
+**Und kein Score ohne validierte Grundlage** — ADR-003 Punkt 3 gilt unverändert. Die Langform bringt ihre Scoring-Vorschrift mit; auf den Zuschnitt überträgt sie sich **nicht**. Ein trennschärfstes Item je Skala bildet die Skala nicht ab, und eine Summe über fünf von zehn ACE-Fragen ist kein ACE-Score. Eine Ausnahme gibt es im Projekt **nicht**. Bis zum 01.10.2026 galt der ERQ-6 als eine — er war fälschlich als publizierte Kurzform ERQ-S ausgewiesen. Nach der Korrektur trägt **kein** AN-Instrument einen Score.
 
 #### ✅ ADR-007 — Zwei unabhängige Übersetzungen werden zwei Questionnaires, nicht zwei Sprachen und nicht zwei Versionen
 
@@ -481,13 +492,13 @@ Der Fall sieht ADR-005 (unten) und dem [ANSOCQ-2](ANSOCQ-2.md) ähnlich, ist abe
 
 | | |
 | :--- | :--- |
-| **ERQ-S** | **ja — bestätigt 2026-09-29.**Zwei Subskalen-Summen, je 3–21. Als`ObservationDefinition`modelliert |
+| **ERQ-6** | **nein — korrigiert 2026-10-01.**Zuvor als validiert ausgewiesen; der Bogen ist nicht der ERQ-S, die Scores sind zurückgezogen |
 | EDE-Q6 | nein — Subskalen-/Global-Mittelwerte gelten für das Vollinstrument |
 | ANSOCQ-2 | nein — Mittelwert über 20 Items |
 | SSUK-2 | nein — zwei gegenläufig gepolte Items |
 | ACE | nein — Score ist die Ja-Anzahl über alle 10 Fragen |
 
-Die Verifikation des ERQ-S ist damit nicht länger eine Fußnote, sondern das **Gate** für die erste Upstream-Einreichung.
+Damit trägt **kein** AN-Instrument einen Score. Was zuvor als Gate für die erste Upstream-Einreichung galt — der vermeintlich validierte ERQ-S-Score — ist entfallen.
 
 **MDR-Abgrenzung (upstream-Vorgabe, gilt mit):** Cut-offs und Schweregradkategorien werden als Referenzintervalle **dokumentiert**, aber **nicht als ausführbare Interpretationslogik** ausgeliefert — Software, die PRO-Antworten verrechnet **und klinisch interpretiert**, kann als Medizinprodukt-Software gelten (MDCG 2019-11, Regel 11 Anhang VIII MDR). Für die sensiblen AN-Instrumente (ACE, EDE-Q6) ist das besonders zu beachten.
 

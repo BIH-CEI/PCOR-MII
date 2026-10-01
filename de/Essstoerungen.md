@@ -63,7 +63,7 @@ Alle mit Priorität **A** im Screening, sofern nicht anders vermerkt:
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| Emotion Regulation | **ERQ-6**(6) | ERQ-2 (2) | [ERQ-S](ERQ-6.md)—**die Langform** |
+| Emotion Regulation | **ERQ-6**(6) | ERQ-2 (2) | [ERQ-6](ERQ-6.md)—**die Langform** |
 | Eating Disorder Psychopathology | **EDE-Q6 (6) + EDP (11)**= 17 | — | [EDE-Q6](EDE-Q6.md); die 11`edp`-Items rechtlich unbewertet |
 | Motivation to Change | **ANSOCQ**(20) | ANSOCQ-2 (2) | [ANSOCQ-2](ANSOCQ-2.md)— die Kurzform |
 | Social Support | **SSUK-8**(8) | SSUK (2) | [SSUK-2](SSUK-2.md)— die Kurzform |
@@ -78,7 +78,7 @@ Alle mit Priorität **A** im Screening, sofern nicht anders vermerkt:
 
 **Zwei Befunde, die man leicht falsch herum liest:**
 
-Erstens sind **ERQ-S und ACE bereits die Langformen** des Plans, nicht Zuschnitte davon. Der ERQ-S mit 6 Items **ist** die `≥5`-Variante der Domäne Emotion Regulation — daneben steht ein ERQ-2, das in PCOR-MII bisher nicht modelliert ist. Beim ACE ist die `≥5`-Variante genau die 5-Item-Fassung; eine 10-Item-Variante kommt im Plan nicht vor. Wer für diese beiden nach „der Langversion" sucht, hat sie schon.
+Erstens sind **ERQ-6 und ACE bereits die Langformen** des Plans, nicht Zuschnitte davon. Der ERQ-6 mit 6 Items **ist** die `≥5`-Variante der Domäne Emotion Regulation — daneben steht ein ERQ-2, das in PCOR-MII bisher nicht modelliert ist. Beim ACE ist die `≥5`-Variante genau die 5-Item-Fassung; eine 10-Item-Variante kommt im Plan nicht vor. Wer für diese beiden nach „der Langversion" sucht, hat sie schon.
 
 Zweitens ist die Langform der Essstörungspathologie **nicht der EDE-Q-28**. Der Plan führt 17 Items, und das sind **zwei Instrumente, nicht eines**:
 

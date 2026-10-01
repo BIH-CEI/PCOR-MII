@@ -1,9 +1,9 @@
-# ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds - PCOR-MII Implementation Guide v0.3.0
+# ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds - PCOR-MII Implementation Guide v0.3.0
 
-## ConceptMap: ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds (Experimentell) 
+## ConceptMap: ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds (Experimentell) 
 
  
-Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. 
+Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.md)). 
 
 
 
@@ -16,7 +16,7 @@ Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1�
   "url" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids",
   "version" : "0.3.0",
   "name" : "PcorCmErqSLinkIds",
-  "title" : "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds",
+  "title" : "ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds",
   "status" : "draft",
   "experimental" : true,
   "date" : "2026-09-29",
@@ -28,7 +28,7 @@ Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1�
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung.",
+  "description" : "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.html)).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -36,7 +36,7 @@ Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1�
       "display" : "Germany"
     }]
   }],
-  "purpose" : "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-S-Questionnaire.",
+  "purpose" : "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-6-Questionnaire.",
   "group" : [{
     "source" : "https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/ERQ-6",
     "target" : "https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/ERQ6",

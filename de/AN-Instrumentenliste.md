@@ -41,11 +41,11 @@ Die Spalte **Doku** verweist auf die PCOR-MII-Seite des Instruments, wo es eine 
 
 ### AN-spezifische Instrumente
 
-Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen Aufnahme ins MII-PRO-Modul (siehe [ADR-003](Designentscheidungen.md)). Vier davon sind Zuschnitte nach dem Kriterium „trennschärfstes Item je Skala"; nur der ERQ-S ist eine von den Original-Autor:innen publizierte Kurzform und trägt deshalb als einziger einen Score.
+Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen Aufnahme ins MII-PRO-Modul (siehe [ADR-003](Designentscheidungen.md)). Vier davon sind Zuschnitte nach dem Kriterium „trennschärfstes Item je Skala“, beim ACE sind es die ersten fünf Fragen. **Keiner der fünf trägt einen Score.** Der ERQ-6 galt bis Release 0.3.0 als Ausnahme, war aber fälschlich als Kurzform ERQ-S ausgewiesen — siehe [ERQ-6](ERQ-6.md).
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ERQ-S — Emotionsregulation | DCH | 6 | **PCOR-MII**→[`ERQ6`](Questionnaire-ERQ6.md) | [ERQ-S](ERQ-6.md) | [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) |
+| ERQ-6 — Emotionsregulation | DCH | 6 | **PCOR-MII**→[`ERQ6`](Questionnaire-ERQ6.md) | [ERQ-6](ERQ-6.md) | [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) |
 | EDE-Q6 — Essstörungspathologie | DCH | 6 | **PCOR-MII**→[`EDEQ6`](Questionnaire-EDEQ6.md) | [EDE-Q6](EDE-Q6.md) | [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md) |
 | ANSOCQ-2 — Veränderungsmotivation | TCH | 2 | **PCOR-MII**→[`ANSOCQ2`](Questionnaire-ANSOCQ2.md) | [ANSOCQ-2](ANSOCQ-2.md) | [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) |
 | SSUK-2 — Soziale Unterstützung | EFA | 2 | **PCOR-MII**→[`SSUK2`](Questionnaire-SSUK2.md) | [SSUK-2](SSUK-2.md) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) |
@@ -57,8 +57,6 @@ Die fünf Beispielantworten gehören zu **einem** Erhebungstermin derselben Beis
 
 | | | |
 | :--- | :--- | :--- |
-| ERQ-S Cognitive Reappraisal | **PCOR-MII**→[`PcorObsDefErqsReappraisal`](ObservationDefinition-PcorObsDefErqsReappraisal.md)· Beispiel:[Observation](Observation-ErqsReappraisalObservation.md) | [ERQ-S](ERQ-6.md) |
-| ERQ-S Expressive Suppression | **PCOR-MII**→[`PcorObsDefErqsSuppression`](ObservationDefinition-PcorObsDefErqsSuppression.md)· Beispiel:[Observation](Observation-ErqsSuppressionObservation.md) | [ERQ-S](ERQ-6.md) |
 | PROPr — PROMIS-Preference Utility | **PCOR-MII**→[`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.md)— vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.md#propr) |
 | PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO**— acht`ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.md) |
 | PROMIS-Domänen-T-Scores (PROMIS-16) | **offen**— upstream Roadmap 2027; die acht Codes des PROMIS-29 gelten**nicht**für PROMIS-16 | [PROMIS-16](PROMIS-16.md) |
