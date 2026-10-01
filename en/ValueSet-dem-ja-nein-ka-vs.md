@@ -33,7 +33,7 @@ Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS.
   "title" : "DEM Ja/Nein/Keine Angabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:30:23+00:00",
+  "date" : "2026-10-01T13:09:50+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

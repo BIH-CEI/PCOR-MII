@@ -18,7 +18,7 @@ PCOR-MII collects patient-reported data in three clinical entities:
 
 The authoritative reference for instrument selection and item subsetting is the **Item Level Dictionary** (`MASTER_3EntitiesOverview.xlsx`, one sheet per entity; not part of this repository). Rights and licence information comes from the **DIZ implementation list for PCOR-MII**.
 
-Note that the data collection plan itself distinguishes **four** use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. See [Eating Disorders](Essstoerungen.md); the split is still to be reflected on this page.
+Note that the data collection plan itself distinguishes **four** use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. The split is still to be reflected on this page.
 
 ### Categories
 
@@ -68,14 +68,14 @@ A • marks that the instrument is collected in that entity; the number is the i
 | EDE-Q6 (6) | DCH | — | • | — | provided free by the publisher; confirmation sought | [EDE-Q6](EDE-Q6.md)— one item per subscale plus two additional questions |
 | ANSOCQ-2 (2) | TCH | — | • | — | free | [ANSOCQ-2](ANSOCQ-2.md)— most discriminating item per scale only |
 | SSUK-2 (2) | EFA | — | • | — | free | [SSUK-2](SSUK-2.md)— most discriminating item per scale only |
-| ACE (5) | EFA | — | • | — | free — but see the open point on the German ACE-D | [ACE](ACE.md)— first five questions |
+| ACE + timing items (11) | EFA | — | • | — | ACE free; the 6 UKHD items**clearance open** | [ACE](ACE.md)— first five ACE questions plus`UKHD-CTT`(PCOR-MII composite) |
 | BAASIS (10) | TCH | — | — | • | © University of Basel, items not publishable | open — metadata-only planned |
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, items not publishable | open — metadata-only planned |
 | ABQ (16) | TCH | — | — | • | use without pharmaceutical-industry involvement | open — metadata-only planned |
 
 On top of these come **site-specific item groups** that do not correspond to any published instrument and come straight from the dictionary — for example `UKE-HCU/PSE/TR/DOT` (healthcare utilisation, PSS), the `UKHD-*` groups (AN) and `MHH-DIAL/UTI/T/BP` (follow-up parameters, NTx). For these the DIZ implementation list carries **no entry at all**, so no clearance is documented; see the open points in [Design Decisions](Designentscheidungen.md).
 
-For AN, seven of these groups are now modelled — as **one** collective questionnaire rather than seven resources ([ADR-011](Designentscheidungen.md)): [UKHD-AN](UKHD-AN.md), 20 items, covering `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-CTT`, `UKHD-LE`, `UKHD-ND` and `UKHD_D`. **This is a deliberate project decision for piloting, not a documented clearance:** the rights holder is Heidelberg University Hospital, no clearance is on record, and confirmation is to be obtained. `UKHD-BI` (body image — a visual figure-rating scale; data collection does not yet use it and the image template is missing from the dictionary) and `UKHD-EDP` (eating disorder psychopathology — most likely an EDI-2 subset with unresolved Hogrefe rights) are deliberately excluded. The instrument page is German-only.
+For AN, seven of these groups are now modelled — six as **free-standing Questionnaires**, one per dictionary group ([UKHD supplementary items](UKHD-Zusatzitems.md): `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-LE`, `UKHD-ND`, `UKHD-D`), and `UKHD-CTT` inside the [ACE](ACE.md), which thereby becomes a PCOR-MII composite. The `UKHD` prefix is a compilation label of the dictionary, not a statement of authorship; clearance and provenance of the wording remain open per group. [UKHD-EDP](UKHD-EDP.md) is modelled metadata-only (suspected EDI-2 subset).
 
 ### Where does each resource come from?
 
@@ -88,7 +88,7 @@ The rights situation determines how an instrument is modelled — not how import
 
 * **free** — complete questionnaire with item texts, answer options and scoring.
 * **Usage agreement** (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the `copyright` element.
-* **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to WAI (implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.
+* **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.md) and [UKHD-EDP](UKHD-EDP.md) (both implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.
 * **clearance open** — the wording is published, but **no permission is on record**. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to [UKHD-AN](UKHD-AN.md) and to the 34 site items already published in [MHI](MHI.md). Should a restriction emerge, metadata-only is the intended remedy.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.md); all artefacts are listed under [Artifacts](artifacts.md).

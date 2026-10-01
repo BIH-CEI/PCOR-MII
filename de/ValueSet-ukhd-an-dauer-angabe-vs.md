@@ -7,7 +7,7 @@ Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).
 
  **References** 
 
-* [UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)](Questionnaire-UKHDAN.md)
+* [UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)](Questionnaire-UKHDANB.md)
 
 ### Logical Definition (CLD)
 
@@ -33,7 +33,7 @@ Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).
   "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:30:23+00:00",
+  "date" : "2026-10-01T13:09:50+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

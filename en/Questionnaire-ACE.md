@@ -67,7 +67,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "code" : [{
     "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
     "code" : "ace",
-    "display" : "ACE"
+    "display" : "ACE + Zeitangaben"
   }],
   "item" : [{
     "linkId" : "ace-intro",
@@ -230,7 +230,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   {
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-      "valueMarkdown" : "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht beim UKHD-Sammelbogen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
+      "valueMarkdown" : "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht bei den UKHD-Zusatzbögen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
     }],
     "linkId" : "ctt-ereignis-1",
     "text" : "Zeitliche Einordnung des Ereignisses aus Frage 1",

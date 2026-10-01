@@ -220,9 +220,6 @@ a[name="test"] + h3 + div {
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
       </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -297,7 +294,7 @@ a[name="test"] + h3 + div {
         <a href="ACE.html">ACE</a>
       </li>
       <li>
-        <a href="UKHD-AN.html">UKHD-AN</a>
+        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
       </li>
       <li>
         <a href="UKHD-EDP.html">UKHD-EDP</a>
@@ -797,18 +794,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>UKHD-AN (14) — <code class="language-plaintext highlighter-rouge">UKHD-PT</code>, <code class="language-plaintext highlighter-rouge">UKHD-ANB</code>, <code class="language-plaintext highlighter-rouge">UKHD-CT</code>, <code class="language-plaintext highlighter-rouge">UKHD-LE</code>, <code class="language-plaintext highlighter-rouge">UKHD-ND</code>, <code class="language-plaintext highlighter-rouge">UKHD_D</code></td>
+      <td>UKHD-Zusatzitems (6 Bögen, 14 Items) — <code class="language-plaintext highlighter-rouge">UKHD-PT</code>, <code class="language-plaintext highlighter-rouge">UKHD-ANB</code>, <code class="language-plaintext highlighter-rouge">UKHD-CT</code>, <code class="language-plaintext highlighter-rouge">UKHD-LE</code>, <code class="language-plaintext highlighter-rouge">UKHD-ND</code>, <code class="language-plaintext highlighter-rouge">UKHD-D</code></td>
       <td>DCH, TCH, EFA</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td><strong>Freigabe offen</strong> — in der DIZ-Liste nicht geführt; Rechteinhaber UKHD</td>
-      <td><a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>Freigabe offen</strong> — in der DIZ-Liste nicht geführt; Herkunft des Wortlauts ungeklärt</td>
+      <td><a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a></td>
     </tr>
   </tbody>
 </table>
 
-<p><strong>Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.</strong> Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste <strong>gar nicht vor</strong> — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe <a href="UKHD-AN.html">UKHD-AN</a> und den offenen Punkt in den <a href="Designentscheidungen.html">Designentscheidungen</a>).</p>
+<p><strong>Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.</strong> Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste <strong>gar nicht vor</strong> — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> und den offenen Punkt in den <a href="Designentscheidungen.html">Designentscheidungen</a>).</p>
 
 <p>Nicht modelliert bleiben für AN <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary) und <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items — vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Für PSS und NTx sind die Standortgruppen insgesamt noch nicht modelliert.</p>
 
@@ -827,7 +824,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>frei</strong> — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.</li>
   <li><strong>Nutzungsvereinbarung</strong> (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im <code class="language-plaintext highlighter-rouge">copyright</code>-Element.</li>
   <li><strong>metadata-only</strong> — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft <a href="WAI.html">WAI</a> und <a href="UKHD-EDP.html">UKHD-EDP</a> (beide umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.</li>
-  <li><strong>Freigabe offen</strong> — der Wortlaut ist aufgenommen, aber <strong>keine dokumentierte Erlaubnis liegt vor</strong>. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft <a href="UKHD-AN.html">UKHD-AN</a> sowie die bereits in <a href="MHI.html">MHI</a> publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.</li>
+  <li><strong>Freigabe offen</strong> — der Wortlaut ist aufgenommen, aber <strong>keine dokumentierte Erlaubnis liegt vor</strong>. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> sowie die bereits in <a href="MHI.html">MHI</a> publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.</li>
 </ul>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
@@ -882,7 +879,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 11:30:00 +0000">
+  <span title="2026-10-01 13:09:00 +0000">
     2026-10-01
   </span>
 

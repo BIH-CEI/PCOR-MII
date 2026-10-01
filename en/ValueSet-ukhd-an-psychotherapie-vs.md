@@ -7,7 +7,7 @@ Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`).
 
  **References** 
 
-* [UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)](Questionnaire-UKHDAN.md)
+* [UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDPT.md)
 
 ### Logical Definition (CLD)
 
@@ -33,7 +33,7 @@ Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`).
   "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:30:23+00:00",
+  "date" : "2026-10-01T13:09:50+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

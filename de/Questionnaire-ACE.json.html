@@ -224,9 +224,6 @@ a[name="test"] + h3 + div {
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
       </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -301,7 +298,7 @@ a[name="test"] + h3 + div {
         <a href="ACE.html">ACE</a>
       </li>
       <li>
-        <a href="UKHD-AN.html">UKHD-AN</a>
+        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
       </li>
       <li>
         <a href="UKHD-EDP.html">UKHD-EDP</a>
@@ -517,7 +514,7 @@ a[name="test"] + h3 + div {
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ace",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "ACE"
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "ACE + Zeitangaben"
     }
   ],
   "<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item">item</a>" : [
@@ -615,7 +612,7 @@ a[name="test"] + h3 + div {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Questionnaire.item.extension">extension</a>" : [
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/designNote",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht beim UKHD-Sammelbogen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht bei den UKHD-Zusatzbögen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
         }
       ],
       "<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "ctt-ereignis-1",
@@ -796,7 +793,7 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 11:30:00 +0000">
+  <span title="2026-10-01 13:09:00 +0000">
     2026-10-01
   </span>
 

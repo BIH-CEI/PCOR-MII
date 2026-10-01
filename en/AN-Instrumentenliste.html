@@ -220,9 +220,6 @@ a[name="test"] + h3 + div {
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
       </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -297,7 +294,7 @@ a[name="test"] + h3 + div {
         <a href="ACE.html">ACE</a>
       </li>
       <li>
-        <a href="UKHD-AN.html">UKHD-AN</a>
+        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
       </li>
       <li>
         <a href="UKHD-EDP.html">UKHD-EDP</a>
@@ -360,7 +357,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Essstoerungen.html">next &gt;</a>
+          | <a href="ERQ-6.html">next &gt;</a>
 
           </span>
 
@@ -415,7 +412,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>Diese Seite ist die <strong>Arbeitsliste für den Use Case AN</strong> (Anorexia Nervosa): jedes zu erhebende Instrument in einer Zeile, mit dem Link dorthin, wo die FHIR-Ressource tatsächlich liegt — im <strong>PCOR-MII-IG</strong> oder im <strong>MII-PRO-IG</strong>.</p>
 
-<p>Sie beantwortet eine einzige Frage: <em>Wo finde ich den Fragebogen, den ich erheben soll?</em> Die fachliche Begründung der Batterie steht auf <a href="AN.html">AN</a>, der Erhebungsplan mit Phasen, Prioritäten und Frequenzen auf <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>, die entitätsübergreifende Sicht auf <a href="Instrumente.html">Instrumente</a>.</p>
+<p>Sie beantwortet eine einzige Frage: <em>Wo finde ich den Fragebogen, den ich erheben soll?</em> Die fachliche Begründung der Batterie steht auf <a href="AN.html">AN</a>, die entitätsübergreifende Sicht auf <a href="Instrumente.html">Instrumente</a>. Der Erhebungsplan selbst (Phasen, Prioritäten, Frequenzen) steht im Blatt <em>Domain Overview</em> des Item Level Dictionary und wird im IG nicht mehr gespiegelt.</p>
 
 <h3 id="wie-die-links-zu-lesen-sind">Wie die Links zu lesen sind</h3>
 
@@ -606,30 +603,65 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Dazu der Sammelbogen der standortspezifischen Items, der <strong>kein</strong> publiziertes Instrument abbildet und deshalb in einer eigenen Zeile steht:</p>
+<p>Dazu die <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> — sechs eigenständige Bögen, einer je Dictionary-Gruppe, die <strong>kein</strong> publiziertes Instrument abbilden:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Sammelbogen</th>
+      <th>Bogen</th>
       <th>Kat.</th>
       <th style="text-align: right">Items</th>
       <th>Ressource</th>
-      <th>Doku</th>
       <th>Beispielantwort</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>UKHD-AN — sieben Standort-Itemgruppen</td>
-      <td>DCH, TCH, EFA</td>
-      <td style="text-align: right">20</td>
-      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDAN.html"><code class="language-plaintext highlighter-rouge">UKHDAN</code></a> — <strong>Freigabe UKHD offen</strong></td>
-      <td><a href="UKHD-AN.html">UKHD-AN</a></td>
-      <td><a href="QuestionnaireResponse-UKHDANResponse.html">UKHDANResponse</a></td>
+      <td>UKHD-PT</td>
+      <td>TCH</td>
+      <td style="text-align: right">2</td>
+      <td><a href="Questionnaire-UKHDPT.html"><code class="language-plaintext highlighter-rouge">UKHDPT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-ANB</td>
+      <td>DCH</td>
+      <td style="text-align: right">2 (+2)</td>
+      <td><a href="Questionnaire-UKHDANB.html"><code class="language-plaintext highlighter-rouge">UKHDANB</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-CT</td>
+      <td>TCH</td>
+      <td style="text-align: right">1</td>
+      <td><a href="Questionnaire-UKHDCT.html"><code class="language-plaintext highlighter-rouge">UKHDCT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-LE</td>
+      <td>EFA</td>
+      <td style="text-align: right">4</td>
+      <td><a href="Questionnaire-UKHDLE.html"><code class="language-plaintext highlighter-rouge">UKHDLE</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-ND</td>
+      <td>DCH</td>
+      <td style="text-align: right">3</td>
+      <td><a href="Questionnaire-UKHDND.html"><code class="language-plaintext highlighter-rouge">UKHDND</code></a></td>
+      <td>— zum Initial-Termin nicht erhoben</td>
+    </tr>
+    <tr>
+      <td>UKHD-D</td>
+      <td>DCH</td>
+      <td style="text-align: right">2</td>
+      <td><a href="Questionnaire-UKHDD.html"><code class="language-plaintext highlighter-rouge">UKHDD</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
     </tr>
   </tbody>
 </table>
+
+<p>Für alle sechs gilt: <strong>Freigabe UKHD offen, Herkunft des Wortlauts ungeklärt</strong> — Einzelheiten auf <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>.</p>
 
 <p>Die sechs Beispielantworten gehören zu <strong>einem</strong> Erhebungstermin derselben Beispiel-Patientin (<code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient</code>) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf <a href="AN.html">AN</a>.</p>
 
@@ -662,7 +694,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>Physical / Mental Health Summary (PHS, PCS, MHS, MCS)</td>
       <td><strong>offen</strong> — im Plan Prio A, kein Artefakt</td>
-      <td><a href="Essstoerungen.html">Erhebungsplan</a></td>
+      <td><em>Domain Overview</em> des Item Level Dictionary</td>
     </tr>
     <tr>
       <td>EQ-5D-5L Index (nur Outcome)</td>
@@ -678,7 +710,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Diese Gruppen bilden <strong>kein publiziertes Instrument</strong> ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität <strong>A</strong> im Erhebungsplan.</p>
 
-<p>Sieben von ihnen sind inzwischen modelliert: sechs als <strong>ein</strong> Sammelbogen — <a href="UKHD-AN.html">UKHD-AN</a>, 14 Items, ein <code class="language-plaintext highlighter-rouge">group</code>-Item je Gruppe (<a href="Designentscheidungen.html">ADR-011</a>) — und <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> im <a href="ACE.html">ACE</a>, weil das Dictionary ihren <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. <strong>Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:</strong> Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.</p>
+<p>Sieben von ihnen sind inzwischen modelliert: sechs als <strong>je ein eigenes Questionnaire</strong> — die <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>, ein Bogen je Dictionary-Gruppe — und <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> im <a href="ACE.html">ACE</a>, weil das Dictionary ihren <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. <strong>Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:</strong> Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.</p>
 
 <table>
   <thead>
@@ -695,21 +727,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">UKHD-PT</code></td>
       <td>Vorbehandlung</td>
       <td style="text-align: right">2</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDPT.html">UKHD-PT</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">UKHD-ANB</code></td>
       <td>AN-spezifische Anamnese</td>
       <td style="text-align: right">2</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDANB.html">UKHD-ANB</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">UKHD-CT</code></td>
       <td>Aktuelle Behandlung</td>
       <td style="text-align: right">1</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDCT.html">UKHD-CT</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
@@ -723,21 +755,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">UKHD-LE</code></td>
       <td>Lebensereignisse</td>
       <td style="text-align: right">4</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDLE.html">UKHD-LE</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">UKHD-ND</code></td>
       <td>Neue Diagnosen</td>
       <td style="text-align: right">3</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDND.html">UKHD-ND</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">UKHD_D</code></td>
       <td>Diagnosen bei Aufnahme</td>
       <td style="text-align: right">2</td>
-      <td><strong>PCOR-MII</strong> → <a href="UKHD-AN.html">UKHD-AN</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDD.html">UKHD-D</a></td>
       <td>Freigabe UKHD offen</td>
     </tr>
     <tr>
@@ -757,7 +789,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><strong>Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.</strong> <code class="language-plaintext highlighter-rouge">UKHD-BI</code> ist eine <strong>visuelle Bildskala</strong>: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der <code class="language-plaintext highlighter-rouge">UKHD-EDP</code>-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also <strong>kein</strong> Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>.</p>
+<p><strong>Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.</strong> <code class="language-plaintext highlighter-rouge">UKHD-BI</code> ist eine <strong>visuelle Bildskala</strong>: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der <code class="language-plaintext highlighter-rouge">UKHD-EDP</code>-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also <strong>kein</strong> Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf <a href="UKHD-EDP.html">UKHD-EDP</a>.</p>
 
 <h3 id="nicht-in-an-erhoben">Nicht in AN erhoben</h3>
 
@@ -765,7 +797,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="woher-diese-seite-ihre-angaben-hat">Woher diese Seite ihre Angaben hat</h3>
 
-<p>Instrumentenzuordnung und Itemzahlen: Blatt <code class="language-plaintext highlighter-rouge">Item Level Dictionary AN</code> und <code class="language-plaintext highlighter-rouge">Domain Overview</code> des Item Level Dictionary (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, nicht Teil dieses Repositories), wie auf <a href="Instrumente.html">Instrumente</a> und <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a> ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).</p>
+<p>Instrumentenzuordnung und Itemzahlen: Blatt <code class="language-plaintext highlighter-rouge">Item Level Dictionary AN</code> und <code class="language-plaintext highlighter-rouge">Domain Overview</code> des Item Level Dictionary (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, nicht Teil dieses Repositories), wie auf <a href="Instrumente.html">Instrumente</a> ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -803,7 +835,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Essstoerungen.html">next ></a>
+                <a href="ERQ-6.html">next ></a>
 
               </td>
             </tr>
@@ -819,7 +851,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 11:30:00 +0000">
+  <span title="2026-10-01 13:09:00 +0000">
     2026-10-01
   </span>
 

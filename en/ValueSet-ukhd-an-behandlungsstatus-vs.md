@@ -7,7 +7,7 @@ Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_ou
 
  **References** 
 
-* [UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)](Questionnaire-UKHDAN.md)
+* [UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDCT.md)
 
 ### Logical Definition (CLD)
 
@@ -33,7 +33,7 @@ Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_ou
   "title" : "UKHD-AN Aktueller Behandlungsstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:30:23+00:00",
+  "date" : "2026-10-01T13:09:50+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

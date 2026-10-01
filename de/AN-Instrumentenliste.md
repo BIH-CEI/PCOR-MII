@@ -4,7 +4,7 @@
 
 Diese Seite ist die **Arbeitsliste für den Use Case AN** (Anorexia Nervosa): jedes zu erhebende Instrument in einer Zeile, mit dem Link dorthin, wo die FHIR-Ressource tatsächlich liegt — im **PCOR-MII-IG** oder im **MII-PRO-IG**.
 
-Sie beantwortet eine einzige Frage: **Wo finde ich den Fragebogen, den ich erheben soll?** Die fachliche Begründung der Batterie steht auf [AN](AN.md), der Erhebungsplan mit Phasen, Prioritäten und Frequenzen auf [Essstörungen — Erhebungsplan](Essstoerungen.md), die entitätsübergreifende Sicht auf [Instrumente](Instrumente.md).
+Sie beantwortet eine einzige Frage: **Wo finde ich den Fragebogen, den ich erheben soll?** Die fachliche Begründung der Batterie steht auf [AN](AN.md), die entitätsübergreifende Sicht auf [Instrumente](Instrumente.md). Der Erhebungsplan selbst (Phasen, Prioritäten, Frequenzen) steht im Blatt **Domain Overview** des Item Level Dictionary und wird im IG nicht mehr gespiegelt.
 
 ### Wie die Links zu lesen sind
 
@@ -51,11 +51,18 @@ Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen 
 | SSUK-2 — Soziale Unterstützung | EFA | 2 | **PCOR-MII**→[`SSUK2`](Questionnaire-SSUK2.md) | [SSUK-2](SSUK-2.md) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) |
 | ACE — Belastende Kindheitserfahrungen | EFA | 5 | **PCOR-MII**→[`ACE`](Questionnaire-ACE.md) | [ACE](ACE.md) | [ACEResponse](QuestionnaireResponse-ACEResponse.md) |
 
-Dazu der Sammelbogen der standortspezifischen Items, der **kein** publiziertes Instrument abbildet und deshalb in einer eigenen Zeile steht:
+Dazu die [UKHD-Zusatzitems](UKHD-Zusatzitems.md) — sechs eigenständige Bögen, einer je Dictionary-Gruppe, die **kein** publiziertes Instrument abbilden:
 
-| | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| UKHD-AN — sieben Standort-Itemgruppen | DCH, TCH, EFA | 20 | **PCOR-MII**→[`UKHDAN`](Questionnaire-UKHDAN.md)—**Freigabe UKHD offen** | [UKHD-AN](UKHD-AN.md) | [UKHDANResponse](QuestionnaireResponse-UKHDANResponse.md) |
+| | | | | |
+| :--- | :--- | :--- | :--- | :--- |
+| UKHD-PT | TCH | 2 | [`UKHDPT`](Questionnaire-UKHDPT.md) | [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.md) |
+| UKHD-ANB | DCH | 2 (+2) | [`UKHDANB`](Questionnaire-UKHDANB.md) | [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.md) |
+| UKHD-CT | TCH | 1 | [`UKHDCT`](Questionnaire-UKHDCT.md) | [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.md) |
+| UKHD-LE | EFA | 4 | [`UKHDLE`](Questionnaire-UKHDLE.md) | [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.md) |
+| UKHD-ND | DCH | 3 | [`UKHDND`](Questionnaire-UKHDND.md) | — zum Initial-Termin nicht erhoben |
+| UKHD-D | DCH | 2 | [`UKHDD`](Questionnaire-UKHDD.md) | [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.md) |
+
+Für alle sechs gilt: **Freigabe UKHD offen, Herkunft des Wortlauts ungeklärt** — Einzelheiten auf [UKHD-Zusatzitems](UKHD-Zusatzitems.md).
 
 Die sechs Beispielantworten gehören zu **einem** Erhebungstermin derselben Beispiel-Patientin (`pcor-mii-exa-patient`) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf [AN](AN.md).
 
@@ -66,7 +73,7 @@ Die sechs Beispielantworten gehören zu **einem** Erhebungstermin derselben Beis
 | PROPr — PROMIS-Preference Utility | **PCOR-MII**→[`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.md)— vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.md#propr) |
 | PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO**— acht`ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.md) |
 | PROMIS-Domänen-T-Scores (PROMIS-16) | **offen**— upstream Roadmap 2027; die acht Codes des PROMIS-29 gelten**nicht**für PROMIS-16 | [PROMIS-16](PROMIS-16.md) |
-| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen**— im Plan Prio A, kein Artefakt | [Erhebungsplan](Essstoerungen.md) |
+| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen**— im Plan Prio A, kein Artefakt | **Domain Overview**des Item Level Dictionary |
 | EQ-5D-5L Index (nur Outcome) | **MII PRO**→[EQ-5D-5L](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EQ-5D-5L?version=current)— upstream vorhanden, in PCOR-MII bisher nicht referenziert | — |
 
 Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, **obwohl upstream ein vollständiges Artefakt vorliegt** (inklusive Index-Score und CQL). Hier fehlt nur die Referenzierung in PCOR-MII, nicht das Artefakt.
@@ -75,21 +82,21 @@ Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, 
 
 Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan.
 
-Sieben von ihnen sind inzwischen modelliert: sechs als **ein** Sammelbogen — [UKHD-AN](UKHD-AN.md), 14 Items, ein `group`-Item je Gruppe ([ADR-011](Designentscheidungen.md)) — und `UKHD-CTT` im [ACE](ACE.md), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
+Sieben von ihnen sind inzwischen modelliert: sechs als **je ein eigenes Questionnaire** — die [UKHD-Zusatzitems](UKHD-Zusatzitems.md), ein Bogen je Dictionary-Gruppe — und `UKHD-CTT` im [ACE](ACE.md), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
-| `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
-| `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
+| `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII**→[UKHD-PT](Questionnaire-UKHDPT.md) | Freigabe UKHD offen |
+| `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII**→[UKHD-ANB](Questionnaire-UKHDANB.md) | Freigabe UKHD offen |
+| `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII**→[UKHD-CT](Questionnaire-UKHDCT.md) | Freigabe UKHD offen |
 | `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | **PCOR-MII**→[ACE](ACE.md)(Komposit) | Freigabe UKHD offen |
-| `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
-| `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
-| `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII**→[UKHD-AN](UKHD-AN.md) | Freigabe UKHD offen |
+| `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII**→[UKHD-LE](Questionnaire-UKHDLE.md) | Freigabe UKHD offen |
+| `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII**→[UKHD-ND](Questionnaire-UKHDND.md) | Freigabe UKHD offen |
+| `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII**→[UKHD-D](Questionnaire-UKHDD.md) | Freigabe UKHD offen |
 | `UKHD-BI` | Körperbild | 3 | **offen**— bewusst nicht modelliert | Freigabe UKHD offen |
 | `UKHD-EDP` | Essstörungspathologie | 11 | **offen**— vor einer Modellierung zu klären | **Rechtelage unbewertet**— je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste**nicht geführt** |
 
-**Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.** `UKHD-BI` ist eine **visuelle Bildskala**: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der `UKHD-EDP`-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [Essstörungen — Erhebungsplan](Essstoerungen.md).
+**Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.** `UKHD-BI` ist eine **visuelle Bildskala**: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der `UKHD-EDP`-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [UKHD-EDP](UKHD-EDP.md).
 
 ### Nicht in AN erhoben
 
@@ -97,7 +104,7 @@ Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Ges
 
 ### Woher diese Seite ihre Angaben hat
 
-Instrumentenzuordnung und Itemzahlen: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), wie auf [Instrumente](Instrumente.md) und [Essstörungen — Erhebungsplan](Essstoerungen.md) ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).
+Instrumentenzuordnung und Itemzahlen: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), wie auf [Instrumente](Instrumente.md) ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

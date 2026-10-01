@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T11:30:23+00:00",
+  "date" : "2026-10-01T13:09:50+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -2250,13 +2250,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "QuestionnaireResponse-UKHDANResponse.html"
+        "valueUri" : "QuestionnaireResponse-UKHDANBResponse.html"
       }],
       "reference" : {
-        "reference" : "QuestionnaireResponse/UKHDANResponse"
+        "reference" : "QuestionnaireResponse/UKHDANBResponse"
       },
-      "name" : "UKHD-AN — Beispielantwort (Initial-/Screening-Termin)",
-      "description" : "Beispielantwort zum UKHD-AN-Questionnaire für einen Initial-/Screening-Termin: Vorbehandlung, Essstörungsanamnese (Dauer 8 Jahre, niedrigster BMI 14,8), ambulante Psychotherapie, zwei von drei Ereignis-Paaren der Kindheitsbelastungen, ein bejahtes Lebensereignis-Item mit Freitext und die Aufnahmediagnosen. Die Gruppe `UKHD-ND` sowie `life_event1_monitoring` und `lifev_discharge` bleiben bewusst leer — sie werden zum Initial-Termin nicht erhoben (`TIMING`). Derselbe Erhebungstermin und dieselbe Patientin wie die fünf AN-Instrumente.",
+      "name" : "UKHD-ANB — Beispielantwort",
+      "description" : "Beispielantwort zum UKHD-ANB-Questionnaire (Essstörungsanamnese): Erkrankungsdauer 8 Jahre, niedrigster BMI 14,8. Die Zahlenwerte stehen in den PCOR-MII-eigenen Hilfsitems; die Dezimalstelle bei `lowBMI-wert` belegt bewusst den `decimal`-Typ.",
       "exampleBoolean" : true
     },
     {
@@ -2266,13 +2266,77 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Questionnaire-UKHDAN.html"
+        "valueUri" : "Questionnaire-UKHDANB.html"
       }],
       "reference" : {
-        "reference" : "Questionnaire/UKHDAN"
+        "reference" : "Questionnaire/UKHDANB"
       },
-      "name" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)",
-      "description" : "Sammelbogen der standortspezifischen AN-Itemgruppen des Universitätsklinikums Heidelberg — **sechs Gruppen, 14 Items**: Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Ein Questionnaire mit einem `group`-Item je Gruppe statt sechs Ressourcen (ADR-011). Kein Score — diese Items bilden kein publiziertes Instrument ab. **Für den Wortlaut liegt keine dokumentierte Freigabe des Standorts vor**; die Modellierung ist eine bewusste Projektentscheidung, keine geklärte Rechtslage. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Nicht enthalten: `UKHD-BI` und `UKHD-EDP`. **Die siebte Gruppe `UKHD-CTT`** (sechs Zeitangaben zu Kindheitsbelastungen) steht nicht hier, sondern im [ACE](Questionnaire-ACE.html): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken.",
+      "name" : "UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)",
+      "description" : "Zwei zusammengesetzte Items zur Essstörungsanamnese aus der Dictionary-Gruppe `UKHD-ANB`: Erkrankungsdauer (`AN_biography`) und niedrigster BMI (`lowBMI`), je als Auswahl plus PCOR-MII-eigenem Wert-Item aufgelöst (MHI-Muster `Q_WB151`/`Q_WB151a`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDCT.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDCT"
+      },
+      "name" : "UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)",
+      "description" : "Ein Item zum aktuellen Behandlungsstatus aus der Dictionary-Gruppe `UKHD-CT` (`treatment_outpatient`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDCTResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDCTResponse"
+      },
+      "name" : "UKHD-CT — Beispielantwort",
+      "description" : "Beispielantwort zum UKHD-CT-Questionnaire (aktuelle Behandlung): ambulante psychotherapeutische Behandlung — konsistent mit `bdkm15` in der UKHD-PT-Antwort; die Überschneidung der beiden Items ist als Dictionary-Befund dokumentiert.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDDResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDDResponse"
+      },
+      "name" : "UKHD-D — Beispielantwort",
+      "description" : "Beispielantwort zum UKHD-D-Questionnaire (Diagnosen bei Aufnahme). `comorbid1` enthält Diagnosetext und kein „ja“, obwohl die Frage wörtlich eine Ja/Nein-Frage ist — das Dictionary sieht ein Textfeld vor; siehe die designNote am Item.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDD.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDD"
+      },
+      "name" : "UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)",
+      "description" : "Zwei Freitextitems zu den Aufnahmediagnosen aus der Dictionary-Gruppe `UKHD_D` (Schreibweise mit Unterstrich so im Dictionary): Behandlungsdiagnosen (`diagnosis_admit`) und weitere Diagnosen (`comorbid1`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
       "exampleBoolean" : false
     },
     {
@@ -2321,6 +2385,86 @@
       },
       "name" : "UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)",
       "description" : "Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD. **Metadata-only:** Struktur, `linkId`s, Antwortformat und Wertebereiche sind abgebildet, der Originalwortlaut der Items und der Antwortstufen bewusst nicht. Grund: Der Block ist vermutlich ein Zuschnitt des EDI-2 (je ein Item pro Subskala) — eines Hogrefe-Testverfahrens —, und unabhängig davon liegt für die Standort-Itemgruppen keine dokumentierte Freigabe vor. Kein Score: Ein Item je Subskala bildet die Subskala nicht ab.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDLEResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDLEResponse"
+      },
+      "name" : "UKHD-LE — Beispielantwort",
+      "description" : "Beispielantwort zum UKHD-LE-Questionnaire (belastende Lebensereignisse) für einen Initial-/Screening-Termin: nur das Screening-Item ist beantwortet (`TIMING` i), das bejahte Item schaltet den Freitext frei. `life_event1_monitoring` und `lifev_discharge` fehlen, weil sie zu diesem Termin nicht erhoben werden. Der Freitext bleibt konsistent mit den zwei bejahten ACE-Items derselben Patientin.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDLE.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDLE"
+      },
+      "name" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)",
+      "description" : "Vier Items zu belastenden Lebensereignissen aus der Dictionary-Gruppe `UKHD-LE`: dieselbe Ja/Nein-Frage für drei Erhebungszeitpunkte plus ein Freitextitem, das per `enableWhen` (`any`) an allen drei hängt. Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Hochsensible Inhalte** — Governance der Auswertung fachlich zu klären (analog PHQ-SI und [ACE](ACE.html)). **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDND.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDND"
+      },
+      "name" : "UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)",
+      "description" : "Drei Items zu neuen Diagnosen seit der letzten Befragung aus der Dictionary-Gruppe `UKHD-ND`: zwei Ja/Nein-Items für zwei Erhebungszeitpunkte plus ein Freitextitem per `enableWhen` (`any`). Kein Aufnahme-Item — bei Aufnahme erhebt stattdessen [UKHD-D](Questionnaire-UKHDD.html). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDPTResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDPTResponse"
+      },
+      "name" : "UKHD-PT — Beispielantwort",
+      "description" : "Beispielantwort zum UKHD-PT-Questionnaire (Vorbehandlung): zurzeit in psychotherapeutischer Behandlung, zwei Arztbesuche in den letzten 4 Wochen.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDPT.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDPT"
+      },
+      "name" : "UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)",
+      "description" : "Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: frühere oder aktuelle psychotherapeutische Behandlung (`bdkm15`) und Arztbesuche in den letzten 4 Wochen (`bdkm16`). Eigenes Questionnaire je Dictionary-Gruppe — die UKHD-Zusatzitems sind kein gemeinsames Instrument; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt** — gerade hier: Die `bdkm`-Variablen-IDs tragen ein fremdes, im Dictionary nicht erläutertes Kürzelschema.",
       "exampleBoolean" : false
     },
     {
@@ -2470,15 +2614,6 @@
           {
             "extension" : [{
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "Essstoerungen.html"
-            }],
-            "nameUrl" : "Essstoerungen.html",
-            "title" : "Essstörungen — Erhebungsplan",
-            "generation" : "markdown"
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
               "valueUrl" : "ERQ-6.html"
             }],
             "nameUrl" : "ERQ-6.html",
@@ -2524,10 +2659,10 @@
           {
             "extension" : [{
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "UKHD-AN.html"
+              "valueUrl" : "UKHD-Zusatzitems.html"
             }],
-            "nameUrl" : "UKHD-AN.html",
-            "title" : "UKHD-AN (Standortspezifische AN-Zusatzitems)",
+            "nameUrl" : "UKHD-Zusatzitems.html",
+            "title" : "UKHD-Zusatzitems (sechs Bögen)",
             "generation" : "markdown"
           },
           {
