@@ -1,0 +1,110 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-pss-wi-7-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2026.7.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient-pss"
+  },
+  "authored": "2026-06-25T10:50:00+02:00",
+  "item": [
+    {
+      "linkId": "wi7-q01",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373066001",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q02",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373066001",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q03",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q04",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373066001",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q05",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q06",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-q07",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "wi7-score-total",
+      "answer": [
+        {
+          "valueDecimal": 3
+        }
+      ]
+    }
+  ]
+}

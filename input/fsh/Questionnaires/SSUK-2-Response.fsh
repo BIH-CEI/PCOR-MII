@@ -47,7 +47,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T09:45:00+02:00"
 
 // ── Gemeinsamer Fragestamm ────────────────────────────────────────────────────

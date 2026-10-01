@@ -4,7 +4,7 @@ Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implement
 
 Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
 
-1. **Strukturell** dem [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1) entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
+1. **Strukturell** dem [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0) entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
 2. Die **`linkId`s** müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen
 3. Jede **codierte Antwort** muss aus dem `answerValueSet` (bzw. `answerOption`) des jeweiligen Items stammen
 
@@ -71,7 +71,7 @@ Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: dekla
 
 Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
-- [ ] **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response|2026.7.0`
+- [ ] **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response`, **bewusst ohne Versionspin**: Die Profilversion löst sich über die Paketabhängigkeit auf; ein Pin müsste bei jedem Dependency-Update in allen Bestandsdaten nachgezogen werden. Die **`questionnaire`-Referenz dagegen immer mit Version** (nächster Punkt) — dort hängt der Wortlaut dran
 - [ ] **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.7.0`
 - [ ] **`linkId`s** der Answer-Items matchen *exakt* die im Questionnaire definierten linkIds
 - [ ] **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.html) Item-Tabellen)
@@ -99,25 +99,29 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
 ## Validierte Beispiele als Referenz
 
-Die drei ursprünglichen Beispiele, alle mit **0 errors, 0 warnings**:
+Der Beispielbestand ist seit dem 01.10.2026 als **drei Use-Case-Bundles** organisiert — je Erhebungstermin ein `collection`-Bundle mit Patient und allen Antworten des Termins, alle drei mit **0 Errors** validiert:
 
-- [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html)
-- [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html)
-- [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.html) (für den Beispiel-Questionnaire)
+| Bundle | Termin | Entries |
+|---|---|---|
+| [AN — Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) | 18.06.2026 | 13 |
+| [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | 30.07.2026 | 10 |
+| [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | 25.06.2026 | 20 |
 
-Dazu der **AN-Beispieldatensatz** — zehn Beispielantworten, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite [AN](AN.html)): [ERQ6Response](QuestionnaireResponse-ERQ6Response.html), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html), [SSUK2Response](QuestionnaireResponse-SSUK2Response.html), [ACEResponse](QuestionnaireResponse-ACEResponse.html) sowie die fünf Antworten zu den [UKHD-Zusatzitems](UKHD-Zusatzitems.html) ([UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.html), [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.html), [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.html), [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.html), [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.html)). Die beiden ERQ-Score-Observations sind am 01.10.2026 zurückgezogen worden (siehe [ERQ-6](ERQ-6.html)).
+Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html)); die Bundles entstehen daraus mit `scripts/build-example-bundles.py`. Dazu der generische [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.html) für den Beispiel-Questionnaire.
 
-Diese acht sind mit **0 errors** geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:
+Die Beispiele sind mit **0 Errors** geprüft, aber nicht warnungsfrei — die verbleibenden Warnungsklassen sind bekannt und akzeptiert:
 
-- `dom-6` (fehlende Narrative) auf allen acht — steht oben in der Tabelle als ignorierbar
-- ein `java.net.SocketTimeoutException` beim UCUM-Check der beiden `valueQuantity` — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource
+- `dom-6` (fehlende Narrative) auf allen Beispielantworten — steht oben in der Tabelle als ignorierbar
+- Profilreferenz auf `mii-pr-pro-questionnaire-response` *„nicht geprüft, da unbekannt"*, wenn ohne das MII-PRO-Paket validiert wird — mit `-ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0` verschwindet sie
+- Display-/Terminologie-Hinweise bei `-tx n/a` — der Validator kann ohne Terminologieserver BCP-47 und LOINC-Displays nicht expandieren
 
 **Ein echter Fund beim Prüfen:** Die ERQ-6-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — *„Struktureller Fehler: Elemente in falscher Reihenfolge"*. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
 
-Reproduzieren:
+Reproduzieren (deckt auch die Bundles ab):
 
 ```bash
-for f in input/examples/QuestionnaireResponse-*.json; do
+sushi . && python3 scripts/build-example-bundles.py
+for f in input/examples/QuestionnaireResponse-*.json input/examples/Bundle-*.json fsh-generated/resources/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
     -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \

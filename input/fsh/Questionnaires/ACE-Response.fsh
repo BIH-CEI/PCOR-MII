@@ -70,7 +70,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum PCOR-MII-Komposit au
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:00:00+02:00"
 
 // ── Emotionale Misshandlung ───────────────────────────────────────────────────

@@ -1,0 +1,158 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-pss-whodas-12-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient-pss"
+  },
+  "authored": "2026-06-25T10:30:00+02:00",
+  "item": [
+    {
+      "linkId": "whodas-whodas12-q01",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q02",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q03",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q04",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q05",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q06",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q07",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q08",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q09",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q10",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q11",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-q12",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-whodas-12",
+            "code": "whodas12-answer-1"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "whodas-whodas12-score-simple-sum",
+      "answer": [
+        {
+          "valueDecimal": 14
+        }
+      ]
+    }
+  ]
+}

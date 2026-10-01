@@ -61,7 +61,9 @@ Group membership remains machine-readable regardless: every item carries its dic
 
 The dictionary's `TIMING` column states at which collection time point an item is administered (i = initial, a/at = all, e = discharge). That is a property of the **collection plan**, not of the questionnaire — a `Questionnaire` describes *what* is asked, not *when*. R4 has no suitable element for it either.
 
-The plan becomes visible in the **responses** instead, and the resource layout makes this sharper than before: the example responses represent an initial/screening visit, and there are **five, not six** — for [UKHD-ND](Questionnaire-UKHDND.html) simply none exists, because none of its items is collected at the initial visit. In [UKHD-LE](Questionnaire-UKHDLE.html), `life_event1_monitoring` and `lifev_discharge` are absent for the same reason.
+The plan becomes visible in the **responses** instead, and the resource layout makes this sharper than before: at the initial/screening visit there are **five responses, not six** — for [UKHD-ND](Questionnaire-UKHDND.html) simply none exists, because none of its items is collected at the initial visit. In [UKHD-LE](Questionnaire-UKHDLE.html), `life_event1_monitoring` and `lifev_discharge` are absent for the same reason.
+
+**The monitoring visit (2026-07-30) shows the other direction:** there the [first UKHD-ND response](QuestionnaireResponse-UKHDNDMonitoringResponse.html) exists (affirmed, with free text), [UKHD-LE](QuestionnaireResponse-UKHDLEMonitoringResponse.html) answers only the monitoring item (negated — `lifev_text` stays disabled via `enableWhen`), and [UKHD-PT](QuestionnaireResponse-UKHDPTMonitoringResponse.html) is a deliberate **partial response** with only `bdkm16`. UKHD-ANB and UKHD-D are not repeated — initial items. Both visits bundled: [initial](Bundle-pcor-mii-exa-bundle-an-initial.html) · [monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html).
 
 <a name="rechtelage"></a>
 
