@@ -1,10 +1,15 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ERQ-S: Abbildung der Dictionary-Variablen-IDs auf die FHIR-linkIds
+// ERQ-6: Abbildung der Dictionary-Variablen-IDs auf die FHIR-linkIds
+//
+// ID BLEIBT pcor-cm-erq-s-linkids, obwohl der Bogen NICHT der ERQ-S ist (siehe
+//   ERQ-6.fsh). Die Id ist eine veroeffentlichte Canonical aus Release 0.3.0; sie
+//   umzubenennen waere ein Bruch fuer jeden, der sie referenziert. Eine Id ist ein
+//   Identifikator, keine Aussage — die Aussage steht in Title und Description.
 //
 // RICHTUNG — WICHTIG: Diese Map geht NICHT von PCOR-MII auf normative
 //   ERQ-Nummern. Die FHIR-linkIds des Questionnaire SIND bereits die
 //   normativen ERQ-Itemnummern (1, 2, 3, 6, 8, 9), verifiziert gegen den
-//   autorisierten deutschen Originalbogen und den ERQ-S-Originalbogen.
+//   autorisierten deutschen Originalbogen und den ERQ-Originalbogen.
 //   Was auseinanderlaeuft, ist das ITEM LEVEL DICTIONARY: Dort laufen die
 //   Variablen-IDs sequenziell erq1..erq6 durch.
 //
@@ -40,8 +45,8 @@
 Instance: pcor-cm-erq-s-linkids
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "ERQ-S: Dictionary-Variablen-IDs → FHIR-linkIds"
-Description: "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-S-Questionnaire ab, die den normativen ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung."
+Title: "ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds"
+Description: "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.html))."
 * url = "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-erq-s-linkids"
 * name = "PcorCmErqSLinkIds"
 * insert InstanceVersion
@@ -49,7 +54,7 @@ Description: "Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dic
 * experimental = true
 * date = "2026-09-29"
 * publisher = "BIH-CEI"
-* purpose = "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-S-Questionnaire."
+* purpose = "Lesehilfe für die Übernahme von Studiendaten, die unter den Variablennamen des Item Level Dictionary erhoben wurden, in QuestionnaireResponses zum ERQ-6-Questionnaire."
 
 * group[+].source = "https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/ERQ-6"
 * group[=].target = "https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/ERQ6"

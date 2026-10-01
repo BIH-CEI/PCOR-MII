@@ -32,7 +32,7 @@ Am Rande: Eine **validierte Kurzform existiert** — die 8-Item-SSUK (Mehnert et
 
 Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.html). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
 
-Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ssuk14`, `ssuk10`); beim [ERQ-S](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
+Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ssuk14`, `ssuk10`); beim [ERQ-6](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
 
 ### Canonical
 
@@ -47,7 +47,7 @@ Beide Items teilen den Fragestamm *„Unter den Menschen, die Ihnen nahe stehen,
 | `ssuk14` | `ssuk14` | Sie aufmuntert oder tröstet | positive Unterstützung |
 | `ssuk10` | `ssuk10` | die Auswirkung Ihrer Erkrankung herunterspielt. | belastende Interaktion |
 
-`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.html) ausdrücklich **nicht**. Die beiden Items messen **Gegenläufiges** und dürfen nicht summiert werden.
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-6](ERQ-6.html) ausdrücklich **nicht**. Die beiden Items messen **Gegenläufiges** und dürfen nicht summiert werden.
 
 Die `linkId`s **sind** die Itemnummern der SSUK-Langfassung — verifiziert gegen die Primärquelle:
 

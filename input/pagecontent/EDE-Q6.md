@@ -25,7 +25,7 @@ Die Ja/Nein-Frage `edeq29` nutzt das projektweite [DemJaNeinVS](ValueSet-dem-ja-
 
 Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.html). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
 
-Der Code bezeichnet das **Erhebungsfeld**. Hier stimmt es mit der Itemnummer überein (`edeq1`, `edeq7`, `edeq12`, `edeq27`, `edeq29`, `edeq30`); beim [ERQ-S](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
+Der Code bezeichnet das **Erhebungsfeld**. Hier stimmt es mit der Itemnummer überein (`edeq1`, `edeq7`, `edeq12`, `edeq27`, `edeq29`, `edeq30`); beim [ERQ-6](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck des Codes ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
 
 ### Canonical
 
@@ -42,7 +42,7 @@ Der Code bezeichnet das **Erhebungsfeld**. Hier stimmt es mit der Itemnummer üb
 | `edeq29` | `edeq29` | Regelblutung in den letzten 3–4 Monaten ausgeblieben? (Für Frauen) | ja/nein |
 | `edeq30` | `edeq30` | Wenn ja: wie viele Regelblutungen ausgeblieben? | Zahl (`integer`) |
 
-`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.html) ausdrücklich **nicht**.
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-6](ERQ-6.html) ausdrücklich **nicht**.
 
 ### Die Auswahl folgt den vier Subskalen
 
@@ -57,7 +57,7 @@ Die `linkId`s **sind** die Original-EDE-Q-Itemnummern — und das ist hier nicht
 
 Abgeglichen gegen die Standardzusammensetzung des EDE-Q (Restraint 1–5; Eating Concern 7, 9, 19–21; Weight Concern 8, 12, 22, 24, 25; Shape Concern 6, 8, 10, 11, 23, 26–28). Damit bestätigt sich die Angabe der DIZ-Implementierungsliste — *„nur das Item mit der höchsten Trennschärfe pro Skala"* — hier wörtlich. `edeq29` und `edeq30` sind keine Skalen-Items, sondern die beiden Zusatzfragen zur Regelblutung.
 
-**Keine offizielle Kurzform.** Vom EDE-Q existieren mehrere validierte Kurzfassungen (EDE-QS mit 12 Items, EDE-Q-13, EDE-Q-8, EDE-Q-7), aber keine Vier-Item-Version mit je einem Item pro Subskala. Anders als beim [ERQ-S](ERQ-6.html), wo sich der Zuschnitt als publizierte Kurzform herausstellte, ist dieser hier projektspezifisch — deshalb auch kein Score.
+**Keine offizielle Kurzform.** Vom EDE-Q existieren mehrere validierte Kurzfassungen (EDE-QS mit 12 Items, EDE-Q-13, EDE-Q-8, EDE-Q-7), aber keine Vier-Item-Version mit je einem Item pro Subskala. Anders als beim [ERQ-6](ERQ-6.html), wo sich der Zuschnitt als publizierte Kurzform herausstellte, ist dieser hier projektspezifisch — deshalb auch kein Score.
 
 ### Wortlaut — vollständig verifiziert
 

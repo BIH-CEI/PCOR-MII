@@ -112,7 +112,7 @@ Diese sieben sind mit **0 errors** geprüft, aber nicht warnungsfrei — und die
 - `dom-6` (fehlende Narrative) auf allen sieben — steht oben in der Tabelle als ignorierbar
 - ein `java.net.SocketTimeoutException` beim UCUM-Check der beiden `valueQuantity` — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource
 
-**Ein echter Fund beim Prüfen:** Die ERQ-S-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — *„Struktureller Fehler: Elemente in falscher Reihenfolge"*. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
+**Ein echter Fund beim Prüfen:** Die ERQ-6-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — *„Struktureller Fehler: Elemente in falscher Reihenfolge"*. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
 
 Reproduzieren:
 

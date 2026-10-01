@@ -32,5 +32,25 @@ Description: "Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scor
 * #promis-propr-utility "PROMIS-Preference (PROPr) Utility Score"
 
 // ERQ-S
-* #erq-s-reappraisal "ERQ-S Cognitive Reappraisal Subscale Score (3-21)"
-* #erq-s-suppression "ERQ-S Expressive Suppression Subscale Score (3-21)"
+
+// ZURUECKGEZOGEN 2026-10-01 — erq-s-reappraisal und erq-s-suppression:
+//   Die beiden ERQ-Subskalen-Codes sind entfernt. Grund: Der PCOR-MII-Bogen
+//   ERQ6 ist NICHT der ERQ-S, sondern ein anderer Zuschnitt desselben
+//   Instruments.
+//
+//   Preece et al. 2023 geben die Zuordnung in ihrer Tabelle 1 an. Der ERQ-S
+//   besteht aus den ERQ-Items 2, 6, 7, 8, 9 und 10 — ein reiner Teilsatz ohne
+//   Umformulierung:
+//     Cognitive Reappraisal (CR):  ERQ-Items 7, 8, 10
+//     Expressive Suppression (ES): ERQ-Items 2, 6, 9
+//   PCOR-MII fuehrt dagegen die ERQ-Items 1, 2, 3, 6, 8 und 9:
+//     Neubewertungs-Items:  1, 3, 8
+//     Unterdrueckungs-Items: 2, 6, 9
+//
+//   Vier der sechs Items ueberschneiden sich, und die Unterdrueckungs-Items
+//   sind sogar identisch — die NEUBEWERTUNGS-Items aber nicht: PCOR-MII hat 1
+//   und 3, der ERQ-S hat 7 und 10. Damit gelten die publizierten
+//   ERQ-S-Kennwerte nicht fuer diesen Satz. Bezogen auf das Vollinstrument
+//   ist er ohnehin ein Zuschnitt (drei der sechs Neubewertungs- und drei der
+//   vier Unterdrueckungs-Items des ERQ-10), fuer den keine Scoring-Vorschrift
+//   publiziert ist. Ohne validierte Grundlage kein Score — ADR-003 Punkt 3.
