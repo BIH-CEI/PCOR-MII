@@ -296,6 +296,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="ACE.html">ACE</a>
       </li>
+      <li>
+        <a href="UKHD-AN.html">UKHD-AN</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -470,7 +473,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><strong>Standort-Itemgruppen</strong> (UKHD, UKE, MHH)</td>
       <td><strong>in der DIZ-Liste gar nicht geführt</strong> — keine Freigabe dokumentiert</td>
-      <td>siehe offener Punkt unten</td>
+      <td>siehe offener Punkt unten; für sieben UKHD-Gruppen inzwischen modelliert als <a href="UKHD-AN.html">UKHD-AN</a> — bewusste Projektentscheidung, keine Freigabe</td>
     </tr>
     <tr>
       <td><a href="PROMIS.html">PROMIS</a>, <a href="WHODAS-12.html">WHODAS</a></td>
@@ -525,7 +528,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>Triviale Faktenfragen</em> — Körpergewicht, AN-Subtyp, Medikamentenliste. „Wie viel wiegen Sie aktuell in kg?" ist keine schutzfähige Schöpfung, und ohne den Wortlaut können die DIZ die Items nicht einheitlich implementieren. Diese 34 bleiben publiziert.</p>
 
-<p><em>Entworfene Item-Batterien</em> — <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6, Zeitangaben zu Kindheitstraumata), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3, Körperbild), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4, Lebensereignisse), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3). Hier steckt Autorenschaft aus Heidelberg, und diese Gruppen sind bisher <strong>nicht</strong> modelliert. Bis zu einer Freigabe durch den Standort werden sie <strong>nicht mit Wortlaut aufgenommen</strong> — bei Bedarf metadata-only wie beim <a href="WAI.html">WAI</a>.</p>
+<p><em>Entworfene Item-Batterien</em> — <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6, Zeitangaben zu Kindheitstraumata), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3, Körperbild), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4, Lebensereignisse), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-CT</code> (1), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3), <code class="language-plaintext highlighter-rouge">UKHD_D</code> (2). Hier steckt Autorenschaft aus Heidelberg.</p>
+
+<p><strong>Stand geändert, Rechtefrage unverändert (2026-10-01):</strong> Sieben dieser Gruppen sind inzwischen modelliert — sechs als <strong>ein</strong> Sammelbogen <a href="UKHD-AN.html">UKHD-AN</a> mit 14 Items, ein <code class="language-plaintext highlighter-rouge">group</code>-Item je Gruppe nach ADR-011, und <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6 Items) im <a href="ACE.html">ACE</a>, der dadurch ein PCOR-MII-Komposit ist. Das ist eine <strong>bewusste Projektentscheidung zur Erprobung und keine Freigabe</strong>: Rechteinhaber bleibt das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen. Die Ressource trägt <code class="language-plaintext highlighter-rouge">status = draft</code> und <code class="language-plaintext highlighter-rouge">experimental = true</code>, und <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> weist den Vorbehalt aus. Ergibt die Rückmeldung eine Einschränkung, ist die Umstellung auf metadata-only das vorgesehene Mittel (Muster <a href="WAI.html">WAI</a>) — die Beispielantwort bliebe davon unberührt, weil sie keine Itemtexte enthält. <strong><code class="language-plaintext highlighter-rouge">UKHD-BI</code> ist bewusst nicht dabei</strong>, und nicht aus Rechtegründen: Die Erhebung läuft noch nicht mit der visuellen Bildskala, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung.</p>
+
+<p>Für <strong>UKE</strong> und <strong>MHH</strong> ist nichts modelliert; dort bleibt es beim Stand oben.</p>
 
 <p><code class="language-plaintext highlighter-rouge">UKHD-EDP</code> gehört <strong>nicht</strong> in diese Liste, obwohl es das UKHD-Präfix trägt — siehe den eigenen Punkt unten.</p>
 
@@ -892,7 +899,11 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <p>Der Rename fällt also <strong>gratis</strong> mit ab, und es gibt keine zweite Quelle der Wahrheit, die auseinanderlaufen könnte. Eine ConceptMap ist dafür <strong>nicht mehr erforderlich</strong>; <a href="ConceptMap-pcor-cm-erq-s-linkids.html"><code class="language-plaintext highlighter-rouge">pcor-cm-erq-s-linkids</code></a> bleibt als vorgerechnete Lesehilfe und als ausdrückliche Warnung vor der Kollision bestehen, ist aber nicht mehr der Mechanismus.</p>
 
-<p><strong>Stand der Umsetzung (2026-09-30):</strong> In allen zwölf PCOR-MII-Questionnaires gesetzt — <strong>114 Items</strong> tragen ihre Dictionary-Variable. Ohne Code bleiben genau die Items, die <strong>keine</strong> Dictionary-Variablen sind: Gruppen-Items, berechnete Score-Items und die PCOR-MII-eigenen Hilfsitems (etwa die Einheitenauswahl <code class="language-plaintext highlighter-rouge">Q_WB151</code>/<code class="language-plaintext highlighter-rouge">Q_WB152</code> im <a href="MHI.html">MHI</a>, die es im Dictionary nicht gibt). Dass diese Liste genau so aussieht, ist die Kontrolle, dass die Zuordnung stimmt.</p>
+<p><strong>Stand der Umsetzung (2026-10-01):</strong> In allen dreizehn PCOR-MII-Questionnaires gesetzt — <strong>134 Items</strong> tragen ihre Dictionary-Variable (zuletzt die 20 UKHD-Items — 14 im <a href="UKHD-AN.html">UKHD-AN</a>, 6 im <a href="ACE.html">ACE</a>). Ohne Code bleiben genau die Items, die <strong>keine</strong> Dictionary-Variablen sind: Gruppen-Items, berechnete Score-Items und die PCOR-MII-eigenen Hilfsitems (etwa die Einheitenauswahl <code class="language-plaintext highlighter-rouge">Q_WB151</code>/<code class="language-plaintext highlighter-rouge">Q_WB152</code> im <a href="MHI.html">MHI</a> und die Wert-Items <code class="language-plaintext highlighter-rouge">AN_biography-wert</code>/<code class="language-plaintext highlighter-rouge">lowBMI-wert</code> im UKHD-AN, die es im Dictionary nicht gibt). Dass diese Liste genau so aussieht, ist die Kontrolle, dass die Zuordnung stimmt.</p>
+
+<p><strong>Der UKHD-AN ist dabei der erste Fall, in dem die Anti-Fragmentierungs-Grenze eine neue Ressource formt statt eine bestehende zu beschreiben</strong> — sechs Dictionary-Gruppen, keine davon publiziert, keine mit Itemnummerierung, zusammen in einem Sammelbogen. Dass dabei nichts verloren geht, ist genau der Punkt von Entscheidung 2: Wer alle Items der Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> sucht, fragt die Property <code class="language-plaintext highlighter-rouge">instrument</code> ab und nicht den Dateinamen.</p>
+
+<p><strong>Und genau diese Gruppe hat die Behauptung dann geprüft.</strong> <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> liegt seit dem 01.10.2026 nicht mehr im Sammelbogen, sondern im <a href="ACE.html">ACE</a> — das Item Level Dictionary nennt in der Spalte <code class="language-plaintext highlighter-rouge">ADDITIONAL INFORMATION</code> ausdrücklich den Bezug ihrer drei Item-Paare auf <code class="language-plaintext highlighter-rouge">ace1</code>, <code class="language-plaintext highlighter-rouge">ace2</code> und <code class="language-plaintext highlighter-rouge">ace3</code>, und <code class="language-plaintext highlighter-rouge">enableWhen.question</code> nimmt laut R4 eine <code class="language-plaintext highlighter-rouge">linkId</code> <strong>innerhalb desselben Questionnaire</strong>. Die Items mussten also dorthin, wo ihre Bedingung steht. Ihre sechs <code class="language-plaintext highlighter-rouge">item.code</code>-Codings und die Property <code class="language-plaintext highlighter-rouge">instrument = UKHD-CTT</code> sind davon <strong>unberührt</strong>: Die Abfrage findet die Gruppe weiterhin, obwohl sie die Ressource gewechselt hat. Der Preis ist ein anderer und offen benannter — der ACE ist dadurch kein Instrumenten-Zuschnitt mehr, sondern ein <strong>PCOR-MII-Komposit mit zwei Rechtequellen</strong>, und Titel, <code class="language-plaintext highlighter-rouge">description</code> und <code class="language-plaintext highlighter-rouge">copyright</code> sagen das.</p>
 
 <p>Das CodeSystem ist <strong>generiert</strong> und trägt <code class="language-plaintext highlighter-rouge">content = #fragment</code>: Es enthält nur die modellierten Variablen, während das Dictionary 454 über drei Entitäten führt. <code class="language-plaintext highlighter-rouge">#complete</code> wäre eine Falschaussage, und das CodeSystem wächst mit der Modellierung. Jedes Konzept trägt die Properties <code class="language-plaintext highlighter-rouge">instrument</code>, <code class="language-plaintext highlighter-rouge">category</code> und <code class="language-plaintext highlighter-rouge">entity</code> aus dem Dictionary — so ist auch ohne Questionnaire-Lookup erkennbar, wohin eine Variable gehört.</p>
 
@@ -1385,7 +1396,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 09:59:00 +0000">
+  <span title="2026-10-01 11:16:00 +0000">
     2026-10-01
   </span>
 

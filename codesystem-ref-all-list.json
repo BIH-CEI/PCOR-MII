@@ -30,9 +30,9 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
+    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
     "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend"
+    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
@@ -264,6 +264,83 @@
     "uses" : {
     },
     "ValueSet-ssuk-antwort-vs.html" : "SSUK Antwortskala"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnArztbesucheCS",
+    "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)",
+    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0).",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-arztbesuche-vs.html" : "UKHD-AN Arztbesuche in den letzten 4 Wochen"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnBehandlungsstatusCS",
+    "title" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
+    "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-behandlungsstatus-vs.html" : "UKHD-AN Aktueller Behandlungsstatus"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnBmiAngabeCS",
+    "title" : "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)",
+    "description" : "Angabe-Status für den niedrigsten BMI (`lowBMI`): Wert wird angegeben oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `lowBMI-wert`.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-bmi-angabe-vs.html" : "UKHD-AN Niedrigster BMI — Angabe-Status"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnDauerAngabeCS",
+    "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes)",
+    "description" : "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`): Monate, Jahre oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `AN_biography-wert`.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-dauer-angabe-vs.html" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnEreignishaeufigkeitCS",
+    "title" : "UKHD-AN Ereignis einmalig oder wiederholt (Codes)",
+    "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-ereignishaeufigkeit-vs.html" : "UKHD-AN Ereignis einmalig oder wiederholt"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnEreigniszeitpunktCS",
+    "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)",
+    "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-ereigniszeitpunkt-vs.html" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnPsychotherapieCS",
+    "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell (Codes)",
+    "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `ordinalValue`.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-an-psychotherapie-vs.html" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",

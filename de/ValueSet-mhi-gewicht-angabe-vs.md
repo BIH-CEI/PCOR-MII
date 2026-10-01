@@ -33,7 +33,7 @@ Einheit/Angabe-Status für Gewicht (Q_WB151).
   "title" : "MHI Gewichtsangabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T09:59:00+00:00",
+  "date" : "2026-10-01T11:16:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

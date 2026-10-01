@@ -296,6 +296,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="ACE.html">ACE</a>
       </li>
+      <li>
+        <a href="UKHD-AN.html">UKHD-AN</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -354,7 +357,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Demographie.html">next &gt;</a>
+          | <a href="UKHD-AN.html">next &gt;</a>
 
           </span>
 
@@ -398,6 +401,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#zwei-quellen-in-einem-bogen--warum-die-ukhd-zeitangaben-hier-liegen" id="markdown-toc-zwei-quellen-in-einem-bogen--warum-die-ukhd-zeitangaben-hier-liegen">Zwei Quellen in einem Bogen — warum die UKHD-Zeitangaben hier liegen</a></li>
   <li><a href="#sprachebenen" id="markdown-toc-sprachebenen">Sprachebenen</a></li>
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander" id="markdown-toc-die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander">Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander</a></li>
@@ -405,21 +409,73 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#items" id="markdown-toc-items">Items</a></li>
   <li><a href="#wortlaut--vollständig-verifiziert" id="markdown-toc-wortlaut--vollständig-verifiziert">Wortlaut — vollständig verifiziert</a></li>
   <li><a href="#kein-score" id="markdown-toc-kein-score">Kein Score</a></li>
+  <li><a href="#rechtelage--zwei-quellen-zwei-status" id="markdown-toc-rechtelage--zwei-quellen-zwei-status">Rechtelage — zwei Quellen, zwei Status</a></li>
   <li><a href="#terminologie" id="markdown-toc-terminologie">Terminologie</a></li>
 </ul>
 
 </div>
-<p><strong>ACE</strong> erfasst <strong>belastende Kindheitserfahrungen</strong> (vor dem 18. Lebensjahr) über die ersten fünf Fragen des <em>Adverse-Childhood-Experiences</em>-Fragebogens, je mit ja/nein zu beantworten.</p>
+<p><strong>ACE + Zeitangaben</strong> erfasst <strong>belastende Kindheitserfahrungen</strong> (vor dem 18. Lebensjahr) über die ersten fünf Fragen des <em>Adverse-Childhood-Experiences</em>-Fragebogens, je mit ja/nein — und ordnet die bejahten Ereignisse über sechs UKHD-Items zeitlich ein.</p>
+
+<blockquote>
+  <p><strong>Dieser Bogen ist ein PCOR-MII-Komposit, nicht der ACE.</strong> Zu den fünf ACE-Items kommen seit dem 01.10.2026 die sechs Items der Dictionary-Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>, die vorher im Sammelbogen <a href="UKHD-AN.html">UKHD-AN</a> standen. Damit hat der Bogen <strong>zwei Rechtequellen</strong> mit unterschiedlichem Status — siehe <a href="#rechtelage">Rechtelage</a> und <a href="#zwei-quellen">Zwei Quellen in einem Bogen</a>.</p>
+</blockquote>
 
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
-<p>Der PCOR-Zuschnitt umfasst die <strong>ersten 5 der 10 ACE-Fragen</strong> (Felitti et al., <em>Am J Prev Med</em> 1998; deutsche Fassung Wingenfeld et al., <em>PPmP</em> 2010): emotionale Misshandlung, körperliche Misshandlung, sexueller Missbrauch, emotionale Vernachlässigung, körperliche Vernachlässigung. Die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. Die Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie EFA) und werden <strong>vorläufig in PCOR-MII</strong> gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe <a href="Designentscheidungen.html">ADR-003</a>). Erhoben nur im Szenario <a href="AN.html">AN</a>.</p>
+<p>Der PCOR-Zuschnitt umfasst die <strong>ersten 5 der 10 ACE-Fragen</strong> (Felitti et al., <em>Am J Prev Med</em> 1998; deutsche Fassung Wingenfeld et al., <em>PPmP</em> 2010): emotionale Misshandlung, körperliche Misshandlung, sexueller Missbrauch, emotionale Vernachlässigung, körperliche Vernachlässigung. Die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. Dazu kommen die sechs Zeitangaben der Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>. Alle Items stammen aus dem Item Level Dictionary (Entität AN, Kategorie EFA); die fünf ACE-Items werden <strong>vorläufig in PCOR-MII</strong> gepflegt — eine spätere Aufnahme ins MII-PRO-Modul ist vorgesehen, sobald das Instrument offiziell abgestimmt ist (siehe <a href="Designentscheidungen.html">ADR-003</a>). Erhoben nur im Szenario <a href="AN.html">AN</a>.</p>
+
+<p><a name="zwei-quellen"></a></p>
+
+<h3 id="zwei-quellen-in-einem-bogen--warum-die-ukhd-zeitangaben-hier-liegen">Zwei Quellen in einem Bogen — warum die UKHD-Zeitangaben hier liegen</h3>
+
+<p>Die sechs Items <code class="language-plaintext highlighter-rouge">traumaspecific1</code> bis <code class="language-plaintext highlighter-rouge">traumaspecific6</code> sind <strong>drei Paare</strong>: je eine Frage nach der Häufigkeit des Ereignisses (einmalig oder wiederholt) und eine nach seiner zeitlichen Lage relativ zu den ersten Anzeichen der Essstörung. Jedes Paar charakterisiert <strong>ein</strong> berichtetes Ereignis — das ist die Bedeutung von „Ihre Angabe" in beiden Itemtexten.</p>
+
+<p><strong>Welches Ereignis, sagt das Dictionary ausdrücklich.</strong> Die Spalte <code class="language-plaintext highlighter-rouge">ADDITIONAL INFORMATION</code> nennt es wörtlich:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paar</th>
+      <th>Dictionary-Angabe</th>
+      <th>Bedingung im Bogen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific1</code> / <code class="language-plaintext highlighter-rouge">2</code></td>
+      <td><em>„ACE Abfrage ace1, Antwort Ja = 1"</em></td>
+      <td><code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">ace1</code> = ja</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific3</code> / <code class="language-plaintext highlighter-rouge">4</code></td>
+      <td><em>„ACE Abfrage ace2, Antwort Ja = 1"</em></td>
+      <td><code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">ace2</code> = ja</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific5</code> / <code class="language-plaintext highlighter-rouge">6</code></td>
+      <td><em>„ACE Abfrage ace3, Antwort Ja = 1"</em></td>
+      <td><code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">ace3</code> = ja</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Und genau diese Bedingung erzwingt die Zusammenlegung.</strong> <code class="language-plaintext highlighter-rouge">Questionnaire.item.enableWhen.question</code> nimmt laut R4 eine <code class="language-plaintext highlighter-rouge">linkId</code> <strong>innerhalb desselben Questionnaire</strong> — eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar. Die Items mussten also dorthin, wo ihre Bedingung steht, sonst wäre die Erhebungslogik nur Prosa geblieben.</p>
+
+<p><strong>Nur <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> haben Paare</strong>, <code class="language-plaintext highlighter-rouge">ace4</code> und <code class="language-plaintext highlighter-rouge">ace5</code> nicht. Das passt zum Inhalt: Die ersten drei Fragen beschreiben abgrenzbare <strong>Ereignisse</strong> (Misshandlung, Missbrauch), die letzten beiden andauernde <strong>Vernachlässigung</strong>, für die „einmalig oder wiederholt" kaum sinnvoll wäre.</p>
+
+<p><strong>Was die Verschiebung nicht ändert:</strong> Die sechs Items behalten ihre Dictionary-Variablen als <code class="language-plaintext highlighter-rouge">item.code</code> und dort die Property <code class="language-plaintext highlighter-rouge">instrument = UKHD-CTT</code>. Wer die Gruppe abfragt, findet sie weiterhin — die Ressourcengrenze hat sich verschoben, die Gruppenzugehörigkeit nicht. Das ist genau die Trennung, die <a href="Designentscheidungen.html">ADR-011</a> behauptet.</p>
+
+<p>Antwortoptionen der sechs Items: <a href="ValueSet-ukhd-an-ereignishaeufigkeit-vs.html">ukhd-an-ereignishaeufigkeit-vs</a> (1/2, <code class="language-plaintext highlighter-rouge">ordinalValue</code> — „einmalig" &lt; „mehrfach" ist eine monotone Häufigkeitsaussage) und <a href="ValueSet-ukhd-an-ereigniszeitpunkt-vs.html">ukhd-an-ereigniszeitpunkt-vs</a> (1/2/3, <strong>nominal</strong> — „vor" und „nach" sind eine Zeitrelation, und Stufe 3 „ich weiß es nicht mehr" hat in einer Rangfolge keinen Platz; sie bleibt bewusst im Wertebereich, weil die Erinnerungslücke hier eine <em>vorgelegte Antwort</em> ist und keine fehlende Information).</p>
+
+<p><strong>Dictionary-Befund, unverändert übernommen:</strong> <code class="language-plaintext highlighter-rouge">traumaspecific2/4/6</code> enthalten <strong>zwei Fragesätze in einem Item</strong>, die sich nur im Numerus unterscheiden („dieses Ereignis" gegen „der Beginn dieser Ereignisse"). Sehr wahrscheinlich sind das alternative Darbietungen, die von der Häufigkeitsfrage desselben Paares abhängen. Eine Aufspaltung wäre aus dem Dictionary nicht belegbar — beide Sätze bedienen dieselbe Variable mit derselben Antwortskala.</p>
 
 <h3 id="sprachebenen">Sprachebenen</h3>
 
-<p><code class="language-plaintext highlighter-rouge">Questionnaire.language</code> steht auf <strong><code class="language-plaintext highlighter-rouge">en</code></strong>: Das ACE-Original ist englisch (Felitti et al. 1998, Kaiser Permanente / CDC). <code class="language-plaintext highlighter-rouge">item.text</code> trägt den englischen Originalwortlaut, die deutsche Fassung <strong>ACE-D</strong> hängt als <code class="language-plaintext highlighter-rouge">translation</code>-Extension mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran.</p>
+<p><code class="language-plaintext highlighter-rouge">Questionnaire.language</code> steht seit der Zusammenlegung auf <strong><code class="language-plaintext highlighter-rouge">de</code></strong>, vorher auf <code class="language-plaintext highlighter-rouge">en</code>. Der Bogen ist ein <strong>gemischtes</strong> Komposit: fünf Items mit englischem Originalwortlaut und deutscher <code class="language-plaintext highlighter-rouge">translation</code>, sechs deutschsprachige PCOR-MII-Items ohne englisches Original. Vollständig lesbar ist er damit nur auf Deutsch — auf Englisch nur zu fünf Elfteln. Dieselbe Mehrheitsregel wie beim <a href="Demographie.html">DEM</a>, dort mit umgekehrtem Ergebnis.</p>
 
-<p><strong>Hier ist die Anordnung auch rechtlich die bessere</strong>, denn die Rechtelage ist <strong>nicht symmetrisch</strong>: Das englische Original ist ein breit frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen (siehe unten). Englisch primär verschiebt den ungeklärten Teil in eine Übersetzungsebene.</p>
+<p><code class="language-plaintext highlighter-rouge">Resource.language</code> nennt die <strong>Basissprache des Dokuments</strong> und sagt nichts über die Sprachebene der einzelnen Items: Für die fünf ACE-Items bleibt nach <a href="Designentscheidungen.html">ADR-005</a> <strong>Englisch primär</strong>, weil das ACE-Original englisch ist (Felitti et al. 1998, Kaiser Permanente / CDC). <code class="language-plaintext highlighter-rouge">item.text</code> trägt dort den englischen Originalwortlaut, die deutsche Fassung <strong>ACE-D</strong> hängt als <code class="language-plaintext highlighter-rouge">translation</code>-Extension mit <code class="language-plaintext highlighter-rouge">lang = de</code> daran. Für die sechs UKHD-Items gibt es kein englisches Original; ihr <code class="language-plaintext highlighter-rouge">item.text</code> ist deutsch und trägt keine Übersetzungsebene — eine englische Fassung wäre eine unvalidierte PCOR-MII-Übersetzung an der Stelle, an der der erhobene Wortlaut steht.</p>
+
+<p><strong>Bei den fünf ACE-Items ist die Anordnung auch rechtlich die bessere</strong>, denn die Rechtelage ist <strong>nicht symmetrisch</strong>: Das englische Original ist ein breit frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen (siehe unten). Englisch primär verschiebt den ungeklärten Teil in eine Übersetzungsebene.</p>
 
 <p>Zur Quelle des englischen Wortlauts: ein an die Originalpublikation zitierendes Exemplar, nicht der Verlagsabdruck. Der Wortlaut der zehn Items ist seit 1998 unverändert und vielfach identisch reproduziert.</p>
 
@@ -429,10 +485,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Fragebogen:</strong> <a href="Questionnaire-ACE.html">Questionnaire-ACE</a></li>
-  <li><strong>Beispielantwort:</strong> <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> — ausgefülltes Beispiel; zwei bejahte Items in der emotionalen Dimension</li>
+  <li><strong>Beispielantwort:</strong> <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> — ausgefülltes Beispiel; zwei bejahte Items in der emotionalen Dimension, und <strong>nur eine der drei Zeitangabe-Gruppen belegt</strong>. Das ist kein Versäumnis, sondern der Punkt: Bejaht ist von den drei Trägeritems nur <code class="language-plaintext highlighter-rouge">ace1</code>, also ist nur <code class="language-plaintext highlighter-rouge">ctt-ereignis-1</code> freigeschaltet — die beiden anderen Gruppen fehlen in der Antwort, statt leer dazustehen. Ein einziger Fall belegt damit die Verzweigung in beide Richtungen.</li>
+  <li><strong>CodeSystems / ValueSets der Zeitangaben:</strong> <a href="CodeSystem-ukhd-an-ereignishaeufigkeit.html">ukhd-an-ereignishaeufigkeit</a> / <a href="ValueSet-ukhd-an-ereignishaeufigkeit-vs.html">-vs</a> und <a href="CodeSystem-ukhd-an-ereigniszeitpunkt.html">ukhd-an-ereigniszeitpunkt</a> / <a href="ValueSet-ukhd-an-ereigniszeitpunkt-vs.html">-vs</a>. Ids und Canonicals behalten das <code class="language-plaintext highlighter-rouge">ukhd-an</code>-Präfix: Es benennt den Standort und die Dictionary-Gruppe, nicht die Datei.</li>
 </ul>
 
-<p>Alle fünf Items nutzen das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a>. Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist im Mapping auf <code class="language-plaintext highlighter-rouge">DemAntwortCS</code> dokumentarisch, nicht strukturell.</p>
+<p>Die fünf ACE-Items nutzen das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a>. Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist im Mapping auf <code class="language-plaintext highlighter-rouge">DemAntwortCS</code> dokumentarisch, nicht strukturell.</p>
 
 <h3 id="die-codes-eines-items--dictionary-variable-und-loinc-nebeneinander">Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander</h3>
 
@@ -496,13 +553,94 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
+<p>Dazu die sechs Zeitangaben, in drei <code class="language-plaintext highlighter-rouge">group</code>-Items mit <code class="language-plaintext highlighter-rouge">enableWhen</code>. Die Gruppen-Items sind PCOR-MII-eigen und tragen <strong>keinen</strong> <code class="language-plaintext highlighter-rouge">item.code</code> — sie sind keine Dictionary-Variablen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code></th>
+      <th><code class="language-plaintext highlighter-rouge">item.code</code> (Dictionary)</th>
+      <th>Typ</th>
+      <th>Antwortoptionen</th>
+      <th>freigeschaltet durch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ctt-ereignis-1</code></strong></td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">group</code></td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">ace1</code> = ja</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td><a href="ValueSet-ukhd-an-ereignishaeufigkeit-vs.html">-ereignishaeufigkeit-vs</a> (1/2, ordinal)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td><a href="ValueSet-ukhd-an-ereigniszeitpunkt-vs.html">-ereigniszeitpunkt-vs</a> (1/2/3)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ctt-ereignis-2</code></strong></td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">group</code></td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">ace2</code> = ja</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td>wie <code class="language-plaintext highlighter-rouge">traumaspecific1</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific4</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific4</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td>wie <code class="language-plaintext highlighter-rouge">traumaspecific2</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">ctt-ereignis-3</code></strong></td>
+      <td>—</td>
+      <td><code class="language-plaintext highlighter-rouge">group</code></td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">ace3</code> = ja</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td>wie <code class="language-plaintext highlighter-rouge">traumaspecific1</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific6</code></td>
+      <td><code class="language-plaintext highlighter-rouge">traumaspecific6</code></td>
+      <td><code class="language-plaintext highlighter-rouge">choice</code></td>
+      <td>wie <code class="language-plaintext highlighter-rouge">traumaspecific2</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <p>Die LOINC-Codes sind die Panel-Komponenten von <code class="language-plaintext highlighter-rouge">82813-7</code>; der Panel-Code selbst bleibt dem 5-Fragen-Zuschnitt bewusst nicht zugewiesen. <code class="language-plaintext highlighter-rouge">linkId</code> und Dictionary-Variable stimmen hier überein — beim <a href="ERQ-6.html">ERQ-6</a> ausdrücklich <strong>nicht</strong>.</p>
 
-<p>Die Fragetexte sind wortgleich aus dem Item Level Dictionary übernommen; lediglich Layout-Artefakte der Excel-Zellen (Zeilenumbrüche, Mehrfach-Leerzeichen, inkonsistente führende Item-Nummern) wurden normalisiert. Ein gemeinsamer Instruktionstext steht als <code class="language-plaintext highlighter-rouge">display</code>-Item voran. <strong>Hinweis zur Erhebung:</strong> Die Items betreffen hochsensible Inhalte (Missbrauch, Vernachlässigung) — die Governance der Auswertung (analog PHQ-SI) ist fachlich zu klären.</p>
+<p>Die Fragetexte sind wortgleich aus dem Item Level Dictionary übernommen; lediglich Layout-Artefakte der Excel-Zellen (Zeilenumbrüche, Mehrfach-Leerzeichen, inkonsistente führende Item-Nummern) wurden normalisiert. Ein gemeinsamer Instruktionstext steht als <code class="language-plaintext highlighter-rouge">display</code>-Item voran. <strong>Hinweis zur Erhebung:</strong> Die Items betreffen hochsensible Inhalte (Missbrauch, Vernachlässigung) — die Governance der Auswertung (analog PHQ-SI) ist fachlich zu klären. Das gilt für die Zeitangaben mit, die dieselben Ereignisse weiter ausfragen.</p>
+
+<p><a name="wortlaut"></a></p>
 
 <h3 id="wortlaut--vollständig-verifiziert">Wortlaut — vollständig verifiziert</h3>
 
-<p>Alle fünf Items stimmen <strong>wortgleich</strong> mit der deutschen Fassung <strong>ACE-D</strong> überein (Schäfer, Wingenfeld &amp; Spitzer). Geprüft wurde Teilsatz für Teilsatz, einschließlich der „oder"-Struktur innerhalb der Items. Eine einzige Abweichung ist dabei aufgefallen und korrigiert: die Anführungszeichen um „high" in <code class="language-plaintext highlighter-rouge">ace5</code>, die zuvor in gerader statt typografischer Form standen.</p>
+<p>Betrifft die <strong>fünf ACE-Items</strong>; für die sechs Zeitangaben ist das Dictionary selbst die Vorlage, es gibt keine zweite Quelle zum Abgleich. Alle fünf ACE-Items stimmen <strong>wortgleich</strong> mit der deutschen Fassung <strong>ACE-D</strong> überein (Schäfer, Wingenfeld &amp; Spitzer). Geprüft wurde Teilsatz für Teilsatz, einschließlich der „oder"-Struktur innerhalb der Items. Eine einzige Abweichung ist dabei aufgefallen und korrigiert: die Anführungszeichen um „high" in <code class="language-plaintext highlighter-rouge">ace5</code>, die zuvor in gerader statt typografischer Form standen.</p>
 
 <p><strong>Nummerierung bestätigt:</strong> <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace5</code> sind die Items 1–5 des ACE-D; der Bogen hat insgesamt zehn Items mit dichotomem Ja/Nein-Format. Die Angabe der DIZ-Implementierungsliste — <em>„die ersten 5 Fragen"</em> — trifft damit wörtlich zu. Die Items 6–10 (Trennung oder Verlust eines Elternteils, Gewalt gegen die Mutter, Suchterkrankung, psychische Erkrankung und Haft im Haushalt) bilden den Haushalts-Dysfunktions-Block und sind hier bewusst nicht enthalten.</p>
 
@@ -520,7 +658,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="kein-score">Kein Score</h3>
 
-<p>Der ACE-Score des Vollinstruments ist die <strong>Anzahl der Ja-Antworten über alle 10 Fragen</strong> (0–10). Eine Summe über den 5-Fragen-Zuschnitt (0–5) ist <strong>kein validierter ACE-Score</strong> — daher bewusst kein Score-Item; ausgewertet wird auf Item-Ebene, bis eine Regel fachlich abgestimmt ist.</p>
+<p>Der ACE-Score des Vollinstruments ist die <strong>Anzahl der Ja-Antworten über alle 10 Fragen</strong> (0–10). Eine Summe über den 5-Fragen-Zuschnitt (0–5) ist <strong>kein validierter ACE-Score</strong> — daher bewusst kein Score-Item; ausgewertet wird auf Item-Ebene, bis eine Regel fachlich abgestimmt ist. Für die sechs Zeitangaben gibt es ohnehin keine Auswertungsvorschrift: Sie bilden kein publiziertes Instrument ab.</p>
+
+<p><a name="rechtelage"></a></p>
+
+<h3 id="rechtelage--zwei-quellen-zwei-status">Rechtelage — zwei Quellen, zwei Status</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> weist beide getrennt aus:</p>
+
+<ol>
+  <li><strong>Die fünf ACE-Items.</strong> Die DIZ-Implementierungsliste führt das Instrument als frei nutzbar; das trifft plausibel auf das <strong>englische Original</strong> zu, nicht ohne Weiteres auf die deutsche ACE-D-Fassung (Einzelheiten unter <a href="#wortlaut">Wortlaut</a>). Rücksprache mit Prof. Dr. Ingo Schäfer einzuholen.</li>
+  <li><strong>Die sechs Zeitangaben.</strong> Rechteinhaber ist das <strong>Universitätsklinikum Heidelberg</strong>. Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente und kennt die standortspezifischen Itemgruppen gar nicht — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. <strong>Eine Freigabe liegt nicht vor und ist einzuholen.</strong> Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; ergibt die Rückmeldung eine Einschränkung, ist die Umstellung dieser sechs Items auf metadata-only vorgesehen (Muster <a href="WAI.html">WAI</a>).</li>
+</ol>
+
+<p>Beide Punkte stehen im Entscheidungslog der <a href="Designentscheidungen.html">Designentscheidungen</a>.</p>
 
 <h3 id="terminologie">Terminologie</h3>
 
@@ -562,7 +713,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Demographie.html">next ></a>
+                <a href="UKHD-AN.html">next ></a>
 
               </td>
             </tr>
@@ -578,7 +729,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 09:59:00 +0000">
+  <span title="2026-10-01 11:16:00 +0000">
     2026-10-01
   </span>
 

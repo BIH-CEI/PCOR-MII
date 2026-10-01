@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T09:59:00+00:00",
+  "date" : "2026-10-01T11:16:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -777,6 +777,22 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-ACE.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/ACE"
+      },
+      "name" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
+      "description" : "**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire (Felitti et al. 1998) plus sechs UKHD-Items zur zeitlichen Einordnung der berichteten Ereignisse. Die sechs Zeitangaben sind in drei Paare gegliedert; jedes Paar wird über `enableWhen` von einem bejahten ACE-Item freigeschaltet — `ace1`, `ace2` bzw. `ace3`, so wie das Item Level Dictionary es vorgibt. Die fünf ACE-Items im Einzelnen: emotionale und körperliche Misshandlung, sexueller Missbrauch, emotionale und körperliche Vernachlässigung vor dem 18. Lebensjahr, je ja/nein. Kein Score — die Summe über den 5-Item-Zuschnitt ist kein validierter ACE-Score. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items — und zusätzlich seinen LOINC-Code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
       },
       {
@@ -787,24 +803,8 @@
         "reference" : "QuestionnaireResponse/ACEResponse"
       },
       "name" : "ACE — Beispielantwort",
-      "description" : "Vollständig ausgefüllte Beispielantwort zum ACE-Questionnaire (erste fünf ACE-Fragen). Zwei bejahte Items in der emotionalen Dimension; die Anzahl der Ja-Antworten ist kein ACE-Score, weil die Fragen 6–10 nicht erhoben werden.",
+      "description" : "Vollständig ausgefüllte Beispielantwort zum PCOR-MII-Komposit aus den ersten fünf ACE-Fragen und den UKHD-Zeitangaben. Von den drei Zeitangabe-Gruppen ist nur die erste belegt — nur `ace1` ist bejaht, die beiden anderen Gruppen sind per `enableWhen` nicht freigeschaltet. Zwei bejahte Items in der emotionalen Dimension; die Anzahl der Ja-Antworten ist kein ACE-Score, weil die Fragen 6–10 nicht erhoben werden.",
       "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Questionnaire-ACE.html"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/ACE"
-      },
-      "name" : "ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)",
-      "description" : "Die ersten fünf Fragen des Adverse-Childhood-Experiences-Fragebogens (ACE): emotionale und körperliche Misshandlung, sexueller Missbrauch, emotionale und körperliche Vernachlässigung vor dem 18. Lebensjahr, je ja/nein. Kein Score — die Summe über den 5-Item-Zuschnitt ist kein validierter ACE-Score. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items — und zusätzlich seinen LOINC-Code.",
-      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2010,6 +2010,262 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-behandlungsstatus-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-behandlungsstatus-vs"
+      },
+      "name" : "UKHD-AN Aktueller Behandlungsstatus",
+      "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-behandlungsstatus.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-behandlungsstatus"
+      },
+      "name" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
+      "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-arztbesuche-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-arztbesuche-vs"
+      },
+      "name" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
+      "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-arztbesuche.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-arztbesuche"
+      },
+      "name" : "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)",
+      "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-dauer-angabe-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-dauer-angabe-vs"
+      },
+      "name" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
+      "description" : "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-dauer-angabe.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-dauer-angabe"
+      },
+      "name" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes)",
+      "description" : "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`): Monate, Jahre oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `AN_biography-wert`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-ereignishaeufigkeit-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-ereignishaeufigkeit-vs"
+      },
+      "name" : "UKHD-AN Ereignis einmalig oder wiederholt",
+      "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-ereignishaeufigkeit.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-ereignishaeufigkeit"
+      },
+      "name" : "UKHD-AN Ereignis einmalig oder wiederholt (Codes)",
+      "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-ereigniszeitpunkt-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-ereigniszeitpunkt-vs"
+      },
+      "name" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung",
+      "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-ereigniszeitpunkt.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-ereigniszeitpunkt"
+      },
+      "name" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)",
+      "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-bmi-angabe-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-bmi-angabe-vs"
+      },
+      "name" : "UKHD-AN Niedrigster BMI — Angabe-Status",
+      "description" : "Angabe-Status für den niedrigsten BMI (`lowBMI`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-bmi-angabe.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-bmi-angabe"
+      },
+      "name" : "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)",
+      "description" : "Angabe-Status für den niedrigsten BMI (`lowBMI`): Wert wird angegeben oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `lowBMI-wert`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ukhd-an-psychotherapie-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ukhd-an-psychotherapie-vs"
+      },
+      "name" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell",
+      "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ukhd-an-psychotherapie.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-an-psychotherapie"
+      },
+      "name" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell (Codes)",
+      "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `ordinalValue`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDANResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDANResponse"
+      },
+      "name" : "UKHD-AN — Beispielantwort (Initial-/Screening-Termin)",
+      "description" : "Beispielantwort zum UKHD-AN-Questionnaire für einen Initial-/Screening-Termin: Vorbehandlung, Essstörungsanamnese (Dauer 8 Jahre, niedrigster BMI 14,8), ambulante Psychotherapie, zwei von drei Ereignis-Paaren der Kindheitsbelastungen, ein bejahtes Lebensereignis-Item mit Freitext und die Aufnahmediagnosen. Die Gruppe `UKHD-ND` sowie `life_event1_monitoring` und `lifev_discharge` bleiben bewusst leer — sie werden zum Initial-Termin nicht erhoben (`TIMING`). Derselbe Erhebungstermin und dieselbe Patientin wie die fünf AN-Instrumente.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-UKHDAN.html"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDAN"
+      },
+      "name" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)",
+      "description" : "Sammelbogen der standortspezifischen AN-Itemgruppen des Universitätsklinikums Heidelberg — **sechs Gruppen, 14 Items**: Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Ein Questionnaire mit einem `group`-Item je Gruppe statt sechs Ressourcen (ADR-011). Kein Score — diese Items bilden kein publiziertes Instrument ab. **Für den Wortlaut liegt keine dokumentierte Freigabe des Standorts vor**; die Modellierung ist eine bewusste Projektentscheidung, keine geklärte Rechtslage. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Nicht enthalten: `UKHD-BI` und `UKHD-EDP`. **Die siebte Gruppe `UKHD-CTT`** (sechs Zeitangaben zu Kindheitsbelastungen) steht nicht hier, sondern im [ACE](Questionnaire-ACE.html): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ValueSet-wai-skala-5-vs.html"
       }],
       "reference" : {
@@ -2199,6 +2455,15 @@
             }],
             "nameUrl" : "ACE.html",
             "title" : "ACE (Belastende Kindheitserfahrungen)",
+            "generation" : "markdown"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "UKHD-AN.html"
+            }],
+            "nameUrl" : "UKHD-AN.html",
+            "title" : "UKHD-AN (Standortspezifische AN-Zusatzitems)",
             "generation" : "markdown"
           }]
         }]

@@ -296,6 +296,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="ACE.html">ACE</a>
       </li>
+      <li>
+        <a href="UKHD-AN.html">UKHD-AN</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -594,31 +597,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Body Image</td>
       <td>UKHD-BI (3)</td>
       <td>—</td>
-      <td>offen — Freigabe UKHD fehlt</td>
+      <td><strong>bewusst nicht modelliert</strong> — visuelle Bildskala, Erhebung läuft noch nicht damit; Freigabe UKHD offen</td>
     </tr>
     <tr>
       <td>Childhood Trauma Time Specification</td>
       <td>UKHD-CTT (6)</td>
       <td>—</td>
-      <td>offen — Freigabe UKHD fehlt</td>
+      <td><a href="ACE.html">ACE</a> — modelliert, dort per <code class="language-plaintext highlighter-rouge">enableWhen</code> an <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code> gebunden; <strong>Freigabe UKHD offen</strong></td>
     </tr>
     <tr>
       <td>Life Events</td>
       <td>UKHD-LE (2–4)</td>
       <td>—</td>
-      <td>offen — Freigabe UKHD fehlt</td>
+      <td><a href="UKHD-AN.html">UKHD-AN</a> — modelliert (4 Items), <strong>Freigabe UKHD offen</strong></td>
     </tr>
     <tr>
       <td>AN specific history</td>
       <td>UKHD-ANB (2)</td>
       <td>—</td>
-      <td>offen — Freigabe UKHD fehlt</td>
+      <td><a href="UKHD-AN.html">UKHD-AN</a> — modelliert, <strong>Freigabe UKHD offen</strong></td>
     </tr>
     <tr>
       <td>Past Treatment</td>
       <td>UKHD-PT (2)</td>
       <td>—</td>
-      <td>offen — Freigabe UKHD fehlt</td>
+      <td><a href="UKHD-AN.html">UKHD-AN</a> — modelliert, <strong>Freigabe UKHD offen</strong></td>
     </tr>
     <tr>
       <td>Personality Functioning</td>
@@ -726,7 +729,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ol>
   <li><strong>Die Langformen ANSOCQ (20) und SSUK-8 (8)</strong> — beide bisher nur in der Kurzform modelliert. Für das ANSOCQ liegt der englische Originalwortlaut vollständig vor (Rieger et al. 2002), für das SSUK-8 nicht.</li>
   <li><strong>ERQ-2</strong> — die Kurzvariante der Emotionsregulation, im Plan vorgesehen, nicht modelliert.</li>
-  <li><strong>Die UKHD-Itemgruppen</strong> <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3), <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3) — sämtlich Prio A und sämtlich noch nicht modelliert. Sie bilden kein publiziertes Instrument ab, <strong>aber genau deshalb fehlt ihnen auch jede dokumentierte Freigabe</strong>: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Ob ihr Wortlaut in eine Spezifikation darf, ist eine Entscheidung des Standorts Heidelberg, keine Rechtsfrage, die sich aus der Liste beantworten ließe. Bis zu einer Freigabe werden sie <strong>nicht mit Wortlaut aufgenommen</strong> — siehe <a href="Designentscheidungen.html">offener Punkt</a>. Der <code class="language-plaintext highlighter-rouge">edp</code>-Block wird davon getrennt behandelt, weil er kein Standort-Original ist (siehe oben).</li>
+  <li>
+    <p><strong>Die UKHD-Itemgruppen</strong> — sämtlich Prio A. Sie bilden kein publiziertes Instrument ab, <strong>aber genau deshalb fehlt ihnen auch jede dokumentierte Freigabe</strong>: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Ob ihr Wortlaut in eine Spezifikation darf, ist eine Entscheidung des Standorts Heidelberg, keine Rechtsfrage, die sich aus der Liste beantworten ließe.</p>
+
+    <p><strong>Der Stand hat sich hier geändert, die Rechtefrage nicht.</strong> Sieben Gruppen sind inzwischen modelliert: <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-CT</code> (1), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3) und <code class="language-plaintext highlighter-rouge">UKHD_D</code> (2) als <strong>ein</strong> Sammelbogen <a href="UKHD-AN.html">UKHD-AN</a> mit 14 Items (<a href="Designentscheidungen.html">ADR-011</a>), dazu <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6) im <a href="ACE.html">ACE</a> — das Dictionary nennt deren <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich, und FHIR kann ihn nur innerhalb eines Questionnaire ausdrücken. Das ist eine <strong>bewusste Projektentscheidung zur Erprobung und keine Freigabe</strong>: Rechteinhaber bleibt das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen. Die Ressource trägt <code class="language-plaintext highlighter-rouge">status = draft</code> und <code class="language-plaintext highlighter-rouge">experimental = true</code>; bei einer Einschränkung ist die Umstellung auf metadata-only vorgesehen (Muster <a href="WAI.html">WAI</a>). Nicht modelliert bleibt <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3) — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt. Der <code class="language-plaintext highlighter-rouge">edp</code>-Block wird ohnehin getrennt behandelt, weil er kein Standort-Original ist (siehe oben). Einzelheiten und die offenen Punkte zum Dictionary auf der <a href="UKHD-AN.html">UKHD-AN-Seite</a>.</p>
+  </li>
   <li><strong>Der CRO-Anteil</strong> — Suizidalität ambulant und Therapeut:innen-Perspektive. Bisher betrachtet PCOR-MII nur PRO.</li>
   <li><strong>Die vier PROMIS-Summenscores und das EQ-5D.</strong></li>
   <li><strong>Die Vier-Use-Case-Struktur</strong> — NTXr und NTXd sind im IG bisher als ein NTx geführt.</li>
@@ -790,7 +797,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 09:59:00 +0000">
+  <span title="2026-10-01 11:16:00 +0000">
     2026-10-01
   </span>
 

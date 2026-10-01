@@ -105,10 +105,11 @@
     "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
     "uses" : {
     },
+    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
     "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
-    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
     "Questionnaire-MHI.html" : "MHI — Medical History",
-    "Questionnaire-ACE.html" : "ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)"
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
@@ -313,6 +314,90 @@
     "uses" : {
     },
     "Questionnaire-SSUK2.html" : "SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-arztbesuche-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnArztbesucheVS",
+    "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
+    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-behandlungsstatus-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnBehandlungsstatusVS",
+    "title" : "UKHD-AN Aktueller Behandlungsstatus",
+    "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-bmi-angabe-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnBmiAngabeVS",
+    "title" : "UKHD-AN Niedrigster BMI — Angabe-Status",
+    "description" : "Angabe-Status für den niedrigsten BMI (`lowBMI`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-dauer-angabe-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnDauerAngabeVS",
+    "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
+    "description" : "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereignishaeufigkeit-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnEreignishaeufigkeitVS",
+    "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
+    "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"],
+    "uses" : {
+    },
+    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereigniszeitpunkt-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnEreigniszeitpunktVS",
+    "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung",
+    "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"],
+    "uses" : {
+    },
+    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-psychotherapie-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdAnPsychotherapieVS",
+    "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell",
+    "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",

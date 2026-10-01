@@ -296,6 +296,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="ACE.html">ACE</a>
       </li>
+      <li>
+        <a href="UKHD-AN.html">UKHD-AN</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -478,7 +481,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Dazu die standortspezifischen Item-Gruppen der UKHD (<code class="language-plaintext highlighter-rouge">UKHD-BI</code> Körperbild, <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> Essstörungspathologie, <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> und <code class="language-plaintext highlighter-rouge">UKHD-LE</code> Umfeld/Lebensereignisse sowie weitere Verlaufsitems), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.</p>
+<p>Dazu die <strong>standortspezifischen Item-Gruppen der UKHD</strong>, die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen. Sechs davon sind als <strong>ein</strong> Sammelbogen modelliert — <a href="UKHD-AN.html">UKHD-AN</a>, 14 Items (<a href="Designentscheidungen.html">ADR-011</a>): Vorbehandlung (<code class="language-plaintext highlighter-rouge">UKHD-PT</code>), Essstörungsanamnese (<code class="language-plaintext highlighter-rouge">UKHD-ANB</code>), aktuelle Behandlung (<code class="language-plaintext highlighter-rouge">UKHD-CT</code>), belastende Lebensereignisse (<code class="language-plaintext highlighter-rouge">UKHD-LE</code>), neue Diagnosen (<code class="language-plaintext highlighter-rouge">UKHD-ND</code>) und Diagnosen bei Aufnahme (<code class="language-plaintext highlighter-rouge">UKHD_D</code>). Die siebte Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6 Zeitangaben zu Kindheitsbelastungen) steht im <a href="ACE.html">ACE</a>: Das Dictionary nennt ihren Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich, und <code class="language-plaintext highlighter-rouge">enableWhen</code> kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.</p>
+
+<p><strong>Für diese 20 Items liegt keine dokumentierte Freigabe vor</strong> — auch für die sechs, die im ACE stehen — — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der <a href="UKHD-AN.html">UKHD-AN-Seite</a>).</p>
+
+<p>Zwei Gruppen sind <strong>ausdrücklich ausgenommen</strong>: <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt) und <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items — vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage, siehe <a href="Designentscheidungen.html">offener Punkt</a>).</p>
 
 <h3 id="die-zuschnitte-folgen-einer-dokumentierten-auswahlregel">Die Zuschnitte folgen einer dokumentierten Auswahlregel</h3>
 
@@ -498,7 +505,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</h3>
 
-<p>Für alle fünf AN-Instrumente liegen ausgefüllte Beispielantworten vor — und zwar <strong>nicht</strong> als fünf unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei <strong>derselben Beispiel-Patientin</strong>, die schon <a href="Demographie.html">DEM</a> und <a href="MHI.html">MHI</a> nutzen (<code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient</code>): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.</p>
+<p>Für alle fünf AN-Instrumente und den Sammelbogen <a href="UKHD-AN.html">UKHD-AN</a> liegen ausgefüllte Beispielantworten vor — und zwar <strong>nicht</strong> als unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei <strong>derselben Beispiel-Patientin</strong>, die schon <a href="Demographie.html">DEM</a> und <a href="MHI.html">MHI</a> nutzen (<code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient</code>): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.</p>
 
 <table>
   <thead>
@@ -526,16 +533,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a></td>
-      <td>zwei bejahte Items in der emotionalen Dimension</td>
+      <td>zwei bejahte Items in der emotionalen Dimension; von den drei Zeitangabe-Gruppen ist <strong>nur die erste</strong> belegt, weil nur <code class="language-plaintext highlighter-rouge">ace1</code> bejaht ist — die beiden anderen sind per <code class="language-plaintext highlighter-rouge">enableWhen</code> nicht freigeschaltet</td>
+    </tr>
+    <tr>
+      <td><a href="QuestionnaireResponse-UKHDANResponse.html">UKHDANResponse</a></td>
+      <td>ein <strong>Initial-/Screening-Termin</strong>: die Items anderer Erhebungszeitpunkte bleiben leer, die Gruppe <code class="language-plaintext highlighter-rouge">UKHD-ND</code> vollständig</td>
     </tr>
   </tbody>
 </table>
+
+<p>Die UKHD-AN-Antwort trägt dabei eine Aussage, die keine der anderen macht: <strong>Eine Antwort, die alle Items des Bogens füllt, kann es an keinem realen Erhebungszeitpunkt geben.</strong> Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Item Level Dictionary ist im Questionnaire bewusst nicht modelliert (<a href="Designentscheidungen.html">ADR-011</a>-Begründung auf der <a href="UKHD-AN.html">UKHD-AN-Seite</a>) — sichtbar wird sie erst in der Antwort.</p>
 
 <p><strong>Score-Observations gibt es im AN-Block nicht.</strong> Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe <a href="ERQ-6.html">ERQ-6</a>).</p>
 
 <p>Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.</p>
 
-<p>Alle sieben Instanzen sind mit dem FHIR-Validator geprüft: <strong>0 errors</strong> (Details unter <a href="Validierung.html">Validierung</a>).</p>
+<p>Alle acht Instanzen sind mit dem FHIR-Validator geprüft: <strong>0 errors</strong> (Details unter <a href="Validierung.html">Validierung</a>).</p>
 
 <h3 id="status-vorläufig-in-pcor-mii-gepflegt">Status: vorläufig in PCOR-MII gepflegt</h3>
 
@@ -544,6 +557,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="rechtelage">Rechtelage</h3>
 
 <p>Alle fünf AN-Instrumente sind laut DIZ-Implementierungsliste <strong>frei publizierbar</strong> — vollständige Questionnaires mit Itemtexten und Antwortoptionen sind möglich. Die Rechte an den Instrumenten und Item-Formulierungen verbleiben bei den jeweiligen Autor:innen (Details im <code class="language-plaintext highlighter-rouge">copyright</code>-Element der Questionnaires); die Originalpublikationen sind noch nicht gegen das Dictionary verifiziert (siehe <a href="Designentscheidungen.html">offene Punkte</a>).</p>
+
+<p><strong>Für <a href="UKHD-AN.html">UKHD-AN</a> gilt das nicht, und zwar grundsätzlich anders:</strong> Die DIZ-Implementierungsliste führt ausschließlich <strong>publizierte</strong> Instrumente und kennt die standortspezifischen Itemgruppen von UKHD, UKE und MHH gar nicht. Für diese 20 Items ist damit weder eine Erlaubnis noch eine Einschränkung dokumentiert — es ist keine Rechtsfrage, die sich aus der Liste beantworten ließe, sondern eine Governance-Entscheidung des Standorts. <strong>Rechteinhaber ist das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen.</strong> Dass der Wortlaut dennoch aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Ressource trägt <code class="language-plaintext highlighter-rouge">status = draft</code> und <code class="language-plaintext highlighter-rouge">experimental = true</code>, und bei einer Einschränkung ist die Umstellung auf metadata-only vorgesehen (Muster <a href="WAI.html">WAI</a>).</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -597,7 +612,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 09:59:00 +0000">
+  <span title="2026-10-01 11:16:00 +0000">
     2026-10-01
   </span>
 

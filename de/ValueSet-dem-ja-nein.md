@@ -7,10 +7,11 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
 
  **References** 
 
-* [ACE — Belastende Kindheitserfahrungen (erste 5 Fragen)](Questionnaire-ACE.md)
+* [ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)](Questionnaire-ACE.md)
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
 * [EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)](Questionnaire-EDEQ6.md)
 * [MHI — Medical History](Questionnaire-MHI.md)
+* [UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)](Questionnaire-UKHDAN.md)
 
 ### Logical Definition (CLD)
 
@@ -36,7 +37,7 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
   "title" : "DEM Ja/Nein",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T09:59:00+00:00",
+  "date" : "2026-10-01T11:16:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

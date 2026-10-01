@@ -33,7 +33,11 @@ Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim
 | **SSUK-2** | EFA | 2 | Soziale Unterstützung / belastende Interaktion | [Seite](SSUK-2.md) |
 | **ACE** | EFA | 5 | Belastende Kindheitserfahrungen | [Seite](ACE.md) |
 
-Dazu die standortspezifischen Item-Gruppen der UKHD (`UKHD-BI` Körperbild, `UKHD-EDP` Essstörungspathologie, `UKHD-CTT` und `UKHD-LE` Umfeld/Lebensereignisse sowie weitere Verlaufsitems), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.
+Dazu die **standortspezifischen Item-Gruppen der UKHD**, die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen. Sechs davon sind als **ein** Sammelbogen modelliert — [UKHD-AN](UKHD-AN.md), 14 Items ([ADR-011](Designentscheidungen.md)): Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Die siebte Gruppe `UKHD-CTT` (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.md): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.
+
+**Für diese 20 Items liegt keine dokumentierte Freigabe vor** — auch für die sechs, die im ACE stehen — — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der [UKHD-AN-Seite](UKHD-AN.md)).
+
+Zwei Gruppen sind **ausdrücklich ausgenommen**: `UKHD-BI` (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt) und `UKHD-EDP` (Essstörungspathologie, 11 Items — vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage, siehe [offener Punkt](Designentscheidungen.md)).
 
 ### Die Zuschnitte folgen einer dokumentierten Auswahlregel
 
@@ -51,7 +55,7 @@ Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes It
 
 ### Ein zusammenhängender Beispieldatensatz
 
-Für alle fünf AN-Instrumente liegen ausgefüllte Beispielantworten vor — und zwar **nicht** als fünf unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei **derselben Beispiel-Patientin**, die schon [DEM](Demographie.md) und [MHI](MHI.md) nutzen (`pcor-mii-exa-patient`): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.
+Für alle fünf AN-Instrumente und den Sammelbogen [UKHD-AN](UKHD-AN.md) liegen ausgefüllte Beispielantworten vor — und zwar **nicht** als unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei **derselben Beispiel-Patientin**, die schon [DEM](Demographie.md) und [MHI](MHI.md) nutzen (`pcor-mii-exa-patient`): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.
 
 | | |
 | :--- | :--- |
@@ -59,13 +63,16 @@ Für alle fünf AN-Instrumente liegen ausgefüllte Beispielantworten vor — und
 | [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md) | residuelle Pathologie; belegt die über`enableWhen`abhängige Frage`edeq30` |
 | [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) | mittlere Veränderungsmotivation;`language`=`de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde |
 | [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) | gegenläufige Items: hoch bei der unterstützenden, niedrig bei der belastenden Interaktion |
-| [ACEResponse](QuestionnaireResponse-ACEResponse.md) | zwei bejahte Items in der emotionalen Dimension |
+| [ACEResponse](QuestionnaireResponse-ACEResponse.md) | zwei bejahte Items in der emotionalen Dimension; von den drei Zeitangabe-Gruppen ist**nur die erste**belegt, weil nur`ace1`bejaht ist — die beiden anderen sind per`enableWhen`nicht freigeschaltet |
+| [UKHDANResponse](QuestionnaireResponse-UKHDANResponse.md) | ein**Initial-/Screening-Termin**: die Items anderer Erhebungszeitpunkte bleiben leer, die Gruppe`UKHD-ND`vollständig |
+
+Die UKHD-AN-Antwort trägt dabei eine Aussage, die keine der anderen macht: **Eine Antwort, die alle Items des Bogens füllt, kann es an keinem realen Erhebungszeitpunkt geben.** Die `TIMING`-Spalte des Item Level Dictionary ist im Questionnaire bewusst nicht modelliert ([ADR-011](Designentscheidungen.md)-Begründung auf der [UKHD-AN-Seite](UKHD-AN.md)) — sichtbar wird sie erst in der Antwort.
 
 **Score-Observations gibt es im AN-Block nicht.** Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe [ERQ-6](ERQ-6.md)).
 
 Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.
 
-Alle sieben Instanzen sind mit dem FHIR-Validator geprüft: **0 errors** (Details unter [Validierung](Validierung.md)).
+Alle acht Instanzen sind mit dem FHIR-Validator geprüft: **0 errors** (Details unter [Validierung](Validierung.md)).
 
 ### Status: vorläufig in PCOR-MII gepflegt
 
@@ -74,6 +81,8 @@ Die fünf AN-Instrumente sind als **PCOR-MII-eigene Ressourcen** modelliert — 
 ### Rechtelage
 
 Alle fünf AN-Instrumente sind laut DIZ-Implementierungsliste **frei publizierbar** — vollständige Questionnaires mit Itemtexten und Antwortoptionen sind möglich. Die Rechte an den Instrumenten und Item-Formulierungen verbleiben bei den jeweiligen Autor:innen (Details im `copyright`-Element der Questionnaires); die Originalpublikationen sind noch nicht gegen das Dictionary verifiziert (siehe [offene Punkte](Designentscheidungen.md)).
+
+**Für [UKHD-AN](UKHD-AN.md) gilt das nicht, und zwar grundsätzlich anders:** Die DIZ-Implementierungsliste führt ausschließlich **publizierte** Instrumente und kennt die standortspezifischen Itemgruppen von UKHD, UKE und MHH gar nicht. Für diese 20 Items ist damit weder eine Erlaubnis noch eine Einschränkung dokumentiert — es ist keine Rechtsfrage, die sich aus der Liste beantworten ließe, sondern eine Governance-Entscheidung des Standorts. **Rechteinhaber ist das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen.** Dass der Wortlaut dennoch aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Ressource trägt `status = draft` und `experimental = true`, und bei einer Einschränkung ist die Umstellung auf metadata-only vorgesehen (Muster [WAI](WAI.md)).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

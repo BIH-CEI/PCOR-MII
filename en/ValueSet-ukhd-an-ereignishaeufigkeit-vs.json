@@ -1,0 +1,54 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ukhd-an-ereignishaeufigkeit-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ukhd-an-ereignishaeufigkeit-vs</b></p><a name=\"en-ukhd-an-ereignishaeufigkeit-vs\"> </a><a name=\"en-hcukhd-an-ereignishaeufigkeit-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-ukhd-an-ereignishaeufigkeit.html\">codesystem UKHD-AN Ereignis einmalig oder wiederholt (Codes) v0.3.0 (CodeSystem)</a></p><p>This value set expansion contains 2 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"en-ukhd-an-ereignishaeufigkeit-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit-1\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ukhd-an-ereignishaeufigkeit.html#ukhd-an-ereignishaeufigkeit-1\">1</a></td><td>um ein einmaliges</td></tr><tr><td><a name=\"en-ukhd-an-ereignishaeufigkeit-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit-2\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ukhd-an-ereignishaeufigkeit.html#ukhd-an-ereignishaeufigkeit-2\">2</a></td><td>um ein mehrfaches Ereignis</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereignishaeufigkeit-vs",
+  "version" : "0.3.0",
+  "name" : "UkhdAnEreignishaeufigkeitVS",
+  "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T11:16:03+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-10-01T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit|0.3.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
+      "code" : "1",
+      "display" : "um ein einmaliges"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
+      "code" : "2",
+      "display" : "um ein mehrfaches Ereignis"
+    }]
+  }
+}

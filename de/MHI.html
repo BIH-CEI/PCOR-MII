@@ -296,6 +296,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="ACE.html">ACE</a>
       </li>
+      <li>
+        <a href="UKHD-AN.html">UKHD-AN</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -426,7 +429,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>34 der MHI-Items stammen nicht aus einem publizierten Instrument, sondern sind <strong>Eigenentwicklungen der Standorte</strong>: Körpergewichtsverlauf und AN-Subtyp aus Heidelberg (<code class="language-plaintext highlighter-rouge">UKHD-W</code>, <code class="language-plaintext highlighter-rouge">UKHD-AN</code>), die Medikationsfragen aus Heidelberg und Hamburg (<code class="language-plaintext highlighter-rouge">UKHD-MEDI</code>, <code class="language-plaintext highlighter-rouge">UKE-MEDI</code>). Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente und <strong>kennt diese Gruppen nicht</strong> — es gibt für sie also keine dokumentierte Freigabe.</p>
 
-<p>Aufgenommen sind sie trotzdem, weil es durchweg <strong>triviale Faktenfragen</strong> sind („Wie viel wiegen Sie aktuell in kg?", „Name des Medikaments") — keine schutzfähigen Schöpfungen, und ohne den Wortlaut könnten die Datenintegrationszentren sie nicht einheitlich implementieren. Für die <strong>entworfenen Item-Batterien</strong> derselben Standorte (etwa <code class="language-plaintext highlighter-rouge">UKHD-EDP</code>, <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>) gilt das ausdrücklich nicht; sie sind bis zu einer Freigabe nicht aufgenommen. Beides steht als <a href="Designentscheidungen.html">offener Punkt</a> im Entscheidungslog und ist mit den Standorten zu bestätigen.</p>
+<p>Aufgenommen sind sie trotzdem, weil es durchweg <strong>triviale Faktenfragen</strong> sind („Wie viel wiegen Sie aktuell in kg?", „Name des Medikaments") — keine schutzfähigen Schöpfungen, und ohne den Wortlaut könnten die Datenintegrationszentren sie nicht einheitlich implementieren. Für die <strong>entworfenen Item-Batterien</strong> derselben Standorte gilt diese Begründung ausdrücklich nicht. Sieben UKHD-Gruppen sind inzwischen als Sammelbogen <a href="UKHD-AN.html">UKHD-AN</a> modelliert — aber auf einer anderen Grundlage: nicht weil der Wortlaut unbedenklich wäre, sondern als bewusste Projektentscheidung zur Erprobung, mit <code class="language-plaintext highlighter-rouge">status = draft</code> und einem ausdrücklichen Vorbehalt im <code class="language-plaintext highlighter-rouge">copyright</code>. <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> bleibt davon ausgenommen, weil es vermutlich gar kein Standort-Original ist. Beides steht als <a href="Designentscheidungen.html">offener Punkt</a> im Entscheidungslog und ist mit den Standorten zu bestätigen.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -480,7 +483,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 09:59:00 +0000">
+  <span title="2026-10-01 11:16:00 +0000">
     2026-10-01
   </span>
 

@@ -73,7 +73,9 @@ A • marks that the instrument is collected in that entity; the number is the i
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, items not publishable | open — metadata-only planned |
 | ABQ (16) | TCH | — | — | • | use without pharmaceutical-industry involvement | open — metadata-only planned |
 
-On top of these come **site-specific item groups** that do not correspond to any published instrument and come straight from the dictionary — for example `UKE-HCU/PSE/TR/DOT` (healthcare utilisation, PSS), `UKHD-BI/EDP/CTT/LE` (body image, eating disorder psychopathology, environment, AN) and `MHH-DIAL/UTI/T/BP` (follow-up parameters, NTx). For these the DIZ implementation list carries **no entry at all**, so no clearance is documented; see the open points in [Design Decisions](Designentscheidungen.md).
+On top of these come **site-specific item groups** that do not correspond to any published instrument and come straight from the dictionary — for example `UKE-HCU/PSE/TR/DOT` (healthcare utilisation, PSS), the `UKHD-*` groups (AN) and `MHH-DIAL/UTI/T/BP` (follow-up parameters, NTx). For these the DIZ implementation list carries **no entry at all**, so no clearance is documented; see the open points in [Design Decisions](Designentscheidungen.md).
+
+For AN, seven of these groups are now modelled — as **one** collective questionnaire rather than seven resources ([ADR-011](Designentscheidungen.md)): [UKHD-AN](UKHD-AN.md), 20 items, covering `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-CTT`, `UKHD-LE`, `UKHD-ND` and `UKHD_D`. **This is a deliberate project decision for piloting, not a documented clearance:** the rights holder is Heidelberg University Hospital, no clearance is on record, and confirmation is to be obtained. `UKHD-BI` (body image — a visual figure-rating scale; data collection does not yet use it and the image template is missing from the dictionary) and `UKHD-EDP` (eating disorder psychopathology — most likely an EDI-2 subset with unresolved Hogrefe rights) are deliberately excluded. The instrument page is German-only.
 
 ### Where does each resource come from?
 
@@ -87,6 +89,7 @@ The rights situation determines how an instrument is modelled — not how import
 * **free** — complete questionnaire with item texts, answer options and scoring.
 * **Usage agreement** (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the `copyright` element.
 * **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to WAI (implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.
+* **clearance open** — the wording is published, but **no permission is on record**. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to [UKHD-AN](UKHD-AN.md) and to the 34 site items already published in [MHI](MHI.md). Should a restriction emerge, metadata-only is the intended remedy.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.md); all artefacts are listed under [Artifacts](artifacts.md).
 

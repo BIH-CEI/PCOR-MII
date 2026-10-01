@@ -28,7 +28,7 @@ Auf die PCOR-MII-Instrumente angewandt:
 | [OPD-SFK](OPD-SFK.md) | publiziert, Rechte bei Autor:innen/Verlag | frei**nach erfolgter Rücksprache** |
 | GI-PS | Download mit ausdrücklichem Nutzungsvorbehalt | Zustimmung nötig |
 | [WAI](WAI.md) | nicht veröffentlichbar | metadata-only |
-| **Standort-Itemgruppen**(UKHD, UKE, MHH) | **in der DIZ-Liste gar nicht geführt**— keine Freigabe dokumentiert | siehe offener Punkt unten |
+| **Standort-Itemgruppen**(UKHD, UKE, MHH) | **in der DIZ-Liste gar nicht geführt**— keine Freigabe dokumentiert | siehe offener Punkt unten; für sieben UKHD-Gruppen inzwischen modelliert als[UKHD-AN](UKHD-AN.md)— bewusste Projektentscheidung, keine Freigabe |
 | [PROMIS](PROMIS.md),[WHODAS](WHODAS-12.md) | eigenes Lizenzregime | Nutzungsvereinbarung |
 
 Die DIZ-Liste erfasst mit „frei verfügbar" offenkundig die **Beschaffbarkeit für die Forschung**, nicht die Frage, ob der Wortlaut in einer Spezifikation weitergegeben werden darf. Bei jedem Instrument, dessen deutsche Fassung aus einem Verlagsprodukt stammt, ist die Angabe daher eigenständig zu prüfen. (Das ist eine Arbeitsregel für dieses Projekt, keine Rechtsauskunft.)
@@ -52,7 +52,11 @@ Das Dictionary enthält 97 solche Variablen. **34 davon veröffentlicht PCOR-MII
 
 **Triviale Faktenfragen** — Körpergewicht, AN-Subtyp, Medikamentenliste. „Wie viel wiegen Sie aktuell in kg?" ist keine schutzfähige Schöpfung, und ohne den Wortlaut können die DIZ die Items nicht einheitlich implementieren. Diese 34 bleiben publiziert.
 
-**Entworfene Item-Batterien** — `UKHD-CTT` (6, Zeitangaben zu Kindheitstraumata), `UKHD-BI` (3, Körperbild), `UKHD-LE` (4, Lebensereignisse), `UKHD-ANB` (2), `UKHD-PT` (2), `UKHD-ND` (3). Hier steckt Autorenschaft aus Heidelberg, und diese Gruppen sind bisher **nicht** modelliert. Bis zu einer Freigabe durch den Standort werden sie **nicht mit Wortlaut aufgenommen** — bei Bedarf metadata-only wie beim [WAI](WAI.md).
+**Entworfene Item-Batterien** — `UKHD-CTT` (6, Zeitangaben zu Kindheitstraumata), `UKHD-BI` (3, Körperbild), `UKHD-LE` (4, Lebensereignisse), `UKHD-ANB` (2), `UKHD-PT` (2), `UKHD-CT` (1), `UKHD-ND` (3), `UKHD_D` (2). Hier steckt Autorenschaft aus Heidelberg.
+
+**Stand geändert, Rechtefrage unverändert (2026-10-01):** Sieben dieser Gruppen sind inzwischen modelliert — sechs als **ein** Sammelbogen [UKHD-AN](UKHD-AN.md) mit 14 Items, ein `group`-Item je Gruppe nach ADR-011, und `UKHD-CTT` (6 Items) im [ACE](ACE.md), der dadurch ein PCOR-MII-Komposit ist. Das ist eine **bewusste Projektentscheidung zur Erprobung und keine Freigabe**: Rechteinhaber bleibt das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen. Die Ressource trägt `status = draft` und `experimental = true`, und `Questionnaire.copyright` weist den Vorbehalt aus. Ergibt die Rückmeldung eine Einschränkung, ist die Umstellung auf metadata-only das vorgesehene Mittel (Muster [WAI](WAI.md)) — die Beispielantwort bliebe davon unberührt, weil sie keine Itemtexte enthält. **`UKHD-BI` ist bewusst nicht dabei**, und nicht aus Rechtegründen: Die Erhebung läuft noch nicht mit der visuellen Bildskala, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung.
+
+Für **UKE** und **MHH** ist nichts modelliert; dort bleibt es beim Stand oben.
 
 `UKHD-EDP` gehört **nicht** in diese Liste, obwohl es das UKHD-Präfix trägt — siehe den eigenen Punkt unten.
 
@@ -269,7 +273,11 @@ Damit werden aus zwei Fragen **zwei Nachschlage-Operationen**:
 
 Der Rename fällt also **gratis** mit ab, und es gibt keine zweite Quelle der Wahrheit, die auseinanderlaufen könnte. Eine ConceptMap ist dafür **nicht mehr erforderlich**; [`pcor-cm-erq-s-linkids`](ConceptMap-pcor-cm-erq-s-linkids.md) bleibt als vorgerechnete Lesehilfe und als ausdrückliche Warnung vor der Kollision bestehen, ist aber nicht mehr der Mechanismus.
 
-**Stand der Umsetzung (2026-09-30):** In allen zwölf PCOR-MII-Questionnaires gesetzt — **114 Items** tragen ihre Dictionary-Variable. Ohne Code bleiben genau die Items, die **keine** Dictionary-Variablen sind: Gruppen-Items, berechnete Score-Items und die PCOR-MII-eigenen Hilfsitems (etwa die Einheitenauswahl `Q_WB151`/`Q_WB152` im [MHI](MHI.md), die es im Dictionary nicht gibt). Dass diese Liste genau so aussieht, ist die Kontrolle, dass die Zuordnung stimmt.
+**Stand der Umsetzung (2026-10-01):** In allen dreizehn PCOR-MII-Questionnaires gesetzt — **134 Items** tragen ihre Dictionary-Variable (zuletzt die 20 UKHD-Items — 14 im [UKHD-AN](UKHD-AN.md), 6 im [ACE](ACE.md)). Ohne Code bleiben genau die Items, die **keine** Dictionary-Variablen sind: Gruppen-Items, berechnete Score-Items und die PCOR-MII-eigenen Hilfsitems (etwa die Einheitenauswahl `Q_WB151`/`Q_WB152` im [MHI](MHI.md) und die Wert-Items `AN_biography-wert`/`lowBMI-wert` im UKHD-AN, die es im Dictionary nicht gibt). Dass diese Liste genau so aussieht, ist die Kontrolle, dass die Zuordnung stimmt.
+
+**Der UKHD-AN ist dabei der erste Fall, in dem die Anti-Fragmentierungs-Grenze eine neue Ressource formt statt eine bestehende zu beschreiben** — sechs Dictionary-Gruppen, keine davon publiziert, keine mit Itemnummerierung, zusammen in einem Sammelbogen. Dass dabei nichts verloren geht, ist genau der Punkt von Entscheidung 2: Wer alle Items der Gruppe `UKHD-CTT` sucht, fragt die Property `instrument` ab und nicht den Dateinamen.
+
+**Und genau diese Gruppe hat die Behauptung dann geprüft.** `UKHD-CTT` liegt seit dem 01.10.2026 nicht mehr im Sammelbogen, sondern im [ACE](ACE.md) — das Item Level Dictionary nennt in der Spalte `ADDITIONAL INFORMATION` ausdrücklich den Bezug ihrer drei Item-Paare auf `ace1`, `ace2` und `ace3`, und `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Die Items mussten also dorthin, wo ihre Bedingung steht. Ihre sechs `item.code`-Codings und die Property `instrument = UKHD-CTT` sind davon **unberührt**: Die Abfrage findet die Gruppe weiterhin, obwohl sie die Ressource gewechselt hat. Der Preis ist ein anderer und offen benannter — der ACE ist dadurch kein Instrumenten-Zuschnitt mehr, sondern ein **PCOR-MII-Komposit mit zwei Rechtequellen**, und Titel, `description` und `copyright` sagen das.
 
 Das CodeSystem ist **generiert** und trägt `content = #fragment`: Es enthält nur die modellierten Variablen, während das Dictionary 454 über drei Entitäten führt. `#complete` wäre eine Falschaussage, und das CodeSystem wächst mit der Modellierung. Jedes Konzept trägt die Properties `instrument`, `category` und `entity` aus dem Dictionary — so ist auch ohne Questionnaire-Lookup erkennbar, wohin eine Variable gehört.
 

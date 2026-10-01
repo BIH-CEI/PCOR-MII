@@ -1745,6 +1745,214 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     }]
   },
   {
+    "code" : "AN_biography",
+    "display" : "AN_biography — Wie lange sind Sie bereits von Ihrer Essstörung betroffen?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-ANB"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "lowBMI",
+    "display" : "lowBMI — Welches war Ihr niedrigter BMI?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-ANB"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "treatment_outpatient",
+    "display" : "treatment_outpatient — Sind Sie zurzeit in psychotherapeutischer Behandlung?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific1",
+    "display" : "traumaspecific1 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific2",
+    "display" : "traumaspecific2 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific3",
+    "display" : "traumaspecific3 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific4",
+    "display" : "traumaspecific4 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific5",
+    "display" : "traumaspecific5 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "traumaspecific6",
+    "display" : "traumaspecific6 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-CTT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "life_event1_screening",
+    "display" : "life_event1_screening — Gab es in Ihrem Leben prägende belastende Lebensereignisse, die Sie …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-LE"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "life_event1_monitoring",
+    "display" : "life_event1_monitoring — Gab es seit der letzten Befragung prägende belastende …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-LE"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "lifev_discharge",
+    "display" : "lifev_discharge — Gab es seit Ihrer Aufnahme prägende belastende Lebensereignisse, …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-LE"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "lifev_text",
+    "display" : "lifev_text — Bitte benennen Sie diese Lebensereignisse:",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-LE"
+    },
+    {
+      "code" : "category",
+      "valueString" : "EFA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
     "code" : "medication1",
     "display" : "medication1 — Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?",
     "property" : [{
@@ -1774,6 +1982,86 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     {
       "code" : "entity",
       "valueString" : "AN, NTx, PSS"
+    }]
+  },
+  {
+    "code" : "new_diagnosis_monitoring",
+    "display" : "new_diagnosis_monitoring — Gab es seit der letzten Befragung weitere medizinische / psychische …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-ND"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "new_diagnosis_discharge",
+    "display" : "new_diagnosis_discharge — Gab es seit Ihrer Aufnahme weitere medizinische / psychische …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-ND"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "new_diagnosis_text",
+    "display" : "new_diagnosis_text — Bitte tragen Sie diese Diagnosen in das folgende Textfeld ein.",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-ND"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "bdkm15",
+    "display" : "bdkm15 — Waren Sie früher oder sind Sie zurzeit in psychotherapeutischer …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-PT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "bdkm16",
+    "display" : "bdkm16 — Wie oft haben Sie in den letzten 4 Wochen einen Arzt aufgesucht?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-PT"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
     }]
   },
   {
@@ -1834,6 +2122,38 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     {
       "code" : "category",
       "valueString" : "MHI"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "diagnosis_admit",
+    "display" : "diagnosis_admit — Welche Diagnose/-n sollen bei Ihnen hier behandelt werden?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD_D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "comorbid1",
+    "display" : "comorbid1 — Gibt es außer den zurvor genannten Diagnosen noch andere Diagnosen?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD_D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
     },
     {
       "code" : "entity",

@@ -112,11 +112,11 @@ Die drei ursprünglichen Beispiele, alle mit **0 errors, 0 warnings**:
 * [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md)
 * [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.md) (für den Beispiel-Questionnaire)
 
-Dazu der **AN-Beispieldatensatz** — fünf Beispielantworten und zwei Score-Observations, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite [AN](AN.md)): [ERQ6Response](QuestionnaireResponse-ERQ6Response.md), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md), [SSUK2Response](QuestionnaireResponse-SSUK2Response.md), [ACEResponse](QuestionnaireResponse-ACEResponse.md) sowie [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.md) und [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.md).
+Dazu der **AN-Beispieldatensatz** — sechs Beispielantworten und zwei Score-Observations, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite [AN](AN.md)): [ERQ6Response](QuestionnaireResponse-ERQ6Response.md), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md), [SSUK2Response](QuestionnaireResponse-SSUK2Response.md), [ACEResponse](QuestionnaireResponse-ACEResponse.md) und [UKHDANResponse](QuestionnaireResponse-UKHDANResponse.md) sowie [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.md) und [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.md).
 
-Diese sieben sind mit **0 errors** geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:
+Diese acht sind mit **0 errors** geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:
 
-* `dom-6` (fehlende Narrative) auf allen sieben — steht oben in der Tabelle als ignorierbar
+* `dom-6` (fehlende Narrative) auf allen acht — steht oben in der Tabelle als ignorierbar
 * ein `java.net.SocketTimeoutException` beim UCUM-Check der beiden `valueQuantity` — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource
 
 **Ein echter Fund beim Prüfen:** Die ERQ-6-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — **„Struktureller Fehler: Elemente in falscher Reihenfolge"**. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
