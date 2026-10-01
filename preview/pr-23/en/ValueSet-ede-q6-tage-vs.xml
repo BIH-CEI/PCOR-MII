@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ede-q6-tage-vs"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet ede-q6-tage-vs</b></p><a name="en-ede-q6-tage-vs"> </a><a name="en-hcede-q6-tage-vs"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-ede-q6-tage.html">codesystem EDE-Q6 Häufigkeit in 28 Tagen (Codes) v0.3.0 (CodeSystem)</a></p><p>This value set expansion contains 7 concepts.</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-0"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-0">0</a></td><td>kein Tag</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-1"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-1">1</a></td><td>1–5 Tage</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-2"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-2">2</a></td><td>6–12 Tage</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-3"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-3">3</a></td><td>13–15 Tage</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-4"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-4">4</a></td><td>16–22 Tage</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-5"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-5">5</a></td><td>23–27 Tage</td></tr><tr><td><a name="en-ede-q6-tage-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage-6"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code></td><td style="white-space:nowrap">  <a href="CodeSystem-ede-q6-tage.html#ede-q6-tage-6">6</a></td><td>jeden Tag</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/ede-q6-tage-vs"/>
+  <version value="0.3.0"/>
+  <name value="EdeQ6TageVS"/>
+  <title value="EDE-Q6 Häufigkeit in 28 Tagen"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T14:39:18+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-09-23T00:00:00Z"/>
+    <parameter>
+      <name value="used-codesystem"/>
+      <valueUri value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage|0.3.0"/>
+    </parameter>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="0"/>
+      <display value="kein Tag"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="1"/>
+      <display value="1–5 Tage"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="2"/>
+      <display value="6–12 Tage"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="3"/>
+      <display value="13–15 Tage"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="4"/>
+      <display value="16–22 Tage"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="5"/>
+      <display value="23–27 Tage"/>
+    </contains>
+    <contains>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+      <code value="6"/>
+      <display value="jeden Tag"/>
+    </contains>
+  </expansion>
+</ValueSet>

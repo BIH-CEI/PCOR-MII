@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ukhd-an-dauer-angabe-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ukhd-an-dauer-angabe-vs</b></p><a name=\"en-ukhd-an-dauer-angabe-vs\"> </a><a name=\"en-hcukhd-an-dauer-angabe-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-ukhd-an-dauer-angabe.html\">codesystem UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes) v0.3.0 (CodeSystem)</a></p><p>This value set expansion contains 3 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"en-ukhd-an-dauer-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe-1\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ukhd-an-dauer-angabe.html#ukhd-an-dauer-angabe-1\">1</a></td><td>seit … Monaten</td></tr><tr><td><a name=\"en-ukhd-an-dauer-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe-2\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ukhd-an-dauer-angabe.html#ukhd-an-dauer-angabe-2\">2</a></td><td>seit … Jahren</td></tr><tr><td><a name=\"en-ukhd-an-dauer-angabe-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe-3\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ukhd-an-dauer-angabe.html#ukhd-an-dauer-angabe-3\">3</a></td><td>weiß ich nicht</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-dauer-angabe-vs",
+  "version" : "0.3.0",
+  "name" : "UkhdAnDauerAngabeVS",
+  "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T14:39:18+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-10-01T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe|0.3.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
+      "code" : "1",
+      "display" : "seit … Monaten"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
+      "code" : "2",
+      "display" : "seit … Jahren"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
+      "code" : "3",
+      "display" : "weiß ich nicht"
+    }]
+  }
+}

@@ -1,0 +1,44 @@
+# PROMIS - PCOR-MII Implementation Guide v0.3.0
+
+## PROMIS
+
+**Translated page. Original language: German.**
+
+**PROMIS®** (Patient-Reported Outcomes Measurement Information System) ist ein vom US National Institutes of Health (NIH) gegründetes Instrumentariums-Framework zur standardisierten Erfassung patientenberichteter Gesundheitszustände über mehrere Domänen hinweg (z.B. Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Pain Interference, Social Function, Cognitive Function).
+
+Die PROMIS Health Organization (PHO) pflegt die Item-Banken und Profile international; das **PROMIS National Center Deutschland** (CPCOR Charité, Leitung Felix Fischer) verantwortet die validierten deutschen Übersetzungen.
+
+### PROMIS-Instrumente in PCOR-MII
+
+PCOR-MII referenziert die im MII PRO-Modul gepflegten PROMIS-Questionnaires — kein eigener Nachbau:
+
+* [**PROMIS-33 Profile v2.1**](PROMIS-33.md) — Multi-Domain HRQoL inkl. Cognitive Function, 33 Items über 8 Domänen (**geplant, noch nicht im MII PRO-Modul implementiert**)
+* [**PROMIS-29 Profile v2.1**](PROMIS-29.md) — Multi-Domain HRQoL, 29 Items über 7 Domänen + Schmerzintensität
+* [**PROMIS Cognitive Function SF 4a**](PROMIS-Cognitive-Function.md) — kognitive Funktion (Selbstauskunft), 4 Items
+* [**PROMIS-16 Profile v2.1 (PROPr)**](PROMIS-16.md) — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)
+
+### Lizenz & Copyright
+
+PROMIS-Ressourcen unterliegen dem 4-Schichten-Modell aus dem MII PRO-Modul:
+
+1. **FHIR-Resource-Struktur**© Medizininformatik-Initiative (CC-BY 4.0)
+1. **PROMIS-Items**© PROMIS Health Organization (Northwestern University)
+1. **Offizielle deutsche Übersetzungen**bereitgestellt durch PCOR-MII, kuratiert durch PROMIS National Center Deutschland
+1. **LOINC-Codes**© Regenstrief Institute
+
+Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1).
+
+### Item-Überlapp
+
+PROMIS-29 und PROMIS-16 überlappen sich in **11 der 16 PROMIS-16-Items** (gegen die Questionnaires im Dependency-Paket verifiziert): `pfa21`, `pfa23`, `edanx40`, `edanx41`, `eddep29`, `eddep41`, `hi7`, `an3`, `srpper46-caps`, `painin9`, `painin31`.
+
+**PROMIS-16 ist kein PROMIS-29-Subset.** Fünf Items sind PROMIS-16-spezifisch, und sie verteilen sich auf drei Domänen — nicht nur auf Cognitive Function: `sleep25` und `sleep90` (Sleep), `srpper31-caps` (Social Roles), `pc27r` und `pc-caps3r` (Cognitive Function). Praktische Konsequenz: Wer **PROMIS-29 + Cognitive Function SF 4a** erhebt, kann daraus **keinen vollständigen PROMIS-16 rekonstruieren** — auch nicht die Cognitive-Function-Domäne, denn die SF 4a nutzt vier andere Items (`pc2r`, `pc35r`, `pc36r`, `pc42r`).
+
+Bei kombinierter Erfassung sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine Item-basierte Score-Architektur ist im MII PRO-Modul für 2027 geplant.
+
+### Quellen
+
+* Übergeordneter IG: [MII PRO-Modul IG-Doku (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/Index.page.md?version=current) · [PRO-Bibliothek PROMIS-Sektion](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/Index.page.md?version=current) · [Raw-Package](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
+* PROMIS Health Organization: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
+* PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer
+
