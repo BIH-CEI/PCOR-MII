@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ukhd-an-ereigniszeitpunkt"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem ukhd-an-ereigniszeitpunkt</b></p><a name="ukhd-an-ereigniszeitpunkt"> </a><a name="hcukhd-an-ereigniszeitpunkt"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="ukhd-an-ereigniszeitpunkt-1"> </a></td><td>vor den ersten Anzeichen der Essstörung</td></tr><tr><td style="white-space:nowrap">2<a name="ukhd-an-ereigniszeitpunkt-2"> </a></td><td>nach den ersten Anzeichen der Essstörung</td></tr><tr><td style="white-space:nowrap">3<a name="ukhd-an-ereigniszeitpunkt-3"> </a></td><td>ich weiß es nicht mehr</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"/>
+  <version value="0.3.0"/>
+  <name value="UkhdAnEreigniszeitpunktCS"/>
+  <title value="UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T14:41:41+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="1"/>
+    <display value="vor den ersten Anzeichen der Essstörung"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="nach den ersten Anzeichen der Essstörung"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="ich weiß es nicht mehr"/>
+  </concept>
+</CodeSystem>
