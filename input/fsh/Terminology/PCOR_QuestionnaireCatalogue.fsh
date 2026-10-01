@@ -51,22 +51,27 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * ^content = #complete
 
 // ── Projekteigene Sammelbögen ───────────────────────────────────────────────
-* #dem "PCOR-MII Demographie (DEM) — Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems"
-* #mhi "PCOR-MII Medical History (MHI) — Sammelbogen, mit AN-spezifischen Zusatzitems"
+* #dem "PCOR-MII Demographie (DEM)" "Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems"
+* #mhi "PCOR-MII Medical History (MHI)" "Sammelbogen, mit AN-spezifischen Zusatzitems"
 
 // ── PSS-spezifisch, in PCOR-MII gepflegt ────────────────────────────────────
-* #opd-sfk "OPD-SFK — Strukturfragebogen, 12 Items"
-* #wai "WAI / Work Ability Score — 3-Item-Kurzfassung (metadata-only)"
-* #gsltpaq "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"
-* #expect "EXPECT — drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"
-* #ipq-s "IPQ-S — die offene Ursachenfrage des B-IPQ, Einzelitem"
+* #opd-sfk "OPD-SFK" "Strukturfragebogen, 12 Items"
+* #wai "WAI / Work Ability Score" "3-Item-Kurzfassung (metadata-only)"
+* #gsltpaq "GSLTPAQ" "Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"
+* #expect "EXPECT" "Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"
+* #ipq-s "IPQ-S" "Die offene Ursachenfrage des B-IPQ, Einzelitem"
 
 // ── AN-spezifisch, in PCOR-MII gepflegt ─────────────────────────────────────
 // Die Codes bezeichnen jeweils den PCOR-MII-ZUSCHNITT, nicht das Vollinstrument.
-* #erq-6 "ERQ-6 — 6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S"
-* #ede-q6 "EDE-Q6 — 6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire"
-* #ansocq-2 "ANSOCQ-2 — 2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire"
-* #ssuk-2 "SSUK-2 — 2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit"
-* #ace "ACE + Zeitangaben — die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)"
-* #ukhd-an "UKHD-AN — Sammelbogen der standortspezifischen AN-Zusatzitems des Universitätsklinikums Heidelberg, sechs Dictionary-Gruppen"
-* #ukhd-edp "UKHD-EDP — 11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"
+* #erq-6 "ERQ-6" "6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S"
+* #ede-q6 "EDE-Q6" "6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire"
+* #ansocq-2 "ANSOCQ-2" "2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire"
+* #ssuk-2 "SSUK-2" "2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit"
+* #ace "ACE + Zeitangaben" "Die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)"
+* #ukhd-pt "UKHD-PT" "Vorbehandlung, 2 Items (UKHD-Zusatzitems AN)"
+* #ukhd-anb "UKHD-ANB" "Essstörungsanamnese, 2 zusammengesetzte Items (UKHD-Zusatzitems AN)"
+* #ukhd-ct "UKHD-CT" "Aktuelle Behandlung, 1 Item (UKHD-Zusatzitems AN)"
+* #ukhd-le "UKHD-LE" "Belastende Lebensereignisse, 4 Items (UKHD-Zusatzitems AN)"
+* #ukhd-nd "UKHD-ND" "Neue Diagnosen, 3 Items (UKHD-Zusatzitems AN)"
+* #ukhd-d "UKHD-D" "Diagnosen bei Aufnahme, 2 Items (UKHD-Zusatzitems AN; Dictionary-Schreibweise UKHD_D)"
+* #ukhd-edp "UKHD-EDP" "11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"

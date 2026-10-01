@@ -47,11 +47,18 @@ Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen 
 | SSUK-2 — Soziale Unterstützung | EFA | 2 | **PCOR-MII** → [`SSUK2`](Questionnaire-SSUK2.html) | [SSUK-2](SSUK-2.html) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) |
 | ACE — Belastende Kindheitserfahrungen | EFA | 5 | **PCOR-MII** → [`ACE`](Questionnaire-ACE.html) | [ACE](ACE.html) | [ACEResponse](QuestionnaireResponse-ACEResponse.html) |
 
-Dazu der Sammelbogen der standortspezifischen Items, der **kein** publiziertes Instrument abbildet und deshalb in einer eigenen Zeile steht:
+Dazu die [UKHD-Zusatzitems](UKHD-Zusatzitems.html) — sechs eigenständige Bögen, einer je Dictionary-Gruppe, die **kein** publiziertes Instrument abbilden:
 
-| Sammelbogen | Kat. | Items | Ressource | Doku | Beispielantwort |
-|---|---|--:|---|---|---|
-| UKHD-AN — sieben Standort-Itemgruppen | DCH, TCH, EFA | 20 | **PCOR-MII** → [`UKHDAN`](Questionnaire-UKHDAN.html) — **Freigabe UKHD offen** | [UKHD-AN](UKHD-AN.html) | [UKHDANResponse](QuestionnaireResponse-UKHDANResponse.html) |
+| Bogen | Kat. | Items | Ressource | Beispielantwort |
+|---|---|--:|---|---|
+| UKHD-PT | TCH | 2 | [`UKHDPT`](Questionnaire-UKHDPT.html) | [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.html) |
+| UKHD-ANB | DCH | 2 (+2) | [`UKHDANB`](Questionnaire-UKHDANB.html) | [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.html) |
+| UKHD-CT | TCH | 1 | [`UKHDCT`](Questionnaire-UKHDCT.html) | [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.html) |
+| UKHD-LE | EFA | 4 | [`UKHDLE`](Questionnaire-UKHDLE.html) | [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.html) |
+| UKHD-ND | DCH | 3 | [`UKHDND`](Questionnaire-UKHDND.html) | — zum Initial-Termin nicht erhoben |
+| UKHD-D | DCH | 2 | [`UKHDD`](Questionnaire-UKHDD.html) | [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.html) |
+
+Für alle sechs gilt: **Freigabe UKHD offen, Herkunft des Wortlauts ungeklärt** — Einzelheiten auf [UKHD-Zusatzitems](UKHD-Zusatzitems.html).
 
 Die sechs Beispielantworten gehören zu **einem** Erhebungstermin derselben Beispiel-Patientin (`pcor-mii-exa-patient`) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf [AN](AN.html).
 
@@ -71,17 +78,17 @@ Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, 
 
 Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan.
 
-Sieben von ihnen sind inzwischen modelliert: sechs als **ein** Sammelbogen — [UKHD-AN](UKHD-AN.html), 14 Items, ein `group`-Item je Gruppe ([ADR-011](Designentscheidungen.html)) — und `UKHD-CTT` im [ACE](ACE.html), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
+Sieben von ihnen sind inzwischen modelliert: sechs als **je ein eigenes Questionnaire** — die [UKHD-Zusatzitems](UKHD-Zusatzitems.html), ein Bogen je Dictionary-Gruppe — und `UKHD-CTT` im [ACE](ACE.html), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
 
 | Gruppe | Erfasst | Items | Ressource | Rechtestatus |
 |---|---|--:|---|---|
-| `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
-| `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
-| `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII** → [UKHD-PT](Questionnaire-UKHDPT.html) | Freigabe UKHD offen |
+| `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII** → [UKHD-ANB](Questionnaire-UKHDANB.html) | Freigabe UKHD offen |
+| `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII** → [UKHD-CT](Questionnaire-UKHDCT.html) | Freigabe UKHD offen |
 | `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | **PCOR-MII** → [ACE](ACE.html) (Komposit) | Freigabe UKHD offen |
-| `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
-| `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
-| `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII** → [UKHD-LE](Questionnaire-UKHDLE.html) | Freigabe UKHD offen |
+| `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII** → [UKHD-ND](Questionnaire-UKHDND.html) | Freigabe UKHD offen |
+| `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII** → [UKHD-D](Questionnaire-UKHDD.html) | Freigabe UKHD offen |
 | `UKHD-BI` | Körperbild | 3 | **offen** — bewusst nicht modelliert | Freigabe UKHD offen |
 | `UKHD-EDP` | Essstörungspathologie | 11 | **offen** — vor einer Modellierung zu klären | **Rechtelage unbewertet** — je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste **nicht geführt** |
 

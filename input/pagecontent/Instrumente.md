@@ -72,9 +72,9 @@ Für AN sind sieben dieser Gruppen inzwischen modelliert — als **ein** Sammelb
 
 | Sammelbogen | Kat. | PSS | AN | NTx | Lizenz | Umsetzung |
 |---|---|:--:|:--:|:--:|---|---|
-| UKHD-AN (14) — `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-LE`, `UKHD-ND`, `UKHD_D` | DCH, TCH, EFA | — | • | — | **Freigabe offen** — in der DIZ-Liste nicht geführt; Rechteinhaber UKHD | [UKHD-AN](UKHD-AN.html) |
+| UKHD-Zusatzitems (6 Bögen, 14 Items) — `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-LE`, `UKHD-ND`, `UKHD-D` | DCH, TCH, EFA | — | • | — | **Freigabe offen** — in der DIZ-Liste nicht geführt; Herkunft des Wortlauts ungeklärt | [UKHD-Zusatzitems](UKHD-Zusatzitems.html) |
 
-**Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.** Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste **gar nicht vor** — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe [UKHD-AN](UKHD-AN.html) und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html)).
+**Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.** Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste **gar nicht vor** — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe [UKHD-Zusatzitems](UKHD-Zusatzitems.html) und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html)).
 
 Nicht modelliert bleiben für AN `UKHD-BI` (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary) und `UKHD-EDP` (Essstörungspathologie, 11 Items — vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Für PSS und NTx sind die Standortgruppen insgesamt noch nicht modelliert.
 
@@ -90,6 +90,6 @@ Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wicht
 - **frei** — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.
 - **Nutzungsvereinbarung** (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im `copyright`-Element.
 - **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.html) und [UKHD-EDP](UKHD-EDP.html) (beide umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.
-- **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft [UKHD-AN](UKHD-AN.html) sowie die bereits in [MHI](MHI.html) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.
+- **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft [UKHD-Zusatzitems](UKHD-Zusatzitems.html) sowie die bereits in [MHI](MHI.html) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

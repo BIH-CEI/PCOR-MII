@@ -41,9 +41,10 @@
 //       very often"; eine einmalige Angabe waere damit unvereinbar.
 //     traumaspecific2 = 1 (vor den ersten Anzeichen) — der ACE fragt nach
 //       Erfahrungen vor dem 18. Lebensjahr, die ersten Anzeichen der
-//       Essstoerung liegen nach UKHD-AN (AN_biography) um 2018.
+//       Essstoerung liegen nach UKHD-ANB (AN_biography) um 2018.
 //
-// DIE SECHS ZEITANGABEN STANDEN BIS ZUM 01.10.2026 IN UKHD-AN-Response.fsh.
+// DIE SECHS ZEITANGABEN STANDEN BIS ZUM 01.10.2026 IM FRUEHEREN SAMMELBOGEN
+//   (UKHD-AN-Response.fsh, inzwischen UKHD-Zusatz-Responses.fsh).
 //   Verschoben, weil das Dictionary ihren Bezug auf die ACE-Items ausdruecklich
 //   nennt und enableWhen ihn nur im selben Questionnaire ausdrucken kann.
 //

@@ -11,7 +11,8 @@
 //   ausdrücklich: traumaspecific1/2 auf ace1, 3/4 auf ace2, 5/6 auf ace3. Diese
 //   Abhängigkeit ist in FHIR nur als enableWhen ausdrückbar, und
 //   enableWhen.question nimmt eine linkId INNERHALB desselben Questionnaire.
-//   Die Items sind deshalb aus UKHD-AN.fsh hierher gezogen, statt die
+//   Die Items sind deshalb zu den ACE-Items gezogen (urspruenglich aus dem
+//   frueheren Sammelbogen UKHD-AN.fsh, heute UKHD-Zusatzitems), statt die
 //   Bedingung bloß zu dokumentieren.
 //
 //   FOLGE: Der Bogen ist nicht mehr der ACE-Zuschnitt, sondern ein
@@ -223,7 +224,7 @@ Description: "**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die erst
 //   beim DEM, dort mit umgekehrtem Ergebnis (19 von 27 englisch -> en).
 * language = #de
 * insert Version
-* code[+] = PcorQuestionnaireCatalogueCS#ace "ACE"
+* code[+] = PcorQuestionnaireCatalogueCS#ace "ACE + Zeitangaben"
 * status = #draft
 * experimental = true
 * subjectType = #Patient
@@ -317,7 +318,7 @@ Description: "**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die erst
   * enableWhen[=].operator = #=
   * enableWhen[=].answerCoding = DemAntwortCS#ja
   * extension[+].url = $designNote
-  * extension[=].valueMarkdown = "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht beim UKHD-Sammelbogen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
+  * extension[=].valueMarkdown = "**Die Zuordnung steht im Dictionary, sie ist nicht erschlossen.** Spalte `ADDITIONAL INFORMATION` sagt für `traumaspecific1` und `traumaspecific2` wörtlich *`ACE Abfrage ace1, Antwort Ja = 1`*, für `traumaspecific3`/`4` entsprechend `ace2` und für `traumaspecific5`/`6` `ace3`. Jedes Paar charakterisiert das Ereignis **einer** bejahten ACE-Frage — eine Angabe zur Häufigkeit, eine zur zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. **Warum die Items hier liegen und nicht bei den UKHD-Zusatzbögen:** `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Eine Abhängigkeit über Bogengrenzen hinweg ist in FHIR nicht ausdrückbar — die Items mussten also dorthin, wo ihre Bedingung steht. Dadurch wird aus dem ACE-Zuschnitt ein PCOR-MII-Komposit; der Bogen ist nicht mehr *der ACE*, und Titel, Beschreibung und `copyright` sagen das. **Nur `ace1` bis `ace3` haben Paare**, `ace4` und `ace5` nicht — passend dazu, dass die ersten drei abgrenzbare Ereignisse beschreiben (Misshandlung, Missbrauch), die letzten beiden andauernde Vernachlässigung, für die *einmalig oder wiederholt* kaum sinnvoll wäre."
   * item[+]
     * linkId = "traumaspecific1"
     * code[+] = PcorItemDictionaryCS#traumaspecific1

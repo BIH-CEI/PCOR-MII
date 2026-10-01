@@ -1,6 +1,6 @@
 **ACE + Zeitangaben** erfasst **belastende Kindheitserfahrungen** (vor dem 18. Lebensjahr) über die ersten fünf Fragen des *Adverse-Childhood-Experiences*-Fragebogens, je mit ja/nein — und ordnet die bejahten Ereignisse über sechs UKHD-Items zeitlich ein.
 
-> **Dieser Bogen ist ein PCOR-MII-Komposit, nicht der ACE.** Zu den fünf ACE-Items kommen seit dem 01.10.2026 die sechs Items der Dictionary-Gruppe `UKHD-CTT`, die vorher im Sammelbogen [UKHD-AN](UKHD-AN.html) standen. Damit hat der Bogen **zwei Rechtequellen** mit unterschiedlichem Status — siehe [Rechtelage](#rechtelage) und [Zwei Quellen in einem Bogen](#zwei-quellen).
+> **Dieser Bogen ist ein PCOR-MII-Komposit, nicht der ACE.** Zu den fünf ACE-Items kommen seit dem 01.10.2026 die sechs Items der Dictionary-Gruppe `UKHD-CTT`, die vorher im Sammelbogen [UKHD-Zusatzitems](UKHD-Zusatzitems.html) standen. Damit hat der Bogen **zwei Rechtequellen** mit unterschiedlichem Status — siehe [Rechtelage](#rechtelage) und [Zwei Quellen in einem Bogen](#zwei-quellen).
 
 ### Verwendung in PCOR-MII
 
