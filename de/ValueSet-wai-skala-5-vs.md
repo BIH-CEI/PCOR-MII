@@ -33,7 +33,7 @@ Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wer
   "title" : "WAI Antwortskala 5-stufig",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:16:03+00:00",
+  "date" : "2026-10-01T11:25:55+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

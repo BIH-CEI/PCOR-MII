@@ -33,7 +33,7 @@ Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `tr
   "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T11:16:03+00:00",
+  "date" : "2026-10-01T11:25:55+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
