@@ -58,7 +58,7 @@ A • marks that the instrument is collected in that entity; the number is the i
 | EXPECT (3) | DCH | • | — | — | no statement — not a standardised scale | [EXPECT](EXPECT.html) |
 | IPQ-S (1) | DCH | • | — | — | free — only the open B-IPQ causal question | [IPQ-S](IPQ-S.html) |
 | GSLTPAQ (6) | TCH | • | — | — | free | [GSLTPAQ](GSLTPAQ.html) |
-| ERQ-S (6) | DCH | — | • | — | free | [ERQ-S](ERQ-6.html) — the official ERQ short form, two subscale scores |
+| ERQ-6 (6) | DCH | — | • | — | free | [ERQ-6](ERQ-6.html) — a six-item subset of the ERQ, no score |
 | EDE-Q6 (6) | DCH | — | • | — | provided free by the publisher; confirmation sought | [EDE-Q6](EDE-Q6.html) — one item per subscale plus two additional questions |
 | ANSOCQ-2 (2) | TCH | — | • | — | free | [ANSOCQ-2](ANSOCQ-2.html) — most discriminating item per scale only |
 | SSUK-2 (2) | EFA | — | • | — | free | [SSUK-2](SSUK-2.html) — most discriminating item per scale only |
@@ -72,7 +72,7 @@ On top of these come **site-specific item groups** that do not correspond to any
 ### Where does each resource come from?
 
 - **MII PRO module** (`de.medizininformatikinitiative.kerndatensatz.pros`, currently 2026.7.0): every instrument reused module-wide — the PHQ family, WHODAS, PROMIS, and since 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 and WI-7, plus the GAD-7 since 2026.7.0. PCOR-MII references them rather than rebuilding them ([ADR-002](Designentscheidungen.html)).
-- **PCOR-MII itself**: DEM and MHI (project-specific compilations), OPD-SFK, WAI, GSLTPAQ, EXPECT and IPQ-S, and — provisionally, pending possible adoption into the MII PRO module — the AN instruments ERQ-S, EDE-Q6, ANSOCQ-2, SSUK-2 and ACE (see [ADR-003](Designentscheidungen.html)).
+- **PCOR-MII itself**: DEM and MHI (project-specific compilations), OPD-SFK, WAI, GSLTPAQ, EXPECT and IPQ-S, and — provisionally, pending possible adoption into the MII PRO module — the AN instruments ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 and ACE (see [ADR-003](Designentscheidungen.html)).
 
 ### Licence tiers
 

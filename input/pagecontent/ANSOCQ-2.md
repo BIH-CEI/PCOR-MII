@@ -15,7 +15,7 @@ Der ANSOCQ-2 ist ein **projektspezifischer Zuschnitt**: 2 der 20 ANSOCQ-Items (R
 
 Jedes Item trägt in `item.code` seine Variable aus dem Item Level Dictionary, gegen das CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.html). **Das ist der PCOR-MII-Code des Items** — ein zweites lokales CodeSystem für dieselben Items gibt es bewusst nicht.
 
-Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ansocq3`, `ansocq14`); beim [ERQ-S](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
+Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein (`ansocq3`, `ansocq14`); beim [ERQ-6](ERQ-6.html) ist das ausdrücklich **nicht** so. Zweck ist das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires ([ADR-011](Designentscheidungen.html)).
 
 ### Canonical
 
@@ -28,7 +28,7 @@ Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer üb
 | `ansocq3` | `ansocq3` | Körperteile, über die man sich bei Gewichtszunahme besonders Sorgen macht | 5 Feststellungen, Stadium 1–5 |
 | `ansocq14` | `ansocq14` | Zeit, die mit Gedanken an Nahrung und Gewicht verbracht wird | 5 Feststellungen, Stadium 1–5 |
 
-`linkId` und `item.code` stimmen hier überein — beim [ERQ-S](ERQ-6.html) ausdrücklich **nicht**.
+`linkId` und `item.code` stimmen hier überein — beim [ERQ-6](ERQ-6.html) ausdrücklich **nicht**.
 
 Die `linkId`s sind die Dictionary-Variablen-IDs und entsprechen den Itemnummern des ANSOCQ. Feststellungs-Texte und Instruktionstext sind wortgleich aus dem Item Level Dictionary übernommen; jedem Antwortcode (1–5) ist per `ordinalValue` das Stadium der Veränderungsbereitschaft zugeordnet (1 ≈ Precontemplation … 5 ≈ Maintenance).
 
