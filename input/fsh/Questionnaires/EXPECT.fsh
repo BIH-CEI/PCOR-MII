@@ -39,6 +39,7 @@ Description: "Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden
 * name = "EXPECT"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#expect "EXPECT"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

@@ -104,6 +104,7 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * name = "OPDSFK"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#opd-sfk "OPD-SFK"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

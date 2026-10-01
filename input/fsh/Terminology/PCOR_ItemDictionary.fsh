@@ -950,6 +950,85 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[+].code = #entity
   * ^property[=].valueString = "AN"
 
+// ── UKHD-EDP ──
+* #edp1 "edp1 — Angst vor Gewichtszunahme (Schlankheitsstreben) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp2 "edp2 — Essmenge vor anderen, Essanfaelle allein (Bulimie) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp3 "edp3 — Unzufriedenheit mit Koerperstellen (Koerperunzufriedenheit) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp4 "edp4 — geringe Selbstbewertung (Ineffektivitaet) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp5 "edp5 — Anspruch, der/die Beste zu sein (Perfektionismus) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp6 "edp6 — Naehe in Beziehungen (Misstrauen, invers) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp7 "edp7 — Gefuehle benennen koennen (interozeptive Wahrnehmung) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp8 "edp8 — Haltung zum Erwachsensein (Angst vor dem Erwachsenwerden, invers) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp9 "edp9 — Genuss beim Essen als Schwaeche (Askese) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp10 "edp10 — spontane Aeusserungen, die bereut werden (Impulsregulation) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #edp11 "edp11 — Kontaktfreude (soziale Unsicherheit, invers) [metadata-only: Originalwortlaut nicht abgebildet]"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-EDP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
 // ── UKHD-LE ──
 * #life_event1_screening "life_event1_screening — Gab es in Ihrem Leben prägende belastende Lebensereignisse, die Sie …"
   * ^property[+].code = #instrument

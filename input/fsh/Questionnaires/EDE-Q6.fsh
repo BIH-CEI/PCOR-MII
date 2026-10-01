@@ -236,6 +236,7 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
 //   Release — und beim EDE-Q ausserdem rechtlich zu klaeren.
 * language = #en
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ede-q6 "EDE-Q6"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

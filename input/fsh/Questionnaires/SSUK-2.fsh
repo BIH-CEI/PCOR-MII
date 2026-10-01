@@ -224,6 +224,7 @@ Description: "Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankhei
 * name = "SSUK2"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ssuk-2 "SSUK-2"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

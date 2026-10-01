@@ -39,6 +39,7 @@ Description: "Eine offene Frage nach den drei wichtigsten subjektiven Ursachen d
 * name = "IPQS"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ipq-s "IPQ-S"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

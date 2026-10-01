@@ -364,6 +364,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
 * name = "MHI"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#mhi "PCOR-MII Medical History (MHI)"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

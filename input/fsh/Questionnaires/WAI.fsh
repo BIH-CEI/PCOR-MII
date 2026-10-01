@@ -105,6 +105,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * name = "WAI"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#wai "WAI / Work Ability Score"
 * status = #draft
 * experimental = true
 * subjectType = #Patient
