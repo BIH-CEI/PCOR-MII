@@ -111,6 +111,7 @@ Description: "Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD.
 * name = "UKHDEDP"
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ukhd-edp "UKHD-EDP"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

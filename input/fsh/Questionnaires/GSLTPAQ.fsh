@@ -94,6 +94,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 //   MII-PRO-Modul, keine Sprachebene und keine neue Version dieser hier.
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#gsltpaq "GSLTPAQ"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

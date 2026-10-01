@@ -223,6 +223,7 @@ Description: "**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die erst
 //   beim DEM, dort mit umgekehrtem Ergebnis (19 von 27 englisch -> en).
 * language = #de
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ace "ACE"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

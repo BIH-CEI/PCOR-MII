@@ -642,6 +642,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
 //   ist hier mit Mehrheit Englisch.
 * language = #en
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#dem "PCOR-MII Demographie (DEM)"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

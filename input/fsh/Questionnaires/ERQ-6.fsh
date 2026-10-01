@@ -80,6 +80,7 @@ Description: "Projektspezifischer 6-Item-Zuschnitt des Emotion Regulation Questi
 //   und Psychometrie, keinen deutschen Text.
 * language = #en
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#erq-6 "ERQ-6"
 * status = #draft
 * experimental = true
 * subjectType = #Patient

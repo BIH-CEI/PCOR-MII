@@ -359,6 +359,7 @@ Description: "Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2"
 * name = "ANSOCQ2"
 * insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#ansocq-2 "ANSOCQ-2"
 * status = #draft
 * experimental = true
 * language = #en
