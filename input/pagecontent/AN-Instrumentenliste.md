@@ -47,7 +47,13 @@ Alle fünf sind **vorläufig in PCOR-MII** gepflegt — bis zu einer möglichen 
 | SSUK-2 — Soziale Unterstützung | EFA | 2 | **PCOR-MII** → [`SSUK2`](Questionnaire-SSUK2.html) | [SSUK-2](SSUK-2.html) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) |
 | ACE — Belastende Kindheitserfahrungen | EFA | 5 | **PCOR-MII** → [`ACE`](Questionnaire-ACE.html) | [ACE](ACE.html) | [ACEResponse](QuestionnaireResponse-ACEResponse.html) |
 
-Die fünf Beispielantworten gehören zu **einem** Erhebungstermin derselben Beispiel-Patientin (`pcor-mii-exa-patient`) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf [AN](AN.html).
+Dazu der Sammelbogen der standortspezifischen Items, der **kein** publiziertes Instrument abbildet und deshalb in einer eigenen Zeile steht:
+
+| Sammelbogen | Kat. | Items | Ressource | Doku | Beispielantwort |
+|---|---|--:|---|---|---|
+| UKHD-AN — sieben Standort-Itemgruppen | DCH, TCH, EFA | 20 | **PCOR-MII** → [`UKHDAN`](Questionnaire-UKHDAN.html) — **Freigabe UKHD offen** | [UKHD-AN](UKHD-AN.html) | [UKHDANResponse](QuestionnaireResponse-UKHDANResponse.html) |
+
+Die sechs Beispielantworten gehören zu **einem** Erhebungstermin derselben Beispiel-Patientin (`pcor-mii-exa-patient`) und sind als zusammenhängender Datensatz lesbar — Einzelheiten auf [AN](AN.html).
 
 ### Scores
 
@@ -61,21 +67,25 @@ Die fünf Beispielantworten gehören zu **einem** Erhebungstermin derselben Beis
 
 Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, **obwohl upstream ein vollständiges Artefakt vorliegt** (inklusive Index-Score und CQL). Hier fehlt nur die Referenzierung in PCOR-MII, nicht das Artefakt.
 
-### Standortspezifische Item-Gruppen (UKHD) — nicht modelliert
+### Standortspezifische Item-Gruppen (UKHD)
 
-Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan, sämtlich ohne FHIR-Ressource — weil ihnen eine dokumentierte Freigabe fehlt, nicht weil sie unwichtig wären.
+Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan.
 
-| Gruppe | Erfasst | Items | Status |
-|---|---|--:|---|
-| `UKHD-EDP` | Essstörungspathologie | 11 | **Rechtelage unbewertet** — je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste **nicht geführt** |
-| `UKHD-BI` | Körperbild | 3 | offen — Freigabe UKHD fehlt |
-| `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | offen — Freigabe UKHD fehlt |
-| `UKHD-LE` | Lebensereignisse | 2–4 | offen — Freigabe UKHD fehlt |
-| `UKHD-ANB` | AN-spezifische Anamnese | 2 | offen — Freigabe UKHD fehlt |
-| `UKHD-PT` | Vorbehandlung | 2 | offen — Freigabe UKHD fehlt |
-| `UKHD-ND` | Neue Diagnosen | 3 | offen — Freigabe UKHD fehlt |
+Sieben von ihnen sind inzwischen modelliert: sechs als **ein** Sammelbogen — [UKHD-AN](UKHD-AN.html), 14 Items, ein `group`-Item je Gruppe ([ADR-011](Designentscheidungen.html)) — und `UKHD-CTT` im [ACE](ACE.html), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
 
-Der `UKHD-EDP`-Block ist der Sonderfall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [Essstörungen — Erhebungsplan](Essstoerungen.html).
+| Gruppe | Erfasst | Items | Ressource | Rechtestatus |
+|---|---|--:|---|---|
+| `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | **PCOR-MII** → [ACE](ACE.html) (Komposit) | Freigabe UKHD offen |
+| `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-BI` | Körperbild | 3 | **offen** — bewusst nicht modelliert | Freigabe UKHD offen |
+| `UKHD-EDP` | Essstörungspathologie | 11 | **offen** — vor einer Modellierung zu klären | **Rechtelage unbewertet** — je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste **nicht geführt** |
+
+**Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.** `UKHD-BI` ist eine **visuelle Bildskala**: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der `UKHD-EDP`-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [Essstörungen — Erhebungsplan](Essstoerungen.html).
 
 ### Nicht in AN erhoben
 

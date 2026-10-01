@@ -64,11 +64,11 @@ Alle mit Priorität **A** im Screening, sofern nicht anders vermerkt:
 | Motivation to Change | **ANSOCQ** (20) | ANSOCQ-2 (2) | [ANSOCQ-2](ANSOCQ-2.html) — die Kurzform |
 | Social Support | **SSUK-8** (8) | SSUK (2) | [SSUK-2](SSUK-2.html) — die Kurzform |
 | Childhood Trauma | **ACE** (5) | — | [ACE](ACE.html) — **die Langform** |
-| Body Image | UKHD-BI (3) | — | offen — Freigabe UKHD fehlt |
-| Childhood Trauma Time Specification | UKHD-CTT (6) | — | offen — Freigabe UKHD fehlt |
-| Life Events | UKHD-LE (2–4) | — | offen — Freigabe UKHD fehlt |
-| AN specific history | UKHD-ANB (2) | — | offen — Freigabe UKHD fehlt |
-| Past Treatment | UKHD-PT (2) | — | offen — Freigabe UKHD fehlt |
+| Body Image | UKHD-BI (3) | — | **bewusst nicht modelliert** — visuelle Bildskala, Erhebung läuft noch nicht damit; Freigabe UKHD offen |
+| Childhood Trauma Time Specification | UKHD-CTT (6) | — | [ACE](ACE.html) — modelliert, dort per `enableWhen` an `ace1`–`ace3` gebunden; **Freigabe UKHD offen** |
+| Life Events | UKHD-LE (2–4) | — | [UKHD-AN](UKHD-AN.html) — modelliert (4 Items), **Freigabe UKHD offen** |
+| AN specific history | UKHD-ANB (2) | — | [UKHD-AN](UKHD-AN.html) — modelliert, **Freigabe UKHD offen** |
+| Past Treatment | UKHD-PT (2) | — | [UKHD-AN](UKHD-AN.html) — modelliert, **Freigabe UKHD offen** |
 | Personality Functioning | OPD-SFK (12) — Prio **C** | — | [OPD-SFK](OPD-SFK.html) |
 | Suicidality (nur stationär) | PHQ-9-Item (1) | — | über [PHQ-9](PHQ-9.html) |
 
@@ -130,7 +130,9 @@ Der Plan ist breiter als der aktuelle Umsetzungsstand. Offen sind vor allem:
 
 1. **Die Langformen ANSOCQ (20) und SSUK-8 (8)** — beide bisher nur in der Kurzform modelliert. Für das ANSOCQ liegt der englische Originalwortlaut vollständig vor (Rieger et al. 2002), für das SSUK-8 nicht.
 2. **ERQ-2** — die Kurzvariante der Emotionsregulation, im Plan vorgesehen, nicht modelliert.
-3. **Die UKHD-Itemgruppen** `UKHD-BI` (3), `UKHD-CTT` (6), `UKHD-LE` (4), `UKHD-ANB` (2), `UKHD-PT` (2), `UKHD-ND` (3) — sämtlich Prio A und sämtlich noch nicht modelliert. Sie bilden kein publiziertes Instrument ab, **aber genau deshalb fehlt ihnen auch jede dokumentierte Freigabe**: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Ob ihr Wortlaut in eine Spezifikation darf, ist eine Entscheidung des Standorts Heidelberg, keine Rechtsfrage, die sich aus der Liste beantworten ließe. Bis zu einer Freigabe werden sie **nicht mit Wortlaut aufgenommen** — siehe [offener Punkt](Designentscheidungen.html). Der `edp`-Block wird davon getrennt behandelt, weil er kein Standort-Original ist (siehe oben).
+3. **Die UKHD-Itemgruppen** — sämtlich Prio A. Sie bilden kein publiziertes Instrument ab, **aber genau deshalb fehlt ihnen auch jede dokumentierte Freigabe**: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Ob ihr Wortlaut in eine Spezifikation darf, ist eine Entscheidung des Standorts Heidelberg, keine Rechtsfrage, die sich aus der Liste beantworten ließe.
+
+   **Der Stand hat sich hier geändert, die Rechtefrage nicht.** Sieben Gruppen sind inzwischen modelliert: `UKHD-PT` (2), `UKHD-ANB` (2), `UKHD-CT` (1), `UKHD-LE` (4), `UKHD-ND` (3) und `UKHD_D` (2) als **ein** Sammelbogen [UKHD-AN](UKHD-AN.html) mit 14 Items ([ADR-011](Designentscheidungen.html)), dazu `UKHD-CTT` (6) im [ACE](ACE.html) — das Dictionary nennt deren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich, und FHIR kann ihn nur innerhalb eines Questionnaire ausdrücken. Das ist eine **bewusste Projektentscheidung zur Erprobung und keine Freigabe**: Rechteinhaber bleibt das Universitätsklinikum Heidelberg, eine Freigabe liegt nicht dokumentiert vor, und die Bestätigung ist einzuholen. Die Ressource trägt `status = draft` und `experimental = true`; bei einer Einschränkung ist die Umstellung auf metadata-only vorgesehen (Muster [WAI](WAI.html)). Nicht modelliert bleibt `UKHD-BI` (3) — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt. Der `edp`-Block wird ohnehin getrennt behandelt, weil er kein Standort-Original ist (siehe oben). Einzelheiten und die offenen Punkte zum Dictionary auf der [UKHD-AN-Seite](UKHD-AN.html).
 4. **Der CRO-Anteil** — Suizidalität ambulant und Therapeut:innen-Perspektive. Bisher betrachtet PCOR-MII nur PRO.
 5. **Die vier PROMIS-Summenscores und das EQ-5D.**
 6. **Die Vier-Use-Case-Struktur** — NTXr und NTXd sind im IG bisher als ein NTx geführt.
