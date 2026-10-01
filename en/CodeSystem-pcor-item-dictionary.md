@@ -1889,6 +1889,182 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   {
+    "code" : "edp1",
+    "display" : "edp1 — Angst vor Gewichtszunahme (Schlankheitsstreben) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp2",
+    "display" : "edp2 — Essmenge vor anderen, Essanfaelle allein (Bulimie) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp3",
+    "display" : "edp3 — Unzufriedenheit mit Koerperstellen (Koerperunzufriedenheit) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp4",
+    "display" : "edp4 — geringe Selbstbewertung (Ineffektivitaet) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp5",
+    "display" : "edp5 — Anspruch, der/die Beste zu sein (Perfektionismus) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp6",
+    "display" : "edp6 — Naehe in Beziehungen (Misstrauen, invers) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp7",
+    "display" : "edp7 — Gefuehle benennen koennen (interozeptive Wahrnehmung) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp8",
+    "display" : "edp8 — Haltung zum Erwachsensein (Angst vor dem Erwachsenwerden, invers) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp9",
+    "display" : "edp9 — Genuss beim Essen als Schwaeche (Askese) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp10",
+    "display" : "edp10 — spontane Aeusserungen, die bereut werden (Impulsregulation) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
+    "code" : "edp11",
+    "display" : "edp11 — Kontaktfreude (soziale Unsicherheit, invers) [metadata-only: Originalwortlaut nicht abgebildet]",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "UKHD-EDP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "AN"
+    }]
+  },
+  {
     "code" : "life_event1_screening",
     "display" : "life_event1_screening — Gab es in Ihrem Leben prägende belastende Lebensereignisse, die Sie …",
     "property" : [{

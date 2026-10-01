@@ -66,7 +66,7 @@ Alle mit Priorität **A** im Screening, sofern nicht anders vermerkt:
 | | | | |
 | :--- | :--- | :--- | :--- |
 | Emotion Regulation | **ERQ-6**(6) | ERQ-2 (2) | [ERQ-6](ERQ-6.md)—**die Langform** |
-| Eating Disorder Psychopathology | **EDE-Q6 (6) + EDP (11)**= 17 | — | [EDE-Q6](EDE-Q6.md); die 11`edp`-Items rechtlich unbewertet |
+| Eating Disorder Psychopathology | **EDE-Q6 (6) + EDP (11)**= 17 | — | [EDE-Q6](EDE-Q6.md)und[UKHD-EDP](UKHD-EDP.md)— letzterer metadata-only |
 | Motivation to Change | **ANSOCQ**(20) | ANSOCQ-2 (2) | [ANSOCQ-2](ANSOCQ-2.md)— die Kurzform |
 | Social Support | **SSUK-8**(8) | SSUK (2) | [SSUK-2](SSUK-2.md)— die Kurzform |
 | Childhood Trauma | **ACE**(5) | — | [ACE](ACE.md)—**die Langform** |

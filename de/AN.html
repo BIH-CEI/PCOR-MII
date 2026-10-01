@@ -299,6 +299,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="UKHD-AN.html">UKHD-AN</a>
       </li>
+      <li>
+        <a href="UKHD-EDP.html">UKHD-EDP</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -478,14 +481,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Belastende Kindheitserfahrungen</td>
       <td><a href="ACE.html">Seite</a></td>
     </tr>
+    <tr>
+      <td><strong>UKHD-EDP</strong></td>
+      <td>DCH</td>
+      <td style="text-align: right">11</td>
+      <td>Essstörungspathologie — vermutlich EDI-2-Zuschnitt</td>
+      <td><a href="UKHD-EDP.html">Seite</a> — metadata-only</td>
+    </tr>
   </tbody>
 </table>
 
 <p>Dazu die <strong>standortspezifischen Item-Gruppen der UKHD</strong>, die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen. Sechs davon sind als <strong>ein</strong> Sammelbogen modelliert — <a href="UKHD-AN.html">UKHD-AN</a>, 14 Items (<a href="Designentscheidungen.html">ADR-011</a>): Vorbehandlung (<code class="language-plaintext highlighter-rouge">UKHD-PT</code>), Essstörungsanamnese (<code class="language-plaintext highlighter-rouge">UKHD-ANB</code>), aktuelle Behandlung (<code class="language-plaintext highlighter-rouge">UKHD-CT</code>), belastende Lebensereignisse (<code class="language-plaintext highlighter-rouge">UKHD-LE</code>), neue Diagnosen (<code class="language-plaintext highlighter-rouge">UKHD-ND</code>) und Diagnosen bei Aufnahme (<code class="language-plaintext highlighter-rouge">UKHD_D</code>). Die siebte Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6 Zeitangaben zu Kindheitsbelastungen) steht im <a href="ACE.html">ACE</a>: Das Dictionary nennt ihren Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich, und <code class="language-plaintext highlighter-rouge">enableWhen</code> kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.</p>
 
-<p><strong>Für diese 20 Items liegt keine dokumentierte Freigabe vor</strong> — auch für die sechs, die im ACE stehen — — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der <a href="UKHD-AN.html">UKHD-AN-Seite</a>).</p>
+<p><strong>Für diese 20 Items liegt keine dokumentierte Freigabe vor</strong> — auch für die sechs, die im ACE stehen — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der <a href="UKHD-AN.html">UKHD-AN-Seite</a>).</p>
 
-<p>Zwei Gruppen sind <strong>ausdrücklich ausgenommen</strong>: <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt) und <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items — vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage, siehe <a href="Designentscheidungen.html">offener Punkt</a>).</p>
+<p><strong>Eine</strong> Gruppe ist <strong>ausdrücklich ausgenommen</strong>: <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt). <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items) ist dagegen als <a href="UKHD-EDP.html">eigener Bogen</a> modelliert — <strong>metadata-only</strong>, weil es vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage ist und ohnehin keine Freigabe des Standorts vorliegt. Damit sind alle UKHD-Gruppen der Entität AN abgedeckt, zwei davon ohne Wortlaut.</p>
 
 <h3 id="die-zuschnitte-folgen-einer-dokumentierten-auswahlregel">Die Zuschnitte folgen einer dokumentierten Auswahlregel</h3>
 
@@ -612,7 +622,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 11:25:00 +0000">
+  <span title="2026-10-01 11:30:00 +0000">
     2026-10-01
   </span>
 

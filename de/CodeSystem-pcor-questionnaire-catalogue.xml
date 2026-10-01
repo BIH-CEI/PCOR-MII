@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="pcor-questionnaire-catalogue"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem pcor-questionnaire-catalogue</b></p><a name="pcor-questionnaire-catalogue"> </a><a name="hcpcor-questionnaire-catalogue"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">dem<a name="pcor-questionnaire-catalogue-dem"> </a></td><td>PCOR-MII Demographie (DEM) — Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems</td></tr><tr><td style="white-space:nowrap">mhi<a name="pcor-questionnaire-catalogue-mhi"> </a></td><td>PCOR-MII Medical History (MHI) — Sammelbogen, mit AN-spezifischen Zusatzitems</td></tr><tr><td style="white-space:nowrap">opd-sfk<a name="pcor-questionnaire-catalogue-opd-sfk"> </a></td><td>OPD-SFK — Strukturfragebogen, 12 Items</td></tr><tr><td style="white-space:nowrap">wai<a name="pcor-questionnaire-catalogue-wai"> </a></td><td>WAI / Work Ability Score — 3-Item-Kurzfassung (metadata-only)</td></tr><tr><td style="white-space:nowrap">gsltpaq<a name="pcor-questionnaire-catalogue-gsltpaq"> </a></td><td>GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung</td></tr><tr><td style="white-space:nowrap">expect<a name="pcor-questionnaire-catalogue-expect"> </a></td><td>EXPECT — drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen</td></tr><tr><td style="white-space:nowrap">ipq-s<a name="pcor-questionnaire-catalogue-ipq-s"> </a></td><td>IPQ-S — die offene Ursachenfrage des B-IPQ, Einzelitem</td></tr><tr><td style="white-space:nowrap">erq-6<a name="pcor-questionnaire-catalogue-erq-6"> </a></td><td>ERQ-6 — 6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S</td></tr><tr><td style="white-space:nowrap">ede-q6<a name="pcor-questionnaire-catalogue-ede-q6"> </a></td><td>EDE-Q6 — 6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire</td></tr><tr><td style="white-space:nowrap">ansocq-2<a name="pcor-questionnaire-catalogue-ansocq-2"> </a></td><td>ANSOCQ-2 — 2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire</td></tr><tr><td style="white-space:nowrap">ssuk-2<a name="pcor-questionnaire-catalogue-ssuk-2"> </a></td><td>SSUK-2 — 2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit</td></tr><tr><td style="white-space:nowrap">ace<a name="pcor-questionnaire-catalogue-ace"> </a></td><td>ACE + Zeitangaben — die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)</td></tr><tr><td style="white-space:nowrap">ukhd-an<a name="pcor-questionnaire-catalogue-ukhd-an"> </a></td><td>UKHD-AN — Sammelbogen der standortspezifischen AN-Zusatzitems des Universitätsklinikums Heidelberg, sechs Dictionary-Gruppen</td></tr><tr><td style="white-space:nowrap">ukhd-edp<a name="pcor-questionnaire-catalogue-ukhd-edp"> </a></td><td>UKHD-EDP — 11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue"/>
+  <version value="0.3.0"/>
+  <name value="PcorQuestionnaireCatalogueCS"/>
+  <title value="PCOR-MII Questionnaire-Katalog"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.code`. Anders als die Canonical, die das **Artefakt** identifiziert, bezeichnet der Katalogcode das **Instrument** — damit mehrere Fassungen desselben Bogens als solche erkennbar sind (ADR-007). Lokal vergeben, weil weder LOINC noch SNOMED CT noch der MII-Questionnaire-Katalog Codes für diese Bögen führen; `Questionnaire.code` ist `0..*`, ein späterer Code wird also ergänzt statt ersetzt (ADR-004)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="14"/>
+  <concept>
+    <code value="dem"/>
+    <display value="PCOR-MII Demographie (DEM) — Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems"/>
+  </concept>
+  <concept>
+    <code value="mhi"/>
+    <display value="PCOR-MII Medical History (MHI) — Sammelbogen, mit AN-spezifischen Zusatzitems"/>
+  </concept>
+  <concept>
+    <code value="opd-sfk"/>
+    <display value="OPD-SFK — Strukturfragebogen, 12 Items"/>
+  </concept>
+  <concept>
+    <code value="wai"/>
+    <display value="WAI / Work Ability Score — 3-Item-Kurzfassung (metadata-only)"/>
+  </concept>
+  <concept>
+    <code value="gsltpaq"/>
+    <display value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"/>
+  </concept>
+  <concept>
+    <code value="expect"/>
+    <display value="EXPECT — drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"/>
+  </concept>
+  <concept>
+    <code value="ipq-s"/>
+    <display value="IPQ-S — die offene Ursachenfrage des B-IPQ, Einzelitem"/>
+  </concept>
+  <concept>
+    <code value="erq-6"/>
+    <display value="ERQ-6 — 6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S"/>
+  </concept>
+  <concept>
+    <code value="ede-q6"/>
+    <display value="EDE-Q6 — 6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire"/>
+  </concept>
+  <concept>
+    <code value="ansocq-2"/>
+    <display value="ANSOCQ-2 — 2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire"/>
+  </concept>
+  <concept>
+    <code value="ssuk-2"/>
+    <display value="SSUK-2 — 2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit"/>
+  </concept>
+  <concept>
+    <code value="ace"/>
+    <display value="ACE + Zeitangaben — die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)"/>
+  </concept>
+  <concept>
+    <code value="ukhd-an"/>
+    <display value="UKHD-AN — Sammelbogen der standortspezifischen AN-Zusatzitems des Universitätsklinikums Heidelberg, sechs Dictionary-Gruppen"/>
+  </concept>
+  <concept>
+    <code value="ukhd-edp"/>
+    <display value="UKHD-EDP — 11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"/>
+  </concept>
+</CodeSystem>

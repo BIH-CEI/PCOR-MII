@@ -32,12 +32,13 @@ Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim
 | **ANSOCQ-2** | TCH | 2 | Veränderungsmotivation (Stages of Change) | [Seite](ANSOCQ-2.md) |
 | **SSUK-2** | EFA | 2 | Soziale Unterstützung / belastende Interaktion | [Seite](SSUK-2.md) |
 | **ACE** | EFA | 5 | Belastende Kindheitserfahrungen | [Seite](ACE.md) |
+| **UKHD-EDP** | DCH | 11 | Essstörungspathologie — vermutlich EDI-2-Zuschnitt | [Seite](UKHD-EDP.md)— metadata-only |
 
 Dazu die **standortspezifischen Item-Gruppen der UKHD**, die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen. Sechs davon sind als **ein** Sammelbogen modelliert — [UKHD-AN](UKHD-AN.md), 14 Items ([ADR-011](Designentscheidungen.md)): Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Die siebte Gruppe `UKHD-CTT` (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.md): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.
 
-**Für diese 20 Items liegt keine dokumentierte Freigabe vor** — auch für die sechs, die im ACE stehen — — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der [UKHD-AN-Seite](UKHD-AN.md)).
+**Für diese 20 Items liegt keine dokumentierte Freigabe vor** — auch für die sechs, die im ACE stehen — anders als bei den fünf AN-Instrumenten, die die DIZ-Implementierungsliste als frei führt. Die Liste kennt die Standort-Itemgruppen gar nicht; Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf der [UKHD-AN-Seite](UKHD-AN.md)).
 
-Zwei Gruppen sind **ausdrücklich ausgenommen**: `UKHD-BI` (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt) und `UKHD-EDP` (Essstörungspathologie, 11 Items — vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage, siehe [offener Punkt](Designentscheidungen.md)).
+**Eine** Gruppe ist **ausdrücklich ausgenommen**: `UKHD-BI` (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt). `UKHD-EDP` (Essstörungspathologie, 11 Items) ist dagegen als [eigener Bogen](UKHD-EDP.md) modelliert — **metadata-only**, weil es vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage ist und ohnehin keine Freigabe des Standorts vorliegt. Damit sind alle UKHD-Gruppen der Entität AN abgedeckt, zwei davon ohne Wortlaut.
 
 ### Die Zuschnitte folgen einer dokumentierten Auswahlregel
 

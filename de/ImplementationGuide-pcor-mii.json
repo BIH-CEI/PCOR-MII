@@ -11,7 +11,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T11:25:55+00:00",
+  "date" : "2026-10-01T11:30:23+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -1593,6 +1593,18 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/pcor-questionnaire-catalogue"
+      },
+      "name" : "PCOR-MII Questionnaire-Katalog",
+      "description" : "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.code`. Anders als die Canonical, die das **Artefakt** identifiziert, bezeichnet der Katalogcode das **Instrument** — damit mehrere Fassungen desselben Bogens als solche erkennbar sind (ADR-007). Lokal vergeben, weil weder LOINC noch SNOMED CT noch der MII-Questionnaire-Katalog Codes für diese Bögen führen; `Questionnaire.code` ist `0..*`, ein späterer Code wird also ergänzt statt ersetzt (ADR-004).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/pcor-score-catalogue"
       },
       "name" : "PCOR-MII Score-Katalog (Codes)",
@@ -1890,6 +1902,42 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/ukhd-edp-stufe-6-vs"
+      },
+      "name" : "UKHD-EDP Antwortstufen (neutralisiert)",
+      "description" : "Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ukhd-edp-stufe-6"
+      },
+      "name" : "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)",
+      "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/UKHDEDP"
+      },
+      "name" : "UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)",
+      "description" : "Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD. **Metadata-only:** Struktur, `linkId`s, Antwortformat und Wertebereiche sind abgebildet, der Originalwortlaut der Items und der Antwortstufen bewusst nicht. Grund: Der Block ist vermutlich ein Zuschnitt des EDI-2 (je ein Item pro Subskala) — eines Hogrefe-Testverfahrens —, und unabhängig davon liegt für die Standort-Itemgruppen keine dokumentierte Freigabe vor. Kein Score: Ein Item je Subskala bildet die Subskala nicht ab.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/wai-skala-5-vs"
       },
       "name" : "WAI Antwortskala 5-stufig",
@@ -2067,7 +2115,7 @@
               "valueUrl" : "ACE.html"
             }],
             "nameUrl" : "ACE.html",
-            "title" : "ACE (Belastende Kindheitserfahrungen)",
+            "title" : "ACE + Zeitangaben (Belastende Kindheitserfahrungen)",
             "generation" : "markdown"
           },
           {
@@ -2077,6 +2125,15 @@
             }],
             "nameUrl" : "UKHD-AN.html",
             "title" : "UKHD-AN (Standortspezifische AN-Zusatzitems)",
+            "generation" : "markdown"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "UKHD-EDP.html"
+            }],
+            "nameUrl" : "UKHD-EDP.html",
+            "title" : "UKHD-EDP (Essstörungspathologie, metadata-only)",
             "generation" : "markdown"
           }]
         }]

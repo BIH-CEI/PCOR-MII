@@ -30,9 +30,9 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
+    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
     "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
-    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein"
+    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
@@ -341,6 +341,17 @@
     "uses" : {
     },
     "ValueSet-ukhd-an-psychotherapie-vs.html" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdEdpStufe6CS",
+    "title" : "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)",
+    "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
+    "uses" : {
+    },
+    "ValueSet-ukhd-edp-stufe-6-vs.html" : "UKHD-EDP Antwortstufen (neutralisiert)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",

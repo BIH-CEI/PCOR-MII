@@ -68,6 +68,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }]
   }],
   "copyright" : "Quelle: Ehrenthal JC, Dinger U, Schauenburg H, Horsch L, Dahlbender RW, Gierk B. Entwicklung einer Zwölf-Item-Version des OPD-Strukturfragebogens (OPD-SFK). Z Psychosom Med Psychother 2015; 61(3):262-274. doi:10.13109/zptm.2015.61.3.262. Verlagsrechte: © 2015 Vandenhoeck & Ruprecht GmbH & Co. KG, Göttingen. Der Artikel ist beim Verlag als Open Access verfügbar; eine explizite Creative-Commons-Lizenz ist dort nicht ausgewiesen. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei verfügbar, nach erfolgter Rücksprache mit den Autor:innen. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen bzw. beim Verlag; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Profile, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "opd-sfk",
+    "display" : "OPD-SFK"
+  }],
   "item" : [{
     "linkId" : "opd-sfk-intro",
     "text" : "Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist.",

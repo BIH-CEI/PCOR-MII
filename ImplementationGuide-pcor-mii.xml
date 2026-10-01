@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-10-01T11:25:55+00:00"/>
+  <date value="2026-10-01T11:30:23+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -1325,6 +1325,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/pcor-questionnaire-catalogue"/>
+      </reference>
+      <name value="PCOR-MII Questionnaire-Katalog"/>
+      <description value="Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.code`. Anders als die Canonical, die das **Artefakt** identifiziert, bezeichnet der Katalogcode das **Instrument** — damit mehrere Fassungen desselben Bogens als solche erkennbar sind (ADR-007). Lokal vergeben, weil weder LOINC noch SNOMED CT noch der MII-Questionnaire-Katalog Codes für diese Bögen führen; `Questionnaire.code` ist `0..*`, ein späterer Code wird also ergänzt statt ersetzt (ADR-004)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/pcor-score-catalogue"/>
       </reference>
       <name value="PCOR-MII Score-Katalog (Codes)"/>
@@ -1597,6 +1608,39 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/ukhd-edp-stufe-6-vs"/>
+      </reference>
+      <name value="UKHD-EDP Antwortstufen (neutralisiert)"/>
+      <description value="Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ukhd-edp-stufe-6"/>
+      </reference>
+      <name value="UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)"/>
+      <description value="Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/UKHDEDP"/>
+      </reference>
+      <name value="UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)"/>
+      <description value="Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD. **Metadata-only:** Struktur, `linkId`s, Antwortformat und Wertebereiche sind abgebildet, der Originalwortlaut der Items und der Antwortstufen bewusst nicht. Grund: Der Block ist vermutlich ein Zuschnitt des EDI-2 (je ein Item pro Subskala) — eines Hogrefe-Testverfahrens —, und unabhängig davon liegt für die Standort-Itemgruppen keine dokumentierte Freigabe vor. Kein Score: Ein Item je Subskala bildet die Subskala nicht ab."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/wai-skala-5-vs"/>
       </reference>
       <name value="WAI Antwortskala 5-stufig"/>
@@ -1755,7 +1799,7 @@
               <valueUrl value="ACE.html"/>
             </extension>
             <nameUrl value="ACE.html"/>
-            <title value="ACE (Belastende Kindheitserfahrungen)"/>
+            <title value="ACE + Zeitangaben (Belastende Kindheitserfahrungen)"/>
             <generation value="markdown"/>
           </page>
           <page>
@@ -1764,6 +1808,14 @@
             </extension>
             <nameUrl value="UKHD-AN.html"/>
             <title value="UKHD-AN (Standortspezifische AN-Zusatzitems)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="UKHD-EDP.html"/>
+            </extension>
+            <nameUrl value="UKHD-EDP.html"/>
+            <title value="UKHD-EDP (Essstörungspathologie, metadata-only)"/>
             <generation value="markdown"/>
           </page>
         </page>

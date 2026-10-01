@@ -90,6 +90,11 @@
     </coding>
   </jurisdiction>
   <copyright value="Die Items dieses Bogens sind Eigenentwicklungen des Standorts Heidelberg und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN, Gruppen UKHD-PT, UKHD-ANB, UKHD-CT, UKHD-LE, UKHD-ND, UKHD_D; die siebte Gruppe UKHD-CTT steht im [ACE](Questionnaire-ACE.html) und ist dort mit derselben Einschränkung versehen). **Rechteinhaber ist das Universitätsklinikum Heidelberg. Eine Freigabe für die Veröffentlichung des Wortlauts liegt nicht dokumentiert vor und ist einzuholen.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."/>
+  <code>
+    <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue"/>
+    <code value="ukhd-an"/>
+    <display value="UKHD-AN"/>
+  </code>
   <item>
     <extension url="http://hl7.org/fhir/StructureDefinition/designNote">
       <valueMarkdown value="Dictionary-Gruppe `UKHD-PT`, DOMAIN *Past Treatment*, Kategorie TCH. **Zwei Auffälligkeiten, die eine fachliche Prüfung brauchen:** (a) Die Variablen-IDs `bdkm15`/`bdkm16` passen zu keiner anderen Variable dieser Gruppen und deuten auf ein anderes Erhebungsinstrument als Ursprung — das Präfix ist im Dictionary nicht erläutert. (b) `bdkm16` fragt nach **Arztbesuchen**, nicht nach Psychotherapie, steht aber in der Gruppe *Past Treatment* mit 4-Wochen-Recall; inhaltlich gehört es eher zur Versorgungsinanspruchnahme."/>

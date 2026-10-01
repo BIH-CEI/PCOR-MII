@@ -64,6 +64,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }]
   }],
   "copyright" : "Die Items entstammen wortgleich der autorisierten deutschen Übersetzung: Hilbert A, Tuschen-Caffier B. Eating Disorder Examination-Questionnaire. Deutschsprachige Übersetzung. 2. Auflage. Tübingen: dgvt-Verlag, 2016. © 2016 Anja Hilbert. Der Verlag stellt den vollständigen Fragebogen samt Auswertungsbogen selbst frei zum Download bereit (dgvt-verlag.de, ohne Registrierung oder Bezahlschranke); auf diese Bereitstellung stützt sich die Aufnahme des Wortlauts hier. Zugleich trägt die Publikation den Vorbehalt „Alle Rechte vorbehalten“, der ausdrücklich auch die Einspeicherung und Verarbeitung in elektronischen Systemen nennt. Eine ausdrückliche Zustimmung der Rechteinhaberin für die hiesige Verwendung liegt nicht vor und wird angestrebt — die Abwägung ist unter Designentscheidungen dokumentiert. Englisches Original: EDE-Q (Fairburn & Beglin 1994), abgeleitet aus der EDE (Fairburn, Cooper & O'Connor 1993). Zuschnitt nach dem PCOR-MII Item Level Dictionary. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "ede-q6",
+    "display" : "EDE-Q6"
+  }],
   "item" : [{
     "linkId" : "edeq-intro",
     "text" : "The following questions are concerned with the past four weeks (28 days) only.",

@@ -98,7 +98,11 @@ Das sind **die elf Subskalen des EDI-2** (**Eating Disorder Inventory-2**, Garne
 1. Bei Bestätigung: Eintrag in der DIZ-Liste nachziehen und die Rechtelage bei Hogrefe klären.
 1. Erst danach modellieren — voraussichtlich**metadata-only**, analog BDI-II und[WAI](WAI.md).
 
-Bis dahin ist `UKHD-EDP` in PCOR-MII **nicht modelliert**, und das ist kein Rückstand, sondern die richtige Reihenfolge.
+**Umgesetzt am 01.10.2026 — als metadata-only.** `UKHD-EDP` ist jetzt als [eigener Bogen](UKHD-EDP.md) modelliert, nach dem Muster des [WAI](WAI.md): Struktur, `linkId`s, Antwortformat und Wertebereiche vollständig, Item-Texte und Antwortstufen **neutralisiert**. Auch die Displays der elf Variablen im CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md) sind neutralisiert — sonst hätte das Dictionary veröffentlicht, was der Questionnaire zurückhält.
+
+Der Grund, das jetzt zu entscheiden statt auf die Bestätigung zu warten: **Metadata-only ist unter beiden Lesarten richtig.** Ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt damit nicht an der offenen Frage — die Bestätigung bleibt trotzdem der erste Schritt, bevor `Questionnaire.code` oder EDI-2-`linkId`s vergeben werden.
+
+Ein zusätzliches Indiz hat sich beim Modellieren ergeben: Das Antwortformat ist **sechsstufig**, und das EDI-2 nutzt genau sechs Stufen — die übrigen Instrumente der AN-Batterie nutzen vier, fünf oder sieben.
 
 #### ❓ ACE-D — deutsche Fassung ist nicht frei publizierbar
 
@@ -355,7 +359,7 @@ Bei **Druckfehler in der Vorlage** bleibt die übernommene Fassung unverändert.
 | :--- | :--- |
 | Das Original liegt als Questionnaire vor (typisch: die Langform im MII-PRO-Modul) | `derivedFrom`auf dessen Canonical |
 | Das Original ist nur publiziert (Artikel, Verlagsbogen, Autoren-PDF) | **nicht**`derivedFrom`. Zitation in`copyright`, Begründung im`designNote`, Einzelheiten auf der Instrumentenseite |
-| Zwei Fassungen desselben Instruments stehen nebeneinander | gemeinsamer**Katalogcode**in`Questionnaire.code`— siehe ADR-007 |
+| Zwei Fassungen desselben Instruments stehen nebeneinander | gemeinsamer**Katalogcode**in`Questionnaire.code`aus[`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.md)— siehe ADR-007 |
 
 **Was `derivedFrom` nicht leistet.** Es sagt **dass** abgeleitet wurde, nicht **wie**. Übersetzung, Kurzform, Adaption und Teilmenge sind alle „based on" und im Element nicht unterscheidbar. R4 hat für `Questionnaire` **kein** eigenes Element für eine Übersetzungsbeziehung und auch kein `relatedArtifact`. Die **Art** der Ableitung gehört deshalb zwingend in den `designNote` — sonst ist die Angabe kaum interpretierbar.
 
@@ -426,7 +430,7 @@ Der Fall sieht ADR-005 (unten) und dem [ANSOCQ-2](ANSOCQ-2.md) ähnlich, ist abe
 **Wie es umzusetzen ist.**
 
 1. **Identische `linkId`s in beiden Ressourcen.**Dann braucht es keine ConceptMap, und eine Zusammenführung auf Item-Ebene ist technisch möglich — sie bleibt aber eine bewusste Entscheidung der Auswertung und wird nicht stillschweigend ermöglicht.
-1. **Derselbe Katalogcode**(`Questionnaire.code`aus dem MII-Questionnaire-Katalog), damit beide als zwei Fassungen**eines**Instruments erkennbar sind und nicht als zwei Instrumente.
+1. **Derselbe Katalogcode**in`Questionnaire.code`, damit beide als zwei Fassungen**eines**Instruments erkennbar sind und nicht als zwei Instrumente. Dafür genügt die Canonical nicht: Sie identifiziert laut R4 das**Artefakt**(“a literal address at which an authoritative instance of this questionnaire is found”), während`code`das**Konzept**bezeichnet, das der Bogen repräsentiert — und genau das ist bei zwei Fassungen dasselbe. Hier stand zunächst „aus dem MII-Questionnaire-Katalog“; der führt aber weder den GSLTPAQ noch einen der AN-Bögen, womit die Regel im eigenen Anwendungsfall nicht umsetzbar war. Seit dem 01.10.2026 gibt es dafür[`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.md); ein späterer MII-Code wird ergänzt, nicht ersetzt (ADR-004).
 1. Die PCOR-MII-Fassung trägt`experimental = true`und einen`designNote`, der die validierte Fassung benennt und sagt, warum die Eigenübersetzung fortbesteht.
 1. **Kein Retire bei Ankunft der Upstream-Fassung.**Die PCOR-MII-Fassung bleibt`active`, solange mit ihr erhoben wird, und geht erst auf`status = retired`, wenn die Erhebung endet.`retired`bleibt auflösbar — genau das brauchen Alt-`QuestionnaireResponse`s.
 1. **Vergleichbarkeit ausdrücklich ausweisen**, nicht voraussetzen: Antworten aus beiden Fassungen sind nicht ohne Weiteres poolbar.
@@ -541,7 +545,7 @@ Der lokale Code in PCOR-MII trägt bereits denselben Namen `promis-propr-utility
 **Entscheidung:**
 
 1. **Pflege vorerst in PCOR-MII**(analog EXPECT/IPQ-S) — ausdrücklich**vorläufig, zum Testen**. Sobald die Instrumente offiziell abgestimmt sind, können Teile ins**MII-PRO-Modul**aufgenommen werden; PCOR-MII würde sie dann referenzieren statt selbst pflegen (Muster SCOFF/SSD-12/WI-7 seit MII PRO 2026.6.0). Bei einer Übernahme ändern sich die kanonischen URLs — dann ist eine Migrations-ConceptMap bzw. ein Seitenhinweis vorzusehen (Vorbild:`mii-cm-pro-gad-7-linkids`).
-1. **Keine Instrument-Codes des Vollinstruments an Zuschnitte:**SNOMED CT kennt Konzepte für ANSOCQ (`443321009`) und EDE-Q (`446825002`), LOINC ein Panel für ACE (`82813-7`) — alle bezeichnen das jeweilige Vollinstrument. Ein 2-, 5- oder 6-Item-Zuschnitt ist nicht das validierte Instrument;`Questionnaire.code`bleibt daher leer, die Codes sind in den FSH-Kommentaren dokumentiert.
+1. **Keine Instrument-Codes des Vollinstruments an Zuschnitte:**SNOMED CT kennt Konzepte für ANSOCQ (`443321009`) und EDE-Q (`446825002`), LOINC ein Panel für ACE (`82813-7`) — alle bezeichnen das jeweilige Vollinstrument. Ein 2-, 5- oder 6-Item-Zuschnitt ist nicht das validierte Instrument; diese Codes werden daher**nicht**vergeben und sind nur in den FSH-Kommentaren dokumentiert.**Präzisiert am 01.10.2026:**`Questionnaire.code`bleibt deshalb nicht leer, sondern trägt einen**lokalen Katalogcode**aus[`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.md), der ausdrücklich den**Zuschnitt**bezeichnet und nicht das Vollinstrument —`ansocq-2`ist der Zweiitem-Zuschnitt, nicht das ANSOCQ. Das Verbot betrifft die Vollinstrument-Codes, nicht die Kodierung überhaupt.
 1. **Kein Score ohne validierte Grundlage:**Für keinen der Zuschnitte existiert eine publizierte Scoring-Vorschrift; SSUK-2 ist zudem gegenläufig gepolt (Begründungsmuster wie EXPECT). Antwortcodes tragen`ordinalValue`, damit eine spätere Auswertung möglich bleibt.
 1. **Wortlaut und Kodierung aus dem Dictionary:**Antwortcodes = numerische Dictionary-Codes; Ja/Nein-Items nutzen das projektweite`DemJaNeinVS`. Visuelle Skalen werden nach dem EXPECT-Muster als`integer`+ Slider mit Anker-`display`-Item umgesetzt.
 1. **Entscheidungen in der Ressource selbst:**Jedes AN-Questionnaire trägt seine Designentscheidungen zusätzlich maschinenlesbar in der[`designNote`-Extension](http://hl7.org/fhir/StructureDefinition/designNote)(`valueMarkdown`) — bogenweite Entscheidungen auf Questionnaire-Ebene, punktuelle direkt am`item`(z. B. das`edeq30`-Erratum). So reisen die Begründungen mit, wenn eine Ressource ins MII-PRO-Modul übernommen wird; diese Seite bleibt das ausführliche Log.

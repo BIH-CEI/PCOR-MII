@@ -105,11 +105,11 @@
     "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
     "uses" : {
     },
-    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
+    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
     "Questionnaire-MHI.html" : "MHI — Medical History",
-    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)",
     "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
-    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)"
+    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
+    "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
@@ -398,6 +398,18 @@
     "uses" : {
     },
     "Questionnaire-UKHDAN.html" : "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-edp-stufe-6-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "UkhdEdpStufe6VS",
+    "title" : "UKHD-EDP Antwortstufen (neutralisiert)",
+    "description" : "Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"],
+    "uses" : {
+    },
+    "Questionnaire-UKHDEDP.html" : "UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",

@@ -60,6 +60,11 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }]
   }],
   "copyright" : "Die Items `GIPS13`, `GIPS56a`, `GIPS56b1`–`GIPS56b4`, `GIPS57a`, `GIPS57b` und `GIPS58` stammen aus dem GI-PS (doi:10.13109/zptm.2023.69.1.56). Die Eigentums-, Urheber-, Weitergabe- und Veröffentlichungsrechte verbleiben bei den jeweiligen Testautor:innen; das GI-PS oder Teile davon dürfen ohne deren Zustimmung nicht modifiziert, übersetzt oder an Dritte weitergegeben werden. Für PCOR-MII ist diese Zustimmung noch nicht dokumentiert — siehe Designentscheidungen. Die Verantwortung für Durchführung, Berechnung und Interpretation der Befragungsergebnisse liegt bei den Nutzenden. Der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "mhi",
+    "display" : "PCOR-MII Medical History (MHI)"
+  }],
   "item" : [{
     "linkId" : "anthropometrie",
     "text" : "Körpermaße",

@@ -59,6 +59,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "display" : "Germany"
     }]
   }],
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "gsltpaq",
+    "display" : "GSLTPAQ"
+  }],
   "item" : [{
     "linkId" : "gsltpaq-intro",
     "text" : "Wie oft haben Sie im letzten Monat die folgenden körperlichen Aktivitäten ausgeübt?",

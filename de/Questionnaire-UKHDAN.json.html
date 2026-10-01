@@ -303,6 +303,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="UKHD-AN.html">UKHD-AN</a>
       </li>
+      <li>
+        <a href="UKHD-EDP.html">UKHD-EDP</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -361,7 +364,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">Ende</a>
 
-          | <a href="Questionnaire-WAI.html">weiter &gt;</a>
+          | <a href="Questionnaire-UKHDEDP.html">weiter &gt;</a>
 
           </span>
 
@@ -510,6 +513,13 @@ a[name="test"] + h3 + div {
     }
   ],
   "<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.copyright">copyright</a>" : "Die Items dieses Bogens sind Eigenentwicklungen des Standorts Heidelberg und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN, Gruppen UKHD-PT, UKHD-ANB, UKHD-CT, UKHD-LE, UKHD-ND, UKHD_D; die siebte Gruppe UKHD-CTT steht im [ACE](Questionnaire-ACE.html) und ist dort mit derselben Einschränkung versehen). **Rechteinhaber ist das Universitätsklinikum Heidelberg. Eine Freigabe für die Veröffentlichung des Wortlauts liegt nicht dokumentiert vor und ist einzuholen.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.code">code</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ukhd-an",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "UKHD-AN"
+    }
+  ],
   "<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item">item</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Questionnaire.item.extension">extension</a>" : [
@@ -934,7 +944,7 @@ a[name="test"] + h3 + div {
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Questionnaire-WAI.html">weiter ></a>
+                <a href="Questionnaire-UKHDEDP.html">weiter ></a>
 
               </td>
             </tr>
@@ -950,7 +960,7 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 11:25:00 +0000">
+  <span title="2026-10-01 11:30:00 +0000">
     2026-10-01
   </span>
 

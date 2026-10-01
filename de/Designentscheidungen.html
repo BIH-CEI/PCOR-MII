@@ -299,6 +299,9 @@ a[name="test"] + h3 + div {
       <li>
         <a href="UKHD-AN.html">UKHD-AN</a>
       </li>
+      <li>
+        <a href="UKHD-EDP.html">UKHD-EDP</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -612,7 +615,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Erst danach modellieren — voraussichtlich <strong>metadata-only</strong>, analog BDI-II und <a href="WAI.html">WAI</a>.</li>
 </ol>
 
-<p>Bis dahin ist <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> in PCOR-MII <strong>nicht modelliert</strong>, und das ist kein Rückstand, sondern die richtige Reihenfolge.</p>
+<p><strong>Umgesetzt am 01.10.2026 — als metadata-only.</strong> <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> ist jetzt als <a href="UKHD-EDP.html">eigener Bogen</a> modelliert, nach dem Muster des <a href="WAI.html">WAI</a>: Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Antwortformat und Wertebereiche vollständig, Item-Texte und Antwortstufen <strong>neutralisiert</strong>. Auch die Displays der elf Variablen im CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> sind neutralisiert — sonst hätte das Dictionary veröffentlicht, was der Questionnaire zurückhält.</p>
+
+<p>Der Grund, das jetzt zu entscheiden statt auf die Bestätigung zu warten: <strong>Metadata-only ist unter beiden Lesarten richtig.</strong> Ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt damit nicht an der offenen Frage — die Bestätigung bleibt trotzdem der erste Schritt, bevor <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> oder EDI-2-<code class="language-plaintext highlighter-rouge">linkId</code>s vergeben werden.</p>
+
+<p>Ein zusätzliches Indiz hat sich beim Modellieren ergeben: Das Antwortformat ist <strong>sechsstufig</strong>, und das EDI-2 nutzt genau sechs Stufen — die übrigen Instrumente der AN-Batterie nutzen vier, fünf oder sieben.</p>
 
 <h4 id="-ace-d--deutsche-fassung-ist-nicht-frei-publizierbar">❓ ACE-D — deutsche Fassung ist nicht frei publizierbar</h4>
 <p><strong>Status:</strong> offen, neu aufgenommen 2026-09-30 — <strong>betrifft rückwirkend fünf publizierte Items</strong></p>
@@ -1020,7 +1027,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
     </tr>
     <tr>
       <td>Zwei Fassungen desselben Instruments stehen nebeneinander</td>
-      <td>gemeinsamer <strong>Katalogcode</strong> in <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> — siehe ADR-007</td>
+      <td>gemeinsamer <strong>Katalogcode</strong> in <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> aus <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a> — siehe ADR-007</td>
     </tr>
   </tbody>
 </table>
@@ -1126,7 +1133,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <ol>
   <li><strong>Identische <code class="language-plaintext highlighter-rouge">linkId</code>s in beiden Ressourcen.</strong> Dann braucht es keine ConceptMap, und eine Zusammenführung auf Item-Ebene ist technisch möglich — sie bleibt aber eine bewusste Entscheidung der Auswertung und wird nicht stillschweigend ermöglicht.</li>
-  <li><strong>Derselbe Katalogcode</strong> (<code class="language-plaintext highlighter-rouge">Questionnaire.code</code> aus dem MII-Questionnaire-Katalog), damit beide als zwei Fassungen <strong>eines</strong> Instruments erkennbar sind und nicht als zwei Instrumente.</li>
+  <li><strong>Derselbe Katalogcode</strong> in <code class="language-plaintext highlighter-rouge">Questionnaire.code</code>, damit beide als zwei Fassungen <strong>eines</strong> Instruments erkennbar sind und nicht als zwei Instrumente. Dafür genügt die Canonical nicht: Sie identifiziert laut R4 das <strong>Artefakt</strong> (“a literal address at which an authoritative instance of this questionnaire is found”), während <code class="language-plaintext highlighter-rouge">code</code> das <strong>Konzept</strong> bezeichnet, das der Bogen repräsentiert — und genau das ist bei zwei Fassungen dasselbe. Hier stand zunächst „aus dem MII-Questionnaire-Katalog“; der führt aber weder den GSLTPAQ noch einen der AN-Bögen, womit die Regel im eigenen Anwendungsfall nicht umsetzbar war. Seit dem 01.10.2026 gibt es dafür <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a>; ein späterer MII-Code wird ergänzt, nicht ersetzt (ADR-004).</li>
   <li>Die PCOR-MII-Fassung trägt <code class="language-plaintext highlighter-rouge">experimental = true</code> und einen <code class="language-plaintext highlighter-rouge">designNote</code>, der die validierte Fassung benennt und sagt, warum die Eigenübersetzung fortbesteht.</li>
   <li><strong>Kein Retire bei Ankunft der Upstream-Fassung.</strong> Die PCOR-MII-Fassung bleibt <code class="language-plaintext highlighter-rouge">active</code>, solange mit ihr erhoben wird, und geht erst auf <code class="language-plaintext highlighter-rouge">status = retired</code>, wenn die Erhebung endet. <code class="language-plaintext highlighter-rouge">retired</code> bleibt auflösbar — genau das brauchen Alt-<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s.</li>
   <li><strong>Vergleichbarkeit ausdrücklich ausweisen</strong>, nicht voraussetzen: Antworten aus beiden Fassungen sind nicht ohne Weiteres poolbar.</li>
@@ -1311,7 +1318,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <ol>
   <li><strong>Pflege vorerst in PCOR-MII</strong> (analog EXPECT/IPQ-S) — ausdrücklich <strong>vorläufig, zum Testen</strong>. Sobald die Instrumente offiziell abgestimmt sind, können Teile ins <strong>MII-PRO-Modul</strong> aufgenommen werden; PCOR-MII würde sie dann referenzieren statt selbst pflegen (Muster SCOFF/SSD-12/WI-7 seit MII PRO 2026.6.0). Bei einer Übernahme ändern sich die kanonischen URLs — dann ist eine Migrations-ConceptMap bzw. ein Seitenhinweis vorzusehen (Vorbild: <code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code>).</li>
-  <li><strong>Keine Instrument-Codes des Vollinstruments an Zuschnitte:</strong> SNOMED CT kennt Konzepte für ANSOCQ (<code class="language-plaintext highlighter-rouge">443321009</code>) und EDE-Q (<code class="language-plaintext highlighter-rouge">446825002</code>), LOINC ein Panel für ACE (<code class="language-plaintext highlighter-rouge">82813-7</code>) — alle bezeichnen das jeweilige Vollinstrument. Ein 2-, 5- oder 6-Item-Zuschnitt ist nicht das validierte Instrument; <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> bleibt daher leer, die Codes sind in den FSH-Kommentaren dokumentiert.</li>
+  <li><strong>Keine Instrument-Codes des Vollinstruments an Zuschnitte:</strong> SNOMED CT kennt Konzepte für ANSOCQ (<code class="language-plaintext highlighter-rouge">443321009</code>) und EDE-Q (<code class="language-plaintext highlighter-rouge">446825002</code>), LOINC ein Panel für ACE (<code class="language-plaintext highlighter-rouge">82813-7</code>) — alle bezeichnen das jeweilige Vollinstrument. Ein 2-, 5- oder 6-Item-Zuschnitt ist nicht das validierte Instrument; diese Codes werden daher <strong>nicht</strong> vergeben und sind nur in den FSH-Kommentaren dokumentiert. <strong>Präzisiert am 01.10.2026:</strong> <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> bleibt deshalb nicht leer, sondern trägt einen <strong>lokalen Katalogcode</strong> aus <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a>, der ausdrücklich den <em>Zuschnitt</em> bezeichnet und nicht das Vollinstrument — <code class="language-plaintext highlighter-rouge">ansocq-2</code> ist der Zweiitem-Zuschnitt, nicht das ANSOCQ. Das Verbot betrifft die Vollinstrument-Codes, nicht die Kodierung überhaupt.</li>
   <li><strong>Kein Score ohne validierte Grundlage:</strong> Für keinen der Zuschnitte existiert eine publizierte Scoring-Vorschrift; SSUK-2 ist zudem gegenläufig gepolt (Begründungsmuster wie EXPECT). Antwortcodes tragen <code class="language-plaintext highlighter-rouge">ordinalValue</code>, damit eine spätere Auswertung möglich bleibt.</li>
   <li><strong>Wortlaut und Kodierung aus dem Dictionary:</strong> Antwortcodes = numerische Dictionary-Codes; Ja/Nein-Items nutzen das projektweite <code class="language-plaintext highlighter-rouge">DemJaNeinVS</code>. Visuelle Skalen werden nach dem EXPECT-Muster als <code class="language-plaintext highlighter-rouge">integer</code> + Slider mit Anker-<code class="language-plaintext highlighter-rouge">display</code>-Item umgesetzt.</li>
   <li><strong>Entscheidungen in der Ressource selbst:</strong> Jedes AN-Questionnaire trägt seine Designentscheidungen zusätzlich maschinenlesbar in der <a href="http://hl7.org/fhir/StructureDefinition/designNote"><code class="language-plaintext highlighter-rouge">designNote</code>-Extension</a> (<code class="language-plaintext highlighter-rouge">valueMarkdown</code>) — bogenweite Entscheidungen auf Questionnaire-Ebene, punktuelle direkt am <code class="language-plaintext highlighter-rouge">item</code> (z. B. das <code class="language-plaintext highlighter-rouge">edeq30</code>-Erratum). So reisen die Begründungen mit, wenn eine Ressource ins MII-PRO-Modul übernommen wird; diese Seite bleibt das ausführliche Log.</li>
@@ -1394,7 +1401,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 11:25:00 +0000">
+  <span title="2026-10-01 11:30:00 +0000">
     2026-10-01
   </span>
 

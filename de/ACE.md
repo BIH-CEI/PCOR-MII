@@ -1,6 +1,6 @@
-# ACE (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.3.0
+# ACE + Zeitangaben (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.3.0
 
-## ACE (Belastende Kindheitserfahrungen)
+## ACE + Zeitangaben (Belastende Kindheitserfahrungen)
 
 **ACE + Zeitangaben** erfasst **belastende Kindheitserfahrungen** (vor dem 18. Lebensjahr) über die ersten fünf Fragen des **Adverse-Childhood-Experiences**-Fragebogens, je mit ja/nein — und ordnet die bejahten Ereignisse über sechs UKHD-Items zeitlich ein.
 

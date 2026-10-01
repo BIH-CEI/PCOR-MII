@@ -64,6 +64,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }]
   }],
   "copyright" : "Die Items entstammen der SSUK, der deutschen Adaptation der Illness-specific Social Support Scale (Ramm & Hasenbring, Z Med Psychol 2003, doi:10.3233/ZMP-2003-12_1_06; englisches Original: Revenson et al., Soc Sci Med 1991, doi:10.1016/0277-9536(91)90385-P), im Zuschnitt des PCOR-MII Item Level Dictionary. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "ssuk-2",
+    "display" : "SSUK-2"
+  }],
   "item" : [{
     "linkId" : "ssuk-stamm",
     "text" : "Unter den Menschen, die Ihnen nahe stehen, gibt es jemanden, der/die..",

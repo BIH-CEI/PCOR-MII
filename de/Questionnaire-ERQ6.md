@@ -64,6 +64,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }]
   }],
   "copyright" : "Die sechs Items sind die Items 1, 2, 3, 6, 8 und 9 des Emotion Regulation Questionnaire (ERQ; Gross & John 2003, J Pers Soc Psychol 85:348-362), im unveränderten Wortlaut. Der ERQ-Originalbogen und die von Gross und John autorisierte deutsche Übersetzung von Abler & Kessler (2009, Diagnostica 55(3):144-152) sind frei über das Stanford Psychophysiology Laboratory bereitgestellt. Dieser Zuschnitt ist NICHT die offizielle Kurzform ERQ-S (Preece, Petrova, Mehta & Gross 2023, doi:10.1016/j.jad.2023.08.076): Diese besteht laut deren Tabelle 1 aus den ERQ-Items 2, 6, 7, 8, 9 und 10. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "erq-6",
+    "display" : "ERQ-6"
+  }],
   "item" : [{
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/minValue",

@@ -65,6 +65,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | ANSOCQ-2 (2) | TCH | — | • | — | frei | [ANSOCQ-2](ANSOCQ-2.md)— nur trennschärfstes Item je Skala |
 | SSUK-2 (2) | EFA | — | • | — | frei | [SSUK-2](SSUK-2.md)— nur trennschärfstes Item je Skala |
 | ACE + Zeitangaben (11) | EFA | — | • | — | ACE frei; die 6 UKHD-Items**Freigabe offen** | [ACE](ACE.md)— erste 5 ACE-Fragen plus`UKHD-CTT`(PCOR-MII-Komposit) |
+| UKHD-EDP (11) | DCH | — | • | — | **keine dokumentierte Freigabe**; vermutlich EDI-2-Zuschnitt | [UKHD-EDP](UKHD-EDP.md)— metadata-only |
 | BAASIS (10) | TCH | — | — | • | © Uni Basel, Items nicht publizierbar | offen — metadata-only vorgesehen |
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, Items nicht publizierbar | offen — metadata-only vorgesehen |
 | ABQ (16) | TCH | — | — | • | Nutzung ohne Pharma-Beteiligung | offen — metadata-only vorgesehen |
@@ -92,7 +93,7 @@ Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wicht
 
 * **frei** — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.
 * **Nutzungsvereinbarung** (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im `copyright`-Element.
-* **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft WAI (umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.
+* **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.md) und [UKHD-EDP](UKHD-EDP.md) (beide umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.
 * **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft [UKHD-AN](UKHD-AN.md) sowie die bereits in [MHI](MHI.md) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).

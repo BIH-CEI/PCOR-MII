@@ -60,6 +60,11 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }]
   }],
   "copyright" : "Die drei EXPECT-Items stammen aus dem PCOR-MII Item Level Dictionary und bilden kein publiziertes, standardisiertes Instrument ab; die DIZ-Implementierungsliste PCOR-MII führt für EXPECT weder ein Entwicklungs- noch ein Übersetzungspaper und keine Lizenzangabe. Der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "expect",
+    "display" : "EXPECT"
+  }],
   "item" : [{
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/minValue",

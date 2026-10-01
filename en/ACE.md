@@ -1,6 +1,6 @@
-# ACE (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.3.0
+# ACE + Zeitangaben (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.3.0
 
-## ACE (Belastende Kindheitserfahrungen)
+## ACE + Zeitangaben (Belastende Kindheitserfahrungen)
 
 **Translated page. Original language: German.**
 
