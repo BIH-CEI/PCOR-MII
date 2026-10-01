@@ -90,7 +90,11 @@ Das sind **die elf Subskalen des EDI-2** (*Eating Disorder Inventory-2*, Garner 
 2. Bei Bestätigung: Eintrag in der DIZ-Liste nachziehen und die Rechtelage bei Hogrefe klären.
 3. Erst danach modellieren — voraussichtlich **metadata-only**, analog BDI-II und [WAI](WAI.html).
 
-Bis dahin ist `UKHD-EDP` in PCOR-MII **nicht modelliert**, und das ist kein Rückstand, sondern die richtige Reihenfolge.
+**Umgesetzt am 01.10.2026 — als metadata-only.** `UKHD-EDP` ist jetzt als [eigener Bogen](UKHD-EDP.html) modelliert, nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Antwortformat und Wertebereiche vollständig, Item-Texte und Antwortstufen **neutralisiert**. Auch die Displays der elf Variablen im CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.html) sind neutralisiert — sonst hätte das Dictionary veröffentlicht, was der Questionnaire zurückhält.
+
+Der Grund, das jetzt zu entscheiden statt auf die Bestätigung zu warten: **Metadata-only ist unter beiden Lesarten richtig.** Ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt damit nicht an der offenen Frage — die Bestätigung bleibt trotzdem der erste Schritt, bevor `Questionnaire.code` oder EDI-2-`linkId`s vergeben werden.
+
+Ein zusätzliches Indiz hat sich beim Modellieren ergeben: Das Antwortformat ist **sechsstufig**, und das EDI-2 nutzt genau sechs Stufen — die übrigen Instrumente der AN-Batterie nutzen vier, fünf oder sieben.
 
 #### ❓ ACE-D — deutsche Fassung ist nicht frei publizierbar
 **Status:** offen, neu aufgenommen 2026-09-30 — **betrifft rückwirkend fünf publizierte Items**
