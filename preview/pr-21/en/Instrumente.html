@@ -215,9 +215,6 @@ a[name="test"] + h3 + div {
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
       </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -437,7 +434,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The authoritative reference for instrument selection and item subsetting is the <strong>Item Level Dictionary</strong> (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, one sheet per entity; not part of this repository). Rights and licence information comes from the <strong>DIZ implementation list for PCOR-MII</strong>.</p>
 
-<p>Note that the data collection plan itself distinguishes <strong>four</strong> use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. See <a href="Essstoerungen.html">Eating Disorders</a>; the split is still to be reflected on this page.</p>
+<p>Note that the data collection plan itself distinguishes <strong>four</strong> use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. The split is still to be reflected on this page.</p>
 
 <h3 id="categories">Categories</h3>
 
@@ -731,13 +728,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="SSUK-2.html">SSUK-2</a> — most discriminating item per scale only</td>
     </tr>
     <tr>
-      <td>ACE (5)</td>
+      <td>ACE + timing items (11)</td>
       <td>EFA</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">—</td>
-      <td>free — but see the open point on the German ACE-D</td>
-      <td><a href="ACE.html">ACE</a> — first five questions</td>
+      <td>ACE free; the 6 UKHD items <strong>clearance open</strong></td>
+      <td><a href="ACE.html">ACE</a> — first five ACE questions plus <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (PCOR-MII composite)</td>
     </tr>
     <tr>
       <td>BAASIS (10)</td>
@@ -771,7 +768,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>On top of these come <strong>site-specific item groups</strong> that do not correspond to any published instrument and come straight from the dictionary — for example <code class="language-plaintext highlighter-rouge">UKE-HCU/PSE/TR/DOT</code> (healthcare utilisation, PSS), the <code class="language-plaintext highlighter-rouge">UKHD-*</code> groups (AN) and <code class="language-plaintext highlighter-rouge">MHH-DIAL/UTI/T/BP</code> (follow-up parameters, NTx). For these the DIZ implementation list carries <strong>no entry at all</strong>, so no clearance is documented; see the open points in <a href="Designentscheidungen.html">Design Decisions</a>.</p>
 
-<p><a name="l1568">​</a>For AN, seven of these groups are now modelled — as <strong>one</strong> collective questionnaire rather than seven resources (<a href="Designentscheidungen.html">ADR-011</a>): <a href="UKHD-AN.html">UKHD-AN</a>, 20 items, covering <code class="language-plaintext highlighter-rouge">UKHD-PT</code>, <code class="language-plaintext highlighter-rouge">UKHD-ANB</code>, <code class="language-plaintext highlighter-rouge">UKHD-CT</code>, <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>, <code class="language-plaintext highlighter-rouge">UKHD-LE</code>, <code class="language-plaintext highlighter-rouge">UKHD-ND</code> and <code class="language-plaintext highlighter-rouge">UKHD_D</code>. <strong>This is a deliberate project decision for piloting, not a documented clearance:</strong> the rights holder is Heidelberg University Hospital, no clearance is on record, and confirmation is to be obtained. <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (body image — a visual figure-rating scale; data collection does not yet use it and the image template is missing from the dictionary) and <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (eating disorder psychopathology — most likely an EDI-2 subset with unresolved Hogrefe rights) are deliberately excluded. The instrument page is German-only.</p>
+<p>For AN, seven of these groups are now modelled — six as <strong>free-standing Questionnaires</strong>, one per dictionary group (<a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>: <code class="language-plaintext highlighter-rouge">UKHD-PT</code>, <code class="language-plaintext highlighter-rouge">UKHD-ANB</code>, <code class="language-plaintext highlighter-rouge">UKHD-CT</code>, <code class="language-plaintext highlighter-rouge">UKHD-LE</code>, <code class="language-plaintext highlighter-rouge">UKHD-ND</code>, <code class="language-plaintext highlighter-rouge">UKHD-D</code>), and <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> inside the <a href="ACE.html">ACE</a>, which thereby becomes a PCOR-MII composite. The <code class="language-plaintext highlighter-rouge">UKHD</code> prefix is a compilation label of the dictionary, not a statement of authorship; clearance and provenance of the wording remain open per group. <a href="UKHD-EDP.html">UKHD-EDP</a> is modelled metadata-only (suspected EDI-2 subset).</p>
 
 <h3 id="where-does-each-resource-come-from">Where does each resource come from?</h3>
 
@@ -787,8 +784,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>free</strong> — complete questionnaire with item texts, answer options and scoring.</li>
   <li><strong>Usage agreement</strong> (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the <code class="language-plaintext highlighter-rouge">copyright</code> element.</li>
-  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to WAI (implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.</li>
-  <li><a name="l1664">​</a><strong>clearance open</strong> — the wording is published, but <strong>no permission is on record</strong>. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to <a href="UKHD-AN.html">UKHD-AN</a> and to the 34 site items already published in <a href="MHI.html">MHI</a>. Should a restriction emerge, metadata-only is the intended remedy.</li>
+  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to <a href="WAI.html">WAI</a> and <a href="UKHD-EDP.html">UKHD-EDP</a> (both implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.</li>
+  <li><a name="l1663">​</a><strong>clearance open</strong> — the wording is published, but <strong>no permission is on record</strong>. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to <a href="UKHD-AN.html">UKHD-AN</a> and to the 34 site items already published in <a href="MHI.html">MHI</a>. Should a restriction emerge, metadata-only is the intended remedy.</li>
 </ul>
 
 <p>Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; all artefacts are listed under <a href="artifacts.html">Artifacts</a>.</p>
@@ -843,7 +840,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 13:01:00 +0000">
+  <span title="2026-10-01 13:05:00 +0000">
     2026-10-01
   </span>
 

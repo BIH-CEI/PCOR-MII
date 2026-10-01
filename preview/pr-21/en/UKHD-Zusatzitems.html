@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.2.8"}
-    h3,h4,h5,h6{--heading-prefix:"2.2.8"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.2.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -219,9 +219,6 @@ a[name="test"] + h3 + div {
       </li>
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
-      </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
       </li>
     </ul>
   </li>
@@ -403,33 +400,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#die-sechs-questionnaires" id="markdown-toc-die-sechs-questionnaires">Die sechs Questionnaires</a></li>
-  <li><a href="#warum-ein-questionnaire-je-gruppe" id="markdown-toc-warum-ein-questionnaire-je-gruppe">Warum ein Questionnaire je Gruppe</a></li>
-  <li><a href="#gemeinsame-entscheidungen-aller-sechs-bögen" id="markdown-toc-gemeinsame-entscheidungen-aller-sechs-bögen">Gemeinsame Entscheidungen aller sechs Bögen</a></li>
-  <li><a href="#antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist" id="markdown-toc-antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">ordinalValue</code> nur, wo die Skala ordinal ist</a></li>
-  <li><a href="#timing-wird-nicht-modelliert--und-ist-trotzdem-sichtbar" id="markdown-toc-timing-wird-nicht-modelliert--und-ist-trotzdem-sichtbar"><code class="language-plaintext highlighter-rouge">TIMING</code> wird nicht modelliert — und ist trotzdem sichtbar</a></li>
-  <li><a href="#rechtelage--eine-herkunftsfrage-keine-bloße-freigabefrage" id="markdown-toc-rechtelage--eine-herkunftsfrage-keine-bloße-freigabefrage">Rechtelage — eine Herkunftsfrage, keine bloße Freigabefrage</a></li>
-  <li><a href="#offene-punkte-zum-dictionary" id="markdown-toc-offene-punkte-zum-dictionary">Offene Punkte zum Dictionary</a></li>
-  <li><a href="#hinweis-zur-erhebung" id="markdown-toc-hinweis-zur-erhebung">Hinweis zur Erhebung</a></li>
+  <li><a href="#the-six-questionnaires" id="markdown-toc-the-six-questionnaires">The six Questionnaires</a></li>
+  <li><a href="#why-one-questionnaire-per-group" id="markdown-toc-why-one-questionnaire-per-group">Why one Questionnaire per group</a></li>
+  <li><a href="#decisions-shared-by-all-six-questionnaires" id="markdown-toc-decisions-shared-by-all-six-questionnaires">Decisions shared by all six questionnaires</a></li>
+  <li><a href="#answer-scales--ordinalvalue-only-where-the-scale-is-ordinal" id="markdown-toc-answer-scales--ordinalvalue-only-where-the-scale-is-ordinal">Answer scales — <code class="language-plaintext highlighter-rouge">ordinalValue</code> only where the scale is ordinal</a></li>
+  <li><a href="#timing-is-not-modelled--and-visible-nonetheless" id="markdown-toc-timing-is-not-modelled--and-visible-nonetheless"><code class="language-plaintext highlighter-rouge">TIMING</code> is not modelled — and visible nonetheless</a></li>
+  <li><a href="#rights-situation--a-provenance-question-not-merely-a-clearance-question" id="markdown-toc-rights-situation--a-provenance-question-not-merely-a-clearance-question">Rights situation — a provenance question, not merely a clearance question</a></li>
+  <li><a href="#open-points-regarding-the-dictionary" id="markdown-toc-open-points-regarding-the-dictionary">Open points regarding the dictionary</a></li>
+  <li><a href="#note-on-data-collection" id="markdown-toc-note-on-data-collection">Note on data collection</a></li>
 </ul>
 
 </div>
-<p><strong>UKHD-Zusatzitems AN</strong> sind die Itemgruppen aus dem Item Level Dictionary, die kein publiziertes Instrument abbilden und in der Entität AN vom Standort Heidelberg für die Erhebung zusammengestellt wurden — modelliert als <strong>sechs eigenständige Questionnaires, eines je Dictionary-Gruppe</strong> (entschieden 01.10.2026; zuvor ein Sammelbogen <code class="language-plaintext highlighter-rouge">UKHD-AN</code>).</p>
+<p><strong>UKHD supplementary items (AN)</strong> are the item groups from the Item Level Dictionary that do not correspond to any published instrument and were compiled for data collection in the AN entity by the Heidelberg site — modelled as <strong>six free-standing Questionnaires, one per dictionary group</strong> (decided 2026-10-01; previously a single collective questionnaire <code class="language-plaintext highlighter-rouge">UKHD-AN</code>).</p>
 
 <blockquote>
-  <p><strong>Das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe.</strong> Die Handanweisung des Master-Excel definiert die <code class="language-plaintext highlighter-rouge">INSTRUMENT</code>-Spalte als die Auswahl des Erhebungswerkzeugs durch die Standorte („Hier können die Standorte auswählen … mit welchem Instrument die jeweilige Domäne erfasst werden soll"), und die Standortspalten als Timing-Matrix — im AN-Blatt ist ausschließlich die UKHD-Spalte gefüllt, auch bei den publizierten Instrumenten wie <a href="ERQ-6.html">ERQ-6</a> und <a href="ACE.html">ACE</a>. Das Präfix unterscheidet also nur <em>publiziertes Instrument gewählt</em> von <em>vom Standort eingebrachter Itemsatz</em> — es sagt <strong>nicht</strong>, dass der Standort die Items verfasst hat. Woher der Wortlaut je Gruppe stammt, ist nicht dokumentiert; siehe <a href="#rechtelage">Rechtelage</a>.</p>
+  <p><strong>The <code class="language-plaintext highlighter-rouge">UKHD</code> prefix is a compilation label, not a statement of authorship.</strong> The instruction sheet of the master Excel defines the <code class="language-plaintext highlighter-rouge">INSTRUMENT</code> column as the sites' choice of data-collection tool ("Here the sites can select … which instrument is to be used to capture the respective domain"), and the site columns as a timing matrix — on the AN sheet only the UKHD column is filled in, including for published instruments such as <a href="ERQ-6.html">ERQ-6</a> and <a href="ACE.html">ACE</a>. The prefix therefore only distinguishes <em>published instrument chosen</em> from <em>item set contributed by the site</em> — it does <strong>not</strong> say that the site authored the items. Where the wording of each group comes from is not documented; see <a href="#rechtelage">Rights situation</a>.</p>
 </blockquote>
 
-<h3 id="die-sechs-questionnaires">Die sechs Questionnaires</h3>
+<h3 id="the-six-questionnaires">The six Questionnaires</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Bogen</th>
-      <th>Dictionary-Gruppe</th>
+      <th>Questionnaire</th>
+      <th>Dictionary group</th>
       <th>Items</th>
-      <th>Inhalt</th>
-      <th>Beispielantwort</th>
+      <th>Content</th>
+      <th>Example response</th>
     </tr>
   </thead>
   <tbody>
@@ -437,161 +434,161 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="Questionnaire-UKHDPT.html">UKHD-PT</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD-PT</code></td>
       <td>2</td>
-      <td>Vorbehandlung: Psychotherapie früher/aktuell (<code class="language-plaintext highlighter-rouge">bdkm15</code>), Arztbesuche in 4 Wochen (<code class="language-plaintext highlighter-rouge">bdkm16</code>)</td>
+      <td>Past treatment: psychotherapy history (<code class="language-plaintext highlighter-rouge">bdkm15</code>), physician visits in the last 4 weeks (<code class="language-plaintext highlighter-rouge">bdkm16</code>)</td>
       <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a></td>
     </tr>
     <tr>
       <td><a href="Questionnaire-UKHDANB.html">UKHD-ANB</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD-ANB</code></td>
       <td>2 (+2)</td>
-      <td>Essstörungsanamnese: Erkrankungsdauer, niedrigster BMI — je Auswahl plus PCOR-MII-eigenem Wert-Item</td>
+      <td>Eating-disorder history: duration of illness, lowest BMI — each a choice plus a PCOR-MII-own value item</td>
       <td><a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a></td>
     </tr>
     <tr>
       <td><a href="Questionnaire-UKHDCT.html">UKHD-CT</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD-CT</code></td>
       <td>1</td>
-      <td>Aktueller Behandlungsstatus (<code class="language-plaintext highlighter-rouge">treatment_outpatient</code>)</td>
+      <td>Current treatment status (<code class="language-plaintext highlighter-rouge">treatment_outpatient</code>)</td>
       <td><a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a></td>
     </tr>
     <tr>
       <td><a href="Questionnaire-UKHDLE.html">UKHD-LE</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD-LE</code></td>
       <td>4</td>
-      <td>Belastende Lebensereignisse: dieselbe Frage für drei Erhebungszeitpunkte + Freitext (<code class="language-plaintext highlighter-rouge">enableWhen</code>, <code class="language-plaintext highlighter-rouge">any</code>)</td>
+      <td>Stressful life events: the same question for three collection time points + free text (<code class="language-plaintext highlighter-rouge">enableWhen</code>, <code class="language-plaintext highlighter-rouge">any</code>)</td>
       <td><a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a></td>
     </tr>
     <tr>
       <td><a href="Questionnaire-UKHDND.html">UKHD-ND</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD-ND</code></td>
       <td>3</td>
-      <td>Neue Diagnosen seit der letzten Befragung: zwei Zeitfenster + Freitext</td>
-      <td>— siehe <a href="#timing">TIMING</a></td>
+      <td>New diagnoses since the last survey: two time windows + free text</td>
+      <td>— see <a href="#timing">TIMING</a></td>
     </tr>
     <tr>
       <td><a href="Questionnaire-UKHDD.html">UKHD-D</a></td>
       <td><code class="language-plaintext highlighter-rouge">UKHD_D</code></td>
       <td>2</td>
-      <td>Diagnosen bei Aufnahme, Freitext</td>
+      <td>Diagnoses on admission, free text</td>
       <td><a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
     </tr>
   </tbody>
 </table>
 
-<p>Zwei weitere UKHD-Gruppen sind <strong>anderswo</strong> modelliert, eine ist <strong>ausgenommen</strong>:</p>
+<p>Two further UKHD groups are modelled <strong>elsewhere</strong>, one is <strong>excluded</strong>:</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-CTT</code></strong> (6 Zeitangaben zu Kindheitsbelastungen) steht im <a href="ACE.html">ACE</a>: Das Dictionary nennt ihren <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich, und <code class="language-plaintext highlighter-rouge">enableWhen.question</code> nimmt laut R4 eine <code class="language-plaintext highlighter-rouge">linkId</code> nur innerhalb desselben Questionnaire. Der ACE ist dadurch ein PCOR-MII-Komposit.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-EDP</code></strong> (11 Items, vermutlich EDI-2-Zuschnitt) ist ein eigener <a href="UKHD-EDP.html">metadata-only-Bogen</a>.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-BI</code></strong> (Körperbild, 3 Items) ist <strong>nicht modelliert</strong>: eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt — die Anker einer visuellen Skala sind hier der Messgegenstand, nicht Beschriftung.</li>
-  <li>Die Faktenfragen-Gruppen <strong><code class="language-plaintext highlighter-rouge">UKHD-AN</code></strong> (<code class="language-plaintext highlighter-rouge">AN_subtyp</code>), <strong><code class="language-plaintext highlighter-rouge">UKHD-W</code></strong> (Gewichtsverlauf) und <strong><code class="language-plaintext highlighter-rouge">UKHD-MEDI</code>/<code class="language-plaintext highlighter-rouge">-MEDI2</code></strong> (Medikation) liegen im <a href="MHI.html">MHI</a> — sie gehören zur Anamnese, nicht zur AN-Zusatzerhebung.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-CTT</code></strong> (6 timing items on childhood trauma) lives in the <a href="ACE.html">ACE</a>: the dictionary explicitly states its <code class="language-plaintext highlighter-rouge">enableWhen</code> dependency on <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code>, and per R4 <code class="language-plaintext highlighter-rouge">enableWhen.question</code> takes a <code class="language-plaintext highlighter-rouge">linkId</code> only within the same Questionnaire. The ACE thereby becomes a PCOR-MII composite.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-EDP</code></strong> (11 items, presumably an EDI-2 subset) is its own <a href="UKHD-EDP.html">metadata-only questionnaire</a>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-BI</code></strong> (body image, 3 items) is <strong>not modelled</strong>: a visual figure scale that data collection does not yet use, and whose image panel is missing from the dictionary — the anchors of a visual scale are the measuring instrument itself, not labelling.</li>
+  <li>The factual-question groups <strong><code class="language-plaintext highlighter-rouge">UKHD-AN</code></strong> (<code class="language-plaintext highlighter-rouge">AN_subtyp</code>), <strong><code class="language-plaintext highlighter-rouge">UKHD-W</code></strong> (weight history) and <strong><code class="language-plaintext highlighter-rouge">UKHD-MEDI</code>/<code class="language-plaintext highlighter-rouge">-MEDI2</code></strong> (medication) live in the <a href="MHI.html">MHI</a> — they belong to the medical history, not to the AN supplementary collection.</li>
 </ul>
 
-<h3 id="warum-ein-questionnaire-je-gruppe">Warum ein Questionnaire je Gruppe</h3>
+<h3 id="why-one-questionnaire-per-group">Why one Questionnaire per group</h3>
 
-<p>Der erste Wurf war ein Sammelbogen (<code class="language-plaintext highlighter-rouge">UKHD-AN</code>, sechs <code class="language-plaintext highlighter-rouge">group</code>-Items). Er ist aus drei Gründen aufgegeben:</p>
+<p>The first draft was a collective questionnaire (<code class="language-plaintext highlighter-rouge">UKHD-AN</code>, six <code class="language-plaintext highlighter-rouge">group</code> items). It was abandoned for three reasons:</p>
 
 <ol>
-  <li><strong>Die Gruppen sind kein gemeinsames Instrument.</strong> Das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix etikettiert die Zusammenstellung, nicht eine Instrumentenidentität — ein Sammelbogen hätte eine Einheit behauptet, die es nicht gibt. Sichtbar wurde das an einer Namenskollision: Die Dictionary-Gruppe <code class="language-plaintext highlighter-rouge">UKHD-AN</code> existiert wirklich, besteht aus genau einem Item (<code class="language-plaintext highlighter-rouge">AN_subtyp</code>) und liegt im <a href="MHI.html">MHI</a> — der Sammelbogen gleichen Namens enthielt sie nicht.</li>
-  <li><strong>Die Rechte- und Herkunftsfrage wird je Gruppe beantwortet.</strong> <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code> tragen ein fremdes Variablenschema, <code class="language-plaintext highlighter-rouge">UKHD-LE</code> wirkt wie eine entworfene Batterie, <code class="language-plaintext highlighter-rouge">UKHD_D</code> ist eine Verwaltungsfrage. Kommt die Rückmeldung des Standorts differenziert zurück, wird je Gruppe umgestellt (metadata-only, Muster <a href="WAI.html">WAI</a>) — ohne veröffentlichte Canonicals zu zerschneiden.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">TIMING</code> wird im Ressourcenzuschnitt sichtbar.</strong> Die Gruppen haben verschiedene Erhebungszeitpunkte; je Bogen entsteht pro Termin eine Antwort — oder eben keine (siehe <a href="#timing">TIMING</a>). Ein Sammelbogen musste dieselbe Tatsache als bewusst leere Gruppen erklären.</li>
+  <li><strong>The groups are not a joint instrument.</strong> The <code class="language-plaintext highlighter-rouge">UKHD</code> prefix labels the compilation, not an instrument identity — a collective questionnaire would have asserted a unity that does not exist. This became visible through a name collision: the dictionary group <code class="language-plaintext highlighter-rouge">UKHD-AN</code> genuinely exists, consists of exactly one item (<code class="language-plaintext highlighter-rouge">AN_subtyp</code>) and lives in the <a href="MHI.html">MHI</a> — the collective questionnaire of the same name did not contain it.</li>
+  <li><strong>The rights and provenance question is answered per group.</strong> <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code> carry a foreign variable scheme, <code class="language-plaintext highlighter-rouge">UKHD-LE</code> looks like a designed battery, <code class="language-plaintext highlighter-rouge">UKHD_D</code> is an administrative question. If the site's reply comes back differentiated, each group is switched individually (metadata-only, following the <a href="WAI.html">WAI</a> pattern) — without cutting published canonicals apart.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">TIMING</code> becomes visible in the resource layout.</strong> The groups have different collection time points; per questionnaire one response per visit arises — or none at all (see <a href="#timing">TIMING</a>). A collective questionnaire had to explain the same fact as deliberately empty groups.</li>
 </ol>
 
-<p>Der Preis ist bekannt und benannt: sechs Ressourcen für 14 Items, drei davon mit ein oder zwei Items. <a href="Designentscheidungen.html">ADR-011</a> ist dafür um die Standortgruppen-Regel ergänzt — die Anti-Fragmentierungs-Grenze gilt unverändert für <em>publizierte</em> Instrumente; für Standort-Itemgruppen ist die <strong>Dictionary-Gruppe</strong> die Einheit, weil sie die Einheit der Herkunfts- und Rechtsklärung ist.</p>
+<p>The cost is known and stated: six resources for 14 items, three of them with one or two items. <a href="Designentscheidungen.html">ADR-011</a> has been extended by the site-group rule for this — the anti-fragmentation boundary remains unchanged for <em>published</em> instruments; for site item groups the <strong>dictionary group</strong> is the unit, because it is the unit of provenance and rights clarification.</p>
 
-<p>Die Gruppenzugehörigkeit bleibt unabhängig davon maschinenlesbar: Jedes Item trägt seine Dictionary-Variable als <code class="language-plaintext highlighter-rouge">item.code</code>, und die Property <code class="language-plaintext highlighter-rouge">instrument</code> in <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> nennt die Gruppe — egal, in welcher Ressource das Item liegt (<code class="language-plaintext highlighter-rouge">UKHD-CTT</code> im ACE belegt das).</p>
+<p>Group membership remains machine-readable regardless: every item carries its dictionary variable as <code class="language-plaintext highlighter-rouge">item.code</code>, and the <code class="language-plaintext highlighter-rouge">instrument</code> property in <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> names the group — no matter which resource the item lives in (<code class="language-plaintext highlighter-rouge">UKHD-CTT</code> in the ACE proves the point).</p>
 
-<h3 id="gemeinsame-entscheidungen-aller-sechs-bögen">Gemeinsame Entscheidungen aller sechs Bögen</h3>
+<h3 id="decisions-shared-by-all-six-questionnaires">Decisions shared by all six questionnaires</h3>
 
-<p><strong><code class="language-plaintext highlighter-rouge">linkId</code> = Dictionary-Variablen-ID</strong> (<a href="Designentscheidungen.html">ADR-008</a> Regel 1, zweiter Teil): Es gibt keine offizielle Itemnummerierung, die Variablen-ID ist die einzige Identität der Items.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">linkId</code> = dictionary variable ID</strong> (<a href="Designentscheidungen.html">ADR-008</a> rule 1, second part): there is no official item numbering; the variable ID is the items' only identity.</p>
 
-<p><strong>Sprache <code class="language-plaintext highlighter-rouge">de</code> ohne Übersetzungsebene</strong> (<a href="Designentscheidungen.html">ADR-005</a>): Ein englisches Original ist nicht dokumentiert; eine englische <code class="language-plaintext highlighter-rouge">item.text</code>-Ebene wäre eine unvalidierte PCOR-MII-Übersetzung an der Stelle, an der der erhobene Wortlaut steht.</p>
+<p><strong>Language <code class="language-plaintext highlighter-rouge">de</code> without a translation layer</strong> (<a href="Designentscheidungen.html">ADR-005</a>): no English original is documented; an English <code class="language-plaintext highlighter-rouge">item.text</code> layer would be an unvalidated PCOR-MII translation in the place where the collected wording belongs.</p>
 
-<p><strong>Wortlaut wortgleich übernommen</strong> (<a href="Designentscheidungen.html">ADR-010</a>), normalisiert nur Zeilenumbrüche und Mehrfach-Leerzeichen. <strong>Sprachliche Fehler der Vorlage bleiben stehen</strong> und sind einzeln ausgewiesen: <code class="language-plaintext highlighter-rouge">lowBMI</code> „Ihr niedrigter BMI", <code class="language-plaintext highlighter-rouge">comorbid1</code> „den zurvor genannten", in <code class="language-plaintext highlighter-rouge">UKHD-LE</code> „Auflösung einer Partnerschaften" und „Verlust ihres Zuhauses". Eine Bereinigung wäre nur als zusätzliche Ebene zulässig und ist bewusst nicht angelegt — das Dictionary <em>ist</em> hier die Vorlage, es gibt keine zweite Quelle, gegen die sich Druckfehler von Abschreibfehlern unterscheiden ließen; die Korrektur gehört ins Dictionary.</p>
+<p><strong>Wording taken over verbatim</strong> (<a href="Designentscheidungen.html">ADR-010</a>), normalising only line breaks and duplicate spaces from the Excel cells. <strong>Linguistic errors of the source remain in place</strong> and are individually flagged: <code class="language-plaintext highlighter-rouge">lowBMI</code> "Ihr niedrigter BMI", <code class="language-plaintext highlighter-rouge">comorbid1</code> "den zurvor genannten", in <code class="language-plaintext highlighter-rouge">UKHD-LE</code> "Auflösung einer Partnerschaften" and "Verlust ihres Zuhauses". A cleaned layer would only be admissible in addition and is deliberately not provided — the dictionary <em>is</em> the source here; there is no second source against which typos could be distinguished from transcription errors. The correction belongs in the dictionary.</p>
 
-<p><strong>Kein Score, keine Instrument-Codes:</strong> Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer (Recherche via fhir-terminology MCP, 2026-10-01); <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> trägt je Bogen den lokalen Katalogcode aus <a href="CodeSystem-pcor-questionnaire-catalogue.html">pcor-questionnaire-catalogue</a>.</p>
+<p><strong>No score, no instrument codes:</strong> there is no instrument that could be scored. LOINC 2.83 and SNOMED CT 2026-05-01 return zero hits for the underlying concepts (searched via the fhir-terminology MCP, 2026-10-01); <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> carries each questionnaire's local catalogue code from <a href="CodeSystem-pcor-questionnaire-catalogue.html">pcor-questionnaire-catalogue</a>.</p>
 
-<p><strong>Ja/Nein</strong> über das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a> (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem <code class="language-plaintext highlighter-rouge">ukhd-an-*</code>-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.</p>
+<p><strong>Yes/no</strong> uses the project-wide <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a> (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose <code class="language-plaintext highlighter-rouge">ukhd-an-*</code> prefix in id and canonical names the site and the entity, not a resource.</p>
 
-<h3 id="antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">ordinalValue</code> nur, wo die Skala ordinal ist</h3>
+<h3 id="answer-scales--ordinalvalue-only-where-the-scale-is-ordinal">Answer scales — <code class="language-plaintext highlighter-rouge">ordinalValue</code> only where the scale is ordinal</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Skala (Bogen)</th>
+      <th>Scale (questionnaire)</th>
       <th><code class="language-plaintext highlighter-rouge">ordinalValue</code></th>
-      <th>Begründung</th>
+      <th>Rationale</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><a href="CodeSystem-ukhd-an-arztbesuche.html">ukhd-an-arztbesuche</a> — <code class="language-plaintext highlighter-rouge">bdkm16</code> (UKHD-PT)</td>
-      <td><strong>ja</strong>, 1–4</td>
-      <td>monoton steigende Häufigkeit, letzte Stufe nach oben offen</td>
+      <td><strong>yes</strong>, 1–4</td>
+      <td>monotonically increasing frequency, last step open-ended</td>
     </tr>
     <tr>
       <td><a href="CodeSystem-ukhd-an-psychotherapie.html">ukhd-an-psychotherapie</a> — <code class="language-plaintext highlighter-rouge">bdkm15</code> (UKHD-PT)</td>
-      <td><strong>nein</strong></td>
-      <td>drei Zeitbezüge, keine Menge; wer früher <em>und</em> jetzt in Behandlung ist, findet keine Stufe</td>
+      <td><strong>no</strong></td>
+      <td>three temporal references, not a quantity; someone in treatment both earlier <em>and</em> now has no step</td>
     </tr>
     <tr>
       <td><a href="CodeSystem-ukhd-an-behandlungsstatus.html">ukhd-an-behandlungsstatus</a> — <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> (UKHD-CT)</td>
-      <td><strong>nein</strong></td>
-      <td>mischt zwei Achsen: 2→3 ist ein Statuswechsel, 3→4 ein Settingwechsel</td>
+      <td><strong>no</strong></td>
+      <td>mixes two axes: 2→3 is a status change, 3→4 a setting change</td>
     </tr>
     <tr>
       <td><a href="CodeSystem-ukhd-an-dauer-angabe.html">ukhd-an-dauer-angabe</a>, <a href="CodeSystem-ukhd-an-bmi-angabe.html">ukhd-an-bmi-angabe</a> (UKHD-ANB)</td>
-      <td><strong>nein</strong></td>
-      <td>Einheiten und ein Angabe-Status, keine Stufen; der Messwert steckt im Hilfsitem</td>
+      <td><strong>no</strong></td>
+      <td>units and a reporting status, not steps; the measured value lives in the helper item</td>
     </tr>
   </tbody>
 </table>
 
-<p><strong>Zur Falle bei <code class="language-plaintext highlighter-rouge">bdkm16</code>:</strong> Der <code class="language-plaintext highlighter-rouge">ordinalValue</code> trägt die Dictionary-Codes 1–4 und damit Rangplätze, <strong>nicht</strong> Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.</p>
+<p><strong>The trap in <code class="language-plaintext highlighter-rouge">bdkm16</code>:</strong> the <code class="language-plaintext highlighter-rouge">ordinalValue</code> carries the dictionary codes 1–4 and thus rank positions, <strong>not</strong> visit counts — "not at all" is 1, not 0. A count-based analysis needs the mapping 1→0, 2→1, 3→2, 4→3+.</p>
 
 <p><a name="timing"></a></p>
 
-<h3 id="timing-wird-nicht-modelliert--und-ist-trotzdem-sichtbar"><code class="language-plaintext highlighter-rouge">TIMING</code> wird nicht modelliert — und ist trotzdem sichtbar</h3>
+<h3 id="timing-is-not-modelled--and-visible-nonetheless"><code class="language-plaintext highlighter-rouge">TIMING</code> is not modelled — and visible nonetheless</h3>
 
-<p>Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Dictionary sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des <strong>Erhebungsplans</strong>, nicht des Bogens — ein <code class="language-plaintext highlighter-rouge">Questionnaire</code> beschreibt, <em>was</em> gefragt wird, nicht <em>wann</em>. R4 hat dafür auch kein tragendes Element.</p>
+<p>The dictionary's <code class="language-plaintext highlighter-rouge">TIMING</code> column states at which collection time point an item is administered (i = initial, a/at = all, e = discharge). That is a property of the <strong>collection plan</strong>, not of the questionnaire — a <code class="language-plaintext highlighter-rouge">Questionnaire</code> describes <em>what</em> is asked, not <em>when</em>. R4 has no suitable element for it either.</p>
 
-<p>Sichtbar wird der Plan stattdessen in den <strong>Antworten</strong>, und der Ressourcenzuschnitt macht das schärfer als zuvor: Die Beispielantworten bilden einen Initial-/Screening-Termin ab, und es gibt <strong>fünf, nicht sechs</strong> — für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a> fehlen <code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> und <code class="language-plaintext highlighter-rouge">lifev_discharge</code> aus demselben Grund.</p>
+<p>The plan becomes visible in the <strong>responses</strong> instead, and the resource layout makes this sharper than before: the example responses represent an initial/screening visit, and there are <strong>five, not six</strong> — for <a href="Questionnaire-UKHDND.html">UKHD-ND</a> simply none exists, because none of its items is collected at the initial visit. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a>, <code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> and <code class="language-plaintext highlighter-rouge">lifev_discharge</code> are absent for the same reason.</p>
 
 <p><a name="rechtelage"></a></p>
 
-<h3 id="rechtelage--eine-herkunftsfrage-keine-bloße-freigabefrage">Rechtelage — eine Herkunftsfrage, keine bloße Freigabefrage</h3>
+<h3 id="rights-situation--a-provenance-question-not-merely-a-clearance-question">Rights situation — a provenance question, not merely a clearance question</h3>
 
-<p>Die DIZ-Implementierungsliste führt ausschließlich <strong>publizierte</strong> Instrumente und kennt die standortbezogenen Itemgruppen von UKHD, UKE und MHH gar nicht — es gibt für sie weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Und weil das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix nur die Zusammenstellung etikettiert, ist vor der Freigabefrage eine <strong>Herkunftsfrage</strong> zu klären: Woher stammt der Wortlaut je Gruppe — eigene Formulierung des Standorts, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument?</p>
+<p>The DIZ implementation list covers <strong>published</strong> instruments only and does not know the site-related item groups of UKHD, UKE and MHH at all — for them neither a documented permission nor a documented restriction exists. And because the <code class="language-plaintext highlighter-rouge">UKHD</code> prefix only labels the compilation, a <strong>provenance question</strong> precedes the clearance question: where does the wording of each group come from — the site's own phrasing, in-house clinical documentation forms, or a published instrument?</p>
 
-<p>Die Variablennamen geben dafür Hinweise: Die meisten sind sprechende Studiendatenbank-Namen (<code class="language-plaintext highlighter-rouge">weight_discharge</code>, <code class="language-plaintext highlighter-rouge">life_event1_screening</code>) — für solche Items ist das Risiko klein. Drei Gruppen tragen dagegen <strong>fremde, opake Kürzelschemata</strong>, die Signatur einer Fremdquelle: <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code> (<a href="Questionnaire-UKHDPT.html">UKHD-PT</a>), <code class="language-plaintext highlighter-rouge">erwEV24</code>–<code class="language-plaintext highlighter-rouge">erwEV26</code> (<code class="language-plaintext highlighter-rouge">UKHD-BI</code>, nicht modelliert) und <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">edp11</code> (<a href="UKHD-EDP.html">UKHD-EDP</a>, EDI-2-Verdacht). Dort kann ein Verlag betroffen sein.</p>
+<p>The variable names give hints: most are descriptive study-database names (<code class="language-plaintext highlighter-rouge">weight_discharge</code>, <code class="language-plaintext highlighter-rouge">life_event1_screening</code>) — for these the risk is small. Three groups, however, carry <strong>foreign, opaque abbreviation schemes</strong>, the signature of an external source: <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code> (<a href="Questionnaire-UKHDPT.html">UKHD-PT</a>), <code class="language-plaintext highlighter-rouge">erwEV24</code>–<code class="language-plaintext highlighter-rouge">erwEV26</code> (<code class="language-plaintext highlighter-rouge">UKHD-BI</code>, not modelled) and <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">edp11</code> (<a href="UKHD-EDP.html">UKHD-EDP</a>, suspected EDI-2 subset). A publisher may be affected there.</p>
 
-<p>Dass der Wortlaut dennoch aufgenommen ist, ist eine <strong>bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage.</strong> Jede der sechs Ressourcen trägt <code class="language-plaintext highlighter-rouge">status = draft</code>, <code class="language-plaintext highlighter-rouge">experimental = true</code> und ein <code class="language-plaintext highlighter-rouge">copyright</code>, das genau das sagt. Ergibt die Rückmeldung des Standorts eine Einschränkung, wird <strong>je Gruppe</strong> auf metadata-only umgestellt (Muster <a href="WAI.html">WAI</a>); die Beispielantworten wären nicht betroffen — sie enthalten keine Itemtexte.</p>
+<p>That the wording is included nonetheless is a <strong>deliberate project decision for piloting, not a settled rights situation.</strong> Each of the six resources carries <code class="language-plaintext highlighter-rouge">status = draft</code>, <code class="language-plaintext highlighter-rouge">experimental = true</code> and a <code class="language-plaintext highlighter-rouge">copyright</code> saying exactly that. Should the site's reply impose a restriction, the switch to metadata-only happens <strong>per group</strong> (following the <a href="WAI.html">WAI</a> pattern); the example responses would be unaffected — they contain no item texts.</p>
 
-<h3 id="offene-punkte-zum-dictionary">Offene Punkte zum Dictionary</h3>
+<h3 id="open-points-regarding-the-dictionary">Open points regarding the dictionary</h3>
 
-<p>Beim Modellieren sind Auffälligkeiten aufgefallen, die <strong>nicht in FHIR zu lösen</strong> sind, sondern im Item Level Dictionary oder mit dem Standort. Sie stehen zusätzlich als <code class="language-plaintext highlighter-rouge">designNote</code> am jeweiligen Item.</p>
+<p>Issues surfaced during modelling that are <strong>not solvable in FHIR</strong> but belong in the Item Level Dictionary or with the site. Each is also recorded as a <code class="language-plaintext highlighter-rouge">designNote</code> on the affected item.</p>
 
-<p><strong>1. Herkunft des Wortlauts je Gruppe ungeklärt</strong> — siehe <a href="#rechtelage">Rechtelage</a>; konkret nachzufragen für <code class="language-plaintext highlighter-rouge">bdkm</code>, <code class="language-plaintext highlighter-rouge">erwEV</code> und <code class="language-plaintext highlighter-rouge">edp</code>.</p>
+<p><strong>1. Provenance of the wording unclarified per group</strong> — see <a href="#rechtelage">Rights situation</a>; to be asked specifically for <code class="language-plaintext highlighter-rouge">bdkm</code>, <code class="language-plaintext highlighter-rouge">erwEV</code> and <code class="language-plaintext highlighter-rouge">edp</code>.</p>
 
-<p><strong>2. <code class="language-plaintext highlighter-rouge">bdkm15</code> und <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> überschneiden sich.</strong> Beide fragen nach aktueller psychotherapeutischer Behandlung — in zwei Bögen, mit zwei verschiedenen Antwortskalen. Sie unterscheiden sich im Zeitbezug (<code class="language-plaintext highlighter-rouge">bdkm15</code> nur zur Aufnahme und mit Vorgeschichte, <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> zu jedem Termin und mit Setting), liefern zur Aufnahme aber teilweise dieselbe Information. Im Dictionary zu prüfen, ob das beabsichtigt ist.</p>
+<p><strong>2. <code class="language-plaintext highlighter-rouge">bdkm15</code> and <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> overlap.</strong> Both ask about current psychotherapeutic treatment — in two questionnaires, with two different answer scales. They differ in temporal scope (<code class="language-plaintext highlighter-rouge">bdkm15</code> on admission only and with history, <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> at every visit and with setting), but partly deliver the same information on admission. To be checked in the dictionary.</p>
 
-<p><strong>3. Der Variablenname <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> ist irreführend.</strong> Stufe 4 der Antwortskala erfasst ausdrücklich <strong>stationäre oder teilstationäre</strong> Behandlung; das Item fragt den Behandlungsstatus insgesamt ab. Der Name bleibt als <code class="language-plaintext highlighter-rouge">linkId</code> und <code class="language-plaintext highlighter-rouge">item.code</code> stehen, weil er die Dictionary-Variable ist — aber er darf nicht als Bedeutungsangabe gelesen werden.</p>
+<p><strong>3. The variable name <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> is misleading.</strong> Level 4 of the answer scale explicitly captures <strong>inpatient or day-clinic</strong> treatment; the item asks about treatment status overall. The name remains as <code class="language-plaintext highlighter-rouge">linkId</code> and <code class="language-plaintext highlighter-rouge">item.code</code> because it is the dictionary variable — but it must not be read as a statement of meaning.</p>
 
-<p><strong>4. <code class="language-plaintext highlighter-rouge">comorbid1</code> — formal unsauber, bewusst so belassen (entschieden 01.10.2026).</strong> Die Frage ist wörtlich eine Ja/Nein-Frage, das Dictionary sieht ein <strong>Textfeld</strong> vor. Gemeint ist das Textfeld: Dort sollen die weiteren <strong>Diagnosen</strong> stehen, nicht ein „ja". <code class="language-plaintext highlighter-rouge">type = text</code> bildet die Erhebung korrekt ab; der Wortlaut bleibt nach <a href="Designentscheidungen.html">ADR-010</a> unverändert. Praktische Folge: <strong>Das Feld enthält Diagnosetext, keine Ja/Nein-Angabe.</strong></p>
+<p><strong>4. <code class="language-plaintext highlighter-rouge">comorbid1</code> — formally unclean, deliberately left as is (decided 2026-10-01).</strong> The question is literally a yes/no question, but the dictionary provides a <strong>text field</strong>. The text field is what is meant: the additional <strong>diagnoses</strong> go there, not a "yes". <code class="language-plaintext highlighter-rouge">type = text</code> models the actual collection correctly; the wording remains unchanged per <a href="Designentscheidungen.html">ADR-010</a>. Practical consequence: <strong>the field contains diagnosis text, not a yes/no value.</strong></p>
 
-<p><strong>5. Uneinheitliche Variablennamen in <code class="language-plaintext highlighter-rouge">UKHD-LE</code>.</strong> <code class="language-plaintext highlighter-rouge">life_event1_screening</code>/<code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> gegen <code class="language-plaintext highlighter-rouge">lifev_discharge</code>/<code class="language-plaintext highlighter-rouge">lifev_text</code> — zwei Präfixe für eine Gruppe, und ein <code class="language-plaintext highlighter-rouge">life_event2</code> existiert nicht. Außerdem nennt die Beispielliste von <code class="language-plaintext highlighter-rouge">life_event1_screening</code> bloß „Partnerschaften", wo die beiden anderen „Auflösung einer Partnerschaften" sagen; dort fehlt offenbar der Kopf der Wendung.</p>
+<p><strong>5. Inconsistent variable names in <code class="language-plaintext highlighter-rouge">UKHD-LE</code>.</strong> <code class="language-plaintext highlighter-rouge">life_event1_screening</code>/<code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> versus <code class="language-plaintext highlighter-rouge">lifev_discharge</code>/<code class="language-plaintext highlighter-rouge">lifev_text</code> — two prefixes for one group, and no <code class="language-plaintext highlighter-rouge">life_event2</code> exists. In addition, the example list of <code class="language-plaintext highlighter-rouge">life_event1_screening</code> says merely "Partnerschaften" where the other two say "Auflösung einer Partnerschaften"; the head of the phrase is evidently missing there.</p>
 
-<p><strong>6. Die Gruppen-ID <code class="language-plaintext highlighter-rouge">UKHD_D</code> trägt einen Unterstrich</strong>, während alle anderen Gruppen einen Bindestrich führen. Im Dictionary zu vereinheitlichen; Ressourcen-Id und Katalogcode folgen der Hauskonvention (<code class="language-plaintext highlighter-rouge">UKHD-D</code>/<code class="language-plaintext highlighter-rouge">ukhd-d</code>), die Dictionary-Schreibweise bleibt in der Property <code class="language-plaintext highlighter-rouge">instrument</code> erhalten.</p>
+<p><strong>6. The group ID <code class="language-plaintext highlighter-rouge">UKHD_D</code> carries an underscore</strong> while all other groups use a hyphen. To be harmonised in the dictionary; resource id and catalogue code follow the house convention (<code class="language-plaintext highlighter-rouge">UKHD-D</code>/<code class="language-plaintext highlighter-rouge">ukhd-d</code>), the dictionary spelling is preserved in the <code class="language-plaintext highlighter-rouge">instrument</code> property.</p>
 
-<p><strong>7. <code class="language-plaintext highlighter-rouge">bdkm16</code> fragt nach Arztbesuchen, steht aber in <em>Past Treatment</em>.</strong> Inhaltlich gehört das Item eher zur Versorgungsinanspruchnahme (vgl. <code class="language-plaintext highlighter-rouge">UKE-HCU</code> in PSS).</p>
+<p><strong>7. <code class="language-plaintext highlighter-rouge">bdkm16</code> asks about physician visits but sits in <em>Past Treatment</em>.</strong> In content it belongs to healthcare utilisation (cf. <code class="language-plaintext highlighter-rouge">UKE-HCU</code> in PSS).</p>
 
-<p><strong>8. <code class="language-plaintext highlighter-rouge">UKHD-D</code> überschneidet sich mit dem <a href="MHI.html">MHI</a>.</strong> Dort erheben <code class="language-plaintext highlighter-rouge">CPCOR-DIAG</code> (Diagnosegruppe zur Selbstzuordnung) und <code class="language-plaintext highlighter-rouge">GIPS13</code> (Liste chronischer Erkrankungen) <strong>kodiert</strong>, was hier als <strong>Freitext</strong> erhoben wird. Welche Darstellung für die Auswertung maßgeblich ist, ist fachlich zu klären.</p>
+<p><strong>8. <code class="language-plaintext highlighter-rouge">UKHD-D</code> overlaps with the <a href="MHI.html">MHI</a>.</strong> There, <code class="language-plaintext highlighter-rouge">CPCOR-DIAG</code> (self-assigned diagnosis group) and <code class="language-plaintext highlighter-rouge">GIPS13</code> (list of chronic conditions) collect in <strong>coded</strong> form what is collected here as <strong>free text</strong>. Which representation is authoritative for analysis is a clinical question.</p>
 
-<h3 id="hinweis-zur-erhebung">Hinweis zur Erhebung</h3>
+<h3 id="note-on-data-collection">Note on data collection</h3>
 
-<p><a href="Questionnaire-UKHDLE.html">UKHD-LE</a> betrifft <strong>hochsensible Inhalte</strong> (Verlusterfahrungen, Missbrauch), ebenso die im <a href="ACE.html">ACE</a> liegende Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (Kindheitsbelastungen). Die Governance der Auswertung — analog zum PHQ-SI — ist fachlich zu klären.</p>
+<p><a href="Questionnaire-UKHDLE.html">UKHD-LE</a> touches <strong>highly sensitive content</strong> (loss experiences, abuse), as does the <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> group located in the <a href="ACE.html">ACE</a> (childhood adversity). Governance of the evaluation — analogous to the PHQ-SI — remains to be clarified clinically.</p>
 
-<p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
+<p>Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; all artefacts are listed under <a href="artifacts.html">Artifacts</a>.</p>
 
 
 
@@ -643,7 +640,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 13:01:00 +0000">
+  <span title="2026-10-01 13:05:00 +0000">
     2026-10-01
   </span>
 

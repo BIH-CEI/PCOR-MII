@@ -62,7 +62,7 @@ Für **UKE** und **MHH** ist nichts modelliert; dort bleibt es beim Stand oben.
 
 **Zu klären:** Bestätigung durch UKHD (und analog UKE und MHH) für beide Gruppen — rückwirkend für die 34 publizierten Items und vorausschauend für die Batterien. Bis dahin ist der Status quo eine Annahme, keine Freigabe.
 
-Relevant wird das unmittelbar bei der Essstörungspathologie: Der [Erhebungsplan](Essstoerungen.md) sieht dort 17 Items vor, von denen 11 aus `UKHD-EDP` stammen. Der [EDE-Q6](EDE-Q6.md) deckt die übrigen 6 ab.
+Relevant wird das unmittelbar bei der Essstörungspathologie: Der Erhebungsplan (Blatt **Domain Overview** des Item Level Dictionary) sieht dort 17 Items vor, von denen 11 aus `UKHD-EDP` stammen. Der [EDE-Q6](EDE-Q6.md) deckt die übrigen 6 ab.
 
 #### ❓ UKHD-EDP — vermutlich ein EDI-2-Zuschnitt, rechtlich unbewertet
 

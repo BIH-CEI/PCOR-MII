@@ -6,7 +6,7 @@
 
 Diese Seite ist die **Arbeitsliste für den Use Case AN** (Anorexia Nervosa): jedes zu erhebende Instrument in einer Zeile, mit dem Link dorthin, wo die FHIR-Ressource tatsächlich liegt — im **PCOR-MII-IG** oder im **MII-PRO-IG**.
 
-Sie beantwortet eine einzige Frage: **Wo finde ich den Fragebogen, den ich erheben soll?** Die fachliche Begründung der Batterie steht auf [AN](AN.md), der Erhebungsplan mit Phasen, Prioritäten und Frequenzen auf [Essstörungen — Erhebungsplan](Essstoerungen.md), die entitätsübergreifende Sicht auf [Instrumente](Instrumente.md).
+Sie beantwortet eine einzige Frage: **Wo finde ich den Fragebogen, den ich erheben soll?** Die fachliche Begründung der Batterie steht auf [AN](AN.md), die entitätsübergreifende Sicht auf [Instrumente](Instrumente.md). Der Erhebungsplan selbst (Phasen, Prioritäten, Frequenzen) steht im Blatt **Domain Overview** des Item Level Dictionary und wird im IG nicht mehr gespiegelt.
 
 ### Wie die Links zu lesen sind
 
@@ -75,7 +75,7 @@ Die sechs Beispielantworten gehören zu **einem** Erhebungstermin derselben Beis
 | PROPr — PROMIS-Preference Utility | **PCOR-MII**→[`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.md)— vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.md#propr) |
 | PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO**— acht`ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.md) |
 | PROMIS-Domänen-T-Scores (PROMIS-16) | **offen**— upstream Roadmap 2027; die acht Codes des PROMIS-29 gelten**nicht**für PROMIS-16 | [PROMIS-16](PROMIS-16.md) |
-| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen**— im Plan Prio A, kein Artefakt | [Erhebungsplan](Essstoerungen.md) |
+| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen**— im Plan Prio A, kein Artefakt | **Domain Overview**des Item Level Dictionary |
 | EQ-5D-5L Index (nur Outcome) | **MII PRO**→[EQ-5D-5L](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EQ-5D-5L?version=current)— upstream vorhanden, in PCOR-MII bisher nicht referenziert | — |
 
 Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, **obwohl upstream ein vollständiges Artefakt vorliegt** (inklusive Index-Score und CQL). Hier fehlt nur die Referenzierung in PCOR-MII, nicht das Artefakt.
@@ -98,7 +98,7 @@ Sieben von ihnen sind inzwischen modelliert: sechs als **je ein eigenes Question
 | `UKHD-BI` | Körperbild | 3 | **offen**— bewusst nicht modelliert | Freigabe UKHD offen |
 | `UKHD-EDP` | Essstörungspathologie | 11 | **offen**— vor einer Modellierung zu klären | **Rechtelage unbewertet**— je ein Item der elf EDI-2-Subskalen; EDI-2 ist Hogrefe-verlegt und in der DIZ-Liste**nicht geführt** |
 
-**Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.** `UKHD-BI` ist eine **visuelle Bildskala**: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der `UKHD-EDP`-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [Essstörungen — Erhebungsplan](Essstoerungen.md).
+**Zwei Gruppen sind ausdrücklich ausgenommen, und aus verschiedenen Gründen.** `UKHD-BI` ist eine **visuelle Bildskala**: Die Erhebung läuft noch nicht damit, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung. Der `UKHD-EDP`-Block ist der andere Fall: Das Präfix legt eine Eigenentwicklung nahe, aber die elf Items sind ein EDI-2-Zuschnitt — also **kein** Standort-Original, und damit auch keine Sache, die Heidelberg allein freigeben kann. Begründung auf [UKHD-EDP](UKHD-EDP.md).
 
 ### Nicht in AN erhoben
 
@@ -106,7 +106,7 @@ Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Ges
 
 ### Woher diese Seite ihre Angaben hat
 
-Instrumentenzuordnung und Itemzahlen: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), wie auf [Instrumente](Instrumente.md) und [Essstörungen — Erhebungsplan](Essstoerungen.md) ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).
+Instrumentenzuordnung und Itemzahlen: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), wie auf [Instrumente](Instrumente.md) ausgewertet. Rechteangaben: DIZ-Implementierungsliste PCOR-MII. Die Zuordnung PCOR-MII/MII PRO ist gegen das Dependency-Paket `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0 geprüft; die Links in den MII-PRO-IG sind einzeln gegen den veröffentlichten Guide verifiziert (Stand 2026-09-30).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

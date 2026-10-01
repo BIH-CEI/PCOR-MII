@@ -220,9 +220,6 @@ a[name="test"] + h3 + div {
       <li>
         <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
       </li>
-      <li>
-        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -434,6 +431,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
 
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> <strong>Englische Fassung der Seite <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a></strong> ergänzt; die Seite <strong>Essstörungen — Erhebungsplan ist entfernt</strong>. Sie spiegelte das Blatt <em>Domain Overview</em> des Item Level Dictionary — eine zweite Quelle der Wahrheit für einen Plan, der im Excel gepflegt wird und sich dort weiterentwickelt. Die Nachschlagefunktion („wo liegt der Fragebogen?") übernimmt vollständig die <a href="AN-Instrumentenliste.html">AN-Instrumentenliste</a>; Verweise zeigen jetzt direkt auf das Quellblatt.</p>
+
 <p><strong><code class="language-plaintext highlighter-rouge">breaking</code></strong> <strong>Der <a href="ACE.html">ACE</a> ist jetzt ein PCOR-MII-Komposit, nicht mehr der ACE-Zuschnitt.</strong> Zu den fünf ACE-Items sind die sechs Items der Dictionary-Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (<code class="language-plaintext highlighter-rouge">traumaspecific1</code>–<code class="language-plaintext highlighter-rouge">6</code>) gekommen, die die berichteten Ereignisse zeitlich einordnen — in drei <code class="language-plaintext highlighter-rouge">group</code>-Items mit <code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">ace1</code>, <code class="language-plaintext highlighter-rouge">ace2</code> beziehungsweise <code class="language-plaintext highlighter-rouge">ace3</code>.</p>
 
 <p><strong>Der Anlass stand die ganze Zeit im Dictionary.</strong> Die Spalte <code class="language-plaintext highlighter-rouge">ADDITIONAL INFORMATION</code> sagt für <code class="language-plaintext highlighter-rouge">traumaspecific1</code>/<code class="language-plaintext highlighter-rouge">2</code> wörtlich <em>„ACE Abfrage ace1, Antwort Ja = 1"</em>, für <code class="language-plaintext highlighter-rouge">3</code>/<code class="language-plaintext highlighter-rouge">4</code> entsprechend <code class="language-plaintext highlighter-rouge">ace2</code> und für <code class="language-plaintext highlighter-rouge">5</code>/<code class="language-plaintext highlighter-rouge">6</code> <code class="language-plaintext highlighter-rouge">ace3</code>. Damit war der Bezugspunkt von „Ihre Angabe" — bis dahin der größte offene Punkt des <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> — nie offen, sondern bloß übersehen. Er ist aber nur ausdrückbar, wo beide Seiten zusammenliegen: <code class="language-plaintext highlighter-rouge">enableWhen.question</code> nimmt laut R4 eine <code class="language-plaintext highlighter-rouge">linkId</code> <strong>innerhalb desselben Questionnaire</strong>. Die Items sind deshalb aus dem Sammelbogen in den ACE gezogen, statt die Bedingung nur zu dokumentieren.</p>
@@ -487,7 +486,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><em>(noch keine Einträge)</em></p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Neue Seite <strong><a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a></strong>: eine Nachschlagetabelle für den Use Case AN, die je Instrument direkt auf die Ressource verlinkt — PCOR-MII-Artefaktseite oder MII-PRO-IG. Die drei bestehenden AN-Seiten beantworten die Frage „wo liegt der Fragebogen, den ich erheben soll" jeweils nur teilweise: <a href="AN.html">AN</a> beschreibt die Batterie fachlich, <a href="Essstoerungen.html">Essstörungen</a> den Erhebungsplan, <a href="Instrumente.html">Instrumente</a> alle drei Entitäten gemischt. Die neue Seite trennt Ressource (wo liegt sie) von Doku (was steht drin) in eigene Spalten und weist die drei Zustände <strong>PCOR-MII / MII PRO / offen</strong> explizit aus, statt sie in Prosa zu verstecken. Enthält zusätzlich die Scores, die UKHD-Itemgruppen mit ihrem Freigabestatus und einen Abgrenzungsabschnitt, was in AN <em>nicht</em> erhoben wird</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Neue Seite <strong><a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a></strong>: eine Nachschlagetabelle für den Use Case AN, die je Instrument direkt auf die Ressource verlinkt — PCOR-MII-Artefaktseite oder MII-PRO-IG. Die drei bestehenden AN-Seiten beantworten die Frage „wo liegt der Fragebogen, den ich erheben soll" jeweils nur teilweise: <a href="AN.html">AN</a> beschreibt die Batterie fachlich, <a href="Instrumente.html">Instrumente</a> alle drei Entitäten gemischt. Die neue Seite trennt Ressource (wo liegt sie) von Doku (was steht drin) in eigene Spalten und weist die drei Zustände <strong>PCOR-MII / MII PRO / offen</strong> explizit aus, statt sie in Prosa zu verstecken. Enthält zusätzlich die Scores, die UKHD-Itemgruppen mit ihrem Freigabestatus und einen Abgrenzungsabschnitt, was in AN <em>nicht</em> erhoben wird</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> Toter Link auf <a href="WHODAS-12.html">WHODAS 2.0</a> korrigiert. Die IG-Doku-Seite im MII-PRO-IG trug ein <code class="language-plaintext highlighter-rouge">.page.md</code> zu viel und lieferte <strong>404</strong>. Instrumentenseiten liegen dort als Abschnitts-URL ohne <code class="language-plaintext highlighter-rouge">.page.md</code> (<code class="language-plaintext highlighter-rouge">…/PRO-Bibliothek/WHODAS-2.0?version=current</code>), nur echte Unterseiten tragen das Suffix — deshalb funktioniert der PROMIS-16-Link (<code class="language-plaintext highlighter-rouge">…/PROMIS/PROMIS-16.page.md</code>) und der WHODAS-Link nicht. Alle Upstream-Links der neuen Instrumentenliste sind einzeln gegen den veröffentlichten Guide geprüft, nicht aus dem Muster abgeleitet</p>
 
@@ -673,7 +672,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:01:00 +0000">
+  <span title="2026-10-01 13:05:00 +0000">
     2026-10-01
   </span>
 

@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T13:01:03+00:00",
+  "date" : "2026-10-01T13:05:32+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -2609,15 +2609,6 @@
             }],
             "nameUrl" : "AN-Instrumentenliste.html",
             "title" : "AN — Instrumentenliste mit Links",
-            "generation" : "markdown"
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "Essstoerungen.html"
-            }],
-            "nameUrl" : "Essstoerungen.html",
-            "title" : "Essstörungen — Erhebungsplan",
             "generation" : "markdown"
           },
           {

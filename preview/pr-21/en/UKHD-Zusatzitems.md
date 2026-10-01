@@ -4,100 +4,100 @@
 
 **Translated page. Original language: German.**
 
-**UKHD-Zusatzitems AN** sind die Itemgruppen aus dem Item Level Dictionary, die kein publiziertes Instrument abbilden und in der Entität AN vom Standort Heidelberg für die Erhebung zusammengestellt wurden — modelliert als **sechs eigenständige Questionnaires, eines je Dictionary-Gruppe** (entschieden 01.10.2026; zuvor ein Sammelbogen `UKHD-AN`).
+**UKHD supplementary items (AN)** are the item groups from the Item Level Dictionary that do not correspond to any published instrument and were compiled for data collection in the AN entity by the Heidelberg site — modelled as **six free-standing Questionnaires, one per dictionary group** (decided 2026-10-01; previously a single collective questionnaire `UKHD-AN`).
 
-> **Das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe.** Die Handanweisung des Master-Excel definiert die `INSTRUMENT`-Spalte als die Auswahl des Erhebungswerkzeugs durch die Standorte („Hier können die Standorte auswählen … mit welchem Instrument die jeweilige Domäne erfasst werden soll"), und die Standortspalten als Timing-Matrix — im AN-Blatt ist ausschließlich die UKHD-Spalte gefüllt, auch bei den publizierten Instrumenten wie [ERQ-6](ERQ-6.md) und [ACE](ACE.md). Das Präfix unterscheidet also nur **publiziertes Instrument gewählt** von **vom Standort eingebrachter Itemsatz** — es sagt **nicht**, dass der Standort die Items verfasst hat. Woher der Wortlaut je Gruppe stammt, ist nicht dokumentiert; siehe [Rechtelage](#rechtelage).
+> **The `UKHD` prefix is a compilation label, not a statement of authorship.** The instruction sheet of the master Excel defines the `INSTRUMENT` column as the sites' choice of data-collection tool ("Here the sites can select … which instrument is to be used to capture the respective domain"), and the site columns as a timing matrix — on the AN sheet only the UKHD column is filled in, including for published instruments such as [ERQ-6](ERQ-6.md) and [ACE](ACE.md). The prefix therefore only distinguishes **published instrument chosen** from **item set contributed by the site** — it does **not** say that the site authored the items. Where the wording of each group comes from is not documented; see [Rights situation](#rechtelage).
 
-### Die sechs Questionnaires
+### The six Questionnaires
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| [UKHD-PT](Questionnaire-UKHDPT.md) | `UKHD-PT` | 2 | Vorbehandlung: Psychotherapie früher/aktuell (`bdkm15`), Arztbesuche in 4 Wochen (`bdkm16`) | [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.md) |
-| [UKHD-ANB](Questionnaire-UKHDANB.md) | `UKHD-ANB` | 2 (+2) | Essstörungsanamnese: Erkrankungsdauer, niedrigster BMI — je Auswahl plus PCOR-MII-eigenem Wert-Item | [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.md) |
-| [UKHD-CT](Questionnaire-UKHDCT.md) | `UKHD-CT` | 1 | Aktueller Behandlungsstatus (`treatment_outpatient`) | [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.md) |
-| [UKHD-LE](Questionnaire-UKHDLE.md) | `UKHD-LE` | 4 | Belastende Lebensereignisse: dieselbe Frage für drei Erhebungszeitpunkte + Freitext (`enableWhen`,`any`) | [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.md) |
-| [UKHD-ND](Questionnaire-UKHDND.md) | `UKHD-ND` | 3 | Neue Diagnosen seit der letzten Befragung: zwei Zeitfenster + Freitext | — siehe[TIMING](#timing) |
-| [UKHD-D](Questionnaire-UKHDD.md) | `UKHD_D` | 2 | Diagnosen bei Aufnahme, Freitext | [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.md) |
+| [UKHD-PT](Questionnaire-UKHDPT.md) | `UKHD-PT` | 2 | Past treatment: psychotherapy history (`bdkm15`), physician visits in the last 4 weeks (`bdkm16`) | [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.md) |
+| [UKHD-ANB](Questionnaire-UKHDANB.md) | `UKHD-ANB` | 2 (+2) | Eating-disorder history: duration of illness, lowest BMI — each a choice plus a PCOR-MII-own value item | [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.md) |
+| [UKHD-CT](Questionnaire-UKHDCT.md) | `UKHD-CT` | 1 | Current treatment status (`treatment_outpatient`) | [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.md) |
+| [UKHD-LE](Questionnaire-UKHDLE.md) | `UKHD-LE` | 4 | Stressful life events: the same question for three collection time points + free text (`enableWhen`,`any`) | [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.md) |
+| [UKHD-ND](Questionnaire-UKHDND.md) | `UKHD-ND` | 3 | New diagnoses since the last survey: two time windows + free text | — see[TIMING](#timing) |
+| [UKHD-D](Questionnaire-UKHDD.md) | `UKHD_D` | 2 | Diagnoses on admission, free text | [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.md) |
 
-Zwei weitere UKHD-Gruppen sind **anderswo** modelliert, eine ist **ausgenommen**:
+Two further UKHD groups are modelled **elsewhere**, one is **excluded**:
 
-* **`UKHD-CTT`** (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.md): Das Dictionary nennt ihren `enableWhen`-Bezug auf `ace1`–`ace3` ausdrücklich, und `enableWhen.question` nimmt laut R4 eine `linkId` nur innerhalb desselben Questionnaire. Der ACE ist dadurch ein PCOR-MII-Komposit.
-* **`UKHD-EDP`** (11 Items, vermutlich EDI-2-Zuschnitt) ist ein eigener [metadata-only-Bogen](UKHD-EDP.md).
-* **`UKHD-BI`** (Körperbild, 3 Items) ist **nicht modelliert**: eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt — die Anker einer visuellen Skala sind hier der Messgegenstand, nicht Beschriftung.
-* Die Faktenfragen-Gruppen **`UKHD-AN`** (`AN_subtyp`), **`UKHD-W`** (Gewichtsverlauf) und **`UKHD-MEDI`/`-MEDI2`** (Medikation) liegen im [MHI](MHI.md) — sie gehören zur Anamnese, nicht zur AN-Zusatzerhebung.
+* **`UKHD-CTT`** (6 timing items on childhood trauma) lives in the [ACE](ACE.md): the dictionary explicitly states its `enableWhen` dependency on `ace1`–`ace3`, and per R4 `enableWhen.question` takes a `linkId` only within the same Questionnaire. The ACE thereby becomes a PCOR-MII composite.
+* **`UKHD-EDP`** (11 items, presumably an EDI-2 subset) is its own [metadata-only questionnaire](UKHD-EDP.md).
+* **`UKHD-BI`** (body image, 3 items) is **not modelled**: a visual figure scale that data collection does not yet use, and whose image panel is missing from the dictionary — the anchors of a visual scale are the measuring instrument itself, not labelling.
+* The factual-question groups **`UKHD-AN`** (`AN_subtyp`), **`UKHD-W`** (weight history) and **`UKHD-MEDI`/`-MEDI2`** (medication) live in the [MHI](MHI.md) — they belong to the medical history, not to the AN supplementary collection.
 
-### Warum ein Questionnaire je Gruppe
+### Why one Questionnaire per group
 
-Der erste Wurf war ein Sammelbogen (`UKHD-AN`, sechs `group`-Items). Er ist aus drei Gründen aufgegeben:
+The first draft was a collective questionnaire (`UKHD-AN`, six `group` items). It was abandoned for three reasons:
 
-1. **Die Gruppen sind kein gemeinsames Instrument.**Das`UKHD`-Präfix etikettiert die Zusammenstellung, nicht eine Instrumentenidentität — ein Sammelbogen hätte eine Einheit behauptet, die es nicht gibt. Sichtbar wurde das an einer Namenskollision: Die Dictionary-Gruppe`UKHD-AN`existiert wirklich, besteht aus genau einem Item (`AN_subtyp`) und liegt im[MHI](MHI.md)— der Sammelbogen gleichen Namens enthielt sie nicht.
-1. **Die Rechte- und Herkunftsfrage wird je Gruppe beantwortet.**`bdkm15`/`bdkm16`tragen ein fremdes Variablenschema,`UKHD-LE`wirkt wie eine entworfene Batterie,`UKHD_D`ist eine Verwaltungsfrage. Kommt die Rückmeldung des Standorts differenziert zurück, wird je Gruppe umgestellt (metadata-only, Muster[WAI](WAI.md)) — ohne veröffentlichte Canonicals zu zerschneiden.
-1. **`TIMING` wird im Ressourcenzuschnitt sichtbar.**Die Gruppen haben verschiedene Erhebungszeitpunkte; je Bogen entsteht pro Termin eine Antwort — oder eben keine (siehe[TIMING](#timing)). Ein Sammelbogen musste dieselbe Tatsache als bewusst leere Gruppen erklären.
+1. **The groups are not a joint instrument.**The`UKHD`prefix labels the compilation, not an instrument identity — a collective questionnaire would have asserted a unity that does not exist. This became visible through a name collision: the dictionary group`UKHD-AN`genuinely exists, consists of exactly one item (`AN_subtyp`) and lives in the[MHI](MHI.md)— the collective questionnaire of the same name did not contain it.
+1. **The rights and provenance question is answered per group.**`bdkm15`/`bdkm16`carry a foreign variable scheme,`UKHD-LE`looks like a designed battery,`UKHD_D`is an administrative question. If the site's reply comes back differentiated, each group is switched individually (metadata-only, following the[WAI](WAI.md)pattern) — without cutting published canonicals apart.
+1. **`TIMING` becomes visible in the resource layout.**The groups have different collection time points; per questionnaire one response per visit arises — or none at all (see[TIMING](#timing)). A collective questionnaire had to explain the same fact as deliberately empty groups.
 
-Der Preis ist bekannt und benannt: sechs Ressourcen für 14 Items, drei davon mit ein oder zwei Items. [ADR-011](Designentscheidungen.md) ist dafür um die Standortgruppen-Regel ergänzt — die Anti-Fragmentierungs-Grenze gilt unverändert für **publizierte** Instrumente; für Standort-Itemgruppen ist die **Dictionary-Gruppe** die Einheit, weil sie die Einheit der Herkunfts- und Rechtsklärung ist.
+The cost is known and stated: six resources for 14 items, three of them with one or two items. [ADR-011](Designentscheidungen.md) has been extended by the site-group rule for this — the anti-fragmentation boundary remains unchanged for **published** instruments; for site item groups the **dictionary group** is the unit, because it is the unit of provenance and rights clarification.
 
-Die Gruppenzugehörigkeit bleibt unabhängig davon maschinenlesbar: Jedes Item trägt seine Dictionary-Variable als `item.code`, und die Property `instrument` in [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md) nennt die Gruppe — egal, in welcher Ressource das Item liegt (`UKHD-CTT` im ACE belegt das).
+Group membership remains machine-readable regardless: every item carries its dictionary variable as `item.code`, and the `instrument` property in [pcor-item-dictionary](CodeSystem-pcor-item-dictionary.md) names the group — no matter which resource the item lives in (`UKHD-CTT` in the ACE proves the point).
 
-### Gemeinsame Entscheidungen aller sechs Bögen
+### Decisions shared by all six questionnaires
 
-**`linkId` = Dictionary-Variablen-ID** ([ADR-008](Designentscheidungen.md) Regel 1, zweiter Teil): Es gibt keine offizielle Itemnummerierung, die Variablen-ID ist die einzige Identität der Items.
+**`linkId` = dictionary variable ID** ([ADR-008](Designentscheidungen.md) rule 1, second part): there is no official item numbering; the variable ID is the items' only identity.
 
-**Sprache `de` ohne Übersetzungsebene** ([ADR-005](Designentscheidungen.md)): Ein englisches Original ist nicht dokumentiert; eine englische `item.text`-Ebene wäre eine unvalidierte PCOR-MII-Übersetzung an der Stelle, an der der erhobene Wortlaut steht.
+**Language `de` without a translation layer** ([ADR-005](Designentscheidungen.md)): no English original is documented; an English `item.text` layer would be an unvalidated PCOR-MII translation in the place where the collected wording belongs.
 
-**Wortlaut wortgleich übernommen** ([ADR-010](Designentscheidungen.md)), normalisiert nur Zeilenumbrüche und Mehrfach-Leerzeichen. **Sprachliche Fehler der Vorlage bleiben stehen** und sind einzeln ausgewiesen: `lowBMI` „Ihr niedrigter BMI", `comorbid1` „den zurvor genannten", in `UKHD-LE` „Auflösung einer Partnerschaften" und „Verlust ihres Zuhauses". Eine Bereinigung wäre nur als zusätzliche Ebene zulässig und ist bewusst nicht angelegt — das Dictionary **ist** hier die Vorlage, es gibt keine zweite Quelle, gegen die sich Druckfehler von Abschreibfehlern unterscheiden ließen; die Korrektur gehört ins Dictionary.
+**Wording taken over verbatim** ([ADR-010](Designentscheidungen.md)), normalising only line breaks and duplicate spaces from the Excel cells. **Linguistic errors of the source remain in place** and are individually flagged: `lowBMI` "Ihr niedrigter BMI", `comorbid1` "den zurvor genannten", in `UKHD-LE` "Auflösung einer Partnerschaften" and "Verlust ihres Zuhauses". A cleaned layer would only be admissible in addition and is deliberately not provided — the dictionary **is** the source here; there is no second source against which typos could be distinguished from transcription errors. The correction belongs in the dictionary.
 
-**Kein Score, keine Instrument-Codes:** Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer (Recherche via fhir-terminology MCP, 2026-10-01); `Questionnaire.code` trägt je Bogen den lokalen Katalogcode aus [pcor-questionnaire-catalogue](CodeSystem-pcor-questionnaire-catalogue.md).
+**No score, no instrument codes:** there is no instrument that could be scored. LOINC 2.83 and SNOMED CT 2026-05-01 return zero hits for the underlying concepts (searched via the fhir-terminology MCP, 2026-10-01); `Questionnaire.code` carries each questionnaire's local catalogue code from [pcor-questionnaire-catalogue](CodeSystem-pcor-questionnaire-catalogue.md).
 
-**Ja/Nein** über das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.md) (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem `ukhd-an-*`-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.
+**Yes/no** uses the project-wide [DemJaNeinVS](ValueSet-dem-ja-nein.md) (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose `ukhd-an-*` prefix in id and canonical names the site and the entity, not a resource.
 
-### Antwortskalen — ordinalValue nur, wo die Skala ordinal ist
+### Answer scales — ordinalValue only where the scale is ordinal
 
 | | | |
 | :--- | :--- | :--- |
-| [ukhd-an-arztbesuche](CodeSystem-ukhd-an-arztbesuche.md)—`bdkm16`(UKHD-PT) | **ja**, 1–4 | monoton steigende Häufigkeit, letzte Stufe nach oben offen |
-| [ukhd-an-psychotherapie](CodeSystem-ukhd-an-psychotherapie.md)—`bdkm15`(UKHD-PT) | **nein** | drei Zeitbezüge, keine Menge; wer früher**und**jetzt in Behandlung ist, findet keine Stufe |
-| [ukhd-an-behandlungsstatus](CodeSystem-ukhd-an-behandlungsstatus.md)—`treatment_outpatient`(UKHD-CT) | **nein** | mischt zwei Achsen: 2→3 ist ein Statuswechsel, 3→4 ein Settingwechsel |
-| [ukhd-an-dauer-angabe](CodeSystem-ukhd-an-dauer-angabe.md),[ukhd-an-bmi-angabe](CodeSystem-ukhd-an-bmi-angabe.md)(UKHD-ANB) | **nein** | Einheiten und ein Angabe-Status, keine Stufen; der Messwert steckt im Hilfsitem |
+| [ukhd-an-arztbesuche](CodeSystem-ukhd-an-arztbesuche.md)—`bdkm16`(UKHD-PT) | **yes**, 1–4 | monotonically increasing frequency, last step open-ended |
+| [ukhd-an-psychotherapie](CodeSystem-ukhd-an-psychotherapie.md)—`bdkm15`(UKHD-PT) | **no** | three temporal references, not a quantity; someone in treatment both earlier**and**now has no step |
+| [ukhd-an-behandlungsstatus](CodeSystem-ukhd-an-behandlungsstatus.md)—`treatment_outpatient`(UKHD-CT) | **no** | mixes two axes: 2→3 is a status change, 3→4 a setting change |
+| [ukhd-an-dauer-angabe](CodeSystem-ukhd-an-dauer-angabe.md),[ukhd-an-bmi-angabe](CodeSystem-ukhd-an-bmi-angabe.md)(UKHD-ANB) | **no** | units and a reporting status, not steps; the measured value lives in the helper item |
 
-**Zur Falle bei `bdkm16`:** Der `ordinalValue` trägt die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.
+**The trap in `bdkm16`:** the `ordinalValue` carries the dictionary codes 1–4 and thus rank positions, **not** visit counts — "not at all" is 1, not 0. A count-based analysis needs the mapping 1→0, 2→1, 3→2, 4→3+.
 
-### TIMING wird nicht modelliert — und ist trotzdem sichtbar
+### TIMING is not modelled — and visible nonetheless
 
-Die `TIMING`-Spalte des Dictionary sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des **Erhebungsplans**, nicht des Bogens — ein `Questionnaire` beschreibt, **was** gefragt wird, nicht **wann**. R4 hat dafür auch kein tragendes Element.
+The dictionary's `TIMING` column states at which collection time point an item is administered (i = initial, a/at = all, e = discharge). That is a property of the **collection plan**, not of the questionnaire — a `Questionnaire` describes **what** is asked, not **when**. R4 has no suitable element for it either.
 
-Sichtbar wird der Plan stattdessen in den **Antworten**, und der Ressourcenzuschnitt macht das schärfer als zuvor: Die Beispielantworten bilden einen Initial-/Screening-Termin ab, und es gibt **fünf, nicht sechs** — für [UKHD-ND](Questionnaire-UKHDND.md) existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In [UKHD-LE](Questionnaire-UKHDLE.md) fehlen `life_event1_monitoring` und `lifev_discharge` aus demselben Grund.
+The plan becomes visible in the **responses** instead, and the resource layout makes this sharper than before: the example responses represent an initial/screening visit, and there are **five, not six** — for [UKHD-ND](Questionnaire-UKHDND.md) simply none exists, because none of its items is collected at the initial visit. In [UKHD-LE](Questionnaire-UKHDLE.md), `life_event1_monitoring` and `lifev_discharge` are absent for the same reason.
 
-### Rechtelage — eine Herkunftsfrage, keine bloße Freigabefrage
+### Rights situation — a provenance question, not merely a clearance question
 
-Die DIZ-Implementierungsliste führt ausschließlich **publizierte** Instrumente und kennt die standortbezogenen Itemgruppen von UKHD, UKE und MHH gar nicht — es gibt für sie weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Und weil das `UKHD`-Präfix nur die Zusammenstellung etikettiert, ist vor der Freigabefrage eine **Herkunftsfrage** zu klären: Woher stammt der Wortlaut je Gruppe — eigene Formulierung des Standorts, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument?
+The DIZ implementation list covers **published** instruments only and does not know the site-related item groups of UKHD, UKE and MHH at all — for them neither a documented permission nor a documented restriction exists. And because the `UKHD` prefix only labels the compilation, a **provenance question** precedes the clearance question: where does the wording of each group come from — the site's own phrasing, in-house clinical documentation forms, or a published instrument?
 
-Die Variablennamen geben dafür Hinweise: Die meisten sind sprechende Studiendatenbank-Namen (`weight_discharge`, `life_event1_screening`) — für solche Items ist das Risiko klein. Drei Gruppen tragen dagegen **fremde, opake Kürzelschemata**, die Signatur einer Fremdquelle: `bdkm15`/`bdkm16` ([UKHD-PT](Questionnaire-UKHDPT.md)), `erwEV24`–`erwEV26` (`UKHD-BI`, nicht modelliert) und `edp1`–`edp11` ([UKHD-EDP](UKHD-EDP.md), EDI-2-Verdacht). Dort kann ein Verlag betroffen sein.
+The variable names give hints: most are descriptive study-database names (`weight_discharge`, `life_event1_screening`) — for these the risk is small. Three groups, however, carry **foreign, opaque abbreviation schemes**, the signature of an external source: `bdkm15`/`bdkm16` ([UKHD-PT](Questionnaire-UKHDPT.md)), `erwEV24`–`erwEV26` (`UKHD-BI`, not modelled) and `edp1`–`edp11` ([UKHD-EDP](UKHD-EDP.md), suspected EDI-2 subset). A publisher may be affected there.
 
-Dass der Wortlaut dennoch aufgenommen ist, ist eine **bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage.** Jede der sechs Ressourcen trägt `status = draft`, `experimental = true` und ein `copyright`, das genau das sagt. Ergibt die Rückmeldung des Standorts eine Einschränkung, wird **je Gruppe** auf metadata-only umgestellt (Muster [WAI](WAI.md)); die Beispielantworten wären nicht betroffen — sie enthalten keine Itemtexte.
+That the wording is included nonetheless is a **deliberate project decision for piloting, not a settled rights situation.** Each of the six resources carries `status = draft`, `experimental = true` and a `copyright` saying exactly that. Should the site's reply impose a restriction, the switch to metadata-only happens **per group** (following the [WAI](WAI.md) pattern); the example responses would be unaffected — they contain no item texts.
 
-### Offene Punkte zum Dictionary
+### Open points regarding the dictionary
 
-Beim Modellieren sind Auffälligkeiten aufgefallen, die **nicht in FHIR zu lösen** sind, sondern im Item Level Dictionary oder mit dem Standort. Sie stehen zusätzlich als `designNote` am jeweiligen Item.
+Issues surfaced during modelling that are **not solvable in FHIR** but belong in the Item Level Dictionary or with the site. Each is also recorded as a `designNote` on the affected item.
 
-**1. Herkunft des Wortlauts je Gruppe ungeklärt** — siehe [Rechtelage](#rechtelage); konkret nachzufragen für `bdkm`, `erwEV` und `edp`.
+**1. Provenance of the wording unclarified per group** — see [Rights situation](#rechtelage); to be asked specifically for `bdkm`, `erwEV` and `edp`.
 
-**2. `bdkm15` und `treatment_outpatient` überschneiden sich.** Beide fragen nach aktueller psychotherapeutischer Behandlung — in zwei Bögen, mit zwei verschiedenen Antwortskalen. Sie unterscheiden sich im Zeitbezug (`bdkm15` nur zur Aufnahme und mit Vorgeschichte, `treatment_outpatient` zu jedem Termin und mit Setting), liefern zur Aufnahme aber teilweise dieselbe Information. Im Dictionary zu prüfen, ob das beabsichtigt ist.
+**2. `bdkm15` and `treatment_outpatient` overlap.** Both ask about current psychotherapeutic treatment — in two questionnaires, with two different answer scales. They differ in temporal scope (`bdkm15` on admission only and with history, `treatment_outpatient` at every visit and with setting), but partly deliver the same information on admission. To be checked in the dictionary.
 
-**3. Der Variablenname `treatment_outpatient` ist irreführend.** Stufe 4 der Antwortskala erfasst ausdrücklich **stationäre oder teilstationäre** Behandlung; das Item fragt den Behandlungsstatus insgesamt ab. Der Name bleibt als `linkId` und `item.code` stehen, weil er die Dictionary-Variable ist — aber er darf nicht als Bedeutungsangabe gelesen werden.
+**3. The variable name `treatment_outpatient` is misleading.** Level 4 of the answer scale explicitly captures **inpatient or day-clinic** treatment; the item asks about treatment status overall. The name remains as `linkId` and `item.code` because it is the dictionary variable — but it must not be read as a statement of meaning.
 
-**4. `comorbid1` — formal unsauber, bewusst so belassen (entschieden 01.10.2026).** Die Frage ist wörtlich eine Ja/Nein-Frage, das Dictionary sieht ein **Textfeld** vor. Gemeint ist das Textfeld: Dort sollen die weiteren **Diagnosen** stehen, nicht ein „ja". `type = text` bildet die Erhebung korrekt ab; der Wortlaut bleibt nach [ADR-010](Designentscheidungen.md) unverändert. Praktische Folge: **Das Feld enthält Diagnosetext, keine Ja/Nein-Angabe.**
+**4. `comorbid1` — formally unclean, deliberately left as is (decided 2026-10-01).** The question is literally a yes/no question, but the dictionary provides a **text field**. The text field is what is meant: the additional **diagnoses** go there, not a "yes". `type = text` models the actual collection correctly; the wording remains unchanged per [ADR-010](Designentscheidungen.md). Practical consequence: **the field contains diagnosis text, not a yes/no value.**
 
-**5. Uneinheitliche Variablennamen in `UKHD-LE`.** `life_event1_screening`/`life_event1_monitoring` gegen `lifev_discharge`/`lifev_text` — zwei Präfixe für eine Gruppe, und ein `life_event2` existiert nicht. Außerdem nennt die Beispielliste von `life_event1_screening` bloß „Partnerschaften", wo die beiden anderen „Auflösung einer Partnerschaften" sagen; dort fehlt offenbar der Kopf der Wendung.
+**5. Inconsistent variable names in `UKHD-LE`.** `life_event1_screening`/`life_event1_monitoring` versus `lifev_discharge`/`lifev_text` — two prefixes for one group, and no `life_event2` exists. In addition, the example list of `life_event1_screening` says merely "Partnerschaften" where the other two say "Auflösung einer Partnerschaften"; the head of the phrase is evidently missing there.
 
-**6. Die Gruppen-ID `UKHD_D` trägt einen Unterstrich**, während alle anderen Gruppen einen Bindestrich führen. Im Dictionary zu vereinheitlichen; Ressourcen-Id und Katalogcode folgen der Hauskonvention (`UKHD-D`/`ukhd-d`), die Dictionary-Schreibweise bleibt in der Property `instrument` erhalten.
+**6. The group ID `UKHD_D` carries an underscore** while all other groups use a hyphen. To be harmonised in the dictionary; resource id and catalogue code follow the house convention (`UKHD-D`/`ukhd-d`), the dictionary spelling is preserved in the `instrument` property.
 
-**7. `bdkm16` fragt nach Arztbesuchen, steht aber in **Past Treatment**.** Inhaltlich gehört das Item eher zur Versorgungsinanspruchnahme (vgl. `UKE-HCU` in PSS).
+**7. `bdkm16` asks about physician visits but sits in **Past Treatment**.** In content it belongs to healthcare utilisation (cf. `UKE-HCU` in PSS).
 
-**8. `UKHD-D` überschneidet sich mit dem [MHI](MHI.md).** Dort erheben `CPCOR-DIAG` (Diagnosegruppe zur Selbstzuordnung) und `GIPS13` (Liste chronischer Erkrankungen) **kodiert**, was hier als **Freitext** erhoben wird. Welche Darstellung für die Auswertung maßgeblich ist, ist fachlich zu klären.
+**8. `UKHD-D` overlaps with the [MHI](MHI.md).** There, `CPCOR-DIAG` (self-assigned diagnosis group) and `GIPS13` (list of chronic conditions) collect in **coded** form what is collected here as **free text**. Which representation is authoritative for analysis is a clinical question.
 
-### Hinweis zur Erhebung
+### Note on data collection
 
-[UKHD-LE](Questionnaire-UKHDLE.md) betrifft **hochsensible Inhalte** (Verlusterfahrungen, Missbrauch), ebenso die im [ACE](ACE.md) liegende Gruppe `UKHD-CTT` (Kindheitsbelastungen). Die Governance der Auswertung — analog zum PHQ-SI — ist fachlich zu klären.
+[UKHD-LE](Questionnaire-UKHDLE.md) touches **highly sensitive content** (loss experiences, abuse), as does the `UKHD-CTT` group located in the [ACE](ACE.md) (childhood adversity). Governance of the evaluation — analogous to the PHQ-SI — remains to be clarified clinically.
 
-Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
+Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.md); all artefacts are listed under [Artifacts](artifacts.md).
 
