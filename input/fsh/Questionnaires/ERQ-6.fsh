@@ -16,42 +16,52 @@
 //   Variablen-IDs laufen dagegen sequenziell; Mapping Dictionary -> linkId:
 //   erq1->erq1, erq2->erq2, erq3->erq3, erq4->erq6, erq5->erq8, erq6->erq9.
 //
-// ES IST DER ERQ-S. Die Bezeichnung "ERQ-6" ist eine PCOR-interne Benennung;
-//   in der Literatur existiert sie nicht. Zwei unabhaengige Belege:
+// ES IST NICHT DER ERQ-S — KORRIGIERT AM 01.10.2026. Hier stand bis dahin das
+//   Gegenteil, mit zwei angeblich unabhaengigen Belegen und einer uebernommenen
+//   Scoring-Vorschrift. Beides war falsch; der Block ist deshalb ersetzt und
+//   nicht nur ergaenzt. Was ihn widerlegt:
 //
-//   (1) QUELLENANGABE DES PROJEKTS: Die DIZ-Implementierungsliste PCOR-MII
-//       fuehrt in der Zeile "ERQ-6" als Entwicklungspaper ausdruecklich
-//       doi:10.1016/j.jad.2023.08.076 — das ist die ERQ-S-Publikation
-//       (Preece DA, Petrova K, Mehta A, Gross JJ, J Affect Disord
-//       2023;340:855-861). Als Uebersetzungspaper steht dort
-//       doi:10.1026/0012-1924.55.3.144 (Abler & Kessler 2009). Der Zuschnitt
-//       wurde also bewusst als ERQ-S uebernommen, nur anders benannt.
-//       (Die Spalte "verkuerzte Version?" traegt dort denselben
-//       Textbaustein wie EDE-Q6/ANSOCQ-2/SSUK-2 und beschreibt den ERQ-S
-//       nicht zutreffend — massgeblich ist der DOI.)
+//   TABELLE 1 VON PREECE ET AL. 2023 (J Affect Disord 340:855-861) gibt die
+//     Zuordnung an: Der ERQ-S besteht aus den ERQ-Items 2, 6, 7, 8, 9 und 10
+//     (Cognitive Reappraisal 7, 8, 10; Expressive Suppression 2, 6, 9). Hier
+//     modelliert sind die ERQ-Items 1, 2, 3, 6, 8 und 9. Vier Items
+//     ueberschneiden sich — die NEUBEWERTUNGS-Items aber nicht: PCOR-MII hat 1
+//     und 3, der ERQ-S hat 7 und 10.
 //
-//   (2) ITEM-ABGLEICH, 2026-09-29: Gegen den von den Autor:innen publizierten
-//       Originalbogen "ERQ-S: Copy of Questionnaire and Scoring Instructions"
-//       (ResearchGate 373292091, Author content, (c) Stanford
-//       Psychophysiology Laboratory) geprueft: Die sechs ERQ-S-Items sind in
-//       dieser Reihenfolge die ERQ-Items 1, 2, 3, 6, 8, 9 — exakt die hier
-//       modellierten linkIds. Beide Belege stimmen ueberein.
+//   WIE DER FEHLER ENTSTAND: Die ERQ-S-Scoring-Angabe nennt "sum items 1, 3,
+//     and 5" — das ist ERQ-S-EIGENE Zaehlung. Diese Nummern wurden als
+//     ERQ-Nummern gelesen und ueber eine ANGENOMMENE Zuordnung uebersetzt,
+//     statt gegen Tabelle 1 geprueft zu werden. Zwei teilweise ueberlappende
+//     Itemsaetze sahen dadurch identisch aus. Lehre: Bei einer Kurzform ist die
+//     Mapping-Tabelle der Publikation zu holen, nicht aus der Scoring-Angabe zu
+//     rekonstruieren.
 //
-// SCORING (wörtlich aus den Scoring Instructions, ERQ-S-Nummerierung):
-//   "Cognitive reappraisal: sum items 1, 3, and 5."
-//   "Expressive suppression: sum items 2, 4, and 6."
-//   Auf die hier verwendeten Original-ERQ-linkIds übersetzt:
-//     Neubewertung  (Cognitive reappraisal)  = erq1 + erq3 + erq8
-//     Unterdrueckung (Expressive suppression) = erq2 + erq6 + erq9
-//   Wertebereich je Subskala 3-21 (3 Items x 1-7). KEIN Gesamtscore.
-//   US-Normwerte (General Community Sample, N=508): Neubewertung M=14.39
-//   SD=4.06 (alpha .87); Unterdrueckung M=12.25 SD=4.46 (alpha .76).
-//   Die Autor:innen definieren "hoch" als >= 1 SD ueber dem Mittelwert,
-//   nach US-Normen also 19+ bzw. 17+. Diese Schwellen sind hier bewusst NICHT
-//   als Referenzintervalle hinterlegt: Es sind US-Normen, keine deutschen.
+//   DIE DIZ-IMPLEMENTIERUNGSLISTE LEGT DIE VERWECHSLUNG NAHE: Sie nennt in der
+//     Zeile "ERQ-6" als Entwicklungspaper doi:10.1016/j.jad.2023.08.076, also
+//     die ERQ-S-Publikation. Die Items im Item Level Dictionary sind aber
+//     andere. Das ist das Gegenbeispiel zu ADR-008: Die AUSWAHLQUELLE der Liste
+//     ist nicht die Identifikation des Instruments, und wer sie ungeprueft
+//     uebernimmt, modelliert einen anderen Bogen, als er zu modellieren glaubt.
+//     Als Uebersetzungspaper steht dort doi:10.1026/0012-1924.55.3.144
+//     (Abler & Kessler 2009) — das ist richtig und bleibt die Quelle des
+//     deutschen Wortlauts.
 //
-// SCORE-ARTEFAKTE: Die beiden Subskalen sind als ObservationDefinition
-//   modelliert, siehe input/fsh/Scores/ERQ-S.fsh.
+//   DIE BEZEICHNUNG "ERQ-6" bleibt eine PCOR-interne Benennung; in der
+//     Literatur existiert sie nicht. Sie bezeichnet jetzt genau das, was der
+//     Bogen ist: einen projektspezifischen 6-Item-Zuschnitt des ERQ-10.
+//
+// KEIN SCORE. Die publizierten ERQ-S-Kennwerte gelten fuer dessen Itemsatz,
+//   nicht fuer diesen. Bezogen auf das Vollinstrument ist der Satz ohnehin ein
+//   Zuschnitt — drei der sechs Neubewertungs- und drei der vier
+//   Unterdrueckungs-Items des ERQ-10 —, fuer den keine Scoring-Vorschrift
+//   publiziert ist. Nach ADR-003 Punkt 3 gibt es daher keinen Score. Die beiden
+//   ObservationDefinitions, die beiden Beispiel-Observations und die Datei
+//   input/fsh/Scores/ERQ-S.fsh sind am 01.10.2026 zurueckgezogen worden.
+//
+// WAS UNVERAENDERT GILT — und das ist der Punkt: der Bogen selbst. Wortlaut,
+//   linkIds (= Original-ERQ-Itemnummern), item.codes und Sprachebenen sind
+//   dictionary-treu und gegen den Originalbogen geprueft. Falsch war nur, was
+//   ueber den Bogen behauptet wurde, nicht der Bogen.
 //
 // ─────────────────────────────────────────────────────────────────────────────
 

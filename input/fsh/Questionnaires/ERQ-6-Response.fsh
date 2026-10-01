@@ -4,7 +4,7 @@
 // SZENARIO: Dieselbe Beispiel-Patientin wie in DEM-Response.fsh und
 //   MHI-Response.fsh (pcor-mii-exa-patient) — Anorexia nervosa restriktiver
 //   Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Die fuenf
-//   AN-Beispielantworten (ERQ-S, EDE-Q6, ANSOCQ-2, SSUK-2, ACE) bilden EINEN
+//   AN-Beispielantworten (ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE) bilden EINEN
 //   Erhebungstermin am 18.06.2026 ab, zeitlich gestaffelt. So laesst sich der
 //   Datensatz als Ganzes lesen und nicht als fuenf unverbundene Testdaten.
 //
