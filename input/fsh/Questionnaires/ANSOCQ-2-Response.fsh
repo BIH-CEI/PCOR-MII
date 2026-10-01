@@ -54,7 +54,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum ANSOCQ-2-Questionnai
 * language = #de-CH
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T09:30:00+02:00"
 
 // ── Item 3 — Körperteile bei Gewichtszunahme (Stadium 3: Decision) ────────────

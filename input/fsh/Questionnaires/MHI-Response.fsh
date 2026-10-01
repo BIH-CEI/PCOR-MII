@@ -14,7 +14,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (M
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-17T10:00:00+02:00"
 
 // ── Körpermaße ────────────────────────────────────────────────────────────────

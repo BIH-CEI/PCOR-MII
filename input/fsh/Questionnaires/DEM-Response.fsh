@@ -6,14 +6,23 @@
 // DEM ist kein PRO -> kein MII-PRO-Profil auf der QR.
 // ─────────────────────────────────────────────────────────────────────────────
 
-Instance: pcor-mii-exa-patient
+Instance: pcor-mii-exa-patient-an
 InstanceOf: Patient
 Usage: #example
-Title: "Beispiel-Patientin (DEM)"
-Description: "Minimale Beispiel-Patientin als subject der DEM-Beispielantwort."
+Title: "Beispiel-Patientin AN"
+Description: "Synthetische Beispiel-Patientin des Use Case AN (Anorexia nervosa, restriktiver Typ, erste Anzeichen um 2018): subject aller AN-, DEM- und MHI-Beispielantworten. Zwei Erhebungstermine: Initial-/Screening-Termin 18.06.2026 und Monitoring-Termin 30.07.2026 — siehe die beiden Bundles pcor-mii-exa-bundle-an-initial und -an-monitoring."
 * language = #de-DE
 * gender = #female
 * birthDate = "1985-03-12"
+
+Instance: pcor-mii-exa-patient-pss
+InstanceOf: Patient
+Usage: #example
+Title: "Beispiel-Patient PSS"
+Description: "Synthetischer Beispiel-Patient des Use Case PSS (persistierende somatische Symptome: Erschöpfung, Rücken- und Magen-Darm-Beschwerden seit etwa zwei Jahren, mittelgradige somatische Belastung, leichte depressive und ängstliche Symptomatik): subject der PSS-Beispielantworten. Ein Screening-Termin 25.06.2026 — siehe Bundle pcor-mii-exa-bundle-pss-screening."
+* language = #de-DE
+* gender = #male
+* birthDate = "1977-09-03"
 
 
 Instance: DEMResponse
@@ -24,7 +33,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-16T10:00:00+02:00"
 
 // ── Soziodemographie ──────────────────────────────────────────────────────────

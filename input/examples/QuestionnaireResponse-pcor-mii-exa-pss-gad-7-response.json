@@ -1,0 +1,110 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-pss-gad-7-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient-pss"
+  },
+  "authored": "2026-06-25T09:40:00+02:00",
+  "item": [
+    {
+      "linkId": "phq-phq5a",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6570-1",
+            "display": "More than half the days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5b",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6569-3",
+            "display": "Several days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5c",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6569-3",
+            "display": "Several days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5d",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6569-3",
+            "display": "Several days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5e",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6568-5",
+            "display": "Not at all"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5f",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6569-3",
+            "display": "Several days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-phq5g",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6569-3",
+            "display": "Several days"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "phq-gad7-score-total",
+      "answer": [
+        {
+          "valueDecimal": 7
+        }
+      ]
+    }
+  ]
+}

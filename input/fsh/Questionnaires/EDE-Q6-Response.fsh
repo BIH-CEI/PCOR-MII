@@ -42,7 +42,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T09:15:00+02:00"
 
 // ── Die vier Skalen-Items (je eines pro EDE-Q-Subskala) ───────────────────────

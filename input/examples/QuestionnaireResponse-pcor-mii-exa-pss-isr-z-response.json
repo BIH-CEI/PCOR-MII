@@ -1,0 +1,62 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-pss-isr-z-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2026.7.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient-pss"
+  },
+  "authored": "2026-06-25T11:10:00+02:00",
+  "item": [
+    {
+      "linkId": "isr-z-q01",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-isr-z-answers",
+            "code": "trifft-kaum-zu",
+            "display": "trifft kaum zu"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "isr-z-q02",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-isr-z-answers",
+            "code": "trifft-kaum-zu",
+            "display": "trifft kaum zu"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "isr-z-q03",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/CodeSystem/mii-cs-pro-isr-z-answers",
+            "code": "trifft-ziemlich-zu",
+            "display": "trifft ziemlich zu"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "isr-z-score-mean",
+      "answer": [
+        {
+          "valueDecimal": 1.33
+        }
+      ]
+    }
+  ]
+}

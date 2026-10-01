@@ -38,7 +38,7 @@ Description: "Beispielantwort zum UKHD-PT-Questionnaire (Vorbehandlung): zurzeit
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:15:00+02:00"
 * item[+]
   * linkId = "bdkm15"
@@ -57,7 +57,7 @@ Description: "Beispielantwort zum UKHD-ANB-Questionnaire (Essstörungsanamnese):
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:15:00+02:00"
 // Dauer in Jahren; der Zahlenwert steht im PCOR-MII-eigenen Hilfsitem.
 * item[+]
@@ -83,7 +83,7 @@ Description: "Beispielantwort zum UKHD-CT-Questionnaire (aktuelle Behandlung): a
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:15:00+02:00"
 * item[+]
   * linkId = "treatment_outpatient"
@@ -99,7 +99,7 @@ Description: "Beispielantwort zum UKHD-LE-Questionnaire (belastende Lebensereign
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:15:00+02:00"
 // Nur das Screening-Item (TIMING i); Monitoring und Entlassung fehlen.
 * item[+]
@@ -119,7 +119,7 @@ Description: "Beispielantwort zum UKHD-D-Questionnaire (Diagnosen bei Aufnahme).
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD)
 * status = #completed
-* subject = Reference(pcor-mii-exa-patient)
+* subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-18T10:15:00+02:00"
 * item[+]
   * linkId = "diagnosis_admit"

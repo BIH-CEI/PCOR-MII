@@ -61,7 +61,9 @@ Die Gruppenzugehörigkeit bleibt unabhängig davon maschinenlesbar: Jedes Item t
 
 Die `TIMING`-Spalte des Dictionary sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des **Erhebungsplans**, nicht des Bogens — ein `Questionnaire` beschreibt, *was* gefragt wird, nicht *wann*. R4 hat dafür auch kein tragendes Element.
 
-Sichtbar wird der Plan stattdessen in den **Antworten**, und der Ressourcenzuschnitt macht das schärfer als zuvor: Die Beispielantworten bilden einen Initial-/Screening-Termin ab, und es gibt **fünf, nicht sechs** — für [UKHD-ND](Questionnaire-UKHDND.html) existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In [UKHD-LE](Questionnaire-UKHDLE.html) fehlen `life_event1_monitoring` und `lifev_discharge` aus demselben Grund.
+Sichtbar wird der Plan stattdessen in den **Antworten**, und der Ressourcenzuschnitt macht das schärfer als zuvor: Zum Initial-/Screening-Termin gibt es **fünf Antworten, nicht sechs** — für [UKHD-ND](Questionnaire-UKHDND.html) existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In [UKHD-LE](Questionnaire-UKHDLE.html) fehlen `life_event1_screening`-Geschwister aus demselben Grund.
+
+**Der Monitoring-Termin (30.07.2026) zeigt die Gegenrichtung:** Dort existiert die [erste UKHD-ND-Antwort](QuestionnaireResponse-UKHDNDMonitoringResponse.html) (bejaht, mit Freitext), [UKHD-LE](QuestionnaireResponse-UKHDLEMonitoringResponse.html) beantwortet nur das Monitoring-Item (verneint — `lifev_text` bleibt per `enableWhen` gesperrt), und [UKHD-PT](QuestionnaireResponse-UKHDPTMonitoringResponse.html) ist eine bewusste **Teilantwort** mit nur `bdkm16`. UKHD-ANB und UKHD-D werden nicht wiederholt — Initial-Items. Beide Termine gebündelt: [Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) · [Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html).
 
 <a name="rechtelage"></a>
 

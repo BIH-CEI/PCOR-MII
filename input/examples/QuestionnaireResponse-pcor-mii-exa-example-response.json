@@ -14,7 +14,7 @@
   "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
   "status": "completed",
   "subject": {
-    "reference": "Patient/pcor-mii-exa-patient"
+    "reference": "Patient/pcor-mii-exa-patient-an"
   },
   "authored": "2026-06-16T10:00:00+02:00",
   "item": [
@@ -23,17 +23,23 @@
       "item": [
         {
           "linkId": "general.assessment-date",
-          "answer": [{"valueDate": "2026-06-16"}]
+          "answer": [
+            {
+              "valueDate": "2026-06-16"
+            }
+          ]
         },
         {
           "linkId": "general.sex",
-          "answer": [{
-            "valueCoding": {
-              "system": "http://hl7.org/fhir/administrative-gender",
-              "code": "female",
-              "display": "Female"
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/administrative-gender",
+                "code": "female",
+                "display": "Female"
+              }
             }
-          }]
+          ]
         }
       ]
     },
@@ -42,17 +48,23 @@
       "item": [
         {
           "linkId": "pro.general-health",
-          "answer": [{
-            "valueCoding": {
-              "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
-              "code": "good",
-              "display": "Good"
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
+                "code": "good",
+                "display": "Good"
+              }
             }
-          }]
+          ]
         },
         {
           "linkId": "pro.comment",
-          "answer": [{"valueString": "Kein Vorerkrankungsstatus, gute allgemeine Verfassung."}]
+          "answer": [
+            {
+              "valueString": "Kein Vorerkrankungsstatus, gute allgemeine Verfassung."
+            }
+          ]
         }
       ]
     }
