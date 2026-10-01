@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- T-CABS BIH Corporate Design Colors -->
+<!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
+<!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
+<!--
+   BIH-BLAU Abstufungen:
+   100% #003754  90% #1a4b65  80% #335f77  70% #4d7388
+   60% #668899   50% #809daa  40% #99b1bb  30% #b3c5cc
+   20% #ccd9dd   10% #e6ecee
+
+   BIH-KORALL Abstufungen:
+   100% #ea5451  90% #ec6562  80% #ee7674  70% #f08785
+   60% #f29897   50% #f5aaa8  40% #f7bbba  30% #f9cccb
+   20% #fbdddc   10% #fdeeee
+-->
+<style>
+:root {
+  --ig-status-text-color: #4d7388;       /*  1. IG title and status text - BLAU 70% */
+  --navbar-bg-color: #335f77;            /*  2. Header container - BLAU 80% */
+  --footer-bg-color: #335f77;            /*  3. Footer background - BLAU 80% */
+  --footer-container-bg-color: #335f77;  /*  4. Footer container - BLAU 80% */
+  --stripe-bg-color: #f5aaa8;            /*  5. Header strip - KORALL 50% */
+
+  --btn-hover-color: #f29897;            /*  6. Menu button hover - KORALL 60% */
+  --btn-active-color: #f08785;           /*  7. Menu button active - KORALL 70% */
+  --btn-text-color: #ffffff;             /*  8. Menu button text */
+  --btn-gradient-start-color: #4d7388;   /*  9. Menu gradient start - BLAU 70% */
+  --btn-gradient-end-color: #335f77;     /* 10. Menu gradient end - BLAU 80% */
+  --btn-gradient-start-color-alpha: #ff4d7388; /* 11. Menu gradient start (alpha) */
+  --btn-gradient-end-color-alpha: #ff335f77;   /* 12. Menu gradient end (alpha) */
+  --link-color: #4d7388;                 /* 13. Hyperlink - BLAU 70% */
+  --link-hover-color: #f08785;           /* 14. Hyperlink hover - KORALL 70% */
+
+  --publish-box-bg-color: #fdeeee;       /* 15. Publish box background - KORALL 10% */
+  --publish-box-border: 1px solid #f7bbba; /* 16. Publish box border - KORALL 40% */
+  --toc-box-bg-color: #e6ecee;           /* 17. TOC box background - BLAU 10% */
+  --toc-box-border: 1px solid #b3c5cc;   /* 18. TOC box border - BLAU 30% */
+  --stu-note-background-color: #fdeeee;  /* 19. STU note background - KORALL 10% */
+  --stu-note-border-left-color: #f5aaa8; /* 20. STU note border - KORALL 50% */
+
+  --ig-header-color: #f5f8fa;            /* 21. Header sides */
+  --ig-header-container-color: #ffffff;  /* 22. Header container center */
+  --footer-nav-bg-color: #f5f8fa;        /* 23. Footer navigation background */
+
+  --footer-text-color: #ffffff;          /* 24. Footer text */
+  --footer-hyperlink-text-color: #b3d8e8;/* 25. Footer hyperlinks */
+  --footer-highlight-text-color: #f5aaa8;/* 26. Footer highlight - KORALL 50% */
+
+  --breadcrumb-bg-color: #f5f8fa;        /* 27. Breadcrumb background */
+  --breadcrumb-text-color: #4d7388;      /* 28. Breadcrumb text - BLAU 70% */
+
+  --dragon-background-color: #fdeeee;    /* 29. Dragon background - KORALL 10% */
+  --dragon-text-color: #4d7388;          /* 30. Dragon text - BLAU 70% */
+}
+
+/* ─── T-CABS Header: Charité-Logo zwischen BIH und Sprach-Switcher ─── */
+/* fhir2.base.template kennt nur #project-nav und #family-nav.         */
+/* #charite-nav muss hier mit gleichen Regeln wie #family-nav ergänzt   */
+/* werden, sonst rutscht das Logo aus dem Header.                       */
+#charite-nav {
+  line-height: 50px;
+  float: var(--ig-right);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+  color: #808080;
+}
+#charite-logo {
+  float: var(--ig-right);
+  margin-left: 6px;
+}
+
+/* ─── T-CABS Navbar/Footer: kräftiges BIH-BLAU 100% statt 80% ─── */
+/* Original-IG nutzt hartkodiertes #003754 mit !important, weil    */
+/* die Variable --navbar-bg-color (#335f77) zu hell wirkt.         */
+nav.navbar.navbar-inverse {
+  background-color: #003754 !important;
+}
+#segment-footer {
+  background-color: #003754 !important;
+}
+#segment-footer > .container {
+  background-color: #003754 !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #ea5451 !important;   /* KORALL 100% Hover */
+}
+
+/* ─── "Diesen Fragebogen testen" / NLM Forms Library ausblenden ─── */
+/* Der Block kommt aus fhir2.base.template (layout-questionnaire.html:   */
+/* Anker name="test" -> <h3> -> Div mit dem NLM-Forms-Library-Link) und  */
+/* ist nicht per IG-Parameter abschaltbar. Das Projekt-template/ wird bei */
+/* jedem Build aus dem Package neu ausgepackt, daher hier portabel per    */
+/* Geschwister-Selektor über den stabilen name="test"-Anker ausgeblendet. */
+a[name="test"],
+a[name="test"] + h3,
+a[name="test"] + h3 + div {
+  display: none !important;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.4"}
+    h3,h4,h5,h6{--heading-prefix:"5.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- PCOR-MII Header Logos: Charité + BIH (kein Projektlogo) -->
+<div id="charite-nav">
+    <a id="charite-logo" data-no-external="true" href="https://www.charite.de/">
+        <img alt="Charité" height="50" src="Logo_Charite.png"/>
+    </a>
+</div>
+<div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - draft
+
+
+
+  <img alt="Germany flag" src="../assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Instrumente
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Instrumente.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="PSS.html">PSS</a>
+      </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+      </li>
+      <li>
+        <a href="Essstoerungen.html">Essstörungen — Erhebungsplan</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Demographie.html">Demographie</a>
+      </li>
+      <li>
+        <a href="MHI.html">MHI</a>
+      </li>
+      <li>
+        <a href="PROMIS.html">PROMIS</a>
+      </li>
+      <li>
+        <a href="PHQ.html">PHQ</a>
+      </li>
+      <li>
+        <a href="GAD-7.html">GAD-7</a>
+      </li>
+      <li>
+        <a href="WHODAS-12.html">WHODAS 2.0</a>
+      </li>
+      <li>
+        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
+      </li>
+      <li>
+        <a href="SSD-12.html">SSD-12</a>
+      </li>
+      <li>
+        <a href="WI-7.html">Whiteley-7</a>
+      </li>
+      <li>
+        <a href="SCOFF.html">SCOFF</a>
+      </li>
+      <li>
+        <a href="ISR-Z.html">ISR-Z</a>
+      </li>
+      <li>
+        <a href="PC-PTSD.html">PC-PTSD</a>
+      </li>
+      <li>
+        <a href="OPD-SFK.html">OPD-SFK</a>
+      </li>
+      <li>
+        <a href="WAI.html">WAI</a>
+      </li>
+      <li>
+        <a href="GSLTPAQ.html">GSLTPAQ</a>
+      </li>
+      <li>
+        <a href="EXPECT.html">EXPECT</a>
+      </li>
+      <li>
+        <a href="IPQ-S.html">IPQ-S</a>
+      </li>
+      <li>
+        <a href="ERQ-6.html">ERQ-S</a>
+      </li>
+      <li>
+        <a href="EDE-Q6.html">EDE-Q6</a>
+      </li>
+      <li>
+        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
+      </li>
+      <li>
+        <a href="SSUK-2.html">SSUK-2</a>
+      </li>
+      <li>
+        <a href="ACE.html">ACE</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="Implementation.html">Anwendung</a>
+  </li>
+  <li>
+    <a href="Validierung.html">Validierung</a>
+  </li>
+  <li>
+    <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Release-Notes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/PROMIS-16.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='PROMIS.html'><b>PROMIS</b></a></li><li><b>PROMIS-16 Profile v2.1 (PROPr)</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="PROMIS-Cognitive-Function.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="PHQ.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>PROMIS-16 Profile v2.1 (PROPr)</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
+  <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
+  <li><a href="#quellen" id="markdown-toc-quellen">Quellen</a></li>
+  <li><a href="#eigenschaften" id="markdown-toc-eigenschaften">Eigenschaften</a></li>
+  <li><a href="#domänen-im-vergleich-zu-promis-29" id="markdown-toc-domänen-im-vergleich-zu-promis-29">Domänen im Vergleich zu PROMIS-29</a></li>
+  <li><a href="#scoring" id="markdown-toc-scoring">Scoring</a></li>
+  <li><a href="#artefakt-propr-als-observationdefinition" id="markdown-toc-artefakt-propr-als-observationdefinition">Artefakt: PROPr als ObservationDefinition</a></li>
+  <li><a href="#hinweise" id="markdown-toc-hinweise">Hinweise</a></li>
+  <li><a href="#beispiel-questionnaireresponse" id="markdown-toc-beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</a></li>
+  <li><a href="#item-tabelle" id="markdown-toc-item-tabelle">Item-Tabelle</a></li>
+  <li><a href="#körperliche-funktion" id="markdown-toc-körperliche-funktion">Körperliche Funktion</a></li>
+  <li><a href="#emotionale-belastung--angst" id="markdown-toc-emotionale-belastung--angst">Emotionale Belastung — Angst</a></li>
+  <li><a href="#emotionale-belastung--depressivität" id="markdown-toc-emotionale-belastung--depressivität">Emotionale Belastung — Depressivität</a></li>
+  <li><a href="#erschöpfung" id="markdown-toc-erschöpfung">Erschöpfung</a></li>
+  <li><a href="#schlafbezogene-beeinträchtigungen--schlafbeeinträchtigung" id="markdown-toc-schlafbezogene-beeinträchtigungen--schlafbeeinträchtigung">Schlafbezogene Beeinträchtigungen / Schlafbeeinträchtigung</a></li>
+  <li><a href="#teilhabe-an-sozialen-rollen-und-aktivitäten" id="markdown-toc-teilhabe-an-sozialen-rollen-und-aktivitäten">Teilhabe an sozialen Rollen und Aktivitäten</a></li>
+  <li><a href="#beeinträchtigung-durch-schmerzen" id="markdown-toc-beeinträchtigung-durch-schmerzen">Beeinträchtigung durch Schmerzen</a></li>
+  <li><a href="#kognitive-funktionen--fähigkeiten" id="markdown-toc-kognitive-funktionen--fähigkeiten">Kognitive Funktionen — Fähigkeiten</a></li>
+</ul>
+
+</div>
+<p>PROMIS®-16 Profile v2.1 (PROPr) ist die ultrakurze Variante der PROMIS-Profile mit 16 Items über 8 Domänen (Physical Function, Anxiety, Depression, Fatigue, Sleep Disturbance, Ability to Participate in Social Roles and Activities, Pain Interference, <strong>Cognitive Function</strong>). Im Vergleich zu PROMIS-29 ergänzt PROMIS-16 die Cognitive-Function-Domäne und reduziert die Item-Last pro Domäne auf zwei Items.</p>
+
+<h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
+
+<p>PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Die deutschen Wordings stammen direkt aus dem offiziellen PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024" (MATCH=15, DIFF=0).</p>
+
+<h3 id="canonical">Canonical</h3>
+
+<p><code class="language-plaintext highlighter-rouge">https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16</code></p>
+
+<h3 id="quellen">Quellen</h3>
+
+<ul>
+  <li>IG-Doku-Seite: <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current">PROMIS-16 im MII PRO IG (Simplifier)</a></li>
+  <li>Raw-Resource: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538121">PROMIS-16 Questionnaire (Simplifier Package)</a></li>
+  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1">PROMIS-Lizenzierung</a></li>
+  <li>Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"</li>
+</ul>
+
+<h3 id="eigenschaften">Eigenschaften</h3>
+
+<ul>
+  <li><strong>Items</strong>: 16 (2 pro Domäne über 8 Domänen)</li>
+  <li><strong>Primärsprache</strong>: Englisch mit deutscher <code class="language-plaintext highlighter-rouge">translation</code>-Extension</li>
+  <li><strong>Capabilities</strong>: displayable, collectable (Scoring im MII PRO-Modul bewusst auf v2026.5.0 verschoben)</li>
+</ul>
+
+<h3 id="domänen-im-vergleich-zu-promis-29">Domänen im Vergleich zu PROMIS-29</h3>
+
+<p>Auf <strong>Domänenebene</strong> unterscheiden sich die beiden Profile in genau zwei Punkten — PROMIS-16 hat Cognitive Function, PROMIS-29 hat die Schmerzintensität:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Domäne</th>
+      <th style="text-align: right">PROMIS-29</th>
+      <th style="text-align: right">PROMIS-16</th>
+      <th>LOINC T-Score, Bank-Ebene</th>
+      <th>LOINC T-Score, PROMIS-29-spezifisch</th>
+      <th>upstream verwendet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Physical Function</td>
+      <td style="text-align: right">4 Items</td>
+      <td style="text-align: right">2 Items</td>
+      <td><a href="https://loinc.org/91721-1"><code class="language-plaintext highlighter-rouge">91721-1</code></a></td>
+      <td><a href="https://loinc.org/71959-1"><code class="language-plaintext highlighter-rouge">71959-1</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Anxiety</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77862-1"><code class="language-plaintext highlighter-rouge">77862-1</code></a></td>
+      <td><a href="https://loinc.org/71967-4"><code class="language-plaintext highlighter-rouge">71967-4</code></a></td>
+      <td><strong>PROMIS-29</strong></td>
+    </tr>
+    <tr>
+      <td>Depression</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77861-3"><code class="language-plaintext highlighter-rouge">77861-3</code></a></td>
+      <td><a href="https://loinc.org/71965-8"><code class="language-plaintext highlighter-rouge">71965-8</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Fatigue</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77864-7"><code class="language-plaintext highlighter-rouge">77864-7</code></a></td>
+      <td><a href="https://loinc.org/71963-3"><code class="language-plaintext highlighter-rouge">71963-3</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Sleep Disturbance</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77860-5"><code class="language-plaintext highlighter-rouge">77860-5</code></a></td>
+      <td><a href="https://loinc.org/71955-9"><code class="language-plaintext highlighter-rouge">71955-9</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Ability to Participate in Social Roles</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77854-8"><code class="language-plaintext highlighter-rouge">77854-8</code></a></td>
+      <td>(<a href="https://loinc.org/71957-5"><code class="language-plaintext highlighter-rouge">71957-5</code></a> — andere Domäne¹)</td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td>Pain Interference</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2</td>
+      <td><a href="https://loinc.org/77865-4"><code class="language-plaintext highlighter-rouge">77865-4</code></a></td>
+      <td><a href="https://loinc.org/71961-7"><code class="language-plaintext highlighter-rouge">71961-7</code></a></td>
+      <td>Bank</td>
+    </tr>
+    <tr>
+      <td><strong>Cognitive Function — Abilities</strong></td>
+      <td style="text-align: right">—</td>
+      <td style="text-align: right"><strong>2</strong></td>
+      <td><a href="https://loinc.org/81538-1"><code class="language-plaintext highlighter-rouge">81538-1</code></a></td>
+      <td>—</td>
+      <td>Bank (via SF 4a)</td>
+    </tr>
+    <tr>
+      <td><strong>Pain Intensity</strong> (NRS 0–10)</td>
+      <td style="text-align: right"><strong>1</strong> (<code class="language-plaintext highlighter-rouge">global07</code>)</td>
+      <td style="text-align: right">—</td>
+      <td><a href="https://loinc.org/75261-8"><code class="language-plaintext highlighter-rouge">75261-8</code></a> (Item-Code)</td>
+      <td>—</td>
+      <td>Item-Code</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>¹ <code class="language-plaintext highlighter-rouge">71957-5</code> heißt „PROMIS-29 Satisfaction with participation in social roles score T-score" und benennt damit die Domäne des <strong>PROMIS-29 v1.0</strong>. Ab v2.0 heißt sie <em>Ability to Participate in Social Roles and Activities</em> — eine andere Domäne mit eigener Kalibrierung, nicht bloß umbenannt. Für ein v2.1-Profil ist der Bank-Code <code class="language-plaintext highlighter-rouge">77854-8</code> daher der richtige.</p>
+
+<p><strong>Auf Score-Ebene sind die Profile dagegen durchweg verschieden — auch in den sieben gemeinsamen Domänen.</strong> Die Domäne ist dieselbe, die Kurzform nicht: PROMIS-29 scort über vier Items per Summenscore und Rohwert-Lookup, PROMIS-16 über zwei Items per Antwortmuster-Lookup (5 × 5 = 25 Werte, Supplement S4 von Edelen et al.). Ein <code class="language-plaintext highlighter-rouge">promis-29-…-tscore</code>-Code steht deshalb <strong>nicht</strong> für einen PROMIS-16-T-Score derselben Domäne, und die acht upstream geführten <code class="language-plaintext highlighter-rouge">promis-29-*</code>-Score-Codes sind für PROMIS-16 nicht wiederverwendbar. Vergleichbar sind die Werte nur insofern, als beide auf die <strong>gemeinsame T-Score-Metrik der jeweiligen Item-Bank</strong> kalibriert sind (Mean 50, SD 10) — ein Score-Crosswalk zwischen den Profilen ist upstream ausdrücklich als späteres Arbeitspaket benannt.</p>
+
+<p><strong>Bei LOINC ist die Lage asymmetrisch</strong>, und das ist der praktisch wichtigste Befund dieses Vergleichs (geprüft 2026-09-30 gegen LOINC 2.83). LOINC führt zwei Ebenen nebeneinander:</p>
+
+<ul>
+  <li><strong>Bank-Ebene</strong> — z. B. <code class="language-plaintext highlighter-rouge">PROMIS emotional distress - anxiety - version 1.0 Tscore</code>. Bezeichnet Item-Bank und T-Score-Metrik, <strong>nicht</strong> die Kurzform, und gilt damit für jedes Profil, das auf diese Bank kalibriert ist.</li>
+  <li><strong>Instrumenten-Ebene</strong> — z. B. <code class="language-plaintext highlighter-rouge">PROMIS-29 Anxiety score T-score</code>. Für PROMIS-29 existiert dieser Satz <strong>vollständig</strong> über alle sieben Domänen (<code class="language-plaintext highlighter-rouge">71955-9</code>–<code class="language-plaintext highlighter-rouge">71967-4</code>).</li>
+</ul>
+
+<p><strong>Für PROMIS-16 gibt es die instrumentenspezifische Ebene nicht</strong> — die Suche nach „PROMIS-16" liefert in LOINC 2.83 <strong>null Treffer</strong>, weder Panel- noch Score- noch Item-Codes (upstream sind entsprechend auch die fünf PROMIS-16-spezifischen Item-Codes im FSH noch als TODO markiert). Ein PROMIS-16-T-Score kann also nur den <strong>Bank-Code</strong> tragen — denselben, den ein PROMIS-29-T-Score derselben Domäne trägt. Die Unterscheidung der Kurzform muss damit zwingend über den <strong>MII-Katalogcode</strong> und <code class="language-plaintext highlighter-rouge">method.text</code> laufen; LOINC allein kann sie nicht leisten. Wer PROMIS-16- und PROMIS-29-Werte nur über <code class="language-plaintext highlighter-rouge">Observation.code.coding[loinc]</code> filtert, mischt sie unbemerkt.</p>
+
+<p><strong>Upstream ist die Wahl zwischen beiden Ebenen inkonsistent.</strong> Die PROMIS-29-ObservationDefinitions nutzen bei sechs von sieben Domänen den Bank-Code, bei <strong>Anxiety</strong> dagegen den instrumentenspezifischen <code class="language-plaintext highlighter-rouge">71967-4</code> — obwohl mit <code class="language-plaintext highlighter-rouge">77862-1</code> ein Bank-Code vorliegt. Bei Social Roles ist der Bank-Code sachlich zwingend (siehe Fußnote), bei Anxiety ist die Abweichung nicht begründet. Für PCOR-MII ist das derzeit folgenlos, weil hier keine PROMIS-Score-Observations modelliert werden; für einen späteren Cross-Walk ist es eine Fußangel und gehört auf die Upstream-Liste.</p>
+
+<p><strong>Zur Sleep-Domäne, weil die Itemauswahl irritiert:</strong> PROMIS-16 nimmt <code class="language-plaintext highlighter-rouge">sleep90</code> („I had trouble sleeping") aus der Sleep-Disturbance-Bank und <code class="language-plaintext highlighter-rouge">sleep25</code> („I had problems during the day because of poor sleep") aus der Bank <em>Sleep-Related Impairment</em> — LOINC führt für beide Bänke getrennte T-Scores (<a href="https://loinc.org/77860-5"><code class="language-plaintext highlighter-rouge">77860-5</code></a> vs. <a href="https://loinc.org/77859-7"><code class="language-plaintext highlighter-rouge">77859-7</code></a>), und der Sektionstitel des Questionnaire lautet entsprechend zweideutig „Sleep-related Impairment / Sleep Disturbance". Die Entwicklungspublikation ist hier aber eindeutig: Die Domäne heißt <strong>Sleep Disturbance</strong>, und die Itemparameter des SRI-Items wurden ausdrücklich <em>auf die Sleep-Disturbance-Items kalibriert</em> („parameters for the sleep-related impairment item were generated based on calibration to the sleep disturbance items", Edelen et al. 2024). Ein PROMIS-16-Sleep-T-Score gehört damit unter <strong>Sleep Disturbance</strong> (<code class="language-plaintext highlighter-rouge">77860-5</code>), nicht unter SRI. Zu beachten ist zudem, dass die T-Score-Zentrierung dieser einen Domäne — anders als bei den übrigen sieben — nicht auf einer reinen Allgemeinbevölkerungsstichprobe beruht, sondern auf einer kombinierten Allgemeinbevölkerungs- und klinischen Stichprobe.</p>
+
+<h3 id="scoring">Scoring</h3>
+
+<p>PROMIS-16 erlaubt <strong>drei</strong> Auswertungsformen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Umfang</th>
+      <th style="text-align: right">Wertebereich</th>
+      <th>Verfahren</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>8 Domänen-T-Scores</strong></td>
+      <td>je Domäne, Rohwert 2–10 aus zwei Items</td>
+      <td style="text-align: right">T ≈ 27–80 je nach Domäne</td>
+      <td>Umrechnungstabelle Rohwert → T-Score, oder genauer per Antwortmuster</td>
+    </tr>
+    <tr>
+      <td><strong>Physical/Mental Health Summary Scores</strong></td>
+      <td>zwei Summenmaße über die Domänen</td>
+      <td style="text-align: right">Z-Scores</td>
+      <td>nach Hays-Methodik</td>
+    </tr>
+    <tr>
+      <td><strong>PROPr Utility Score</strong></td>
+      <td><strong>7</strong> der 8 Domänen</td>
+      <td style="text-align: right"><strong>−0,022 bis 1,0</strong></td>
+      <td>multiplikatives Multi-Attribute-Utility-Modell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Bemerkenswert am PROPr: Angst geht nicht ein.</strong> Der PROMIS-Preference-Score (Dewitt et al. 2018, <a href="https://doi.org/10.1177/0272989X18776637">doi:10.1177/0272989X18776637</a>) beruht auf sieben Domänen — Cognitive Function-Abilities, Depression, Fatigue, Pain Interference, Physical Function, Sleep Disturbance und Ability to Participate in Social Roles and Activities. Die Anxiety-Domäne des PROMIS-16 bleibt außen vor. Der Wertebereich beginnt knapp unterhalb von null, weil einzelne Zustände als „schlechter als tot" bewertet wurden (0 = tot, 1 = bestmögliche Gesundheit).</p>
+
+<p>Der PROPr rechnet dabei <strong>nicht auf Item-, sondern auf Domänenebene</strong>: Aus dem T-Score wird θ = (T − 50) / 10, und darauf setzt das Utility-Modell auf. Genau deshalb ist er aus dem PROMIS-16 berechenbar — die zwei Cognitive-Function-Items, die dem PROMIS-29 fehlen, liefern die letzte noch benötigte Domäne. Eine Agreement-Studie (Hanmer et al. 2025, <a href="https://doi.org/10.1007/s11136-024-03827-5">doi:10.1007/s11136-024-03827-5</a>) findet Korrelationen von 0,93–0,95 zwischen PROPr aus PROMIS-16 und aus PROMIS-29+2, mit leichter Überschätzung am oberen Ende.</p>
+
+<p><strong>Die Scoring-Grundlagen sind öffentlich</strong>, das Scoring ist also nicht an eine proprietäre Engine gebunden:</p>
+
+<ul>
+  <li>Umrechnungstabellen Rohwert → T-Score je 2a-Kurzform im <a href="https://healthmeasures.net/implement/scoring/manual-scoring-resources/promis-scoring-manuals/">PROMIS Adult Profile Scoring Manual</a> (HealthMeasures, Stand 15.07.2025)</li>
+  <li>Genauere Antwortmuster-Tabelle als Supplement S4 der Entwicklungspublikation (Edelen et al., <em>Qual Life Res</em> 2025;34(1):3–15, <a href="https://doi.org/10.1007/s11136-023-03597-6">doi:10.1007/s11136-023-03597-6</a>, Open Access)</li>
+  <li>Referenzimplementierung des PROPr in R, SAS, Stata und Python: <a href="https://github.com/janelhanmer/PROPr">github.com/janelhanmer/PROPr</a></li>
+</ul>
+
+<p>Zwei Fallstricke für eine spätere Implementierung: Bei <strong>fehlenden Antworten</strong> ist die Summenscore-Tabelle laut Manual ausdrücklich unzulässig. Und die <strong>Umpolung</strong> folgt nicht der Formulierungsrichtung — <em>Social Roles</em> ist trotz negativer Itemformulierung umzupolen, <em>Cognitive Function</em> trotz positiver Formulierung nicht; maßgeblich sind die offiziellen Antwort-Codewerte.</p>
+
+<p><a name="propr"></a></p>
+
+<h3 id="artefakt-propr-als-observationdefinition">Artefakt: PROPr als ObservationDefinition</h3>
+
+<p>Für den PROPr ist in PCOR-MII eine Score-Definition angelegt: <a href="ObservationDefinition-PcorObsDefProprUtility.html"><strong>PcorObsDefProprUtility</strong></a>. Sie konformiert gegen das <code class="language-plaintext highlighter-rouge">mii-pr-pro-score-blueprint</code> des MII-PRO-Moduls und hält Wertebereich (−0,022 bis 1,0), Einheit, Nachkommastellen und die Scoring-Richtung fest — höhere Werte bedeuten bessere Gesundheit, anders als bei den meisten Belastungs-Scores.</p>
+
+<p>Sie <strong>definiert</strong> den Score, sie <strong>berechnet</strong> ihn nicht: Das multiplikative Utility-Modell liegt als Referenzimplementierung in R, SAS, Stata und Python vor (<a href="https://github.com/janelhanmer/PROPr">github.com/janelhanmer/PROPr</a>). Das folgt der MDR-Abgrenzung aus <a href="Designentscheidungen.html">ADR-004</a>.</p>
+
+<p>Da PROPr weder in LOINC noch in SNOMED CT noch im MII-Score-Katalog einen Code hat (geprüft 2026-09-29), trägt die Definition den Code <code class="language-plaintext highlighter-rouge">promis-propr-utility</code> aus dem lokalen <a href="CodeSystem-pcor-score-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code></a>. Das ist profilkonform: Das Blueprint bindet den MII-Katalog nicht per ValueSet, sondern als Slice über <code class="language-plaintext highlighter-rouge">coding.system</code>, und das Slicing ist <strong>offen</strong> — Codings anderer Systeme sind ausdrücklich vorgesehen (siehe <a href="Designentscheidungen.html">ADR-004</a>). Migrierbar bleibt es ebenfalls: Ein künftiger MII-Code wird als <strong>zusätzliches</strong> <code class="language-plaintext highlighter-rouge">code.coding</code> ergänzt, nicht als Ersatz.</p>
+
+<p><strong>Die Zuständigkeit liegt gleichwohl upstream.</strong> PROPr ist PROMIS-spezifisch, und die PROMIS-Artefakte pflegt das MII-PRO-Modul. Dort wären nachzuziehen: der Code <code class="language-plaintext highlighter-rouge">promis-propr-utility</code> im Score-Katalog, eine <code class="language-plaintext highlighter-rouge">mii-obsdef-pro-score-promis-propr-utility</code> nach dem Muster des EQ-5D-5L-Index und ein Verweis vom PROMIS-16-Questionnaire auf den Score. Der lokale Code trägt bereits denselben Namen, damit die Ergänzung ein reines Hinzufügen bleibt. Was hier steht, ist eine arbeitsfähige Vorwegnahme für die Erprobung.</p>
+
+<p><strong>Stand 2026-09-29: keiner der beiden Scores ist verfügbar.</strong> Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2026.7.0 existiert upstream <strong>ausschließlich der Questionnaire</strong> — keine <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>, keine CQL Library, keine Score-Codes im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt <code class="language-plaintext highlighter-rouge">calculatable</code> ausdrücklich auf <code class="language-plaintext highlighter-rouge">false</code> mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen <strong>Roadmap 2027</strong>.</p>
+
+<p>Für PCOR-MII heißt das: PROMIS-16 ist als <strong>Datenerfassungsinstrument</strong> nutzbar, die Score-Berechnung muss extern erfolgen.</p>
+
+<p><strong>Die acht Domänen-T-Scores werden in PCOR-MII bewusst nicht lokal angelegt</strong> (Entscheidung 2026-09-30). Möglich wäre es — der PROPr oben zeigt den Weg über einen Code aus dem lokalen <a href="CodeSystem-pcor-score-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code></a>, und das Blueprint-Slicing lässt das ausdrücklich zu. Der PROPr rechtfertigt diese Vorwegnahme aber durch etwas, das die Domänen-T-Scores nicht haben: Er ist <strong>profilunabhängig</strong> (er rechnet auf Domänen-θ, nicht auf Items) und damit ein stabiles Artefakt, egal welches PROMIS-Profil ihn speist. Die PROMIS-16-Domänen-T-Scores sind das Gegenteil — sie sind an die <strong>2-Item-Kurzform</strong> gebunden, und damit an genau die Antwortmuster-Tabelle, die upstream noch nicht implementiert ist. Acht lokale Codes vorwegzunehmen, deren Berechnungsvorschrift upstream erst 2027 festgelegt wird, würde Migrationsschulden erzeugen statt Arbeitsfähigkeit herstellen.</p>
+
+<p><strong>Nachzuziehen upstream im MII-PRO-Modul</strong> (vollständige Liste, damit sie als Ticket verwendbar ist):</p>
+
+<ol>
+  <li>Acht Codes <code class="language-plaintext highlighter-rouge">promis-16-&lt;domäne&gt;-tscore</code> im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> — parallel zu den bestehenden <code class="language-plaintext highlighter-rouge">promis-29-*</code>-Codes und aus demselben Grund instrumentenbezogen benannt (verschiedene Kurzform ⇒ verschiedene Rohwert-/Muster-Tabelle).</li>
+  <li>Acht <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s gegen <code class="language-plaintext highlighter-rouge">mii-pr-pro-score-blueprint</code>, mit dem <strong>bank-ebenen LOINC-T-Score</strong> als <code class="language-plaintext highlighter-rouge">code.coding[loinc]</code> — für PROMIS-16 gibt es keine andere Wahl (siehe Tabelle oben) — und der Kurzform-Unterscheidung in <code class="language-plaintext highlighter-rouge">method.text</code>. Für Cognitive Function ist das <code class="language-plaintext highlighter-rouge">81538-1</code>, derselbe Code wie bei der SF 4a.</li>
+  <li>Für Sleep den Code <strong><code class="language-plaintext highlighter-rouge">77860-5</code> (Sleep Disturbance)</strong>, nicht <code class="language-plaintext highlighter-rouge">77859-7</code> (SRI) — Begründung und Belegstelle oben.</li>
+  <li><strong>Anxiety bei PROMIS-29 auf den Bank-Code <code class="language-plaintext highlighter-rouge">77862-1</code> umstellen</strong> (oder die Abweichung begründen): Die bestehende <code class="language-plaintext highlighter-rouge">mii-obsdef-pro-promis-29-anxiety-tscore</code> nutzt als einzige der sieben den instrumentenspezifischen <code class="language-plaintext highlighter-rouge">71967-4</code>. Solange das so bleibt, tragen PROMIS-29- und PROMIS-16-Anxiety-Scores LOINC-Codes verschiedener Ebenen, was einen Cross-Walk unnötig erschwert.</li>
+  <li>Optional die beiden <strong>Summary Scores</strong> (Physical/Mental Health, Hays-Methodik) und den <strong>PROPr</strong> (<code class="language-plaintext highlighter-rouge">promis-propr-utility</code>, vgl. Abschnitt oben).</li>
+  <li>Die fünf noch offenen LOINC-Item-Codes (<code class="language-plaintext highlighter-rouge">sleep25</code>, <code class="language-plaintext highlighter-rouge">sleep90</code>, <code class="language-plaintext highlighter-rouge">srpper31-caps</code>, <code class="language-plaintext highlighter-rouge">pc27r</code>, <code class="language-plaintext highlighter-rouge">pc-caps3r</code>), upstream im FSH als TODO markiert.</li>
+  <li>Die CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> für den Muster-Lookup, sowie <code class="language-plaintext highlighter-rouge">calculatable = true</code> am Questionnaire, sobald sie vorliegt.</li>
+</ol>
+
+<h3 id="hinweise">Hinweise</h3>
+
+<ul>
+  <li><strong>Kein Schmerzintensitäts-Item.</strong> Anders als PROMIS-29 (28 Domänen-Items + Global07 auf 0–10) enthält PROMIS-16 keine numerische Schmerzintensität — die Schmerzdomäne ist allein über <em>Pain Interference</em> abgedeckt.</li>
+  <li><strong>Item-Überlapp mit PROMIS-29: 11 der 16 Items</strong> — gegen die Questionnaires im Dependency-Paket verifiziert (2026-09-30) und deckungsgleich mit Hanmer et al. 2025 für PROMIS-29+2. Gemeinsam: <code class="language-plaintext highlighter-rouge">pfa21</code>, <code class="language-plaintext highlighter-rouge">pfa23</code>, <code class="language-plaintext highlighter-rouge">edanx40</code>, <code class="language-plaintext highlighter-rouge">edanx41</code>, <code class="language-plaintext highlighter-rouge">eddep29</code>, <code class="language-plaintext highlighter-rouge">eddep41</code>, <code class="language-plaintext highlighter-rouge">hi7</code>, <code class="language-plaintext highlighter-rouge">an3</code>, <code class="language-plaintext highlighter-rouge">srpper46-caps</code>, <code class="language-plaintext highlighter-rouge">painin9</code>, <code class="language-plaintext highlighter-rouge">painin31</code>.</li>
+  <li><strong>PROMIS-16 ist kein PROMIS-29-Subset</strong> — die fünf spezifischen Items liegen in <em>drei</em> Domänen, nicht nur in Cognitive Function: <code class="language-plaintext highlighter-rouge">sleep25</code> und <code class="language-plaintext highlighter-rouge">sleep90</code> (die Sleep-Domäne hat mit PROMIS-29 <strong>kein</strong> Item gemeinsam), <code class="language-plaintext highlighter-rouge">srpper31-caps</code> (Social Roles) sowie <code class="language-plaintext highlighter-rouge">pc27r</code> und <code class="language-plaintext highlighter-rouge">pc-caps3r</code> (Cognitive Function). Im PROMIS-29+2 sind die zwei Cognitive-Function-Items dagegen enthalten — dort sind sie genau das „+2".</li>
+  <li><strong>Aus PROMIS-29 + Cognitive Function SF 4a lässt sich kein PROMIS-16 rekonstruieren.</strong> Die SF 4a nutzt vier andere Items (<code class="language-plaintext highlighter-rouge">pc2r</code>, <code class="language-plaintext highlighter-rouge">pc35r</code>, <code class="language-plaintext highlighter-rouge">pc36r</code>, <code class="language-plaintext highlighter-rouge">pc42r</code>), und die fünf PROMIS-16-spezifischen Items fehlen. Das betrifft auch die in <a href="PROMIS-33.html">PROMIS-33</a> beschriebene Abdeckung: Sie ersetzt funktional das PROMIS-33, <strong>nicht</strong> das PROMIS-16.</li>
+  <li>Bei kombinierter Erfassung von PROMIS-29 und PROMIS-16 in einer Studie sollten die 11 überlappenden Items nicht doppelt erhoben werden — eine spätere Item-basierte Score-Berechnung (geplant 2027 im MII PRO-Modul) wird hier mehr Flexibilität bringen.</li>
+</ul>
+
+<h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
+
+<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
+
+<h3 id="item-tabelle">Item-Tabelle</h3>
+
+<!-- BEGIN AUTO-TRANSLATION-TABLE -->
+
+<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-16</code> v2026.7.0 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
+
+<p>Wo Translation-Extensions auf den <code class="language-plaintext highlighter-rouge">text</code>-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.</p>
+
+<h3 id="körperliche-funktion">Körperliche Funktion</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.PhysicalFunction</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-pfa21</code></td>
+        <td>62826-3</td>
+        <td>Are you able to go up and down stairs at a normal pace?</td>
+        <td>Können Sie mit normaler Geschwindigkeit Treppen hoch- und runtergehen?</td>
+        <td><strong>1</strong> · Ohne jede Schwierigkeiten / Without any difficulty (<code class="language-plaintext highlighter-rouge">LA13921-4</code>)<br /><strong>2</strong> · Mit geringen Schwierigkeiten / With a little difficulty (<code class="language-plaintext highlighter-rouge">LA13918-0</code>)<br /><strong>3</strong> · Mit einigen Schwierigkeiten / With some difficulty (<code class="language-plaintext highlighter-rouge">LA13920-6</code>)<br /><strong>4</strong> · Mit großen Schwierigkeiten / With much difficulty (<code class="language-plaintext highlighter-rouge">LA13919-8</code>)<br /><strong>5</strong> · Kann ich gar nicht / Unable to do (<code class="language-plaintext highlighter-rouge">LA13912-3</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-pfa23</code></td>
+        <td>62827-1</td>
+        <td>Are you able to go for a walk of at least 15 minutes?</td>
+        <td>Können Sie mindestens 15 Minuten lang spazieren gehen?</td>
+        <td><strong>1</strong> · Ohne jede Schwierigkeiten / Without any difficulty (<code class="language-plaintext highlighter-rouge">LA13921-4</code>)<br /><strong>2</strong> · Mit geringen Schwierigkeiten / With a little difficulty (<code class="language-plaintext highlighter-rouge">LA13918-0</code>)<br /><strong>3</strong> · Mit einigen Schwierigkeiten / With some difficulty (<code class="language-plaintext highlighter-rouge">LA13920-6</code>)<br /><strong>4</strong> · Mit großen Schwierigkeiten / With much difficulty (<code class="language-plaintext highlighter-rouge">LA13919-8</code>)<br /><strong>5</strong> · Kann ich gar nicht / Unable to do (<code class="language-plaintext highlighter-rouge">LA13912-3</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="emotionale-belastung--angst">Emotionale Belastung — Angst</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.Anxiety</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-edanx40</code></td>
+        <td>61941-1</td>
+        <td>I found it hard to focus on anything other than my anxiety.</td>
+        <td>Ich fand es schwer, auf etwas anderes zu achten als auf meine Angst.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-edanx41</code></td>
+        <td>61942-9</td>
+        <td>My worries overwhelmed me.</td>
+        <td>Meine Sorgen haben mich überwältigt.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="emotionale-belastung--depressivität">Emotionale Belastung — Depressivität</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.Depression</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-eddep29</code></td>
+        <td>61967-6</td>
+        <td>I felt depressed.</td>
+        <td>Ich fühlte mich niedergeschlagen.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-eddep41</code></td>
+        <td>61973-4</td>
+        <td>I felt hopeless.</td>
+        <td>Ich fühlte mich hoffnungslos.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="erschöpfung">Erschöpfung</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.Fatigue</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-hi7</code></td>
+        <td>61878-5</td>
+        <td>I feel fatigued.</td>
+        <td>Ich bin erschöpft.</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-an3</code></td>
+        <td>61882-7</td>
+        <td>I had trouble starting things because I was tired.</td>
+        <td>Es fällt mir schwer, etwas anzufangen, weil ich müde bin.</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="schlafbezogene-beeinträchtigungen--schlafbeeinträchtigung">Schlafbezogene Beeinträchtigungen / Schlafbeeinträchtigung</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.Sleep</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-sleep25</code></td>
+        <td> </td>
+        <td>I had problems during the day because of poor sleep.</td>
+        <td>Ich hatte tagsüber Probleme, weil ich schlecht geschlafen habe.</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-sleep90</code></td>
+        <td> </td>
+        <td>I had trouble sleeping.</td>
+        <td>Es fiel mir schwer zu schlafen.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="teilhabe-an-sozialen-rollen-und-aktivitäten">Teilhabe an sozialen Rollen und Aktivitäten</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.SocialRoles</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-srpper31-caps</code></td>
+        <td> </td>
+        <td>I have trouble taking care of my regular personal responsibilities.</td>
+        <td>Es fällt mir schwer, mich um meine regelmäßigen persönlichen Verpflichtungen zu kümmern.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-srpper46-caps</code></td>
+        <td>76712-9</td>
+        <td>I have trouble doing all of the activities with friends that I want to do.</td>
+        <td>Es fällt mir schwer, allen Aktivitäten nachzugehen, die ich mit Freunden machen möchte.</td>
+        <td><strong>1</strong> · Nie / Never (<code class="language-plaintext highlighter-rouge">LA6270-8</code>)<br /><strong>2</strong> · Selten / Rarely (<code class="language-plaintext highlighter-rouge">LA10066-1</code>)<br /><strong>3</strong> · Manchmal / Sometimes (<code class="language-plaintext highlighter-rouge">LA10082-8</code>)<br /><strong>4</strong> · Oft / Often (<code class="language-plaintext highlighter-rouge">LA10044-8</code>)<br /><strong>5</strong> · Immer / Always (<code class="language-plaintext highlighter-rouge">LA9933-8</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="beeinträchtigung-durch-schmerzen">Beeinträchtigung durch Schmerzen</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.PainInterference</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-painin9</code></td>
+        <td>61758-9</td>
+        <td>How much did pain interfere with your day-to-day activities?</td>
+        <td>Wie sehr beeinträchtigen Schmerzen Ihre Alltagsaktivitäten?</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-painin31</code></td>
+        <td>61773-8</td>
+        <td>How much did pain interfere with your ability to participate in social activities?</td>
+        <td>Wie sehr beeinträchtigen Schmerzen Ihre Fähigkeit, an sozialen Aktivitäten teilzunehmen?</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="kognitive-funktionen--fähigkeiten">Kognitive Funktionen — Fähigkeiten</h3>
+
+<p><em>Sektion <code class="language-plaintext highlighter-rouge">PROMIS-16.Cognition</code></em></p>
+
+<div class="promis-item-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>linkId</th>
+        <th>LOINC</th>
+        <th>English</th>
+        <th>Deutsch</th>
+        <th>Antwortoptionen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-pc27r</code></td>
+        <td> </td>
+        <td>I have been able to remember to do things, like take medicine or buy something I needed.</td>
+        <td>Ich bin fähig gewesen, mich an Dinge zu erinnern, die ich tun musste, wie z.B. Medikamente einnehmen oder etwas kaufen, das ich benötigte.</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">promis-pc-caps3r</code></td>
+        <td> </td>
+        <td>I have been able to think clearly without extra effort.</td>
+        <td>Ich bin fähig gewesen, klar zu denken, ohne mich extra anzustrengen.</td>
+        <td><strong>1</strong> · Überhaupt nicht / Not at all (<code class="language-plaintext highlighter-rouge">LA6568-5</code>)<br /><strong>2</strong> · Ein wenig / A little bit (<code class="language-plaintext highlighter-rouge">LA13863-8</code>)<br /><strong>3</strong> · Mäßig / Somewhat (<code class="language-plaintext highlighter-rouge">LA13909-9</code>)<br /><strong>4</strong> · Ziemlich / Quite a bit (<code class="language-plaintext highlighter-rouge">LA13902-4</code>)<br /><strong>5</strong> · Sehr / Very much (<code class="language-plaintext highlighter-rouge">LA13914-9</code>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- END AUTO-TRANSLATION-TABLE -->
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="PROMIS-Cognitive-Function.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="PHQ.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
+          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-10-01 11:15:00 +0000">
+    2026-10-01
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
