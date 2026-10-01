@@ -881,6 +881,105 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[+].code = #entity
   * ^property[=].valueString = "AN"
 
+// ── UKHD-ANB ──
+* #AN_biography "AN_biography — Wie lange sind Sie bereits von Ihrer Essstörung betroffen?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-ANB"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #lowBMI "lowBMI — Welches war Ihr niedrigter BMI?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-ANB"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
+// ── UKHD-CT ──
+* #treatment_outpatient "treatment_outpatient — Sind Sie zurzeit in psychotherapeutischer Behandlung?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
+// ── UKHD-CTT ──
+* #traumaspecific1 "traumaspecific1 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #traumaspecific2 "traumaspecific2 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #traumaspecific3 "traumaspecific3 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #traumaspecific4 "traumaspecific4 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #traumaspecific5 "traumaspecific5 — Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #traumaspecific6 "traumaspecific6 — Passierte dieses Ereignis vor oder nach den ersten Anzeichen der …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-CTT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
+// ── UKHD-LE ──
+* #life_event1_screening "life_event1_screening — Gab es in Ihrem Leben prägende belastende Lebensereignisse, die Sie …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-LE"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #life_event1_monitoring "life_event1_monitoring — Gab es seit der letzten Befragung prägende belastende …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-LE"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #lifev_discharge "lifev_discharge — Gab es seit Ihrer Aufnahme prägende belastende Lebensereignisse, …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-LE"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #lifev_text "lifev_text — Bitte benennen Sie diese Lebensereignisse:"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-LE"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "EFA"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
 // ── UKHD-MEDI ──
 * #medication1 "medication1 — Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?"
   * ^property[+].code = #instrument
@@ -898,6 +997,45 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[=].valueString = "MHI"
   * ^property[+].code = #entity
   * ^property[=].valueString = "AN, NTx, PSS"
+
+// ── UKHD-ND ──
+* #new_diagnosis_monitoring "new_diagnosis_monitoring — Gab es seit der letzten Befragung weitere medizinische / psychische …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-ND"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #new_diagnosis_discharge "new_diagnosis_discharge — Gab es seit Ihrer Aufnahme weitere medizinische / psychische …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-ND"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #new_diagnosis_text "new_diagnosis_text — Bitte tragen Sie diese Diagnosen in das folgende Textfeld ein."
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-ND"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
+// ── UKHD-PT ──
+* #bdkm15 "bdkm15 — Waren Sie früher oder sind Sie zurzeit in psychotherapeutischer …"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-PT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #bdkm16 "bdkm16 — Wie oft haben Sie in den letzten 4 Wochen einen Arzt aufgesucht?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD-PT"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
 
 // ── UKHD-W ──
 * #weight_outpatient_1 "weight_outpatient_1 — Zur Messung des Körpergewichts empfehlen wir einen Kontrollbesuch …"
@@ -926,6 +1064,22 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[=].valueString = "UKHD-W"
   * ^property[+].code = #category
   * ^property[=].valueString = "MHI"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+
+// ── UKHD_D ──
+* #diagnosis_admit "diagnosis_admit — Welche Diagnose/-n sollen bei Ihnen hier behandelt werden?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD_D"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "AN"
+* #comorbid1 "comorbid1 — Gibt es außer den zurvor genannten Diagnosen noch andere Diagnosen?"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "UKHD_D"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "AN"
 
