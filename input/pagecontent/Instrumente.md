@@ -60,7 +60,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | EDE-Q6 (6) | DCH | — | • | — | vom Verlag frei bereitgestellt; Bestätigung angestrebt | [EDE-Q6](EDE-Q6.html) — je 1 Item pro Subskala + 2 Zusatzfragen |
 | ANSOCQ-2 (2) | TCH | — | • | — | frei | [ANSOCQ-2](ANSOCQ-2.html) — nur trennschärfstes Item je Skala |
 | SSUK-2 (2) | EFA | — | • | — | frei | [SSUK-2](SSUK-2.html) — nur trennschärfstes Item je Skala |
-| ACE (5) | EFA | — | • | — | frei | [ACE](ACE.html) — erste 5 Fragen |
+| ACE + Zeitangaben (11) | EFA | — | • | — | ACE frei; die 6 UKHD-Items **Freigabe offen** | [ACE](ACE.html) — erste 5 ACE-Fragen plus `UKHD-CTT` (PCOR-MII-Komposit) |
 | BAASIS (10) | TCH | — | — | • | © Uni Basel, Items nicht publizierbar | offen — metadata-only vorgesehen |
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, Items nicht publizierbar | offen — metadata-only vorgesehen |
 | ABQ (16) | TCH | — | — | • | Nutzung ohne Pharma-Beteiligung | offen — metadata-only vorgesehen |
@@ -71,7 +71,7 @@ Für AN sind sieben dieser Gruppen inzwischen modelliert — als **ein** Sammelb
 
 | Sammelbogen | Kat. | PSS | AN | NTx | Lizenz | Umsetzung |
 |---|---|:--:|:--:|:--:|---|---|
-| UKHD-AN (20) — `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-CTT`, `UKHD-LE`, `UKHD-ND`, `UKHD_D` | DCH, TCH, EFA | — | • | — | **Freigabe offen** — in der DIZ-Liste nicht geführt; Rechteinhaber UKHD | [UKHD-AN](UKHD-AN.html) |
+| UKHD-AN (14) — `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-LE`, `UKHD-ND`, `UKHD_D` | DCH, TCH, EFA | — | • | — | **Freigabe offen** — in der DIZ-Liste nicht geführt; Rechteinhaber UKHD | [UKHD-AN](UKHD-AN.html) |
 
 **Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.** Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste **gar nicht vor** — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe [UKHD-AN](UKHD-AN.html) und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html)).
 

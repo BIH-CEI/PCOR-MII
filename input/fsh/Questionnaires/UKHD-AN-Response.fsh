@@ -78,26 +78,16 @@
 //     Felder verwechselt. Dezimalstelle bewusst gesetzt — das Item ist decimal,
 //     und ein glatter Ganzzahlwert haette das nicht belegt.
 //
-//   UKHD-CTT: ZWEI der drei Paare belegt, das dritte leer. Das ist die
-//     inhaltlich tragfaehigste Wahl, die ohne eine Klaerung des offenen
-//     Bezugspunkts moeglich ist (siehe designNote am Gruppen-Item: worauf sich
-//     "Ihre Angabe" bezieht, sagt das Dictionary nicht). Im ACE sind ZWEI
-//     Items bejaht — also gibt es zwei berichtete Belastungen und damit zwei
-//     auszufuellende Paare. Dass das dritte leer bleibt, ist genau die
-//     Information, die der Bogen hier tragen soll.
-//       traumaspecific1 = 2 / traumaspecific3 = 2 (mehrfaches Ereignis):
-//         Beide ACE-Items fragen nach "oft oder sehr oft" — eine einmalige
-//         Angabe waere mit der bejahten ACE-Antwort unvereinbar.
-//       traumaspecific2 = 1 / traumaspecific4 = 1 (vor den ersten Anzeichen):
-//         Der ACE fragt nach Erfahrungen vor dem 18. Lebensjahr; die ersten
-//         Anzeichen der Essstoerung liegen nach AN_biography um 2018. Die
-//         Reihenfolge ist damit aus den uebrigen Angaben erzwungen, nicht
-//         gewaehlt.
+//   UKHD-CTT: NICHT MEHR IN DIESEM BOGEN. Die sechs traumaspecific-Items sind
+//     in den ACE-Bogen gewandert, weil das Dictionary ihren Bezug auf ace1 bis
+//     ace3 ausdruecklich nennt und enableWhen diesen Bezug nur innerhalb
+//     desselben Questionnaire ausdruecken kann. Die Antwortwerte stehen jetzt
+//     in ACE-Response.fsh.
 //
 //   UKHD-LE: life_event1_screening = Ja, und lifev_text ist gefuellt — damit
 //     belegt die Antwort die enableWhen-Kette (Freitextitem nur bei Ja). Der
 //     Freitext benennt ZWEI Ereignisse und bleibt damit konsistent mit den
-//     zwei bejahten ACE-Items und den zwei belegten CTT-Paaren. Formuliert ist
+//     zwei bejahten ACE-Items in ACEResponse. Formuliert ist
 //     er bewusst zurueckhaltend: Ein Beispiel im Implementation Guide wird
 //     vorgefuehrt und gelesen, und ein drastischer Freitext belegt technisch
 //     nichts, was ein sachlicher nicht auch belegt (dieselbe redaktionelle
@@ -182,33 +172,6 @@ Description: "Beispielantwort zum UKHD-AN-Questionnaire für einen Initial-/Scre
   * item[+]
     * linkId = "treatment_outpatient"
     * answer.valueCoding = UkhdAnBehandlungsstatusCS#3 "Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung"
-
-// ── UKHD-CTT — Kindheitsbelastungen, zwei von drei Paaren ─────────────────────
-// Paar 1 und 2 entsprechen den zwei bejahten ACE-Items (ace1, ace4); Paar 3
-// (traumaspecific5/6) bleibt leer, weil kein drittes Ereignis berichtet ist.
-* item[+]
-  * linkId = "ukhd-ctt"
-  // Zwei der drei Ereignis-Gruppen belegt, passend zu den zwei bejahten
-  // ACE-Items in ACEResponse (ace1 emotionale Misshandlung, ace4 emotionale
-  // Vernachlaessigung). Die dritte Gruppe bleibt leer — es wurden nicht drei
-  // Ereignisse berichtet. Genau dafuer sind es drei Gruppen und nicht drei
-  // Pflichtpaare.
-  * item[+]
-    * linkId = "ukhd-ctt-ereignis-1"
-    * item[+]
-      * linkId = "traumaspecific1"
-      * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
-    * item[+]
-      * linkId = "traumaspecific2"
-      * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
-  * item[+]
-    * linkId = "ukhd-ctt-ereignis-2"
-    * item[+]
-      * linkId = "traumaspecific3"
-      * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
-    * item[+]
-      * linkId = "traumaspecific4"
-      * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
 
 // ── UKHD-LE — Belastende Lebensereignisse ─────────────────────────────────────
 // Nur das Screening-Item (TIMING i); Monitoring und Entlassung bleiben leer.

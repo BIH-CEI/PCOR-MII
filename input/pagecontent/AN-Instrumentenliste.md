@@ -71,14 +71,14 @@ Das EQ-5D-5L ist der einzige Eintrag, bei dem der Erhebungsplan „offen" sagt, 
 
 Diese Gruppen bilden **kein publiziertes Instrument** ab und stammen direkt aus dem Item Level Dictionary. Sämtlich Priorität **A** im Erhebungsplan.
 
-Sieben von ihnen sind inzwischen als **ein** Sammelbogen modelliert — [UKHD-AN](UKHD-AN.html), 20 Items, ein `group`-Item je Gruppe ([ADR-011](Designentscheidungen.html)). **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
+Sieben von ihnen sind inzwischen modelliert: sechs als **ein** Sammelbogen — [UKHD-AN](UKHD-AN.html), 14 Items, ein `group`-Item je Gruppe ([ADR-011](Designentscheidungen.html)) — und `UKHD-CTT` im [ACE](ACE.html), weil das Dictionary ihren `enableWhen`-Bezug auf `ace1` bis `ace3` ausdrücklich nennt und FHIR diesen Bezug nur innerhalb eines Questionnaire ausdrücken kann. **Eine dokumentierte Freigabe gibt es für sie trotzdem nicht:** Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt diese Gruppen nicht. Rechteinhaber ist das Universitätsklinikum Heidelberg, und die Bestätigung ist einzuholen — die Modellierung ist eine bewusste Projektentscheidung zur Erprobung.
 
 | Gruppe | Erfasst | Items | Ressource | Rechtestatus |
 |---|---|--:|---|---|
 | `UKHD-PT` | Vorbehandlung | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
 | `UKHD-ANB` | AN-spezifische Anamnese | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
 | `UKHD-CT` | Aktuelle Behandlung | 1 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
-| `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
+| `UKHD-CTT` | Childhood Trauma, Zeitangabe | 6 | **PCOR-MII** → [ACE](ACE.html) (Komposit) | Freigabe UKHD offen |
 | `UKHD-LE` | Lebensereignisse | 4 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
 | `UKHD-ND` | Neue Diagnosen | 3 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |
 | `UKHD_D` | Diagnosen bei Aufnahme | 2 | **PCOR-MII** → [UKHD-AN](UKHD-AN.html) | Freigabe UKHD offen |

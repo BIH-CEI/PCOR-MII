@@ -1,9 +1,15 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Antwortskalen der UKHD-AN-Zusatzitems
 //
-// Fuenf der sieben Itemgruppen bringen eigene Skalen mit, die es im Projekt
-// bisher nicht gibt. Die Ja/Nein-Items (UKHD-LE, UKHD-ND) nutzen dagegen das
-// projektweite DemJaNeinVS aus DEM.fsh — genau wie ACE.fsh.
+// Drei der sechs Itemgruppen bringen eigene Skalen mit — fuenf Stueck, die es
+// im Projekt bisher nicht gibt. Die Ja/Nein-Items (UKHD-LE, UKHD-ND) nutzen
+// dagegen das projektweite DemJaNeinVS aus DEM.fsh — genau wie ACE.fsh.
+//
+// ZWEI WEITERE SKALEN STANDEN BIS ZUM 01.10.2026 HIER (Ereignishaeufigkeit und
+//   Ereigniszeitpunkt der Gruppe UKHD-CTT). Sie sind mit ihren Items nach
+//   ACE.fsh gezogen; die CodeSystem-Ids und Canonicals bleiben unveraendert
+//   ukhd-an-ereignishaeufigkeit / -ereigniszeitpunkt, weil sie den Standort und
+//   die Dictionary-Gruppe benennen, nicht die Datei.
 //
 // ANTWORTCODES = NUMERISCHE DICTIONARY-CODES (ADR-003 Punkt 4). Auch bei den
 //   beiden zusammengesetzten Items (AN_biography, lowBMI) bleibt es dabei —
@@ -244,103 +250,15 @@ Description: "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus 
 * ^expansion.contains[=].code = #4
 * ^expansion.contains[=].display = "ja, ich befinde mich aktuell in einer klinischen (stationären) oder tagesklinischen (teilstationären) Behandlung"
 
-// ── UKHD-CTT: traumaspecific1 / 3 / 5 ────────────────────────────────────────
-// MIT ordinalValue — ORDINAL, auch wenn es nur zwei Stufen sind: „einmalig"
-//   gegen „mehrfach" ist eine monotone Haeufigkeitsaussage, und eine
-//   Mehrfachbelastung ist in der Traumaforschung durchgaengig das schwerere
-//   Mass. Der Wert ist hier wenig wert (bei zwei Stufen leistet er nichts, was
-//   der Code nicht leistet), aber er ist nicht falsch — anders als bei den
-//   nominalen Skalen oben.
-//
-// Die Displays sind SATZFRAGMENTE („um ein einmaliges"), weil sie im Dictionary
-//   die Frage fortsetzen. Wortgleich uebernommen; fuer eine
-//   Formularimplementierung sind sie nur zusammen mit dem Itemtext lesbar.
-CodeSystem: UkhdAnEreignishaeufigkeitCS
-Id: ukhd-an-ereignishaeufigkeit
-Title: "UKHD-AN Ereignis einmalig oder wiederholt (Codes)"
-Description: "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary."
-* insert PR_CS_VS_Version
-* ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"
-* ^status = #draft
-* ^experimental = true
-* ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
-* ^property[=].description = "Numerischer Ordinalwert (1-2, Dictionary-Codes)."
-* ^property[=].type = #decimal
-* #1 "um ein einmaliges"
-  * ^property[+].code = #ordinalValue
-  * ^property[=].valueDecimal = 1
-* #2 "um ein mehrfaches Ereignis"
-  * ^property[+].code = #ordinalValue
-  * ^property[=].valueDecimal = 2
-
-ValueSet: UkhdAnEreignishaeufigkeitVS
-Id: ukhd-an-ereignishaeufigkeit-vs
-Title: "UKHD-AN Ereignis einmalig oder wiederholt"
-Description: "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`)."
-* insert PR_CS_VS_Version
-* ^url = "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereignishaeufigkeit-vs"
-* ^status = #draft
-* ^experimental = true
-* include codes from system UkhdAnEreignishaeufigkeitCS
-* ^expansion.timestamp = "2026-10-01T00:00:00Z"
-* ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit|0.3.0"
-* ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"
-* ^expansion.contains[=].code = #1
-* ^expansion.contains[=].display = "um ein einmaliges"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"
-* ^expansion.contains[=].code = #2
-* ^expansion.contains[=].display = "um ein mehrfaches Ereignis"
-
-// ── UKHD-CTT: traumaspecific2 / 4 / 6 ────────────────────────────────────────
-// KEIN ordinalValue — „vor" und „nach" sind eine NOMINALE Zeitrelation, keine
-//   Stufen; und Stufe 3 („ich weiss es nicht mehr") ist eine erhobene
-//   Nicht-Antwort, die in einer Rangfolge gar keinen Platz hat. Sie bleibt
-//   bewusst im Wertebereich und wird nicht als dataAbsentReason ausgelagert:
-//   Die Erinnerungsluecke ist hier eine Antwort, die vorgelegt wurde.
-CodeSystem: UkhdAnEreigniszeitpunktCS
-Id: ukhd-an-ereigniszeitpunkt
-Title: "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)"
-Description: "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort."
-* insert PR_CS_VS_Version
-* ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"
-* ^status = #draft
-* ^experimental = true
-* ^caseSensitive = true
-* #1 "vor den ersten Anzeichen der Essstörung"
-* #2 "nach den ersten Anzeichen der Essstörung"
-* #3 "ich weiß es nicht mehr"
-
-ValueSet: UkhdAnEreigniszeitpunktVS
-Id: ukhd-an-ereigniszeitpunkt-vs
-Title: "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung"
-Description: "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`)."
-* insert PR_CS_VS_Version
-* ^url = "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereigniszeitpunkt-vs"
-* ^status = #draft
-* ^experimental = true
-* include codes from system UkhdAnEreigniszeitpunktCS
-* ^expansion.timestamp = "2026-10-01T00:00:00Z"
-* ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt|0.3.0"
-* ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"
-* ^expansion.contains[=].code = #1
-* ^expansion.contains[=].display = "vor den ersten Anzeichen der Essstörung"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"
-* ^expansion.contains[=].code = #2
-* ^expansion.contains[=].display = "nach den ersten Anzeichen der Essstörung"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"
-* ^expansion.contains[=].code = #3
-* ^expansion.contains[=].display = "ich weiß es nicht mehr"
-
 // ─────────────────────────────────────────────────────────────────────────────
 // UKHD-AN — Standortspezifische AN-Zusatzitems des Universitaetsklinikums
-//           Heidelberg (7 Itemgruppen, 20 Items)
+//           Heidelberg (6 Itemgruppen, 14 Items)
 //
 // Quelle: PCOR-MII Item Level Dictionary, Entitaet AN, Gruppen UKHD-PT,
-//   UKHD-ANB, UKHD-CT, UKHD-CTT, UKHD-LE, UKHD-ND und UKHD_D.
+//   UKHD-ANB, UKHD-CT, UKHD-LE, UKHD-ND und UKHD_D.
+//
+// DIE SIEBTE GRUPPE UKHD-CTT IST NICHT HIER, SONDERN IN ACE.fsh — siehe den
+//   Hinweisblock vor Instance: UKHDAN.
 //
 // ═══ RECHTELAGE — BITTE VOR DER NACHNUTZUNG LESEN ═══════════════════════════
 //
@@ -360,9 +278,9 @@ Description: "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der
 //   dagegen auf eine Freigabe.
 //
 //   DIE HIER MODELLIERTEN GRUPPEN FALLEN UEBERWIEGEND IN DIE ZWEITE KATEGORIE.
-//   UKHD-CTT (sechs Items zu Zeit- und Haeufigkeitsangaben von
-//   Kindheitsbelastungen) und UKHD-LE (vier Items zu belastenden
-//   Lebensereignissen) sind entworfene Batterien; UKHD_D und UKHD-ND liegen
+//   UKHD-LE (vier Items zu belastenden Lebensereignissen) ist eine entworfene
+//   Batterie — wie die nach ACE.fsh gezogene Gruppe UKHD-CTT, fuer die dasselbe
+//   gilt und deren Rechtelage dort erneut vermerkt ist; UKHD_D und UKHD-ND liegen
 //   naeher an Faktenfragen, UKHD-PT, UKHD-ANB und UKHD-CT dazwischen.
 //
 //   Dass sie dennoch modelliert werden, ist eine BEWUSSTE PROJEKTENTSCHEIDUNG
@@ -499,12 +417,13 @@ Description: "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der
 //     definitionsgemaess noch keine „weiteren" Diagnosen seit der letzten
 //     Befragung, und die Aufnahmediagnosen erhebt stattdessen UKHD_D.
 //
-//   NICHT gesetzt bei UKHD-CTT, obwohl es dort naheliegt: Die sechs Items
-//   beziehen sich auf „Ihre Angabe", also auf eine VORANGEHENDE Angabe — die
-//   im Dictionary nicht benannt ist und auch nicht zur Gruppe gehoert. Ein
-//   erfundenes enableWhen waere eine Behauptung ueber die Erhebungslogik. Das
-//   ist der groesste offene Punkt dieses Bogens; siehe designNote am
-//   Gruppen-Item und die Seite UKHD-AN.
+//   BEI UKHD-CTT WAR ES DER ANLASS, DIE GRUPPE ZU VERSCHIEBEN. Die sechs
+//   Items beziehen sich auf „Ihre Angabe", und das Dictionary sagt in der
+//   Spalte ADDITIONAL INFORMATION ausdruecklich, worauf: auf ace1, ace2 bzw.
+//   ace3. enableWhen.question nimmt aber eine linkId INNERHALB desselben
+//   Questionnaire — die Bedingung war hier also nicht ausdrueckbar. Statt sie
+//   nur zu dokumentieren, sind die Items dorthin gezogen, wo ihre Bedingung
+//   steht: nach ACE.fsh, siehe den Hinweisblock vor Instance: UKHDAN.
 //
 // ═══ ANTWORTOPTIONEN ═══════════════════════════════════════════════════════
 //
@@ -548,11 +467,23 @@ Description: "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der
 //     metadata-only.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// UKHD-CTT IST NICHT MEHR HIER. Die sechs Items (traumaspecific1-6) sind in
+//   den ACE-Bogen gewandert und bilden dort zusammen mit den fuenf ACE-Items
+//   ein PCOR-MII-spezifisches Komposit. Grund: Das Item Level Dictionary gibt
+//   in der Spalte ADDITIONAL INFORMATION ausdruecklich an, worauf sich die
+//   drei Paare beziehen —
+//     traumaspecific1, 2  ->  "ACE Abfrage ace1, Antwort Ja = 1"
+//     traumaspecific3, 4  ->  "ACE Abfrage ace2, Antwort Ja = 1"
+//     traumaspecific5, 6  ->  "ACE Abfrage ace3, Antwort Ja = 1"
+//   Diese Abhaengigkeit laesst sich mit enableWhen nur ausdruecken, wenn beide
+//   Seiten im SELBEN Questionnaire liegen: enableWhen.question nimmt laut R4
+//   eine linkId innerhalb desselben Bogens. Siehe ACE.fsh.
+
 Instance: UKHDAN
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "UKHD-AN — Standortspezifische AN-Zusatzitems (Universitätsklinikum Heidelberg)"
-Description: "Sammelbogen der sieben standortspezifischen AN-Itemgruppen des Universitätsklinikums Heidelberg (20 Items): Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), Zeit- und Häufigkeitsangaben zu Kindheitsbelastungen (`UKHD-CTT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Ein Questionnaire mit einem `group`-Item je Gruppe statt sieben Ressourcen (ADR-011). Kein Score — diese Items bilden kein publiziertes Instrument ab. **Für den Wortlaut liegt keine dokumentierte Freigabe des Standorts vor**; die Modellierung ist eine bewusste Projektentscheidung, keine geklärte Rechtslage. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Nicht enthalten: `UKHD-BI` und `UKHD-EDP`."
+Description: "Sammelbogen der standortspezifischen AN-Itemgruppen des Universitätsklinikums Heidelberg — **sechs Gruppen, 14 Items**: Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD_D`). Ein Questionnaire mit einem `group`-Item je Gruppe statt sechs Ressourcen (ADR-011). Kein Score — diese Items bilden kein publiziertes Instrument ab. **Für den Wortlaut liegt keine dokumentierte Freigabe des Standorts vor**; die Modellierung ist eine bewusste Projektentscheidung, keine geklärte Rechtslage. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Nicht enthalten: `UKHD-BI` und `UKHD-EDP`. **Die siebte Gruppe `UKHD-CTT`** (sechs Zeitangaben zu Kindheitsbelastungen) steht nicht hier, sondern im [ACE](Questionnaire-ACE.html): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken."
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDAN"
 * name = "UKHDAN"
@@ -563,11 +494,11 @@ Description: "Sammelbogen der sieben standortspezifischen AN-Itemgruppen des Uni
 * subjectType = #Patient
 * date = "2026-10-01"
 * publisher = "BIH-CEI"
-* copyright = "Die Items dieses Bogens sind Eigenentwicklungen des Standorts Heidelberg und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN, Gruppen UKHD-PT, UKHD-ANB, UKHD-CT, UKHD-CTT, UKHD-LE, UKHD-ND, UKHD_D). **Rechteinhaber ist das Universitätsklinikum Heidelberg. Eine Freigabe für die Veröffentlichung des Wortlauts liegt nicht dokumentiert vor und ist einzuholen.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
+* copyright = "Die Items dieses Bogens sind Eigenentwicklungen des Standorts Heidelberg und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN, Gruppen UKHD-PT, UKHD-ANB, UKHD-CT, UKHD-LE, UKHD-ND, UKHD_D; die siebte Gruppe UKHD-CTT steht im [ACE](Questionnaire-ACE.html) und ist dort mit derselben Einschränkung versehen). **Rechteinhaber ist das Universitätsklinikum Heidelberg. Eine Freigabe für die Veröffentlichung des Wortlauts liegt nicht dokumentiert vor und ist einzuholen.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
 
 // Designentscheidungen direkt am Questionnaire (designNote, ADR-003 Punkt 5)
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen.** (0) **Rechtelage — zuerst, weil sie alles andere relativiert:** Für diese 20 Items liegt **keine dokumentierte Freigabe** vor. Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt die Standort-Itemgruppen von UKHD, UKE und MHH nicht. Rechteinhaber ist das **Universitätsklinikum Heidelberg**; die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung, keine geklärte Rechtslage — siehe `copyright` und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html). (1) **Ein Questionnaire, nicht sieben** ([ADR-011](Designentscheidungen.html)): Eigene Ressourcen bekommen nur publizierte mehritemige Instrumente mit eigener Nummerierung oder Skalenstruktur; Einzelitems und unnummerierte Abschnitte gehören in einen Sammelbogen — wie die OECD-/GI-PS-Einzelfragen in [DEM](Demographie.html) und die Anamnese-Abschnitte in [MHI](MHI.html). Keine der sieben Gruppen ist publiziert, keine hat eine Itemnummerierung, drei haben ein oder zwei Items. Umgesetzt als **ein `group`-Item je Gruppe**; die Gruppenzugehörigkeit bleibt über `item.code` und die Property `instrument` in [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) maschinenlesbar. (2) **`linkId` = Dictionary-Variablen-ID** nach [ADR-008](Designentscheidungen.html) Regel 1, zweiter Teil: Diese Items haben keine offizielle Instrumenten-Nummerierung, sondern sind Eigenentwicklungen ohne Instrumentenidentität. Gruppen-Items tragen sprechende IDs (`ukhd-pt`, `ukhd-ctt`, …) und **keinen** `item.code`. (3) **Sprache `de` ohne Übersetzungsebene:** [ADR-005](Designentscheidungen.html) ordnet Englisch-primär dort an, wo ein englisches Original existiert. Hier gibt es keines — die Items sind deutschsprachige Eigenentwicklungen. Eine englische `item.text`-Ebene wäre eine unvalidierte PCOR-MII-Übersetzung an der Stelle, an der der erhobene Wortlaut steht. (4) **Wortlaut wortgleich übernommen**, normalisiert nur Zeilenumbrüche und Mehrfach-Leerzeichen der Excel-Zellen. **Sprachliche Fehler der Vorlage bleiben stehen** und sind einzeln ausgewiesen: `lowBMI` „Ihr niedrigter BMI“, `comorbid1` „den zurvor genannten“, in `UKHD-LE` „Auflösung einer Partnerschaften“ und „Verlust ihres Zuhauses“, in `treatment_outpatient` „Ja“ gegen „ja“. Nach [ADR-010](Designentscheidungen.html) wäre eine Bereinigung nur als zusätzliche Ebene zulässig; sie ist hier bewusst nicht angelegt, weil es keine Vorlage gibt, gegen die sich Druckfehler und Abschreibfehler unterscheiden ließen — die Korrektur gehört ins Dictionary. (5) **`TIMING` wird nicht als FHIR-Struktur modelliert.** Die Spalte sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des Erhebungsplans, nicht des Bogens: Ein Questionnaire beschreibt, *was* gefragt wird, nicht *wann*. Sichtbar wird der Plan in der **Antwort** — die Beispielantwort ist ein Initial-/Screening-Termin und beantwortet deshalb nur die Items mit `TIMING` i bzw. a/at. (6) **Zwei zusammengesetzte Items nach dem MHI-Muster `Q_WB151`/`Q_WB151a`:** `AN_biography` und `lowBMI` erheben im Dictionary je eine Auswahl *und* einen Zahlenwert. Die **Auswahl** behält Variablen-ID, Wortlaut und `item.code`; die Wert-Items `AN_biography-wert` (integer) und `lowBMI-wert` (decimal) sind PCOR-MII-eigen, tragen **keinen** `item.code` und keinen Dictionary-Wortlaut. Bei `AN_biography` genügt **ein** Wert-Item für beide Einheiten, weil die Einheit in der Auswahl steht (`enableBehavior = any`). (7) **`enableWhen` nur, wo es inhaltlich zwingend ist** (Muster `edeq30`): `lifev_text` hängt an **allen drei** Ja/Nein-Items der Gruppe mit `enableBehavior = any`, weil diese drei nicht Varianten einer Frage sind, sondern dieselbe Frage für drei verschiedene Erhebungszeitpunkte — pro Termin wird genau eine gestellt. `new_diagnosis_text` analog an beiden ND-Items. **Bei `UKHD-CTT` bewusst nicht gesetzt:** Die sechs Items beziehen sich auf „Ihre Angabe“, also auf ein vorangehendes Item, das im Dictionary nicht benannt ist — ein erfundenes `enableWhen` wäre eine Behauptung über die Erhebungslogik. (8) **Antwortoptionen:** Ja/Nein über das projektweite [`DemJaNeinVS`](ValueSet-dem-ja-nein.html) wie in [ACE](ACE.html) (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch); die übrigen fünf Skalen als eigene CodeSystems mit **`ordinalValue` nur, wo die Skala ordinal ist** — gesetzt bei `bdkm16` (monotone Häufigkeit) und bei `traumaspecific1/3/5` (einmalig < mehrfach), **nicht** bei `bdkm15` (drei Zeitbezüge, nicht erschöpfend geordnet), `treatment_outpatient` (mischt Behandlungsstatus und Setting) und `traumaspecific2/4/6` (nominale Zeitrelation plus erhobene Nicht-Antwort). (9) **Kein Score und keine Instrument-Codes:** Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer; die Items tragen ausschließlich ihre Dictionary-Variable. (10) **Nicht enthalten:** `UKHD-BI` (visuelle Körperbildskala — die Erhebung läuft noch nicht damit, und ohne die Bildvorlage ist das Item nicht modellierbar) und `UKHD-EDP` (vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Details: <https://bih-cei.github.io/PCOR-MII/UKHD-AN.html>"
+* extension[=].valueMarkdown = "**Designentscheidungen.** (0) **Rechtelage — zuerst, weil sie alles andere relativiert:** Für diese 14 Items liegt **keine dokumentierte Freigabe** vor — ebenso für die sechs nach [ACE](Questionnaire-ACE.html) gezogenen `UKHD-CTT`-Items. Die DIZ-Implementierungsliste führt nur publizierte Instrumente und kennt die Standort-Itemgruppen von UKHD, UKE und MHH nicht. Rechteinhaber ist das **Universitätsklinikum Heidelberg**; die Bestätigung ist einzuholen. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung, keine geklärte Rechtslage — siehe `copyright` und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html). (1) **Ein Questionnaire, nicht sieben** ([ADR-011](Designentscheidungen.html)): Eigene Ressourcen bekommen nur publizierte mehritemige Instrumente mit eigener Nummerierung oder Skalenstruktur; Einzelitems und unnummerierte Abschnitte gehören in einen Sammelbogen — wie die OECD-/GI-PS-Einzelfragen in [DEM](Demographie.html) und die Anamnese-Abschnitte in [MHI](MHI.html). Keine der Gruppen ist publiziert, keine hat eine Itemnummerierung, drei haben ein oder zwei Items. Umgesetzt als **ein `group`-Item je Gruppe**; die Gruppenzugehörigkeit bleibt über `item.code` und die Property `instrument` in [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) maschinenlesbar. (2) **`linkId` = Dictionary-Variablen-ID** nach [ADR-008](Designentscheidungen.html) Regel 1, zweiter Teil: Diese Items haben keine offizielle Instrumenten-Nummerierung, sondern sind Eigenentwicklungen ohne Instrumentenidentität. Gruppen-Items tragen sprechende IDs (`ukhd-pt`, `ukhd-anb`, …) und **keinen** `item.code`. (3) **Sprache `de` ohne Übersetzungsebene:** [ADR-005](Designentscheidungen.html) ordnet Englisch-primär dort an, wo ein englisches Original existiert. Hier gibt es keines — die Items sind deutschsprachige Eigenentwicklungen. Eine englische `item.text`-Ebene wäre eine unvalidierte PCOR-MII-Übersetzung an der Stelle, an der der erhobene Wortlaut steht. (4) **Wortlaut wortgleich übernommen**, normalisiert nur Zeilenumbrüche und Mehrfach-Leerzeichen der Excel-Zellen. **Sprachliche Fehler der Vorlage bleiben stehen** und sind einzeln ausgewiesen: `lowBMI` „Ihr niedrigter BMI“, `comorbid1` „den zurvor genannten“, in `UKHD-LE` „Auflösung einer Partnerschaften“ und „Verlust ihres Zuhauses“, in `treatment_outpatient` „Ja“ gegen „ja“. Nach [ADR-010](Designentscheidungen.html) wäre eine Bereinigung nur als zusätzliche Ebene zulässig; sie ist hier bewusst nicht angelegt, weil es keine Vorlage gibt, gegen die sich Druckfehler und Abschreibfehler unterscheiden ließen — die Korrektur gehört ins Dictionary. (5) **`TIMING` wird nicht als FHIR-Struktur modelliert.** Die Spalte sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des Erhebungsplans, nicht des Bogens: Ein Questionnaire beschreibt, *was* gefragt wird, nicht *wann*. Sichtbar wird der Plan in der **Antwort** — die Beispielantwort ist ein Initial-/Screening-Termin und beantwortet deshalb nur die Items mit `TIMING` i bzw. a/at. (6) **Zwei zusammengesetzte Items nach dem MHI-Muster `Q_WB151`/`Q_WB151a`:** `AN_biography` und `lowBMI` erheben im Dictionary je eine Auswahl *und* einen Zahlenwert. Die **Auswahl** behält Variablen-ID, Wortlaut und `item.code`; die Wert-Items `AN_biography-wert` (integer) und `lowBMI-wert` (decimal) sind PCOR-MII-eigen, tragen **keinen** `item.code` und keinen Dictionary-Wortlaut. Bei `AN_biography` genügt **ein** Wert-Item für beide Einheiten, weil die Einheit in der Auswahl steht (`enableBehavior = any`). (7) **`enableWhen` nur, wo es inhaltlich zwingend ist** (Muster `edeq30`): `lifev_text` hängt an **allen drei** Ja/Nein-Items der Gruppe mit `enableBehavior = any`, weil diese drei nicht Varianten einer Frage sind, sondern dieselbe Frage für drei verschiedene Erhebungszeitpunkte — pro Termin wird genau eine gestellt. `new_diagnosis_text` analog an beiden ND-Items. **Bei `UKHD-CTT` war die Bedingung der Anlass, die Gruppe zu verschieben:** Die sechs Items beziehen sich auf „Ihre Angabe“, und das Dictionary benennt in der Spalte `ADDITIONAL INFORMATION` ausdrücklich `ace1`, `ace2` bzw. `ace3`. `enableWhen.question` nimmt aber eine `linkId` innerhalb desselben Questionnaire — die Items sind deshalb in den [ACE](Questionnaire-ACE.html) gezogen, wo ihre Bedingung steht. (8) **Antwortoptionen:** Ja/Nein über das projektweite [`DemJaNeinVS`](ValueSet-dem-ja-nein.html) wie in [ACE](ACE.html) (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch); die übrigen fünf Skalen als eigene CodeSystems mit **`ordinalValue` nur, wo die Skala ordinal ist** — gesetzt bei `bdkm16` (monotone Häufigkeit), **nicht** bei `bdkm15` (drei Zeitbezüge, nicht erschöpfend geordnet) und `treatment_outpatient` (mischt Behandlungsstatus und Setting). Die beiden `traumaspecific`-Skalen sind mit ihren Items nach [ACE](Questionnaire-ACE.html) gezogen und dort begründet. (9) **Kein Score und keine Instrument-Codes:** Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer; die Items tragen ausschließlich ihre Dictionary-Variable. (10) **`UKHD-CTT` steht im [ACE](Questionnaire-ACE.html)**, nicht hier — siehe `Questionnaire.description` und Punkt 7. (11) **Nicht enthalten:** `UKHD-BI` (visuelle Körperbildskala — die Erhebung läuft noch nicht damit, und ohne die Bildvorlage ist das Item nicht modellierbar) und `UKHD-EDP` (vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Details: <https://bih-cei.github.io/PCOR-MII/UKHD-AN.html>"
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Reihenfolge der Gruppen und Items = Reihenfolge des Item Level Dictionary.
@@ -661,65 +592,7 @@ Description: "Sammelbogen der sieben standortspezifischen AN-Itemgruppen des Uni
     * extension[+].url = $designNote
     * extension[=].valueMarkdown = "**Der Variablenname ist irreführend:** `treatment_outpatient` legt eine Frage nach ambulanter Behandlung nahe, aber Stufe 4 der Antwortskala erfasst ausdrücklich **klinische (stationäre) oder tagesklinische (teilstationäre)** Behandlung. Das Item fragt also den Behandlungsstatus insgesamt ab, nicht nur den ambulanten. Der Name bleibt als `linkId` und `item.code` stehen, weil er die Dictionary-Variable ist — **aber er darf nicht als Bedeutungsangabe gelesen werden.** Zur Überschneidung mit `bdkm15` siehe dort. Zur bewussten Entscheidung gegen `ordinalValue` siehe das CodeSystem `ukhd-an-behandlungsstatus`."
 
-// ── UKHD-CTT — Kindheitsbelastungen, Zeit- und Häufigkeitsangaben (Kat. EFA) ─
-* item[+]
-  * linkId = "ukhd-ctt"
-  * text = "Kindheitsbelastungen — Zeit- und Häufigkeitsangaben"
-  * type = #group
-  * extension[+].url = $designNote
-  * extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-CTT`, SCALE *UKHD childhood trauma time specification*, Kategorie EFA. **Struktur geklärt am 01.10.2026.** Die sechs Items sind **drei Paare**, und jedes Paar charakterisiert **ein berichtetes Ereignis**: eine Frage nach der Häufigkeit (einmalig oder wiederholt), eine nach der zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von „Ihre Angabe“ in beiden Itemtexten — gemeint ist das Ereignis des jeweiligen Paares. Umgesetzt als drei `group`-Items ohne `item.code`; die sechs Blattitems behalten ihre Dictionary-Variablen-IDs. **Was die Ereignisse sind, bleibt offen.** Im Dictionary folgt dieser Block unmittelbar auf die fünf [ACE](ACE.html)-Items (Kategorie EFA wie diese Gruppe) — das sind die einzigen vorangehenden Items, die Ereignisse berichten. Auffällig dazu: `ace1` bis `ace3` beschreiben abgrenzbare **Ereignisse** (Misshandlung, Missbrauch), `ace4` und `ace5` dagegen andauernde **Vernachlässigung**, für die „einmalig oder wiederholt“ kaum sinnvoll ist. Drei Paare gegen drei Ereignis-Items passt also — ist aber eine Schlussfolgerung aus der Position im Dictionary, keine Angabe daraus, und mit dem Standort zu bestätigen. **Technisch liesse sich der Bezug ohnehin nicht ausdrücken:** `Questionnaire.item.enableWhen.question` nimmt laut R4 eine `linkId` INNERHALB desselben Questionnaire. Eine Abhängigkeit von Items des ACE-Bogens ist in FHIR nicht modellierbar — sie muss dokumentiert und von der erhebenden Anwendung durchgesetzt werden. Das gilt unabhaengig davon, ob die Zuordnung bestaetigt wird."
-  * item[+]
-    * linkId = "ukhd-ctt-ereignis-1"
-    * text = "1. berichtetes Ereignis"
-    * type = #group
-    * extension[+].url = $designNote
-    * extension[=].valueMarkdown = "**Die drei Gruppen bilden die Paarstruktur ab, nicht eine Erhebungsabhängigkeit.** Jedes Paar aus Häufigkeits- und Zeitpunktfrage charakterisiert **ein** berichtetes Ereignis — das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. Die Gruppen tragen **keinen** `item.code`: Sie sind eine PCOR-MII-eigene Strukturierung, keine Dictionary-Variablen, und die sechs Blattitems behalten ihre Variablen-IDs unverändert."
-    * item[+]
-      * linkId = "traumaspecific1"
-      * code[+] = PcorItemDictionaryCS#traumaspecific1
-      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
-    * item[+]
-      * linkId = "traumaspecific2"
-      * code[+] = PcorItemDictionaryCS#traumaspecific2
-      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
-      * extension[+].url = $designNote
-      * extension[=].valueMarkdown = "**Zwei Fragesätze in einem Item** — so steht es im Dictionary, und so ist es wortgleich übernommen. Die Formulierungen unterscheiden sich nur im Numerus („dieses Ereignis“ gegen „der Beginn dieser Ereignisse“) und sind damit sehr wahrscheinlich **alternative Darbietungen**, die von der Häufigkeitsfrage desselben Paares abhängen: Einzelereignis → erster Satz, Mehrfachereignis → zweiter Satz. Das ist eine **Vermutung**; sie ist nicht in eine `enableWhen`-Verzweigung umgesetzt, weil beide Sätze dieselbe Variable mit derselben Antwortskala bedienen und eine Aufspaltung aus dem Dictionary nicht belegbar wäre. Gilt gleichlautend für die beiden anderen Paare."
-  * item[+]
-    * linkId = "ukhd-ctt-ereignis-2"
-    * text = "2. berichtetes Ereignis"
-    * type = #group
-    * item[+]
-      * linkId = "traumaspecific3"
-      * code[+] = PcorItemDictionaryCS#traumaspecific3
-      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
-    * item[+]
-      * linkId = "traumaspecific4"
-      * code[+] = PcorItemDictionaryCS#traumaspecific4
-      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
-  * item[+]
-    * linkId = "ukhd-ctt-ereignis-3"
-    * text = "3. berichtetes Ereignis"
-    * type = #group
-    * item[+]
-      * linkId = "traumaspecific5"
-      * code[+] = PcorItemDictionaryCS#traumaspecific5
-      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
-    * item[+]
-      * linkId = "traumaspecific6"
-      * code[+] = PcorItemDictionaryCS#traumaspecific6
-      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-      * type = #choice
-      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
+// ── UKHD-LE — Belastende Lebensereignisse (Kat. EFA) ─────────────────────────
 * item[+]
   * linkId = "ukhd-le"
   * text = "Belastende Lebensereignisse"
