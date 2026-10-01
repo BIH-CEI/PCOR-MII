@@ -30,7 +30,18 @@ Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim
 | **ACE** | EFA | 5 | Belastende Kindheitserfahrungen | [Seite](ACE.html) |
 | **UKHD-EDP** | DCH | 11 | Essstörungspathologie — vermutlich EDI-2-Zuschnitt | [Seite](UKHD-EDP.html) — metadata-only |
 
-Dazu die **[UKHD-Zusatzitems](UKHD-Zusatzitems.html)** — Itemgruppen, die kein publiziertes Instrument abbilden und vom Standort Heidelberg für die Erhebung zusammengestellt sind. Sechs davon sind als **je ein eigenes Questionnaire** modelliert, eines je Dictionary-Gruppe: Vorbehandlung (`UKHD-PT`), Essstörungsanamnese (`UKHD-ANB`), aktuelle Behandlung (`UKHD-CT`), belastende Lebensereignisse (`UKHD-LE`), neue Diagnosen (`UKHD-ND`) und Diagnosen bei Aufnahme (`UKHD-D`). Die siebte Gruppe `UKHD-CTT` (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.html): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.
+Dazu die **[UKHD-Zusatzitems](UKHD-Zusatzitems.html)** — Itemgruppen, die kein publiziertes Instrument abbilden und vom Standort Heidelberg für die Erhebung zusammengestellt sind. Sechs davon sind als **je ein eigenes Questionnaire** modelliert, eines je Dictionary-Gruppe:
+
+| Bogen | Kat. | Items | Erfasst | Status |
+|---|---|--:|---|---|
+| **UKHD-PT** | TCH | 2 | Vorbehandlung: Psychotherapie, Arztbesuche | [Questionnaire](Questionnaire-UKHDPT.html) |
+| **UKHD-ANB** | DCH | 2 (+2) | Essstörungsanamnese: Dauer, niedrigster BMI | [Questionnaire](Questionnaire-UKHDANB.html) |
+| **UKHD-CT** | TCH | 1 | Aktueller Behandlungsstatus | [Questionnaire](Questionnaire-UKHDCT.html) |
+| **UKHD-LE** | EFA | 4 | Belastende Lebensereignisse | [Questionnaire](Questionnaire-UKHDLE.html) |
+| **UKHD-ND** | DCH | 3 | Neue Diagnosen seit letzter Befragung | [Questionnaire](Questionnaire-UKHDND.html) |
+| **UKHD-D** | DCH | 2 | Diagnosen bei Aufnahme | [Questionnaire](Questionnaire-UKHDD.html) |
+
+Gemeinsame Entscheidungen, Antwortskalen und offene Punkte: [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Die siebte Gruppe `UKHD-CTT` (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.html): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.
 
 **Für diese 20 Items liegt keine dokumentierte Freigabe vor, und die Herkunft ihres Wortlauts ist ungeklärt** — auch für die sechs, die im ACE stehen. Das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett des Dictionary, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf [UKHD-Zusatzitems](UKHD-Zusatzitems.html)).
 
