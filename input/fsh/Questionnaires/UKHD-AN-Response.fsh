@@ -188,18 +188,27 @@ Description: "Beispielantwort zum UKHD-AN-Questionnaire für einen Initial-/Scre
 // (traumaspecific5/6) bleibt leer, weil kein drittes Ereignis berichtet ist.
 * item[+]
   * linkId = "ukhd-ctt"
+  // Zwei der drei Ereignis-Gruppen belegt, passend zu den zwei bejahten
+  // ACE-Items in ACEResponse (ace1 emotionale Misshandlung, ace4 emotionale
+  // Vernachlaessigung). Die dritte Gruppe bleibt leer — es wurden nicht drei
+  // Ereignisse berichtet. Genau dafuer sind es drei Gruppen und nicht drei
+  // Pflichtpaare.
   * item[+]
-    * linkId = "traumaspecific1"
-    * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
+    * linkId = "ukhd-ctt-ereignis-1"
+    * item[+]
+      * linkId = "traumaspecific1"
+      * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
+    * item[+]
+      * linkId = "traumaspecific2"
+      * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
   * item[+]
-    * linkId = "traumaspecific2"
-    * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
-  * item[+]
-    * linkId = "traumaspecific3"
-    * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
-  * item[+]
-    * linkId = "traumaspecific4"
-    * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
+    * linkId = "ukhd-ctt-ereignis-2"
+    * item[+]
+      * linkId = "traumaspecific3"
+      * answer.valueCoding = UkhdAnEreignishaeufigkeitCS#2 "um ein mehrfaches Ereignis"
+    * item[+]
+      * linkId = "traumaspecific4"
+      * answer.valueCoding = UkhdAnEreigniszeitpunktCS#1 "vor den ersten Anzeichen der Essstörung"
 
 // ── UKHD-LE — Belastende Lebensereignisse ─────────────────────────────────────
 // Nur das Screening-Item (TIMING i); Monitoring und Entlassung bleiben leer.

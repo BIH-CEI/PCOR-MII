@@ -667,47 +667,59 @@ Description: "Sammelbogen der sieben standortspezifischen AN-Itemgruppen des Uni
   * text = "Kindheitsbelastungen — Zeit- und Häufigkeitsangaben"
   * type = #group
   * extension[+].url = $designNote
-  * extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-CTT`, SCALE *UKHD childhood trauma time specification*, Kategorie EFA. **Der größte offene Punkt dieses Bogens.** Die sechs Items sind **drei identische Paare**: `traumaspecific1/3/5` fragen wortgleich nach einmaligem oder wiederholtem Ereignis, `traumaspecific2/4/6` wortgleich nach der zeitlichen Lage relativ zum Beginn der Essstörung. Drei Paare legen **drei berichtete Ereignisse** nahe — welche, sagt das Dictionary nicht. Die Itemtexte verweisen auf „Ihre Angabe“, also auf ein **vorangehendes Item, das nicht zu dieser Gruppe gehört und im Dictionary nicht benannt ist**. Naheliegend wären die bejahten Items des [ACE](ACE.html) (`ace1`–`ace5`, Kategorie EFA wie diese Gruppe), aber das ist eine Vermutung: Der ACE hat fünf Items, nicht drei. **Konsequenz für die Modellierung:** kein `enableWhen` und keine Wiederholungslogik — ein erfundener Bezug wäre eine Behauptung über die Erhebungslogik. Die Zuordnung der drei Paare zu den berichteten Ereignissen ist mit dem Standort zu klären; bis dahin stehen die sechs Items als flache Folge."
+  * extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-CTT`, SCALE *UKHD childhood trauma time specification*, Kategorie EFA. **Struktur geklärt am 01.10.2026.** Die sechs Items sind **drei Paare**, und jedes Paar charakterisiert **ein berichtetes Ereignis**: eine Frage nach der Häufigkeit (einmalig oder wiederholt), eine nach der zeitlichen Lage relativ zum Beginn der Essstörung. Das ist die Bedeutung von „Ihre Angabe“ in beiden Itemtexten — gemeint ist das Ereignis des jeweiligen Paares. Umgesetzt als drei `group`-Items ohne `item.code`; die sechs Blattitems behalten ihre Dictionary-Variablen-IDs. **Was die Ereignisse sind, bleibt offen.** Im Dictionary folgt dieser Block unmittelbar auf die fünf [ACE](ACE.html)-Items (Kategorie EFA wie diese Gruppe) — das sind die einzigen vorangehenden Items, die Ereignisse berichten. Auffällig dazu: `ace1` bis `ace3` beschreiben abgrenzbare **Ereignisse** (Misshandlung, Missbrauch), `ace4` und `ace5` dagegen andauernde **Vernachlässigung**, für die „einmalig oder wiederholt“ kaum sinnvoll ist. Drei Paare gegen drei Ereignis-Items passt also — ist aber eine Schlussfolgerung aus der Position im Dictionary, keine Angabe daraus, und mit dem Standort zu bestätigen. **Technisch liesse sich der Bezug ohnehin nicht ausdrücken:** `Questionnaire.item.enableWhen.question` nimmt laut R4 eine `linkId` INNERHALB desselben Questionnaire. Eine Abhängigkeit von Items des ACE-Bogens ist in FHIR nicht modellierbar — sie muss dokumentiert und von der erhebenden Anwendung durchgesetzt werden. Das gilt unabhaengig davon, ob die Zuordnung bestaetigt wird."
   * item[+]
-    * linkId = "traumaspecific1"
-    * code[+] = PcorItemDictionaryCS#traumaspecific1
-    * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
-  * item[+]
-    * linkId = "traumaspecific2"
-    * code[+] = PcorItemDictionaryCS#traumaspecific2
-    * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
+    * linkId = "ukhd-ctt-ereignis-1"
+    * text = "1. berichtetes Ereignis"
+    * type = #group
     * extension[+].url = $designNote
-    * extension[=].valueMarkdown = "**Zwei Fragesätze in einem Item** — so steht es im Dictionary, und so ist es wortgleich übernommen. Die Formulierungen unterscheiden sich nur im Numerus („dieses Ereignis“ gegen „der Beginn dieser Ereignisse“) und sind damit sehr wahrscheinlich **alternative Darbietungen**, die vom Vorgängeritem `traumaspecific1` abhängen: Einzelereignis → erster Satz, Mehrfachereignis → zweiter Satz. Das ist eine **Vermutung**; sie ist nicht in eine `enableWhen`-Verzweigung umgesetzt, weil beide Sätze dieselbe Variable mit derselben Antwortskala bedienen und eine Aufspaltung aus dem Dictionary nicht belegbar wäre. Mit dem Standort zu klären. Gilt gleichlautend für `traumaspecific4` und `traumaspecific6`."
+    * extension[=].valueMarkdown = "**Die drei Gruppen bilden die Paarstruktur ab, nicht eine Erhebungsabhängigkeit.** Jedes Paar aus Häufigkeits- und Zeitpunktfrage charakterisiert **ein** berichtetes Ereignis — das ist die Bedeutung von `Ihre Angabe` in beiden Itemtexten. Die Gruppen tragen **keinen** `item.code`: Sie sind eine PCOR-MII-eigene Strukturierung, keine Dictionary-Variablen, und die sechs Blattitems behalten ihre Variablen-IDs unverändert."
+    * item[+]
+      * linkId = "traumaspecific1"
+      * code[+] = PcorItemDictionaryCS#traumaspecific1
+      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
+    * item[+]
+      * linkId = "traumaspecific2"
+      * code[+] = PcorItemDictionaryCS#traumaspecific2
+      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
+      * extension[+].url = $designNote
+      * extension[=].valueMarkdown = "**Zwei Fragesätze in einem Item** — so steht es im Dictionary, und so ist es wortgleich übernommen. Die Formulierungen unterscheiden sich nur im Numerus („dieses Ereignis“ gegen „der Beginn dieser Ereignisse“) und sind damit sehr wahrscheinlich **alternative Darbietungen**, die von der Häufigkeitsfrage desselben Paares abhängen: Einzelereignis → erster Satz, Mehrfachereignis → zweiter Satz. Das ist eine **Vermutung**; sie ist nicht in eine `enableWhen`-Verzweigung umgesetzt, weil beide Sätze dieselbe Variable mit derselben Antwortskala bedienen und eine Aufspaltung aus dem Dictionary nicht belegbar wäre. Gilt gleichlautend für die beiden anderen Paare."
   * item[+]
-    * linkId = "traumaspecific3"
-    * code[+] = PcorItemDictionaryCS#traumaspecific3
-    * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
+    * linkId = "ukhd-ctt-ereignis-2"
+    * text = "2. berichtetes Ereignis"
+    * type = #group
+    * item[+]
+      * linkId = "traumaspecific3"
+      * code[+] = PcorItemDictionaryCS#traumaspecific3
+      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
+    * item[+]
+      * linkId = "traumaspecific4"
+      * code[+] = PcorItemDictionaryCS#traumaspecific4
+      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
   * item[+]
-    * linkId = "traumaspecific4"
-    * code[+] = PcorItemDictionaryCS#traumaspecific4
-    * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
-  * item[+]
-    * linkId = "traumaspecific5"
-    * code[+] = PcorItemDictionaryCS#traumaspecific5
-    * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
-  * item[+]
-    * linkId = "traumaspecific6"
-    * code[+] = PcorItemDictionaryCS#traumaspecific6
-    * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
-    * type = #choice
-    * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
-
-// ── UKHD-LE — Belastende Lebensereignisse (Kat. EFA) ─────────────────────────
+    * linkId = "ukhd-ctt-ereignis-3"
+    * text = "3. berichtetes Ereignis"
+    * type = #group
+    * item[+]
+      * linkId = "traumaspecific5"
+      * code[+] = PcorItemDictionaryCS#traumaspecific5
+      * text = "Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreignishaeufigkeitVS)
+    * item[+]
+      * linkId = "traumaspecific6"
+      * code[+] = PcorItemDictionaryCS#traumaspecific6
+      * text = "Passierte dieses Ereignis vor oder nach den ersten Anzeichen der Essstörung? Passierte der Beginn dieser Ereignisse vor oder nach den ersten Anzeichen der Essstörung?"
+      * type = #choice
+      * answerValueSet = Canonical(UkhdAnEreigniszeitpunktVS)
 * item[+]
   * linkId = "ukhd-le"
   * text = "Belastende Lebensereignisse"
