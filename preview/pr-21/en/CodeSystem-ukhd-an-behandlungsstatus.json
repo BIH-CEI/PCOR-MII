@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ukhd-an-behandlungsstatus",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ukhd-an-behandlungsstatus</b></p><a name=\"en-ukhd-an-behandlungsstatus\"> </a><a name=\"en-hcukhd-an-behandlungsstatus\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-ukhd-an-behandlungsstatus-1\"> </a></td><td>nein</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-ukhd-an-behandlungsstatus-2\"> </a></td><td>nein, aber es ist eine Behandlung geplant oder ich befinde mich noch auf der Suche</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-ukhd-an-behandlungsstatus-3\"> </a></td><td>Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-ukhd-an-behandlungsstatus-4\"> </a></td><td>ja, ich befinde mich aktuell in einer klinischen (stationären) oder tagesklinischen (teilstationären) Behandlung</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
+  "version" : "0.3.0",
+  "name" : "UkhdAnBehandlungsstatusCS",
+  "title" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T12:55:11+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "1",
+    "display" : "nein"
+  },
+  {
+    "code" : "2",
+    "display" : "nein, aber es ist eine Behandlung geplant oder ich befinde mich noch auf der Suche"
+  },
+  {
+    "code" : "3",
+    "display" : "Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung"
+  },
+  {
+    "code" : "4",
+    "display" : "ja, ich befinde mich aktuell in einer klinischen (stationären) oder tagesklinischen (teilstationären) Behandlung"
+  }]
+}

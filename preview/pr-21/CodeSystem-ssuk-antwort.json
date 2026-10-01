@@ -1,0 +1,80 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ssuk-antwort",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ssuk-antwort</b></p><a name=\"ssuk-antwort\"> </a><a name=\"hcssuk-antwort\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-4).</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"ssuk-antwort-0\"> </a></td><td>nie</td><td>0</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"ssuk-antwort-1\"> </a></td><td>selten</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"ssuk-antwort-2\"> </a></td><td>manchmal</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"ssuk-antwort-3\"> </a></td><td>oft</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"ssuk-antwort-4\"> </a></td><td>immer</td><td>4</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ssuk-antwort</b></p><a name=\"en-ssuk-antwort\"> </a><a name=\"en-hcssuk-antwort\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-4).</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"en-ssuk-antwort-0\"> </a></td><td>nie</td><td>0</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-ssuk-antwort-1\"> </a></td><td>selten</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-ssuk-antwort-2\"> </a></td><td>manchmal</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-ssuk-antwort-3\"> </a></td><td>oft</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-ssuk-antwort-4\"> </a></td><td>immer</td><td>4</td></tr></table></div></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+  "version" : "0.3.0",
+  "name" : "SsukAntwortCS",
+  "title" : "SSUK Antwortskala (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-01T12:55:11+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "property" : [{
+    "code" : "ordinalValue",
+    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "description" : "Numerischer Ordinalwert (0-4).",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "0",
+    "display" : "nie",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 0
+    }]
+  },
+  {
+    "code" : "1",
+    "display" : "selten",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 1
+    }]
+  },
+  {
+    "code" : "2",
+    "display" : "manchmal",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "3",
+    "display" : "oft",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 3
+    }]
+  },
+  {
+    "code" : "4",
+    "display" : "immer",
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 4
+    }]
+  }]
+}
