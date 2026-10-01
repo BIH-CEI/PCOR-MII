@@ -67,5 +67,6 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * #ede-q6 "EDE-Q6 — 6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire"
 * #ansocq-2 "ANSOCQ-2 — 2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire"
 * #ssuk-2 "SSUK-2 — 2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit"
-* #ace "ACE — die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire"
+* #ace "ACE + Zeitangaben — die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)"
+* #ukhd-an "UKHD-AN — Sammelbogen der standortspezifischen AN-Zusatzitems des Universitätsklinikums Heidelberg, sechs Dictionary-Gruppen"
 * #ukhd-edp "UKHD-EDP — 11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"

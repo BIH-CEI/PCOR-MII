@@ -487,6 +487,14 @@ Description: "Sammelbogen der standortspezifischen AN-Itemgruppen des UniversitÃ
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDAN"
 * name = "UKHDAN"
+// KATALOGCODE â€” der Bogen ist kein publiziertes Instrument, traegt aber einen
+//   lokalen Code: ADR-007 Punkt 2 und ADR-009 verlangen fuer jeden
+//   PCOR-MII-eigenen Bogen einen Code in Questionnaire.code, damit zwei
+//   Fassungen desselben Bogens als solche erkennbar sind. Die Canonical
+//   identifiziert laut R4 das ARTEFAKT, code das KONZEPT. Dass es hier kein
+//   publiziertes Instrument gibt, ist genau der Grund, warum der Code lokal
+//   ist (ADR-004) und nicht aus LOINC oder SNOMED stammt.
+* code[+] = PcorQuestionnaireCatalogueCS#ukhd-an "UKHD-AN"
 * language = #de
 * insert Version
 * status = #draft
