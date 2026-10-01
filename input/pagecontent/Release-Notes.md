@@ -19,6 +19,8 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`documentation`** **Neue Seite [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html)** (de/en) nach dem Muster der MII-PRO-Bibliothek: eine Tabelle über alle Fragebögen mit Use-Case-Markierung, Doku-Seite, `Questionnaire`-Definition (PCOR-MII oder MII PRO), Beispielantwort und Score-Artefakt, dazu je Use Case eine gefilterte Sicht. **Das Fragebögen-Menü ist dafür von 24 Einträgen auf einen eingedampft** — die Instrumentenseiten bleiben bestehen und sind über die Tabelle erreichbar.
+
 **`documentation`** **Englische Fassung der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)** ergänzt; die Seite **Essstörungen — Erhebungsplan ist entfernt**. Sie spiegelte das Blatt *Domain Overview* des Item Level Dictionary — eine zweite Quelle der Wahrheit für einen Plan, der im Excel gepflegt wird und sich dort weiterentwickelt. Die Nachschlagefunktion („wo liegt der Fragebogen?") übernimmt vollständig die [AN-Instrumentenliste](AN-Instrumentenliste.html); Verweise zeigen jetzt direkt auf das Quellblatt.
 
 **`breaking`** **Der [ACE](ACE.html) ist jetzt ein PCOR-MII-Komposit, nicht mehr der ACE-Zuschnitt.** Zu den fünf ACE-Items sind die sechs Items der Dictionary-Gruppe `UKHD-CTT` (`traumaspecific1`–`6`) gekommen, die die berichteten Ereignisse zeitlich einordnen — in drei `group`-Items mit `enableWhen` auf `ace1`, `ace2` beziehungsweise `ace3`.
