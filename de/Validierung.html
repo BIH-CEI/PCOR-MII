@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15"}
-    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -422,7 +346,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:</p>
 
 <ol>
-  <li><strong>Strukturell</strong> dem <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
+  <li><strong>Strukturell</strong> dem <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
   <li>Die <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen</li>
   <li>Jede <strong>codierte Antwort</strong> muss aus dem <code class="language-plaintext highlighter-rouge">answerValueSet</code> (bzw. <code class="language-plaintext highlighter-rouge">answerOption</code>) des jeweiligen Items stammen</li>
 </ol>
@@ -488,7 +412,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 <p>Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:</p>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.7.0</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response</code>, <strong>bewusst ohne Versionspin</strong>: Die Profilversion löst sich über die Paketabhängigkeit auf; ein Pin müsste bei jedem Dependency-Update in allen Bestandsdaten nachgezogen werden. Die <strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz dagegen immer mit Version</strong> (nächster Punkt) — dort hängt der Wortlaut dran</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.7.0</code></li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> der Answer-Items matchen <em>exakt</em> die im Questionnaire definierten linkIds</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Codierte Antworten</strong> mit System + Code aus dem im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code> (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe <a href="PROMIS-16.html">PROMIS-16</a> Item-Tabellen)</li>
@@ -558,28 +482,51 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <h2 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h2>
 
-<p>Die drei ursprünglichen Beispiele, alle mit <strong>0 errors, 0 warnings</strong>:</p>
+<p>Der Beispielbestand ist seit dem 01.10.2026 als <strong>drei Use-Case-Bundles</strong> organisiert — je Erhebungstermin ein <code class="language-plaintext highlighter-rouge">collection</code>-Bundle mit Patient und allen Antworten des Termins, alle drei mit <strong>0 Errors</strong> validiert:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bundle</th>
+      <th>Termin</th>
+      <th>Entries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="Bundle-pcor-mii-exa-bundle-an-initial.html">AN — Initial</a></td>
+      <td>18.06.2026</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td><a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">AN — Monitoring</a></td>
+      <td>30.07.2026</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">PSS — Screening</a></td>
+      <td>25.06.2026</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>); die Bundles entstehen daraus mit <code class="language-plaintext highlighter-rouge">scripts/build-example-bundles.py</code>. Dazu der generische <a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> für den Beispiel-Questionnaire.</p>
+
+<p>Die Beispiele sind mit <strong>0 Errors</strong> geprüft, aber nicht warnungsfrei — die verbleibenden Warnungsklassen sind bekannt und akzeptiert:</p>
 
 <ul>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a></li>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></a></li>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (für den Beispiel-Questionnaire)</li>
-</ul>
-
-<p>Dazu der <strong>AN-Beispieldatensatz</strong> — zehn Beispielantworten, ein Erhebungstermin bei derselben Patientin (Übersicht auf der Seite <a href="AN.html">AN</a>): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> sowie die fünf Antworten zu den <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> (<a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a>, <a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a>, <a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a>, <a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a>, <a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a>). Die beiden ERQ-Score-Observations sind am 01.10.2026 zurückgezogen worden (siehe <a href="ERQ-6.html">ERQ-6</a>).</p>
-
-<p>Diese acht sind mit <strong>0 errors</strong> geprüft, aber nicht warnungsfrei — und die verbleibenden Warnungen sind beide bekannt und akzeptiert:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">dom-6</code> (fehlende Narrative) auf allen acht — steht oben in der Tabelle als ignorierbar</li>
-  <li>ein <code class="language-plaintext highlighter-rouge">java.net.SocketTimeoutException</code> beim UCUM-Check der beiden <code class="language-plaintext highlighter-rouge">valueQuantity</code> — ein Netzwerk-Timeout gegen den Terminologieserver, kein Befund an der Ressource</li>
+  <li><code class="language-plaintext highlighter-rouge">dom-6</code> (fehlende Narrative) auf allen Beispielantworten — steht oben in der Tabelle als ignorierbar</li>
+  <li>Profilreferenz auf <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response</code> <em>„nicht geprüft, da unbekannt"</em>, wenn ohne das MII-PRO-Paket validiert wird — mit <code class="language-plaintext highlighter-rouge">-ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0</code> verschwindet sie</li>
+  <li>Display-/Terminologie-Hinweise bei <code class="language-plaintext highlighter-rouge">-tx n/a</code> — der Validator kann ohne Terminologieserver BCP-47 und LOINC-Displays nicht expandieren</li>
 </ul>
 
 <p><strong>Ein echter Fund beim Prüfen:</strong> Die ERQ-6-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — <em>„Struktureller Fehler: Elemente in falscher Reihenfolge"</em>. Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> muss ihre Items in der <strong>Reihenfolge des Questionnaire</strong> führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.</p>
 
-<p>Reproduzieren:</p>
+<p>Reproduzieren (deckt auch die Bundles ab):</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>f <span class="k">in </span>input/examples/QuestionnaireResponse-<span class="k">*</span>.json<span class="p">;</span> <span class="k">do
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sushi <span class="nb">.</span> <span class="o">&amp;&amp;</span> python3 scripts/build-example-bundles.py
+<span class="k">for </span>f <span class="k">in </span>input/examples/QuestionnaireResponse-<span class="k">*</span>.json input/examples/Bundle-<span class="k">*</span>.json fsh-generated/resources/QuestionnaireResponse-<span class="k">*</span>.json<span class="p">;</span> <span class="k">do
   </span>java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span> <span class="se">\</span>
     <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
     <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
@@ -645,7 +592,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

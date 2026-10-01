@@ -68,5 +68,11 @@ Die PSS-Batterie ist ganz überwiegend **frei publizierbar** — vollständige Q
 
 PROMIS und WHODAS 2.0 unterliegen ihren jeweiligen Nutzungsvereinbarungen (CPCOR bzw. WHO).
 
+### Ein zusammenhängender Beispieldatensatz
+
+Für PSS gibt es seit dem 01.10.2026 einen **synthetischen Beispielpatienten** ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.md)): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).
+
+Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.md)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2026.7.0`. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`. Alle Antworten einzeln: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.md).
+
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

@@ -49,7 +49,7 @@ Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope
   "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0",
   "status" : "completed",
   "subject" : {
-    "reference" : "Patient/pcor-mii-exa-patient"
+    "reference" : "Patient/pcor-mii-exa-patient-an"
   },
   "authored" : "2026-06-18T10:15:00+02:00",
   "item" : [{

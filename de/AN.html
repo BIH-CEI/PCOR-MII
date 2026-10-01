@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -602,10 +526,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a>, <a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a>, <a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a>, <a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a>, <a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
-      <td>ein <strong>Initial-/Screening-Termin</strong> über fünf UKHD-Zusatzbögen; für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert bewusst <strong>keine</strong> Antwort — es wird zu diesem Termin nicht erhoben</td>
+      <td>ein <strong>Initial-/Screening-Termin</strong> über fünf UKHD-Zusatzbögen; für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert zu diesem Termin bewusst <strong>keine</strong> Antwort — die erste ND-Antwort gehört zum Monitoring-Termin</td>
     </tr>
   </tbody>
 </table>
+
+<p><strong>Seit dem 30.07.2026 gibt es einen zweiten Termin:</strong> Das <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">Monitoring-Bundle</a> bündelt neun Verlaufsantworten derselben Patientin, sechs Wochen nach dem Initial-Termin — leicht gebessert, nicht remittiert. Darin die <strong>erste <a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">UKHD-ND-Antwort</a></strong> (die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben), eine bewusste <strong>Teilantwort</strong> zu UKHD-PT (nur <code class="language-plaintext highlighter-rouge">bdkm16</code> — <code class="language-plaintext highlighter-rouge">bdkm15</code> ist ein Initial-Item) und die erste Antwort zum metadata-only-Bogen <a href="QuestionnaireResponse-UKHDEDPMonitoringResponse.html">UKHD-EDP</a>. Beide Termine als Bundles: <a href="Bundle-pcor-mii-exa-bundle-an-initial.html">Initial</a> · <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">Monitoring</a>.</p>
 
 <p>Die UKHD-Antworten tragen dabei eine Aussage, die keine der anderen macht: Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Item Level Dictionary ist in den Questionnaires bewusst nicht modelliert — sichtbar wird sie im <strong>Ressourcenzuschnitt der Antworten</strong>: fünf Antworten für sechs Bögen, weil <a href="Questionnaire-UKHDND.html">UKHD-ND</a> zum Initial-Termin nicht erhoben wird (Begründung auf <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>).</p>
 
@@ -677,7 +603,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

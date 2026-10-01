@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T13:09:50+00:00",
+  "date" : "2026-10-01T14:39:45+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -889,6 +889,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-ANSOCQ2MonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/ANSOCQ2MonitoringResponse"
+      },
+      "name" : "ANSOCQ-2 — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort: Veränderungsmotivation von Entscheidungs- in die Handlungsphase (`ansocq3` 3 → 4). Genau dafür ist der Zwei-Item-Zuschnitt laut Erhebungsplan das Monitoring-Instrument.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -909,13 +925,29 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Patient-pcor-mii-exa-patient.html"
+        "valueUri" : "Patient-pcor-mii-exa-patient-pss.html"
       }],
       "reference" : {
-        "reference" : "Patient/pcor-mii-exa-patient"
+        "reference" : "Patient/pcor-mii-exa-patient-pss"
       },
-      "name" : "Beispiel-Patientin (DEM)",
-      "description" : "Minimale Beispiel-Patientin als subject der DEM-Beispielantwort.",
+      "name" : "Beispiel-Patient PSS",
+      "description" : "Synthetischer Beispiel-Patient des Use Case PSS (persistierende somatische Symptome: Erschöpfung, Rücken- und Magen-Darm-Beschwerden seit etwa zwei Jahren, mittelgradige somatische Belastung, leichte depressive und ängstliche Symptomatik): subject der PSS-Beispielantworten. Ein Screening-Termin 25.06.2026 — siehe Bundle pcor-mii-exa-bundle-pss-screening.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-pcor-mii-exa-patient-an.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/pcor-mii-exa-patient-an"
+      },
+      "name" : "Beispiel-Patientin AN",
+      "description" : "Synthetische Beispiel-Patientin des Use Case AN (Anorexia nervosa, restriktiver Typ, erste Anzeichen um 2018): subject aller AN-, DEM- und MHI-Beispielantworten. Zwei Erhebungstermine: Initial-/Screening-Termin 18.06.2026 und Monitoring-Termin 30.07.2026 — siehe die beiden Bundles pcor-mii-exa-bundle-an-initial und -an-monitoring.",
       "exampleBoolean" : true
     },
     {
@@ -1321,6 +1353,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-DEMPSSResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/DEMPSSResponse"
+      },
+      "name" : "DEM — Beispielantwort (PSS)",
+      "description" : "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -1385,6 +1433,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-EDEQ6MonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/EDEQ6MonitoringResponse"
+      },
+      "name" : "EDE-Q6 — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort: Essstörungspathologie leicht rückläufig (Tage-Items von Stufe 3–4 auf 3, Essanfälle von 4 auf 3, `edeq30` von 3 auf 2); `edeq29` weiter bejaht, die `enableWhen`-Kette bleibt belegt.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -1412,6 +1476,22 @@
       },
       "name" : "ERQ-6 — Beispielantwort",
       "description" : "Vollständig ausgefüllte Beispielantwort zum ERQ-6-Questionnaire. Antwortmuster: niedrige Neubewertung bei hoher Unterdrückung — das für Anorexia nervosa beschriebene Muster. Kein Score: Der Bogen ist nicht der ERQ-S — dieser besteht aus anderen ERQ-Items (2, 6, 7, 8, 9, 10), die publizierten Kennwerte gelten daher nicht.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-ERQ6MonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/ERQ6MonitoringResponse"
+      },
+      "name" : "ERQ-6 — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort sechs Wochen nach dem Initial-Termin: Unterdrückung leicht rückläufig (6/6/7 → 5/5/6), Neubewertung leicht steigend. Werte je Item um höchstens eine Stufe verändert — plausibler Sechs-Wochen-Verlauf, keine Remission.",
       "exampleBoolean" : true
     },
     {
@@ -1449,6 +1529,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-EXPECTResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/EXPECTResponse"
+      },
+      "name" : "EXPECT — Beispielantwort",
+      "description" : "Beispielantwort zu den drei EXPECT-NRS-Items für den PSS-Screening-Termin: verhalten positive Verlaufserwartung.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -1465,6 +1561,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-GSLTPAQResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/GSLTPAQResponse"
+      },
+      "name" : "GSLTPAQ — Beispielantwort",
+      "description" : "Beispielantwort zum GSLTPAQ für den PSS-Screening-Termin: reduzierte, aber vorhandene körperliche Aktivität (1× anstrengend, 3× moderat, 4× leicht pro Woche; Leisure Score Index 36). Beantwortet sind die Wochen-Items; die Minuten-Items bleiben leer.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -1477,6 +1589,22 @@
       "name" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
       "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-IPQSResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/IPQSResponse"
+      },
+      "name" : "IPQ-S — Beispielantwort",
+      "description" : "Beispielantwort zur offenen Ursachenfrage (IPQ-S) für den PSS-Screening-Termin: Stressattribution plus somatische Verdachtsursache plus Sorge — das für PSS typische gemischte Attributionsmuster.",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1737,6 +1865,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-MHIPSSResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/MHIPSSResponse"
+      },
+      "name" : "MHI — Beispielantwort (PSS)",
+      "description" : "Ausgefülltes Beispiel zum MHI-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026). Die AN-spezifische Gruppe `gewicht-an` ist nicht enthalten — sie wird nur im Szenario AN erhoben; genau dafür ist sie im Questionnaire als eigene Gruppe geführt.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -1781,6 +1925,22 @@
       "name" : "OPD-SFK Antwortskala (Codes)",
       "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-OPDSFKResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/OPDSFKResponse"
+      },
+      "name" : "OPD-SFK — Beispielantwort",
+      "description" : "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items.",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1897,6 +2057,51 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-pcor-mii-exa-bundle-an-initial.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/pcor-mii-exa-bundle-an-initial"
+      },
+      "name" : "pcor-mii-exa-bundle-an-initial",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-pcor-mii-exa-bundle-an-monitoring.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/pcor-mii-exa-bundle-an-monitoring"
+      },
+      "name" : "pcor-mii-exa-bundle-an-monitoring",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-pcor-mii-exa-bundle-pss-screening.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/pcor-mii-exa-bundle-pss-screening"
+      },
+      "name" : "pcor-mii-exa-bundle-pss-screening",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "QuestionnaireResponse"
       },
       {
@@ -1907,7 +2112,7 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-example-response"
       },
       "name" : "pcor-mii-exa-example-response",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     },
     {
       "extension" : [{
@@ -1922,7 +2127,7 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-16-response"
       },
       "name" : "pcor-mii-exa-promis-16-response",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     },
     {
       "extension" : [{
@@ -1937,7 +2142,157 @@
         "reference" : "QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"
       },
       "name" : "pcor-mii-exa-promis-cognitive-function-response",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-euronet-soma-response"
+      },
+      "name" : "pcor-mii-exa-pss-euronet-soma-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-gad-7-response"
+      },
+      "name" : "pcor-mii-exa-pss-gad-7-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-isr-z-response"
+      },
+      "name" : "pcor-mii-exa-pss-isr-z-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-pc-ptsd-response"
+      },
+      "name" : "pcor-mii-exa-pss-pc-ptsd-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-phq-15-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-phq-15-response"
+      },
+      "name" : "pcor-mii-exa-pss-phq-15-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-phq-9-response"
+      },
+      "name" : "pcor-mii-exa-pss-phq-9-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-scoff-response"
+      },
+      "name" : "pcor-mii-exa-pss-scoff-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-ssd-12-response"
+      },
+      "name" : "pcor-mii-exa-pss-ssd-12-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-whodas-12-response"
+      },
+      "name" : "pcor-mii-exa-pss-whodas-12-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/pcor-mii-exa-pss-wi-7-response"
+      },
+      "name" : "pcor-mii-exa-pss-wi-7-response",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     },
     {
       "extension" : [{
@@ -2001,6 +2356,22 @@
       },
       "name" : "SSUK-2 — Beispielantwort",
       "description" : "Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire. Antwortmuster eines günstigen sozialen Umfelds: hoch bei der unterstützenden Zuwendung (`ssuk14`), niedrig bei der belastenden Interaktion (`ssuk10`).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-SSUK2MonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/SSUK2MonitoringResponse"
+      },
+      "name" : "SSUK-2 — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort: soziale Unterstützung unverändert (oft unterstützt, selten belastende Interaktion) — auch ein unveränderter Wert ist ein Verlaufsbefund.",
       "exampleBoolean" : true
     },
     {
@@ -2314,6 +2685,22 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDCTMonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDCTMonitoringResponse"
+      },
+      "name" : "UKHD-CT — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort: weiterhin ambulante psychotherapeutische Behandlung.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "QuestionnaireResponse-UKHDDResponse.html"
       }],
       "reference" : {
@@ -2374,6 +2761,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDEDPMonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDEDPMonitoringResponse"
+      },
+      "name" : "UKHD-EDP — Beispielantwort (Monitoring)",
+      "description" : "Erste Beispielantwort zum metadata-only-Bogen UKHD-EDP: elf Stufenwerte (1–6) ohne jeden Itemtext. **Der Beleg, dass metadata-only die Nachnutzung von Antworten nicht behindert** — `linkId`s und Werte genügen, der zurückgehaltene Wortlaut wird nicht exponiert.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -2406,6 +2809,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDLEMonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDLEMonitoringResponse"
+      },
+      "name" : "UKHD-LE — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Antwort: keine neuen belastenden Lebensereignisse seit der letzten Befragung — das verneinte Item lässt `lifev_text` per `enableWhen` gesperrt; die Antwort belegt damit die Gegenrichtung zur Initial-Antwort.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       },
       {
@@ -2418,6 +2837,22 @@
       "name" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)",
       "description" : "Vier Items zu belastenden Lebensereignissen aus der Dictionary-Gruppe `UKHD-LE`: dieselbe Ja/Nein-Frage für drei Erhebungszeitpunkte plus ein Freitextitem, das per `enableWhen` (`any`) an allen drei hängt. Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Hochsensible Inhalte** — Governance der Auswertung fachlich zu klären (analog PHQ-SI und [ACE](ACE.html)). **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDNDMonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDNDMonitoringResponse"
+      },
+      "name" : "UKHD-ND — Beispielantwort (Monitoring)",
+      "description" : "Die **erste UKHD-ND-Antwort überhaupt** — die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben, zum Initial-Termin existiert bewusst keine Antwort. Das bejahte Monitoring-Item schaltet den Freitext frei; `new_diagnosis_discharge` fehlt (`TIMING` e).",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -2449,6 +2884,22 @@
       },
       "name" : "UKHD-PT — Beispielantwort",
       "description" : "Beispielantwort zum UKHD-PT-Questionnaire (Vorbehandlung): zurzeit in psychotherapeutischer Behandlung, zwei Arztbesuche in den letzten 4 Wochen.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-UKHDPTMonitoringResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/UKHDPTMonitoringResponse"
+      },
+      "name" : "UKHD-PT — Beispielantwort (Monitoring)",
+      "description" : "Monitoring-Teilantwort: nur `bdkm16` (Arztbesuche, `TIMING` at) — `bdkm15` ist ein Initial-Item und fehlt bewusst. Drei oder mehr Kontakte passen zur laufenden ambulanten Behandlung.",
       "exampleBoolean" : true
     },
     {
@@ -2498,6 +2949,22 @@
       "name" : "WAI Antwortskala 5-stufig (Codes)",
       "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "QuestionnaireResponse-WAIResponse.html"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/WAIResponse"
+      },
+      "name" : "WAI — Beispielantwort",
+      "description" : "Beispielantwort zum WAI-Kurzbogen (metadata-only) für den PSS-Screening-Termin: mäßig reduzierte Arbeitsfähigkeit. **Die Antwort belegt das metadata-only-Muster:** Sie enthält nur `linkId`s und Werte — der zurückgehaltene Originalwortlaut wird durch Antworten nicht exponiert.",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -2675,6 +3142,15 @@
             "generation" : "markdown"
           }]
         }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Fragebogen-Bibliothek.html"
+        }],
+        "nameUrl" : "Fragebogen-Bibliothek.html",
+        "title" : "Fragebogen-Bibliothek",
+        "generation" : "markdown"
       },
       {
         "extension" : [{

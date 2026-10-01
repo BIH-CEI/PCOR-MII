@@ -10,7 +10,7 @@
 
 Language: de-DE
 
-Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1)
+Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response)
 
 * [LinkID](https://hl7.org/fhir/R4/formats.html#table): pcor-mii-exa-promis-16-response
   * [Text](https://hl7.org/fhir/R4/formats.html#table): 
@@ -123,15 +123,15 @@ Profile: [https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Structu
   "resourceType" : "QuestionnaireResponse",
   "id" : "pcor-mii-exa-promis-16-response",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.4.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"]
   },
   "language" : "de-DE",
-  "questionnaire" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16",
+  "questionnaire" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0",
   "status" : "completed",
   "subject" : {
-    "reference" : "Patient/pcor-mii-exa-patient"
+    "reference" : "Patient/pcor-mii-exa-patient-pss"
   },
-  "authored" : "2026-06-16T10:10:00+02:00",
+  "authored" : "2026-06-25T10:10:00+02:00",
   "item" : [{
     "linkId" : "PROMIS-16.PhysicalFunction",
     "item" : [{

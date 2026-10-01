@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T13:09:50+00:00",
+  "date" : "2026-10-01T14:39:45+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

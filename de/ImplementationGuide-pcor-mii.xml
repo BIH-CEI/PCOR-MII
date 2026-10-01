@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-10-01T13:09:50+00:00"/>
+  <date value="2026-10-01T14:39:45+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -651,6 +651,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ANSOCQ2MonitoringResponse"/>
+      </reference>
+      <name value="ANSOCQ-2 — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort: Veränderungsmotivation von Entscheidungs- in die Handlungsphase (`ansocq3` 3 → 4). Genau dafür ist der Zwei-Item-Zuschnitt laut Erhebungsplan das Monitoring-Instrument."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -665,10 +676,21 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/pcor-mii-exa-patient"/>
+        <reference value="Patient/pcor-mii-exa-patient-pss"/>
       </reference>
-      <name value="Beispiel-Patientin (DEM)"/>
-      <description value="Minimale Beispiel-Patientin als subject der DEM-Beispielantwort."/>
+      <name value="Beispiel-Patient PSS"/>
+      <description value="Synthetischer Beispiel-Patient des Use Case PSS (persistierende somatische Symptome: Erschöpfung, Rücken- und Magen-Darm-Beschwerden seit etwa zwei Jahren, mittelgradige somatische Belastung, leichte depressive und ängstliche Symptomatik): subject der PSS-Beispielantworten. Ein Screening-Termin 25.06.2026 — siehe Bundle pcor-mii-exa-bundle-pss-screening."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/pcor-mii-exa-patient-an"/>
+      </reference>
+      <name value="Beispiel-Patientin AN"/>
+      <description value="Synthetische Beispiel-Patientin des Use Case AN (Anorexia nervosa, restriktiver Typ, erste Anzeichen um 2018): subject aller AN-, DEM- und MHI-Beispielantworten. Zwei Erhebungstermine: Initial-/Screening-Termin 18.06.2026 und Monitoring-Termin 30.07.2026 — siehe die beiden Bundles pcor-mii-exa-bundle-an-initial und -an-monitoring."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -948,6 +970,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/DEMPSSResponse"/>
+      </reference>
+      <name value="DEM — Beispielantwort (PSS)"/>
+      <description value="Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -992,6 +1025,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/EDEQ6MonitoringResponse"/>
+      </reference>
+      <name value="EDE-Q6 — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort: Essstörungspathologie leicht rückläufig (Tage-Items von Stufe 3–4 auf 3, Essanfälle von 4 auf 3, `edeq30` von 3 auf 2); `edeq29` weiter bejaht, die `enableWhen`-Kette bleibt belegt."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1010,6 +1054,17 @@
       </reference>
       <name value="ERQ-6 — Beispielantwort"/>
       <description value="Vollständig ausgefüllte Beispielantwort zum ERQ-6-Questionnaire. Antwortmuster: niedrige Neubewertung bei hoher Unterdrückung — das für Anorexia nervosa beschriebene Muster. Kein Score: Der Bogen ist nicht der ERQ-S — dieser besteht aus anderen ERQ-Items (2, 6, 7, 8, 9, 10), die publizierten Kennwerte gelten daher nicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ERQ6MonitoringResponse"/>
+      </reference>
+      <name value="ERQ-6 — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort sechs Wochen nach dem Initial-Termin: Unterdrückung leicht rückläufig (6/6/7 → 5/5/6), Neubewertung leicht steigend. Werte je Item um höchstens eine Stufe verändert — plausibler Sechs-Wochen-Verlauf, keine Remission."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1036,6 +1091,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/EXPECTResponse"/>
+      </reference>
+      <name value="EXPECT — Beispielantwort"/>
+      <description value="Beispielantwort zu den drei EXPECT-NRS-Items für den PSS-Screening-Termin: verhalten positive Verlaufserwartung."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1047,6 +1113,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/GSLTPAQResponse"/>
+      </reference>
+      <name value="GSLTPAQ — Beispielantwort"/>
+      <description value="Beispielantwort zum GSLTPAQ für den PSS-Screening-Termin: reduzierte, aber vorhandene körperliche Aktivität (1× anstrengend, 3× moderat, 4× leicht pro Woche; Leisure Score Index 36). Beantwortet sind die Wochen-Items; die Minuten-Items bleiben leer."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1055,6 +1132,17 @@
       <name value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"/>
       <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/IPQSResponse"/>
+      </reference>
+      <name value="IPQ-S — Beispielantwort"/>
+      <description value="Beispielantwort zur offenen Ursachenfrage (IPQ-S) für den PSS-Screening-Termin: Stressattribution plus somatische Verdachtsursache plus Sorge — das für PSS typische gemischte Attributionsmuster."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1234,6 +1322,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/MHIPSSResponse"/>
+      </reference>
+      <name value="MHI — Beispielantwort (PSS)"/>
+      <description value="Ausgefülltes Beispiel zum MHI-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026). Die AN-spezifische Gruppe `gewicht-an` ist nicht enthalten — sie wird nur im Szenario AN erhoben; genau dafür ist sie im Questionnaire als eigene Gruppe geführt."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1264,6 +1363,17 @@
       <name value="OPD-SFK Antwortskala (Codes)"/>
       <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/OPDSFKResponse"/>
+      </reference>
+      <name value="OPD-SFK — Beispielantwort"/>
+      <description value="Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1344,13 +1454,43 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/pcor-mii-exa-bundle-an-initial"/>
+      </reference>
+      <name value="pcor-mii-exa-bundle-an-initial"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/pcor-mii-exa-bundle-an-monitoring"/>
+      </reference>
+      <name value="pcor-mii-exa-bundle-an-monitoring"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/pcor-mii-exa-bundle-pss-screening"/>
+      </reference>
+      <name value="pcor-mii-exa-bundle-pss-screening"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="QuestionnaireResponse"/>
       </extension>
       <reference>
         <reference value="QuestionnaireResponse/pcor-mii-exa-example-response"/>
       </reference>
       <name value="pcor-mii-exa-example-response"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1360,7 +1500,7 @@
         <reference value="QuestionnaireResponse/pcor-mii-exa-promis-16-response"/>
       </reference>
       <name value="pcor-mii-exa-promis-16-response"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1370,7 +1510,107 @@
         <reference value="QuestionnaireResponse/pcor-mii-exa-promis-cognitive-function-response"/>
       </reference>
       <name value="pcor-mii-exa-promis-cognitive-function-response"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-euronet-soma-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-euronet-soma-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-gad-7-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-gad-7-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-isr-z-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-isr-z-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-pc-ptsd-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-pc-ptsd-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-phq-15-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-phq-15-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-phq-9-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-phq-9-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-scoff-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-scoff-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-ssd-12-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-ssd-12-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-whodas-12-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-whodas-12-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/pcor-mii-exa-pss-wi-7-response"/>
+      </reference>
+      <name value="pcor-mii-exa-pss-wi-7-response"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1414,6 +1654,17 @@
       </reference>
       <name value="SSUK-2 — Beispielantwort"/>
       <description value="Vollständig ausgefüllte Beispielantwort zum SSUK-2-Questionnaire. Antwortmuster eines günstigen sozialen Umfelds: hoch bei der unterstützenden Zuwendung (`ssuk14`), niedrig bei der belastenden Interaktion (`ssuk10`)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/SSUK2MonitoringResponse"/>
+      </reference>
+      <name value="SSUK-2 — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort: soziale Unterstützung unverändert (oft unterstützt, selten belastende Interaktion) — auch ein unveränderter Wert ist ein Verlaufsbefund."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1630,6 +1881,17 @@
         <valueString value="QuestionnaireResponse"/>
       </extension>
       <reference>
+        <reference value="QuestionnaireResponse/UKHDCTMonitoringResponse"/>
+      </reference>
+      <name value="UKHD-CT — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort: weiterhin ambulante psychotherapeutische Behandlung."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
         <reference value="QuestionnaireResponse/UKHDDResponse"/>
       </reference>
       <name value="UKHD-D — Beispielantwort"/>
@@ -1671,6 +1933,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/UKHDEDPMonitoringResponse"/>
+      </reference>
+      <name value="UKHD-EDP — Beispielantwort (Monitoring)"/>
+      <description value="Erste Beispielantwort zum metadata-only-Bogen UKHD-EDP: elf Stufenwerte (1–6) ohne jeden Itemtext. **Der Beleg, dass metadata-only die Nachnutzung von Antworten nicht behindert** — `linkId`s und Werte genügen, der zurückgehaltene Wortlaut wird nicht exponiert."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1693,6 +1966,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/UKHDLEMonitoringResponse"/>
+      </reference>
+      <name value="UKHD-LE — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Antwort: keine neuen belastenden Lebensereignisse seit der letzten Befragung — das verneinte Item lässt `lifev_text` per `enableWhen` gesperrt; die Antwort belegt damit die Gegenrichtung zur Initial-Antwort."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1701,6 +1985,17 @@
       <name value="UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)"/>
       <description value="Vier Items zu belastenden Lebensereignissen aus der Dictionary-Gruppe `UKHD-LE`: dieselbe Ja/Nein-Frage für drei Erhebungszeitpunkte plus ein Freitextitem, das per `enableWhen` (`any`) an allen drei hängt. Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Hochsensible Inhalte** — Governance der Auswertung fachlich zu klären (analog PHQ-SI und [ACE](ACE.html)). **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.**"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/UKHDNDMonitoringResponse"/>
+      </reference>
+      <name value="UKHD-ND — Beispielantwort (Monitoring)"/>
+      <description value="Die **erste UKHD-ND-Antwort überhaupt** — die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben, zum Initial-Termin existiert bewusst keine Antwort. Das bejahte Monitoring-Item schaltet den Freitext frei; `new_diagnosis_discharge` fehlt (`TIMING` e)."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1722,6 +2017,17 @@
       </reference>
       <name value="UKHD-PT — Beispielantwort"/>
       <description value="Beispielantwort zum UKHD-PT-Questionnaire (Vorbehandlung): zurzeit in psychotherapeutischer Behandlung, zwei Arztbesuche in den letzten 4 Wochen."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/UKHDPTMonitoringResponse"/>
+      </reference>
+      <name value="UKHD-PT — Beispielantwort (Monitoring)"/>
+      <description value="Monitoring-Teilantwort: nur `bdkm16` (Arztbesuche, `TIMING` at) — `bdkm15` ist ein Initial-Item und fehlt bewusst. Drei oder mehr Kontakte passen zur laufenden ambulanten Behandlung."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1756,6 +2062,17 @@
       <name value="WAI Antwortskala 5-stufig (Codes)"/>
       <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/WAIResponse"/>
+      </reference>
+      <name value="WAI — Beispielantwort"/>
+      <description value="Beispielantwort zum WAI-Kurzbogen (metadata-only) für den PSS-Screening-Termin: mäßig reduzierte Arbeitsfähigkeit. **Die Antwort belegt das metadata-only-Muster:** Sie enthält nur `linkId`s und Werte — der zurückgehaltene Originalwortlaut wird durch Antworten nicht exponiert."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1910,6 +2227,14 @@
             <generation value="markdown"/>
           </page>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Fragebogen-Bibliothek.html"/>
+        </extension>
+        <nameUrl value="Fragebogen-Bibliothek.html"/>
+        <title value="Fragebogen-Bibliothek"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

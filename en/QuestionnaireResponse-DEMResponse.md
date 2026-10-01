@@ -128,7 +128,7 @@ Language: de-DE
   "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
   "status" : "completed",
   "subject" : {
-    "reference" : "Patient/pcor-mii-exa-patient"
+    "reference" : "Patient/pcor-mii-exa-patient-an"
   },
   "authored" : "2026-06-16T10:00:00+02:00",
   "item" : [{

@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14"}
-    h3,h4,h5,h6{--heading-prefix:"14"}</style>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -413,7 +337,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Das Erfassungs-System kann <strong>außerhalb FHIR</strong> liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) <strong>oder direkt in FHIR</strong> erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). <strong>FHIR ist primär die Ablage- und Austausch-Form</strong> — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.</p>
 
-<p>In beiden Fällen entstehen <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s + ggf. <code class="language-plaintext highlighter-rouge">Observation</code>s konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>. Validierung und Austausch sehen deshalb gleich aus — siehe <a href="Validierung.html">Validierung</a> und <a href="Bereitstellung.html">Bereitstellung</a>.</p>
+<p>In beiden Fällen entstehen <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s + ggf. <code class="language-plaintext highlighter-rouge">Observation</code>s konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>. Validierung und Austausch sehen deshalb gleich aus — siehe <a href="Validierung.html">Validierung</a> und <a href="Bereitstellung.html">Bereitstellung</a>.</p>
 
 <h3 id="vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</h3>
 
@@ -441,13 +365,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.7.0"</span><span class="w">
+      </span><span class="s2">"https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.3.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pcor-mii-exa-patient"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pcor-mii-exa-patient-an"</span><span class="w"> </span><span class="p">},</span><span class="w">
   </span><span class="nl">"authored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-16T10:00:00+02:00"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
     </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w">
@@ -465,18 +389,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Vollständige, validierte Beispiele:</p>
-
-<ul>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> — Beispiel-Fragebogen mit allen Item-Typen</li>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></a> — PROMIS-16 vollständig befüllt</li>
-  <li><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></a> — PROMIS Cognitive Function SF 4a</li>
-  <li>Für PROMIS-29 wird das upstream-Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-pro-promis-29-response</code> aus dem MII PRO-Modul verwendet (siehe <a href="PROMIS-29.html">PROMIS-29-Seite</a>)</li>
-</ul>
+<p>Vollständige, validierte Beispiele: zwei synthetische <strong>Beispielpatienten</strong> (AN und PSS) mit drei <strong>Termin-Bundles</strong> und über dreißig Einzelantworten — Übersicht in der <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>, Validierungsstatus auf <a href="Validierung.html">Validierung</a>. Für PROMIS-29 wird das Upstream-Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-pro-promis-29-response</code> aus dem MII PRO-Modul verwendet (siehe <a href="PROMIS-29.html">PROMIS-29-Seite</a>).</p>
 
 <h3 id="validierung">Validierung</h3>
 
-<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s können gegen das <code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil und das zugehörige <code class="language-plaintext highlighter-rouge">Questionnaire</code> validiert werden – u. a. auf Pflicht-Items (<code class="language-plaintext highlighter-rouge">required</code>), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle vier Beispiele oben sind gegen den FHIR-Validator geprüft (0 Errors).</p>
+<p><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s können gegen das <code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil und das zugehörige <code class="language-plaintext highlighter-rouge">Questionnaire</code> validiert werden – u. a. auf Pflicht-Items (<code class="language-plaintext highlighter-rouge">required</code>), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle Beispiele des IG sind gegen den FHIR-Validator geprüft (0 Errors; Warnungsklassen auf <a href="Validierung.html">Validierung</a>).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir validate &lt;qr.json&gt; <span class="se">\</span>
   <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
@@ -543,7 +460,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

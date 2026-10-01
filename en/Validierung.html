@@ -142,8 +142,8 @@ a[name="test"] + h3 + div {
 	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"15"}
-    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -217,84 +217,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -419,7 +343,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>A <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> — or a FHIR bundle containing one — has to satisfy three things to count as valid:</p>
 
 <ol>
-  <li><strong>Structurally</strong> conform to the <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code> profile</a>: data types, required elements, element constraints</li>
+  <li><strong>Structurally</strong> conform to the <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code> profile</a>: data types, required elements, element constraints</li>
   <li>Its <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> must match the item structure of the referenced questionnaire</li>
   <li>Every <strong>coded answer</strong> must come from that item's <code class="language-plaintext highlighter-rouge">answerValueSet</code> (or <code class="language-plaintext highlighter-rouge">answerOption</code>)</li>
 </ol>
@@ -564,7 +488,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (for the example questionnaire)</li>
 </ul>
 
-<p><a name="l1042">​</a>Plus the <strong>AN data set</strong> — five responses and two score observations from a single assessment session with the same patient (overview on the <a href="AN.html">AN</a> page): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a>, and <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> and <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
+<p><a name="l893">​</a>Plus the <strong>AN data set</strong> — five responses and two score observations from a single assessment session with the same patient (overview on the <a href="AN.html">AN</a> page): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a>, and <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> and <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
 
 <p>These seven are checked at <strong>0 errors</strong> but are not warning-free, and both remaining warnings are known and accepted:</p>
 
@@ -643,7 +567,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

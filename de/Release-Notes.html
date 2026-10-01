@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"18"}
-    h3,h4,h5,h6{--heading-prefix:"18"}</style>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -431,58 +355,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
 
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> <strong>Englische Fassung der Seite <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a></strong> ergänzt; die Seite <strong>Essstörungen — Erhebungsplan ist entfernt</strong>. Sie spiegelte das Blatt <em>Domain Overview</em> des Item Level Dictionary — eine zweite Quelle der Wahrheit für einen Plan, der im Excel gepflegt wird und sich dort weiterentwickelt. Die Nachschlagefunktion („wo liegt der Fragebogen?") übernimmt vollständig die <a href="AN-Instrumentenliste.html">AN-Instrumentenliste</a>; Verweise zeigen jetzt direkt auf das Quellblatt.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>Beispielpatienten je Use Case</strong>: Patientin AN (zwei Termine: Initial 18.06., Monitoring 30.07.2026) und Patient PSS (Screening 25.06.2026), je Termin ein <code class="language-plaintext highlighter-rouge">collection</code>-Bundle — <a href="Bundle-pcor-mii-exa-bundle-an-initial.html">AN-Initial</a> (13 Entries), <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">AN-Monitoring</a> (10), <a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">PSS-Screening</a> (20, vollständige Batterie inkl. zwölf Antworten auf MII-PRO-Questionnaires). Der Monitoring-Termin bringt die erste UKHD-ND- und die erste UKHD-EDP-Antwort; die vertagten Beispielantworten (OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) sind nachgeliefert. <code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient</code> heißt jetzt <code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient-an</code>. Details: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>.</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">breaking</code></strong> <strong>Der <a href="ACE.html">ACE</a> ist jetzt ein PCOR-MII-Komposit, nicht mehr der ACE-Zuschnitt.</strong> Zu den fünf ACE-Items sind die sechs Items der Dictionary-Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (<code class="language-plaintext highlighter-rouge">traumaspecific1</code>–<code class="language-plaintext highlighter-rouge">6</code>) gekommen, die die berichteten Ereignisse zeitlich einordnen — in drei <code class="language-plaintext highlighter-rouge">group</code>-Items mit <code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">ace1</code>, <code class="language-plaintext highlighter-rouge">ace2</code> beziehungsweise <code class="language-plaintext highlighter-rouge">ace3</code>.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">breaking</code></strong> Der <a href="ACE.html">ACE</a> ist ein <strong>PCOR-MII-Komposit</strong>: die sechs <code class="language-plaintext highlighter-rouge">UKHD-CTT</code>-Zeitangaben sind per <code class="language-plaintext highlighter-rouge">enableWhen</code> an <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code> gebunden (so gibt es das Dictionary vor; <code class="language-plaintext highlighter-rouge">enableWhen.question</code> trägt nur innerhalb eines Questionnaire). Titel, <code class="language-plaintext highlighter-rouge">copyright</code> (zwei Rechtequellen) und <code class="language-plaintext highlighter-rouge">language</code> (<code class="language-plaintext highlighter-rouge">de</code>) entsprechend; <code class="language-plaintext highlighter-rouge">item.code</code>/<code class="language-plaintext highlighter-rouge">instrument</code> unverändert. Details auf der <a href="ACE.html">ACE-Seite</a>.</p>
 
-<p><strong>Der Anlass stand die ganze Zeit im Dictionary.</strong> Die Spalte <code class="language-plaintext highlighter-rouge">ADDITIONAL INFORMATION</code> sagt für <code class="language-plaintext highlighter-rouge">traumaspecific1</code>/<code class="language-plaintext highlighter-rouge">2</code> wörtlich <em>„ACE Abfrage ace1, Antwort Ja = 1"</em>, für <code class="language-plaintext highlighter-rouge">3</code>/<code class="language-plaintext highlighter-rouge">4</code> entsprechend <code class="language-plaintext highlighter-rouge">ace2</code> und für <code class="language-plaintext highlighter-rouge">5</code>/<code class="language-plaintext highlighter-rouge">6</code> <code class="language-plaintext highlighter-rouge">ace3</code>. Damit war der Bezugspunkt von „Ihre Angabe" — bis dahin der größte offene Punkt des <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> — nie offen, sondern bloß übersehen. Er ist aber nur ausdrückbar, wo beide Seiten zusammenliegen: <code class="language-plaintext highlighter-rouge">enableWhen.question</code> nimmt laut R4 eine <code class="language-plaintext highlighter-rouge">linkId</code> <strong>innerhalb desselben Questionnaire</strong>. Die Items sind deshalb aus dem Sammelbogen in den ACE gezogen, statt die Bedingung nur zu dokumentieren.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>UKHD-Zusatzitems AN</strong> als <strong>sechs eigene Questionnaires</strong> (je Dictionary-Gruppe: PT, ANB, CT, LE, ND, D) statt eines Sammelbogens — das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix ist ein Zusammenstellungs-Etikett, keine Instrumenten- oder Autorenschaftsangabe; Rechte- und Herkunftsfrage werden je Gruppe geklärt. <code class="language-plaintext highlighter-rouge">UKHD-BI</code> bleibt unmodelliert (Bildskala ohne Bildvorlage). Begründung, Antwortskalen und neun Dictionary-Befunde: <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>.</p>
 
-<p><strong>Was das kostet, steht im Bogen:</strong> Titel (<em>„ACE + Zeitangaben"</em>), <code class="language-plaintext highlighter-rouge">description</code> und <code class="language-plaintext highlighter-rouge">copyright</code> weisen ihn als Komposit mit <strong>zwei Rechtequellen</strong> aus — ACE frei, der UKHD-Wortlaut ohne dokumentierte Freigabe. <code class="language-plaintext highlighter-rouge">Questionnaire.language</code> wechselt von <code class="language-plaintext highlighter-rouge">en</code> auf <code class="language-plaintext highlighter-rouge">de</code>, weil der Bogen nur auf Deutsch vollständig lesbar ist (11 von 11 Items gegen 5 von 11); die fünf ACE-Items bleiben nach <a href="Designentscheidungen.html">ADR-005</a> auf Itemebene englisch-primär.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>UKHD-EDP</strong> als metadata-only-Bogen (11 Items, vermutlich EDI-2-Zuschnitt; ohnehin keine Freigabe) — <a href="UKHD-EDP.html">UKHD-EDP</a>.</p>
 
-<p><strong>Was es nicht kostet:</strong> Die sechs Items behalten ihre <code class="language-plaintext highlighter-rouge">item.code</code>-Codings und dort die Property <code class="language-plaintext highlighter-rouge">instrument = UKHD-CTT</code>. Die Gruppe hat die Ressource gewechselt, nicht die Gruppenzugehörigkeit — damit ist die Behauptung von <a href="Designentscheidungen.html">ADR-011</a> erstmals an einem echten Fall geprüft: Zugehörigkeit hängt am Code, nicht am Dateinamen. Die Beispielantwort <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a> belegt die Verzweigung in beide Richtungen: <code class="language-plaintext highlighter-rouge">ace1</code> ist bejaht, also ist <code class="language-plaintext highlighter-rouge">ctt-ereignis-1</code> gefüllt; <code class="language-plaintext highlighter-rouge">ace2</code> und <code class="language-plaintext highlighter-rouge">ace3</code> sind verneint, also fehlen deren Gruppen ganz.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>Questionnaire-Katalog</strong> <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a>: ein lokaler Code je PCOR-MII-Bogen auf <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> (die Canonical identifiziert das Artefakt, <code class="language-plaintext highlighter-rouge">code</code> das Konzept; ADR-003/-004/-007/-009 nachgezogen). Codes bezeichnen den Zuschnitt, nicht das Vollinstrument.</p>
 
-<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> <strong>Der ERQ-6 ist nicht der ERQ-S — Identifikation und Scores zurückgezogen.</strong> Bis Release 0.3.0 war der Bogen als die offizielle Kurzform ERQ-S (Preece et al. 2023) ausgewiesen und trug zwei validierte Subskalen-Scores. Beides war falsch.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> <strong>Der ERQ-6 ist nicht der ERQ-S</strong> — Identifikation und beide Scores zurückgezogen; der Bogen selbst (Wortlaut, <code class="language-plaintext highlighter-rouge">linkId</code>s) war und ist korrekt. Hergang und Tabelle-1-Abgleich: <a href="ERQ-6.html">ERQ-6</a>.</p>
 
-<p>Tabelle 1 der Publikation gibt die Zuordnung an: Der <strong>ERQ-S besteht aus den ERQ-Items 2, 6, 7, 8, 9 und 10</strong> (Cognitive Reappraisal 7, 8, 10; Expressive Suppression 2, 6, 9). PCOR-MII führt die <strong>ERQ-Items 1, 2, 3, 6, 8 und 9</strong>. Vier Items überschneiden sich, die Unterdrückungs-Items sind sogar identisch — die <strong>Neubewertungs-Items aber nicht</strong>: PCOR-MII hat 1 und 3, der ERQ-S hat 7 und 10. Es sind zwei verschiedene Zuschnitte desselben Instruments.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> <strong>Bereitstellungs-Review</strong> über <a href="Validierung.html">Validierung</a>, <a href="Implementation.html">Anwendung</a> und <a href="Bereitstellung.html">Bereitstellung</a>: Simplifier-Links und Container auf 2026.7.0, HAPI-Version, Artefakt-Tabelle (20 eigene Bögen), Beispielabschnitte auf die Bundles umgestellt; Konvention klargestellt — <code class="language-plaintext highlighter-rouge">meta.profile</code> ohne, <code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz mit Versionspin (die PROMIS-Altbeispiele machten es umgekehrt).</p>
 
-<p>Wie der Fehler entstand: Die ERQ-S-Scoring-Angabe nennt „sum items 1, 3, and 5“ in <strong>ERQ-S-Zählung</strong>. Diese Nummern wurden als ERQ-Nummern gelesen und über eine <em>angenommene</em> Zuordnung übersetzt, statt gegen Tabelle 1 geprüft zu werden. Zwei teilweise überlappende Nummernsysteme sind genau die Konstellation, in der ein Abgleich plausibel aussieht und trotzdem falsch ist — dieselbe Falle wie bei <code class="language-plaintext highlighter-rouge">erq6</code> im Dictionary gegen <code class="language-plaintext highlighter-rouge">erq6</code> im Questionnaire.</p>
-
-<p><strong>Zurückgezogen:</strong> die beiden <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s <code class="language-plaintext highlighter-rouge">PcorObsDefErqsReappraisal</code> und <code class="language-plaintext highlighter-rouge">PcorObsDefErqsSuppression</code>, die beiden Beispiel-<code class="language-plaintext highlighter-rouge">Observation</code>s, die Katalogcodes <code class="language-plaintext highlighter-rouge">erq-s-reappraisal</code> und <code class="language-plaintext highlighter-rouge">erq-s-suppression</code> sowie die beiden FHIRPath-<code class="language-plaintext highlighter-rouge">variable</code>s im Questionnaire. Damit trägt <strong>kein</strong> AN-Instrument mehr einen Score.</p>
-
-<p><strong>Unverändert geblieben</strong> — und das ist der Punkt: der Bogen selbst. Wortlaut, <code class="language-plaintext highlighter-rouge">linkId</code>s, <code class="language-plaintext highlighter-rouge">item.code</code>s und Sprachebenen sind dictionary-treu und korrekt; die <code class="language-plaintext highlighter-rouge">linkId</code>s sind nach wie vor die Original-ERQ-Itemnummern. Falsch war nur, was über den Bogen behauptet wurde.</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Titel und Beschreibungen auf „ERQ-6“ umgestellt (zuvor „ERQ-S“), auf allen betroffenen Seiten und in <code class="language-plaintext highlighter-rouge">designNote</code>, <code class="language-plaintext highlighter-rouge">Description</code> und <code class="language-plaintext highlighter-rouge">copyright</code>. Die Id der ConceptMap <code class="language-plaintext highlighter-rouge">pcor-cm-erq-s-linkids</code> bleibt dagegen unverändert: Sie ist eine in 0.3.0 veröffentlichte Canonical, und eine Id ist ein Identifikator, keine Aussage — die Aussage steht in Titel und Beschreibung</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Die <strong>UKHD-Zusatzitems AN</strong> sind modelliert — als <strong>sechs eigenständige Questionnaires, eines je Dictionary-Gruppe</strong> (<a href="Questionnaire-UKHDPT.html">UKHD-PT</a> Vorbehandlung, <a href="Questionnaire-UKHDANB.html">UKHD-ANB</a> Essstörungsanamnese, <a href="Questionnaire-UKHDCT.html">UKHD-CT</a> aktuelle Behandlung, <a href="Questionnaire-UKHDLE.html">UKHD-LE</a> belastende Lebensereignisse, <a href="Questionnaire-UKHDND.html">UKHD-ND</a> neue Diagnosen, <a href="Questionnaire-UKHDD.html">UKHD-D</a> Diagnosen bei Aufnahme; Übersicht auf <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>). Ein erster Wurf als Sammelbogen <code class="language-plaintext highlighter-rouge">UKHD-AN</code> ist noch vor der Veröffentlichung aufgegeben: Die Gruppen sind <strong>kein gemeinsames Instrument</strong>, die Rechte- und Herkunftsfrage wird je Gruppe beantwortet, und der Sammelbogen-Name kollidierte mit der echten Dictionary-Gruppe <code class="language-plaintext highlighter-rouge">UKHD-AN</code> (<code class="language-plaintext highlighter-rouge">AN_subtyp</code>, liegt im <a href="MHI.html">MHI</a>).</p>
-
-<p><strong>Das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe</strong> — die Handanweisung des Master-Excel definiert die <code class="language-plaintext highlighter-rouge">INSTRUMENT</code>-Spalte als Auswahl des Erhebungswerkzeugs durch die Standorte, und im AN-Blatt ist die UKHD-Timing-Spalte auch bei ERQ-6 und ACE gefüllt. Woher der Wortlaut je Gruppe stammt, ist nicht dokumentiert; die Frage an den Standort ist eine <strong>Herkunftsfrage</strong>, keine bloße Freigabefrage. Hinweise geben die Variablennamen: überwiegend sprechende Studiendatenbank-Namen, aber <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code>, <code class="language-plaintext highlighter-rouge">erwEV24</code>–<code class="language-plaintext highlighter-rouge">26</code> und <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">11</code> tragen fremde Kürzelschemata — dort kann ein Verlag betroffen sein. Alle sechs Ressourcen tragen <code class="language-plaintext highlighter-rouge">status = draft</code>, <code class="language-plaintext highlighter-rouge">experimental = true</code> und ein <code class="language-plaintext highlighter-rouge">copyright</code>, das genau das ausweist; bei einer Einschränkung wird <strong>je Gruppe</strong> auf metadata-only umgestellt (Muster <a href="WAI.html">WAI</a>).</p>
-
-<p>Sieben eigene Antwortskalen als CodeSystem + ValueSet — fünf hier, zwei beim ACE —, mit <strong><code class="language-plaintext highlighter-rouge">ordinalValue</code> nur dort, wo die Skala wirklich ordinal ist</strong>: gesetzt bei <code class="language-plaintext highlighter-rouge">bdkm16</code> (monotone Häufigkeit, letzte Stufe offen) und <code class="language-plaintext highlighter-rouge">traumaspecific1/3/5</code> (einmalig &lt; mehrfach), bewusst <strong>nicht</strong> bei <code class="language-plaintext highlighter-rouge">bdkm15</code> (drei Zeitbezüge, nicht erschöpfend geordnet), <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> (mischt Behandlungsstatus und Setting) und <code class="language-plaintext highlighter-rouge">traumaspecific2/4/6</code> (nominale Zeitrelation plus erhobene Nicht-Antwort). Die Ja/Nein-Items nutzen das projektweite <a href="ValueSet-dem-ja-nein.html"><code class="language-plaintext highlighter-rouge">DemJaNeinVS</code></a>.</p>
-
-<p><strong>Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Dictionary ist bewusst nicht als FHIR-Struktur modelliert</strong> — und wird durch den Ressourcenzuschnitt trotzdem sichtbar: Zum Initial-/Screening-Termin der Beispiel-Patientin existieren <strong>fünf</strong> Antworten für <strong>sechs</strong> Bögen, weil <a href="Questionnaire-UKHDND.html">UKHD-ND</a> zu diesem Termin nicht erhoben wird. Im Sammelbogen hätte dieselbe Tatsache als bewusst leere Gruppe erklärt werden müssen.</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">UKHD-BI</code></strong> (Körperbild, 3 Items) bleibt <strong>nicht modelliert</strong> (visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary); <strong><code class="language-plaintext highlighter-rouge">UKHD-EDP</code></strong> ist ein eigener metadata-only-Bogen — siehe den Eintrag weiter unten.</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Neun Befunde zum <strong>Item Level Dictionary</strong>, aufgefallen beim Modellieren von <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> und dort einzeln als <code class="language-plaintext highlighter-rouge">designNote</code> am betroffenen Item hinterlegt. Der gewichtigste: <strong><code class="language-plaintext highlighter-rouge">UKHD-CTT</code> hat drei identische Itempaare, deren Bezugspunkt nirgends benannt ist.</strong> Die Itemtexte verweisen auf „Ihre Angabe", also auf ein vorangehendes Item, das nicht zur Gruppe gehört — naheliegend wären die bejahten <a href="ACE.html">ACE</a>-Items, aber der ACE hat fünf Items, nicht drei. Konsequenz: <strong>kein <code class="language-plaintext highlighter-rouge">enableWhen</code> und keine Wiederholungslogik</strong>, weil ein erfundener Bezug eine Behauptung über die Erhebungslogik wäre. Dazu: <code class="language-plaintext highlighter-rouge">traumaspecific2/4/6</code> enthalten <strong>zwei Fragesätze in einem Item</strong> (vermutlich numerus-abhängige Alternativen, Wortlaut unverändert übernommen); <code class="language-plaintext highlighter-rouge">bdkm15</code> und <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> fragen fast dasselbe in zwei Gruppen mit zwei Skalen; der Variablenname <strong><code class="language-plaintext highlighter-rouge">treatment_outpatient</code> ist irreführend</strong>, weil Stufe 4 ausdrücklich stationäre und teilstationäre Behandlung erfasst; <code class="language-plaintext highlighter-rouge">comorbid1</code> ist wörtlich eine Ja/Nein-Frage, hat aber ein Textfeld als Antwortformat; <code class="language-plaintext highlighter-rouge">UKHD-LE</code> führt zwei Variablenpräfixe (<code class="language-plaintext highlighter-rouge">life_event1_*</code> gegen <code class="language-plaintext highlighter-rouge">lifev_*</code>) ohne ein <code class="language-plaintext highlighter-rouge">life_event2</code>; die Gruppen-ID <code class="language-plaintext highlighter-rouge">UKHD_D</code> trägt einen Unterstrich, alle sechs anderen einen Bindestrich; das Präfix <code class="language-plaintext highlighter-rouge">bdkm</code> ist nicht erläutert und <code class="language-plaintext highlighter-rouge">bdkm16</code> fragt nach Arztbesuchen statt nach Psychotherapie; und <code class="language-plaintext highlighter-rouge">UKHD_D</code> erhebt als Freitext, was <a href="MHI.html">MHI</a> über <code class="language-plaintext highlighter-rouge">CPCOR-DIAG</code> und <code class="language-plaintext highlighter-rouge">GIPS13</code> kodiert erhebt.</p>
-
-<p>Außerdem <strong>fünf sprachliche Fehler der Vorlage</strong>, die nach <a href="Designentscheidungen.html">ADR-010</a> <strong>unverändert stehen bleiben</strong> und vollständig aufgelistet sind: <code class="language-plaintext highlighter-rouge">lowBMI</code> „Ihr <strong>niedrigter</strong> BMI", <code class="language-plaintext highlighter-rouge">comorbid1</code> „den <strong>zurvor</strong> genannten", in <code class="language-plaintext highlighter-rouge">UKHD-LE</code> „Auflösung einer <strong>Partnerschaften</strong>" und „Verlust <strong>ihres</strong> Zuhauses", in <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> „Ja" gegen „ja". Eine Bereinigungsebene ist hier — anders als beim <a href="ANSOCQ-2.html">ANSOCQ-2</a> — <strong>bewusst gar nicht angelegt</strong>: Dort gibt es eine publizierte Vorlage, gegen die sich Druckfehler und Abschreibfehler unterscheiden lassen; hier <strong>ist das Dictionary die Vorlage</strong>, und damit gehört die Korrektur dorthin und nicht in eine FHIR-Ebene daneben
-<strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>Questionnaire-Katalog</strong> <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a> — ein Code je PCOR-MII-eigenem Bogen, gesetzt auf <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> bei allen dreizehn. Zuvor trugen zwölf von vierzehn Bögen <strong>gar keinen</strong> Code; nur der WAI hatte einen (SNOMED <code class="language-plaintext highlighter-rouge">446174004</code>).</p>
-
-<p>Die Canonical ersetzt das nicht: Sie identifiziert laut R4 das <strong>Artefakt</strong> (“a literal address at which an authoritative instance of this questionnaire is found”), <code class="language-plaintext highlighter-rouge">code</code> dagegen das <strong>Konzept, das der Bogen repräsentiert</strong>. Dieselbe Achse wie <code class="language-plaintext highlighter-rouge">linkId</code> gegen <code class="language-plaintext highlighter-rouge">item.code</code> — das eine artefaktgebunden, das andere teilbar.</p>
-
-<p><strong>Der Anlass war hausgemacht:</strong> ADR-007 Punkt 2 verlangt, dass zwei Fassungen desselben Instruments denselben Katalogcode tragen, und verwies dafür auf den MII-Questionnaire-Katalog. Der führt aber weder den GSLTPAQ noch einen der AN-Bögen — die Regel war damit genau in dem Fall nicht umsetzbar, für den sie geschrieben wurde. ADR-007, ADR-009 und ADR-003 Punkt 2 sind entsprechend nachgezogen.</p>
-
-<p><strong>Nachgezogen:</strong> Die sechs UKHD-Zusatzbögen tragen je einen eigenen Katalogcode (<code class="language-plaintext highlighter-rouge">ukhd-pt</code> … <code class="language-plaintext highlighter-rouge">ukhd-d</code>) — bei Bögen ohne publiziertes Instrument ist genau das der Fall, für den ADR-004 den lokalen Code vorsieht, und die Codes bezeichnen exakt die Dictionary-Gruppe. Der zwischenzeitliche Sammelcode <code class="language-plaintext highlighter-rouge">ukhd-an</code> ist entfallen; <code class="language-plaintext highlighter-rouge">ace</code> bezeichnet jetzt das Komposit aus ACE-Items und UKHD-Zeitangaben, nicht mehr den ACE-Zuschnitt allein.</p>
-
-<p>Die Codes bezeichnen ausdrücklich den <strong>Zuschnitt</strong>, nicht das Vollinstrument (<code class="language-plaintext highlighter-rouge">ansocq-2</code> ist der Zweiitem-Zuschnitt). ADR-003 Punkt 2 bleibt damit unberührt: Vollinstrument-Codes aus SNOMED oder LOINC werden Zuschnitten weiterhin nicht zugewiesen. Beim <a href="WAI.html">WAI</a> stehen Katalogcode und SNOMED-Code nebeneinander — <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> ist <code class="language-plaintext highlighter-rouge">0..*</code>, ein späterer MII-Code wird ergänzt statt ersetzt (ADR-004)</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>UKHD-EDP als metadata-only-Bogen.</strong> Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD — Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, sechsstufiges Antwortformat und Wertebereiche vollständig, Item-Texte und Antwortstufen <strong>neutralisiert</strong> (Muster: <a href="WAI.html">WAI</a>). Kein Score, kein <code class="language-plaintext highlighter-rouge">Questionnaire.code</code>.</p>
-
-<p>Zwei Gründe tragen das unabhängig voneinander: Der Block ist vermutlich ein <strong>EDI-2-Zuschnitt</strong> (je ein Item pro Subskala) und damit ein Hogrefe-Testverfahren; und unabhängig davon fehlt für die Standort-Itemgruppen jede dokumentierte Freigabe. <strong>Metadata-only ist unter beiden Lesarten richtig</strong> — deshalb liess sich jetzt entscheiden, ohne die Identifikation vorher aufzulösen.</p>
-
-<p>Ein beim Modellieren hinzugekommenes Indiz: Das Antwortformat ist <strong>sechsstufig</strong>, und das EDI-2 nutzt genau sechs Stufen. Nicht bestätigt bleibt der Wortlautabgleich gegen den deutschen EDI-2-Bogen; davon hängt ab, ob der Bogen einen <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> bekommt und ob die <code class="language-plaintext highlighter-rouge">linkId</code>s auf EDI-2-Itemnummern umzustellen sind.</p>
-
-<p>Mitgezogen: Die Displays der elf Variablen im CodeSystem <code class="language-plaintext highlighter-rouge">pcor-item-dictionary</code> sind ebenfalls neutralisiert — sonst hätte das Dictionary veröffentlicht, was der Questionnaire zurückhält</p>
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Neue Seite <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a> (de/en) nach dem MII-PRO-Muster; das Fragebögen-Menü von 24 Einträgen auf einen reduziert. Englische Fassung der <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>; die Seite „Essstörungen — Erhebungsplan" ist entfernt (Quelle bleibt das Domain-Overview-Blatt, Nachschlag: <a href="AN-Instrumentenliste.html">AN-Instrumentenliste</a>). Neun Dictionary-Befunde als <code class="language-plaintext highlighter-rouge">designNote</code> an den betroffenen Items.</p>
 
 <p><em>(noch keine Einträge)</em></p>
 
@@ -672,7 +559,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

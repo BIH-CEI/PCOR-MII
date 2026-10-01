@@ -33,7 +33,7 @@ Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (
   "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T13:09:50+00:00",
+  "date" : "2026-10-01T14:39:45+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"16"}
-    h3,h4,h5,h6{--heading-prefix:"16"}</style>
+    <style type="text/css">h2{--heading-prefix:"17"}
+    h3,h4,h5,h6{--heading-prefix:"17"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -429,15 +353,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Questionnaire-Definitionen</td>
-      <td>PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR Beispiel (PCOR-MII + MII PRO-Modul)</td>
+      <td><strong>20 PCOR-MII-eigene Bögen</strong> (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, die sechs AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, Beispiel-Questionnaire) — vollständige Tabelle: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>; die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket</td>
     </tr>
     <tr>
-      <td>ValueSets</td>
-      <td>Frequency-/Intensity-/Physical-Function-Response-Scale + lokale PCOR-MII ValueSets</td>
+      <td>Terminologie</td>
+      <td>lokale CodeSystems/ValueSets je Antwortskala, <a href="CodeSystem-pcor-item-dictionary.html"><code class="language-plaintext highlighter-rouge">pcor-item-dictionary</code></a>, <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a>, <a href="CodeSystem-pcor-score-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-score-catalogue</code></a></td>
     </tr>
     <tr>
       <td>Beispiele</td>
-      <td>validierte <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s (siehe <a href="Validierung.html">Validierung</a>)</td>
+      <td>zwei Beispielpatienten, <strong>drei Termin-Bundles</strong> und &gt;30 validierte <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s (siehe <a href="Validierung.html">Validierung</a>)</td>
+    </tr>
+    <tr>
+      <td>Scores</td>
+      <td><a href="ObservationDefinition-PcorObsDefProprUtility.html">PROPr-ObservationDefinition</a></td>
     </tr>
   </tbody>
 </table>
@@ -451,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <pre><code class="language-mermaid">flowchart LR
     SIMPLIFIER[("Simplifier")] --&gt;|"mii-pro@2026.7.0"| HAPI
     REPO[("PCOR-MII Repo")] --&gt;|"als Package"| HAPI
-    HAPI_BASE["hapiproject/hapi:v8.4.0"] --&gt; HAPI["PCOR-MII Container&lt;br/&gt;localhost:8097"]
+    HAPI_BASE["hapiproject/hapi:v8.12.0"] --&gt; HAPI["PCOR-MII Container&lt;br/&gt;localhost:8097"]
     HAPI --&gt;|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
 
     style HAPI fill:#ffe1e1
@@ -480,7 +408,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
   <span class="na">hl7.fhir.uv.sdc</span><span class="pi">:</span> <span class="s">3.0.0</span>
 </code></pre></div></div>
 
-<p>PCOR-MII selbst ist (Stand 2026.06.) <strong>nicht</strong> als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.</p>
+<p>PCOR-MII selbst ist (Stand 2026-10) <strong>nicht</strong> als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.</p>
 
 <h3 id="3-direkter-repo-zugriff-für-scripting-doku-tools">3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)</h3>
 
@@ -593,7 +521,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

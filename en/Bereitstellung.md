@@ -25,7 +25,7 @@ A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checki
 flowchart LR
     SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
     REPO[("PCOR-MII repo")] -->|"as a package"| HAPI
-    HAPI_BASE["hapiproject/hapi:v8.4.0"] --> HAPI["PCOR-MII container<br/>localhost:8097"]
+    HAPI_BASE["hapiproject/hapi:v8.12.0"] --> HAPI["PCOR-MII container<br/>localhost:8097"]
     HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementer"]
 
     style HAPI fill:#ffe1e1

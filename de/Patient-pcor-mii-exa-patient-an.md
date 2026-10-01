@@ -1,0 +1,30 @@
+# Beispiel-Patientin AN - PCOR-MII Implementation Guide v0.3.0
+
+## Beispiel Patient: Beispiel-Patientin AN
+
+-------
+
+**German**
+
+-------
+
+Language: de-DE
+
+Anonymous Patient Female, DoB: 1985-03-12
+
+-------
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "pcor-mii-exa-patient-an",
+  "language" : "de-DE",
+  "gender" : "female",
+  "birthDate" : "1985-03-12"
+}
+
+```

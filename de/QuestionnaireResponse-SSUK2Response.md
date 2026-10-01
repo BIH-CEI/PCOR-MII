@@ -45,7 +45,7 @@ Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope
   "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0",
   "status" : "completed",
   "subject" : {
-    "reference" : "Patient/pcor-mii-exa-patient"
+    "reference" : "Patient/pcor-mii-exa-patient-an"
   },
   "authored" : "2026-06-18T09:45:00+02:00",
   "item" : [{

@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -552,7 +476,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The dictionary's <code class="language-plaintext highlighter-rouge">TIMING</code> column states at which collection time point an item is administered (i = initial, a/at = all, e = discharge). That is a property of the <strong>collection plan</strong>, not of the questionnaire — a <code class="language-plaintext highlighter-rouge">Questionnaire</code> describes <em>what</em> is asked, not <em>when</em>. R4 has no suitable element for it either.</p>
 
-<p>The plan becomes visible in the <strong>responses</strong> instead, and the resource layout makes this sharper than before: the example responses represent an initial/screening visit, and there are <strong>five, not six</strong> — for <a href="Questionnaire-UKHDND.html">UKHD-ND</a> simply none exists, because none of its items is collected at the initial visit. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a>, <code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> and <code class="language-plaintext highlighter-rouge">lifev_discharge</code> are absent for the same reason.</p>
+<p>The plan becomes visible in the <strong>responses</strong> instead, and the resource layout makes this sharper than before: at the initial/screening visit there are <strong>five responses, not six</strong> — for <a href="Questionnaire-UKHDND.html">UKHD-ND</a> simply none exists, because none of its items is collected at the initial visit. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a>, <code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> and <code class="language-plaintext highlighter-rouge">lifev_discharge</code> are absent for the same reason.</p>
+
+<p><strong>The monitoring visit (2026-07-30) shows the other direction:</strong> there the <a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">first UKHD-ND response</a> exists (affirmed, with free text), <a href="QuestionnaireResponse-UKHDLEMonitoringResponse.html">UKHD-LE</a> answers only the monitoring item (negated — <code class="language-plaintext highlighter-rouge">lifev_text</code> stays disabled via <code class="language-plaintext highlighter-rouge">enableWhen</code>), and <a href="QuestionnaireResponse-UKHDPTMonitoringResponse.html">UKHD-PT</a> is a deliberate <strong>partial response</strong> with only <code class="language-plaintext highlighter-rouge">bdkm16</code>. UKHD-ANB and UKHD-D are not repeated — initial items. Both visits bundled: <a href="Bundle-pcor-mii-exa-bundle-an-initial.html">initial</a> · <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">monitoring</a>.</p>
 
 <p><a name="rechtelage"></a></p>
 
@@ -640,7 +566,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 

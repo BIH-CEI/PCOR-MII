@@ -222,84 +222,8 @@ a[name="test"] + h3 + div {
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fragebögen
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="Demographie.html">Demographie</a>
-      </li>
-      <li>
-        <a href="MHI.html">MHI</a>
-      </li>
-      <li>
-        <a href="PROMIS.html">PROMIS</a>
-      </li>
-      <li>
-        <a href="PHQ.html">PHQ</a>
-      </li>
-      <li>
-        <a href="GAD-7.html">GAD-7</a>
-      </li>
-      <li>
-        <a href="WHODAS-12.html">WHODAS 2.0</a>
-      </li>
-      <li>
-        <a href="EURONET-SOMA.html">EURONET-SOMA</a>
-      </li>
-      <li>
-        <a href="SSD-12.html">SSD-12</a>
-      </li>
-      <li>
-        <a href="WI-7.html">Whiteley-7</a>
-      </li>
-      <li>
-        <a href="SCOFF.html">SCOFF</a>
-      </li>
-      <li>
-        <a href="ISR-Z.html">ISR-Z</a>
-      </li>
-      <li>
-        <a href="PC-PTSD.html">PC-PTSD</a>
-      </li>
-      <li>
-        <a href="OPD-SFK.html">OPD-SFK</a>
-      </li>
-      <li>
-        <a href="WAI.html">WAI</a>
-      </li>
-      <li>
-        <a href="GSLTPAQ.html">GSLTPAQ</a>
-      </li>
-      <li>
-        <a href="EXPECT.html">EXPECT</a>
-      </li>
-      <li>
-        <a href="IPQ-S.html">IPQ-S</a>
-      </li>
-      <li>
-        <a href="ERQ-6.html">ERQ-S</a>
-      </li>
-      <li>
-        <a href="EDE-Q6.html">EDE-Q6</a>
-      </li>
-      <li>
-        <a href="ANSOCQ-2.html">ANSOCQ-2</a>
-      </li>
-      <li>
-        <a href="SSUK-2.html">SSUK-2</a>
-      </li>
-      <li>
-        <a href="ACE.html">ACE</a>
-      </li>
-      <li>
-        <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>
-      </li>
-      <li>
-        <a href="UKHD-EDP.html">UKHD-EDP</a>
-      </li>
-    </ul>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -550,7 +474,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Dictionary sagt, zu welchem Erhebungszeitpunkt ein Item gestellt wird (i = Initial, a/at = alle, e = Entlassung). Das ist eine Eigenschaft des <strong>Erhebungsplans</strong>, nicht des Bogens — ein <code class="language-plaintext highlighter-rouge">Questionnaire</code> beschreibt, <em>was</em> gefragt wird, nicht <em>wann</em>. R4 hat dafür auch kein tragendes Element.</p>
 
-<p>Sichtbar wird der Plan stattdessen in den <strong>Antworten</strong>, und der Ressourcenzuschnitt macht das schärfer als zuvor: Die Beispielantworten bilden einen Initial-/Screening-Termin ab, und es gibt <strong>fünf, nicht sechs</strong> — für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a> fehlen <code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> und <code class="language-plaintext highlighter-rouge">lifev_discharge</code> aus demselben Grund.</p>
+<p>Sichtbar wird der Plan stattdessen in den <strong>Antworten</strong>, und der Ressourcenzuschnitt macht das schärfer als zuvor: Zum Initial-/Screening-Termin gibt es <strong>fünf Antworten, nicht sechs</strong> — für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert schlicht keine, weil keines seiner Items zum Initial-Termin erhoben wird. In <a href="Questionnaire-UKHDLE.html">UKHD-LE</a> fehlen <code class="language-plaintext highlighter-rouge">life_event1_screening</code>-Geschwister aus demselben Grund.</p>
+
+<p><strong>Der Monitoring-Termin (30.07.2026) zeigt die Gegenrichtung:</strong> Dort existiert die <a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">erste UKHD-ND-Antwort</a> (bejaht, mit Freitext), <a href="QuestionnaireResponse-UKHDLEMonitoringResponse.html">UKHD-LE</a> beantwortet nur das Monitoring-Item (verneint — <code class="language-plaintext highlighter-rouge">lifev_text</code> bleibt per <code class="language-plaintext highlighter-rouge">enableWhen</code> gesperrt), und <a href="QuestionnaireResponse-UKHDPTMonitoringResponse.html">UKHD-PT</a> ist eine bewusste <strong>Teilantwort</strong> mit nur <code class="language-plaintext highlighter-rouge">bdkm16</code>. UKHD-ANB und UKHD-D werden nicht wiederholt — Initial-Items. Beide Termine gebündelt: <a href="Bundle-pcor-mii-exa-bundle-an-initial.html">Initial</a> · <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">Monitoring</a>.</p>
 
 <p><a name="rechtelage"></a></p>
 
@@ -638,7 +564,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 13:09:00 +0000">
+  <span title="2026-10-01 14:39:00 +0000">
     2026-10-01
   </span>
 
