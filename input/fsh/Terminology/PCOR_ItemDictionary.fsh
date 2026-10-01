@@ -35,6 +35,16 @@
 // PROPERTY "instrument": der INSTRUMENT-Wert des Dictionary, nicht die
 //   Questionnaire-ID. Beides laeuft auseinander (Dictionary "ERQ-6" gegen
 //   Questionnaire "ERQ6"), und das Dictionary ist hier die Quelle.
+//
+//   ACHTUNG BEI DEN UKHD-WERTEN: Fuer die UKHD-*-Zeilen ist der Wert KEIN
+//   Instrument, sondern ein ZUSAMMENSTELLUNGS-ETIKETT — die Handanweisung des
+//   Master-Excel definiert die INSTRUMENT-Spalte als Auswahl des
+//   Erhebungswerkzeugs durch die Standorte. Aus dem Praefix darf weder
+//   Autorenschaft noch Rechteinhaberschaft geschlossen werden; die Herkunft
+//   des Wortlauts ist je Gruppe mit dem Standort zu klaeren (siehe Seite
+//   UKHD-Zusatzitems). Die Property bleibt trotzdem die verlaessliche
+//   GRUPPEN-Zuordnung — unabhaengig davon, in welcher Ressource ein Item
+//   liegt (UKHD-CTT liegt im ACE, UKHD-AN/-W/-MEDI im MHI).
 // ─────────────────────────────────────────────────────────────────────────────
 
 CodeSystem: PcorItemDictionaryCS

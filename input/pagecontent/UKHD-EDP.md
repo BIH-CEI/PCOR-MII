@@ -75,6 +75,6 @@ Das EDI-2 wertet über Subskalen aus, die aus mehreren Items bestehen. **Ein Ite
 
 ### Einordnung im Erhebungsplan
 
-Der [Erhebungsplan](Essstoerungen.html) führt für die Domäne *Eating Disorder Psychopathology* 17 Items unter dem Eintrag „EDEQ/EDP (UKHD)". Das sind **zwei Instrumente, nicht eines**: die sechs Items des [EDE-Q6](EDE-Q6.html) (Recall 28 Tage, Häufigkeitsskala 0–6) und diese elf (zeitlose Zustimmung, sechsstufig). Verschmelzen lassen sie sich nicht — unterschiedlicher Recall und unterschiedliches Antwortformat.
+Der Erhebungsplan (Blatt *Domain Overview* des Item Level Dictionary) führt für die Domäne *Eating Disorder Psychopathology* 17 Items unter dem Eintrag „EDEQ/EDP (UKHD)". Das sind **zwei Instrumente, nicht eines**: die sechs Items des [EDE-Q6](EDE-Q6.html) (Recall 28 Tage, Häufigkeitsskala 0–6) und diese elf (zeitlose Zustimmung, sechsstufig). Verschmelzen lassen sie sich nicht — unterschiedlicher Recall und unterschiedliches Antwortformat.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).
