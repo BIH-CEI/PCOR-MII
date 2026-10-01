@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ukhd-edp-stufe-6-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet ukhd-edp-stufe-6-vs</b></p><a name="ukhd-edp-stufe-6-vs"> </a><a name="hcukhd-edp-stufe-6-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-ukhd-edp-stufe-6.html"><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.3.0</span></li></ul></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet ukhd-edp-stufe-6-vs</b></p><a name="en-ukhd-edp-stufe-6-vs"> </a><a name="en-hcukhd-edp-stufe-6-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-ukhd-edp-stufe-6.html"><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.3.0</span></li></ul></div></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-edp-stufe-6-vs"/>
+  <version value="0.3.0"/>
+  <name value="UkhdEdpStufe6VS"/>
+  <title value="UKHD-EDP Antwortstufen (neutralisiert)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-01T13:49:55+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"/>
+    </include>
+  </compose>
+</ValueSet>
