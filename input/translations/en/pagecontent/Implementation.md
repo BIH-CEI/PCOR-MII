@@ -4,7 +4,7 @@ This page describes how the questionnaires defined in the PCOR-MII Implementatio
 
 The capture system may sit **outside FHIR** (REDCap, LimeSurvey, in-house ePRO apps, paper with a data-entry form) **or run directly in FHIR** (for example via LHC-Forms or an SDC-capable renderer against a PCOR-MII container). **FHIR is primarily the storage and exchange form** — the structured, versioned and validatable representation of the captured data between sites, consortia and research recipients.
 
-Either way the result is `QuestionnaireResponse`s, and where applicable `Observation`s, conforming to the [`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1). Validation and exchange therefore look the same in both cases — see [Validation](Validierung.html) and [Distribution](Bereitstellung.html).
+Either way the result is `QuestionnaireResponse`s, and where applicable `Observation`s, conforming to the [`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0). Validation and exchange therefore look the same in both cases — see [Validation](Validierung.html) and [Distribution](Bereitstellung.html).
 
 ### From questionnaire to response
 
@@ -29,13 +29,13 @@ This keeps every captured answer unambiguously attached to its question, includi
   "resourceType": "QuestionnaireResponse",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.7.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     ]
   },
   "language": "de",
   "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.3.0",
   "status": "completed",
-  "subject": { "reference": "Patient/pcor-mii-exa-patient" },
+  "subject": { "reference": "Patient/pcor-mii-exa-patient-an" },
   "authored": "2026-06-16T10:00:00+02:00",
   "item": [{
     "linkId": "pro",

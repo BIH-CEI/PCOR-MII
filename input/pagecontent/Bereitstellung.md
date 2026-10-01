@@ -5,9 +5,10 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | Kategorie | Resources |
 |-----------|-----------|
 | Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`, `MII PR PRO Questionnaire` (aus dem MII PRO-Modul) |
-| Questionnaire-Definitionen | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR Beispiel (PCOR-MII + MII PRO-Modul) |
-| ValueSets | Frequency-/Intensity-/Physical-Function-Response-Scale + lokale PCOR-MII ValueSets |
-| Beispiele | validierte `QuestionnaireResponse`s (siehe [Validierung](Validierung.html)) |
+| Questionnaire-Definitionen | **20 PCOR-MII-eigene Bögen** (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, die sechs AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, Beispiel-Questionnaire) — vollständige Tabelle: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
+| Terminologie | lokale CodeSystems/ValueSets je Antwortskala, [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html), [`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.html), [`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.html) |
+| Beispiele | zwei Beispielpatienten, **drei Termin-Bundles** und >30 validierte `QuestionnaireResponse`s (siehe [Validierung](Validierung.html)) |
+| Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.html) |
 
 ## Wege, das zu bekommen
 
@@ -19,7 +20,7 @@ Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundl
 flowchart LR
     SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
     REPO[("PCOR-MII Repo")] -->|"als Package"| HAPI
-    HAPI_BASE["hapiproject/hapi:v8.4.0"] --> HAPI["PCOR-MII Container<br/>localhost:8097"]
+    HAPI_BASE["hapiproject/hapi:v8.12.0"] --> HAPI["PCOR-MII Container<br/>localhost:8097"]
     HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
 
     style HAPI fill:#ffe1e1
@@ -51,7 +52,7 @@ dependencies:
   hl7.fhir.uv.sdc: 3.0.0
 ```
 
-PCOR-MII selbst ist (Stand 2026.06.) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
+PCOR-MII selbst ist (Stand 2026-10) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
 
 ### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
 

@@ -4,7 +4,7 @@ This page answers one question: **how do I make sure my implementation is valid 
 
 A `QuestionnaireResponse` — or a FHIR bundle containing one — has to satisfy three things to count as valid:
 
-1. **Structurally** conform to the [`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1): data types, required elements, element constraints
+1. **Structurally** conform to the [`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0): data types, required elements, element constraints
 2. Its **`linkId`s** must match the item structure of the referenced questionnaire
 3. Every **coded answer** must come from that item's `answerValueSet` (or `answerOption`)
 

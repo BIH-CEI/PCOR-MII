@@ -4,7 +4,7 @@ Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fra
 
 Das Erfassungs-System kann **außerhalb FHIR** liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) **oder direkt in FHIR** erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). **FHIR ist primär die Ablage- und Austausch-Form** — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.
 
-In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.html) und [Bereitstellung](Bereitstellung.html).
+In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.html) und [Bereitstellung](Bereitstellung.html).
 
 ### Vom Questionnaire zur Antwort
 
@@ -29,13 +29,13 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
   "resourceType": "QuestionnaireResponse",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response|2026.7.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     ]
   },
   "language": "de",
-  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.3.0",
+  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
   "status": "completed",
-  "subject": { "reference": "Patient/pcor-mii-exa-patient" },
+  "subject": { "reference": "Patient/pcor-mii-exa-patient-an" },
   "authored": "2026-06-16T10:00:00+02:00",
   "item": [{
     "linkId": "pro",
@@ -53,16 +53,11 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
 }
 ```
 
-Vollständige, validierte Beispiele:
-
-- [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.html) — Beispiel-Fragebogen mit allen Item-Typen
-- [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) — PROMIS-16 vollständig befüllt
-- [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) — PROMIS Cognitive Function SF 4a
-- Für PROMIS-29 wird das upstream-Beispiel `mii-exa-pro-promis-29-response` aus dem MII PRO-Modul verwendet (siehe [PROMIS-29-Seite](PROMIS-29.html))
+Vollständige, validierte Beispiele: zwei synthetische **Beispielpatienten** (AN und PSS) mit drei **Termin-Bundles** und über dreißig Einzelantworten — Übersicht in der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html), Validierungsstatus auf [Validierung](Validierung.html). Für PROMIS-29 wird das Upstream-Beispiel `mii-exa-pro-promis-29-response` aus dem MII PRO-Modul verwendet (siehe [PROMIS-29-Seite](PROMIS-29.html)).
 
 ### Validierung
 
-`QuestionnaireResponse`s können gegen das `MII PR PRO QuestionnaireResponse`-Profil und das zugehörige `Questionnaire` validiert werden – u. a. auf Pflicht-Items (`required`), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle vier Beispiele oben sind gegen den FHIR-Validator geprüft (0 Errors).
+`QuestionnaireResponse`s können gegen das `MII PR PRO QuestionnaireResponse`-Profil und das zugehörige `Questionnaire` validiert werden – u. a. auf Pflicht-Items (`required`), zulässige Antwortoptionen, Datentypen und kodierte Antwortwerte. Alle Beispiele des IG sind gegen den FHIR-Validator geprüft (0 Errors; Warnungsklassen auf [Validierung](Validierung.html)).
 
 ```bash
 fhir validate <qr.json> \
