@@ -33,7 +33,7 @@ Selbstbeschriebenes Geschlecht (Q_SEX).
   "title" : "DEM Geschlecht",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:08:38+00:00",
+  "date" : "2026-10-01T14:23:58+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
