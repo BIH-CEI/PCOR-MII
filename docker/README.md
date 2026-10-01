@@ -1,6 +1,6 @@
 # PCOR-MII FHIR Server (Docker)
 
-Pre-built HAPI FHIR Server mit **MII PRO-Modul 2026.4.1** und **PCOR-MII** vorinstalliert. Kein Cold-Start, kein Online-Package-Download zur Laufzeit.
+Pre-built HAPI FHIR Server mit **MII PRO-Modul 2026.7.0** und **PCOR-MII** vorinstalliert. Kein Cold-Start, kein Online-Package-Download zur Laufzeit.
 
 ## Quick Start (lokal)
 
@@ -18,9 +18,9 @@ Dann erreichbar unter:
 
 | Package | Version | Quelle |
 |---------|---------|--------|
-| `de.medizininformatikinitiative.kerndatensatz.pros` | 2026.4.1 | Simplifier (Build-Time-Download) |
+| `de.medizininformatikinitiative.kerndatensatz.pros` | 2026.7.0 | Simplifier (Build-Time-Download) |
 | `hl7.fhir.uv.sdc` | 3.0.0 | über MII PRO als Dependency |
-| `pcor-mii` | 0.1.0 | aus diesem Repo (FSH → SUSHI → in den Container) |
+| `pcor-mii` | 0.3.0 | aus diesem Repo (FSH → SUSHI → in den Container) |
 
 Konkrete Ressourcen ad-hoc anzeigen:
 - `GET /fhir/Questionnaire?_summary=true` — alle Questionnaires
@@ -88,6 +88,6 @@ Die `meta.copyright`-Felder und das 4-Schichten Copyright-RuleSet (`PROMIS_Copyr
 
 [BIH-CEI/fhir-sdc-questionnaire-service](https://github.com/BIH-CEI/fhir-sdc-questionnaire-service) bietet eine parallele HAPI-Image-Variante mit MII PRO (aktuell 2026.3.0). Wir haben uns hier bewusst für einen **eigenständigen Build von HAPI-Base** entschieden, um:
 
-- die MII PRO Version unabhängig pinnen zu können (2026.4.1)
+- die MII PRO Version unabhängig pinnen zu können (2026.7.0)
 - PCOR-MII direkt aus dem gleichen Repo ohne externe Package-Veröffentlichung mit reinzuziehen
 - Spec, IG-Doku und Deployable im gleichen Commit zu halten
