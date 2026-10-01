@@ -33,7 +33,7 @@ Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`).
   "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:39:45+00:00",
+  "date" : "2026-10-01T14:59:54+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

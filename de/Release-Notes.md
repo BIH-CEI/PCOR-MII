@@ -23,6 +23,8 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**Was mit dem Wechsel auf das 2027-Modul (SDC 4.0.0, `itemWeight`) ansteht, sammelt die Seite [Kommende Änderungen](Kommende-Aenderungen.md).**
+
 **`feature`** **Beispielpatienten je Use Case**: Patientin AN (zwei Termine: Initial 18.06., Monitoring 30.07.2026) und Patient PSS (Screening 25.06.2026), je Termin ein `collection`-Bundle — [AN-Initial](Bundle-pcor-mii-exa-bundle-an-initial.md) (13 Entries), [AN-Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.md) (10), [PSS-Screening](Bundle-pcor-mii-exa-bundle-pss-screening.md) (20, vollständige Batterie inkl. zwölf Antworten auf MII-PRO-Questionnaires). Der Monitoring-Termin bringt die erste UKHD-ND- und die erste UKHD-EDP-Antwort; die vertagten Beispielantworten (OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) sind nachgeliefert. `pcor-mii-exa-patient` heißt jetzt `pcor-mii-exa-patient-an`. Details: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.md).
 
 **`breaking`** Der [ACE](ACE.md) ist ein **PCOR-MII-Komposit**: die sechs `UKHD-CTT`-Zeitangaben sind per `enableWhen` an `ace1`–`ace3` gebunden (so gibt es das Dictionary vor; `enableWhen.question` trägt nur innerhalb eines Questionnaire). Titel, `copyright` (zwei Rechtequellen) und `language` (`de`) entsprechend; `item.code`/`instrument` unverändert. Details auf der [ACE-Seite](ACE.md).

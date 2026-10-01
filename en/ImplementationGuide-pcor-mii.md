@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T14:39:45+00:00",
+  "date" : "2026-10-01T14:59:54+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -3348,6 +3348,15 @@
         }],
         "nameUrl" : "Designentscheidungen.html",
         "title" : "Designentscheidungen",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Kommende-Aenderungen.html"
+        }],
+        "nameUrl" : "Kommende-Aenderungen.html",
+        "title" : "Kommende Änderungen (2027 / SDC 4.0.0)",
         "generation" : "markdown"
       },
       {

@@ -27,7 +27,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Geschlecht (Selbstbeschreibung)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:39:45+00:00",
+  "date" : "2026-10-01T14:59:54+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
