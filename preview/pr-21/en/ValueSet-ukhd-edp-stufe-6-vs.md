@@ -33,7 +33,7 @@ Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem.
   "title" : "UKHD-EDP Antwortstufen (neutralisiert)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T12:55:11+00:00",
+  "date" : "2026-10-01T13:01:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

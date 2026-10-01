@@ -33,7 +33,7 @@ Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm1
   "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T12:55:11+00:00",
+  "date" : "2026-10-01T13:01:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

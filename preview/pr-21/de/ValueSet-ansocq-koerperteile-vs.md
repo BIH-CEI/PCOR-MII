@@ -33,7 +33,7 @@ Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stad
   "title" : "ANSOCQ Item 3 — Körperteile",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T12:55:11+00:00",
+  "date" : "2026-10-01T13:01:03+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
