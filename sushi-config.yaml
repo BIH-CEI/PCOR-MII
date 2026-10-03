@@ -29,7 +29,7 @@ publisher:
 # (PHQ-9, GAD-7, PROMIS-29, EQ-5D-5L, EORTC QLQ-C30, …) werden referenziert,
 # nicht nachgebaut. SDC ist die Basis der MII-PRO-Profile.
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.5.2
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.6.0
   hl7.fhir.uv.sdc: 3.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -39,6 +39,10 @@ dependencies:
 pages:
   index.md:
     title: Startseite
+  Instrumente.md:
+    title: Instrumentenübersicht
+    PSS.md:
+      title: PSS (Persistent Somatic Syndrome)
   Demographie.md:
     title: Demographie
   MHI.md:
@@ -61,6 +65,12 @@ pages:
       title: PHQ-15
   WHODAS-12.md:
     title: WHODAS 2.0 (12-Item)
+  OPD-SFK.md:
+    title: OPD-SFK (Strukturfragebogen, 12 Items)
+  WAI.md:
+    title: WAI (Work Ability Score)
+  GSLTPAQ.md:
+    title: GSLTPAQ (Freizeitaktivität)
   Implementation.md:
     title: Anwendung
   Validierung.md:
@@ -89,12 +99,18 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Startseite: index.html
+  Instrumente:
+    Übersicht: Instrumente.html
+    PSS: PSS.html
   Fragebögen:
     Demographie: Demographie.html
     MHI: MHI.html
     PROMIS: PROMIS.html
     PHQ: PHQ.html
     WHODAS 2.0: WHODAS-12.html
+    OPD-SFK: OPD-SFK.html
+    WAI: WAI.html
+    GSLTPAQ: GSLTPAQ.html
   Anwendung: Implementation.html
   Validierung: Validierung.html
   Bereitstellung: Bereitstellung.html
