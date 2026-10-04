@@ -58,7 +58,7 @@ Die Bundles werden mit `scripts/build-example-bundles.py` aus den Einzelantworte
 
 ### Use Case PSS — Persistierende somatische Symptome
 
-Fachliche Beschreibung: [PSS](PSS.html).
+Fachliche Beschreibung: [PSS](PSS.html). **Maschinenlesbar:** [Library/use-case-pss](Library-use-case-pss.html) pinnt alle 20 Bögen versioniert (`asset-collection`; Rückwärtssuche per `Library?composed-of=<canonical>`).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
@@ -70,7 +70,7 @@ Fachliche Beschreibung: [PSS](PSS.html).
 
 ### Use Case AN — Anorexia nervosa
 
-Fachliche Beschreibung: [AN](AN.html); vollständige Nachschlagetabelle mit Rechtestatus: [AN — Instrumentenliste](AN-Instrumentenliste.html). Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
+Fachliche Beschreibung: [AN](AN.html); vollständige Nachschlagetabelle mit Rechtestatus: [AN — Instrumentenliste](AN-Instrumentenliste.html). **Maschinenlesbar:** [Library/use-case-an](Library-use-case-an.html) pinnt alle 23 Bögen versioniert. Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
@@ -82,6 +82,6 @@ Fachliche Beschreibung: [AN](AN.html); vollständige Nachschlagetabelle mit Rech
 
 ### Use Case NTx — Nierentransplantation
 
-Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only **vorgesehen** (s. [Instrumente](Instrumente.html)). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-9, …) gelten auch hier.
+Zurückgestellt — kein Manifest (die Codes `ntxr`/`ntxd` führt [pcor-use-case](CodeSystem-pcor-use-case.html) bereits; das Domain Overview trennt Empfänger und Spender). Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only **vorgesehen** (s. [Instrumente](Instrumente.html)). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-9, …) gelten auch hier.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); maschinenlesbare Gesamtliste unter [Artefakte](artifacts.html).

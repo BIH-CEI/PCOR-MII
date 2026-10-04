@@ -58,7 +58,7 @@ The bundles are generated from the individual responses by `scripts/build-exampl
 
 ### Use case PSS — persistent somatic symptoms
 
-Clinical description: [PSS](PSS.html).
+Clinical description: [PSS](PSS.html). **Machine-readable:** [Library/use-case-pss](Library-use-case-pss.html) pins all 20 questionnaires with versions (`asset-collection`; reverse lookup via `Library?composed-of=<canonical>`).
 
 | Instrument | Docs | `Questionnaire` | Example response |
 |---|---|---|---|
@@ -70,7 +70,7 @@ Clinical description: [PSS](PSS.html).
 
 ### Use case AN — anorexia nervosa
 
-Clinical description: [AN](AN.html); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.html). The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
+Clinical description: [AN](AN.html); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.html). **Machine-readable:** [Library/use-case-an](Library-use-case-an.html) pins all 23 questionnaires with versions. The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
@@ -82,6 +82,6 @@ Clinical description: [AN](AN.html); full lookup table with rights status: [AN �
 
 ### Use case NTx — kidney transplantation
 
-No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-9, …) apply here as well.
+Deferred — no manifest yet (the codes `ntxr`/`ntxd` already exist in [pcor-use-case](CodeSystem-pcor-use-case.html); the Domain Overview separates recipient and donor). No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-9, …) apply here as well.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); the machine-readable full list is under [Artifacts](artifacts.html).
