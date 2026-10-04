@@ -1,0 +1,124 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ede-q6-tage",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ede-q6-tage</b></p><a name=\"ede-q6-tage\"> </a><a name=\"hcede-q6-tage\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal().</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td><td><b>Deutsch (German, de)</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"ede-q6-tage-0\"> </a></td><td>No days</td><td>0</td><td>kein Tag</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"ede-q6-tage-1\"> </a></td><td>1-5 days</td><td>1</td><td>1–5 Tage</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"ede-q6-tage-2\"> </a></td><td>6-12 days</td><td>2</td><td>6–12 Tage</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"ede-q6-tage-3\"> </a></td><td>13-15 days</td><td>3</td><td>13–15 Tage</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"ede-q6-tage-4\"> </a></td><td>16-22 days</td><td>4</td><td>16–22 Tage</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"ede-q6-tage-5\"> </a></td><td>23-27 days</td><td>5</td><td>23–27 Tage</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"ede-q6-tage-6\"> </a></td><td>Every day</td><td>6</td><td>jeden Tag</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ede-q6-tage</b></p><a name=\"en-ede-q6-tage\"> </a><a name=\"en-hcede-q6-tage\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>ordinalValue</td><td>ordinalValue</td><td>http://hl7.org/fhir/StructureDefinition/ordinalValue</td><td>decimal</td><td>Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal().</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>ordinalValue</b></td><td><b>Deutsch (German, de)</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"en-ede-q6-tage-0\"> </a></td><td>No days</td><td>0</td><td>kein Tag</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"en-ede-q6-tage-1\"> </a></td><td>1-5 days</td><td>1</td><td>1–5 Tage</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"en-ede-q6-tage-2\"> </a></td><td>6-12 days</td><td>2</td><td>6–12 Tage</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"en-ede-q6-tage-3\"> </a></td><td>13-15 days</td><td>3</td><td>13–15 Tage</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"en-ede-q6-tage-4\"> </a></td><td>16-22 days</td><td>4</td><td>16–22 Tage</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"en-ede-q6-tage-5\"> </a></td><td>23-27 days</td><td>5</td><td>23–27 Tage</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"en-ede-q6-tage-6\"> </a></td><td>Every day</td><td>6</td><td>jeden Tag</td></tr></table></div></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+  "version" : "0.3.0",
+  "name" : "EdeQ6TageCS",
+  "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-04T14:58:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 7,
+  "property" : [{
+    "code" : "ordinalValue",
+    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "description" : "Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal().",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "0",
+    "display" : "No days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "kein Tag"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 0
+    }]
+  },
+  {
+    "code" : "1",
+    "display" : "1-5 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "1–5 Tage"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 1
+    }]
+  },
+  {
+    "code" : "2",
+    "display" : "6-12 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "6–12 Tage"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "3",
+    "display" : "13-15 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "13–15 Tage"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 3
+    }]
+  },
+  {
+    "code" : "4",
+    "display" : "16-22 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "16–22 Tage"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 4
+    }]
+  },
+  {
+    "code" : "5",
+    "display" : "23-27 days",
+    "designation" : [{
+      "language" : "de",
+      "value" : "23–27 Tage"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 5
+    }]
+  },
+  {
+    "code" : "6",
+    "display" : "Every day",
+    "designation" : [{
+      "language" : "de",
+      "value" : "jeden Tag"
+    }],
+    "property" : [{
+      "code" : "ordinalValue",
+      "valueDecimal" : 6
+    }]
+  }]
+}

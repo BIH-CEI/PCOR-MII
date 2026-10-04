@@ -1,0 +1,52 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "pcor-use-case",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pcor-use-case</b></p><a name=\"pcor-use-case\"> </a><a name=\"hcpcor-use-case\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pss<a name=\"pcor-use-case-pss\"> </a></td><td>PSS — Persistierende somatische Symptome</td><td/></tr><tr><td style=\"white-space:nowrap\">an<a name=\"pcor-use-case-an\"> </a></td><td>AN — Anorexia nervosa</td><td/></tr><tr><td style=\"white-space:nowrap\">ntxr<a name=\"pcor-use-case-ntxr\"> </a></td><td>NTXr — Nierentransplantation, Empfänger</td><td>Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert.</td></tr><tr><td style=\"white-space:nowrap\">ntxd<a name=\"pcor-use-case-ntxd\"> </a></td><td>NTXd — Nierentransplantation, Spender</td><td>Zurückgestellt: kein Manifest.</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pcor-use-case</b></p><a name=\"en-pcor-use-case\"> </a><a name=\"en-hcpcor-use-case\"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pss<a name=\"en-pcor-use-case-pss\"> </a></td><td>PSS — Persistierende somatische Symptome</td><td/></tr><tr><td style=\"white-space:nowrap\">an<a name=\"en-pcor-use-case-an\"> </a></td><td>AN — Anorexia nervosa</td><td/></tr><tr><td style=\"white-space:nowrap\">ntxr<a name=\"en-pcor-use-case-ntxr\"> </a></td><td>NTXr — Nierentransplantation, Empfänger</td><td>Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert.</td></tr><tr><td style=\"white-space:nowrap\">ntxd<a name=\"en-pcor-use-case-ntxd\"> </a></td><td>NTXd — Nierentransplantation, Spender</td><td>Zurückgestellt: kein Manifest.</td></tr></table></div></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case",
+  "version" : "0.3.0",
+  "name" : "PcorUseCaseCS",
+  "title" : "PCOR-MII Use Cases",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-04T14:58:31+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary). NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "pss",
+    "display" : "PSS — Persistierende somatische Symptome"
+  },
+  {
+    "code" : "an",
+    "display" : "AN — Anorexia nervosa"
+  },
+  {
+    "code" : "ntxr",
+    "display" : "NTXr — Nierentransplantation, Empfänger",
+    "definition" : "Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert."
+  },
+  {
+    "code" : "ntxd",
+    "display" : "NTXd — Nierentransplantation, Spender",
+    "definition" : "Zurückgestellt: kein Manifest."
+  }]
+}

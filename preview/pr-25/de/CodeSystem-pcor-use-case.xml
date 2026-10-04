@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="pcor-use-case"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem pcor-use-case</b></p><a name="pcor-use-case"> </a><a name="hcpcor-use-case"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">pss<a name="pcor-use-case-pss"> </a></td><td>PSS — Persistierende somatische Symptome</td><td/></tr><tr><td style="white-space:nowrap">an<a name="pcor-use-case-an"> </a></td><td>AN — Anorexia nervosa</td><td/></tr><tr><td style="white-space:nowrap">ntxr<a name="pcor-use-case-ntxr"> </a></td><td>NTXr — Nierentransplantation, Empfänger</td><td>Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert.</td></tr><tr><td style="white-space:nowrap">ntxd<a name="pcor-use-case-ntxd"> </a></td><td>NTXd — Nierentransplantation, Spender</td><td>Zurückgestellt: kein Manifest.</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case"/>
+  <version value="0.3.0"/>
+  <name value="PcorUseCaseCS"/>
+  <title value="PCOR-MII Use Cases"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-10-04T14:58:31+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary). NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="pss"/>
+    <display value="PSS — Persistierende somatische Symptome"/>
+  </concept>
+  <concept>
+    <code value="an"/>
+    <display value="AN — Anorexia nervosa"/>
+  </concept>
+  <concept>
+    <code value="ntxr"/>
+    <display value="NTXr — Nierentransplantation, Empfänger"/>
+    <definition value="Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert."/>
+  </concept>
+  <concept>
+    <code value="ntxd"/>
+    <display value="NTXd — Nierentransplantation, Spender"/>
+    <definition value="Zurückgestellt: kein Manifest."/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Library xmlns="http://hl7.org/fhir">
+  <id value="use-case-pss"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/>
+  <table class="narrative-table">
+    <tbody>
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header">Metadata</th>
+
+
+</tr>
+
+<tr>
+
+
+<th scope="row" class="row-header">Title</th>
+
+
+
+<td class="content-container">Use-Case-Manifest PSS — Persistierende somatische Symptome</td>
+
+
+</tr>
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Version</th>
+
+
+
+<td class="content-container">0.3.0</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Status</th>
+
+
+
+<td class="content-container">Draft</td>
+
+
+</tr>
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Experimental</th>
+
+
+
+<td class="content-container">true</td>
+
+
+</tr>
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Use Context</th>
+
+
+
+<td class="content-container">
+    program from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html">http://terminology.hl7.org/CodeSystem/usage-context-type</a> 
+
+ = 
+    PSS — Persistierende somatische Symptome
+
+
+</td>
+
+
+</tr>
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Jurisdiction</th>
+
+
+
+<td class="content-container">
+    Germany
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Steward (Publisher)</th>
+
+
+
+<td class="content-container">BIH-CEI</td>
+
+
+</tr>
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Steward Contact</th>
+
+
+
+<td class="content-container">BIH-CEI</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Description</th>
+
+
+
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf <a href="https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a> ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt).</p>
+</div></td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Type</th>
+
+
+
+<td class="content-container">
+    asset-collection from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html">http://terminology.hl7.org/CodeSystem/library-type</a> 
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: DEM — Demographie-Sammelbogen
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-DEM.html">DEM — Demographics &amp; Medical History</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: MHI — Medical History
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-MHI.html">MHI — Medical History</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: OPD-SFK — Strukturfragebogen Kurzform
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-OPDSFK.html">OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: WAI — Work Ability Score [metadata-only]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-WAI.html">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: GSLTPAQ — Freizeitaktivität
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: EXPECT — Verlaufserwartung
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-EXPECT.html">EXPECT — Erwartung an den Verlauf der Körperbeschwerden</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: IPQ-S — offene Ursachenfrage
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS-16
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16">MII QST PRO PROMIS-16 (Adults)</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS Cognitive Function SF 4a
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS Depression SF 4a
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a">MII QST PRO PROMIS Depression SF 4a (Adults)</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: WHODAS 2.0 12-Item
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12">MII QST PRO WHODAS 2.0 12-Item</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PHQ-9 — in PSS als PHQ-8 + PHQ-SI erhoben
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9">MII QST PRO PHQ-9</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PHQ-15
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15">MII QST PRO PHQ-15</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: GAD-7
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7">MII QST PRO GAD-7</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: EURONET-SOMA
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma">MII QST PRO EURONET-SOMA</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: SSD-12
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12">MII QST PRO SSD-12</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: Whiteley-7
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7">MII QST PRO WI-7</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: SCOFF
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff">MII QST PRO SCOFF</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: ISR-Z
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z">MII QST PRO ISR-Z</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PC-PTSD
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd">MII QST PRO PC-PTSD</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header"><a name="parameters"> </a>Parameters</th>
+
+
+</tr>
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Parameter</th>
+
+
+
+<td class="content-container">None</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+  <th colspan="2" scope="row" class="row-header">Generated using version 0.5.4 of the sample-content-ig Liquid templates</th>
+</tr>
+
+    </tbody>
+  </table>
+</div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/>
+  <table class="narrative-table">
+    <tbody>
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header">Metadata</th>
+
+
+</tr>
+
+<tr>
+
+
+<th scope="row" class="row-header">Title</th>
+
+
+
+<td class="content-container">Use-Case-Manifest PSS — Persistierende somatische Symptome</td>
+
+
+</tr>
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Version</th>
+
+
+
+<td class="content-container">0.3.0</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Status</th>
+
+
+
+<td class="content-container">Draft</td>
+
+
+</tr>
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Experimental</th>
+
+
+
+<td class="content-container">true</td>
+
+
+</tr>
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Use Context</th>
+
+
+
+<td class="content-container">
+    program from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html">http://terminology.hl7.org/CodeSystem/usage-context-type</a> 
+
+ = 
+    PSS — Persistierende somatische Symptome
+
+
+</td>
+
+
+</tr>
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Jurisdiction</th>
+
+
+
+<td class="content-container">
+    Germany
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Steward (Publisher)</th>
+
+
+
+<td class="content-container">BIH-CEI</td>
+
+
+</tr>
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Steward Contact</th>
+
+
+
+<td class="content-container">BIH-CEI</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Description</th>
+
+
+
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf <a href="https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a> ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt).</p>
+</div></td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Type</th>
+
+
+
+<td class="content-container">
+    asset-collection from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html">http://terminology.hl7.org/CodeSystem/library-type</a> 
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: DEM — Demographie-Sammelbogen
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-DEM.html">DEM — Demographics &amp; Medical History</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: MHI — Medical History
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-MHI.html">MHI — Medical History</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: OPD-SFK — Strukturfragebogen Kurzform
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-OPDSFK.html">OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: WAI — Work Ability Score [metadata-only]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-WAI.html">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: GSLTPAQ — Freizeitaktivität
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: EXPECT — Verlaufserwartung
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-EXPECT.html">EXPECT — Erwartung an den Verlauf der Körperbeschwerden</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: IPQ-S — offene Ursachenfrage
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS-16
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16">MII QST PRO PROMIS-16 (Adults)</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS Cognitive Function SF 4a
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS Depression SF 4a
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a">MII QST PRO PROMIS Depression SF 4a (Adults)</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: WHODAS 2.0 12-Item
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12">MII QST PRO WHODAS 2.0 12-Item</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PHQ-9 — in PSS als PHQ-8 + PHQ-SI erhoben
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9">MII QST PRO PHQ-9</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PHQ-15
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15">MII QST PRO PHQ-15</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: GAD-7
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7">MII QST PRO GAD-7</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: EURONET-SOMA
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma">MII QST PRO EURONET-SOMA</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: SSD-12
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12">MII QST PRO SSD-12</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: Whiteley-7
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7">MII QST PRO WI-7</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: SCOFF
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff">MII QST PRO SCOFF</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: ISR-Z
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z">MII QST PRO ISR-Z</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PC-PTSD
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd">MII QST PRO PC-PTSD</a> version: 2026.7.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2026.7.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header"><a name="parameters"> </a>Parameters</th>
+
+
+</tr>
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Parameter</th>
+
+
+
+<td class="content-container">None</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+  <th colspan="2" scope="row" class="row-header">Generated using version 0.5.4 of the sample-content-ig Liquid templates</th>
+</tr>
+
+    </tbody>
+  </table>
+</div></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/Library/use-case-pss"/>
+  <version value="0.3.0"/>
+  <name value="UseCasePSS"/>
+  <title value="Use-Case-Manifest PSS — Persistierende somatische Symptome"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+      <code value="asset-collection"/>
+    </coding>
+  </type>
+  <date value="2026-10-04"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt)."/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="program"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case"/>
+        <code value="pss"/>
+        <display value="PSS — Persistierende somatische Symptome"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="DEM — Demographie-Sammelbogen"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="MHI — Medical History"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="OPD-SFK — Strukturfragebogen Kurzform"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="WAI — Work Ability Score [metadata-only]"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="GSLTPAQ — Freizeitaktivität"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="EXPECT — Verlaufserwartung"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="IPQ-S — offene Ursachenfrage"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PROMIS-16"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PROMIS Cognitive Function SF 4a"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PROMIS Depression SF 4a"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="WHODAS 2.0 12-Item"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PHQ-9 — in PSS als PHQ-8 + PHQ-SI erhoben"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PHQ-15"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="GAD-7"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="EURONET-SOMA"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="SSD-12"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="Whiteley-7"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="SCOFF"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="ISR-Z"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2026.7.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PC-PTSD"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2026.7.0"/>
+  </relatedArtifact>
+</Library>
