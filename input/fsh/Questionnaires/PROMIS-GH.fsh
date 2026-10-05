@@ -6,7 +6,7 @@
 // Originalinstrument: PROMIS® Scale v1.2 – Global Health (10 Items, Global01–
 //   Global10), PROMIS Health Organization / Northwestern University.
 //
-// ⚠️ MINIMALVARIANTE — BEWUSST NUR 2 VON 10 ITEMS.
+// ⚠️ 2-ITEM-SHORTFORM — BEWUSST NUR 2 VON 10 ITEMS.
 //   Das MII-PRO-Modul (de.medizininformatikinitiative.kerndatensatz.pros,
 //   geprüft gegen 2026.6.0) enthält KEINEN Global-Health-Questionnaire: eine
 //   Suche über alle 31 Questionnaires des Pakets findet weder 61577-3 noch
@@ -42,7 +42,7 @@
 //     Parent LP248772-8 — Beleg für die Zugehörigkeit der Items zur v1.2-Skala.
 //
 // PROFIL: mii-pr-pro-questionnaire (PROMIS ist ein PRO-Instrument). Das Profil
-//   erzwingt zwei Angaben, die eine Minimalvariante strenggenommen nicht sauber
+//   erzwingt zwei Angaben, die eine 2-Item-ShortForm strenggenommen nicht sauber
 //   abbilden kann:
 //     - capabilities-Extension (1..1) -> gesetzt, calculatable/extractable/
 //       domainAligned bewusst false.
@@ -113,8 +113,8 @@ Description: "5-stufige Antwortskala der PROMIS-Global-Health-Items Global01 und
 Instance: PROMISGH
 InstanceOf: Questionnaire
 Usage: #definition
-Title: "PROMIS Global Health — Global01/Global02 (2-Item-Minimalvariante)"
-Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). MINIMALVARIANTE: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."
+Title: "PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)"
+Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."
 // PROMIS ist ein PRO-Instrument -> MII-PRO-Profil (nicht ISiKFormularDefinition,
 // die nur für die Nicht-PRO-Bögen DEM/MHI/GSLTPAQ/OPD-SFK/WAI gesetzt wird).
 * meta.profile = $mii-pro-questionnaire
