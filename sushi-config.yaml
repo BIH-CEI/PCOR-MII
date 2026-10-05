@@ -28,9 +28,16 @@ publisher:
 # Wir bauen auf dem MII-PRO-Modul auf: dessen fertige PRO-Questionnaires
 # (PHQ-9, GAD-7, PROMIS-29, EQ-5D-5L, EORTC QLQ-C30, …) werden referenziert,
 # nicht nachgebaut. SDC ist die Basis der MII-PRO-Profile.
+#
+# de.gematik.isik liefert ISiKFormularDefinition / ISiKFormularDaten. Damit
+# werden die PCOR-MII-eigenen Nicht-PRO-Fragebögen (DEM, MHI, GSLTPAQ, OPD-SFK,
+# WAI) zusätzlich als ISiK-kompatible Formulare ausgewiesen. Version bewusst
+# 5.1.1 — identisch zur transitiven Anforderung des MII-PRO-Moduls, um einen
+# Versionskonflikt im Dependency-Baum zu vermeiden.
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.pros: 2026.6.0
   hl7.fhir.uv.sdc: 3.0.0
+  de.gematik.isik: 5.1.1
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in

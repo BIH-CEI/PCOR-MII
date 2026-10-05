@@ -13,7 +13,7 @@ PCOR-MII referenziert die im MII PRO-Modul gepflegten PROMIS-Questionnaires — 
 
 #### Ausnahme: PROMIS Global Health (Global01/Global02)
 
-Zwei Einzelitems der **PROMIS Scale v1.2 – Global Health** werden in PCOR-MII erhoben, sind im MII PRO-Modul (geprüft gegen `2026.5.2`) aber nicht abgebildet — weder als Questionnaire noch als Katalogeintrag:
+Zwei Einzelitems der **PROMIS Scale v1.2 – Global Health** werden in PCOR-MII erhoben, sind im MII PRO-Modul (geprüft gegen `2026.6.0`) aber nicht abgebildet — weder als Questionnaire noch als Katalogeintrag:
 
 | Variable | LOINC | Item (DE) |
 |---|---|---|

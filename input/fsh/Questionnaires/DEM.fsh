@@ -526,7 +526,10 @@ Title: "DEM — Demographics & Medical History"
 Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument."
 // SDC-Base-Profil (wie die MII-PRO-Questionnaires, die auf SDC aufsetzen).
 // NICHT mii-pr-pro-questionnaire: DEM ist Demographie/Anamnese, kein PRO.
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire" //Isik!!!
+// Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
+// Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
+// die verwendeten SDC-Extensions sind davon unberührt.
+* meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM"
 * name = "DEM"
 * version = "0.1.0"

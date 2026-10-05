@@ -345,7 +345,10 @@ InstanceOf: Questionnaire
 Usage: #definition
 Title: "MHI — Medical History"
 Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument."
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+// Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
+// Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
+// die verwendeten SDC-Extensions sind davon unberührt.
+* meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI"
 * name = "MHI"
 * version = "0.1.0"

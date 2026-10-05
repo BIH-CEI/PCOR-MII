@@ -11,8 +11,13 @@ InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "MHI — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History)."
+* meta.profile = $isik-formulardaten
 * language = #de-DE
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
 * questionnaire = Canonical(MHI)
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "MHI — Medical History"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-17T10:00:00+02:00"

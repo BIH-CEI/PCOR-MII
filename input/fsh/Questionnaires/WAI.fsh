@@ -98,7 +98,10 @@ InstanceOf: Questionnaire
 Usage: #definition
 Title: "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)"
 Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original."
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+// Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
+// Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
+// die verwendeten SDC-Extensions sind davon unberührt.
+* meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI"
 * name = "WAI"
 * version = "0.1.0"

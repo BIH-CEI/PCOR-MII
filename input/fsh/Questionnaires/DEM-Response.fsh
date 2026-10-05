@@ -3,7 +3,7 @@
 // Ausgefülltes Beispiel zum DEM-Questionnaire (siehe DEM.fsh). Wird auf der
 // Seite Demographie.md zusätzlich zur leeren Form gerendert.
 // Hinweis: nur Items mit erfüllter enableWhen-Bedingung sind beantwortet.
-// DEM ist kein PRO -> kein MII-PRO-Profil auf der QR.
+// DEM ist kein PRO -> kein MII-PRO-Profil auf der QR, sondern ISiKFormularDaten.
 // ─────────────────────────────────────────────────────────────────────────────
 
 Instance: pcor-mii-exa-patient
@@ -21,8 +21,13 @@ InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "DEM — Beispielantwort"
 Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
+* meta.profile = $isik-formulardaten
 * language = #de-DE
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
 * questionnaire = Canonical(DEM)
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "DEM — Demographie"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient)
 * authored = "2026-06-16T10:00:00+02:00"

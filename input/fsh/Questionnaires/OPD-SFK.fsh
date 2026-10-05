@@ -97,7 +97,10 @@ InstanceOf: Questionnaire
 Usage: #definition
 Title: "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"
 Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`."
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+// Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
+// Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
+// die verwendeten SDC-Extensions sind davon unberührt.
+* meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
 * version = "0.1.0"

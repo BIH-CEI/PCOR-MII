@@ -19,6 +19,18 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`feature`** Neuer Questionnaire `PROMISGH` — PROMIS Global Health Global01 (`61577-3`) und Global02 (`61578-1`) mit ValueSet `promis-global-skala-5-vs` (Answerlist `LL4280-5`). Übergangslösung, bis die vollständige 10-Item-Skala (Panel `85524-7`) im MII-PRO-Modul vorliegt; Global07 ist über PROMIS-29 abgedeckt
+
+**`feature`** ISiK-Formularprofile: neue Abhängigkeit `de.gematik.isik 5.1.1`; `DEM`, `MHI`, `GSLTPAQ`, `OPD-SFK`, `WAI` als `ISiKFormularDefinition`, `DEMResponse` und `MHIResponse` als `ISiKFormularDaten`
+
+**`improve`** `meta.profile` durchgehend versionsgepinnt (`url|version`), Beispiele eingeschlossen; Profil-Canonicals zentral in `Aliases.fsh`
+
+**`improve`** SDC-Profil aus `meta.profile` der Nicht-PRO-Fragebögen entfernt — SDC bleibt Abhängigkeit, die SDC-Extensions sind unberührt
+
+**`fix`** Beispielantworten auf `mii-pr-pro-questionnaire-response|2026.6.0` gezogen (war `2026.4.1` und damit für den Validator nicht auflösbar)
+
+**`fix`** `PcorExampleQuestionnaire` profilkonform: `capabilities`-Extension und `code` ergänzt — die Verstöße waren durch den unauflösbaren Profil-Pin verdeckt
+
 **`improve`** MII-PRO-Abhängigkeit auf 2026.6.0 angehoben (rein additiv gegenüber 2026.5.2: neue Questionnaires EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12, WI-7 samt Score-`ObservationDefinition`s)
 
 **`feature`** OPD-SFK, WAI und GSLTPAQ als PCOR-MII-eigene Instrumente (nicht im MII-PRO-Modul enthalten)
