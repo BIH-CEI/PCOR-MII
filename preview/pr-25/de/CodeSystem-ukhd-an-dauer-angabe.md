@@ -24,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-04T14:58:31+00:00",
+  "date" : "2026-10-06T08:04:25+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

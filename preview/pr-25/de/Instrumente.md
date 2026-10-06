@@ -35,7 +35,7 @@ Jedes Item ist im Dictionary einer von acht Kategorien zugeordnet:
 
 ### Instrumentenübersicht
 
-Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; die Zahl ist die Item-Anzahl laut Dictionary.
+Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; die Zahl ist die Item-Anzahl laut Dictionary. Beim PHQ ist in **allen Entitäten der PHQ-8 der Standard**; der vollständige PHQ-9 ist nur zulässig, wenn auf die Erhebung unmittelbar ein Arztkontakt vor Ort folgt — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.md)).
 
 | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | WHODAS 2.0, 12-Item (14) | GHS | • | • | • | WHO-lizenzpflichtig | [WHODAS 2.0](WHODAS-12.md) |
 | GAD-7 / GAD-2 / PHQ-4 (7) | GHS | • | • | • | frei | [GAD-7](GAD-7.md)— seit MII PRO 2026.7.0 |
 | PHQ-15 (13) | GHS | • | • | • | frei | [PHQ-15](PHQ-15.md) |
-| PHQ-4 / PHQ-8 / PHQ-9 / PHQ-15 (8) | GHS | • (PHQ-8) | • (PHQ-9) | • (PHQ-9) | frei | [PHQ-Übersicht](PHQ.md),[PHQ-9](PHQ-9.md) |
+| PHQ-4 / PHQ-8 / PHQ-9 / PHQ-15 (8) | GHS | • (PHQ-8) | • (PHQ-8) | • (PHQ-8) | frei | [PHQ-Übersicht](PHQ.md),[PHQ-9](PHQ-9.md) |
 | EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | [EURONET-SOMA](EURONET-SOMA.md)— MII PRO seit 2026.6.0 |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **nicht veröffentlichbar** | [WAI](WAI.md)— metadata-only |
 | PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | `phq-phq2i`aus[PHQ-9](PHQ-9.md) |

@@ -15,6 +15,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 ### Hinweise
 
 * **Item 9 (Suizidalität)** erfragt Gedanken, „lieber tot zu sein oder sich Leid zuzufügen". Eine positive Antwort ist klinisch relevant und erfordert im Anwendungskontext ein definiertes Vorgehen — nicht als reines Skalen-Item behandeln.
+* **Einsatzregel in PCOR-MII:** Standard ist in allen Use Cases der **PHQ-8** (Items `phq-phq2a…h`). Der vollständige PHQ-9 inklusive Item 9 darf nur eingesetzt werden, wenn auf die Erhebung unmittelbar ein **Arztkontakt vor Ort** folgt — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.md)).
 * **Alt-Daten:** PHQ-9-Antworten von vor 2026.5.0 tragen ein älteres Item-`linkId`-Schema und passen nicht mehr zum aktuellen Questionnaire. Die Migrationstabelle steht auf der [PHQ-Übersicht](PHQ.md).
 * **PHQ-8:** Alle acht PHQ-8-Items sind identisch im PHQ-9 enthalten (`phq-phq2a…h`) — für eine PHQ-8-Erhebung kann daher die PHQ-9-Definition genutzt werden; es entfällt lediglich das Suizid-Item `phq-phq2i`.
 

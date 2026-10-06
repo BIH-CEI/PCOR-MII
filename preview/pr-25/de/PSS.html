@@ -450,7 +450,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="phq-familie-in-pss">PHQ-Familie in PSS</h3>
 
-<p>In PSS wird der <strong>PHQ-8</strong> erhoben (AN und NTx: PHQ-9) — also die acht Depressions-Items ohne das Suizid-Item. Dieses wird stattdessen <strong>separat als <code class="language-plaintext highlighter-rouge">PHQ-SI</code></strong> geführt. Beides sind Items derselben PHQ-9-Definition:</p>
+<p>Der <strong>PHQ-8 ist der Standard — in PSS wie in allen Use Cases</strong>: die acht Depressions-Items ohne das Suizid-Item. Dieses wird <strong>separat als <code class="language-plaintext highlighter-rouge">PHQ-SI</code></strong> geführt. Der vollständige PHQ-9 darf nur erhoben werden, wenn <strong>unmittelbar ein Arztkontakt vor Ort folgt</strong> — kein Einsatz im Monitoring (siehe <a href="PHQ.html">PHQ-Übersicht</a>). Beides sind Items derselben PHQ-9-Definition:</p>
 
 <table>
   <thead>
@@ -474,7 +474,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9; die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität gesondert behandelbar), keine inhaltliche Abweichung. Siehe <a href="PHQ.html">PHQ-Übersicht</a>.</p>
+<p>Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9 — zulässig nur im Setting mit unmittelbar folgendem Arztkontakt vor Ort. Die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität nie ohne Management-Plan bzw. Alert), keine inhaltliche Abweichung. Siehe <a href="PHQ.html">PHQ-Übersicht</a>.</p>
 
 <p>Der <strong>PHQ-D-Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul <strong>kein Artefakt</strong> — weder Questionnaire noch <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace. Bedarf wäre dort anzumelden.</p>
 
@@ -482,7 +482,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.</li>
-  <li><strong>PSS und AN gemeinsam</strong>: OPD-SFK und PHQ-SI.</li>
+  <li><strong>PSS und AN gemeinsam</strong>: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.</li>
   <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe <a href="AN.html">AN</a>.</li>
   <li><strong>Nur in NTx</strong>: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.</li>
 </ul>
@@ -502,7 +502,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Für PSS gibt es seit dem 01.10.2026 einen <strong>synthetischen Beispielpatienten</strong> (<a href="Patient-pcor-mii-exa-patient-pss.html">pcor-mii-exa-patient-pss</a>): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).</p>
 
-<p>Der Screening-Termin 25.06.2026 ist als <strong><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">Bundle</a></strong> gebündelt und umfasst die <strong>vollständige Batterie</strong> — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf <strong>MII-PRO-Questionnaires</strong> (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter <code class="language-plaintext highlighter-rouge">input/examples/</code>, referenziert gegen die Upstream-Canonicals mit Versionspin <code class="language-plaintext highlighter-rouge">|2026.7.0</code>. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von <code class="language-plaintext highlighter-rouge">PSS-Responses.fsh</code>. Alle Antworten einzeln: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>.</p>
+<p>Der Screening-Termin 25.06.2026 ist als <strong><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">Bundle</a></strong> gebündelt und umfasst die <strong>vollständige Batterie</strong> — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf <strong>MII-PRO-Questionnaires</strong> (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter <code class="language-plaintext highlighter-rouge">input/examples/</code>, referenziert gegen die Upstream-Canonicals mit Versionspin <code class="language-plaintext highlighter-rouge">|2026.7.0</code>. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von <code class="language-plaintext highlighter-rouge">PSS-Responses.fsh</code>. Alle Antworten einzeln: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -556,8 +556,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-04 14:58:00 +0000">
-    2026-10-04
+  <span title="2026-10-06 08:04:00 +0000">
+    2026-10-06
   </span>
 
           <br/>

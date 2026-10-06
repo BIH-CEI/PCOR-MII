@@ -80,11 +80,11 @@ Fachliche Beschreibung: [AN](AN.md); vollständige Nachschlagetabelle mit Rechte
 | ACE + Zeitangaben (Komposit) | [ACE](ACE.md) | [ACE](Questionnaire-ACE.md) | [✓](QuestionnaireResponse-ACEResponse.md) |
 | UKHD-Zusatzitems (6 Bögen) | [Übersicht](UKHD-Zusatzitems.md) | [PT](Questionnaire-UKHDPT.md)·[ANB](Questionnaire-UKHDANB.md)·[CT](Questionnaire-UKHDCT.md)·[LE](Questionnaire-UKHDLE.md)·[ND](Questionnaire-UKHDND.md)·[D](Questionnaire-UKHDD.md) | fünf von sechs — s. Gesamttabelle |
 | UKHD-EDP (metadata-only) | [UKHD-EDP](UKHD-EDP.md) | [UKHDEDP](Questionnaire-UKHDEDP.md) | — |
-| PHQ-9, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | s. Gesamttabelle | s. Gesamttabelle | — |
+| PHQ-8, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | s. Gesamttabelle | s. Gesamttabelle | — |
 
 ### Use Case NTx — Nierentransplantation
 
-Zurückgestellt — kein Manifest (die Codes `ntxr`/`ntxd` führt [pcor-use-case](CodeSystem-pcor-use-case.md) bereits; das Domain Overview trennt Empfänger und Spender). Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only **vorgesehen** (s. [Instrumente](Instrumente.md)). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-9, …) gelten auch hier.
+Zurückgestellt — kein Manifest (die Codes `ntxr`/`ntxd` führt [pcor-use-case](CodeSystem-pcor-use-case.md) bereits; das Domain Overview trennt Empfänger und Spender). Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only **vorgesehen** (s. [Instrumente](Instrumente.md)). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-8, …) gelten auch hier.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); maschinenlesbare Gesamtliste unter [Artefakte](artifacts.md).
 
