@@ -959,7 +959,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <p><strong>Was <code class="language-plaintext highlighter-rouge">derivedFrom</code> nicht leistet.</strong> Es sagt <em>dass</em> abgeleitet wurde, nicht <em>wie</em>. Übersetzung, Kurzform, Adaption und Teilmenge sind alle „based on" und im Element nicht unterscheidbar. R4 hat für <code class="language-plaintext highlighter-rouge">Questionnaire</code> <strong>kein</strong> eigenes Element für eine Übersetzungsbeziehung und auch kein <code class="language-plaintext highlighter-rouge">relatedArtifact</code>. Die <strong>Art</strong> der Ableitung gehört deshalb zwingend in den <code class="language-plaintext highlighter-rouge">designNote</code> — sonst ist die Angabe kaum interpretierbar.</p>
 
-<p><strong>Wichtige Abgrenzung: eine Übersetzung ist kein <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf eine andere Übersetzung.</strong> Zwei Übersetzungen desselben Instruments sind <strong>Geschwister</strong>, nicht Eltern und Kind — beide leiten sich vom Original ab, nicht voneinander. Beim <a href="GSLTPAQ.html">GSLTPAQ</a> heißt das: Die PCOR-MII-Eigenübersetzung zeigt <strong>nicht</strong> auf die validierte deutsch-österreichische Fassung und umgekehrt auch nicht; beide zeigen, sobald es sie als Ressource gibt, auf das englische Original.</p>
+<p><strong>Wichtige Abgrenzung: eine Übersetzung ist kein <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf eine andere Übersetzung.</strong> Zwei Übersetzungen desselben Instruments sind <strong>Geschwister</strong>, nicht Eltern und Kind — beide leiten sich vom Original ab, nicht voneinander. Beim <a href="GSLTPAQ.html">GSLTPAQ</a> heißt das: Die UKE/SOMACROSS-Übersetzung zeigt <strong>nicht</strong> auf die validierte deutsch-österreichische Fassung und umgekehrt auch nicht; beide zeigen, sobald es sie als Ressource gibt, auf das englische Original.</p>
 
 <p><strong>Und der Wortlaut folgt der Rechtekette, nicht der Zitationskette.</strong> Wo die Übersetzung herkommt, ist eine andere Frage als wo das Instrument herkommt, und die DIZ-Implementierungsliste vermischt beides in einer Zelle. Zwei Beispiele aus diesem Projekt: Beim <a href="EDE-Q6.html">EDE-Q6</a> nennt die Liste als Übersetzungspaper die psychometrische <em>Evaluation</em> — der Wortlaut stammt aber aus der dgvt-Publikation. Beim <a href="ERQ-6.html">ERQ-6</a> liefert das Übersetzungspaper (Abler &amp; Kessler 2009) die <strong>Langform</strong>, aus der die sechs Items entnommen sind — während das dort genannte <em>Entwicklungspaper</em> ein anderes Instrument beschreibt als das erhobene. In beiden Fällen ist die Wortlautquelle in <code class="language-plaintext highlighter-rouge">copyright</code> zu nennen, nicht bloß das Paper, das die Liste angibt.</p>
 
@@ -1035,7 +1035,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 <h4 id="-adr-007--zwei-unabhängige-übersetzungen-werden-zwei-questionnaires-nicht-zwei-sprachen-und-nicht-zwei-versionen">✅ ADR-007 — Zwei unabhängige Übersetzungen werden zwei Questionnaires, nicht zwei Sprachen und nicht zwei Versionen</h4>
 <p><strong>Entschieden 2026-09-30.</strong> Anlass: <a href="GSLTPAQ.html">GSLTPAQ</a>.</p>
 
-<p><strong>Die Lage.</strong> PCOR-MII bildet beim GSLTPAQ eine <strong>hausinterne Eigenübersetzung</strong> ab — die vorhandenen Studiendaten wurden mit ihr erhoben. Seit kurzem existiert eine <strong>linguistisch validierte</strong> deutsch-österreichische Übersetzung (Lindner, Bamberger, Crutzen &amp; Kulnik, <em>Measurement and Evaluations in Cancer Care</em> 2026, <a href="https://doi.org/10.1016/j.ymecc.2026.100027">doi:10.1016/j.ymecc.2026.100027</a>), die perspektivisch im MII-PRO-Modul gepflegt werden soll. Beide Wortlaute werden also gebraucht. Die Frage ist, wie man sie unterscheidet.</p>
+<p><strong>Die Lage.</strong> PCOR-MII bildet beim GSLTPAQ eine nicht validierte deutsche Übersetzung ab — die vorhandenen Studiendaten wurden mit ihr erhoben. <em>(Ursprünglich als „hausinterne Eigenübersetzung" geführt; Herkunft inzwischen geklärt, siehe Nachtrag unten.)</em> Seit kurzem existiert eine <strong>linguistisch validierte</strong> deutsch-österreichische Übersetzung (Lindner, Bamberger, Crutzen &amp; Kulnik, <em>Measurement and Evaluations in Cancer Care</em> 2026, <a href="https://doi.org/10.1016/j.ymecc.2026.100027">doi:10.1016/j.ymecc.2026.100027</a>), die perspektivisch im MII-PRO-Modul gepflegt werden soll. Beide Wortlaute werden also gebraucht. Die Frage ist, wie man sie unterscheidet.</p>
 
 <p><strong>Entscheidung: zwei getrennte <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Ressourcen mit eigenen Canonicals und eigenen Maintainern.</strong> Nicht zwei Sprachebenen auf einer Ressource, nicht zwei Versionen derselben Ressource.</p>
 
@@ -1049,7 +1049,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <ul>
   <li><strong>Eigentum und Lebenszyklus</strong> unterscheiden sich: eine projekteigene Übersetzung gegen eine publizierte Fremdübersetzung, die ins Kernmodul gehört.</li>
-  <li><strong>Rechte</strong> unterscheiden sich: Die Eigenübersetzung ist die des Projekts, Lindner et al. bringen eigene Bedingungen mit.</li>
+  <li><strong>Rechte</strong> unterscheiden sich: Die erste Übersetzung hat eigene Urheber (UKE, siehe Nachtrag), Lindner et al. bringen wieder andere Bedingungen mit.</li>
   <li><strong>Validierungsstatus ist eine Eigenschaft des Instruments</strong>, nicht der Sprache — und gehört daher auf die Ressourcenebene.</li>
   <li>Entscheidend: <strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> wird eindeutig.</strong> Aus der Antwort allein ist ablesbar, welchen Wortlaut die Person vorgelegt bekam. Für die Auswertung ist das die wichtigste Eigenschaft überhaupt — und sie ist bei Sprachebenen wie bei Versionen ohne <code class="language-plaintext highlighter-rouge">|version</code>-Pin nicht gegeben.</li>
 </ul>
@@ -1064,7 +1064,9 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
   <li><strong>Vergleichbarkeit ausdrücklich ausweisen</strong>, nicht voraussetzen: Antworten aus beiden Fassungen sind nicht ohne Weiteres poolbar.</li>
 </ol>
 
-<p><strong>Ein zweiter Haken, der beim Wechsel zu bedenken ist:</strong> Die validierte Übersetzung ist deutsch-<strong>österreichisch</strong>. Für eine Erhebung in Deutschland ist damit auch sie nicht im strengen Sinn kontextvalidiert. Das ist kein Grund, sie nicht zu bevorzugen — sie ist linguistisch validiert und die Eigenübersetzung nicht —, aber es ist ein Punkt für die Dokumentation und nicht zu verschweigen.</p>
+<p><strong>Ein zweiter Haken, der beim Wechsel zu bedenken ist:</strong> Die validierte Übersetzung ist deutsch-<strong>österreichisch</strong>. Für eine Erhebung in Deutschland ist damit auch sie nicht im strengen Sinn kontextvalidiert. Das ist kein Grund, sie nicht zu bevorzugen — sie ist linguistisch validiert und die erste Übersetzung nicht —, aber es ist ein Punkt für die Dokumentation und nicht zu verschweigen.</p>
+
+<p><strong>Nachtrag (2026-10-06) — Herkunft geklärt, Entscheidung bestätigt.</strong> Die erste Übersetzung ist <strong>keine PCOR-MII-Eigenübersetzung</strong>: Sie stammt aus <strong>SOMACROSS 2.0</strong>, Übersetzer ist das <strong>UKE</strong> (Universitätsklinikum Hamburg-Eppendorf) — PCOR-MII war an ihr nicht beteiligt. Das <code class="language-plaintext highlighter-rouge">copyright</code>-Element des <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ</a> weist das UKE seither als Übersetzer aus. Zugleich hat die Use-Case-Leitung das Vorgehen dieser ADR bestätigt: <strong>Beide Fassungen werden abgebildet</strong>; Metadaten und Versionierung machen die Unterscheidung klar, jede <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> weist eindeutig aus, mit welcher Definition sie erhoben wurde, und die <code class="language-plaintext highlighter-rouge">linkId</code>s bleiben identisch, solange keine strukturellen Änderungen nötig werden. Das Argument „Eigentum: projekteigene Übersetzung" oben ist damit hinfällig — die übrigen Gründe (Validierungsstatus als Ressourceneigenschaft, eindeutige <code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz, getrennte Rechte und Lebenszyklen) tragen die Entscheidung unverändert.</p>
 
 <p><strong>Geltungsbereich.</strong> Die Regel gilt über den GSLTPAQ hinaus für jeden Fall, in dem eine projekteigene und eine publizierte Übersetzung desselben Instruments nebeneinander bestehen. Sie gilt <strong>nicht</strong> für regionale Varianten derselben Übersetzung — dort bleibt ADR-005 (unten) maßgeblich (Sprachtags, eine Ressource).</p>
 
@@ -1326,7 +1328,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-06 08:04:00 +0000">
+  <span title="2026-10-06 08:15:00 +0000">
     2026-10-06
   </span>
 

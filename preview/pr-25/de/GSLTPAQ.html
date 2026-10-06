@@ -365,14 +365,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="übersetzung--bewusste-abweichung-vom-validierten-wortlaut">Übersetzung — bewusste Abweichung vom validierten Wortlaut</h3>
 
 <blockquote>
-  <p><strong>Wichtig:</strong> PCOR-MII bildet die <strong>hausinterne Eigenübersetzung</strong> aus dem Item Level Dictionary ab — <strong>nicht</strong> die sprachlich validierte deutsch-österreichische Übersetzung.</p>
+  <p><strong>Wichtig:</strong> PCOR-MII bildet die deutsche Übersetzung aus dem Item Level Dictionary ab — <strong>nicht</strong> die sprachlich validierte deutsch-österreichische Übersetzung.</p>
 </blockquote>
 
-<p>Grund: Die vorliegenden Studiendaten wurden bereits mit dieser Eigenübersetzung erhoben; ein nachträglicher Wortlautwechsel würde die Vergleichbarkeit der Zeitreihe brechen. Die Eigenübersetzung ist <strong>nicht linguistisch validiert</strong>.</p>
+<p><strong>Herkunft — geklärt (Use-Case-Leitung, 2026-10-06):</strong> Die Übersetzung ist <strong>keine PCOR-MII-Eigenübersetzung</strong> (so wurde sie hier zunächst geführt), sondern stammt aus <strong>SOMACROSS 2.0</strong>; Übersetzer ist das <strong>UKE</strong> (Universitätsklinikum Hamburg-Eppendorf). Das <code class="language-plaintext highlighter-rouge">copyright</code>-Element weist das UKE entsprechend als Übersetzer aus.</p>
+
+<p>Grund für die Beibehaltung: Die vorliegenden Studiendaten wurden bereits mit dieser Fassung erhoben; ein nachträglicher Wortlautwechsel würde die Vergleichbarkeit der Zeitreihe brechen. Die UKE/SOMACROSS-Übersetzung ist <strong>nicht linguistisch validiert</strong>.</p>
 
 <p>Die validierte Fassung — Lindner A, Bamberger EM, Crutzen R, Kulnik ST. <em>Translation to German (Austrian) and qualitative linguistic validation of the Godin-Shephard Leisure-Time Physical Activity Questionnaire.</em> Measurement and Evaluations in Cancer Care 2026;4:100027. <a href="https://doi.org/10.1016/j.ymecc.2026.100027">doi:10.1016/j.ymecc.2026.100027</a> — soll perspektivisch <strong>separat als kanonische GSLTPAQ-Version im MII-PRO-Modul</strong> gepflegt werden, dort mit dem validierten Wortlaut, nicht in PCOR-MII.</p>
 
-<p><strong>Wie die beiden Fassungen auseinandergehalten werden — entschieden:</strong> als <strong>zwei getrennte <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Ressourcen</strong> mit eigenen Canonicals, nicht als zwei Sprachebenen einer Ressource und nicht als zwei Versionen. Ein Sprachtag würde eine sprachliche Varietät behaupten statt eines Validierungsunterschieds; ein Versionssprung würde Ablösung behaupten, obwohl die Eigenübersetzung für die bestehende Zeitreihe gültig bleibt. Beide Fassungen tragen <strong>dieselben <code class="language-plaintext highlighter-rouge">linkId</code>s</strong> und denselben Katalogcode, sodass sie als zwei Fassungen eines Instruments erkennbar sind; die Zusammenführung von Antworten aus beiden bleibt eine bewusste Entscheidung der Auswertung. Begründung und Umsetzungsregeln in <a href="Designentscheidungen.html">ADR-007</a>.</p>
+<p><strong>Wie die beiden Fassungen auseinandergehalten werden — entschieden und von der Use-Case-Leitung bestätigt (2026-10-06: beide Fassungen werden abgebildet; Metadaten und Versionierung machen die Unterscheidung klar, jede <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> weist eindeutig aus, mit welcher Definition sie erhoben wurde, <code class="language-plaintext highlighter-rouge">linkId</code>s bleiben identisch):</strong> als <strong>zwei getrennte <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Ressourcen</strong> mit eigenen Canonicals, nicht als zwei Sprachebenen einer Ressource und nicht als zwei Versionen. Ein Sprachtag würde eine sprachliche Varietät behaupten statt eines Validierungsunterschieds; ein Versionssprung würde Ablösung behaupten, obwohl die Eigenübersetzung für die bestehende Zeitreihe gültig bleibt. Beide Fassungen tragen <strong>dieselben <code class="language-plaintext highlighter-rouge">linkId</code>s</strong> und denselben Katalogcode, sodass sie als zwei Fassungen eines Instruments erkennbar sind; die Zusammenführung von Antworten aus beiden bleibt eine bewusste Entscheidung der Auswertung. Begründung und Umsetzungsregeln in <a href="Designentscheidungen.html">ADR-007</a>.</p>
 
 <p><strong>Zu bedenken beim Wechsel:</strong> Die validierte Übersetzung ist deutsch-<strong>österreichisch</strong>. Für eine Erhebung in Deutschland ist auch sie damit nicht im strengen Sinn kontextvalidiert — sie ist linguistisch validiert, die Eigenübersetzung ist es nicht, aber ein Restunterschied bleibt.</p>
 
@@ -443,7 +445,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-06 08:04:00 +0000">
+  <span title="2026-10-06 08:15:00 +0000">
     2026-10-06
   </span>
 

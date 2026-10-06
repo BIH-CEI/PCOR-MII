@@ -67,7 +67,7 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "gsltpaq",
     "display" : "GSLTPAQ",
-    "definition" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"
+    "definition" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)"
   },
   {
     "code" : "expect",

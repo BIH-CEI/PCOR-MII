@@ -48,7 +48,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
+  "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. Deutsche Übersetzung aus SOMACROSS 2.0 (Übersetzer: UKE), übernommen über das Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -56,6 +56,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "display" : "Germany"
     }]
   }],
+  "copyright" : "Originalinstrument: Godin G. The Godin-Shephard leisure-time physical activity questionnaire. Health Fit J Can 2011;4:18–22 (doi:10.14288/hfjc.v4i1.82); der Originalbogen ist im Artikel abgedruckt. Deutsche Fassung: Übersetzung aus SOMACROSS 2.0, Übersetzer: Universitätsklinikum Hamburg-Eppendorf (UKE); nicht linguistisch validiert (Herkunft bestätigt durch die Use-Case-Leitung, 2026-10-06). Nicht identisch mit der linguistisch validierten deutsch-österreichischen Übersetzung (Lindner et al. 2026, doi:10.1016/j.ymecc.2026.100027). Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen bzw. Übersetzer:innen; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).",
   "code" : [{
     "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
     "code" : "gsltpaq",
