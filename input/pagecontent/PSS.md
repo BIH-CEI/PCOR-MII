@@ -35,21 +35,21 @@ Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (`UKE-
 
 ### PHQ-Familie in PSS
 
-In PSS wird der **PHQ-8** erhoben (AN und NTx: PHQ-9) — also die acht Depressions-Items ohne das Suizid-Item. Dieses wird stattdessen **separat als `PHQ-SI`** geführt. Beides sind Items derselben PHQ-9-Definition:
+Der **PHQ-8 ist der Standard — in PSS wie in allen Use Cases**: die acht Depressions-Items ohne das Suizid-Item. Dieses wird **separat als `PHQ-SI`** geführt. Der vollständige PHQ-9 darf nur erhoben werden, wenn **unmittelbar ein Arztkontakt vor Ort folgt** — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.html)). Beides sind Items derselben PHQ-9-Definition:
 
 | Dictionary | `linkId`s | Bedeutung |
 |---|---|---|
 | PHQ-8 | `phq-phq2a`–`phq-phq2h` | Depressivität ohne Suizid-Item |
 | PHQ-SI | `phq-phq2i` | Suizidalität — genau das Item, das PHQ-9 vom PHQ-8 unterscheidet |
 
-Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9; die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität gesondert behandelbar), keine inhaltliche Abweichung. Siehe [PHQ-Übersicht](PHQ.html).
+Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9 — zulässig nur im Setting mit unmittelbar folgendem Arztkontakt vor Ort. Die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität nie ohne Management-Plan bzw. Alert), keine inhaltliche Abweichung. Siehe [PHQ-Übersicht](PHQ.html).
 
 Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul **kein Artefakt** — weder Questionnaire noch `linkId`s im Namespace. Bedarf wäre dort anzumelden.
 
 ### Was PSS von AN und NTx unterscheidet
 
 - **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.
-- **PSS und AN gemeinsam**: OPD-SFK und PHQ-SI.
+- **PSS und AN gemeinsam**: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.
 - **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe [AN](AN.html).
 - **Nur in NTx**: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.
 
@@ -66,6 +66,6 @@ PROMIS und WHODAS 2.0 unterliegen ihren jeweiligen Nutzungsvereinbarungen (CPCOR
 
 Für PSS gibt es seit dem 01.10.2026 einen **synthetischen Beispielpatienten** ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).
 
-Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2026.7.0`. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`. Alle Antworten einzeln: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html).
+Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2026.7.0`. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`. Alle Antworten einzeln: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

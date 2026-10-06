@@ -17,6 +17,8 @@ PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein ei
 
 Für den **PHQ-8** existiert kein eigener Questionnaire — er ist aber auch nicht nötig: Alle acht Items sind identisch im PHQ-9 enthalten (`phq-phq2a…h`; der PHQ-8 ist der PHQ-9 ohne das Suizid-Item `phq-phq2i`). Wer PHQ-8 erheben will, nutzt die PHQ-9-Definition und wertet die Items `phq-phq2a…h` aus.
 
+**Einsatzregel in PCOR-MII:** Der **PHQ-8 ist in allen Use Cases der Standard** (PSS, AN, NTx). Der vollständige PHQ-9 — also einschließlich des Suizidalitäts-Items `phq-phq2i` — darf nur eingesetzt werden, wenn auf die Erhebung **unmittelbar ein Arztkontakt vor Ort folgt**; im Monitoring (Erhebung ohne anschließenden Arztkontakt) ist er nicht zugelassen. So wird Suizidalität nie ohne definierten Management-Plan bzw. Alert erhoben. Das Suizidalitäts-Item ist dafür als **PHQ-SI** gesondert ausgewiesen.
+
 Für den **PHQ-4** existiert ebenfalls kein eigener Questionnaire. Er besteht aus PHQ-2 (`phq-phq2a`, `phq-phq2b`) und GAD-2 (`phq-phq5a`, `phq-phq5b`) — alle vier Items sind über die PHQ-9- bzw. GAD-7-Definition verfügbar. Wer PHQ-4 erheben will, wertet diese vier `linkId`s aus; ein eigener Questionnaire wäre im MII PRO-Modul anzumelden, falls ein eigenständiges Artefakt gebraucht wird.
 
 ### Gemeinsamer PHQ-D-Namespace
