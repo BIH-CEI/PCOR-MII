@@ -57,7 +57,7 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 // ── PSS-spezifisch, in PCOR-MII gepflegt ────────────────────────────────────
 * #opd-sfk "OPD-SFK" "Strukturfragebogen, 12 Items"
 * #wai "WAI / Work Ability Score" "3-Item-Kurzfassung (metadata-only)"
-* #gsltpaq "GSLTPAQ" "Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"
+* #gsltpaq "GSLTPAQ" "Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)"
 * #expect "EXPECT" "Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"
 * #ipq-s "IPQ-S" "Die offene Ursachenfrage des B-IPQ, Einzelitem"
 
