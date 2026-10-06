@@ -78,10 +78,10 @@ Clinical description: [AN](AN.html); full lookup table with rights status: [AN �
 | ACE + timing items (composite) | [ACE](ACE.html) | [ACE](Questionnaire-ACE.html) | [✓](QuestionnaireResponse-ACEResponse.html) |
 | UKHD supplementary items (6 questionnaires) | [Übersicht](UKHD-Zusatzitems.html) | [PT](Questionnaire-UKHDPT.html) · [ANB](Questionnaire-UKHDANB.html) · [CT](Questionnaire-UKHDCT.html) · [LE](Questionnaire-UKHDLE.html) · [ND](Questionnaire-UKHDND.html) · [D](Questionnaire-UKHDD.html) | five of six — see the full table |
 | UKHD-EDP (metadata-only) | [UKHD-EDP](UKHD-EDP.html) | [UKHDEDP](Questionnaire-UKHDEDP.html) | — |
-| PHQ-9, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | see the full table | see the full table | — |
+| PHQ-8, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | see the full table | see the full table | — |
 
 ### Use case NTx — kidney transplantation
 
-Deferred — no manifest yet (the codes `ntxr`/`ntxd` already exist in [pcor-use-case](CodeSystem-pcor-use-case.html); the Domain Overview separates recipient and donor). No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-9, …) apply here as well.
+Deferred — no manifest yet (the codes `ntxr`/`ntxd` already exist in [pcor-use-case](CodeSystem-pcor-use-case.html); the Domain Overview separates recipient and donor). No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-8, …) apply here as well.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); the machine-readable full list is under [Artifacts](artifacts.html).
