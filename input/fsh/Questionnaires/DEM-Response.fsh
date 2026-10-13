@@ -31,7 +31,13 @@ Usage: #example
 Title: "DEM — Beispielantwort"
 Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
 * language = #de-DE
+// DEM ist kein PRO -> kein MII-PRO-Profil auf der QR, sondern ISiKFormularDaten.
+* meta.profile = $isik-formulardaten
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM)
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "DEM — Demographie"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-16T10:00:00+02:00"

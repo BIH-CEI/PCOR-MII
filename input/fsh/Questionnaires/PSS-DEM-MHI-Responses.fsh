@@ -11,7 +11,13 @@ Usage: #example
 Title: "DEM — Beispielantwort (PSS)"
 Description: "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026)."
 * language = #de-DE
+// DEM ist kein PRO -> kein MII-PRO-Profil auf der QR, sondern ISiKFormularDaten.
+* meta.profile = $isik-formulardaten
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM)
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "DEM — Demographie"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient-pss)
 * authored = "2026-06-25T09:00:00+02:00"
@@ -97,7 +103,13 @@ Usage: #example
 Title: "MHI — Beispielantwort (PSS)"
 Description: "Ausgefülltes Beispiel zum MHI-Questionnaire für den PSS-Beispielpatienten (Screening-Termin 25.06.2026). Die AN-spezifische Gruppe `gewicht-an` ist nicht enthalten — sie wird nur im Szenario AN erhoben; genau dafür ist sie im Questionnaire als eigene Gruppe geführt."
 * language = #de-DE
+// MHI ist kein PRO -> kein MII-PRO-Profil auf der QR, sondern ISiKFormularDaten.
+* meta.profile = $isik-formulardaten
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI)
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "MHI — Medical History"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient-pss)
 * authored = "2026-06-25T09:15:00+02:00"

@@ -12,7 +12,13 @@ Usage: #example
 Title: "MHI — Beispielantwort"
 Description: "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (Medical History)."
 * language = #de-DE
+// MHI ist kein PRO -> kein MII-PRO-Profil auf der QR, sondern ISiKFormularDaten.
+* meta.profile = $isik-formulardaten
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI)
+// ISiKFormularDaten fordert auf questionnaire den Slice questionnaireDisplay
+// (Extension http://hl7.org/fhir/StructureDefinition/display) mit 1..1.
+* questionnaire.extension[+].url = $display
+* questionnaire.extension[=].valueString = "MHI — Medical History"
 * status = #completed
 * subject = Reference(pcor-mii-exa-patient-an)
 * authored = "2026-06-17T10:00:00+02:00"

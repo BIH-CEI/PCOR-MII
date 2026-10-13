@@ -19,6 +19,18 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`feature`** Neuer Questionnaire `PROMISGH` mit den PROMIS-Global-Health-Items Global01 `61577-3` und Global02 `61578-1` sowie ValueSet `promis-global-skala-5-vs` auf Basis der Answerlist `LL4280-5`. Übergangslösung bis zur Aufnahme der vollständigen 10-Item-Skala `85524-7` ins MII-PRO-Modul. Global07 ist über PROMIS-29 abgedeckt
+
+**`documentation`** PROMIS-Seite um einen Abschnitt zu PROMIS Global Health erweitert mit Item-Tabelle, Antwortskala, Übergangscharakter und Abgrenzung zu Global07
+
+**`feature`** ISiK-Formularprofile mit neuer Abhängigkeit `de.gematik.isik 5.1.1`. `DEM`, `MHI`, `GSLTPAQ`, `OPD-SFK` und `WAI` sind als `ISiKFormularDefinition` ausgewiesen, `DEMResponse`/`DEMPSSResponse` und `MHIResponse`/`MHIPSSResponse` als `ISiKFormularDaten` (mit `questionnaireDisplay`-Slice)
+
+**`improve`** Profil-Canonicals zentral in `Aliases.fsh` gepflegt. `meta.profile` folgt der Konvention aus dem Bereitstellungs-Review: ohne Versionspin — die Auflösung läuft über die Paketabhängigkeit
+
+**`improve`** SDC-Profil aus `meta.profile` der Nicht-PRO-Fragebögen entfernt. SDC bleibt Abhängigkeit, die verwendeten SDC-Extensions sind unberührt
+
+**`fix`** `PcorExampleQuestionnaire` profilkonform gemacht durch `capabilities`-Extension und `code`. Die Verstöße waren zuvor durch den unauflösbaren Profil-Pin `|2026.4.1` verdeckt
+
 **`feature`** **Use-Case-Manifeste**: je aktivem Use Case eine `Library` (type `asset-collection`) mit allen Questionnaire-Canonicals versioniert gepinnt — [use-case-pss](Library-use-case-pss.html) (20) und [use-case-an](Library-use-case-an.html) (23), plus CodeSystem [pcor-use-case](CodeSystem-pcor-use-case.html) (5 Codes; NTXr/NTXd zurückgestellt). Dazu ein drittes Manifest für den Pilot „50 First Patients“: [pilot-50fp](Library-pilot-50fp.html) (10) pinnt die **Schnittmenge** aller Use Cases — abgeleitet aus den Use-Case-Spalten der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html#use-cases), keine eigene Auswahl.
 
 **`documentation`** Die Zeile „PROMIS SF 4a (8 Domänen)“ des Erhebungsplans ist als **PROMIS-29 + Cognitive Function SF 4a** (PROMIS-33-Abdeckung) ausgewiesen — in der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html), der [AN-Instrumentenliste](AN-Instrumentenliste.html) und den drei Manifesten. Die frühere Lesart mit der alleinstehenden Depression SF 4a war falsch. Bewusst **kein** `useContext` auf den Bögen — die Zugehörigkeit lebt an einer Stelle und erfasst auch Upstream-Bögen; Rückwärtssuche über den Standard-Suchparameter `Library?composed-of=`. CRMI-fähige Server liefern damit die Batterie eines Use Case in einem Zug. Alle drei Manifeste deklarieren das CRMI-Profil `crmi-manifestlibrary` (neue Abhängigkeit `hl7.fhir.uv.crmi 2.0.0`); befüllt ist der Slice `component` (`composed-of`), der Slice `dependency` (`depends-on`) und die Expansionsparameter bleiben für einen späteren `$package`-Einsatz offen. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind in allen Manifesten als **Standortvarianten** markiert (CRMI-Extension `crmi-intendedUsageContext`, als Text ohne eigenes CodeSystem); beide bleiben enthalten, weil Empfänger beide Standorttypen auflösen müssen.

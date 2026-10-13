@@ -58,6 +58,7 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * #opd-sfk "OPD-SFK" "Strukturfragebogen, 12 Items"
 * #wai "WAI / Work Ability Score" "3-Item-Kurzfassung (metadata-only)"
 * #gsltpaq "GSLTPAQ" "Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)"
+* #promis-gh "PROMIS-GH" "PROMIS Global Health, 2-Item-Zuschnitt (Global01, Global02) — Übergangslösung bis zur Aufnahme der 10-Item-Skala ins MII-PRO-Modul"
 * #expect "EXPECT" "Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"
 * #ipq-s "IPQ-S" "Die offene Ursachenfrage des B-IPQ, Einzelitem"
 

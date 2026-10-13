@@ -87,7 +87,10 @@ InstanceOf: Questionnaire
 Usage: #definition
 Title: "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"
 Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. Deutsche Übersetzung aus SOMACROSS 2.0 (Übersetzer: UKE), übernommen über das Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."
-* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+// Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
+// Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
+// die verwendeten SDC-Extensions sind davon unberührt.
+* meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ"
 * name = "GSLTPAQ"
 // SPRACHE — bewusst DEUTSCH PRIMAER, abweichend von ADR-005:
