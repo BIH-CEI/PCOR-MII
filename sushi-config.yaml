@@ -31,7 +31,9 @@ publisher:
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
   hl7.fhir.uv.sdc: 3.0.0
-  hl7.fhir.uv.crmi: 2.0.0            # Manifestprofil crmi-manifestlibrary fuer die Use-Case-Manifeste
+  # CRMI: Manifestprofil crmi-manifestlibrary fuer die Use-Case-Manifeste.
+  # Kein Kommentar hinter der Versionsnummer: der IG Publisher liest die Zeile roh.
+  hl7.fhir.uv.crmi: 2.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
