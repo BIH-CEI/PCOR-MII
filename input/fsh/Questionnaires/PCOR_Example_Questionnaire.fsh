@@ -6,7 +6,7 @@
 //     versionsgepinnt auf die Dependency (siehe Aliases.fsh)
 //   - die beiden Pflichtangaben dieses Profils: capabilities-Extension (1..1)
 //     und Questionnaire.code (1..*)
-//   - Sprache: deutsch (language = de-DE)
+//   - Sprache: deutsch (language = de)
 //   - Codierte Antworten via answerValueSet (KEIN valueString!)
 //   - Item-Typen: group, choice, date, string
 //
@@ -19,10 +19,10 @@ Title: "PCOR Beispiel-Fragebogen"
 Description: "Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.6.0."
 
 * meta.profile = $mii-pro-questionnaire
-* language = #de-DE
+* language = #de
 
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire"
-* version = "0.1.0"
+* insert Version
 * name = "PcorExampleQuestionnaire"
 * title = "PCOR Beispiel-Fragebogen"
 * status = #draft

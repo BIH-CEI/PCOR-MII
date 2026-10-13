@@ -4,6 +4,8 @@ Der **OPD-SFK** (*OPD-Strukturfragebogen, Kurzversion*) ist ein Selbstbeurteilun
 
 Der OPD-SFK ist **kein Instrument des MII-PRO-Moduls** — er wird in PCOR-MII eigenständig gepflegt (SDC-Basis, analog DEM und MHI). Die Item-Formulierungen entsprechen dem deutschen Originalwortlaut der Publikation.
 
+Erhoben wird der OPD-SFK in PSS und AN **von einzelnen Standorten**; eine direkte Empfehlung der Use-Case-Leitung ist er nicht.
+
 ### Artefakte
 
 - **Fragebogen:** [Questionnaire-OPDSFK](Questionnaire-OPDSFK.html) — vollständige Definition inkl. Items und Antwortoptionen.

@@ -10,6 +10,7 @@ CodeSystem: PcorExampleGeneralHealthCS
 Id: pcor-example-general-health
 Title: "PCOR Example General Health Self-Assessment"
 Description: "Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire."
+* insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health"
 * ^status = #draft
 * ^experimental = true
@@ -25,6 +26,7 @@ ValueSet: PcorExampleGeneralHealthVS
 Id: pcor-example-general-health
 Title: "PCOR Example General Health Self-Assessment"
 Description: "ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt."
+* insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health"
 * ^status = #draft
 * ^experimental = true

@@ -1,0 +1,549 @@
+{
+  "resourceType": "Bundle",
+  "id": "pcor-mii-exa-bundle-an-monitoring",
+  "type": "collection",
+  "timestamp": "2026-07-30T11:00:00+02:00",
+  "entry": [
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/Patient/pcor-mii-exa-patient-an",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pcor-mii-exa-patient-an",
+        "language": "de-DE",
+        "gender": "female",
+        "birthDate": "1985-03-12"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ERQ6MonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ERQ6MonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueInteger": 5
+              }
+            ],
+            "linkId": "erq1"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 5
+              }
+            ],
+            "linkId": "erq2"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 4
+              }
+            ],
+            "linkId": "erq3"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 5
+              }
+            ],
+            "linkId": "erq6"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 4
+              }
+            ],
+            "linkId": "erq8"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 6
+              }
+            ],
+            "linkId": "erq9"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T09:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/EDEQ6MonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "EDEQ6MonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "13-15 days"
+                }
+              }
+            ],
+            "linkId": "edeq1"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "13-15 days"
+                }
+              }
+            ],
+            "linkId": "edeq7"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "13-15 days"
+                }
+              }
+            ],
+            "linkId": "edeq12"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 3
+              }
+            ],
+            "linkId": "edeq27"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "edeq29"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 2
+              }
+            ],
+            "linkId": "edeq30"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T09:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ANSOCQ2MonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ANSOCQ2MonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
+                  "display": "I am presently trying to gain weight on these body parts."
+                }
+              }
+            ],
+            "linkId": "ansocq3"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
+                  "display": "I am using strategies to help me reduce the amount of time I spend thinking about food and my weight."
+                }
+              }
+            ],
+            "linkId": "ansocq14"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T09:30:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/SSUK2MonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "SSUK2MonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "3",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+                      "display": "oft"
+                    }
+                  }
+                ],
+                "linkId": "ssuk14"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+                      "display": "selten"
+                    }
+                  }
+                ],
+                "linkId": "ssuk10"
+              }
+            ],
+            "linkId": "ssuk-stamm"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T09:45:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDPTMonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDPTMonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche",
+                  "display": "drei oder mehrfach"
+                }
+              }
+            ],
+            "linkId": "bdkm16"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T10:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDCTMonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDCTMonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
+                  "display": "Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung"
+                }
+              }
+            ],
+            "linkId": "treatment_outpatient"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T10:05:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDLEMonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDLEMonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "nein",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Nein"
+                }
+              }
+            ],
+            "linkId": "life_event1_monitoring"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T10:10:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDNDMonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDNDMonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "new_diagnosis_monitoring"
+          },
+          {
+            "answer": [
+              {
+                "valueString": "Eisenmangelanämie, festgestellt bei der Laborkontrolle im Juli 2026"
+              }
+            ],
+            "linkId": "new_diagnosis_text"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T10:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDEDPMonitoringResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDEDPMonitoringResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp1"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp2"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp3"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp4"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "5",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp5"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp6"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp7"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp8"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp9"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp10"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
+                }
+              }
+            ],
+            "linkId": "edp11"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-07-30T10:30:00+02:00"
+      }
+    }
+  ]
+}

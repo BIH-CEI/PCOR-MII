@@ -4,10 +4,14 @@
 //
 // ── Übersetzung (WICHTIGE VORENTSCHEIDUNG) ─────────────────────────────────
 // Diese Instanz bildet die in PCOR-MII TATSÄCHLICH ERHOBENE Fassung ab: die
-// hausinterne Eigenübersetzung aus dem Item Level Dictionary. Es wird davon
-// ausgegangen, dass die vorliegenden Studiendaten bereits mit dieser
-// Eigenübersetzung erhoben wurden; ein nachträglicher Wortlautwechsel würde
-// die Vergleichbarkeit der Zeitreihe brechen.
+// deutsche Übersetzung aus dem Item Level Dictionary. HERKUNFT GEKLÄRT
+// (Use-Case-Leitung, 2026-10-06): Sie stammt aus SOMACROSS 2.0, Übersetzer
+// ist das UKE (Universitätsklinikum Hamburg-Eppendorf) — PCOR-MII war an der
+// Übersetzung nicht beteiligt; die frühere Bezeichnung „hausinterne
+// Eigenübersetzung" war insofern falsch. Es wird davon ausgegangen, dass die
+// vorliegenden Studiendaten bereits mit dieser Fassung erhoben wurden; ein
+// nachträglicher Wortlautwechsel würde die Vergleichbarkeit der Zeitreihe
+// brechen.
 // NICHT verwendet wird die kürzlich erschienene, sprachlich validierte
 // deutsch-österreichische Übersetzung:
 //   Lindner A, Bamberger EM, Crutzen R, Kulnik ST. Translation to German
@@ -15,11 +19,16 @@
 //   Leisure-Time Physical Activity Questionnaire. Measurement and
 //   Evaluations in Cancer Care 2026;4:100027.
 //   doi:10.1016/j.ymecc.2026.100027
-// Die hier verwendete Eigenübersetzung ist NICHT linguistisch validiert.
-// Die validierte Fassung (Lindner et al. 2026) soll perspektivisch separat
-// als kanonische GSLTPAQ-Version im MII-PRO-Modul gepflegt werden — dort mit
-// dem validierten Wortlaut, nicht in PCOR-MII (siehe Repo kerndatensatzmodul-
-// proms). Bis dahin bleibt PCOR-MII bei der Eigenübersetzung.
+// Die hier verwendete UKE/SOMACROSS-Übersetzung ist NICHT linguistisch
+// validiert. Bestätigt (Use-Case-Leitung, 2026-10-06): BEIDE Fassungen werden
+// abgebildet; Metadaten und Versionierung machen die Unterscheidung klar,
+// jede QuestionnaireResponse weist über ihre questionnaire-Referenz eindeutig
+// aus, mit welcher Definition sie erhoben wurde, und die linkIds bleiben
+// identisch (Umsetzung: ADR-007, zwei Canonicals). Die validierte Fassung
+// (Lindner et al. 2026) soll perspektivisch separat als kanonische GSLTPAQ-
+// Version im MII-PRO-Modul gepflegt werden — dort mit dem validierten
+// Wortlaut, nicht in PCOR-MII (siehe Repo kerndatensatzmodul-proms). Bis
+// dahin bleibt PCOR-MII bei der UKE/SOMACROSS-Fassung.
 //
 // ── Originalinstrument ──────────────────────────────────────────────────────
 // Godin G. The Godin-Shephard leisure-time physical activity questionnaire.
@@ -77,19 +86,34 @@ Instance: GSLTPAQ
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"
-Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."
+Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. Deutsche Übersetzung aus SOMACROSS 2.0 (Übersetzer: UKE), übernommen über das Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."
 // Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
 // Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
 // die verwendeten SDC-Extensions sind davon unberührt.
 * meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ"
 * name = "GSLTPAQ"
-* version = "0.1.0"
+// SPRACHE — bewusst DEUTSCH PRIMAER, abweichend von ADR-005:
+//   ADR-005 verlangt normalerweise die Sprache des Originals als item.text
+//   (hier Englisch, Godin & Shephard) und die Uebersetzung als translation-
+//   Extension. Das setzt aber voraus, dass die deutsche Fassung eine getreue
+//   Wiedergabe eines autorisierten Wortlauts ist. Hier ist sie das NICHT: Es
+//   ist die UKE-Uebersetzung aus SOMACROSS 2.0, ohne linguistische
+//   Validierung.
+//   Diese Ressource dokumentiert genau diese Fassung — also was den Befragten
+//   tatsaechlich vorlag —, deshalb ist Deutsch hier das Primaere und nicht eine
+//   Uebersetzungsebene. Die validierte deutsch-oesterreichische Fassung
+//   (Lindner et al. 2026) wird nach ADR-007 eine EIGENE Ressource im
+//   MII-PRO-Modul, keine Sprachebene und keine neue Version dieser hier.
+* language = #de
+* insert Version
+* code[+] = PcorQuestionnaireCatalogueCS#gsltpaq "GSLTPAQ"
 * status = #draft
 * experimental = true
 * subjectType = #Patient
 * date = "2026-09-01"
 * publisher = "BIH-CEI"
+* copyright = "Originalinstrument: Godin G. The Godin-Shephard leisure-time physical activity questionnaire. Health Fit J Can 2011;4:18–22 (doi:10.14288/hfjc.v4i1.82); der Originalbogen ist im Artikel abgedruckt. Deutsche Fassung: Übersetzung aus SOMACROSS 2.0, Übersetzer: Universitätsklinikum Hamburg-Eppendorf (UKE); nicht linguistisch validiert (Herkunft bestätigt durch die Use-Case-Leitung, 2026-10-06). Nicht identisch mit der linguistisch validierten deutsch-österreichischen Übersetzung (Lindner et al. 2026, doi:10.1016/j.ymecc.2026.100027). Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen bzw. Übersetzer:innen; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0)."
 
 * item[+]
   * linkId = "gsltpaq-intro"
@@ -99,6 +123,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Anstrengende körperliche Aktivität ──────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_01_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_01_w
   * text = "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -107,6 +132,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_01_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_01_m
   * text = "Anstrengende körperliche Aktivität (erhöhte Anstrengung und Schwitzen) z.B. intensives Schwimmen, Jogging, Fußballspielen, Radsport"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -117,6 +143,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Mäßige körperliche Aktivität ────────────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_02_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_02_w
   * text = "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -125,6 +152,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_02_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_02_m
   * text = "Mäßige körperliche Aktivität (kaum erhöhte Anstrengung und leichtes Schwitzen) z.B. schnelles Gehen, langsames Radfahren, langsames Schwimmen"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -135,6 +163,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 // ── Leichte körperliche Aktivität ───────────────────────────────────────────
 * item[+]
   * linkId = "GSLTPAQ_03_w"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_03_w
   * text = "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
@@ -143,6 +172,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
 * item[+]
   * linkId = "GSLTPAQ_03_m"
+  * code[+] = PcorItemDictionaryCS#GSLTPAQ_03_m
   * text = "Leichte körperliche Aktivität (keine erhöhte Anstrengung und kein Schwitzen) z.B. Golf, leichtes Gehen, Angeln"
   * type = #integer
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"

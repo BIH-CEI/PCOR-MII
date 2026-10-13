@@ -1,31 +1,37 @@
-The PCOR-MII Implementation Guide defines standardized **FHIR R4 Questionnaires** for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the [German Medical Informatics Initiative (MII)](https://www.medizininformatik-initiative.de/) and explains their application.
+The PCOR-MII Implementation Guide defines standardised **FHIR R4 Questionnaires** for capturing patient-centered data (Patient-Centered Outcomes Research, PCOR) in the context of the German [Medical Informatics Initiative (MII)](https://www.medizininformatik-initiative.de/), and explains how to use them.
 
-### Objective of the Implementation Guide
+### Purpose of this Implementation Guide
 
-This IG provides uniform, interoperable questionnaires that allow patient-reported information to be collected in a structured, cross-site comparable, and machine-readable way. It defines:
+This IG provides uniform, interoperable questionnaires with which patient-reported information can be captured in a structured, cross-site comparable and machine-readable way. It defines:
 
-- **Questionnaires** – FHIR questionnaire definitions with unique `linkId`s, item types, and answer options
-- **Application guidance** – how the questionnaires are filled in (`QuestionnaireResponse`), pre-populated, and evaluated
-- **Terminology bindings** – where required, links to LOINC, SNOMED CT, and project-specific CodeSystems/ValueSets
+- **Questionnaires** — FHIR questionnaire definitions with stable `linkId`s, item types and answer options
+- **Implementation guidance** — how the questionnaires are completed (`QuestionnaireResponse`), pre-populated and evaluated
+- **Terminology bindings** — where required, bindings to LOINC, SNOMED CT and project-specific CodeSystems and ValueSets
 
-### Target Groups
+### Audience
 
-**Primary target groups:**
-- Software developers and system integrators embedding questionnaires into research and care systems
-- Data Integration Centers of the MII sites
+**Primary:**
+- Software developers and system integrators embedding questionnaires into study and care systems
+- Data Integration Centres (DIZ) at the MII sites
 
-**Secondary target groups:**
-- Researchers evaluating patient-reported outcomes
-- Vendors of ePRO / study software
+**Secondary:**
+- Researchers analysing patient-reported outcomes
+- Vendors of ePRO and study software
 
-### Structure of the Implementation Guide
+### How this guide is organised
 
-Accessible via the menu bar:
+Reachable from the menu bar:
 
-1. **Questionnaires** – overview of the defined questionnaires and their structure
-2. **Implementation** – detailed description of how the questionnaires are filled in and evaluated
-3. **Release Notes** – versioning and change history
-4. **Artifacts** – machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)
+1. **Questionnaires** — the defined questionnaires and how they are built
+2. **Implementation** — how the questionnaires are completed and evaluated
+3. **Release Notes** — versioning and change history
+4. **Artifacts** — the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)
+
+### A note on language
+
+German is the **default language** of this guide, because its primary audience are the German MII sites. English pages are maintained as a translation; where a translation does not yet exist, the German page is shown instead.
+
+That split also runs through the questionnaires themselves, and there it is a deliberate modelling decision rather than a matter of convenience: where an instrument's original is English, the English wording is the primary `item.text` and the German wording hangs off it as a `translation` extension. Where an instrument was developed in German, German is primary. The reasoning is recorded in [Design Decisions](Designentscheidungen.html), ADR-005 and ADR-010.
 
 ### Contact
 

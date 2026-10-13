@@ -9,7 +9,7 @@ name: PCOR_MII
 title: PCOR-MII Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: draft
@@ -35,9 +35,12 @@ publisher:
 # 5.1.1 — identisch zur transitiven Anforderung des MII-PRO-Moduls, um einen
 # Versionskonflikt im Dependency-Baum zu vermeiden.
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.6.0
+  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
   hl7.fhir.uv.sdc: 3.0.0
   de.gematik.isik: 5.1.1
+  # CRMI: Manifestprofil crmi-manifestlibrary fuer die Use-Case-Manifeste.
+  # Kein Kommentar hinter der Versionsnummer: der IG Publisher liest die Zeile roh.
+  hl7.fhir.uv.crmi: 2.0.0
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -50,6 +53,36 @@ pages:
     title: Instrumentenübersicht
     PSS.md:
       title: PSS (Persistent Somatic Syndrome)
+      SSD-12.md:
+        title: SSD-12 (B-Kriterien somatische Belastungsstörung)
+      WI-7.md:
+        title: Whiteley-7 (Gesundheitsangst)
+      SCOFF.md:
+        title: SCOFF (Essstörungs-Screening)
+      ISR-Z.md:
+        title: ISR-Z (Zwang)
+      PC-PTSD.md:
+        title: PC-PTSD (PTBS-Screening)
+    AN.md:
+      title: AN (Anorexia Nervosa)
+      AN-Instrumentenliste.md:
+        title: AN — Instrumentenliste mit Links
+      ERQ-6.md:
+        title: ERQ-S (Emotionsregulation)
+      EDE-Q6.md:
+        title: EDE-Q6 (Essstörungspathologie)
+      ANSOCQ-2.md:
+        title: ANSOCQ-2 (Veränderungsmotivation)
+      SSUK-2.md:
+        title: SSUK-2 (Soziale Unterstützung)
+      ACE.md:
+        title: ACE + Zeitangaben (Belastende Kindheitserfahrungen)
+      UKHD-Zusatzitems.md:
+        title: UKHD-Zusatzitems (sechs Bögen)
+      UKHD-EDP.md:
+        title: UKHD-EDP (Essstörungspathologie, metadata-only)
+  Fragebogen-Bibliothek.md:
+    title: Fragebogen-Bibliothek
   Demographie.md:
     title: Demographie
   MHI.md:
@@ -70,20 +103,32 @@ pages:
       title: PHQ-9
     PHQ-15.md:
       title: PHQ-15
+    GAD-7.md:
+      title: GAD-7
   WHODAS-12.md:
     title: WHODAS 2.0 (12-Item)
+  EURONET-SOMA.md:
+    title: EURONET-SOMA (2 Einzelitems)
   OPD-SFK.md:
     title: OPD-SFK (Strukturfragebogen, 12 Items)
   WAI.md:
     title: WAI (Work Ability Score)
   GSLTPAQ.md:
     title: GSLTPAQ (Freizeitaktivität)
+  EXPECT.md:
+    title: EXPECT (Verlaufserwartung)
+  IPQ-S.md:
+    title: IPQ-S (Ursachenzuschreibung)
   Implementation.md:
     title: Anwendung
   Validierung.md:
     title: Validierung
   Bereitstellung.md:
     title: Bereitstellung
+  Designentscheidungen.md:
+    title: Designentscheidungen
+  Kommende-Aenderungen.md:
+    title: Kommende Änderungen (2027 / SDC 4.0.0)
   Release-Notes.md:
     title: Release Notes
 
@@ -109,19 +154,15 @@ menu:
   Instrumente:
     Übersicht: Instrumente.html
     PSS: PSS.html
-  Fragebögen:
-    Demographie: Demographie.html
-    MHI: MHI.html
-    PROMIS: PROMIS.html
-    PHQ: PHQ.html
-    WHODAS 2.0: WHODAS-12.html
-    OPD-SFK: OPD-SFK.html
-    WAI: WAI.html
-    GSLTPAQ: GSLTPAQ.html
+    AN: AN.html
+    AN — Instrumentenliste: AN-Instrumentenliste.html
+  Fragebögen: Fragebogen-Bibliothek.html
   Anwendung: Implementation.html
   Validierung: Validierung.html
   Bereitstellung: Bereitstellung.html
+  Designentscheidungen: Designentscheidungen.html
   Release Notes: Release-Notes.html
+  Kommende Änderungen: Kommende-Aenderungen.html
   Artefakte: artifacts.html
 
 # ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮

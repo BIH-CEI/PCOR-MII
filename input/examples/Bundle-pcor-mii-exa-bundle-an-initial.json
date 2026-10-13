@@ -1,0 +1,1249 @@
+{
+  "resourceType": "Bundle",
+  "id": "pcor-mii-exa-bundle-an-initial",
+  "type": "collection",
+  "timestamp": "2026-06-18T12:00:00+02:00",
+  "entry": [
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/Patient/pcor-mii-exa-patient-an",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pcor-mii-exa-patient-an",
+        "language": "de-DE",
+        "gender": "female",
+        "birthDate": "1985-03-12"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/DEMResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "DEMResponse",
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueDate": "1985-03-12"
+                  }
+                ],
+                "linkId": "AGE"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "master",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de",
+                      "display": "Master oder äquivalent (inkl. Diplom, staatl./kirchl. Prüfung)"
+                    }
+                  }
+                ],
+                "linkId": "Q_ISCED"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "weiblich",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
+                      "display": "Weiblich"
+                    }
+                  }
+                ],
+                "linkId": "Q_SEX"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "Q_GENDERID"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "angestellt",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus",
+                      "display": "Angestellt"
+                    }
+                  }
+                ],
+                "linkId": "Q_OECDLIT5a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "band-mittel",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen",
+                      "display": "Zwischen 2.300 € und 5.200 € pro Monat"
+                    }
+                  }
+                ],
+                "linkId": "Q_OECDLIT7a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "nein",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Nein"
+                    }
+                  }
+                ],
+                "linkId": "Q_MONMED"
+              },
+              {
+                "item": [
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "selten",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
+                          "display": "Selten"
+                        }
+                      }
+                    ],
+                    "linkId": "MONMEAL"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "nie",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
+                          "display": "Nie"
+                        }
+                      }
+                    ],
+                    "linkId": "MONRENT"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "selten",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
+                          "display": "Selten"
+                        }
+                      }
+                    ],
+                    "linkId": "MONBILLS"
+                  }
+                ],
+                "linkId": "Q_MON"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "MEDHIMS6"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "MEDHIMS7"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "stadt",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet",
+                      "display": "Stadt"
+                    }
+                  }
+                ],
+                "linkId": "Q_OECDLITii"
+              },
+              {
+                "answer": [
+                  {
+                    "valueString": "10117"
+                  }
+                ],
+                "linkId": "Zipcode"
+              },
+              {
+                "answer": [
+                  {
+                    "valueInteger": 1
+                  }
+                ],
+                "linkId": "OECDLIT2a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueInteger": 1
+                  }
+                ],
+                "linkId": "OECDLIT2b"
+              },
+              {
+                "item": [
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "einfach",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
+                          "display": "Einfach"
+                        }
+                      }
+                    ],
+                    "linkId": "WHODIS1"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "weder-noch",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
+                          "display": "Weder einfach noch schwierig"
+                        }
+                      }
+                    ],
+                    "linkId": "WHODIS2"
+                  }
+                ],
+                "linkId": "WHODIS"
+              }
+            ],
+            "linkId": "soziodemographie"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "feste",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
+                      "display": "Feste Partnerschaft"
+                    }
+                  }
+                ],
+                "linkId": "GIPS04"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "keine",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus",
+                      "display": "Keine Rente"
+                    }
+                  }
+                ],
+                "linkId": "GIPS10"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "CPCOR_REQ"
+              }
+            ],
+            "linkId": "weitere"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-16T10:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/MHIResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "MHIResponse",
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "kg",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
+                      "display": "kg"
+                    }
+                  }
+                ],
+                "linkId": "Q_WB151"
+              },
+              {
+                "answer": [
+                  {
+                    "valueDecimal": 62
+                  }
+                ],
+                "linkId": "Q_WB151a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "cm",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
+                      "display": "cm"
+                    }
+                  }
+                ],
+                "linkId": "Q_WB152"
+              },
+              {
+                "answer": [
+                  {
+                    "valueDecimal": 170
+                  }
+                ],
+                "linkId": "Q_WB152a"
+              }
+            ],
+            "linkId": "anthropometrie"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
+                      "display": "Essstörung"
+                    }
+                  }
+                ],
+                "linkId": "CPCOR-DIAG"
+              },
+              {
+                "answer": [
+                  {
+                    "valueInteger": 2020
+                  }
+                ],
+                "linkId": "CPCOR_ONSET"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "18",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch",
+                      "display": "Depression"
+                    }
+                  }
+                ],
+                "linkId": "GIPS13"
+              }
+            ],
+            "linkId": "diagnose"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "GIPS57a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "b1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band",
+                      "display": "1-10"
+                    }
+                  }
+                ],
+                "linkId": "GIPS57b"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "GIPS56a"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "GIPS56b1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "nein",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Nein"
+                    }
+                  }
+                ],
+                "linkId": "GIPS56b2"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "nein",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Nein"
+                    }
+                  }
+                ],
+                "linkId": "GIPS56b3"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "nein",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Nein"
+                    }
+                  }
+                ],
+                "linkId": "GIPS56b4"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "nein",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Nein"
+                    }
+                  }
+                ],
+                "linkId": "GIPS58"
+              }
+            ],
+            "linkId": "lifestyle"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "ja",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                      "display": "Ja"
+                    }
+                  }
+                ],
+                "linkId": "medication1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueString": "Sertralin 50 mg morgens; Ibuprofen 400 mg bei Bedarf"
+                  }
+                ],
+                "linkId": "medication_text"
+              },
+              {
+                "answer": [
+                  {
+                    "valueInteger": 2
+                  }
+                ],
+                "linkId": "MEDI_01"
+              },
+              {
+                "item": [
+                  {
+                    "answer": [
+                      {
+                        "valueString": "Sertralin"
+                      }
+                    ],
+                    "linkId": "medi_02_name_01"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "seit 2021"
+                      }
+                    ],
+                    "linkId": "medi_02_onset_01"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "50 mg"
+                      }
+                    ],
+                    "linkId": "medi_02_dose_01"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "0",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
+                          "display": "morgens"
+                        }
+                      }
+                    ],
+                    "linkId": "medi_02_time_01"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "7x pro Woche"
+                      }
+                    ],
+                    "linkId": "medi_02_frequency_01"
+                  }
+                ],
+                "linkId": "medi_02_01"
+              },
+              {
+                "item": [
+                  {
+                    "answer": [
+                      {
+                        "valueString": "Ibuprofen"
+                      }
+                    ],
+                    "linkId": "medi_02_name_02"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "seit 2023"
+                      }
+                    ],
+                    "linkId": "medi_02_onset_02"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "400 mg"
+                      }
+                    ],
+                    "linkId": "medi_02_dose_02"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "code": "4",
+                          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
+                          "display": "bei Bedarf"
+                        }
+                      }
+                    ],
+                    "linkId": "medi_02_time_02"
+                  },
+                  {
+                    "answer": [
+                      {
+                        "valueString": "ca. 2x pro Woche"
+                      }
+                    ],
+                    "linkId": "medi_02_frequency_02"
+                  }
+                ],
+                "linkId": "medi_02_02"
+              }
+            ],
+            "linkId": "medikation"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueDecimal": 61.5
+                  }
+                ],
+                "linkId": "weight_outpatient_1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode",
+                      "display": "Hausarzt"
+                    }
+                  }
+                ],
+                "linkId": "weight_outpatient_2"
+              },
+              {
+                "answer": [
+                  {
+                    "valueDecimal": 60
+                  }
+                ],
+                "linkId": "weight_inpatient"
+              },
+              {
+                "answer": [
+                  {
+                    "valueDecimal": 63
+                  }
+                ],
+                "linkId": "weight_discharge"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
+                      "display": "restriktiver Typ (Kontrolle des Gewichts vorwiegend über geringe Nahrungsaufnahme und/oder Sport)"
+                    }
+                  }
+                ],
+                "linkId": "AN_subtyp"
+              }
+            ],
+            "linkId": "gewicht-an"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-17T10:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ERQ6Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ERQ6Response",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueInteger": 4
+              }
+            ],
+            "linkId": "erq1"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 6
+              }
+            ],
+            "linkId": "erq2"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 3
+              }
+            ],
+            "linkId": "erq3"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 6
+              }
+            ],
+            "linkId": "erq6"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 4
+              }
+            ],
+            "linkId": "erq8"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 7
+              }
+            ],
+            "linkId": "erq9"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T09:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/EDEQ6Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "EDEQ6Response",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "13-15 days"
+                }
+              }
+            ],
+            "linkId": "edeq1"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "16-22 days"
+                }
+              }
+            ],
+            "linkId": "edeq7"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
+                  "display": "16-22 days"
+                }
+              }
+            ],
+            "linkId": "edeq12"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 4
+              }
+            ],
+            "linkId": "edeq27"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "edeq29"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 3
+              }
+            ],
+            "linkId": "edeq30"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T09:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ANSOCQ2Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ANSOCQ2Response",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
+                  "display": "I have decided that I am prepared to gain weight on these body parts."
+                }
+              }
+            ],
+            "linkId": "ansocq3"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
+                  "display": "I am using strategies to help me reduce the amount of time I spend thinking about food and my weight."
+                }
+              }
+            ],
+            "linkId": "ansocq14"
+          }
+        ],
+        "language": "de-CH",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T09:30:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/SSUK2Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "SSUK2Response",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "3",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+                      "display": "oft"
+                    }
+                  }
+                ],
+                "linkId": "ssuk14"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
+                      "display": "selten"
+                    }
+                  }
+                ],
+                "linkId": "ssuk10"
+              }
+            ],
+            "linkId": "ssuk-stamm"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T09:45:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ACEResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ACEResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "ace1"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "nein",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Nein"
+                }
+              }
+            ],
+            "linkId": "ace2"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "nein",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Nein"
+                }
+              }
+            ],
+            "linkId": "ace3"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "ace4"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "nein",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Nein"
+                }
+              }
+            ],
+            "linkId": "ace5"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "2",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
+                      "display": "um ein mehrfaches Ereignis"
+                    }
+                  }
+                ],
+                "linkId": "traumaspecific1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt",
+                      "display": "vor den ersten Anzeichen der Essstörung"
+                    }
+                  }
+                ],
+                "linkId": "traumaspecific2"
+              }
+            ],
+            "linkId": "ctt-ereignis-1"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDPTResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDPTResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie",
+                  "display": "zurzeit in Behandlung"
+                }
+              }
+            ],
+            "linkId": "bdkm15"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche",
+                  "display": "zweimalig"
+                }
+              }
+            ],
+            "linkId": "bdkm16"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDANBResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDANBResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
+                  "display": "seit … Jahren"
+                }
+              }
+            ],
+            "linkId": "AN_biography"
+          },
+          {
+            "answer": [
+              {
+                "valueInteger": 8
+              }
+            ],
+            "linkId": "AN_biography-wert"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe",
+                  "display": "BMI-Wert"
+                }
+              }
+            ],
+            "linkId": "lowBMI"
+          },
+          {
+            "answer": [
+              {
+                "valueDecimal": 14.8
+              }
+            ],
+            "linkId": "lowBMI-wert"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDCTResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDCTResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
+                  "display": "Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung"
+                }
+              }
+            ],
+            "linkId": "treatment_outpatient"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDLEResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDLEResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "ja",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
+                  "display": "Ja"
+                }
+              }
+            ],
+            "linkId": "life_event1_screening"
+          },
+          {
+            "answer": [
+              {
+                "valueString": "Wiederholte Abwertungen durch einen Elternteil in Kindheit und Jugend; über Jahre das Gefühl, in der Familie nicht wichtig zu sein."
+              }
+            ],
+            "linkId": "lifev_text"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:15:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDDResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "UKHDDResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueString": "Anorexia nervosa, restriktiver Typ"
+              }
+            ],
+            "linkId": "diagnosis_admit"
+          },
+          {
+            "answer": [
+              {
+                "valueString": "Depression, seit 2021 medikamentös behandelt"
+              }
+            ],
+            "linkId": "comorbid1"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-an"
+        },
+        "authored": "2026-06-18T10:15:00+02:00"
+      }
+    }
+  ]
+}

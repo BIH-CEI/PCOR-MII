@@ -120,7 +120,7 @@ Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1
 * meta.profile = $mii-pro-questionnaire
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH"
 * name = "PROMISGH"
-* version = "0.1.0"
+* insert Version
 * status = #draft
 * experimental = true
 * subjectType = #Patient
@@ -148,6 +148,9 @@ Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1
 // Der Code benennt daher das Instrument, aus dem die Items stammen — dass nur
 // 2 der 10 Items realisiert sind, steht in Title und Description.
 * code = $LOINC#85524-7 "PROMIS short form - global - version 1.2"
+// Dazu der PCOR-MII-Katalogcode (ADR-004/-007): Canonical identifiziert das
+// Artefakt, code das Konzept — hier den 2-Item-Zuschnitt.
+* code[+] = PcorQuestionnaireCatalogueCS#promis-gh "PROMIS-GH"
 * copyright = "PROMIS® ist eingetragene Marke der PROMIS Health Organization (PHO). Die Item-Inhalte der PROMIS Scale v1.2 – Global Health sind © PROMIS Health Organization / Northwestern University; die hier verwendeten deutschen Formulierungen entstammen der offiziellen deutschen PROMIS-Übersetzung, kuratiert durch das PROMIS National Center Deutschland (CPCOR, Charité). LOINC-Codes und -Answerlists © Regenstrief Institute, Inc. (http://loinc.org/terms-of-use). Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, linkIds, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0). Nutzungsbedingungen für das Instrument selbst siehe https://www.healthmeasures.net/explore-measurement-systems/promis."
 
 * item[+]

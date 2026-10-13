@@ -11,7 +11,7 @@
 # Port 8097 ist im zentralen Port-Registry (~/.claude/ports.yaml) für PCOR-MII reserviert,
 # parallel zu form-manager-hapi (8095) und oncology-hapi-cr (8096).
 #
-# Pre-loaded Packages: MII PRO 2026.4.1 + PCOR-MII (aus diesem Repo) + SDC 3.0.0.
+# Pre-loaded Packages: MII PRO 2026.7.0 + PCOR-MII (aus diesem Repo) + SDC 3.0.0.
 # Pilot-Setup — H2 in-memory DB, kein Persistence, kein Auth.
 
 services:
@@ -20,7 +20,7 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
       args:
-        MII_PRO_VERSION: "2026.4.1"
+        MII_PRO_VERSION: "2026.7.0"
     container_name: pcor-mii-fhir
     ports:
       - "8097:8080"

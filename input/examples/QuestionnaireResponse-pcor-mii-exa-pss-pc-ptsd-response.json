@@ -1,0 +1,74 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "pcor-mii-exa-pss-pc-ptsd-response",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+    ]
+  },
+  "language": "de-DE",
+  "questionnaire": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2026.7.0",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/pcor-mii-exa-patient-pss"
+  },
+  "authored": "2026-06-25T11:20:00+02:00",
+  "item": [
+    {
+      "linkId": "pc-ptsd-q01",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373066001",
+            "display": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "pc-ptsd-q02",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "pc-ptsd-q03",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "pc-ptsd-q04",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373067005",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "pc-ptsd-score-total",
+      "answer": [
+        {
+          "valueDecimal": 1
+        }
+      ]
+    }
+  ]
+}
