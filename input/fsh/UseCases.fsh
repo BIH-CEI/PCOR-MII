@@ -30,12 +30,30 @@
 //   nicht publizierbar und noch nicht modelliert. Das CodeSystem fuehrt alle
 //   vier Codes, damit die Use-Case-Definition vollstaendig ist; Manifeste
 //   existieren nur fuer die zwei aktiven.
+//
+// DRITTES MANIFEST: PILOT "50 FIRST PATIENTS" (2026-10-13). Der Pilot ist kein
+//   klinischer Use Case, sondern ein Programm quer ueber alle Use Cases. Sein
+//   Manifest ist deshalb die SCHNITTMENGE: nur Boegen, die laut Blatt Domain
+//   Overview in PSS, AN UND NTx erhoben werden (Spalten der Seite Fragebogen-
+//   Bibliothek), und von denen es ein Artefakt gibt. Ableitungsregel, nicht
+//   Zusammenstellung — wer die Schnittmenge aendert, aendert zuerst die
+//   Tabelle. Dadurch ausgeschlossen: OPD-SFK (nicht NTx), PHQ-15 (nur PSS),
+//   PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Das
+//   CodeSystem bekommt dafuer den Code pilot-50fp, damit die Suche
+//   Library?context= fuer alle drei Manifeste gleich funktioniert.
+//
+// LESART "PROMIS SF 4a (8 Domaenen)" (Use-Case-Leitung, 2026-10-13): Die Zeile
+//   des Erhebungsplans meint PROMIS-29 (sieben Domaenen, je die SF 4a, plus
+//   Schmerzintensitaet) PLUS Cognitive Function SF 4a — zusammen die
+//   PROMIS-33-Abdeckung. Gepinnt werden deshalb mii-qst-pro-promis-29 und
+//   -promis-cognitive-function-sf4a; die fruehere Lesart mit der
+//   alleinstehenden Depression SF 4a war falsch.
 // ─────────────────────────────────────────────────────────────────────────────
 
 CodeSystem: PcorUseCaseCS
 Id: pcor-use-case
 Title: "PCOR-MII Use Cases"
-Description: "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary). NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert)."
+Description: "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden."
 * insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case"
 * ^status = #draft
@@ -46,8 +64,14 @@ Description: "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt D
 * #an "AN — Anorexia nervosa"
 * #ntxr "NTXr — Nierentransplantation, Empfänger" "Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert."
 * #ntxd "NTXd — Nierentransplantation, Spender" "Zurückgestellt: kein Manifest."
+* #pilot-50fp "Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases" "Kein klinischer Use Case, sondern das Pilotprogramm des Datenaustauschs. Das Manifest enthält genau die Bögen, die in PSS, AN und NTx erhoben werden (Schnittmenge des Erhebungsplans)."
 
 RuleSet: UseCaseLibrary(code, display)
+// CRMI-Manifestprofil, versionsgepinnt auf die Dependency hl7.fhir.uv.crmi 2.0.0
+// (sushi-config.yaml). Das Profil verlangt type = asset-collection und sliced
+// relatedArtifact in component (composed-of) und dependency (depends-on);
+// wir befuellen nur component. Bei einem Dependency-Bump den Pin mitziehen.
+* meta.profile = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary|2.0.0"
 * type = http://terminology.hl7.org/CodeSystem/library-type#asset-collection
 * useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#program
 * useContext.valueCodeableConcept = PcorUseCaseCS#{code} "{display}"
@@ -80,8 +104,8 @@ Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Question
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0, IPQ-S — offene Ursachenfrage)
 // ── MII-PRO-Bögen (Paketabhängigkeit 2026.7.0) ──────────────────────────────
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0, PROMIS-16)
-* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0, PROMIS Cognitive Function SF 4a)
-* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0, PROMIS Depression SF 4a)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0, PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0, PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0, WHODAS 2.0 12-Item)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0, PHQ-9 — in PSS als PHQ-8 + PHQ-SI erhoben)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2026.7.0, PHQ-15)
@@ -123,7 +147,29 @@ Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionn
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0, PHQ-9 — inkl. PHQ-SI)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0, GAD-7)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0, PROMIS-16)
-* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0, PROMIS Cognitive Function SF 4a)
-* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0, PROMIS Depression SF 4a)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0, PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0, PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0, WHODAS 2.0 12-Item)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0, EURONET-SOMA)
+
+Instance: pilot-50fp
+InstanceOf: Library
+Usage: #definition
+Title: "Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases"
+Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html); nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case."
+* insert InstanceVersion
+* url = "https://bih-cei.github.io/PCOR-MII/Library/pilot-50fp"
+* name = "Pilot50FirstPatients"
+* insert UseCaseLibrary(pilot-50fp, Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases)
+// ── PCOR-MII-eigene Bögen (in PSS, AN und NTx) ───────────────────────────────
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0, DEM — Demographie-Sammelbogen)
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0, MHI — Medical History)
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0, WAI — Work Ability Score [metadata-only])
+// ── MII-PRO-Bögen (Paketabhängigkeit 2026.7.0; in PSS, AN und NTx) ───────────
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0, PROMIS-16)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0, PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0, PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0, WHODAS 2.0 12-Item)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0, PHQ-9 — in PSS als PHQ-8 + PHQ-SI erhoben)
+* insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0, GAD-7)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0, EURONET-SOMA)
