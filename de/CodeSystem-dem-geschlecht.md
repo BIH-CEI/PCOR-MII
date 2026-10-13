@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Geschlecht (Selbstbeschreibung) (Experimentell) 
 
- 
-Selbstbeschriebenes Geschlecht (Q_SEX). HINWEIS: Im MII-Kontext bevorzugt an das MII-Person-Modul (Geschlecht / gender-amtlich-de) angleichen. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DEM Geschlecht](ValueSet-dem-geschlecht-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Geschlecht (Selbstbeschreibung)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -2,9 +2,6 @@
 
 ## ValueSet: UKHD-AN Aktueller Behandlungsstatus (Experimental) 
 
- 
-Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). 
-
  **References** 
 
 * [UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDCT.md)
@@ -33,7 +30,7 @@ Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_ou
   "title" : "UKHD-AN Aktueller Behandlungsstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

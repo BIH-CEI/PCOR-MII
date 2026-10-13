@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN) (Experimentell) 
 
- 
-Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: frühere oder aktuelle psychotherapeutische Behandlung (`bdkm15`) und Arztbesuche in den letzten 4 Wochen (`bdkm16`). Eigenes Questionnaire je Dictionary-Gruppe — die UKHD-Zusatzitems sind kein gemeinsames Instrument; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt** — gerade hier: Die `bdkm`-Variablen-IDs tragen ein fremdes, im Dictionary nicht erläutertes Kürzelschema. 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

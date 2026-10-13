@@ -2,9 +2,6 @@
 
 ## Questionnaire: DEM — Demographics & Medical History (Experimentell) 
 
- 
-Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument. 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

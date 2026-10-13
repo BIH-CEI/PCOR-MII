@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN) (Experimental) 
 
- 
-Drei Items zu neuen Diagnosen seit der letzten Befragung aus der Dictionary-Gruppe `UKHD-ND`: zwei Ja/Nein-Items für zwei Erhebungszeitpunkte plus ein Freitextitem per `enableWhen` (`any`). Kein Aufnahme-Item — bei Aufnahme erhebt stattdessen [UKHD-D](Questionnaire-UKHDD.md). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.** 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

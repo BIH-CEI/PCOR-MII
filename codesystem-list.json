@@ -30,9 +30,9 @@
     "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
     "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
-    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein"
+    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein",
+    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
@@ -277,6 +277,14 @@
     "name" : "PcorScoreCatalogueCS",
     "title" : "PCOR-MII Score-Katalog (Codes)",
     "description" : "Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen."
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "PcorUseCaseCS",
+    "title" : "PCOR-MII Use Cases",
+    "description" : "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden."
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",

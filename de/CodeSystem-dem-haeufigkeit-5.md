@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Häufigkeit (5-stufig) (Codes) (Experimentell) 
 
- 
-5-stufige Häufigkeitsskala für finanzielle Sorgen (MONMEAL/MONRENT/MONBILLS). Quelle: Commonwealth Fund 2017. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DEM Häufigkeit (5-stufig)](ValueSet-dem-haeufigkeit-5-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -2,9 +2,6 @@
 
 ## CodeSystem: WAI Antwortskala 5-stufig (Codes) (Experimentell) 
 
- 
-Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [WAI Antwortskala 5-stufig](ValueSet-wai-skala-5-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "WAI Antwortskala 5-stufig (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

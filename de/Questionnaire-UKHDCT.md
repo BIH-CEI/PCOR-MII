@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN) (Experimentell) 
 
- 
-Ein Item zum aktuellen Behandlungsstatus aus der Dictionary-Gruppe `UKHD-CT` (`treatment_outpatient`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.** 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

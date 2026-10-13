@@ -2,9 +2,6 @@
 
 ## Questionnaire: ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) (Experimental) 
 
- 
-**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire (Felitti et al. 1998) plus sechs UKHD-Items zur zeitlichen Einordnung der berichteten Ereignisse. Die sechs Zeitangaben sind in drei Paare gegliedert; jedes Paar wird über `enableWhen` von einem bejahten ACE-Item freigeschaltet — `ace1`, `ace2` bzw. `ace3`, so wie das Item Level Dictionary es vorgibt. Die fünf ACE-Items im Einzelnen: emotionale und körperliche Misshandlung, sexueller Missbrauch, emotionale und körperliche Vernachlässigung vor dem 18. Lebensjahr, je ja/nein. Kein Score — die Summe über den 5-Item-Zuschnitt ist kein validierter ACE-Score. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items — und zusätzlich seinen LOINC-Code. 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

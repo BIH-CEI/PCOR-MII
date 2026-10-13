@@ -2,9 +2,6 @@
 
 ## CodeSystem: ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes) (Experimental) 
 
- 
-Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht](ValueSet-ansocq-gedanken-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

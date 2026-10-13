@@ -2,9 +2,6 @@
 
 ## CodeSystem: MHI Gewichtsmessung Methode (Codes) (Experimentell) 
 
- 
-Wie wurde das Gewicht ermittelt? (weight_outpatient_2). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [MHI Gewichtsmessung Methode](ValueSet-mhi-gewichtsmethode-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Gewichtsmessung Methode (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

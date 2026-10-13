@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Zigaretten pro Tag (Bänder) (Experimental) 
 
- 
-Anzahl Zigaretten pro Tag in Bändern (GIPS57b). 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [DEM Zigaretten pro Tag](ValueSet-dem-zigaretten-band-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Zigaretten pro Tag (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

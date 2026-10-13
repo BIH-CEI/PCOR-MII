@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Bildungsabschluss (ISCED) (Experimentell) 
 
- 
-Höchster Bildungsabschluss (Q_ISCED). 
-
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
@@ -33,7 +30,7 @@ Höchster Bildungsabschluss (Q_ISCED).
   "title" : "DEM Bildungsabschluss (ISCED)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

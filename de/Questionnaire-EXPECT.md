@@ -2,9 +2,6 @@
 
 ## Questionnaire: EXPECT — Erwartung an den Verlauf der Körperbeschwerden (Experimentell) 
 
- 
-Drei numerische Rating-Items (0-10) zur Erwartung an die kommenden 6 Monate: erwartete Gesamtstärke der Körperbeschwerden, erwartete Beeinträchtigung und erwartete Bewältigung. Kein standardisierter Fragebogen und kein Gesamtscore — die Items sind einzeln auszuwerten und nicht gleichgerichtet. Quelle: PCOR-MII Item Level Dictionary (Entität PSS). 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

@@ -2,9 +2,6 @@
 
 ## Questionnaire: IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage) (Experimental) 
 
- 
-Eine offene Frage nach den drei wichtigsten subjektiven Ursachen der Körperbeschwerden, angelehnt an Item 9 des Brief Illness Perception Questionnaire (B-IPQ). PCOR-MII erhebt NICHT den B-IPQ selbst; ein B-IPQ-Score ist aus diesem Item nicht ableitbar. Quelle: PCOR-MII Item Level Dictionary (Entität PSS). 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

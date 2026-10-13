@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Geschlecht (Experimental) 
 
- 
-Selbstbeschriebenes Geschlecht (Q_SEX). 
-
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
@@ -33,7 +30,7 @@ Selbstbeschriebenes Geschlecht (Q_SEX).
   "title" : "DEM Geschlecht",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

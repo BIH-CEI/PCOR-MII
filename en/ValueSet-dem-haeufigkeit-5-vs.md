@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Häufigkeit (5-stufig) (Experimental) 
 
- 
-5-stufige Häufigkeitsskala (MONMEAL/MONRENT/MONBILLS). 
-
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
@@ -33,7 +30,7 @@
   "title" : "DEM Häufigkeit (5-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

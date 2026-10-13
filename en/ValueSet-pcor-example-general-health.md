@@ -2,9 +2,6 @@
 
 ## ValueSet: PCOR Example General Health Self-Assessment (Experimental) 
 
- 
-ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt. 
-
  **References** 
 
 * [PCOR Beispiel-Fragebogen](Questionnaire-PcorExampleQuestionnaire.md)
@@ -33,7 +30,7 @@ ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit a
   "title" : "PCOR Example General Health Self-Assessment",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

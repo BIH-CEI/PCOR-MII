@@ -2,9 +2,6 @@
 
 ## CodeSystem: PCOR-MII Score-Katalog (Codes) (Experimental) 
 
- 
-Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "PCOR-MII Score-Katalog (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

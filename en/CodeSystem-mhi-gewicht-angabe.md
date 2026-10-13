@@ -2,9 +2,6 @@
 
 ## CodeSystem: MHI Gewichtsangabe (Codes) (Experimental) 
 
- 
-Einheit/Angabe-Status für Gewicht (Q_WB151). 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [MHI Gewichtsangabe](ValueSet-mhi-gewicht-angabe-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MHI Gewichtsangabe (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

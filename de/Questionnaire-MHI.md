@@ -2,9 +2,6 @@
 
 ## Questionnaire: MHI — Medical History (Experimentell) 
 
- 
-Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument. 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

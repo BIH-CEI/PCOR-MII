@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Ja/Nein/Keine Angabe (Experimentell) 
 
- 
-Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS. 
-
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
@@ -33,7 +30,7 @@ Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS.
   "title" : "DEM Ja/Nein/Keine Angabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

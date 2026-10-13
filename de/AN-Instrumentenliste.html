@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- T-CABS BIH Corporate Design Colors -->
+  	<!-- T-CABS BIH Corporate Design Colors -->
 <!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
 <!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
 <!--
@@ -428,11 +428,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="PHQ-15.html">PHQ-15</a></td>
     </tr>
     <tr>
-      <td>PHQ-9 — in AN <strong>vollständig</strong> (PSS: PHQ-8)</td>
+      <td>PHQ-8 — <strong>Standard</strong> in allen Use Cases; vollständiger PHQ-9 nur bei unmittelbarem Arztkontakt vor Ort</td>
       <td>GHS</td>
-      <td style="text-align: right">9</td>
-      <td><strong>MII PRO</strong> → <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current">PHQ-9</a></td>
-      <td><a href="PHQ-9.html">PHQ-9</a></td>
+      <td style="text-align: right">8 (9)</td>
+      <td><strong>MII PRO</strong> → <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current">PHQ-9</a> (PHQ-8 = Teilmenge)</td>
+      <td><a href="PHQ-9.html">PHQ-9</a>, <a href="PHQ.html">PHQ-Übersicht</a></td>
     </tr>
     <tr>
       <td>EURONET-SOMA 1 + 2</td>
@@ -467,7 +467,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>¹ Bei DEM und MHI sind das die <strong>Blatt-Items des PCOR-MII-Questionnaire</strong>, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen, und im MHI kommen die beiden PCOR-MII-eigenen Hilfsitems zur Einheitenauswahl hinzu. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.</p>
 
-<p><strong>Zum Eintrag „PROMIS Short Forms 4a":</strong> Der Erhebungsplan führt für acht Domänen je eine 4-Item-Kurzform. Upstream sind davon <strong>zwei</strong> als eigener <code class="language-plaintext highlighter-rouge">Questionnaire</code> vorhanden — <a href="PROMIS-Cognitive-Function.html">Cognitive Function SF 4a</a> und PROMIS Depression SF 4a (<a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-Depression.page.md?version=current">PRO-IG</a>). Die übrigen sechs Domänen sind <strong>nur über den <a href="PROMIS-29.html">PROMIS-29</a></strong> abgedeckt, der je Domäne vier Items enthält — inhaltlich nicht durchweg dieselben Items wie die jeweilige SF 4a. Wer streng nach Plan die SF-4a-Variante braucht, hat für sechs Domänen kein passendes Artefakt.</p>
+<p><strong>Zum Eintrag „PROMIS Short Forms 4a“ (acht Domänen):</strong> Gemeint ist die PROMIS-33-Abdeckung — der <a href="PROMIS-29.html">PROMIS-29</a>, der je Domäne aus der jeweiligen SF 4a besteht (sieben Domänen plus Schmerzintensität), zusammen mit der <a href="PROMIS-Cognitive-Function.html">Cognitive Function SF 4a</a> als achter Domäne (Lesart bestätigt durch die Use-Case-Leitung, 2026-10-13). Beide sind upstream im MII-PRO-Modul vorhanden; die Use-Case-Manifeste pinnen genau diese zwei Canonicals. Die alleinstehende PROMIS Depression SF 4a des PRO-Moduls ist damit nicht gemeint.</p>
 
 <h3 id="an-spezifische-instrumente">AN-spezifische Instrumente</h3>
 
@@ -776,8 +776,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-01 14:59:00 +0000">
-    2026-10-01
+  <span title="2026-10-13 13:38:00 +0000">
+    2026-10-13
   </span>
 
           <br/>

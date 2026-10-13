@@ -11,7 +11,7 @@
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-10-01T14:59:54+00:00"/>
+  <date value="2026-10-13T13:38:01+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -56,265 +56,14 @@
     <packageId value="hl7.fhir.uv.sdc"/>
     <version value="3.0.0"/>
   </dependsOn>
+  <dependsOn id="hl7_fhir_uv_crmi">
+    <uri value="http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi"/>
+    <packageId value="hl7.fhir.uv.crmi"/>
+    <version value="2.0.0"/>
+  </dependsOn>
   <definition>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="copyrightyear"/>
-      </extension>
-      <extension url="value">
-        <valueString value="2026+"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="releaselabel"/>
-      </extension>
-      <extension url="value">
-        <valueString value="draft"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="shownav"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="i18n-default-lang"/>
-      </extension>
-      <extension url="value">
-        <valueString value="de"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="i18n-lang"/>
-      </extension>
-      <extension url="value">
-        <valueString value="en"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="translation-sources"/>
-      </extension>
-      <extension url="value">
-        <valueString value="input/translations/en"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="excludettl"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="autoload-resources"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-liquid-template"/>
-      </extension>
-      <extension url="value">
-        <valueString value="template/liquid"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-liquid-template"/>
-      </extension>
-      <extension url="value">
-        <valueString value="input/liquid"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-qa"/>
-      </extension>
-      <extension url="value">
-        <valueString value="temp/qa"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-temp"/>
-      </extension>
-      <extension url="value">
-        <valueString value="temp/pages"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-output"/>
-      </extension>
-      <extension url="value">
-        <valueString value="output"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-suppressed-warnings"/>
-      </extension>
-      <extension url="value">
-        <valueString value="input/ignoreWarnings.txt"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-history"/>
-      </extension>
-      <extension url="value">
-        <valueString value="https://bih-cei.github.io/PCOR-MII/history.html"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="template-html"/>
-      </extension>
-      <extension url="value">
-        <valueString value="template-page.html"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="template-md"/>
-      </extension>
-      <extension url="value">
-        <valueString value="template-page-md.html"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-contact"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-context"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-copyright"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-license"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-publisher"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-version"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-wg"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="active-tables"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="fmm-definition"/>
-      </extension>
-      <extension url="value">
-        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="propagate-status"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="excludelogbinaryformat"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="tabbed-snapshots"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="wantGen-ttl"/>
-      </extension>
-      <extension url="value">
-        <valueString value="false"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="wantGen-ttl-html"/>
-      </extension>
-      <extension url="value">
-        <valueString value="false"/>
-      </extension>
-    </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#1.3.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -1130,7 +879,7 @@
         <reference value="Questionnaire/GSLTPAQ"/>
       </reference>
       <name value="GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire"/>
-      <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
+      <description value="Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. Deutsche Übersetzung aus SOMACROSS 2.0 (Übersetzer: UKE), übernommen über das Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1153,6 +902,17 @@
       </reference>
       <name value="IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)"/>
       <description value="Eine offene Frage nach den drei wichtigsten subjektiven Ursachen der Körperbeschwerden, angelehnt an Item 9 des Brief Illness Perception Questionnaire (B-IPQ). PCOR-MII erhebt NICHT den B-IPQ selbst; ein B-IPQ-Score ist aus diesem Item nicht ableitbar. Quelle: PCOR-MII Item Level Dictionary (Entität PSS)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/pilot-50fp"/>
+      </reference>
+      <name value="Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases"/>
+      <description value="Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1450,6 +1210,17 @@
       </reference>
       <name value="PCOR-MII Score-Katalog (Codes)"/>
       <description value="Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pcor-use-case"/>
+      </reference>
+      <name value="PCOR-MII Use Cases"/>
+      <description value="Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2039,6 +1810,28 @@
       </reference>
       <name value="UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)"/>
       <description value="Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: frühere oder aktuelle psychotherapeutische Behandlung (`bdkm15`) und Arztbesuche in den letzten 4 Wochen (`bdkm16`). Eigenes Questionnaire je Dictionary-Gruppe — die UKHD-Zusatzitems sind kein gemeinsames Instrument; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt** — gerade hier: Die `bdkm`-Variablen-IDs tragen ein fremdes, im Dictionary nicht erläutertes Kürzelschema."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/use-case-an"/>
+      </reference>
+      <name value="Use-Case-Manifest AN — Anorexia nervosa"/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/use-case-pss"/>
+      </reference>
+      <name value="Use-Case-Manifest PSS — Persistierende somatische Symptome"/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

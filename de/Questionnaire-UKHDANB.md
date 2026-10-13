@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN) (Experimentell) 
 
- 
-Zwei zusammengesetzte Items zur Essstörungsanamnese aus der Dictionary-Gruppe `UKHD-ANB`: Erkrankungsdauer (`AN_biography`) und niedrigster BMI (`lowBMI`), je als Auswahl plus PCOR-MII-eigenem Wert-Item aufgelöst (MHI-Muster `Q_WB151`/`Q_WB151a`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.** 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

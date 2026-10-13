@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Haushaltseinkommen (Bänder) (Experimental) 
 
- 
-Netto-Haushaltseinkommen in Kategorien (Q_OECDLIT7a). Die ursprüngliche deutsche Übersetzung liegt in de-CH vor (Schweizer PaRIS-Fassung, Bänder bis CHF 3630 / zwischen CHF 3630 und CHF 6050 / ab CHF 6050 pro Monat). Für PCOR-MII sind die Bänder auf deutsche Gehaltsdaten angepasst: EUR-Terzile nach IW Köln (Institut der deutschen Wirtschaft, Niehues/Stockhausen). Das ist KEINE Währungsumrechnung, sondern eine eigenständige Skala — CHF 3630 entspräche grob 3.800 EUR, nicht 2.300 EUR. Weil der Wortlaut damit deutsch und nicht schweizerisch ist, tragen die Designations hier de-DE; die übrigen DEM-Antwortskalen behalten ihren Schweizer Wortlaut nach ADR-005 bewusst bei. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [DEM Haushaltseinkommen](ValueSet-dem-einkommen-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Haushaltseinkommen (Bänder)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

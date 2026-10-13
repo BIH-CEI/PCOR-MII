@@ -2,9 +2,6 @@
 
 ## CodeSystem: MHI Diagnosegruppe (CPCOR) (Codes) (Experimentell) 
 
- 
-Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [MHI Diagnosegruppe (CPCOR)](ValueSet-mhi-cpcor-diag-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

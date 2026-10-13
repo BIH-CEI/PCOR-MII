@@ -2,9 +2,6 @@
 
 ## CodeSystem: PCOR-MII Item Level Dictionary — Variablen-IDs (Experimentell) 
 
- 
-Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit sich ein flach erhobener Datensatz maschinell auf die Instrumenten-Questionnaires verteilen lässt (ADR-011). Jedes Item trägt seine Variable in `item.code`; die Zuordnung ist damit eine Nachschlage-Operation und keine Abbildung. Enthält nur die modellierten Variablen — `content = fragment`. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)

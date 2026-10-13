@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Bildungsabschluss (ISCED-2011/KMK) (Experimental) 
 
- 
-Höchster Bildungsabschluss nach ISCED-2011 / KMK-Systematik (Q_ISCED). 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [DEM Bildungsabschluss (ISCED)](ValueSet-dem-isced-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Bildungsabschluss (ISCED-2011/KMK)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

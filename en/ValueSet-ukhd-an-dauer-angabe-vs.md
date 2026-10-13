@@ -2,9 +2,6 @@
 
 ## ValueSet: UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Experimental) 
 
- 
-Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`). 
-
  **References** 
 
 * [UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)](Questionnaire-UKHDANB.md)
@@ -33,7 +30,7 @@ Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`).
   "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

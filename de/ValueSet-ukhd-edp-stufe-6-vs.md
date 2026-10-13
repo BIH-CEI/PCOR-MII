@@ -2,9 +2,6 @@
 
 ## ValueSet: UKHD-EDP Antwortstufen (neutralisiert) (Experimentell) 
 
- 
-Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem. 
-
  **References** 
 
 * [UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)](Questionnaire-UKHDEDP.md)
@@ -33,7 +30,7 @@ Antwortstufen des UKHD-EDP in neutralisierter Form — siehe CodeSystem.
   "title" : "UKHD-EDP Antwortstufen (neutralisiert)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

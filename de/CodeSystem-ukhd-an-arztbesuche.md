@@ -2,9 +2,6 @@
 
 ## CodeSystem: UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes) (Experimentell) 
 
- 
-Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [UKHD-AN Arztbesuche in den letzten 4 Wochen](ValueSet-ukhd-an-arztbesuche-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

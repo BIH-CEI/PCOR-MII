@@ -2,9 +2,6 @@
 
 ## CodeSystem: PCOR Example General Health Self-Assessment (Experimental) 
 
- 
-Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [PCOR Example General Health Self-Assessment](ValueSet-pcor-example-general-health.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "PCOR Example General Health Self-Assessment",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -2,9 +2,6 @@
 
 ## ValueSet: ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Experimentell) 
 
- 
-Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. 
-
  **References** 
 
 * [ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)](Questionnaire-ANSOCQ2.md)
@@ -33,7 +30,7 @@ Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewic
   "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

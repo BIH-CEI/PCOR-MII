@@ -2,9 +2,6 @@
 
 ## CodeSystem: PCOR-MII Questionnaire-Katalog (Experimental) 
 
- 
-Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.code`. Anders als die Canonical, die das **Artefakt** identifiziert, bezeichnet der Katalogcode das **Instrument** — damit mehrere Fassungen desselben Bogens als solche erkennbar sind (ADR-007). Lokal vergeben, weil weder LOINC noch SNOMED CT noch der MII-Questionnaire-Katalog Codes für diese Bögen führen; `Questionnaire.code` ist `0..*`, ein späterer Code wird also ergänzt statt ersetzt (ADR-004). 
-
 This Code system is referenced in the definition of the following value sets:
 
 * This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
@@ -70,7 +67,7 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "gsltpaq",
     "display" : "GSLTPAQ",
-    "definition" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire, PCOR-MII-Eigenübersetzung"
+    "definition" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)"
   },
   {
     "code" : "expect",

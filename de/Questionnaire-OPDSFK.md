@@ -2,9 +2,6 @@
 
 ## Questionnaire: OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion (Experimentell) 
 
- 
-OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu … trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`. 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

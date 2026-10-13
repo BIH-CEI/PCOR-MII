@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN) (Experimental) 
 
- 
-Vier Items zu belastenden Lebensereignissen aus der Dictionary-Gruppe `UKHD-LE`: dieselbe Ja/Nein-Frage für drei Erhebungszeitpunkte plus ein Freitextitem, das per `enableWhen` (`any`) an allen drei hängt. Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Hochsensible Inhalte** — Governance der Auswertung fachlich zu klären (analog PHQ-SI und [ACE](ACE.md)). **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.** 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

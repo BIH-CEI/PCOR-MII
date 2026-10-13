@@ -2,9 +2,6 @@
 
 ## Questionnaire: PCOR Beispiel-Fragebogen (Experimental) 
 
- 
-Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

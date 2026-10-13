@@ -2,9 +2,6 @@
 
 ## Questionnaire: EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q) (Experimentell) 
 
- 
-Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE-Q): drei 28-Tage-Häufigkeitsitems (Restriktion, gedankliche Beschäftigung, Abnehmwunsch), ein Item zum Körperunbehagen (0-6) sowie zwei Zusatzfragen zur Regelblutung. Kein Score — für den Zuschnitt liegt keine validierte Scoring-Vorschrift vor. Quelle: PCOR-MII Item Level Dictionary (Entität AN). 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

@@ -97,6 +97,8 @@ Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. B
 
 ## Pilot-Datenfluss "50 First Patients"
 
+Welche Bögen der Pilot austauscht, steht maschinenlesbar in [Library/pilot-50fp](Library-pilot-50fp.md): die Schnittmenge aller Use Cases, versioniert gepinnt (Herleitung auf der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.md#use-cases)). Sender und Empfänger laden genau diese Versionen; damit löst jede `QuestionnaireResponse.questionnaire`-Referenz eindeutig auf.
+
 Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene App) **oder** direkt in FHIR (LHC-Forms o.ä.). FHIR ist primär die **Ablage- und Austausch-Form**:
 
 ```

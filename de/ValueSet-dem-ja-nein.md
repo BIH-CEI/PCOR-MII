@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Ja/Nein (Experimentell) 
 
- 
-Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No). 
-
  **References** 
 
 * [ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)](Questionnaire-ACE.md)
@@ -38,7 +35,7 @@ Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=3730
   "title" : "DEM Ja/Nein",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

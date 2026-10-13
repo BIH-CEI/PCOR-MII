@@ -2,9 +2,6 @@
 
 ## Questionnaire: ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ) (Experimental) 
 
- 
-Zwei Items aus dem Anorexia Nervosa Stages of Change Questionnaire (ANSOCQ): Bereitschaft zur Gewichtszunahme an sorgenbesetzten Körperteilen (Item 3) und Umgang mit der Zeit für Gedanken an Nahrung und Gewicht (Item 14). Je fünf Feststellungen entsprechend den Stadien der Veränderungsbereitschaft (1-5). Kein Score — für den Zuschnitt liegt keine validierte Scoring-Vorschrift vor. Quelle: PCOR-MII Item Level Dictionary (Entität AN). 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

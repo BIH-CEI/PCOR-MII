@@ -2,9 +2,6 @@
 
 ## ValueSet: MHI Chronische Erkrankungen (GIPS13) (Experimental) 
 
- 
-Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl). 
-
  **References** 
 
 * [MHI — Medical History](Questionnaire-MHI.md)
@@ -33,7 +30,7 @@ Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl).
   "title" : "MHI Chronische Erkrankungen (GIPS13)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

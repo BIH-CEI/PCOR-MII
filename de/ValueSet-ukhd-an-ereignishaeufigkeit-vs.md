@@ -2,9 +2,6 @@
 
 ## ValueSet: UKHD-AN Ereignis einmalig oder wiederholt (Experimentell) 
 
- 
-Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`). 
-
  **References** 
 
 * [ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)](Questionnaire-ACE.md)
@@ -33,7 +30,7 @@ Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `tr
   "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

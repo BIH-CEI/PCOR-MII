@@ -2,9 +2,6 @@
 
 ## CodeSystem: SSUK Antwortskala (Codes) (Experimental) 
 
- 
-5-stufige Häufigkeitsskala der SSUK (0 = nie … 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [SSUK Antwortskala](ValueSet-ssuk-antwort-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "SSUK Antwortskala (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

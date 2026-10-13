@@ -2,9 +2,6 @@
 
 ## CodeSystem: UKHD-AN Niedrigster BMI — Angabe-Status (Codes) (Experimentell) 
 
- 
-Angabe-Status für den niedrigsten BMI (`lowBMI`): Wert wird angegeben oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `lowBMI-wert`. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [UKHD-AN Niedrigster BMI — Angabe-Status](ValueSet-ukhd-an-bmi-angabe-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

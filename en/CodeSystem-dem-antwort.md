@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe) (Experimental) 
 
- 
-Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No). 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [DEM Ja/Nein](ValueSet-dem-ja-nein.md)
@@ -29,7 +26,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

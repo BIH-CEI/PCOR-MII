@@ -2,9 +2,6 @@
 
 ## ValueSet: UKHD-AN Arztbesuche in den letzten 4 Wochen (Experimental) 
 
- 
-Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4. 
-
  **References** 
 
 * [UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDPT.md)
@@ -33,7 +30,7 @@ Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm1
   "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

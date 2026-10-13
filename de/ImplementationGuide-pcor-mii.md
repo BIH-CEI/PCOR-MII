@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -64,363 +64,17 @@
     "uri" : "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
     "packageId" : "hl7.fhir.uv.sdc",
     "version" : "3.0.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_crmi",
+    "uri" : "http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi",
+    "packageId" : "hl7.fhir.uv.crmi",
+    "version" : "2.0.0"
   }],
   "definition" : {
     "extension" : [{
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "copyrightyear"
-      },
-      {
-        "url" : "value",
-        "valueString" : "2026+"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "releaselabel"
-      },
-      {
-        "url" : "value",
-        "valueString" : "draft"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "shownav"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "i18n-default-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "de"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "i18n-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "en"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "translation-sources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/translations/en"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "excludettl"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "autoload-resources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid-template"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template/liquid"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid-template"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/liquid"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-qa"
-      },
-      {
-        "url" : "value",
-        "valueString" : "temp/qa"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-temp"
-      },
-      {
-        "url" : "value",
-        "valueString" : "temp/pages"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-output"
-      },
-      {
-        "url" : "value",
-        "valueString" : "output"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-suppressed-warnings"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/ignoreWarnings.txt"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-history"
-      },
-      {
-        "url" : "value",
-        "valueString" : "https://bih-cei.github.io/PCOR-MII/history.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "template-html"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template-page.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "template-md"
-      },
-      {
-        "url" : "value",
-        "valueString" : "template-page-md.html"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-contact"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-context"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-copyright"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-publisher"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-version"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-wg"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "active-tables"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "fmm-definition"
-      },
-      {
-        "url" : "value",
-        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "propagate-status"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "excludelogbinaryformat"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "tabbed-snapshots"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "wantGen-ttl"
-      },
-      {
-        "url" : "value",
-        "valueString" : "false"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "wantGen-ttl-html"
-      },
-      {
-        "url" : "value",
-        "valueString" : "false"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.3.0"
     },
     {
       "extension" : [{
@@ -1587,7 +1241,7 @@
         "reference" : "Questionnaire/GSLTPAQ"
       },
       "name" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
-      "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. PCOR-MII-Eigenübersetzung aus dem Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
+      "description" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTPAQ): 3 Intensitätsstufen körperlicher Aktivität (anstrengend/mäßig/leicht) je mit Häufigkeit pro Woche und Dauer in Minuten. Deutsche Übersetzung aus SOMACROSS 2.0 (Übersetzer: UKE), übernommen über das Item Level Dictionary (siehe Kopfkommentar zur Abgrenzung von der validierten Übersetzung Lindner et al. 2026). SDC-Basis; kein PRO-Instrument im Sinne des MII-PRO-Moduls.",
       "exampleBoolean" : false
     },
     {
@@ -1620,6 +1274,22 @@
       },
       "name" : "IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)",
       "description" : "Eine offene Frage nach den drei wichtigsten subjektiven Ursachen der Körperbeschwerden, angelehnt an Item 9 des Brief Illness Perception Questionnaire (B-IPQ). PCOR-MII erhebt NICHT den B-IPQ selbst; ein B-IPQ-Score ist aus diesem Item nicht ableitbar. Quelle: PCOR-MII Item Level Dictionary (Entität PSS).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Library-pilot-50fp.html"
+      }],
+      "reference" : {
+        "reference" : "Library/pilot-50fp"
+      },
+      "name" : "Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases",
+      "description" : "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
       "exampleBoolean" : false
     },
     {
@@ -2052,6 +1722,22 @@
       },
       "name" : "PCOR-MII Score-Katalog (Codes)",
       "description" : "Lokaler Score-Katalog für PCOR-MII. Enthält ausschließlich Scores, für die weder LOINC noch SNOMED CT noch der MII-Score-Katalog (mii-cs-pro-score-catalogue) einen Code führen. Sobald ein Score upstream einen Code erhält, wird dieser in der jeweiligen ObservationDefinition als zusätzliches code.coding ergänzt; der lokale Code bleibt als stabile Referenz bestehen.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-pcor-use-case.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pcor-use-case"
+      },
+      "name" : "PCOR-MII Use Cases",
+      "description" : "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.",
       "exampleBoolean" : false
     },
     {
@@ -2916,6 +2602,38 @@
       },
       "name" : "UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)",
       "description" : "Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: frühere oder aktuelle psychotherapeutische Behandlung (`bdkm15`) und Arztbesuche in den letzten 4 Wochen (`bdkm16`). Eigenes Questionnaire je Dictionary-Gruppe — die UKHD-Zusatzitems sind kein gemeinsames Instrument; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt** — gerade hier: Die `bdkm`-Variablen-IDs tragen ein fremdes, im Dictionary nicht erläutertes Kürzelschema.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Library-use-case-an.html"
+      }],
+      "reference" : {
+        "reference" : "Library/use-case-an"
+      },
+      "name" : "Use-Case-Manifest AN — Anorexia nervosa",
+      "description" : "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Library-use-case-pss.html"
+      }],
+      "reference" : {
+        "reference" : "Library/use-case-pss"
+      },
+      "name" : "Use-Case-Manifest PSS — Persistierende somatische Symptome",
+      "description" : "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
       "exampleBoolean" : false
     },
     {

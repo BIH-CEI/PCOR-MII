@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Urbanizität (Codes) (Experimentell) 
 
- 
-Beschreibung des Wohnorts (Q_OECDLITii). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DEM Urbanizität](ValueSet-dem-urbanizitaet-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Urbanizität (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

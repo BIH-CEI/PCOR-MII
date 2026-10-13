@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- T-CABS BIH Corporate Design Colors -->
+  	<!-- T-CABS BIH Corporate Design Colors -->
 <!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
 <!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
 <!--
@@ -441,7 +441,11 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>This is also why every PCOR-MII response pins its questionnaire version: <code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> is the only place where the wording actually shown to the respondent is recorded.</p>
 
+<p><a name="pilot"></a></p>
+
 <h2 id="pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</h2>
+
+<p>Which questionnaires the pilot exchanges is machine-readable in <a href="Library-pilot-50fp.html">Library/pilot-50fp</a>: the intersection of all use cases, pinned with versions (derivation on the <a href="Fragebogen-Bibliothek.html#use-cases">questionnaire library</a> page). Senders and receivers load exactly these versions, so every <code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> reference resolves unambiguously.</p>
 
 <p>The capture system may sit outside FHIR (REDCap, LimeSurvey, an in-house app) <strong>or</strong> run directly in FHIR (LHC-Forms or similar). FHIR is primarily the <strong>storage and exchange form</strong>:</p>
 
@@ -526,8 +530,8 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 14:59:00 +0000">
-    2026-10-01
+  <span title="2026-10-13 13:38:00 +0000">
+    2026-10-13
   </span>
 
           <br/>

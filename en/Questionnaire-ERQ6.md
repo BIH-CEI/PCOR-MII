@@ -2,9 +2,6 @@
 
 ## Questionnaire: ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt (Experimental) 
 
- 
-Projektspezifischer 6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ; Gross & John 2003): die ERQ-Items 1, 2, 3, 6, 8 und 9 im unveränderten Originalwortlaut, 7-stufige Likert-Skala (1 = stimmt überhaupt nicht … 7 = stimmt vollkommen). NICHT der ERQ-S: Dieser besteht laut Preece et al. (2023, Tabelle 1) aus den ERQ-Items 2, 6, 7, 8, 9 und 10. Vier Items überschneiden sich, die Neubewertungs-Items nicht — PCOR-MII hat 1 und 3, der ERQ-S hat 7 und 10. Daher KEIN Score — die publizierten ERQ-S-Kennwerte gelten für den ERQ-S-Wortlaut, nicht für diesen Satz. linkIds sind die Original-ERQ-Itemnummern; deutsche Wortlaute aus der autorisierten Fassung von Abler & Kessler (2009), englische aus dem ERQ-Originalbogen (Gross & John). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. ACHTUNG: Sie ist hier NICHT die Itemnummer. Dictionary erq4/erq5/erq6 liegen auf den ERQ-Items 6/8/9; die Original-Itemnummer steht im linkId. 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

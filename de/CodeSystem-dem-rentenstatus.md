@@ -2,9 +2,6 @@
 
 ## CodeSystem: DEM Rentenstatus (Codes) (Experimentell) 
 
- 
-Rentenstatus (GIPS10). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DEM Rentenstatus](ValueSet-dem-rentenstatus-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "DEM Rentenstatus (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

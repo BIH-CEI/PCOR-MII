@@ -2,9 +2,6 @@
 
 ## ConceptMap: ERQ-6: Dictionary-Variablen-IDs → FHIR-linkIds (Experimentell) 
 
- 
-Bildet die sequenziellen Variablen-IDs des PCOR-MII Item Level Dictionary (erq1–erq6) auf die linkIds des ERQ-6-Questionnaire ab, die den Original-ERQ-Itemnummern entsprechen (1, 2, 3, 6, 8, 9). Erforderlich, weil drei IDs abweichen und `erq6` in beiden Systemen existiert, dort aber verschiedene Items bezeichnet — ein Mapping über Namensgleichheit führt zu einer stillen Fehlzuordnung. Hinweis: Die Id dieser ConceptMap enthält historisch „erq-s“; der Bogen ist jedoch nicht der ERQ-S (siehe [ERQ-6](ERQ-6.md)). 
-
 
 
 ## Resource Content

@@ -2,9 +2,6 @@
 
 ## CodeSystem: MHI Einnahmezeitpunkt Medikament (Codes) (Experimentell) 
 
- 
-Tageszeit der Medikamenteneinnahme (medi_02_time). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [MHI Einnahmezeitpunkt Medikament](ValueSet-mhi-einnahmezeit-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Einnahmezeitpunkt Medikament (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

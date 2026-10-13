@@ -2,9 +2,6 @@
 
 ## Questionnaire: SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) (Experimentell) 
 
- 
-Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je ein Item zur positiven Unterstützung (aufmuntern/trösten) und zur belastenden Interaktion (Auswirkung der Erkrankung herunterspielen), 5-stufige Häufigkeitsskala (0 = nie … 4 = immer). Kein Score — die beiden Items sind gegenläufig gepolt und einzeln auszuwerten. Quelle: PCOR-MII Item Level Dictionary (Entität AN). 
-
 *  [Baumansicht](#tabs-tree) 
 *  [Beispielanzeige](#tabs-sample) 
 *  [Formularlogik](#tabs-logic) 

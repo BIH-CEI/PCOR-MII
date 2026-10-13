@@ -2,9 +2,6 @@
 
 ## CodeSystem: OPD-SFK Antwortskala (Codes) (Experimentell) 
 
- 
-5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu … 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal(). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [OPD-SFK Antwortskala](ValueSet-opd-sfk-antwort-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "OPD-SFK Antwortskala (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

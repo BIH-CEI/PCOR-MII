@@ -2,9 +2,6 @@
 
 ## CodeSystem: UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes) (Experimental) 
 
- 
-Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [UKHD-AN Ereignis vor oder nach Beginn der Essstoerung](ValueSet-ukhd-an-ereigniszeitpunkt-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

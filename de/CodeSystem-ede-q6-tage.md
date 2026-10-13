@@ -2,9 +2,6 @@
 
 ## CodeSystem: EDE-Q6 Häufigkeit in 28 Tagen (Codes) (Experimentell) 
 
- 
-7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag … 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein. 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [EDE-Q6 Häufigkeit in 28 Tagen](ValueSet-ede-q6-tage-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

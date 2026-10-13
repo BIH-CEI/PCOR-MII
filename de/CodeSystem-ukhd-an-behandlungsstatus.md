@@ -2,9 +2,6 @@
 
 ## CodeSystem: UKHD-AN Aktueller Behandlungsstatus (Codes) (Experimentell) 
 
- 
-Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4). 
-
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [UKHD-AN Aktueller Behandlungsstatus](ValueSet-ukhd-an-behandlungsstatus-vs.md)
@@ -27,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN) (Experimental) 
 
- 
-Zwei Freitextitems zu den Aufnahmediagnosen aus der Dictionary-Gruppe `UKHD_D` (Schreibweise mit Unterstrich so im Dictionary): Behandlungsdiagnosen (`diagnosis_admit`) und weitere Diagnosen (`comorbid1`). Eigenes Questionnaire je Dictionary-Gruppe; Übersicht auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Kein Score. **Für den Wortlaut liegt keine dokumentierte Freigabe vor, seine Herkunft ist ungeklärt.** 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

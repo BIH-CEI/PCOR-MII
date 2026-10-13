@@ -2,9 +2,6 @@
 
 ## Questionnaire: WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) (Experimental) 
 
- 
-Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kategorie PSS im PCOR-Item-Dictionary). METADATA-ONLY: Item-Texte und Antwortstufen sind neutral umschrieben, da die Publikationsrechte am Originalwortlaut ungeklärt sind (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Struktur, linkIds und Wertebereiche entsprechen dem Original. 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 

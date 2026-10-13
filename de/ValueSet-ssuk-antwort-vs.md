@@ -2,9 +2,6 @@
 
 ## ValueSet: SSUK Antwortskala (Experimentell) 
 
- 
-5-stufige Häufigkeitsskala der SSUK (0 = nie … 4 = immer). 
-
  **References** 
 
 * [SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)](Questionnaire-SSUK2.md)
@@ -33,7 +30,7 @@
   "title" : "SSUK Antwortskala",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

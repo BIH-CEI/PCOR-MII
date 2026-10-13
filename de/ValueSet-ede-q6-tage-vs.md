@@ -2,9 +2,6 @@
 
 ## ValueSet: EDE-Q6 Häufigkeit in 28 Tagen (Experimentell) 
 
- 
-7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag … 6 = jeden Tag). 
-
  **References** 
 
 * [EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)](Questionnaire-EDEQ6.md)
@@ -33,7 +30,7 @@
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

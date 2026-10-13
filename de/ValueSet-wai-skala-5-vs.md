@@ -2,9 +2,6 @@
 
 ## ValueSet: WAI Antwortskala 5-stufig (Experimentell) 
 
- 
-Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. Metadata-only, siehe WaiSkala5CS. 
-
  **References** 
 
 * [WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)](Questionnaire-WAI.md)
@@ -33,7 +30,7 @@ Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 5 = bester Wer
   "title" : "WAI Antwortskala 5-stufig",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

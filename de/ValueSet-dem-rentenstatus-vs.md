@@ -2,9 +2,6 @@
 
 ## ValueSet: DEM Rentenstatus (Experimentell) 
 
- 
-Rentenstatus (GIPS10). 
-
  **References** 
 
 * [DEM — Demographics & Medical History](Questionnaire-DEM.md)
@@ -33,7 +30,7 @@ Rentenstatus (GIPS10).
   "title" : "DEM Rentenstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

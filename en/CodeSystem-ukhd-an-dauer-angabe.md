@@ -2,9 +2,6 @@
 
 ## CodeSystem: UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes) (Experimental) 
 
- 
-Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_biography`): Monate, Jahre oder „weiß ich nicht“. Der Zahlenwert steht im Hilfsitem `AN_biography-wert`. 
-
 This Code system is referenced in the definition of the following value sets:
 
 * [UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status](ValueSet-ukhd-an-dauer-angabe-vs.md)
@@ -27,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-01T14:59:54+00:00",
+  "date" : "2026-10-13T13:38:01+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

@@ -2,9 +2,6 @@
 
 ## Questionnaire: UKHD-EDP — Essstörungspathologie (11 Items, metadata-only) (Experimental) 
 
- 
-Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD. **Metadata-only:** Struktur, `linkId`s, Antwortformat und Wertebereiche sind abgebildet, der Originalwortlaut der Items und der Antwortstufen bewusst nicht. Grund: Der Block ist vermutlich ein Zuschnitt des EDI-2 (je ein Item pro Subskala) — eines Hogrefe-Testverfahrens —, und unabhängig davon liegt für die Standort-Itemgruppen keine dokumentierte Freigabe vor. Kein Score: Ein Item je Subskala bildet die Subskala nicht ab. 
-
 *  [Tree view](#tabs-tree) 
 *  [Sample Rendering](#tabs-sample) 
 *  [Form Logic](#tabs-logic) 
