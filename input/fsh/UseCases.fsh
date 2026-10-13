@@ -89,7 +89,7 @@ Instance: use-case-pss
 InstanceOf: Library
 Usage: #definition
 Title: "Use-Case-Manifest PSS — Persistierende somatische Symptome"
-Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt)."
+Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt)."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/use-case-pss"
 * name = "UseCasePSS"
@@ -121,7 +121,7 @@ Instance: use-case-an
 InstanceOf: Library
 Usage: #definition
 Title: "Use-Case-Manifest AN — Anorexia nervosa"
-Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) und [AN — Instrumentenliste](https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html) ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen)."
+Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen)."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/use-case-an"
 * name = "UseCaseAN"
@@ -156,7 +156,7 @@ Instance: pilot-50fp
 InstanceOf: Library
 Usage: #definition
 Title: "Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases"
-Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html); nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case."
+Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/pilot-50fp"
 * name = "Pilot50FirstPatients"
