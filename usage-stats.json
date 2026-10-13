@@ -16,6 +16,9 @@
       "Questionnaire",
       "Questionnaire.item"
     ],
+    "http://hl7.org/fhir/StructureDefinition/display": [
+      "QuestionnaireResponse.questionnaire"
+    ],
     "http://hl7.org/fhir/StructureDefinition/maxValue": [
       "Questionnaire.item",
       "Questionnaire.item.item"
@@ -65,6 +68,9 @@
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression": [
       "Questionnaire.item"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-questionnaire-capabilities": [
+      "Questionnaire"
     ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-score-score-health-correlation": [
       "ObservationDefinition.qualifiedInterval.range"

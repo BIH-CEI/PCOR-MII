@@ -349,6 +349,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="PROMIS-16.html"><strong>PROMIS-16 Profile v2.1 (PROPr)</strong></a> — ultrakurz, 16 Items über 8 Domänen (inkl. Cognitive Function)</li>
 </ul>
 
+<h4 id="ausnahme-promis-global-health-global01global02">Ausnahme: PROMIS Global Health (Global01/Global02)</h4>
+
+<p>Zwei Einzelitems der <strong>PROMIS Scale v1.2 – Global Health</strong> werden in PCOR-MII erhoben, sind im MII PRO-Modul (geprüft gegen <code class="language-plaintext highlighter-rouge">2026.6.0</code>) aber nicht abgebildet — weder als Questionnaire noch als Katalogeintrag:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>LOINC</th>
+      <th>Item (DE)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Global01</code></td>
+      <td><a href="https://loinc.org/61577-3"><code class="language-plaintext highlighter-rouge">61577-3</code></a></td>
+      <td>Wie würden Sie Ihren Gesundheitszustand insgesamt beschreiben?</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Global02</code></td>
+      <td><a href="https://loinc.org/61578-1"><code class="language-plaintext highlighter-rouge">61578-1</code></a></td>
+      <td>Wie würden Sie Ihre Lebensqualität insgesamt beschreiben?</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Antwortskala beider Items ist die LOINC-Answerlist <a href="https://loinc.org/LL4280-5"><code class="language-plaintext highlighter-rouge">LL4280-5</code></a> (5 = Ausgezeichnet · 4 = Sehr gut · 3 = Gut · 2 = Einigermaßen · 1 = Schlecht), abgebildet im ValueSet <a href="ValueSet-promis-global-skala-5-vs.html"><code class="language-plaintext highlighter-rouge">promis-global-skala-5-vs</code></a>.</p>
+
+<p>Als <strong>Übergangslösung</strong> stellt PCOR-MII dafür den lokalen Questionnaire <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> mit exakt diesen zwei Items bereit. Ziel ist, die vollständige 10-Item-Skala (LOINC-Panel <a href="https://loinc.org/85524-7"><code class="language-plaintext highlighter-rouge">85524-7</code></a> „PROMIS short form - global - version 1.2") ins MII PRO-Modul aufzunehmen; danach wird der lokale Questionnaire durch die Upstream-Referenz ersetzt.</p>
+
+<p>Die PROMIS-Scores Global Physical Health (<code class="language-plaintext highlighter-rouge">71972-4</code>) und Global Mental Health (<code class="language-plaintext highlighter-rouge">71970-8</code>) sind aus diesen beiden Items <strong>nicht</strong> berechenbar — sie setzen je vier Items der Gesamtskala voraus. Global01 und Global02 werden daher als Einzelindikatoren verwendet.</p>
+
+<p>Das dritte GHS-Einzelitem <code class="language-plaintext highlighter-rouge">Global07</code> („PROMIS Numeric Rating Scale – Pain Intensity 1a", LOINC <code class="language-plaintext highlighter-rouge">61583-1</code>) braucht kein eigenes Artefakt: es ist als <code class="language-plaintext highlighter-rouge">promis-global07</code> im referenzierten <a href="PROMIS-29.html">PROMIS-29</a> enthalten.</p>
+
 <h3 id="lizenz--copyright">Lizenz &amp; Copyright</h3>
 
 <p>PROMIS-Ressourcen unterliegen dem 4-Schichten-Modell aus dem MII PRO-Modul:</p>
@@ -428,7 +462,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-13 13:38:00 +0000">
+  <span title="2026-10-13 14:06:00 +0000">
     2026-10-13
   </span>
 

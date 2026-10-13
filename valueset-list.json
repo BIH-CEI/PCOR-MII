@@ -105,12 +105,12 @@
     "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
     "uses" : {
     },
-    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
-    "Questionnaire-MHI.html" : "MHI — Medical History",
-    "Questionnaire-UKHDND.html" : "UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)",
-    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
     "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
-    "Questionnaire-UKHDLE.html" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)"
+    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
+    "Questionnaire-UKHDLE.html" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)",
+    "Questionnaire-MHI.html" : "MHI — Medical History",
+    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
+    "Questionnaire-UKHDND.html" : "UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
@@ -303,6 +303,18 @@
     "uses" : {
     },
     "Questionnaire-PcorExampleQuestionnaire.html" : "PCOR Beispiel-Fragebogen"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/promis-global-skala-5-vs",
+    "version" : "0.3.0",
+    "status" : "draft",
+    "name" : "PromisGlobalSkala5VS",
+    "title" : "PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)",
+    "description" : "5-stufige Antwortskala der PROMIS-Global-Health-Items Global01 und Global02 (LOINC-Answerlist LL4280-5): 5 = Ausgezeichnet … 1 = Schlecht. Displays in der expansion sind die deutschen Formulierungen der validierten PROMIS-Übersetzung, die englischen LOINC-Displays als designation.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "Questionnaire-PROMISGH.html" : "PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ssuk-antwort-vs",

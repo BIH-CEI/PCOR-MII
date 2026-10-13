@@ -21,7 +21,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "resourceType" : "Questionnaire",
   "id" : "PcorExampleQuestionnaire",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire|2026.4.1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire"]
   },
   "language" : "de",
   "extension" : [{
@@ -31,6 +31,29 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
       "code" : "semver",
       "display" : "SemVer"
     }
+  },
+  {
+    "extension" : [{
+      "url" : "displayable",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "collectable",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "calculatable",
+      "valueBoolean" : false
+    },
+    {
+      "url" : "extractable",
+      "valueBoolean" : false
+    },
+    {
+      "url" : "domainAligned",
+      "valueBoolean" : false
+    }],
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-questionnaire-capabilities"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire",
   "version" : "0.3.0",
@@ -55,6 +78,11 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
       "code" : "DE",
       "display" : "Germany"
     }]
+  }],
+  "code" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "840297006",
+    "display" : "Assessment of patient reported outcome measures"
   }],
   "item" : [{
     "linkId" : "general",

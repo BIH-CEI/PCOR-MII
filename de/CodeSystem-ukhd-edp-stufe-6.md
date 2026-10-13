@@ -24,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-13T13:38:01+00:00",
+  "date" : "2026-10-13T14:06:39+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

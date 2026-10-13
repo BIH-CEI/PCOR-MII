@@ -43,7 +43,7 @@ This Code system is referenced in the definition of the following value sets:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 19,
+  "count" : 20,
   "concept" : [{
     "code" : "dem",
     "display" : "PCOR-MII Demographie (DEM)",
@@ -68,6 +68,11 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "gsltpaq",
     "display" : "GSLTPAQ",
     "definition" : "Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)"
+  },
+  {
+    "code" : "promis-gh",
+    "display" : "PROMIS-GH",
+    "definition" : "PROMIS Global Health, 2-Item-Zuschnitt (Global01, Global02) — Übergangslösung bis zur Aufnahme der 10-Item-Skala ins MII-PRO-Modul"
   },
   {
     "code" : "expect",

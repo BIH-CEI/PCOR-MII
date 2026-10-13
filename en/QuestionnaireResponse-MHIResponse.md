@@ -10,6 +10,8 @@
 
 Language: de-DE
 
+Profile: [Ausgefülltes ISiK-Formular](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten)
+
 * [LinkID](https://hl7.org/fhir/R4/formats.html#table): MHIResponse
   * [Text](https://hl7.org/fhir/R4/formats.html#table): 
   * [Definition](https://hl7.org/fhir/R4/formats.html#table): 
@@ -184,8 +186,17 @@ Language: de-DE
 {
   "resourceType" : "QuestionnaireResponse",
   "id" : "MHIResponse",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"]
+  },
   "language" : "de-DE",
   "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
+  "_questionnaire" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/display",
+      "valueString" : "MHI — Medical History"
+    }]
+  },
   "status" : "completed",
   "subject" : {
     "reference" : "Patient/pcor-mii-exa-patient-an"
