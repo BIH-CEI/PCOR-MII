@@ -25,7 +25,7 @@
 * Metadata: Steward Contact
   * ?: BIH-CEI
 * Metadata: Description
-  * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) und [AN — Instrumentenliste](https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html) ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).
+  * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).
 * Metadata: Type
   * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html)#asset-collection
 * Metadata:  Parameters
@@ -112,7 +112,7 @@
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) und [AN — Instrumentenliste](https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html) ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).",
+  "description" : "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).",
   "useContext" : [{
     "code" : {
       "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",

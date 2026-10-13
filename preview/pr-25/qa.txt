@@ -1,10 +1,10 @@
 PCOR_MII : Validation Results
 =========================================
 
-err = 106, warn = 336, info = 875, broken links = 25
+err = 98, warn = 336, info = 875, broken links = 9
 IG Publisher Version: 3.0.0
-Generated Tue Oct 13 07:13:35 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.3.0 (canonical = https://bih-cei.github.io/PCOR-MII)
- Build Errors : 47 / 19 / 0
+Generated Tue Oct 13 07:20:41 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.3.0 (canonical = https://bih-cei.github.io/PCOR-MII)
+ Build Errors : 31 / 19 / 0
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-ansocq-gedanken : 1 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-ansocq-koerperteile : 1 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-dem-antwort : 0 / 1 / 2
@@ -44,9 +44,9 @@ Generated Tue Oct 13 07:13:35 UTC 2026. FHIR version 4.0.1 for pcor-mii#0.3.0 (c
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/CodeSystem-wai-skala-5 : 1 / 1 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ConceptMap-pcor-cm-erq-s-linkids : 0 / 4 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ImplementationGuide-pcor-mii : 0 / 3 / 3
- /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-pilot-50fp : 2 / 1 / 5
- /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-use-case-an : 4 / 1 / 5
- /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-use-case-pss : 2 / 1 / 5
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-pilot-50fp : 0 / 1 / 5
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-use-case-an : 0 / 1 / 5
+ /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Library-use-case-pss : 0 / 1 / 5
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/ObservationDefinition-PcorObsDefProprUtility : 0 / 0 / 3
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Patient-pcor-mii-exa-patient-an : 0 / 1 / 1
  /home/runner/work/PCOR-MII/PCOR-MII/fsh-generated/resources/Patient-pcor-mii-exa-patient-pss : 0 / 1 / 1
@@ -174,14 +174,6 @@ ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/de/Bereitstellung.html: The pa
 ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/de/Bereitstellung.html: The page has more than one top level heading: <h2> 'Versions-Koexistenz auf Empfänger-Servern' (id=versions-koexistenz-auf-empfänger-servern) is at the same level as the first heading on the page (<h2> 'Bereitstellung'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
 ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/de/Bereitstellung.html: The page has more than one top level heading: <h2> 'Pilot-Datenfluss "50 First Patients"' (id=pilot-datenfluss-50-first-patients) is at the same level as the first heading on the page (<h2> 'Bereitstellung'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
 ERROR: de/GAD-7.html#/html/body/div/div/div/div/div/p/a at Line 370, column 289: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids' for "mii-cm-pro-gad-7-linkids" cannot be resolved
-ERROR: de/Library-pilot-50fp.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 62: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: de/Library-pilot-50fp.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 363: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: de/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 70: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: de/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 172: The link 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' for "AN — Instrumentenliste" cannot be resolved
-ERROR: de/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 265: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: de/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 367: The link 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' for "AN — Instrumentenliste" cannot be resolved
-ERROR: de/Library-use-case-pss.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 70: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: de/Library-use-case-pss.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 266: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
 ERROR: de/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 575, column 52: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration' for "mii-cm-pro-phq-9-linkid-migration" cannot be resolved
 ERROR: de/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 654, column 376: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids' for "mii-cm-pro-gad-7-linkids" cannot be resolved
 ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/de/Validierung.html: The page has more than one top level heading: <h2> 'Worum geht's beim Validieren?' (id=worum-gehts-beim-validieren) is at the same level as the first heading on the page (<h2> 'Validierung'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
@@ -196,14 +188,6 @@ ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/en/Bereitstellung.html: The pa
 ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/en/Bereitstellung.html: The page has more than one top level heading: <h2> 'Pilot data flow, "50 First Patients"' (id=pilot-data-flow-50-first-patients) is at the same level as the first heading on the page (<h2> 'Bereitstellung'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
 ERROR: en/GAD-7.html#/html/body/div/div/div/div/div/p/a at Line 372, column 289: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids' for "mii-cm-pro-gad-7-linkids" cannot be resolved
 ERROR: en/Instrumente.html#/html/body/div/div/div/div/div/ul/li/a at Line 720, column 316: The link 'UKHD-AN.html' for "UKHD-AN" cannot be resolved
-ERROR: en/Library-pilot-50fp.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 62: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: en/Library-pilot-50fp.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 363: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: en/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 70: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: en/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 172: The link 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' for "AN — Instrumentenliste" cannot be resolved
-ERROR: en/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 265: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: en/Library-use-case-an.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 367: The link 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' for "AN — Instrumentenliste" cannot be resolved
-ERROR: en/Library-use-case-pss.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 410, column 70: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
-ERROR: en/Library-use-case-pss.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/div/p/a at Line 604, column 266: The link 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' for "Fragebogen-Bibliothek" cannot be resolved
 ERROR: en/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 577, column 52: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration' for "mii-cm-pro-phq-9-linkid-migration" cannot be resolved
 ERROR: en/PHQ.html#/html/body/div/div/div/div/div/p/a at Line 656, column 376: The link 'https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids' for "mii-cm-pro-gad-7-linkids" cannot be resolved
 ERROR: /home/runner/work/PCOR-MII/PCOR-MII/output/en/Validierung.html: The page has more than one top level heading: <h2> 'What validating actually checks' (id=what-validating-actually-checks) is at the same level as the first heading on the page (<h2> 'Validierung'). A page must have exactly one top level heading, with every other heading beneath it (WCAG compliance test)
@@ -364,24 +348,16 @@ WARNING: Library/pilot-50fp: Library.text.div: The XHTML  the resource contains 
 INFORMATION: Library/pilot-50fp: Library.useContext[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case|0.3.0
 INFORMATION: Library/pilot-50fp: Library.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 INFORMATION: Resource: The resource Library/pilot-50fp could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
 == fsh-generated/resources/Library-use-case-an.json ==
 WARNING: Library/use-case-an: Library.text.div: The XHTML  the resource contains more than one node for each of the following node ids and anchor names: metadata (2x), parameters (2x), related-artifacts (2x)
 INFORMATION: Library/use-case-an: Library.useContext[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case|0.3.0
 INFORMATION: Library/use-case-an: Library.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 INFORMATION: Resource: The resource Library/use-case-an could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'AN — Instrumentenliste' does not resolve
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'AN — Instrumentenliste' does not resolve
 == fsh-generated/resources/Library-use-case-pss.json ==
 WARNING: Library/use-case-pss: Library.text.div: The XHTML  the resource contains more than one node for each of the following node ids and anchor names: metadata (2x), parameters (2x), related-artifacts (2x)
 INFORMATION: Library/use-case-pss: Library.useContext[0].value.ofType(CodeableConcept): Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case|0.3.0
 INFORMATION: Library/use-case-pss: Library.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#DE for language(s) 'de'. The display is 'Germany' which is a valid display for the default language
 INFORMATION: Resource: The resource Library/use-case-pss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
-ERROR: Library.text.div: Hyperlink 'https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html' at 'div/div/table/tbody/tr/td/div/p/a' for 'Fragebogen-Bibliothek' does not resolve
 == fsh-generated/resources/ObservationDefinition-PcorObsDefProprUtility.json ==
 INFORMATION: ObservationDefinition/PcorObsDefProprUtility: ObservationDefinition.code: Reference to experimental CodeSystem https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue|0.3.0
 INFORMATION: ObservationDefinition/PcorObsDefProprUtility: ObservationDefinition.code.coding[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint|2026.7.0 überein.

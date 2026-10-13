@@ -24,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-13T07:11:15+00:00",
+  "date" : "2026-10-13T07:18:17+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

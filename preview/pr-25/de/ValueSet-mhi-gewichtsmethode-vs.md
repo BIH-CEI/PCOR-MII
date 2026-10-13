@@ -30,7 +30,7 @@
   "title" : "MHI Gewichtsmessung Methode",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-13T07:11:15+00:00",
+  "date" : "2026-10-13T07:18:17+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
