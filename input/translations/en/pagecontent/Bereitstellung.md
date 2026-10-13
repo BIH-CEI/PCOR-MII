@@ -85,7 +85,11 @@ For the PCOR-MII pilot this does not matter: one PRO version (2026.7.0) througho
 
 This is also why every PCOR-MII response pins its questionnaire version: `QuestionnaireResponse.questionnaire` is the only place where the wording actually shown to the respondent is recorded.
 
+<a name="pilot"></a>
+
 ## Pilot data flow, "50 First Patients"
+
+Which questionnaires the pilot exchanges is machine-readable in [Library/pilot-50fp](Library-pilot-50fp.html): the intersection of all use cases, pinned with versions (derivation on the [questionnaire library](Fragebogen-Bibliothek.html#use-cases) page). Senders and receivers load exactly these versions, so every `QuestionnaireResponse.questionnaire` reference resolves unambiguously.
 
 The capture system may sit outside FHIR (REDCap, LimeSurvey, an in-house app) **or** run directly in FHIR (LHC-Forms or similar). FHIR is primarily the **storage and exchange form**:
 

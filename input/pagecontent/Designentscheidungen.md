@@ -349,7 +349,7 @@ Bei **Druckfehler in der Vorlage** bleibt die übernommene Fassung unverändert.
 
 **Was `derivedFrom` nicht leistet.** Es sagt *dass* abgeleitet wurde, nicht *wie*. Übersetzung, Kurzform, Adaption und Teilmenge sind alle „based on" und im Element nicht unterscheidbar. R4 hat für `Questionnaire` **kein** eigenes Element für eine Übersetzungsbeziehung und auch kein `relatedArtifact`. Die **Art** der Ableitung gehört deshalb zwingend in den `designNote` — sonst ist die Angabe kaum interpretierbar.
 
-**Wichtige Abgrenzung: eine Übersetzung ist kein `derivedFrom` auf eine andere Übersetzung.** Zwei Übersetzungen desselben Instruments sind **Geschwister**, nicht Eltern und Kind — beide leiten sich vom Original ab, nicht voneinander. Beim [GSLTPAQ](GSLTPAQ.html) heißt das: Die PCOR-MII-Eigenübersetzung zeigt **nicht** auf die validierte deutsch-österreichische Fassung und umgekehrt auch nicht; beide zeigen, sobald es sie als Ressource gibt, auf das englische Original.
+**Wichtige Abgrenzung: eine Übersetzung ist kein `derivedFrom` auf eine andere Übersetzung.** Zwei Übersetzungen desselben Instruments sind **Geschwister**, nicht Eltern und Kind — beide leiten sich vom Original ab, nicht voneinander. Beim [GSLTPAQ](GSLTPAQ.html) heißt das: Die UKE/SOMACROSS-Übersetzung zeigt **nicht** auf die validierte deutsch-österreichische Fassung und umgekehrt auch nicht; beide zeigen, sobald es sie als Ressource gibt, auf das englische Original.
 
 **Und der Wortlaut folgt der Rechtekette, nicht der Zitationskette.** Wo die Übersetzung herkommt, ist eine andere Frage als wo das Instrument herkommt, und die DIZ-Implementierungsliste vermischt beides in einer Zelle. Zwei Beispiele aus diesem Projekt: Beim [EDE-Q6](EDE-Q6.html) nennt die Liste als Übersetzungspaper die psychometrische *Evaluation* — der Wortlaut stammt aber aus der dgvt-Publikation. Beim [ERQ-6](ERQ-6.html) liefert das Übersetzungspaper (Abler & Kessler 2009) die **Langform**, aus der die sechs Items entnommen sind — während das dort genannte *Entwicklungspaper* ein anderes Instrument beschreibt als das erhobene. In beiden Fällen ist die Wortlautquelle in `copyright` zu nennen, nicht bloß das Paper, das die Liste angibt.
 
@@ -394,7 +394,7 @@ Vier Gründe, und der letzte ist der eigentliche:
 #### ✅ ADR-007 — Zwei unabhängige Übersetzungen werden zwei Questionnaires, nicht zwei Sprachen und nicht zwei Versionen
 **Entschieden 2026-09-30.** Anlass: [GSLTPAQ](GSLTPAQ.html).
 
-**Die Lage.** PCOR-MII bildet beim GSLTPAQ eine **hausinterne Eigenübersetzung** ab — die vorhandenen Studiendaten wurden mit ihr erhoben. Seit kurzem existiert eine **linguistisch validierte** deutsch-österreichische Übersetzung (Lindner, Bamberger, Crutzen & Kulnik, *Measurement and Evaluations in Cancer Care* 2026, [doi:10.1016/j.ymecc.2026.100027](https://doi.org/10.1016/j.ymecc.2026.100027)), die perspektivisch im MII-PRO-Modul gepflegt werden soll. Beide Wortlaute werden also gebraucht. Die Frage ist, wie man sie unterscheidet.
+**Die Lage.** PCOR-MII bildet beim GSLTPAQ eine nicht validierte deutsche Übersetzung ab — die vorhandenen Studiendaten wurden mit ihr erhoben. *(Ursprünglich als „hausinterne Eigenübersetzung" geführt; Herkunft inzwischen geklärt, siehe Nachtrag unten.)* Seit kurzem existiert eine **linguistisch validierte** deutsch-österreichische Übersetzung (Lindner, Bamberger, Crutzen & Kulnik, *Measurement and Evaluations in Cancer Care* 2026, [doi:10.1016/j.ymecc.2026.100027](https://doi.org/10.1016/j.ymecc.2026.100027)), die perspektivisch im MII-PRO-Modul gepflegt werden soll. Beide Wortlaute werden also gebraucht. Die Frage ist, wie man sie unterscheidet.
 
 **Entscheidung: zwei getrennte `Questionnaire`-Ressourcen mit eigenen Canonicals und eigenen Maintainern.** Nicht zwei Sprachebenen auf einer Ressource, nicht zwei Versionen derselben Ressource.
 
@@ -407,7 +407,7 @@ Der Fall sieht ADR-005 (unten) und dem [ANSOCQ-2](ANSOCQ-2.html) ähnlich, ist a
 **Warum zwei Ressourcen passen.**
 
 - **Eigentum und Lebenszyklus** unterscheiden sich: eine projekteigene Übersetzung gegen eine publizierte Fremdübersetzung, die ins Kernmodul gehört.
-- **Rechte** unterscheiden sich: Die Eigenübersetzung ist die des Projekts, Lindner et al. bringen eigene Bedingungen mit.
+- **Rechte** unterscheiden sich: Die erste Übersetzung hat eigene Urheber (UKE, siehe Nachtrag), Lindner et al. bringen wieder andere Bedingungen mit.
 - **Validierungsstatus ist eine Eigenschaft des Instruments**, nicht der Sprache — und gehört daher auf die Ressourcenebene.
 - Entscheidend: **`QuestionnaireResponse.questionnaire` wird eindeutig.** Aus der Antwort allein ist ablesbar, welchen Wortlaut die Person vorgelegt bekam. Für die Auswertung ist das die wichtigste Eigenschaft überhaupt — und sie ist bei Sprachebenen wie bei Versionen ohne `|version`-Pin nicht gegeben.
 
@@ -419,7 +419,9 @@ Der Fall sieht ADR-005 (unten) und dem [ANSOCQ-2](ANSOCQ-2.html) ähnlich, ist a
 4. **Kein Retire bei Ankunft der Upstream-Fassung.** Die PCOR-MII-Fassung bleibt `active`, solange mit ihr erhoben wird, und geht erst auf `status = retired`, wenn die Erhebung endet. `retired` bleibt auflösbar — genau das brauchen Alt-`QuestionnaireResponse`s.
 5. **Vergleichbarkeit ausdrücklich ausweisen**, nicht voraussetzen: Antworten aus beiden Fassungen sind nicht ohne Weiteres poolbar.
 
-**Ein zweiter Haken, der beim Wechsel zu bedenken ist:** Die validierte Übersetzung ist deutsch-**österreichisch**. Für eine Erhebung in Deutschland ist damit auch sie nicht im strengen Sinn kontextvalidiert. Das ist kein Grund, sie nicht zu bevorzugen — sie ist linguistisch validiert und die Eigenübersetzung nicht —, aber es ist ein Punkt für die Dokumentation und nicht zu verschweigen.
+**Ein zweiter Haken, der beim Wechsel zu bedenken ist:** Die validierte Übersetzung ist deutsch-**österreichisch**. Für eine Erhebung in Deutschland ist damit auch sie nicht im strengen Sinn kontextvalidiert. Das ist kein Grund, sie nicht zu bevorzugen — sie ist linguistisch validiert und die erste Übersetzung nicht —, aber es ist ein Punkt für die Dokumentation und nicht zu verschweigen.
+
+**Nachtrag (2026-10-06) — Herkunft geklärt, Entscheidung bestätigt.** Die erste Übersetzung ist **keine PCOR-MII-Eigenübersetzung**: Sie stammt aus **SOMACROSS 2.0**, Übersetzer ist das **UKE** (Universitätsklinikum Hamburg-Eppendorf) — PCOR-MII war an ihr nicht beteiligt. Das `copyright`-Element des [GSLTPAQ](Questionnaire-GSLTPAQ.html) weist das UKE seither als Übersetzer aus. Zugleich hat die Use-Case-Leitung das Vorgehen dieser ADR bestätigt: **Beide Fassungen werden abgebildet**; Metadaten und Versionierung machen die Unterscheidung klar, jede `QuestionnaireResponse` weist eindeutig aus, mit welcher Definition sie erhoben wurde, und die `linkId`s bleiben identisch, solange keine strukturellen Änderungen nötig werden. Das Argument „Eigentum: projekteigene Übersetzung" oben ist damit hinfällig — die übrigen Gründe (Validierungsstatus als Ressourceneigenschaft, eindeutige `questionnaire`-Referenz, getrennte Rechte und Lebenszyklen) tragen die Entscheidung unverändert.
 
 **Geltungsbereich.** Die Regel gilt über den GSLTPAQ hinaus für jeden Fall, in dem eine projekteigene und eine publizierte Übersetzung desselben Instruments nebeneinander bestehen. Sie gilt **nicht** für regionale Varianten derselben Übersetzung — dort bleibt ADR-005 (unten) maßgeblich (Sprachtags, eine Ressource).
 

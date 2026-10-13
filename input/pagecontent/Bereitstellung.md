@@ -84,7 +84,11 @@ Auf Standard-HAPI: `PUT Questionnaire/promis-29` mit neuer `Questionnaire.versio
 
 Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.7.0`).
 
+<a name="pilot"></a>
+
 ## Pilot-Datenfluss "50 First Patients"
+
+Welche Bögen der Pilot austauscht, steht maschinenlesbar in [Library/pilot-50fp](Library-pilot-50fp.html): die Schnittmenge aller Use Cases, versioniert gepinnt (Herleitung auf der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html#use-cases)). Sender und Empfänger laden genau diese Versionen; damit löst jede `QuestionnaireResponse.questionnaire`-Referenz eindeutig auf.
 
 Das Erfassungs-System kann außerhalb FHIR liegen (REDCap, LimeSurvey, eigene App) **oder** direkt in FHIR (LHC-Forms o.ä.). FHIR ist primär die **Ablage- und Austausch-Form**:
 

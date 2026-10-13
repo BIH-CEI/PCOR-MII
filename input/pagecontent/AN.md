@@ -11,11 +11,11 @@ Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:
 - [Demographie](Demographie.html) (DEM) und [MHI](MHI.html) — Soziodemographie und medizinische Vorgeschichte; das MHI enthält im Szenario AN Zusatzitems zu **Gewichtsverlauf** und **AN-Subtyp** (siehe [MHI](MHI.html))
 - [PROMIS](PROMIS.html) — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS
 - [WHODAS 2.0 (12-Item)](WHODAS-12.html) — Funktionsfähigkeit und Beeinträchtigung
-- [PHQ-15](PHQ-15.html), PHQ-9 (siehe [PHQ-Übersicht](PHQ.html)), [GAD-7](GAD-7.html) / GAD-2 / PHQ-4
+- [PHQ-15](PHQ-15.html), PHQ-8 (Standard; PHQ-9 siehe [PHQ-Übersicht](PHQ.html)), [GAD-7](GAD-7.html) / GAD-2 / PHQ-4
 - EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen
 - [WAI](WAI.html) — Arbeitsfähigkeit (metadata-only)
 
-In AN wird — anders als in PSS — der **vollständige PHQ-9** erhoben (PSS: PHQ-8 + separates PHQ-SI); das Suizidalitäts-Item `phq-phq2i` ist als **PHQ-SI** zusätzlich eigenständig ausgewiesen. Außerdem gemeinsam mit PSS: [OPD-SFK](OPD-SFK.html).
+Auch in AN ist der **PHQ-8 der Standard** — wie in allen Use Cases. Der vollständige PHQ-9 (mit dem Suizidalitäts-Item `phq-phq2i`) darf nur eingesetzt werden, wenn auf die Erhebung **unmittelbar ein Arztkontakt vor Ort folgt** — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.html)). Das Suizidalitäts-Item ist als **PHQ-SI** eigenständig ausgewiesen. Außerdem gemeinsam mit PSS: [OPD-SFK](OPD-SFK.html) — von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung.
 
 ### AN-spezifische Instrumente
 

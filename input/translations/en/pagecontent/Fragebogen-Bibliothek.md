@@ -12,7 +12,7 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 | Medical History (MHI) | • | • | • | [Seite](MHI.html) | [MHI](Questionnaire-MHI.html) | [✓ AN](QuestionnaireResponse-MHIResponse.html) · [✓ PSS](QuestionnaireResponse-MHIPSSResponse.html) | — |
 | PROMIS Global Health (Subset) | • | • | • | [Seite](PROMIS.html) | offen | — | — |
 | PROMIS-16 | • | • | • | [Seite](PROMIS-16.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) | [PROPr-ObsDef](ObservationDefinition-PcorObsDefProprUtility.html) |
-| PROMIS SF 4a (8 Domänen) | • | • | • | [Seite](PROMIS-Cognitive-Function.html) | teilw. MII PRO — s. [PROMIS](PROMIS.html) | [✓ Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) | — |
+| PROMIS SF 4a (8 domains) = PROMIS-29 + Cognitive Function | • | • | • | [PROMIS-33](PROMIS-33.html) | MII PRO: [PROMIS-29](PROMIS-29.html) + [Cognitive Function](PROMIS-Cognitive-Function.html) | [✓ Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) | — |
 | WHODAS 2.0 (12-Item) | • | • | • | [Seite](WHODAS-12.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html) | — |
 | PHQ-Familie (PHQ-8 / PHQ-9 / PHQ-15, PHQ-SI) | • | • | • | [overview](PHQ.html), [PHQ-9](PHQ-9.html), [PHQ-15](PHQ-15.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html) | — |
 | GAD-7 | • | • | • | [Seite](GAD-7.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/GAD-7?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html) | — |
@@ -58,19 +58,19 @@ The bundles are generated from the individual responses by `scripts/build-exampl
 
 ### Use case PSS — persistent somatic symptoms
 
-Clinical description: [PSS](PSS.html).
+Clinical description: [PSS](PSS.html). **Machine-readable:** [Library/use-case-pss](Library-use-case-pss.html) pins all 20 questionnaires with versions (`asset-collection`; reverse lookup via `Library?composed-of=<canonical>`). PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants (see the pilot section below).
 
 | Instrument | Docs | `Questionnaire` | Example response |
 |---|---|---|---|
 | DEM, MHI | [Demographie](Demographie.html), [MHI](MHI.html) | [DEM](Questionnaire-DEM.html), [MHI](Questionnaire-MHI.html) | [✓](QuestionnaireResponse-DEMResponse.html) / [✓](QuestionnaireResponse-MHIResponse.html) |
-| PROMIS-16, SF 4a, Global Health | [PROMIS](PROMIS.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
+| PROMIS-16, PROMIS-29 + Cognitive Function (SF 4a), Global Health | [PROMIS](PROMIS.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
 | WHODAS 2.0, PHQ-8/-15, GAD-7, EURONET-SOMA | [WHODAS](WHODAS-12.html), [PHQ](PHQ.html), [GAD-7](GAD-7.html), [EURONET-SOMA](EURONET-SOMA.html) | MII PRO (see the full table) | — |
 | SSD-12, Whiteley-7, SCOFF, ISR-Z, PC-PTSD | [SSD-12](SSD-12.html), [WI-7](WI-7.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [PC-PTSD](PC-PTSD.html) | MII PRO (see the full table) | — |
 | OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI | [OPD-SFK](OPD-SFK.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html), [WAI](WAI.html) | [OPDSFK](Questionnaire-OPDSFK.html), [EXPECT](Questionnaire-EXPECT.html), [IPQS](Questionnaire-IPQS.html), [GSLTPAQ](Questionnaire-GSLTPAQ.html), [WAI](Questionnaire-WAI.html) | — |
 
 ### Use case AN — anorexia nervosa
 
-Clinical description: [AN](AN.html); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.html). The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
+Clinical description: [AN](AN.html); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.html). **Machine-readable:** [Library/use-case-an](Library-use-case-an.html) pins all 23 questionnaires with versions; PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants. The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
@@ -78,10 +78,14 @@ Clinical description: [AN](AN.html); full lookup table with rights status: [AN �
 | ACE + timing items (composite) | [ACE](ACE.html) | [ACE](Questionnaire-ACE.html) | [✓](QuestionnaireResponse-ACEResponse.html) |
 | UKHD supplementary items (6 questionnaires) | [Übersicht](UKHD-Zusatzitems.html) | [PT](Questionnaire-UKHDPT.html) · [ANB](Questionnaire-UKHDANB.html) · [CT](Questionnaire-UKHDCT.html) · [LE](Questionnaire-UKHDLE.html) · [ND](Questionnaire-UKHDND.html) · [D](Questionnaire-UKHDD.html) | five of six — see the full table |
 | UKHD-EDP (metadata-only) | [UKHD-EDP](UKHD-EDP.html) | [UKHDEDP](Questionnaire-UKHDEDP.html) | — |
-| PHQ-9, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | see the full table | see the full table | — |
+| PHQ-8, GAD-7, PROMIS, WHODAS, EURONET-SOMA, OPD-SFK, WAI | see the full table | see the full table | — |
 
 ### Use case NTx — kidney transplantation
 
-No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-9, …) apply here as well.
+Deferred — no manifest yet (the codes `ntxr`/`ntxd` already exist in [pcor-use-case](CodeSystem-pcor-use-case.html); the Domain Overview separates recipient and donor). No artefacts yet: BAASIS, MTSOSD-R59 and ABQ cannot be published for rights reasons and are **planned** as metadata-only (see [Instruments](Instrumente.html)). The cross-entity questionnaires (DEM, MHI, PROMIS, PHQ-8, …) apply here as well.
+
+### Pilot "50 First Patients" — common core of all use cases
+
+The pilot is not a clinical use case but the programme of the first data exchange (workflow: [Deployment](Bereitstellung.html#pilot)). **Machine-readable:** [Library/pilot-50fp](Library-pilot-50fp.html) pins the **intersection** of the use cases with versions — exactly the 10 questionnaires marked in the PSS, AN **and** NTx columns of the full table for which an artefact exists: DEM, MHI, WAI plus PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (the "8 domains" of the survey plan), WHODAS 2.0, PHQ-9, GAD-7 and EURONET-SOMA. Not included: OPD-SFK (not in NTx), PHQ-15 (PSS only), PROMIS Global Health (subset still pending upstream). The composition is a derivation rule from the table, not a separate selection — to change it, change the table. Consumers who need a complete battery load the manifest of the respective use case. **Site variants:** PROMIS-16 and PROMIS-29 + Cognitive Function SF 4a are alternatives a site chooses between. Both are in every manifest because receivers must resolve responses from both site types; the variant is marked per entry via the CRMI extension `crmi-intendedUsageContext` as text, deliberately without a CodeSystem of its own. Only a PlanDefinition with `selectionBehavior = exactly-one` could enforce the either-or; it is not part of this version.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); the machine-readable full list is under [Artifacts](artifacts.html).
