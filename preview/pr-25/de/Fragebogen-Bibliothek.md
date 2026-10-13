@@ -60,7 +60,7 @@ Die Bundles werden mit `scripts/build-example-bundles.py` aus den Einzelantworte
 
 ### Use Case PSS — Persistierende somatische Symptome
 
-Fachliche Beschreibung: [PSS](PSS.md). **Maschinenlesbar:** [Library/use-case-pss](Library-use-case-pss.md) pinnt alle 20 Bögen versioniert (`asset-collection`; Rückwärtssuche per `Library?composed-of=<canonical>`).
+Fachliche Beschreibung: [PSS](PSS.md). **Maschinenlesbar:** [Library/use-case-pss](Library-use-case-pss.md) pinnt alle 20 Bögen versioniert (`asset-collection`; Rückwärtssuche per `Library?composed-of=<canonical>`). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -72,7 +72,7 @@ Fachliche Beschreibung: [PSS](PSS.md). **Maschinenlesbar:** [Library/use-case-ps
 
 ### Use Case AN — Anorexia nervosa
 
-Fachliche Beschreibung: [AN](AN.md); vollständige Nachschlagetabelle mit Rechtestatus: [AN — Instrumentenliste](AN-Instrumentenliste.md). **Maschinenlesbar:** [Library/use-case-an](Library-use-case-an.md) pinnt alle 23 Bögen versioniert. Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
+Fachliche Beschreibung: [AN](AN.md); vollständige Nachschlagetabelle mit Rechtestatus: [AN — Instrumentenliste](AN-Instrumentenliste.md). **Maschinenlesbar:** [Library/use-case-an](Library-use-case-an.md) pinnt alle 23 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +88,7 @@ Zurückgestellt — kein Manifest (die Codes `ntxr`/`ntxd` führt [pcor-use-case
 
 ### Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases
 
-Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: [Bereitstellung](Bereitstellung.md#pilot)). **Maschinenlesbar:** [Library/pilot-50fp](Library-pilot-50fp.md) pinnt die **Schnittmenge** der Use Cases versioniert — genau die 10 Bögen, die in den Spalten PSS, AN **und** NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS), PROMIS Global Health (Subset upstream offen). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case.
+Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: [Bereitstellung](Bereitstellung.md#pilot)). **Maschinenlesbar:** [Library/pilot-50fp](Library-pilot-50fp.md) pinnt die **Schnittmenge** der Use Cases versioniert — genau die 10 Bögen, die in den Spalten PSS, AN **und** NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS), PROMIS Global Health (Subset upstream offen). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. **Standortvarianten:** PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension `crmi-intendedUsageContext` markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit `selectionBehavior = exactly-one`; die ist nicht Teil dieser Version.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); maschinenlesbare Gesamtliste unter [Artefakte](artifacts.md).
 

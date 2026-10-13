@@ -714,7 +714,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-pss--persistent-somatic-symptoms">Use case PSS — persistent somatic symptoms</h3>
 
-<p>Clinical description: <a href="PSS.html">PSS</a>. <strong>Machine-readable:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pins all 20 questionnaires with versions (<code class="language-plaintext highlighter-rouge">asset-collection</code>; reverse lookup via <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>).</p>
+<p>Clinical description: <a href="PSS.html">PSS</a>. <strong>Machine-readable:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pins all 20 questionnaires with versions (<code class="language-plaintext highlighter-rouge">asset-collection</code>; reverse lookup via <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>). PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants (see the pilot section below).</p>
 
 <table>
   <thead>
@@ -761,7 +761,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-an--anorexia-nervosa">Use case AN — anorexia nervosa</h3>
 
-<p>Clinical description: <a href="AN.html">AN</a>; full lookup table with rights status: <a href="AN-Instrumentenliste.html">AN — instrument list</a>. <strong>Machine-readable:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pins all 23 questionnaires with versions. The AN example responses represent <strong>one</strong> coherent collection visit (2026-06-18, same patient).</p>
+<p>Clinical description: <a href="AN.html">AN</a>; full lookup table with rights status: <a href="AN-Instrumentenliste.html">AN — instrument list</a>. <strong>Machine-readable:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pins all 23 questionnaires with versions; PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants. The AN example responses represent <strong>one</strong> coherent collection visit (2026-06-18, same patient).</p>
 
 <table>
   <thead>
@@ -812,7 +812,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="pilot-50-first-patients--common-core-of-all-use-cases">Pilot "50 First Patients" — common core of all use cases</h3>
 
-<p>The pilot is not a clinical use case but the programme of the first data exchange (workflow: <a href="Bereitstellung.html#pilot">Deployment</a>). <strong>Machine-readable:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pins the <strong>intersection</strong> of the use cases with versions — exactly the 10 questionnaires marked in the PSS, AN <strong>and</strong> NTx columns of the full table for which an artefact exists: DEM, MHI, WAI plus PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (the "8 domains" of the survey plan), WHODAS 2.0, PHQ-9, GAD-7 and EURONET-SOMA. Not included: OPD-SFK (not in NTx), PHQ-15 (PSS only), PROMIS Global Health (subset still pending upstream). The composition is a derivation rule from the table, not a separate selection — to change it, change the table. Consumers who need a complete battery load the manifest of the respective use case.</p>
+<p>The pilot is not a clinical use case but the programme of the first data exchange (workflow: <a href="Bereitstellung.html#pilot">Deployment</a>). <strong>Machine-readable:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pins the <strong>intersection</strong> of the use cases with versions — exactly the 10 questionnaires marked in the PSS, AN <strong>and</strong> NTx columns of the full table for which an artefact exists: DEM, MHI, WAI plus PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (the "8 domains" of the survey plan), WHODAS 2.0, PHQ-9, GAD-7 and EURONET-SOMA. Not included: OPD-SFK (not in NTx), PHQ-15 (PSS only), PROMIS Global Health (subset still pending upstream). The composition is a derivation rule from the table, not a separate selection — to change it, change the table. Consumers who need a complete battery load the manifest of the respective use case. <strong>Site variants:</strong> PROMIS-16 and PROMIS-29 + Cognitive Function SF 4a are alternatives a site chooses between. Both are in every manifest because receivers must resolve responses from both site types; the variant is marked per entry via the CRMI extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code> as text, deliberately without a CodeSystem of its own. Only a PlanDefinition with <code class="language-plaintext highlighter-rouge">selectionBehavior = exactly-one</code> could enforce the either-or; it is not part of this version.</p>
 
 <p>Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; the machine-readable full list is under <a href="artifacts.html">Artifacts</a>.</p>
 
@@ -866,7 +866,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-13 07:18:00 +0000">
+  <span title="2026-10-13 07:45:00 +0000">
     2026-10-13
   </span>
 

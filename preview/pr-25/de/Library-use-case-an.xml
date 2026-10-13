@@ -181,7 +181,7 @@
 
 
 
-<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: <code>UKHD-BI</code> (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).</p>
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: <code>UKHD-BI</code> (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
 </div></td>
 
 
@@ -851,7 +851,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: PROMIS-16
+    <em>Description</em>: PROMIS-16 — Standortvariante kurz
     
     <br/>
     
@@ -883,7 +883,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität
+    <em>Description</em>: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel
     
     <br/>
     
@@ -915,7 +915,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung
+    <em>Description</em>: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel
     
     <br/>
     
@@ -1029,7 +1029,7 @@
       <value value="https://www.bihealth.org/"/>
     </telecom>
   </contact>
-  <description value="Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen)."/>
+  <description value="Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
   <useContext>
     <code>
       <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
@@ -1141,18 +1141,51 @@
     <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="workflow"/>
+        </code>
+        <valueCodeableConcept>
+          <text value="Standortvariante kurz: PROMIS-16"/>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
     <type value="composed-of"/>
-    <display value="PROMIS-16"/>
+    <display value="PROMIS-16 — Standortvariante kurz"/>
     <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="workflow"/>
+        </code>
+        <valueCodeableConcept>
+          <text value="Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a"/>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
     <type value="composed-of"/>
-    <display value="PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität"/>
+    <display value="PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel"/>
     <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>
+    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext">
+      <valueUsageContext>
+        <code>
+          <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+          <code value="workflow"/>
+        </code>
+        <valueCodeableConcept>
+          <text value="Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a"/>
+        </valueCodeableConcept>
+      </valueUsageContext>
+    </extension>
     <type value="composed-of"/>
-    <display value="PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung"/>
+    <display value="PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel"/>
     <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>

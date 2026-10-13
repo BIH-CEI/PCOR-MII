@@ -25,7 +25,7 @@
 * Metadata: Steward Contact
   * ?: BIH-CEI
 * Metadata: Description
-  * ?: Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt).
+  * ?: Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.
 * Metadata: Type
   * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html)#asset-collection
 * Metadata:  Parameters
@@ -47,11 +47,11 @@
 * Metadata: Component
   * ?: **Description**: IPQ-S — offene Ursachenfrage**Resource**:[IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)](Questionnaire-IPQS.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0
 * Metadata: Component
-  * ?: **Description**: PROMIS-16**Resource**:[MII QST PRO PROMIS-16 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0
+  * ?: **Description**: PROMIS-16 — Standortvariante kurz**Resource**:[MII QST PRO PROMIS-16 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0
 * Metadata: Component
-  * ?: **Description**: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität**Resource**:[MII QST PRO PROMIS-29 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0
+  * ?: **Description**: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel**Resource**:[MII QST PRO PROMIS-29 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0
 * Metadata: Component
-  * ?: **Description**: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0
+  * ?: **Description**: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0
 * Metadata: Component
   * ?: **Description**: WHODAS 2.0 12-Item**Resource**:[MII QST PRO WHODAS 2.0 12-Item](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0
 * Metadata: Component
@@ -106,7 +106,7 @@
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt).",
+  "description" : "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
   "useContext" : [{
     "code" : {
       "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
@@ -163,18 +163,54 @@
     "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0"
   },
   {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext",
+      "valueUsageContext" : {
+        "code" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+          "code" : "workflow"
+        },
+        "valueCodeableConcept" : {
+          "text" : "Standortvariante kurz: PROMIS-16"
+        }
+      }
+    }],
     "type" : "composed-of",
-    "display" : "PROMIS-16",
+    "display" : "PROMIS-16 — Standortvariante kurz",
     "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0"
   },
   {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext",
+      "valueUsageContext" : {
+        "code" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+          "code" : "workflow"
+        },
+        "valueCodeableConcept" : {
+          "text" : "Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a"
+        }
+      }
+    }],
     "type" : "composed-of",
-    "display" : "PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität",
+    "display" : "PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel",
     "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0"
   },
   {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext",
+      "valueUsageContext" : {
+        "code" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+          "code" : "workflow"
+        },
+        "valueCodeableConcept" : {
+          "text" : "Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a"
+        }
+      }
+    }],
     "type" : "composed-of",
-    "display" : "PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung",
+    "display" : "PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel",
     "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"
   },
   {
