@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- T-CABS BIH Corporate Design Colors -->
+  	<!-- T-CABS BIH Corporate Design Colors -->
 <!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
 <!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
 <!--
@@ -358,7 +358,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
 
-<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>Use-Case-Manifeste</strong>: je aktivem Use Case eine <code class="language-plaintext highlighter-rouge">Library</code> (type <code class="language-plaintext highlighter-rouge">asset-collection</code>) mit allen Questionnaire-Canonicals versioniert gepinnt — <a href="Library-use-case-pss.html">use-case-pss</a> (20) und <a href="Library-use-case-an.html">use-case-an</a> (23), plus CodeSystem <a href="CodeSystem-pcor-use-case.html">pcor-use-case</a> (4 Codes; NTXr/NTXd zurückgestellt). Bewusst <strong>kein</strong> <code class="language-plaintext highlighter-rouge">useContext</code> auf den Bögen — die Zugehörigkeit lebt an einer Stelle und erfasst auch Upstream-Bögen; Rückwärtssuche über den Standard-Suchparameter <code class="language-plaintext highlighter-rouge">Library?composed-of=</code>. CRMI-fähige Server liefern damit die Batterie eines Use Case in einem Zug.</p>
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> <strong>Use-Case-Manifeste</strong>: je aktivem Use Case eine <code class="language-plaintext highlighter-rouge">Library</code> (type <code class="language-plaintext highlighter-rouge">asset-collection</code>) mit allen Questionnaire-Canonicals versioniert gepinnt — <a href="Library-use-case-pss.html">use-case-pss</a> (20) und <a href="Library-use-case-an.html">use-case-an</a> (23), plus CodeSystem <a href="CodeSystem-pcor-use-case.html">pcor-use-case</a> (5 Codes; NTXr/NTXd zurückgestellt). Dazu ein drittes Manifest für den Pilot „50 First Patients“: <a href="Library-pilot-50fp.html">pilot-50fp</a> (10) pinnt die <strong>Schnittmenge</strong> aller Use Cases — abgeleitet aus den Use-Case-Spalten der <a href="Fragebogen-Bibliothek.html#use-cases">Fragebogen-Bibliothek</a>, keine eigene Auswahl.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">documentation</code></strong> Die Zeile „PROMIS SF 4a (8 Domänen)“ des Erhebungsplans ist als <strong>PROMIS-29 + Cognitive Function SF 4a</strong> (PROMIS-33-Abdeckung) ausgewiesen — in der <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>, der <a href="AN-Instrumentenliste.html">AN-Instrumentenliste</a> und den drei Manifesten. Die frühere Lesart mit der alleinstehenden Depression SF 4a war falsch. Bewusst <strong>kein</strong> <code class="language-plaintext highlighter-rouge">useContext</code> auf den Bögen — die Zugehörigkeit lebt an einer Stelle und erfasst auch Upstream-Bögen; Rückwärtssuche über den Standard-Suchparameter <code class="language-plaintext highlighter-rouge">Library?composed-of=</code>. CRMI-fähige Server liefern damit die Batterie eines Use Case in einem Zug. Alle drei Manifeste deklarieren das CRMI-Profil <code class="language-plaintext highlighter-rouge">crmi-manifestlibrary</code> (neue Abhängigkeit <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.crmi 2.0.0</code>); befüllt ist der Slice <code class="language-plaintext highlighter-rouge">component</code> (<code class="language-plaintext highlighter-rouge">composed-of</code>), der Slice <code class="language-plaintext highlighter-rouge">dependency</code> (<code class="language-plaintext highlighter-rouge">depends-on</code>) und die Expansionsparameter bleiben für einen späteren <code class="language-plaintext highlighter-rouge">$package</code>-Einsatz offen.</p>
 
 <p><em>Was mit dem Wechsel auf das 2027-Modul (SDC 4.0.0, <code class="language-plaintext highlighter-rouge">itemWeight</code>) ansteht, sammelt die Seite <a href="Kommende-Aenderungen.html">Kommende Änderungen</a>.</em></p>
 
@@ -566,8 +568,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-06 08:15:00 +0000">
-    2026-10-06
+  <span title="2026-10-13 07:11:00 +0000">
+    2026-10-13
   </span>
 
           <br/>

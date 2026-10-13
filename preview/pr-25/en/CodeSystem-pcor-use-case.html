@@ -22,9 +22,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- T-CABS BIH Corporate Design Colors -->
+  	<!-- T-CABS BIH Corporate Design Colors -->
 <!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
 <!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
 <!--
@@ -149,8 +149,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.84"}
-    h3,h4,h5,h6{--heading-prefix:"21.84"}</style>
+    <style type="text/css">h2{--heading-prefix:"21.85"}
+    h3,h4,h5,h6{--heading-prefix:"21.85"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -377,7 +377,7 @@ a[name="test"] + h3 + div {
           
 
             as of 
-2026-10-06
+2026-10-13
 
           
         
@@ -394,7 +394,7 @@ a[name="test"] + h3 + div {
   </table>
 
 <div data-fhir="generated">
-<p>Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary). NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (<code class="language-plaintext highlighter-rouge">Library</code>, type <code class="language-plaintext highlighter-rouge">asset-collection</code>), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert).</p>
+<p>Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (<code class="language-plaintext highlighter-rouge">Library</code>, type <code class="language-plaintext highlighter-rouge">asset-collection</code>), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.</p>
 
 </div>
 
@@ -422,7 +422,10 @@ a[name="test"] + h3 + div {
 <td>Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert.</td></tr>
 <tr><td style="white-space:nowrap">ntxd<a name="pcor-use-case-ntxd"> </a></td>
 <td>NTXd — Nierentransplantation, Spender</td>
-<td>Zurückgestellt: kein Manifest.</td></tr></table></div>
+<td>Zurückgestellt: kein Manifest.</td></tr>
+<tr><td style="white-space:nowrap">pilot-50fp<a name="pcor-use-case-pilot-50fp"> </a></td>
+<td>Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases</td>
+<td>Kein klinischer Use Case, sondern das Pilotprogramm des Datenaustauschs. Das Manifest enthält genau die Bögen, die in PSS, AN und NTx erhoben werden (Schnittmenge des Erhebungsplans).</td></tr></table></div>
 
   <hr/>
   <p>
@@ -484,8 +487,8 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-06 08:15:00 +0000">
-    2026-10-06
+  <span title="2026-10-13 07:11:00 +0000">
+    2026-10-13
   </span>
 
           <br/>

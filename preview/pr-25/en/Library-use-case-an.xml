@@ -2,6 +2,9 @@
 
 <Library xmlns="http://hl7.org/fhir">
   <id value="use-case-an"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary|2.0.0"/>
+  </meta>
   <language value="en"/>
   <text>
     <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/>
@@ -10,7 +13,7 @@
 <tr>
 
 
-<th colspan="2" scope="row" class="row-header">Metadata</th>
+<th colspan="2" scope="row" class="row-header"><a name="metadata"> </a>Metadata</th>
 
 
 </tr>
@@ -29,6 +32,8 @@
 
 
 
+
+
 <tr>
 
 
@@ -40,6 +45,10 @@
 
 
 </tr>
+
+
+
+
 
 
 
@@ -82,6 +91,9 @@
 
 
 
+
+
+
 <tr>
 
 
@@ -90,7 +102,7 @@
 
 
 <td class="content-container">
-    program from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html">http://terminology.hl7.org/CodeSystem/usage-context-type</a> 
+    <a href="http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html">http://terminology.hl7.org/CodeSystem/usage-context-type</a>#program
 
  = 
     AN — Anorexia nervosa
@@ -100,6 +112,8 @@
 
 
 </tr>
+
+
 
 
 <tr>
@@ -117,6 +131,9 @@
 
 
 </tr>
+
+
+
 
 
 
@@ -175,6 +192,9 @@
 
 
 
+
+
+
 <tr>
 
 
@@ -183,7 +203,7 @@
 
 
 <td class="content-container">
-    asset-collection from <a href="http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html">http://terminology.hl7.org/CodeSystem/library-type</a> 
+    <a href="http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html">http://terminology.hl7.org/CodeSystem/library-type</a>#asset-collection
 
 
 </td>
@@ -191,6 +211,54 @@
 
 </tr>
 
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header"><a name="parameters"> </a>Parameters</th>
+
+
+</tr>
+
+
+<tr>
+
+
+<th scope="row" class="row-header">Parameter</th>
+
+
+
+<td class="content-container">None</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+<th colspan="2" scope="row" class="row-header"><a name="related-artifacts"> </a>Citations and References</th>
+
+
+</tr>
 
 
 <tr>
@@ -815,7 +883,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: PROMIS Cognitive Function SF 4a
+    <em>Description</em>: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität
     
     <br/>
     
@@ -824,9 +892,9 @@
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29">MII QST PRO PROMIS-29 (Adults)</a> version: 2026.7.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0</tt>
     
     
     
@@ -847,7 +915,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: PROMIS Depression SF 4a
+    <em>Description</em>: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung
     
     <br/>
     
@@ -856,9 +924,9 @@
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a">MII QST PRO PROMIS Depression SF 4a (Adults)</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2026.7.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0</tt>
     
     
     
@@ -932,39 +1000,8 @@
 
 
 
-
-
-
-
 <tr>
-
-
-<th colspan="2" scope="row" class="row-header"><a name="parameters"> </a>Parameters</th>
-
-
-</tr>
-
-
-<tr>
-
-
-<th scope="row" class="row-header">Parameter</th>
-
-
-
-<td class="content-container">None</td>
-
-
-</tr>
-
-
-
-
-
-
-
-<tr>
-  <th colspan="2" scope="row" class="row-header">Generated using version 0.5.4 of the sample-content-ig Liquid templates</th>
+  <th colspan="2" scope="row" class="row-header">Generated using version 0.5.6 of the sample-content-ig Liquid templates</th>
 </tr>
 
     </tbody>
@@ -1110,13 +1147,13 @@
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
-    <display value="PROMIS Cognitive Function SF 4a"/>
-    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"/>
+    <display value="PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>
-    <display value="PROMIS Depression SF 4a"/>
-    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0"/>
+    <display value="PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung"/>
+    <resource value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="composed-of"/>

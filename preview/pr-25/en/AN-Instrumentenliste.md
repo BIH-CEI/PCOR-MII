@@ -39,7 +39,7 @@ Die Spalte **Doku** verweist auf die PCOR-MII-Seite des Instruments, wo es eine 
 
 ¹ Bei DEM und MHI sind das die **Blatt-Items des PCOR-MII-Questionnaire**, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen, und im MHI kommen die beiden PCOR-MII-eigenen Hilfsitems zur Einheitenauswahl hinzu. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.
 
-**Zum Eintrag „PROMIS Short Forms 4a":** Der Erhebungsplan führt für acht Domänen je eine 4-Item-Kurzform. Upstream sind davon **zwei** als eigener `Questionnaire` vorhanden — [Cognitive Function SF 4a](PROMIS-Cognitive-Function.md) und PROMIS Depression SF 4a ([PRO-IG](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-Depression.page.md?version=current)). Die übrigen sechs Domänen sind **nur über den [PROMIS-29](PROMIS-29.md)** abgedeckt, der je Domäne vier Items enthält — inhaltlich nicht durchweg dieselben Items wie die jeweilige SF 4a. Wer streng nach Plan die SF-4a-Variante braucht, hat für sechs Domänen kein passendes Artefakt.
+**Zum Eintrag „PROMIS Short Forms 4a“ (acht Domänen):** Gemeint ist die PROMIS-33-Abdeckung — der [PROMIS-29](PROMIS-29.md), der je Domäne aus der jeweiligen SF 4a besteht (sieben Domänen plus Schmerzintensität), zusammen mit der [Cognitive Function SF 4a](PROMIS-Cognitive-Function.md) als achter Domäne (Lesart bestätigt durch die Use-Case-Leitung, 2026-10-13). Beide sind upstream im MII-PRO-Modul vorhanden; die Use-Case-Manifeste pinnen genau diese zwei Canonicals. Die alleinstehende PROMIS Depression SF 4a des PRO-Moduls ist damit nicht gemeint.
 
 ### AN-spezifische Instrumente
 

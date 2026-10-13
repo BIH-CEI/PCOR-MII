@@ -100,6 +100,8 @@ This is also why every PCOR-MII response pins its questionnaire version: `Questi
 
 ## Pilot data flow, "50 First Patients"
 
+Which questionnaires the pilot exchanges is machine-readable in [Library/pilot-50fp](Library-pilot-50fp.md): the intersection of all use cases, pinned with versions (derivation on the [questionnaire library](Fragebogen-Bibliothek.md#use-cases) page). Senders and receivers load exactly these versions, so every `QuestionnaireResponse.questionnaire` reference resolves unambiguously.
+
 The capture system may sit outside FHIR (REDCap, LimeSurvey, an in-house app) **or** run directly in FHIR (LHC-Forms or similar). FHIR is primarily the **storage and exchange form**:
 
 ```

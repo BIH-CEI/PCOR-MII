@@ -17,7 +17,7 @@
 * Metadata: Experimental
   * ?: true
 * Metadata: Use Context
-  * ?: program from[http://terminology.hl7.org/CodeSystem/usage-context-type](http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html)= AN — Anorexia nervosa
+  * ?: [http://terminology.hl7.org/CodeSystem/usage-context-type](http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html)#program = AN — Anorexia nervosa
 * Metadata: Jurisdiction
   * ?: Germany
 * Metadata: Steward (Publisher)
@@ -27,7 +27,11 @@
 * Metadata: Description
   * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf [Fragebogen-Bibliothek](https://bih-cei.github.io/PCOR-MII/Fragebogen-Bibliothek.html) und [AN — Instrumentenliste](https://bih-cei.github.io/PCOR-MII/AN-Instrumentenliste.html) ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen).
 * Metadata: Type
-  * ?: asset-collection from[http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html)
+  * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html)#asset-collection
+* Metadata:  Parameters
+* Metadata: Parameter
+  * ?: None
+* Metadata:  Citations and References
 * Metadata: Component
   * ?: **Description**: DEM — Demographie-Sammelbogen**Resource**:[DEM — Demographics & Medical History](Questionnaire-DEM.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0
 * Metadata: Component
@@ -67,17 +71,14 @@
 * Metadata: Component
   * ?: **Description**: PROMIS-16**Resource**:[MII QST PRO PROMIS-16 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0
 * Metadata: Component
-  * ?: **Description**: PROMIS Cognitive Function SF 4a**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0
+  * ?: **Description**: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität**Resource**:[MII QST PRO PROMIS-29 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0
 * Metadata: Component
-  * ?: **Description**: PROMIS Depression SF 4a**Resource**:[MII QST PRO PROMIS Depression SF 4a (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0
+  * ?: **Description**: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0
 * Metadata: Component
   * ?: **Description**: WHODAS 2.0 12-Item**Resource**:[MII QST PRO WHODAS 2.0 12-Item](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0
 * Metadata: Component
   * ?: **Description**: EURONET-SOMA**Resource**:[MII QST PRO EURONET-SOMA](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0
-* Metadata:  Parameters
-* Metadata: Parameter
-  * ?: None
-* Metadata: Generated using version 0.5.4 of the sample-content-ig Liquid templates
+* Metadata: Generated using version 0.5.6 of the sample-content-ig Liquid templates
 
 
 
@@ -87,6 +88,9 @@
 {
   "resourceType" : "Library",
   "id" : "use-case-an",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary|2.0.0"]
+  },
   "url" : "https://bih-cei.github.io/PCOR-MII/Library/use-case-an",
   "version" : "0.3.0",
   "name" : "UseCaseAN",
@@ -226,13 +230,13 @@
   },
   {
     "type" : "composed-of",
-    "display" : "PROMIS Cognitive Function SF 4a",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"
+    "display" : "PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität",
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0"
   },
   {
     "type" : "composed-of",
-    "display" : "PROMIS Depression SF 4a",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-depression-sf4a|2026.7.0"
+    "display" : "PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung",
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"
   },
   {
     "type" : "composed-of",
