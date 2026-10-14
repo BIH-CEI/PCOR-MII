@@ -37,8 +37,9 @@
 //   Overview in PSS, AN UND NTx erhoben werden (Spalten der Seite Fragebogen-
 //   Bibliothek), und von denen es ein Artefakt gibt. Ableitungsregel, nicht
 //   Zusammenstellung — wer die Schnittmenge aendert, aendert zuerst die
-//   Tabelle. Dadurch ausgeschlossen: OPD-SFK (nicht NTx), PHQ-15 (nur PSS),
-//   PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Das
+//   Tabelle. Dadurch ausgeschlossen: OPD-SFK (nicht NTx), PHQ-15 (nur PSS).
+//   PROMIS Global Health ist seit #26 als PROMISGH (2-Item-Zuschnitt) ein
+//   eigenes Artefakt und damit in allen drei Manifesten enthalten. Das
 //   CodeSystem bekommt dafuer den Code pilot-50fp, damit die Suche
 //   Library?context= fuer alle drei Manifeste gleich funktioniert.
 //
@@ -110,7 +111,7 @@ Instance: use-case-pss
 InstanceOf: Library
 Usage: #definition
 Title: "Use-Case-Manifest PSS — Persistierende somatische Symptome"
-Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
+Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/use-case-pss"
 * name = "UseCasePSS"
@@ -123,6 +124,7 @@ Description: "Maschinenlesbare Instrumentenliste des Use Case PSS: alle Question
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.3.0, GSLTPAQ — Freizeitaktivität)
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.3.0, EXPECT — Verlaufserwartung)
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0, IPQ-S — offene Ursachenfrage)
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0, PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul])
 // ── MII-PRO-Bögen (Paketabhängigkeit 2026.7.0) ──────────────────────────────
 * insert KomponiertVariante(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0, PROMIS-16 — Standortvariante kurz, Standortvariante kurz: PROMIS-16)
 * insert KomponiertVariante(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0, PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel, Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a)
@@ -142,7 +144,7 @@ Instance: use-case-an
 InstanceOf: Library
 Usage: #definition
 Title: "Use-Case-Manifest AN — Anorexia nervosa"
-Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt) und PROMIS Global Health (Subset upstream offen). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
+Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/use-case-an"
 * name = "UseCaseAN"
@@ -164,6 +166,7 @@ Description: "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionn
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0, UKHD-EDP — Essstörungspathologie [metadata-only])
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0, OPD-SFK — Strukturfragebogen Kurzform)
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0, WAI — Work Ability Score [metadata-only])
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0, PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul])
 // ── MII-PRO-Bögen (Paketabhängigkeit 2026.7.0) ──────────────────────────────
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0, PHQ-9 — inkl. PHQ-SI)
 * insert Komponiert(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0, GAD-7)
@@ -177,7 +180,7 @@ Instance: pilot-50fp
 InstanceOf: Library
 Usage: #definition
 Title: "Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases"
-Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
+Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx) und PHQ-15 (nur PSS). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/pilot-50fp"
 * name = "Pilot50FirstPatients"
@@ -186,6 +189,7 @@ Description: "Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First 
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0, DEM — Demographie-Sammelbogen)
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0, MHI — Medical History)
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0, WAI — Work Ability Score [metadata-only])
+* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0, PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul])
 // ── MII-PRO-Bögen (Paketabhängigkeit 2026.7.0; in PSS, AN und NTx) ───────────
 * insert KomponiertVariante(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0, PROMIS-16 — Standortvariante kurz, Standortvariante kurz: PROMIS-16)
 * insert KomponiertVariante(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0, PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel, Standortvariante mittel: PROMIS-29 + Cognitive Function SF 4a)

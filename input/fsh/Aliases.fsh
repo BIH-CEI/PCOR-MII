@@ -7,12 +7,12 @@ Alias: $translation = http://hl7.org/fhir/StructureDefinition/translation
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Profil-Canonicals für meta.profile — IMMER versionsgepinnt (url|version).
-// Die Version MUSS der in sushi-config.yaml deklarierten Dependency entsprechen,
-// sonst kann der Validator das Profil nicht auflösen und prüft es nicht:
-//   de.gematik.isik: 5.1.1
-//   de.medizininformatikinitiative.kerndatensatz.pros: 2026.6.0
-// Bei einem Dependency-Bump müssen diese Pins mitgezogen werden.
+// Profil-Canonicals für meta.profile — BEWUSST OHNE Versionspin (Konvention
+// aus dem Bereitstellungs-Review, #26): Die Auflösung läuft über die in
+// sushi-config.yaml deklarierte Paketversion (de.gematik.isik 5.1.1,
+// kerndatensatz.pros 2026.7.0). Ein Pin, der von der Dependency abweicht, ist
+// für den Validator unauflösbar und lässt die Instanz ungeprüft (so geschehen
+// mit |2026.4.1). Wer pinnt, pinnt zentral hier und zieht bei jedem Bump nach.
 // ─────────────────────────────────────────────────────────────────────────────
 Alias: $isik-formulardefinition = https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition
 Alias: $isik-formulardaten = https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten
