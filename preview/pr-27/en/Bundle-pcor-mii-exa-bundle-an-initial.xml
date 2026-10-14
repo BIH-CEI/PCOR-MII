@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="pcor-mii-exa-bundle-an-initial"/>
+  <language value="en"/>
+  <type value="collection"/>
+  <timestamp value="2026-06-18T12:00:00+02:00"/>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/Patient/pcor-mii-exa-patient-an"/>
+    <resource>
+      <Patient>
+        <id value="pcor-mii-exa-patient-an"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <gender value="female"/>
+        <birthDate value="1985-03-12"/>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/DEMResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="DEMResponse"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-16T10:00:00+02:00"/>
+        <item>
+          <linkId value="soziodemographie"/>
+          <item>
+            <linkId value="AGE"/>
+            <answer>
+              <valueDate value="1985-03-12"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_ISCED"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"/>
+                <code value="master"/>
+                <display value="Master oder äquivalent (inkl. Diplom, staatl./kirchl. Prüfung)"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_SEX"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"/>
+                <code value="weiblich"/>
+                <display value="Weiblich"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_GENDERID"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_OECDLIT5a"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"/>
+                <code value="angestellt"/>
+                <display value="Angestellt"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_OECDLIT7a"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen"/>
+                <code value="band-mittel"/>
+                <display value="Zwischen 2.300 € und 5.200 € pro Monat"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_MONMED"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="nein"/>
+                <display value="Nein"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_MON"/>
+            <item>
+              <linkId value="MONMEAL"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"/>
+                  <code value="selten"/>
+                  <display value="Selten"/>
+                </valueCoding>
+              </answer>
+            </item>
+            <item>
+              <linkId value="MONRENT"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"/>
+                  <code value="nie"/>
+                  <display value="Nie"/>
+                </valueCoding>
+              </answer>
+            </item>
+            <item>
+              <linkId value="MONBILLS"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"/>
+                  <code value="selten"/>
+                  <display value="Selten"/>
+                </valueCoding>
+              </answer>
+            </item>
+          </item>
+          <item>
+            <linkId value="MEDHIMS6"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="MEDHIMS7"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_OECDLITii"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"/>
+                <code value="stadt"/>
+                <display value="Stadt"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Zipcode"/>
+            <answer>
+              <valueString value="10117"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="OECDLIT2a"/>
+            <answer>
+              <valueInteger value="1"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="OECDLIT2b"/>
+            <answer>
+              <valueInteger value="1"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="WHODIS"/>
+            <item>
+              <linkId value="WHODIS1"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"/>
+                  <code value="einfach"/>
+                  <display value="Einfach"/>
+                </valueCoding>
+              </answer>
+            </item>
+            <item>
+              <linkId value="WHODIS2"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"/>
+                  <code value="weder-noch"/>
+                  <display value="Weder einfach noch schwierig"/>
+                </valueCoding>
+              </answer>
+            </item>
+          </item>
+        </item>
+        <item>
+          <linkId value="weitere"/>
+          <item>
+            <linkId value="GIPS04"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"/>
+                <code value="feste"/>
+                <display value="Feste Partnerschaft"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS10"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus"/>
+                <code value="keine"/>
+                <display value="Keine Rente"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="CPCOR_REQ"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/MHIResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="MHIResponse"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-17T10:00:00+02:00"/>
+        <item>
+          <linkId value="anthropometrie"/>
+          <item>
+            <linkId value="Q_WB151"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe"/>
+                <code value="kg"/>
+                <display value="kg"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_WB151a"/>
+            <answer>
+              <valueDecimal value="62"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_WB152"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"/>
+                <code value="cm"/>
+                <display value="cm"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="Q_WB152a"/>
+            <answer>
+              <valueDecimal value="170"/>
+            </answer>
+          </item>
+        </item>
+        <item>
+          <linkId value="diagnose"/>
+          <item>
+            <linkId value="CPCOR-DIAG"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag"/>
+                <code value="1"/>
+                <display value="Essstörung"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="CPCOR_ONSET"/>
+            <answer>
+              <valueInteger value="2020"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS13"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch"/>
+                <code value="18"/>
+                <display value="Depression"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+        <item>
+          <linkId value="lifestyle"/>
+          <item>
+            <linkId value="GIPS57a"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS57b"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"/>
+                <code value="b1"/>
+                <display value="1-10"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS56a"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS56b1"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS56b2"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="nein"/>
+                <display value="Nein"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS56b3"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="nein"/>
+                <display value="Nein"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS56b4"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="nein"/>
+                <display value="Nein"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="GIPS58"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="nein"/>
+                <display value="Nein"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+        <item>
+          <linkId value="medikation"/>
+          <item>
+            <linkId value="medication1"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+                <code value="ja"/>
+                <display value="Ja"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="medication_text"/>
+            <answer>
+              <valueString value="Sertralin 50 mg morgens; Ibuprofen 400 mg bei Bedarf"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="MEDI_01"/>
+            <answer>
+              <valueInteger value="2"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="medi_02_01"/>
+            <item>
+              <linkId value="medi_02_name_01"/>
+              <answer>
+                <valueString value="Sertralin"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_onset_01"/>
+              <answer>
+                <valueString value="seit 2021"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_dose_01"/>
+              <answer>
+                <valueString value="50 mg"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_time_01"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit"/>
+                  <code value="0"/>
+                  <display value="morgens"/>
+                </valueCoding>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_frequency_01"/>
+              <answer>
+                <valueString value="7x pro Woche"/>
+              </answer>
+            </item>
+          </item>
+          <item>
+            <linkId value="medi_02_02"/>
+            <item>
+              <linkId value="medi_02_name_02"/>
+              <answer>
+                <valueString value="Ibuprofen"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_onset_02"/>
+              <answer>
+                <valueString value="seit 2023"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_dose_02"/>
+              <answer>
+                <valueString value="400 mg"/>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_time_02"/>
+              <answer>
+                <valueCoding>
+                  <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit"/>
+                  <code value="4"/>
+                  <display value="bei Bedarf"/>
+                </valueCoding>
+              </answer>
+            </item>
+            <item>
+              <linkId value="medi_02_frequency_02"/>
+              <answer>
+                <valueString value="ca. 2x pro Woche"/>
+              </answer>
+            </item>
+          </item>
+        </item>
+        <item>
+          <linkId value="gewicht-an"/>
+          <item>
+            <linkId value="weight_outpatient_1"/>
+            <answer>
+              <valueDecimal value="61.5"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="weight_outpatient_2"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode"/>
+                <code value="1"/>
+                <display value="Hausarzt"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="weight_inpatient"/>
+            <answer>
+              <valueDecimal value="60"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="weight_discharge"/>
+            <answer>
+              <valueDecimal value="63"/>
+            </answer>
+          </item>
+          <item>
+            <linkId value="AN_subtyp"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp"/>
+                <code value="1"/>
+                <display value="restriktiver Typ (Kontrolle des Gewichts vorwiegend über geringe Nahrungsaufnahme und/oder Sport)"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ERQ6Response"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="ERQ6Response"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T09:00:00+02:00"/>
+        <item>
+          <linkId value="erq1"/>
+          <answer>
+            <valueInteger value="4"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="erq2"/>
+          <answer>
+            <valueInteger value="6"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="erq3"/>
+          <answer>
+            <valueInteger value="3"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="erq6"/>
+          <answer>
+            <valueInteger value="6"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="erq8"/>
+          <answer>
+            <valueInteger value="4"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="erq9"/>
+          <answer>
+            <valueInteger value="7"/>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/EDEQ6Response"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="EDEQ6Response"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T09:15:00+02:00"/>
+        <item>
+          <linkId value="edeq1"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+              <code value="3"/>
+              <display value="13-15 days"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="edeq7"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+              <code value="4"/>
+              <display value="16-22 days"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="edeq12"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"/>
+              <code value="4"/>
+              <display value="16-22 days"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="edeq27"/>
+          <answer>
+            <valueInteger value="4"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="edeq29"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="ja"/>
+              <display value="Ja"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="edeq30"/>
+          <answer>
+            <valueInteger value="3"/>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ANSOCQ2Response"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="ANSOCQ2Response"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T09:30:00+02:00"/>
+        <item>
+          <linkId value="ansocq3"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile"/>
+              <code value="3"/>
+              <display value="I have decided that I am prepared to gain weight on these body parts."/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ansocq14"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken"/>
+              <code value="4"/>
+              <display value="I am using strategies to help me reduce the amount of time I spend thinking about food and my weight."/>
+            </valueCoding>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/SSUK2Response"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="SSUK2Response"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T09:45:00+02:00"/>
+        <item>
+          <linkId value="ssuk-stamm"/>
+          <item>
+            <linkId value="ssuk14"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort"/>
+                <code value="3"/>
+                <display value="oft"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="ssuk10"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort"/>
+                <code value="1"/>
+                <display value="selten"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ACEResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="ACEResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:00:00+02:00"/>
+        <item>
+          <linkId value="ace1"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="ja"/>
+              <display value="Ja"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ace2"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="nein"/>
+              <display value="Nein"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ace3"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="nein"/>
+              <display value="Nein"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ace4"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="ja"/>
+              <display value="Ja"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ace5"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="nein"/>
+              <display value="Nein"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="ctt-ereignis-1"/>
+          <item>
+            <linkId value="traumaspecific1"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit"/>
+                <code value="2"/>
+                <display value="um ein mehrfaches Ereignis"/>
+              </valueCoding>
+            </answer>
+          </item>
+          <item>
+            <linkId value="traumaspecific2"/>
+            <answer>
+              <valueCoding>
+                <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt"/>
+                <code value="1"/>
+                <display value="vor den ersten Anzeichen der Essstörung"/>
+              </valueCoding>
+            </answer>
+          </item>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDPTResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="UKHDPTResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:15:00+02:00"/>
+        <item>
+          <linkId value="bdkm15"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie"/>
+              <code value="2"/>
+              <display value="zurzeit in Behandlung"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="bdkm16"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche"/>
+              <code value="3"/>
+              <display value="zweimalig"/>
+            </valueCoding>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDANBResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="UKHDANBResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:15:00+02:00"/>
+        <item>
+          <linkId value="AN_biography"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe"/>
+              <code value="2"/>
+              <display value="seit … Jahren"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="AN_biography-wert"/>
+          <answer>
+            <valueInteger value="8"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="lowBMI"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe"/>
+              <code value="1"/>
+              <display value="BMI-Wert"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="lowBMI-wert"/>
+          <answer>
+            <valueDecimal value="14.8"/>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDCTResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="UKHDCTResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:15:00+02:00"/>
+        <item>
+          <linkId value="treatment_outpatient"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus"/>
+              <code value="3"/>
+              <display value="Ja, ich befinde mich zurzeit in ambulanter psychotherapeutischer Behandlung"/>
+            </valueCoding>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDLEResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="UKHDLEResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:15:00+02:00"/>
+        <item>
+          <linkId value="life_event1_screening"/>
+          <answer>
+            <valueCoding>
+              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
+              <code value="ja"/>
+              <display value="Ja"/>
+            </valueCoding>
+          </answer>
+        </item>
+        <item>
+          <linkId value="lifev_text"/>
+          <answer>
+            <valueString value="Wiederholte Abwertungen durch einen Elternteil in Kindheit und Jugend; über Jahre das Gefühl, in der Familie nicht wichtig zu sein."/>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/UKHDDResponse"/>
+    <resource>
+      <QuestionnaireResponse>
+        <id value="UKHDDResponse"/>
+        <meta>
+          <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0"/>
+        <status value="completed"/>
+        <subject>
+          <reference value="Patient/pcor-mii-exa-patient-an"/>
+        </subject>
+        <authored value="2026-06-18T10:15:00+02:00"/>
+        <item>
+          <linkId value="diagnosis_admit"/>
+          <answer>
+            <valueString value="Anorexia nervosa, restriktiver Typ"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="comorbid1"/>
+          <answer>
+            <valueString value="Depression, seit 2021 medikamentös behandelt"/>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+</Bundle>
