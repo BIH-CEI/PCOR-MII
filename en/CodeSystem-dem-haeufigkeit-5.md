@@ -24,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "DEM Häufigkeit (5-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-13T14:06:39+00:00",
+  "date" : "2026-10-14T13:27:54+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

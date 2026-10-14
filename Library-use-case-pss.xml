@@ -180,7 +180,7 @@
 
 
 
-<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code>PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
 </div></td>
 
 
@@ -478,6 +478,38 @@
     <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.3.0
     <br/>
     <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-PROMISGH.html">PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0</tt>
     
     
     
@@ -1083,7 +1115,7 @@
 
 
 
-<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code>PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
 </div></td>
 
 
@@ -1381,6 +1413,38 @@
     <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.3.0
     <br/>
     <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-PROMISGH.html">PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0</tt>
     
     
     
@@ -1835,7 +1899,7 @@
       <value value="https://www.bihealth.org/"/>
     </telecom>
   </contact>
-  <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: PROMIS Global Health (Subset upstream noch offen) und der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+  <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
   <useContext>
     <code>
       <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
@@ -1890,6 +1954,11 @@
     <type value="composed-of"/>
     <display value="IPQ-S — offene Ursachenfrage"/>
     <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="composed-of"/>
+    <display value="PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]"/>
+    <resource value="https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0"/>
   </relatedArtifact>
   <relatedArtifact>
     <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-intendedUsageContext">

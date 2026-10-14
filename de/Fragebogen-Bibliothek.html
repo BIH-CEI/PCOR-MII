@@ -377,12 +377,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>—</td>
     </tr>
     <tr>
-      <td>PROMIS Global Health (Subset)</td>
+      <td>PROMIS Global Health (Subset: Global01/Global02)</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="PROMIS.html">Seite</a></td>
-      <td>offen</td>
+      <td><a href="Questionnaire-PROMISGH.html">PROMISGH</a> (Übergang, bis 10-Item-Skala upstream)</td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -712,7 +712,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-pss--persistierende-somatische-symptome">Use Case PSS — Persistierende somatische Symptome</h3>
 
-<p>Fachliche Beschreibung: <a href="PSS.html">PSS</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pinnt alle 20 Bögen versioniert (<code class="language-plaintext highlighter-rouge">asset-collection</code>; Rückwärtssuche per <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).</p>
+<p>Fachliche Beschreibung: <a href="PSS.html">PSS</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pinnt alle 21 Bögen versioniert (<code class="language-plaintext highlighter-rouge">asset-collection</code>; Rückwärtssuche per <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).</p>
 
 <table>
   <thead>
@@ -759,7 +759,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-an--anorexia-nervosa">Use Case AN — Anorexia nervosa</h3>
 
-<p>Fachliche Beschreibung: <a href="AN.html">AN</a>; vollständige Nachschlagetabelle mit Rechtestatus: <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pinnt alle 23 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden <strong>einen</strong> zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).</p>
+<p>Fachliche Beschreibung: <a href="AN.html">AN</a>; vollständige Nachschlagetabelle mit Rechtestatus: <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pinnt alle 24 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden <strong>einen</strong> zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).</p>
 
 <table>
   <thead>
@@ -810,7 +810,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="pilot-50-first-patients--gemeinsamer-kern-aller-use-cases">Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases</h3>
 
-<p>Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: <a href="Bereitstellung.html#pilot">Bereitstellung</a>). <strong>Maschinenlesbar:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pinnt die <strong>Schnittmenge</strong> der Use Cases versioniert — genau die 10 Bögen, die in den Spalten PSS, AN <strong>und</strong> NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS), PROMIS Global Health (Subset upstream offen). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. <strong>Standortvarianten:</strong> PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code> markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit <code class="language-plaintext highlighter-rouge">selectionBehavior = exactly-one</code>; die ist nicht Teil dieser Version.</p>
+<p>Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: <a href="Bereitstellung.html#pilot">Bereitstellung</a>). <strong>Maschinenlesbar:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pinnt die <strong>Schnittmenge</strong> der Use Cases versioniert — genau die 11 Bögen, die in den Spalten PSS, AN <strong>und</strong> NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI, PROMIS-GH sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. <strong>Standortvarianten:</strong> PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code> markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit <code class="language-plaintext highlighter-rouge">selectionBehavior = exactly-one</code>; die ist nicht Teil dieser Version.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; maschinenlesbare Gesamtliste unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -864,8 +864,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-13 14:06:00 +0000">
-    2026-10-13
+  <span title="2026-10-14 13:27:00 +0000">
+    2026-10-14
   </span>
 
           <br/>

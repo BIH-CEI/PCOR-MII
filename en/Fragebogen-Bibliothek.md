@@ -16,7 +16,7 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Demographics (DEM) | • | • | • | [Seite](Demographie.md) | [DEM](Questionnaire-DEM.md) | [✓ AN](QuestionnaireResponse-DEMResponse.md)·[✓ PSS](QuestionnaireResponse-DEMPSSResponse.md) | — |
 | Medical History (MHI) | • | • | • | [Seite](MHI.md) | [MHI](Questionnaire-MHI.md) | [✓ AN](QuestionnaireResponse-MHIResponse.md)·[✓ PSS](QuestionnaireResponse-MHIPSSResponse.md) | — |
-| PROMIS Global Health (Subset) | • | • | • | [Seite](PROMIS.md) | offen | — | — |
+| PROMIS Global Health (subset: Global01/Global02) | • | • | • | [Page](PROMIS.md) | [PROMISGH](Questionnaire-PROMISGH.md)(interim, until the 10-item scale is upstream) | — | — |
 | PROMIS-16 | • | • | • | [Seite](PROMIS-16.md) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.md) | [PROPr-ObsDef](ObservationDefinition-PcorObsDefProprUtility.md) |
 | PROMIS SF 4a (8 domains) = PROMIS-29 + Cognitive Function | • | • | • | [PROMIS-33](PROMIS-33.md) | MII PRO:[PROMIS-29](PROMIS-29.md)+[Cognitive Function](PROMIS-Cognitive-Function.md) | [✓ Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.md) | — |
 | WHODAS 2.0 (12-Item) | • | • | • | [Seite](WHODAS-12.md) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.md) | — |
@@ -62,7 +62,7 @@ The bundles are generated from the individual responses by `scripts/build-exampl
 
 ### Use case PSS — persistent somatic symptoms
 
-Clinical description: [PSS](PSS.md). **Machine-readable:** [Library/use-case-pss](Library-use-case-pss.md) pins all 20 questionnaires with versions (`asset-collection`; reverse lookup via `Library?composed-of=<canonical>`). PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants (see the pilot section below).
+Clinical description: [PSS](PSS.md). **Machine-readable:** [Library/use-case-pss](Library-use-case-pss.md) pins all 21 questionnaires with versions (`asset-collection`; reverse lookup via `Library?composed-of=<canonical>`). PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants (see the pilot section below).
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -74,7 +74,7 @@ Clinical description: [PSS](PSS.md). **Machine-readable:** [Library/use-case-pss
 
 ### Use case AN — anorexia nervosa
 
-Clinical description: [AN](AN.md); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.md). **Machine-readable:** [Library/use-case-an](Library-use-case-an.md) pins all 23 questionnaires with versions; PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants. The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
+Clinical description: [AN](AN.md); full lookup table with rights status: [AN — instrument list](AN-Instrumentenliste.md). **Machine-readable:** [Library/use-case-an](Library-use-case-an.md) pins all 24 questionnaires with versions; PROMIS-16 and PROMIS-29 + Cognitive Function are marked as site variants. The AN example responses represent **one** coherent collection visit (2026-06-18, same patient).
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -90,7 +90,7 @@ Deferred — no manifest yet (the codes `ntxr`/`ntxd` already exist in [pcor-use
 
 ### Pilot "50 First Patients" — common core of all use cases
 
-The pilot is not a clinical use case but the programme of the first data exchange (workflow: [Deployment](Bereitstellung.md#pilot)). **Machine-readable:** [Library/pilot-50fp](Library-pilot-50fp.md) pins the **intersection** of the use cases with versions — exactly the 10 questionnaires marked in the PSS, AN **and** NTx columns of the full table for which an artefact exists: DEM, MHI, WAI plus PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (the "8 domains" of the survey plan), WHODAS 2.0, PHQ-9, GAD-7 and EURONET-SOMA. Not included: OPD-SFK (not in NTx), PHQ-15 (PSS only), PROMIS Global Health (subset still pending upstream). The composition is a derivation rule from the table, not a separate selection — to change it, change the table. Consumers who need a complete battery load the manifest of the respective use case. **Site variants:** PROMIS-16 and PROMIS-29 + Cognitive Function SF 4a are alternatives a site chooses between. Both are in every manifest because receivers must resolve responses from both site types; the variant is marked per entry via the CRMI extension `crmi-intendedUsageContext` as text, deliberately without a CodeSystem of its own. Only a PlanDefinition with `selectionBehavior = exactly-one` could enforce the either-or; it is not part of this version.
+The pilot is not a clinical use case but the programme of the first data exchange (workflow: [Deployment](Bereitstellung.md#pilot)). **Machine-readable:** [Library/pilot-50fp](Library-pilot-50fp.md) pins the **intersection** of the use cases with versions — exactly the 11 questionnaires marked in the PSS, AN **and** NTx columns of the full table for which an artefact exists: DEM, MHI, WAI, PROMIS-GH plus PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (the "8 domains" of the survey plan), WHODAS 2.0, PHQ-9, GAD-7 and EURONET-SOMA. Not included: OPD-SFK (not in NTx), PHQ-15 (PSS only). The composition is a derivation rule from the table, not a separate selection — to change it, change the table. Consumers who need a complete battery load the manifest of the respective use case. **Site variants:** PROMIS-16 and PROMIS-29 + Cognitive Function SF 4a are alternatives a site chooses between. Both are in every manifest because receivers must resolve responses from both site types; the variant is marked per entry via the CRMI extension `crmi-intendedUsageContext` as text, deliberately without a CodeSystem of its own. Only a PlanDefinition with `selectionBehavior = exactly-one` could enforce the either-or; it is not part of this version.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.md); the machine-readable full list is under [Artifacts](artifacts.md).
 

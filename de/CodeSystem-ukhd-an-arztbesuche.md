@@ -24,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-13T14:06:39+00:00",
+  "date" : "2026-10-14T13:27:54+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

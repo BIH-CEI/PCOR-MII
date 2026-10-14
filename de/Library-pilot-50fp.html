@@ -407,7 +407,7 @@ a[name="test"] + h3 + div {
     <tr>
       <td>Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen</td>
       <td>0.3.0, MII-PRO-Bögen</td>
-      <td>2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code>.</td>
+      <td>2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx) und PHQ-15 (nur PSS). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code class="language-plaintext highlighter-rouge">PROMISGH</code> enthalten. Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -601,7 +601,7 @@ a[name="test"] + h3 + div {
 
 
 
-<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS) und PROMIS Global Health (Subset upstream noch offen, kein Artefakt). Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx) und PHQ-15 (nur PSS). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code>PROMISGH</code> enthalten. Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
 </div></td>
 
 
@@ -771,6 +771,38 @@ a[name="test"] + h3 + div {
     <em>Resource</em>: <a href="Questionnaire-WAI.html">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)</a> version: 0.3.0
     <br/>
     <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-PROMISGH.html">PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)</a> version: 0.3.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0</tt>
     
     
     
@@ -1066,8 +1098,8 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-13 14:06:00 +0000">
-    2026-10-13
+  <span title="2026-10-14 13:27:00 +0000">
+    2026-10-14
   </span>
 
           <br/>
