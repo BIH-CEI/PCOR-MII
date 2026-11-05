@@ -129,14 +129,14 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * item[+]
   * linkId = "BAASIS1A"
   * code[+] = PcorItemDictionaryCS#BAASIS1A
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 1A."
+  * text = "Erfasst: Auslassen einer Dosis der immunsuppressiven Medikation in den letzten 4 Wochen (Konstrukt Einnahme-Adhärenz)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
   * linkId = "BAASIS1A_a"
   * code[+] = PcorItemDictionaryCS#BAASIS1A_a
-  * text = "Erfasst: Häufigkeitsangabe zu Item 1A."
+  * text = "Erfasst: Häufigkeit des Auslassens in den letzten 4 Wochen, 5 Stufen (nur bei 1A = ja)."
   * type = #choice
   * answerValueSet = Canonical(BaasisHaeufigkeit5VS)
   * enableWhen[+]
@@ -147,7 +147,7 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * item[+]
   * linkId = "BAASIS1B"
   * code[+] = PcorItemDictionaryCS#BAASIS1B
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 1B."
+  * text = "Erfasst: Auslassen von zwei oder mehr aufeinanderfolgenden Dosen in den letzten 4 Wochen (nur bei 1A = ja)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
   * enableWhen[+]
@@ -158,7 +158,7 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * item[+]
   * linkId = "BAASIS1B_a"
   * code[+] = PcorItemDictionaryCS#BAASIS1B_a
-  * text = "Erfasst: Häufigkeitsangabe zu Item 1B."
+  * text = "Erfasst: Häufigkeit des mehrfachen Auslassens in Folge, 5 Stufen (nur bei 1B = ja)."
   * type = #choice
   * answerValueSet = Canonical(BaasisHaeufigkeit5VS)
   * enableWhen[+]
@@ -169,14 +169,14 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * item[+]
   * linkId = "BAASIS2"
   * code[+] = PcorItemDictionaryCS#BAASIS2
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 2."
+  * text = "Erfasst: Abweichung vom vorgesehenen Einnahmezeitpunkt um mehr als zwei Stunden in den letzten 4 Wochen (Konstrukt Timing-Adhärenz)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
   * linkId = "BAASIS2_a"
   * code[+] = PcorItemDictionaryCS#BAASIS2_a
-  * text = "Erfasst: Häufigkeitsangabe zu Item 2."
+  * text = "Erfasst: Häufigkeit der Zeitabweichung in den letzten 4 Wochen, 5 Stufen (nur bei 2 = ja)."
   * type = #choice
   * answerValueSet = Canonical(BaasisHaeufigkeit5VS)
   * enableWhen[+]
@@ -187,28 +187,28 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * item[+]
   * linkId = "BAASIS3"
   * code[+] = PcorItemDictionaryCS#BAASIS3
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 3."
+  * text = "Erfasst: eigenmächtige Änderung der verordneten Dosis in den letzten 4 Wochen (Konstrukt Dosis-Adhärenz)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
   * linkId = "BAASIS4"
   * code[+] = PcorItemDictionaryCS#BAASIS4
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 4 (Rückblick 1 Jahr)."
+  * text = "Erfasst: eigenmächtiges Absetzen eines immunsuppressiven Medikaments im letzten Jahr (Konstrukt Persistenz)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
   * linkId = "BAASIS5"
   * code[+] = PcorItemDictionaryCS#BAASIS5
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 5 (Rückblick 1 Jahr)."
+  * text = "Erfasst: Neuverordnung eines anderen Medikaments im letzten Jahr (PCOR-MII-Zusatzitem, kein Kern-BAASIS-Item)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
 
 * item[+]
   * linkId = "BAASIS5_a"
   * code[+] = PcorItemDictionaryCS#BAASIS5_a
-  * text = "Erfasst: Ja/Nein-Angabe zu Item 5, Teilfrage a."
+  * text = "Erfasst: Einlösen der Neuverordnung und Beginn der Einnahme (nur bei 5 = ja; Konstrukt Initiierung)."
   * type = #choice
   * answerValueSet = Canonical(DemJaNeinVS)
   * enableWhen[+]

@@ -1225,70 +1225,70 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[=].valueString = "AN, NTx, PSS"
 
 // ── BAASIS ──
-* #BAASIS1A "BAASIS1A — Angabe zu Item 1A — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS1A "BAASIS1A — Einnahme — Dosis ausgelassen, 4 Wochen — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS1A_a "BAASIS1A_a — Häufigkeit zu Item 1A — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS1A_a "BAASIS1A_a — Einnahme — Häufigkeit des Auslassens — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS1B "BAASIS1B — Angabe zu Item 1B — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS1B "BAASIS1B — Einnahme — mehrere Dosen in Folge ausgelassen — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS1B_a "BAASIS1B_a — Häufigkeit zu Item 1B — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS1B_a "BAASIS1B_a — Einnahme — Häufigkeit des mehrfachen Auslassens — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS2 "BAASIS2 — Angabe zu Item 2 — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS2 "BAASIS2 — Timing — Einnahmezeitpunkt um mehr als 2 h verfehlt — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS2_a "BAASIS2_a — Häufigkeit zu Item 2 — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS2_a "BAASIS2_a — Timing — Häufigkeit der Zeitabweichung — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS3 "BAASIS3 — Angabe zu Item 3 — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS3 "BAASIS3 — Dosis — eigenmächtig geändert, 4 Wochen — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS4 "BAASIS4 — Angabe zu Item 4, Rückblick 1 Jahr — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS4 "BAASIS4 — Persistenz — eigenmächtig abgesetzt, 1 Jahr — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS5 "BAASIS5 — Angabe zu Item 5, Rückblick 1 Jahr — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS5 "BAASIS5 — Neuverordnung im letzten Jahr (Zusatzitem) — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS5_a "BAASIS5_a — Teilfrage a zu Item 5 — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS5_a "BAASIS5_a — Neuverordnung — eingelöst und begonnen — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category

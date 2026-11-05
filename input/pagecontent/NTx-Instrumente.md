@@ -37,6 +37,17 @@ Die Hinweise sind maschinenlesbar im `copyright`-Element der Ressourcen hinterle
 **Eigenschaften:**
 
 - **Items**: 10 Variablen (`BAASIS1A`, `BAASIS1A_a`, `BAASIS1B`, `BAASIS1B_a`, `BAASIS2`, `BAASIS2_a`, `BAASIS3`, `BAASIS4`, `BAASIS5`, `BAASIS5_a`). Ja/Nein über das projektweite ValueSet `dem-ja-nein`, die Teilfragen `_a` zu 1A, 1B und 2 über die Häufigkeitsskala. Items 4 und 5 beziehen sich auf einen Rückblick von einem Jahr.
+
+| `linkId` | Konstrukt (neutrale Beschreibung, kein Wortlaut) | Format |
+|---|---|---|
+| `BAASIS1A` / `BAASIS1A_a` | Einnahme: Dosis ausgelassen (4 Wochen) / Häufigkeit | ja/nein; Stufe 1–5 |
+| `BAASIS1B` / `BAASIS1B_a` | Einnahme: zwei oder mehr Dosen in Folge ausgelassen / Häufigkeit | ja/nein; Stufe 1–5 |
+| `BAASIS2` / `BAASIS2_a` | Timing: Einnahmezeitpunkt um mehr als zwei Stunden verfehlt / Häufigkeit | ja/nein; Stufe 1–5 |
+| `BAASIS3` | Dosis eigenmächtig geändert (4 Wochen) | ja/nein |
+| `BAASIS4` | Persistenz: Medikament eigenmächtig abgesetzt (1 Jahr) | ja/nein |
+| `BAASIS5` / `BAASIS5_a` | Neuverordnung im letzten Jahr (PCOR-MII-Zusatzitem) / eingelöst und begonnen | ja/nein; ja/nein |
+
+Die Konstruktzuordnung folgt der Dimensionierung des BAASIS (Einnahme, Timing, Dosis, Persistenz) und beschreibt, *was* erfragt wird — nicht *wie*. `BAASIS5`/`BAASIS5_a` sind nach Dictionary ein PCOR-MII-Zusatz zur Initiierung neu verordneter Medikamente, kein Item des Kern-BAASIS.
 - **Bedingungen**: 1A_a nur bei 1A = ja; 1B nur bei 1A = ja; 1B_a nur bei 1B = ja; 2_a nur bei 2 = ja; 5_a nur bei 5 = ja.
 - **Scoring**: kein Summenscore. Als nicht adhärent gilt dichotom, wer bei Item 1A, 2, 3 oder 4 mit „ja“ antwortet. Das ist **nur dokumentiert**, nicht als Ausdruck ausgeliefert.
 
