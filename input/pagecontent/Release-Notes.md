@@ -19,6 +19,12 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`feature`** Neuer Questionnaire `PHQPANIK` — der PHQ-D Panik-Block (vier Ja/Nein-Screeningitems 3a–3d, Dictionary `phq3a`–`phq3d`), englisch primär (Brief PHQ, Pfizer) mit PHQ-D-Übersetzung, Sprungregel als `enableWhen`, `linkId`s im PHQ-D-Namespace (`phq-phq3a`–`phq-phq3d`), Beispielantwort für den PSS-Patienten; im PSS-Manifest ergänzt. In PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt führt (ADR-012)
+
+**`feature`** Neue metadata-only Questionnaires `BAASIS`, `ABQ` und `MTSOSDR59` für den Use Case NTx — Struktur, `linkId`s, Antwortformate (neutrale Stufen mit `ordinalValue`), Bedingungen und Bezugsweg ohne Originalwortlaut, da die Items nicht publiziert werden dürfen (© Universität Basel, Müller et al. 2015, © KU Leuven). MTSOSD-R59 wird aus `scripts/generate-mtsosd-r59-stub.py` erzeugt. Das NTx-Manifest bleibt zurückgestellt
+
+**`documentation`** Neue Seiten PHQ-D Panik-Block und NTx-Instrumente; Instrumentenübersicht, PSS, PHQ-Übersicht und Fragebogen-Bibliothek nachgezogen; ADR-012 (Use-Case-spezifische Instrumente bleiben in PCOR-MII)
+
 **`feature`** Neuer Questionnaire `PROMISGH` mit den PROMIS-Global-Health-Items Global01 `61577-3` und Global02 `61578-1` sowie ValueSet `promis-global-skala-5-vs` auf Basis der Answerlist `LL4280-5`. Übergangslösung bis zur Aufnahme der vollständigen 10-Item-Skala `85524-7` ins MII-PRO-Modul. Global07 ist über PROMIS-29 abgedeckt
 
 **`documentation`** PROMIS-Seite um einen Abschnitt zu PROMIS Global Health erweitert mit Item-Tabelle, Antwortskala, Übergangscharakter und Abgrenzung zu Global07

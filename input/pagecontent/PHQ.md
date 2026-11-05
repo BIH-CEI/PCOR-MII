@@ -46,6 +46,19 @@ Der **GAD-7** nutzt seit 2026.7.0 den Angst-Block des PHQ-D (`phq-phq5a`–`phq-
 
 Darüber hinaus: Der **PHQ-8** besteht vollständig aus PHQ-9-Items (`phq-phq2a…h`, siehe oben), und der **PHQ-4** setzt sich aus PHQ-2 (`phq-phq2a`, `phq-phq2b`) und GAD-2 (`phq-phq5a`, `phq-phq5b`) zusammen — alle vier Items existieren im Namespace, ohne dass es einen eigenen PHQ-4-Questionnaire gibt.
 
+### PHQ-D Panik-Block
+
+Block 3 des PHQ-D — die vier Ja/Nein-Screeningfragen zu **Angst- und Panikattacken** (4-Wochen-Recall) — hat im MII-PRO-Modul kein Artefakt. PCOR-MII pflegt ihn deshalb selbst als [`PHQPANIK`](PHQ-Panik.html) (ADR-012), **mit `linkId`s im PHQ-D-Namespace**, damit eine spätere Übernahme ins Modul ohne Migration auskommt:
+
+| `linkId` | Dictionary | Item (deutsche Fassung, PHQ-D) |
+|---|---|---|
+| `phq-phq3a` | `phq3a` | Angstattacke in den letzten 4 Wochen |
+| `phq-phq3b` | `phq3b` | Früheres Auftreten |
+| `phq-phq3c` | `phq3c` | Anfälle völlig unerwartet |
+| `phq-phq3d` | `phq3d` | Beeinträchtigung bzw. Angst vor erneuten Anfällen |
+
+Die Symptomliste 4a–4k des vollständigen PHQ-Panikmoduls (`phq-phq4a`–`phq-phq4k`) wird in PCOR-MII nicht erhoben; die Namen sind dafür reserviert.
+
 ### PHQ-SADS
 
 Der **PHQ-SADS** (*Somatic, Anxiety and Depressive Symptoms*, Kroenke et al. 2010) ist kein eigener Fragebogen, sondern die gemeinsame Auswertung der drei Skalen **PHQ-15**, **GAD-7** und **PHQ-9** mit ihren jeweiligen Summenscores — es gibt bewusst keinen Gesamtscore über alle drei.

@@ -25,6 +25,10 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 | ISR-Z | • | — | — | [Seite](ISR-Z.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/ISR-Z?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html) | — |
 | PC-PTSD | • | — | — | [Seite](PC-PTSD.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PC-PTSD?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html) | — |
 | EXPECT | • | — | — | [Seite](EXPECT.html) | [EXPECT](Questionnaire-EXPECT.html) | [✓](QuestionnaireResponse-EXPECTResponse.html) | — |
+| PHQ-D panic block | • | — | — | [Page](PHQ-Panik.html) | [PHQPANIK](Questionnaire-PHQPANIK.html) | [✓](QuestionnaireResponse-PHQPANIKResponse.html) | — |
+| BAASIS | — | — | • | [Page](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) (metadata-only) | — | — |
+| ABQ | — | — | • | [Page](NTx-Instrumente.html) | [ABQ](Questionnaire-ABQ.html) (metadata-only) | — | — |
+| MTSOSD-R59 | — | — | • | [Page](NTx-Instrumente.html) | [MTSOSDR59](Questionnaire-MTSOSDR59.html) (metadata-only) | — | — |
 | IPQ-S | • | — | — | [Seite](IPQ-S.html) | [IPQS](Questionnaire-IPQS.html) | [✓](QuestionnaireResponse-IPQSResponse.html) | — |
 | GSLTPAQ | • | — | — | [Seite](GSLTPAQ.html) | [GSLTPAQ](Questionnaire-GSLTPAQ.html) | [✓](QuestionnaireResponse-GSLTPAQResponse.html) | — |
 | ERQ-6 | — | • | — | [Seite](ERQ-6.html) | [ERQ6](Questionnaire-ERQ6.html) | [✓](QuestionnaireResponse-ERQ6Response.html) · [Monitoring](QuestionnaireResponse-ERQ6MonitoringResponse.html) | withdrawn — see [ERQ-6](ERQ-6.html) |

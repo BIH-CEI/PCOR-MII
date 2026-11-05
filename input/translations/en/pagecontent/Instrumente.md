@@ -48,7 +48,7 @@ A • marks that the instrument is collected in that entity; the number is the i
 | EURONET-SOMA 1 + 2 (1 each) | GHS | • | • | • | free | [EURONET-SOMA](EURONET-SOMA.html) — since MII PRO 2026.6.0 |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **not publishable** | [WAI](WAI.html) — metadata-only |
 | PHQ-SI (suicidality, 1) | MHA | • | • | — | free | `phq-phq2i` from [PHQ-9](PHQ-9.html) |
-| PHQ-D panic block (4) | MHA | • | — | — | free | open — no upstream artefact (`phq3a`–`phq3d`) |
+| PHQ-D panic block (4) | MHA | • | — | — | free | [PHQ-D panic block](PHQ-Panik.html) — maintained in PCOR-MII (ADR-012) |
 | PC-PTSD (4) | MHA | • | — | — | free | [PC-PTSD](PC-PTSD.html) — since MII PRO 2026.6.0 |
 | OPD-SFK (12) | MHA | • | • | — | free (after consultation) | [OPD-SFK](OPD-SFK.html) |
 | SCOFF (5) | MHA | • | — | — | free | [SCOFF](SCOFF.html) — since MII PRO 2026.6.0 |
@@ -63,9 +63,9 @@ A • marks that the instrument is collected in that entity; the number is the i
 | ANSOCQ-2 (2) | TCH | — | • | — | free | [ANSOCQ-2](ANSOCQ-2.html) — most discriminating item per scale only |
 | SSUK-2 (2) | EFA | — | • | — | free | [SSUK-2](SSUK-2.html) — most discriminating item per scale only |
 | ACE + timing items (11) | EFA | — | • | — | ACE free; the 6 UKHD items **clearance open** | [ACE](ACE.html) — first five ACE questions plus `UKHD-CTT` (PCOR-MII composite) |
-| BAASIS (10) | TCH | — | — | • | © University of Basel, items not publishable | open — metadata-only planned |
-| MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, items not publishable | open — metadata-only planned |
-| ABQ (16) | TCH | — | — | • | use without pharmaceutical-industry involvement | open — metadata-only planned |
+| BAASIS (10) | TCH | — | — | • | © University of Basel, items not publishable | [NTx instruments](NTx-Instrumente.html) — metadata-only |
+| MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, items not publishable | [NTx instruments](NTx-Instrumente.html) — metadata-only |
+| ABQ (16) | TCH | — | — | • | use without pharmaceutical-industry involvement | [NTx instruments](NTx-Instrumente.html) — metadata-only |
 
 On top of these come **site-specific item groups** that do not correspond to any published instrument and come straight from the dictionary — for example `UKE-HCU/PSE/TR/DOT` (healthcare utilisation, PSS), the `UKHD-*` groups (AN) and `MHH-DIAL/UTI/T/BP` (follow-up parameters, NTx). For these the DIZ implementation list carries **no entry at all**, so no clearance is documented; see the open points in [Design Decisions](Designentscheidungen.html).
 
@@ -82,7 +82,7 @@ The rights situation determines how an instrument is modelled — not how import
 
 - **free** — complete questionnaire with item texts, answer options and scoring.
 - **Usage agreement** (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the `copyright` element.
-- **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.html) and [UKHD-EDP](UKHD-EDP.html) (both implemented) and, on the NTx side, to BAASIS, MTSOSD-R59 and ABQ.
+- **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.html), [UKHD-EDP](UKHD-EDP.html) and, on the NTx side, to [BAASIS, MTSOSD-R59 and ABQ](NTx-Instrumente.html) (all implemented).
 - **clearance open** — the wording is published, but **no permission is on record**. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to [UKHD-AN](UKHD-AN.html) and to the 34 site items already published in [MHI](MHI.html). Should a restriction emerge, metadata-only is the intended remedy.
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); all artefacts are listed under [Artifacts](artifacts.html).

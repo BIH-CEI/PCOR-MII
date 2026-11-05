@@ -229,6 +229,16 @@ Ursprünglicher Punkt: Es werden nur wenige Fragebögen aus dem MII-PRO-Modul be
 
 ### Entschieden
 
+#### ✅ ADR-012 — Use-Case-spezifische Instrumente bleiben in PCOR-MII, auch wenn sie frei wären
+**Entschieden 2026-11-05 (Maintainer des MII-PRO-Moduls).** Anlass: Für den PHQ-D-Panik-Block und die drei NTx-Instrumente BAASIS, ABQ und MTSOSD-R59 lagen Entwürfe für das MII-PRO-Modul vor.
+
+**Regel.** Ins MII-PRO-Modul gehört, was modulweit nachgenutzt wird — ein vollständiges, publiziertes Instrument, das andere Use Cases unverändert übernehmen können (PROMIS Global Health als 10-Item-Skala ist dafür der Fall und wurde dort aufgenommen). Was nur **ein** Use Case erhebt, bleibt in dessen Schicht, unabhängig von der Rechtelage:
+
+- **PHQ-D Panik-Block** (`PHQPANIK`): frei, aber nur in PSS erhoben und im Modul ohne Artefakt. Damit eine spätere Übernahme ohne Migration auskommt, tragen die Items die `linkId`s des PHQ-D-Namespace (`phq-phq3a`–`phq-phq3d`) statt der Dictionary-Variablen — die einzige bewusste Ausnahme von der Regel „`linkId` = Dictionary-Variable" für PCOR-MII-eigene Bögen; die Dictionary-Variable steht in `item.code` (ADR-011).
+- **BAASIS, ABQ, MTSOSD-R59** (NTx): metadata-only nach dem Muster von [WAI](WAI.html) und [UKHD-EDP](UKHD-EDP.html) — Struktur, `linkId`s, Antwortformate mit `ordinalValue`, Bedingungen und Bezugsweg, kein Originalwortlaut. Die wortgleichen Vollversionen werden ausschließlich über den zugriffsbeschränkten Form Server verteilt (Lizenz je Zentrum), nie in einem Package.
+
+**Folge für das Modul-Repo:** Die dort vorbereiteten Fassungen wurden nicht veröffentlicht; die Beads `py5.17` und `py5.18` sind auf PCOR-MII umgehängt.
+
 #### ✅ ADR-011 — Erhebungseinheit und Instrumenteneinheit trennen; die Zuordnung läuft über `item.code`
 **Entschieden 2026-09-30.** Anlass: die Folge aus ADR-008. Wenn jeder Zuschnitt eine eigene Ressource mit Original-`linkId`s wird, entstehen viele sehr kurze Instrumente — während die Daten in **einem** Bogen erhoben wurden, der kein FHIR kennt.
 

@@ -24,7 +24,7 @@ Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-
 | **SCOFF** | MHA | 5 | Essstörungs-Screening | [Seite](SCOFF.html) |
 | **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | [Seite](ISR-Z.html) |
 | **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | [Seite](PC-PTSD.html) |
-| **PHQ-D Panik-Block** | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | offen — kein Upstream-Artefakt |
+| **PHQ-D Panik-Block** | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | [Seite](PHQ-Panik.html) — in PCOR-MII gepflegt (ADR-012) |
 | **PHQ-SI** | MHA | 1 | Suizidalität — das PHQ-9-Item `phq-phq2i` | über [PHQ-9](PHQ-9.html) abgedeckt |
 | **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.html) |
 | **GSLTPAQ** | TCH | 6 | Körperliche Freizeitaktivität | [Seite](GSLTPAQ.html) |
@@ -44,14 +44,14 @@ Der **PHQ-8 ist der Standard — in PSS wie in allen Use Cases**: die acht Depre
 
 Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9 — zulässig nur im Setting mit unmittelbar folgendem Arztkontakt vor Ort. Die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität nie ohne Management-Plan bzw. Alert), keine inhaltliche Abweichung. Siehe [PHQ-Übersicht](PHQ.html).
 
-Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul **kein Artefakt** — weder Questionnaire noch `linkId`s im Namespace. Bedarf wäre dort anzumelden.
+Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul **kein Artefakt**; PCOR-MII pflegt den Block deshalb selbst als [`PHQPANIK`](PHQ-Panik.html) (ADR-012) — mit `linkId`s im PHQ-D-Namespace (`phq-phq3a`–`phq-phq3d`), damit eine spätere Übernahme ins Modul ohne Migration auskommt.
 
 ### Was PSS von AN und NTx unterscheidet
 
 - **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.
 - **PSS und AN gemeinsam**: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.
 - **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe [AN](AN.html).
-- **Nur in NTx**: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.
+- **Nur in NTx**: [BAASIS, MTSOSD-R59, ABQ](NTx-Instrumente.html) (alle metadata-only) sowie die MHH-Verlaufsparameter.
 
 ### Rechtelage
 

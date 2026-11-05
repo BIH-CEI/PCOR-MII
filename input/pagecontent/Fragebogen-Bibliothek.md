@@ -25,6 +25,10 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 | ISR-Z | • | — | — | [Seite](ISR-Z.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/ISR-Z?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html) | — |
 | PC-PTSD | • | — | — | [Seite](PC-PTSD.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PC-PTSD?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html) | — |
 | EXPECT | • | — | — | [Seite](EXPECT.html) | [EXPECT](Questionnaire-EXPECT.html) | [✓](QuestionnaireResponse-EXPECTResponse.html) | — |
+| PHQ-D Panik-Block | • | — | — | [Seite](PHQ-Panik.html) | [PHQPANIK](Questionnaire-PHQPANIK.html) | [✓](QuestionnaireResponse-PHQPANIKResponse.html) | — |
+| BAASIS | — | — | • | [Seite](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) (metadata-only) | — | — |
+| ABQ | — | — | • | [Seite](NTx-Instrumente.html) | [ABQ](Questionnaire-ABQ.html) (metadata-only) | — | — |
+| MTSOSD-R59 | — | — | • | [Seite](NTx-Instrumente.html) | [MTSOSDR59](Questionnaire-MTSOSDR59.html) (metadata-only) | — | — |
 | IPQ-S | • | — | — | [Seite](IPQ-S.html) | [IPQS](Questionnaire-IPQS.html) | [✓](QuestionnaireResponse-IPQSResponse.html) | — |
 | GSLTPAQ | • | — | — | [Seite](GSLTPAQ.html) | [GSLTPAQ](Questionnaire-GSLTPAQ.html) | [✓](QuestionnaireResponse-GSLTPAQResponse.html) | — |
 | ERQ-6 | — | • | — | [Seite](ERQ-6.html) | [ERQ6](Questionnaire-ERQ6.html) | [✓](QuestionnaireResponse-ERQ6Response.html) · [Monitoring](QuestionnaireResponse-ERQ6MonitoringResponse.html) | zurückgezogen — s. [ERQ-6](ERQ-6.html) |
@@ -66,7 +70,7 @@ Fachliche Beschreibung: [PSS](PSS.html). **Maschinenlesbar:** [Library/use-case-
 | PROMIS-16, PROMIS-29 + Cognitive Function (SF 4a), Global Health | [PROMIS](PROMIS.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
 | WHODAS 2.0, PHQ-8/-15, GAD-7, EURONET-SOMA | [WHODAS](WHODAS-12.html), [PHQ](PHQ.html), [GAD-7](GAD-7.html), [EURONET-SOMA](EURONET-SOMA.html) | MII PRO (s. Gesamttabelle) | — |
 | SSD-12, Whiteley-7, SCOFF, ISR-Z, PC-PTSD | [SSD-12](SSD-12.html), [WI-7](WI-7.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [PC-PTSD](PC-PTSD.html) | MII PRO (s. Gesamttabelle) | — |
-| OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI | [OPD-SFK](OPD-SFK.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html), [WAI](WAI.html) | [OPDSFK](Questionnaire-OPDSFK.html), [EXPECT](Questionnaire-EXPECT.html), [IPQS](Questionnaire-IPQS.html), [GSLTPAQ](Questionnaire-GSLTPAQ.html), [WAI](Questionnaire-WAI.html) | — |
+| OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI, PHQ-D Panik-Block | [OPD-SFK](OPD-SFK.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html), [WAI](WAI.html), [PHQ-D Panik-Block](PHQ-Panik.html) | [OPDSFK](Questionnaire-OPDSFK.html), [EXPECT](Questionnaire-EXPECT.html), [IPQS](Questionnaire-IPQS.html), [GSLTPAQ](Questionnaire-GSLTPAQ.html), [WAI](Questionnaire-WAI.html), [PHQPANIK](Questionnaire-PHQPANIK.html) | — |
 
 ### Use Case AN — Anorexia nervosa
 

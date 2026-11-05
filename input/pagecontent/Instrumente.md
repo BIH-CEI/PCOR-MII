@@ -46,7 +46,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | [EURONET-SOMA](EURONET-SOMA.html) — MII PRO seit 2026.6.0 |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **nicht veröffentlichbar** | [WAI](WAI.html) — metadata-only |
 | PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | `phq-phq2i` aus [PHQ-9](PHQ-9.html) |
-| PHQ-D Panik-Block (4) | MHA | • | — | — | frei | offen — kein Upstream-Artefakt (`phq3a`–`phq3d`) |
+| PHQ-D Panik-Block (4) | MHA | • | — | — | frei | [PHQ-D Panik-Block](PHQ-Panik.html) — in PCOR-MII gepflegt (ADR-012) |
 | PC-PTSD (4) | MHA | • | — | — | frei | [PC-PTSD](PC-PTSD.html) — MII PRO seit 2026.6.0 |
 | OPD-SFK (12) | MHA | • | • | — | frei (nach Rücksprache) | [OPD-SFK](OPD-SFK.html) |
 | SCOFF (5) | MHA | • | — | — | frei | [SCOFF](SCOFF.html) — MII PRO seit 2026.6.0 |
@@ -62,9 +62,9 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | SSUK-2 (2) | EFA | — | • | — | frei | [SSUK-2](SSUK-2.html) — nur trennschärfstes Item je Skala |
 | ACE + Zeitangaben (11) | EFA | — | • | — | ACE frei; die 6 UKHD-Items **Freigabe offen** | [ACE](ACE.html) — erste 5 ACE-Fragen plus `UKHD-CTT` (PCOR-MII-Komposit) |
 | UKHD-EDP (11) | DCH | — | • | — | **keine dokumentierte Freigabe**; vermutlich EDI-2-Zuschnitt | [UKHD-EDP](UKHD-EDP.html) — metadata-only |
-| BAASIS (10) | TCH | — | — | • | © Uni Basel, Items nicht publizierbar | offen — metadata-only vorgesehen |
-| MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, Items nicht publizierbar | offen — metadata-only vorgesehen |
-| ABQ (16) | TCH | — | — | • | Nutzung ohne Pharma-Beteiligung | offen — metadata-only vorgesehen |
+| BAASIS (10) | TCH | — | — | • | © Uni Basel, Items nicht publizierbar | [NTx-Instrumente](NTx-Instrumente.html) — metadata-only |
+| MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, Items nicht publizierbar | [NTx-Instrumente](NTx-Instrumente.html) — metadata-only |
+| ABQ (16) | TCH | — | — | • | Nutzung ohne Pharma-Beteiligung | [NTx-Instrumente](NTx-Instrumente.html) — metadata-only |
 
 Dazu kommen **standortspezifische Item-Gruppen**, die kein publiziertes Instrument abbilden und direkt aus dem Dictionary stammen — etwa `UKE-HCU/PSE/TR/DOT` (Versorgungsinanspruchnahme, PSS), die `UKHD-*`-Gruppen (AN) und `MHH-DIAL/UTI/T/BP` (Verlaufsparameter, NTx). Sie stehen in der Tabelle oben nicht, weil die Tabelle Instrumente auflistet und diese Gruppen keine sind.
 
@@ -81,7 +81,7 @@ Nicht modelliert bleiben für AN `UKHD-BI` (Körperbild, 3 Items — visuelle Bi
 ### Woher kommt welche Ressource?
 
 - **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2026.7.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
-- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT und IPQ-S sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe [ADR-003](Designentscheidungen.html)).
+- **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S und den PHQ-D-Panik-Block, die NTx-Stubs BAASIS, ABQ und MTSOSD-R59 (metadata-only, ADR-012) sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe [ADR-003](Designentscheidungen.html)).
 
 ### Lizenz-Tiers
 
@@ -89,7 +89,7 @@ Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wicht
 
 - **frei** — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.
 - **Nutzungsvereinbarung** (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im `copyright`-Element.
-- **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.html) und [UKHD-EDP](UKHD-EDP.html) (beide umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.
+- **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.html), [UKHD-EDP](UKHD-EDP.html) sowie auf NTx-Seite [BAASIS, MTSOSD-R59 und ABQ](NTx-Instrumente.html) (alle umgesetzt).
 - **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft [UKHD-Zusatzitems](UKHD-Zusatzitems.html) sowie die bereits in [MHI](MHI.html) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).
