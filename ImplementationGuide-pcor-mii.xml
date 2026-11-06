@@ -4,14 +4,14 @@
   <id value="pcor-mii"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="pcor-mii"> </a><a name="hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="en-pcor-mii"> </a><a name="en-hcpcor-mii"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="pcor-mii"> </a><a name="hcpcor-mii"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="en-pcor-mii"> </a><a name="en-hcpcor-mii"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div></div>
   </text>
   <url value="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/>
   <version value="0.3.0"/>
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-10-14T13:27:54+00:00"/>
+  <date value="2026-11-06T09:31:42+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -36,7 +36,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.4.0"/>
+    <version value="7.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -44,7 +44,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.3.0"/>
+    <version value="5.4.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_pros">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro"/>
@@ -1137,7 +1137,7 @@
         <reference value="QuestionnaireResponse/OPDSFKResponse"/>
       </reference>
       <name value="OPD-SFK — Beispielantwort"/>
-      <description value="Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items."/>
+      <description value="Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert 26 als Summe der zwölf Items (0-48), Subskalen explorativ."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1148,7 +1148,18 @@
         <reference value="Questionnaire/OPDSFK"/>
       </reference>
       <name value="OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"/>
-      <description value="OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`."/>
+      <description value="OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/pcor-cm-opd-sfk-linkids"/>
+      </reference>
+      <name value="OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern)"/>
+      <description value="Bildet die Variablen-IDs des PCOR-MII Item Level Dictionary (OPDSFK01–OPDSFK12, zugleich die linkIds des Questionnaire OPDSFK bis Version 0.3.0) auf die linkIds des OPD-SFK-Questionnaire ab, die den Itemnummern der OPD-SF-Langform entsprechen (Ehrenthal et al. 2015, Tabelle 2)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

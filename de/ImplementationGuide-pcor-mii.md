@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-10-14T13:27:54+00:00",
+  "date" : "2026-11-06T09:31:42+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -41,7 +41,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.4.0"
+    "version" : "7.5.0"
   },
   {
     "id" : "hl7ext",
@@ -51,7 +51,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.3.0"
+    "version" : "5.4.0"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_pros",
@@ -1615,7 +1615,7 @@
         "reference" : "QuestionnaireResponse/OPDSFKResponse"
       },
       "name" : "OPD-SFK — Beispielantwort",
-      "description" : "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items.",
+      "description" : "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert 26 als Summe der zwölf Items (0-48), Subskalen explorativ.",
       "exampleBoolean" : true
     },
     {
@@ -1631,7 +1631,23 @@
         "reference" : "Questionnaire/OPDSFK"
       },
       "name" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
-      "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`.",
+      "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-pcor-cm-opd-sfk-linkids.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/pcor-cm-opd-sfk-linkids"
+      },
+      "name" : "OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern)",
+      "description" : "Bildet die Variablen-IDs des PCOR-MII Item Level Dictionary (OPDSFK01–OPDSFK12, zugleich die linkIds des Questionnaire OPDSFK bis Version 0.3.0) auf die linkIds des OPD-SFK-Questionnaire ab, die den Itemnummern der OPD-SF-Langform entsprechen (Ehrenthal et al. 2015, Tabelle 2).",
       "exampleBoolean" : false
     },
     {

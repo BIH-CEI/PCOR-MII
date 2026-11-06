@@ -6,7 +6,7 @@
 
 This page describes **how implementers can consume the PCOR-MII data definitions** — questionnaire definitions, ValueSets, the PRO QuestionnaireResponse profile and the examples.
 
-## What you get
+### What you get
 
 | | |
 | :--- | :--- |
@@ -15,9 +15,9 @@ This page describes **how implementers can consume the PCOR-MII data definitions
 | ValueSets | frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets |
 | Examples | validated`QuestionnaireResponse`s (see[Validation](Validierung.md)) |
 
-## Ways to get it
+### Ways to get it
 
-### 1. PCOR-MII container (for mapper development and local testing)
+#### 1. PCOR-MII container (for mapper development and local testing)
 
 A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checking a bundle against `$validate` and pulling definitions ad hoc over the FHIR API.
 
@@ -43,7 +43,7 @@ curl http://localhost:8097/fhir/Questionnaire?url=…/mii-qst-pro-promis-16   # 
 
 Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker)
 
-### 2. MII PRO package via Simplifier (for build pipelines)
+#### 2. MII PRO package via Simplifier (for build pipelines)
 
 The MII PRO module is published as a FHIR NPM package on Simplifier. Best for integration into SUSHI, IG Publisher and FHIR validator builds.
 
@@ -64,7 +64,7 @@ dependencies:
 
 PCOR-MII itself is **not** published as a package — anyone who only needs the PCOR-MII definitions should take route 1 or 3.
 
-### 3. Direct repository access (for scripting and documentation tools)
+#### 3. Direct repository access (for scripting and documentation tools)
 
 Clone the repository, run SUSHI, and the FHIR JSON files are in `fsh-generated/resources/`:
 
@@ -77,7 +77,7 @@ ls fsh-generated/resources/
 
 Best for ad-hoc lookups, scripts (such as our [extract-qst-translations](https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts)) and CI integrations.
 
-### 4. The $package operation (for populating someone else's FHIR server)
+#### 4. The $package operation (for populating someone else's FHIR server)
 
 If a producing server supports FHIR CRMI:
 
@@ -90,7 +90,7 @@ returns a transaction-ready bundle with the questionnaire and every referenced V
 
 ValueSets come in `compose` form. For PROMIS that is sufficient because the concepts are defined inline. For `$package`, HAPI needs the clinical-reasoning module, which is not enabled out of the box in the PCOR-MII container.
 
-## Version coexistence on recipient servers
+### Version coexistence on recipient servers
 
 On a stock HAPI server, `PUT Questionnaire/promis-29` with a new `Questionnaire.version` **overwrites** the existing entry. An older response referencing `…|2026.3.0` can then no longer be resolved cleanly — only one version coexists per `id`.
 
@@ -98,7 +98,7 @@ For the PCOR-MII pilot this does not matter: one PRO version (2026.7.0) througho
 
 This is also why every PCOR-MII response pins its questionnaire version: `QuestionnaireResponse.questionnaire` is the only place where the wording actually shown to the respondent is recorded.
 
-## Pilot data flow, "50 First Patients"
+### Pilot data flow, "50 First Patients"
 
 Which questionnaires the pilot exchanges is machine-readable in [Library/pilot-50fp](Library-pilot-50fp.md): the intersection of all use cases, pinned with versions (derivation on the [questionnaire library](Fragebogen-Bibliothek.md#use-cases) page). Senders and receivers load exactly these versions, so every `QuestionnaireResponse.questionnaire` reference resolves unambiguously.
 

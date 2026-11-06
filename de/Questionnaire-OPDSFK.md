@@ -37,7 +37,31 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "valueExpression" : {
       "name" : "opdSfkSumme",
       "language" : "text/fhirpath",
-      "expression" : "%resource.item.where(linkId.matches('^OPDSFK(0[1-9]|1[0-2])$')).answer.value.ordinal().sum()"
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.ordinal().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkSelbstwahrnehmung",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.ordinal().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkBeziehungsmodell",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.ordinal().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkKontaktgestaltung",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.ordinal().sum()"
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
@@ -56,7 +80,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`.",
+  "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -76,121 +100,133 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "type" : "display"
   },
   {
-    "linkId" : "OPDSFK01",
+    "linkId" : "opdsf3",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK01"
     }],
+    "prefix" : "1",
     "text" : "Ich erlebe mich manchmal wie eine fremde Person.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK02",
+    "linkId" : "opdsf27",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK02"
     }],
+    "prefix" : "2",
     "text" : "Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK03",
+    "linkId" : "opdsf32",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK03"
     }],
+    "prefix" : "3",
     "text" : "Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK04",
+    "linkId" : "opdsf81",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK04"
     }],
+    "prefix" : "4",
     "text" : "Ich kann mich anderen oft schwer verständlich machen.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK05",
+    "linkId" : "opdsf41",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK05"
     }],
+    "prefix" : "5",
     "text" : "In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK06",
+    "linkId" : "opdsf49",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK06"
     }],
+    "prefix" : "6",
     "text" : "Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK07",
+    "linkId" : "opdsf50",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK07"
     }],
+    "prefix" : "7",
     "text" : "Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK08",
+    "linkId" : "opdsf73",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK08"
     }],
+    "prefix" : "8",
     "text" : "Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK09",
+    "linkId" : "opdsf78",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK09"
     }],
+    "prefix" : "9",
     "text" : "Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK10",
+    "linkId" : "opdsf79",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK10"
     }],
+    "prefix" : "10",
     "text" : "Es fällt mir schwer, zu anderen Kontakt aufzunehmen.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK11",
+    "linkId" : "opdsf40",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK11"
     }],
+    "prefix" : "11",
     "text" : "Ich habe kein gutes Selbstbewusstsein.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
   },
   {
-    "linkId" : "OPDSFK12",
+    "linkId" : "opdsf90",
     "code" : [{
       "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
       "code" : "OPDSFK12"
     }],
+    "prefix" : "12",
     "text" : "Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben.",
     "type" : "choice",
     "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
@@ -206,6 +242,48 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }],
     "linkId" : "opd-sfk-globalwert",
     "text" : "OPD-SFK Globalwert (Summenwert, 0-48)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkSelbstwahrnehmungScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkSelbstwahrnehmung"
+      }
+    }],
+    "linkId" : "opd-sfk-selbstwahrnehmung",
+    "text" : "OPD-SFK Subskala Selbstwahrnehmung (Summenwert, 0-16; explorativ)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkBeziehungsmodellScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkBeziehungsmodell"
+      }
+    }],
+    "linkId" : "opd-sfk-beziehungsmodell",
+    "text" : "OPD-SFK Subskala Beziehungsmodell (Summenwert, 0-16; explorativ)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkKontaktgestaltungScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkKontaktgestaltung"
+      }
+    }],
+    "linkId" : "opd-sfk-kontaktgestaltung",
+    "text" : "OPD-SFK Subskala Kontaktgestaltung (Summenwert, 0-16; explorativ)",
     "type" : "decimal",
     "readOnly" : true
   }]

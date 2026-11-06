@@ -374,7 +374,7 @@ Bei **Druckfehler in der Vorlage** bleibt die übernommene Fassung unverändert.
 
 Ein Zuschnitt oder eine Short Form ist in PCOR-MII nach drei Regeln zu modellieren. Sie hängen zusammen — einzeln angewandt ergeben sie eine Ressource, die technisch stimmt und fachlich in die Irre führt.
 
-**Regel 1 — `linkId`s sind die Original-Itemnummern.** Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die `linkId`s sie (`edeq1/7/12/27/29/30`, `ansocq3/14`, `ssuk14/10`, `ace1`–`ace5`, ERQ-6 `erq1/2/3/6/8/9`). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.
+**Regel 1 — `linkId`s sind die Original-Itemnummern.** Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die `linkId`s sie (`edeq1/7/12/27/29/30`, `ansocq3/14`, `ssuk14/10`, `ace1`–`ace5`, ERQ-6 `erq1/2/3/6/8/9`, seit 2026-11-05 auch OPD-SFK `opdsf3/27/32/81/41/49/50/73/78/79/40/90` = Nummern der OPD-SF-Langform aus Tabelle 2 der Publikation). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.
 
 Weicht das Item Level Dictionary davon ab, ist die Abbildung **maschinenlesbar** zu hinterlegen, nicht nur als Tabelle auf der Seite. Beim ERQ-S tut das [`pcor-cm-erq-s-linkids`](ConceptMap-pcor-cm-erq-s-linkids.md), und zwar aus einem konkreten Grund: Dictionary-`erq6` und FHIR-`erq6` bezeichnen **verschiedene Items**, beide sind Unterdrückungs-Items, sie klingen ähnlich, und ein Mapping über Namensgleichheit fällt bei einer Sichtprüfung nicht auf. Wo eine solche Kollision möglich ist, ist die ConceptMap Pflicht.
 

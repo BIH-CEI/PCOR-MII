@@ -149,10 +149,9 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.117"}
-    h3,h4,h5,h6{--heading-prefix:"21.117"}</style>
+    <style type="text/css">h2{--heading-prefix:"21.118"}
+    h3,h4,h5,h6{--heading-prefix:"21.118"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -384,14 +383,22 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse">QuestionnaireResponse</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;DEMResponse&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#QuestionnaireResponse.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#QuestionnaireResponse.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0&quot;/&gt;
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0&quot;&gt;<a href="Questionnaire-DEM.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#canonical.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;DEM — Demographie&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#canonical.extension">extension</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-16T10:00:00+02:00&quot;/&gt;
@@ -628,14 +635,22 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse">QuestionnaireResponse</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;MHIResponse&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#QuestionnaireResponse.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#QuestionnaireResponse.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#QuestionnaireResponse.text">text</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0&quot;/&gt;
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0&quot;&gt;<a href="Questionnaire-MHI.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#canonical.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MHI — Medical History&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#canonical.extension">extension</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-17T10:00:00+02:00&quot;/&gt;
@@ -965,7 +980,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T09:00:00+02:00&quot;/&gt;
@@ -1025,7 +1040,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T09:15:00+02:00&quot;/&gt;
@@ -1105,7 +1120,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T09:30:00+02:00&quot;/&gt;
@@ -1153,7 +1168,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T09:45:00+02:00&quot;/&gt;
@@ -1202,7 +1217,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:00:00+02:00&quot;/&gt;
@@ -1306,7 +1321,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:15:00+02:00&quot;/&gt;
@@ -1352,7 +1367,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:15:00+02:00&quot;/&gt;
@@ -1410,7 +1425,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:15:00+02:00&quot;/&gt;
@@ -1446,7 +1461,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:15:00+02:00&quot;/&gt;
@@ -1488,7 +1503,7 @@ a[name="test"] + h3 + div {
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" style="color: Maroon">&#x1F517;</a> 
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;<a href="Patient-pcor-mii-exa-patient-an.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/pcor-mii-exa-patient-an&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-06-18T10:15:00+02:00&quot;/&gt;
@@ -1563,8 +1578,8 @@ a[name="test"] + h3 + div {
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

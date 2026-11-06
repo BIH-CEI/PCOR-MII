@@ -24,11 +24,18 @@
     <resource>
       <QuestionnaireResponse>
         <id value="DEMPSSResponse"/>
+        <meta>
+          <profile value="https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"/>
+        </meta>
         <language value="en"/>
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0">
+          <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="DEM — Demographie"/>
+          </extension>
+        </questionnaire>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-pss"/>
@@ -248,11 +255,18 @@
     <resource>
       <QuestionnaireResponse>
         <id value="MHIPSSResponse"/>
+        <meta>
+          <profile value="https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"/>
+        </meta>
         <language value="en"/>
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0">
+          <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="MHI — Medical History"/>
+          </extension>
+        </questionnaire>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-pss"/>
@@ -526,7 +540,7 @@
         </subject>
         <authored value="2026-06-25T11:30:00+02:00"/>
         <item>
-          <linkId value="OPDSFK01"/>
+          <linkId value="opdsf3"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -536,7 +550,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK02"/>
+          <linkId value="opdsf27"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -546,7 +560,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK03"/>
+          <linkId value="opdsf32"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -556,7 +570,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK04"/>
+          <linkId value="opdsf81"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -566,7 +580,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK05"/>
+          <linkId value="opdsf41"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -576,7 +590,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK06"/>
+          <linkId value="opdsf49"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -586,7 +600,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK07"/>
+          <linkId value="opdsf50"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -596,7 +610,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK08"/>
+          <linkId value="opdsf73"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -606,7 +620,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK09"/>
+          <linkId value="opdsf78"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -616,7 +630,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK10"/>
+          <linkId value="opdsf79"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -626,7 +640,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK11"/>
+          <linkId value="opdsf40"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -636,7 +650,7 @@
           </answer>
         </item>
         <item>
-          <linkId value="OPDSFK12"/>
+          <linkId value="opdsf90"/>
           <answer>
             <valueCoding>
               <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"/>
@@ -648,7 +662,25 @@
         <item>
           <linkId value="opd-sfk-globalwert"/>
           <answer>
-            <valueDecimal value="3.17"/>
+            <valueDecimal value="26"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="opd-sfk-selbstwahrnehmung"/>
+          <answer>
+            <valueDecimal value="11"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="opd-sfk-beziehungsmodell"/>
+          <answer>
+            <valueDecimal value="8"/>
+          </answer>
+        </item>
+        <item>
+          <linkId value="opd-sfk-kontaktgestaltung"/>
+          <answer>
+            <valueDecimal value="7"/>
           </answer>
         </item>
       </QuestionnaireResponse>

@@ -4,7 +4,7 @@
 
 Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen konsumieren können** — Questionnaire-Definitionen, ValueSets, das PRO-QR-Profil und Beispiele.
 
-## Was du bekommst
+### Was du bekommst
 
 | | |
 | :--- | :--- |
@@ -14,9 +14,9 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | Beispiele | zwei Beispielpatienten,**drei Termin-Bundles**und >30 validierte`QuestionnaireResponse`s (siehe[Validierung](Validierung.md)) |
 | Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.md) |
 
-## Wege, das zu bekommen
+### Wege, das zu bekommen
 
-### 1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)
+#### 1. PCOR-MII Container (für Mapper-Entwicklung, lokales Testen)
 
 Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundle gegen `$validate` prüfen, Definitionen ad-hoc per FHIR-API ziehen.
 
@@ -42,7 +42,7 @@ curl http://localhost:8097/fhir/Questionnaire?url=…/mii-qst-pro-promis-16   # 
 
 Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker)
 
-### 2. MII PRO Package via Simplifier (für Build-Pipelines)
+#### 2. MII PRO Package via Simplifier (für Build-Pipelines)
 
 Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.
 
@@ -63,7 +63,7 @@ dependencies:
 
 PCOR-MII selbst ist (Stand 2026-10) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
 
-### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
+#### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
 
 Repo klonen, SUSHI laufen lassen, FHIR JSONs sind in `fsh-generated/resources/`:
 
@@ -76,7 +76,7 @@ ls fsh-generated/resources/
 
 Best für: ad-hoc Lookup, Skripte (wie unser [extract-qst-translations](https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts)), CI-Integrationen.
 
-### 4. $package-Operation (für Bestückung eines fremden FHIR-Servers)
+#### 4. $package-Operation (für Bestückung eines fremden FHIR-Servers)
 
 Wenn ein Producer-Server FHIR Crmi unterstützt:
 
@@ -89,13 +89,13 @@ liefert ein transaction-fertiges Bundle mit dem Questionnaire + allen referenzie
 
 ValueSets kommen im `compose`-Format. Für PROMIS reicht das, weil die Konzepte inline definiert sind. HAPI braucht für `$package` das Clinical-Reasoning-Modul (im PCOR-MII Container nicht out-of-the-box).
 
-## Versions-Koexistenz auf Empfänger-Servern
+### Versions-Koexistenz auf Empfänger-Servern
 
 Auf Standard-HAPI: `PUT Questionnaire/promis-29` mit neuer `Questionnaire.version` **überschreibt** den existierenden Eintrag. Eine ältere QR mit `…|2026.3.0`-Referenz ist danach nicht mehr sauber resolvbar — pro `id` koexistiert nur eine Version.
 
 Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.7.0`).
 
-## Pilot-Datenfluss "50 First Patients"
+### Pilot-Datenfluss "50 First Patients"
 
 Welche Bögen der Pilot austauscht, steht maschinenlesbar in [Library/pilot-50fp](Library-pilot-50fp.md): die Schnittmenge aller Use Cases, versioniert gepinnt (Herleitung auf der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.md#use-cases)). Sender und Empfänger laden genau diese Versionen; damit löst jede `QuestionnaireResponse.questionnaire`-Referenz eindeutig auf.
 

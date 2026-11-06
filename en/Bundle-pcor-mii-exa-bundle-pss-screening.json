@@ -22,11 +22,20 @@
     "resource" : {
       "resourceType" : "QuestionnaireResponse",
       "id" : "DEMPSSResponse",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"]
+      },
       "language" : "en",
       "text" : {
         "status" : "generated"
       },
       "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
+      "_questionnaire" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString" : "DEM — Demographie"
+        }]
+      },
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-pss"
@@ -245,11 +254,20 @@
     "resource" : {
       "resourceType" : "QuestionnaireResponse",
       "id" : "MHIPSSResponse",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"]
+      },
       "language" : "en",
       "text" : {
         "status" : "generated"
       },
       "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
+      "_questionnaire" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString" : "MHI — Medical History"
+        }]
+      },
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-pss"
@@ -522,7 +540,7 @@
       },
       "authored" : "2026-06-25T11:30:00+02:00",
       "item" : [{
-        "linkId" : "OPDSFK01",
+        "linkId" : "opdsf3",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -532,7 +550,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK02",
+        "linkId" : "opdsf27",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -542,7 +560,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK03",
+        "linkId" : "opdsf32",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -552,7 +570,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK04",
+        "linkId" : "opdsf81",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -562,7 +580,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK05",
+        "linkId" : "opdsf41",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -572,7 +590,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK06",
+        "linkId" : "opdsf49",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -582,7 +600,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK07",
+        "linkId" : "opdsf50",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -592,7 +610,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK08",
+        "linkId" : "opdsf73",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -602,7 +620,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK09",
+        "linkId" : "opdsf78",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -612,7 +630,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK10",
+        "linkId" : "opdsf79",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -622,7 +640,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK11",
+        "linkId" : "opdsf40",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -632,7 +650,7 @@
         }]
       },
       {
-        "linkId" : "OPDSFK12",
+        "linkId" : "opdsf90",
         "answer" : [{
           "valueCoding" : {
             "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
@@ -644,7 +662,25 @@
       {
         "linkId" : "opd-sfk-globalwert",
         "answer" : [{
-          "valueDecimal" : 3.17
+          "valueDecimal" : 26
+        }]
+      },
+      {
+        "linkId" : "opd-sfk-selbstwahrnehmung",
+        "answer" : [{
+          "valueDecimal" : 11
+        }]
+      },
+      {
+        "linkId" : "opd-sfk-beziehungsmodell",
+        "answer" : [{
+          "valueDecimal" : 8
+        }]
+      },
+      {
+        "linkId" : "opd-sfk-kontaktgestaltung",
+        "answer" : [{
+          "valueDecimal" : 7
         }]
       }]
     }

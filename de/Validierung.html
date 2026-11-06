@@ -145,7 +145,6 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"16"}
     h3,h4,h5,h6{--heading-prefix:"16"}</style>
@@ -326,17 +325,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#worum-gehts-beim-validieren" id="markdown-toc-worum-gehts-beim-validieren">Worum geht's beim Validieren?</a></li>
-  <li><a href="#drei-wege-zum-validierten-bundle" id="markdown-toc-drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</a>    <ul>
-      <li><a href="#a-container-validate-schnellste-schleife-beim-mapper-entwickeln" id="markdown-toc-a-container-validate-schnellste-schleife-beim-mapper-entwickeln">A. Container-<code class="language-plaintext highlighter-rouge">$validate</code> (schnellste Schleife beim Mapper-Entwickeln)</a></li>
-      <li><a href="#b-hl7-validator-cli-für-ci-pipelines" id="markdown-toc-b-hl7-validator-cli-für-ci-pipelines">B. HL7 Validator CLI (für CI-Pipelines)</a></li>
-      <li><a href="#c-ig-publisher-build-automatisch-in-deinem-ig" id="markdown-toc-c-ig-publisher-build-automatisch-in-deinem-ig">C. IG Publisher Build (automatisch in deinem IG)</a></li>
-    </ul>
-  </li>
+  <li><a href="#drei-wege-zum-validierten-bundle" id="markdown-toc-drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</a></li>
   <li><a href="#was-du-in-deiner-implementierung-sicherstellst" id="markdown-toc-was-du-in-deiner-implementierung-sicherstellst">Was du in deiner Implementierung sicherstellst</a></li>
-  <li><a href="#severity-interpretation" id="markdown-toc-severity-interpretation">Severity-Interpretation</a>    <ul>
-      <li><a href="#häufige-warnings--wann-ignorieren-wann-nicht" id="markdown-toc-häufige-warnings--wann-ignorieren-wann-nicht">Häufige Warnings — wann ignorieren, wann nicht</a></li>
-    </ul>
-  </li>
+  <li><a href="#severity-interpretation" id="markdown-toc-severity-interpretation">Severity-Interpretation</a></li>
   <li><a href="#validierte-beispiele-als-referenz" id="markdown-toc-validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</a></li>
   <li><a href="#wozu-validierung-in-der-pipeline" id="markdown-toc-wozu-validierung-in-der-pipeline">Wozu Validierung in der Pipeline?</a></li>
 </ul>
@@ -344,7 +335,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>Diese Seite beantwortet die Frage: <strong>wie stelle ich sicher, dass meine Implementierung valide gegenüber den PRO- und PCOR-MII-Datendefinitionen ist?</strong></p>
 
-<h2 id="worum-gehts-beim-validieren">Worum geht's beim Validieren?</h2>
+<h3 id="worum-gehts-beim-validieren">Worum geht's beim Validieren?</h3>
 
 <p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:</p>
 
@@ -375,9 +366,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2026.7.0)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
 
-<h2 id="drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</h2>
+<h3 id="drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</h3>
 
-<h3 id="a-container-validate-schnellste-schleife-beim-mapper-entwickeln">A. Container-<code class="language-plaintext highlighter-rouge">$validate</code> (schnellste Schleife beim Mapper-Entwickeln)</h3>
+<h4 id="a-container-validate-schnellste-schleife-beim-mapper-entwickeln">A. Container-<code class="language-plaintext highlighter-rouge">$validate</code> (schnellste Schleife beim Mapper-Entwickeln)</h4>
 
 <p><a href="Bereitstellung.html">PCOR-MII Container</a> starten und das Bundle per HTTP gegen <code class="language-plaintext highlighter-rouge">$validate</code> werfen:</p>
 
@@ -388,7 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Antwort ist ein <code class="language-plaintext highlighter-rouge">OperationOutcome</code> mit <code class="language-plaintext highlighter-rouge">issue</code>-Liste, severity-getaggt. Praktisch für: iterative Mapper-Entwicklung in der Shell, schnelle Roundtrips ohne Java-Setup.</p>
 
-<h3 id="b-hl7-validator-cli-für-ci-pipelines">B. HL7 Validator CLI (für CI-Pipelines)</h3>
+<h4 id="b-hl7-validator-cli-für-ci-pipelines">B. HL7 Validator CLI (für CI-Pipelines)</h4>
 
 <p>Der offizielle Java-Validator. Empfohlen wenn dein Build-System keine HTTP-Endpoints aufrufen soll.</p>
 
@@ -406,11 +397,11 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <p>Best für: GitHub-Actions/GitLab-CI-Steps, Pre-Commit-Hooks, Mass-Validation großer Datensätze.</p>
 
-<h3 id="c-ig-publisher-build-automatisch-in-deinem-ig">C. IG Publisher Build (automatisch in deinem IG)</h3>
+<h4 id="c-ig-publisher-build-automatisch-in-deinem-ig">C. IG Publisher Build (automatisch in deinem IG)</h4>
 
 <p>Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: deklariere die Resources mit <code class="language-plaintext highlighter-rouge">meta.profile</code> — IG Publisher validiert dann beim Build automatisch und stoppt bei Errors. Output in <code class="language-plaintext highlighter-rouge">output/qa.html</code> und <code class="language-plaintext highlighter-rouge">output/qa.json</code>.</p>
 
-<h2 id="was-du-in-deiner-implementierung-sicherstellst">Was du in deiner Implementierung sicherstellst</h2>
+<h3 id="was-du-in-deiner-implementierung-sicherstellst">Was du in deiner Implementierung sicherstellst</h3>
 
 <p>Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:</p>
 
@@ -425,7 +416,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">text.div</code></strong> narrative mit <code class="language-plaintext highlighter-rouge">xml:lang</code>/<code class="language-plaintext highlighter-rouge">lang</code> wenn <code class="language-plaintext highlighter-rouge">Resource.language</code> gesetzt (siehe Best-Practice-Block unten)</li>
 </ul>
 
-<h2 id="severity-interpretation">Severity-Interpretation</h2>
+<h3 id="severity-interpretation">Severity-Interpretation</h3>
 
 <table>
   <thead>
@@ -454,7 +445,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   </tbody>
 </table>
 
-<h3 id="häufige-warnings--wann-ignorieren-wann-nicht">Häufige Warnings — wann ignorieren, wann nicht</h3>
+<h4 id="häufige-warnings--wann-ignorieren-wann-nicht">Häufige Warnings — wann ignorieren, wann nicht</h4>
 
 <table>
   <thead>
@@ -483,7 +474,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   </tbody>
 </table>
 
-<h2 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h2>
+<h3 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h3>
 
 <p>Der Beispielbestand ist seit dem 01.10.2026 als <strong>drei Use-Case-Bundles</strong> organisiert — je Erhebungstermin ein <code class="language-plaintext highlighter-rouge">collection</code>-Bundle mit Patient und allen Antworten des Termins, alle drei mit <strong>0 Errors</strong> validiert:</p>
 
@@ -539,7 +530,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 <span class="k">done</span>
 </code></pre></div></div>
 
-<h2 id="wozu-validierung-in-der-pipeline">Wozu Validierung in der Pipeline?</h2>
+<h3 id="wozu-validierung-in-der-pipeline">Wozu Validierung in der Pipeline?</h3>
 
 <p>Validierung prüft strukturelle und Code-Bindungs-Konformanz, <strong>nicht</strong> klinische/inhaltliche Plausibilität. Sie schützt aber sehr zuverlässig vor den häufigsten Mapping-Fehlern: falsche LA-Codes (z.B. Frequency- vs Intensity-Skala verwechselt), fehlende Pflicht-Items, Versions-Mismatch zwischen <code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz und Server-Stand.</p>
 
@@ -595,8 +586,8 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

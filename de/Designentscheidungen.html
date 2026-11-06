@@ -145,7 +145,6 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"18"}
     h3,h4,h5,h6{--heading-prefix:"18"}</style>
@@ -968,7 +967,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 <p>Ein Zuschnitt oder eine Short Form ist in PCOR-MII nach drei Regeln zu modellieren. Sie hängen zusammen — einzeln angewandt ergeben sie eine Ressource, die technisch stimmt und fachlich in die Irre führt.</p>
 
-<p><strong>Regel 1 — <code class="language-plaintext highlighter-rouge">linkId</code>s sind die Original-Itemnummern.</strong> Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die <code class="language-plaintext highlighter-rouge">linkId</code>s sie (<code class="language-plaintext highlighter-rouge">edeq1/7/12/27/29/30</code>, <code class="language-plaintext highlighter-rouge">ansocq3/14</code>, <code class="language-plaintext highlighter-rouge">ssuk14/10</code>, <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace5</code>, ERQ-6 <code class="language-plaintext highlighter-rouge">erq1/2/3/6/8/9</code>). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.</p>
+<p><strong>Regel 1 — <code class="language-plaintext highlighter-rouge">linkId</code>s sind die Original-Itemnummern.</strong> Unverändert aus ADR-003 Punkt 6: Hat der Bogen eine offizielle Nummerierung, tragen die <code class="language-plaintext highlighter-rouge">linkId</code>s sie (<code class="language-plaintext highlighter-rouge">edeq1/7/12/27/29/30</code>, <code class="language-plaintext highlighter-rouge">ansocq3/14</code>, <code class="language-plaintext highlighter-rouge">ssuk14/10</code>, <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace5</code>, ERQ-6 <code class="language-plaintext highlighter-rouge">erq1/2/3/6/8/9</code>, seit 2026-11-05 auch OPD-SFK <code class="language-plaintext highlighter-rouge">opdsf3/27/32/81/41/49/50/73/78/79/40/90</code> = Nummern der OPD-SF-Langform aus Tabelle 2 der Publikation). Nur Einzelfragen ohne eigene Nummerierung dürfen Dictionary-IDs behalten.</p>
 
 <p>Weicht das Item Level Dictionary davon ab, ist die Abbildung <strong>maschinenlesbar</strong> zu hinterlegen, nicht nur als Tabelle auf der Seite. Beim ERQ-S tut das <a href="ConceptMap-pcor-cm-erq-s-linkids.html"><code class="language-plaintext highlighter-rouge">pcor-cm-erq-s-linkids</code></a>, und zwar aus einem konkreten Grund: Dictionary-<code class="language-plaintext highlighter-rouge">erq6</code> und FHIR-<code class="language-plaintext highlighter-rouge">erq6</code> bezeichnen <strong>verschiedene Items</strong>, beide sind Unterdrückungs-Items, sie klingen ähnlich, und ein Mapping über Namensgleichheit fällt bei einer Sichtprüfung nicht auf. Wo eine solche Kollision möglich ist, ist die ConceptMap Pflicht.</p>
 
@@ -1328,8 +1327,8 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

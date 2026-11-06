@@ -140,7 +140,6 @@ a[name="test"] + h3 + div {
 	  <script src="assets/js/prism.js" type="text/javascript"></script>
 	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
 	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
-    <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"16"}
     h3,h4,h5,h6{--heading-prefix:"16"}</style>
@@ -323,17 +322,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#what-validating-actually-checks" id="markdown-toc-what-validating-actually-checks">What validating actually checks</a></li>
-  <li><a href="#three-routes-to-a-validated-bundle" id="markdown-toc-three-routes-to-a-validated-bundle">Three routes to a validated bundle</a>    <ul>
-      <li><a href="#a-container-validate-fastest-loop-while-writing-a-mapper" id="markdown-toc-a-container-validate-fastest-loop-while-writing-a-mapper">A. Container <code class="language-plaintext highlighter-rouge">$validate</code> (fastest loop while writing a mapper)</a></li>
-      <li><a href="#b-hl7-validator-cli-for-ci-pipelines" id="markdown-toc-b-hl7-validator-cli-for-ci-pipelines">B. HL7 validator CLI (for CI pipelines)</a></li>
-      <li><a href="#c-ig-publisher-build-automatic-inside-your-own-ig" id="markdown-toc-c-ig-publisher-build-automatic-inside-your-own-ig">C. IG Publisher build (automatic inside your own IG)</a></li>
-    </ul>
-  </li>
+  <li><a href="#three-routes-to-a-validated-bundle" id="markdown-toc-three-routes-to-a-validated-bundle">Three routes to a validated bundle</a></li>
   <li><a href="#what-to-get-right-in-your-implementation" id="markdown-toc-what-to-get-right-in-your-implementation">What to get right in your implementation</a></li>
-  <li><a href="#reading-severities" id="markdown-toc-reading-severities">Reading severities</a>    <ul>
-      <li><a href="#common-warnings--when-to-ignore-them-and-when-not-to" id="markdown-toc-common-warnings--when-to-ignore-them-and-when-not-to">Common warnings — when to ignore them and when not to</a></li>
-    </ul>
-  </li>
+  <li><a href="#reading-severities" id="markdown-toc-reading-severities">Reading severities</a></li>
   <li><a href="#validated-examples-for-reference" id="markdown-toc-validated-examples-for-reference">Validated examples for reference</a></li>
   <li><a href="#why-validate-in-the-pipeline-at-all" id="markdown-toc-why-validate-in-the-pipeline-at-all">Why validate in the pipeline at all?</a></li>
 </ul>
@@ -341,7 +332,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>This page answers one question: <strong>how do I make sure my implementation is valid against the PRO and PCOR-MII data definitions?</strong></p>
 
-<h2 id="what-validating-actually-checks">What validating actually checks</h2>
+<h3 id="what-validating-actually-checks">What validating actually checks</h3>
 
 <p>A <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> — or a FHIR bundle containing one — has to satisfy three things to count as valid:</p>
 
@@ -372,9 +363,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>For that to work the validator has to know all four resource levels — the <strong>MII PRO module package (2026.7.0)</strong> plus SDC plus LOINC. All the routes below arrange this automatically, either through <code class="language-plaintext highlighter-rouge">-ig</code> parameters or through the container preload.</p>
 
-<h2 id="three-routes-to-a-validated-bundle">Three routes to a validated bundle</h2>
+<h3 id="three-routes-to-a-validated-bundle">Three routes to a validated bundle</h3>
 
-<h3 id="a-container-validate-fastest-loop-while-writing-a-mapper">A. Container <code class="language-plaintext highlighter-rouge">$validate</code> (fastest loop while writing a mapper)</h3>
+<h4 id="a-container-validate-fastest-loop-while-writing-a-mapper">A. Container <code class="language-plaintext highlighter-rouge">$validate</code> (fastest loop while writing a mapper)</h4>
 
 <p>Start the <a href="Bereitstellung.html">PCOR-MII container</a> and throw the bundle at <code class="language-plaintext highlighter-rouge">$validate</code> over HTTP:</p>
 
@@ -385,7 +376,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The reply is an <code class="language-plaintext highlighter-rouge">OperationOutcome</code> with a severity-tagged <code class="language-plaintext highlighter-rouge">issue</code> list. Good for iterative mapper development in a shell and quick round trips without a Java setup.</p>
 
-<h3 id="b-hl7-validator-cli-for-ci-pipelines">B. HL7 validator CLI (for CI pipelines)</h3>
+<h4 id="b-hl7-validator-cli-for-ci-pipelines">B. HL7 validator CLI (for CI pipelines)</h4>
 
 <p>The official Java validator. Preferable when your build system should not call HTTP endpoints.</p>
 
@@ -403,11 +394,11 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <p>Good for GitHub Actions and GitLab CI steps, pre-commit hooks, and mass validation of large data sets.</p>
 
-<h3 id="c-ig-publisher-build-automatic-inside-your-own-ig">C. IG Publisher build (automatic inside your own IG)</h3>
+<h4 id="c-ig-publisher-build-automatic-inside-your-own-ig">C. IG Publisher build (automatic inside your own IG)</h4>
 
 <p>If you build your own Implementation Guide that consumes PCOR-MII: declare your resources with <code class="language-plaintext highlighter-rouge">meta.profile</code> and the IG Publisher validates them during the build, stopping on errors. Output lands in <code class="language-plaintext highlighter-rouge">output/qa.html</code> and <code class="language-plaintext highlighter-rouge">output/qa.json</code>.</p>
 
-<h2 id="what-to-get-right-in-your-implementation">What to get right in your implementation</h2>
+<h3 id="what-to-get-right-in-your-implementation">What to get right in your implementation</h3>
 
 <p>A practical checklist for mappers, ePRO apps and populating a recipient server:</p>
 
@@ -423,7 +414,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   <li class="task-list-item"><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"/><strong><code class="language-plaintext highlighter-rouge">text.div</code></strong> narrative with <code class="language-plaintext highlighter-rouge">xml:lang</code> / <code class="language-plaintext highlighter-rouge">lang</code> when <code class="language-plaintext highlighter-rouge">Resource.language</code> is set (see the best-practice block below)</li>
 </ul>
 
-<h2 id="reading-severities">Reading severities</h2>
+<h3 id="reading-severities">Reading severities</h3>
 
 <table>
   <thead>
@@ -452,7 +443,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   </tbody>
 </table>
 
-<h3 id="common-warnings--when-to-ignore-them-and-when-not-to">Common warnings — when to ignore them and when not to</h3>
+<h4 id="common-warnings--when-to-ignore-them-and-when-not-to">Common warnings — when to ignore them and when not to</h4>
 
 <table>
   <thead>
@@ -481,7 +472,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   </tbody>
 </table>
 
-<h2 id="validated-examples-for-reference">Validated examples for reference</h2>
+<h3 id="validated-examples-for-reference">Validated examples for reference</h3>
 
 <p>The three original examples, all with <strong>0 errors, 0 warnings</strong>:</p>
 
@@ -491,7 +482,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
   <li><a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> (for the example questionnaire)</li>
 </ul>
 
-<p><a name="l897">​</a>Plus the <strong>AN data set</strong> — five responses and two score observations from a single assessment session with the same patient (overview on the <a href="AN.html">AN</a> page): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a>, and <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> and <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
+<p><a name="l868">​</a>Plus the <strong>AN data set</strong> — five responses and two score observations from a single assessment session with the same patient (overview on the <a href="AN.html">AN</a> page): <a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a>, <a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a>, <a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a>, <a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a>, <a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a>, and <a href="Observation-ErqsReappraisalObservation.html">ErqsReappraisalObservation</a> and <a href="Observation-ErqsSuppressionObservation.html">ErqsSuppressionObservation</a>.</p>
 
 <p>These seven are checked at <strong>0 errors</strong> but are not warning-free, and both remaining warnings are known and accepted:</p>
 
@@ -514,7 +505,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 <span class="k">done</span>
 </code></pre></div></div>
 
-<h2 id="why-validate-in-the-pipeline-at-all">Why validate in the pipeline at all?</h2>
+<h3 id="why-validate-in-the-pipeline-at-all">Why validate in the pipeline at all?</h3>
 
 <p>Validation checks structural and code-binding conformance, <strong>not</strong> clinical plausibility. What it does reliably catch are the commonest mapping mistakes: wrong LA codes (a frequency scale confused with an intensity scale), missing required items, and a version mismatch between the <code class="language-plaintext highlighter-rouge">questionnaire</code> reference and what the server actually holds.</p>
 
@@ -570,8 +561,8 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
           IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

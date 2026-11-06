@@ -4,7 +4,7 @@
 
 Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implementierung valide gegenüber den PRO- und PCOR-MII-Datendefinitionen ist?**
 
-## Worum geht's beim Validieren?
+### Worum geht's beim Validieren?
 
 Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
 
@@ -35,9 +35,9 @@ flowchart TB
 
 Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.7.0)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
 
-## Drei Wege zum validierten Bundle
+### Drei Wege zum validierten Bundle
 
-### A. Container-$validate (schnellste Schleife beim Mapper-Entwickeln)
+#### A. Container-$validate (schnellste Schleife beim Mapper-Entwickeln)
 
 [PCOR-MII Container](Bereitstellung.md) starten und das Bundle per HTTP gegen `$validate` werfen:
 
@@ -50,7 +50,7 @@ curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
 
 Antwort ist ein `OperationOutcome` mit `issue`-Liste, severity-getaggt. Praktisch für: iterative Mapper-Entwicklung in der Shell, schnelle Roundtrips ohne Java-Setup.
 
-### B. HL7 Validator CLI (für CI-Pipelines)
+#### B. HL7 Validator CLI (für CI-Pipelines)
 
 Der offizielle Java-Validator. Empfohlen wenn dein Build-System keine HTTP-Endpoints aufrufen soll.
 
@@ -70,11 +70,11 @@ java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
 
 Best für: GitHub-Actions/GitLab-CI-Steps, Pre-Commit-Hooks, Mass-Validation großer Datensätze.
 
-### C. IG Publisher Build (automatisch in deinem IG)
+#### C. IG Publisher Build (automatisch in deinem IG)
 
 Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: deklariere die Resources mit `meta.profile` — IG Publisher validiert dann beim Build automatisch und stoppt bei Errors. Output in `output/qa.html` und `output/qa.json`.
 
-## Was du in deiner Implementierung sicherstellst
+### Was du in deiner Implementierung sicherstellst
 
 Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
@@ -87,7 +87,7 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 * **`authored`** Timestamp gesetzt
 * **`text.div`** narrative mit `xml:lang`/`lang` wenn `Resource.language` gesetzt (siehe Best-Practice-Block unten)
 
-## Severity-Interpretation
+### Severity-Interpretation
 
 | | | |
 | :--- | :--- | :--- |
@@ -95,7 +95,7 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 | `warning` | FHIR-Best-Practice verletzt | ⚠️ Fall-by-Fall |
 | `information`/`note` | Hinweis (z.B. Terminologie-Server konnte Code nicht auflösen) | ✓ meist OK |
 
-### Häufige Warnings — wann ignorieren, wann nicht
+#### Häufige Warnings — wann ignorieren, wann nicht
 
 | | |
 | :--- | :--- |
@@ -104,7 +104,7 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 | `Wrong Display Name 'X' for http://loinc.org#LAxxx-y` | Display weicht von der LOINC-Bezeichnung ab (z.B. deutsche Übersetzung). Bewusst akzeptabel, bei strict-display-Servern via Setting deaktivierbar |
 | `Canonical URL ... kann nicht aufgelöst werden` | Server hat den referenzierten Questionnaire nicht — entweder`-ig`-Parameter ergänzen oder Server-Bestückung prüfen (siehe[Bereitstellung](Bereitstellung.md)) |
 
-## Validierte Beispiele als Referenz
+### Validierte Beispiele als Referenz
 
 Der Beispielbestand ist seit dem 01.10.2026 als **drei Use-Case-Bundles** organisiert — je Erhebungstermin ein `collection`-Bundle mit Patient und allen Antworten des Termins, alle drei mit **0 Errors** validiert:
 
@@ -139,7 +139,7 @@ done
 
 ```
 
-## Wozu Validierung in der Pipeline?
+### Wozu Validierung in der Pipeline?
 
 Validierung prüft strukturelle und Code-Bindungs-Konformanz, **nicht** klinische/inhaltliche Plausibilität. Sie schützt aber sehr zuverlässig vor den häufigsten Mapping-Fehlern: falsche LA-Codes (z.B. Frequency- vs Intensity-Skala verwechselt), fehlende Pflicht-Items, Versions-Mismatch zwischen `questionnaire`-Referenz und Server-Stand.
 

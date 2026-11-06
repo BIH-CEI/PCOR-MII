@@ -145,7 +145,6 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"20"}
     h3,h4,h5,h6{--heading-prefix:"20"}</style>
@@ -357,6 +356,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <hr />
 
 <h3 id="unveröffentlicht">Unveröffentlicht</h3>
+
+<p><strong><code class="language-plaintext highlighter-rouge">improve</code></strong> OPD-SFK: <code class="language-plaintext highlighter-rouge">linkId</code>s sind jetzt die Itemnummern der OPD-SF-Langform (<code class="language-plaintext highlighter-rouge">opdsf3</code> … <code class="language-plaintext highlighter-rouge">opdsf90</code>, Ehrenthal et al. 2015, Tabelle 2) statt der Dictionary-IDs <code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code>; <code class="language-plaintext highlighter-rouge">prefix</code> trägt die OPD-SFK-Nummer 1–12, <code class="language-plaintext highlighter-rouge">item.code</code> weiterhin die Dictionary-Variable. <strong>Breaking für <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s gegen <code class="language-plaintext highlighter-rouge">OPDSFK|0.3.0</code></strong> — Migration und Dictionary-Abbildung über die neue ConceptMap <code class="language-plaintext highlighter-rouge">pcor-cm-opd-sfk-linkids</code>.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> OPD-SFK: die drei explorativen Subskalen Selbstwahrnehmung (Items 1, 2, 5, 8), Beziehungsmodell (3, 7, 9, 12) und Kontaktgestaltung (4, 6, 10, 11) als berechnete readOnly-Items (Summenwert 0–16), Zuordnung aus Abbildung 1 der Publikation.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">fix</code></strong> Beispielantwort <code class="language-plaintext highlighter-rouge">OPDSFKResponse</code>: der Globalwert war als Mittelwert (3.17) angegeben, korrekt ist der Summenwert 26; Subskalenwerte ergänzt, PSS-Screening-Bundle neu gebaut.</p>
 
 <p><strong><code class="language-plaintext highlighter-rouge">feature</code></strong> Neuer Questionnaire <code class="language-plaintext highlighter-rouge">PROMISGH</code> mit den PROMIS-Global-Health-Items Global01 <code class="language-plaintext highlighter-rouge">61577-3</code> und Global02 <code class="language-plaintext highlighter-rouge">61578-1</code> sowie ValueSet <code class="language-plaintext highlighter-rouge">promis-global-skala-5-vs</code> auf Basis der Answerlist <code class="language-plaintext highlighter-rouge">LL4280-5</code>. Übergangslösung bis zur Aufnahme der vollständigen 10-Item-Skala <code class="language-plaintext highlighter-rouge">85524-7</code> ins MII-PRO-Modul. Global07 ist über PROMIS-29 abgedeckt</p>
 
@@ -580,8 +585,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

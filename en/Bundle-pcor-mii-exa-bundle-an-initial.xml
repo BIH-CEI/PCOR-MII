@@ -24,11 +24,18 @@
     <resource>
       <QuestionnaireResponse>
         <id value="DEMResponse"/>
+        <meta>
+          <profile value="https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"/>
+        </meta>
         <language value="en"/>
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0">
+          <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="DEM — Demographie"/>
+          </extension>
+        </questionnaire>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -248,11 +255,18 @@
     <resource>
       <QuestionnaireResponse>
         <id value="MHIResponse"/>
+        <meta>
+          <profile value="https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"/>
+        </meta>
         <language value="en"/>
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0">
+          <extension url="http://hl7.org/fhir/StructureDefinition/display">
+            <valueString value="MHI — Medical History"/>
+          </extension>
+        </questionnaire>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>

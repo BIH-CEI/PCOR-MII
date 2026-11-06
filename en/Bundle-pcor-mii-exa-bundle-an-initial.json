@@ -22,11 +22,20 @@
     "resource" : {
       "resourceType" : "QuestionnaireResponse",
       "id" : "DEMResponse",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"]
+      },
       "language" : "en",
       "text" : {
         "status" : "generated"
       },
       "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
+      "_questionnaire" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString" : "DEM — Demographie"
+        }]
+      },
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -245,11 +254,20 @@
     "resource" : {
       "resourceType" : "QuestionnaireResponse",
       "id" : "MHIResponse",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"]
+      },
       "language" : "en",
       "text" : {
         "status" : "generated"
       },
       "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
+      "_questionnaire" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString" : "MHI — Medical History"
+        }]
+      },
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"

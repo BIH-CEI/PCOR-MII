@@ -6,7 +6,7 @@
 
 This page answers one question: **how do I make sure my implementation is valid against the PRO and PCOR-MII data definitions?**
 
-## What validating actually checks
+### What validating actually checks
 
 A `QuestionnaireResponse` — or a FHIR bundle containing one — has to satisfy three things to count as valid:
 
@@ -37,9 +37,9 @@ flowchart TB
 
 For that to work the validator has to know all four resource levels — the **MII PRO module package (2026.7.0)** plus SDC plus LOINC. All the routes below arrange this automatically, either through `-ig` parameters or through the container preload.
 
-## Three routes to a validated bundle
+### Three routes to a validated bundle
 
-### A. Container $validate (fastest loop while writing a mapper)
+#### A. Container $validate (fastest loop while writing a mapper)
 
 Start the [PCOR-MII container](Bereitstellung.md) and throw the bundle at `$validate` over HTTP:
 
@@ -52,7 +52,7 @@ curl -X POST http://localhost:8097/fhir/QuestionnaireResponse/\$validate \
 
 The reply is an `OperationOutcome` with a severity-tagged `issue` list. Good for iterative mapper development in a shell and quick round trips without a Java setup.
 
-### B. HL7 validator CLI (for CI pipelines)
+#### B. HL7 validator CLI (for CI pipelines)
 
 The official Java validator. Preferable when your build system should not call HTTP endpoints.
 
@@ -72,11 +72,11 @@ java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
 
 Good for GitHub Actions and GitLab CI steps, pre-commit hooks, and mass validation of large data sets.
 
-### C. IG Publisher build (automatic inside your own IG)
+#### C. IG Publisher build (automatic inside your own IG)
 
 If you build your own Implementation Guide that consumes PCOR-MII: declare your resources with `meta.profile` and the IG Publisher validates them during the build, stopping on errors. Output lands in `output/qa.html` and `output/qa.json`.
 
-## What to get right in your implementation
+### What to get right in your implementation
 
 A practical checklist for mappers, ePRO apps and populating a recipient server:
 
@@ -90,7 +90,7 @@ A practical checklist for mappers, ePRO apps and populating a recipient server:
 * **`authored`** timestamp set
 * **`text.div`** narrative with `xml:lang` / `lang` when `Resource.language` is set (see the best-practice block below)
 
-## Reading severities
+### Reading severities
 
 | | | |
 | :--- | :--- | :--- |
@@ -98,7 +98,7 @@ A practical checklist for mappers, ePRO apps and populating a recipient server:
 | `warning` | FHIR best practice violated | ⚠️ case by case |
 | `information`/`note` | informational, e.g. the terminology server could not resolve a code | ✓ usually fine |
 
-### Common warnings — when to ignore them and when not to
+#### Common warnings — when to ignore them and when not to
 
 | | |
 | :--- | :--- |
@@ -107,7 +107,7 @@ A practical checklist for mappers, ePRO apps and populating a recipient server:
 | `Wrong Display Name 'X' for http://loinc.org#LAxxx-y` | the display differs from the LOINC designation, e.g. a German translation. Deliberately acceptable; can be switched off on strict-display servers |
 | `Canonical URL … cannot be resolved` | the server does not have the referenced questionnaire — either add an`-ig`parameter or check how the server was populated (see[Distribution](Bereitstellung.md)) |
 
-## Validated examples for reference
+### Validated examples for reference
 
 The three original examples, all with **0 errors, 0 warnings**:
 
@@ -138,7 +138,7 @@ done
 
 ```
 
-## Why validate in the pipeline at all?
+### Why validate in the pipeline at all?
 
 Validation checks structural and code-binding conformance, **not** clinical plausibility. What it does reliably catch are the commonest mapping mistakes: wrong LA codes (a frequency scale confused with an intensity scale), missing required items, and a version mismatch between the `questionnaire` reference and what the server actually holds.
 

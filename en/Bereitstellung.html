@@ -145,7 +145,6 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"17"}
     h3,h4,h5,h6{--heading-prefix:"17"}</style>
@@ -328,13 +327,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#what-you-get" id="markdown-toc-what-you-get">What you get</a></li>
-  <li><a href="#ways-to-get-it" id="markdown-toc-ways-to-get-it">Ways to get it</a>    <ul>
-      <li><a href="#1-pcor-mii-container-for-mapper-development-and-local-testing" id="markdown-toc-1-pcor-mii-container-for-mapper-development-and-local-testing">1. PCOR-MII container (for mapper development and local testing)</a></li>
-      <li><a href="#2-mii-pro-package-via-simplifier-for-build-pipelines" id="markdown-toc-2-mii-pro-package-via-simplifier-for-build-pipelines">2. MII PRO package via Simplifier (for build pipelines)</a></li>
-      <li><a href="#3-direct-repository-access-for-scripting-and-documentation-tools" id="markdown-toc-3-direct-repository-access-for-scripting-and-documentation-tools">3. Direct repository access (for scripting and documentation tools)</a></li>
-      <li><a href="#4-the-package-operation-for-populating-someone-elses-fhir-server" id="markdown-toc-4-the-package-operation-for-populating-someone-elses-fhir-server">4. The <code class="language-plaintext highlighter-rouge">$package</code> operation (for populating someone else's FHIR server)</a></li>
-    </ul>
-  </li>
+  <li><a href="#ways-to-get-it" id="markdown-toc-ways-to-get-it">Ways to get it</a></li>
   <li><a href="#version-coexistence-on-recipient-servers" id="markdown-toc-version-coexistence-on-recipient-servers">Version coexistence on recipient servers</a></li>
   <li><a href="#pilot-data-flow-50-first-patients" id="markdown-toc-pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</a></li>
 </ul>
@@ -342,7 +335,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>This page describes <strong>how implementers can consume the PCOR-MII data definitions</strong> — questionnaire definitions, ValueSets, the PRO QuestionnaireResponse profile and the examples.</p>
 
-<h2 id="what-you-get">What you get</h2>
+<h3 id="what-you-get">What you get</h3>
 
 <table>
   <thead>
@@ -371,9 +364,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h2 id="ways-to-get-it">Ways to get it</h2>
+<h3 id="ways-to-get-it">Ways to get it</h3>
 
-<h3 id="1-pcor-mii-container-for-mapper-development-and-local-testing">1. PCOR-MII container (for mapper development and local testing)</h3>
+<h4 id="1-pcor-mii-container-for-mapper-development-and-local-testing">1. PCOR-MII container (for mapper development and local testing)</h4>
 
 <p>A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checking a bundle against <code class="language-plaintext highlighter-rouge">$validate</code> and pulling definitions ad hoc over the FHIR API.</p>
 
@@ -395,7 +388,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>Details: <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/docker">docker/README.md</a></p>
 
-<h3 id="2-mii-pro-package-via-simplifier-for-build-pipelines">2. MII PRO package via Simplifier (for build pipelines)</h3>
+<h4 id="2-mii-pro-package-via-simplifier-for-build-pipelines">2. MII PRO package via Simplifier (for build pipelines)</h4>
 
 <p>The MII PRO module is published as a FHIR NPM package on Simplifier. Best for integration into SUSHI, IG Publisher and FHIR validator builds.</p>
 
@@ -411,7 +404,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>PCOR-MII itself is <strong>not</strong> published as a package — anyone who only needs the PCOR-MII definitions should take route 1 or 3.</p>
 
-<h3 id="3-direct-repository-access-for-scripting-and-documentation-tools">3. Direct repository access (for scripting and documentation tools)</h3>
+<h4 id="3-direct-repository-access-for-scripting-and-documentation-tools">3. Direct repository access (for scripting and documentation tools)</h4>
 
 <p>Clone the repository, run SUSHI, and the FHIR JSON files are in <code class="language-plaintext highlighter-rouge">fsh-generated/resources/</code>:</p>
 
@@ -422,7 +415,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>Best for ad-hoc lookups, scripts (such as our <a href="https://github.com/BIH-CEI/PCOR-MII/tree/main/scripts">extract-qst-translations</a>) and CI integrations.</p>
 
-<h3 id="4-the-package-operation-for-populating-someone-elses-fhir-server">4. The <code class="language-plaintext highlighter-rouge">$package</code> operation (for populating someone else's FHIR server)</h3>
+<h4 id="4-the-package-operation-for-populating-someone-elses-fhir-server">4. The <code class="language-plaintext highlighter-rouge">$package</code> operation (for populating someone else's FHIR server)</h4>
 
 <p>If a producing server supports FHIR CRMI:</p>
 
@@ -433,7 +426,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p>ValueSets come in <code class="language-plaintext highlighter-rouge">compose</code> form. For PROMIS that is sufficient because the concepts are defined inline. For <code class="language-plaintext highlighter-rouge">$package</code>, HAPI needs the clinical-reasoning module, which is not enabled out of the box in the PCOR-MII container.</p>
 
-<h2 id="version-coexistence-on-recipient-servers">Version coexistence on recipient servers</h2>
+<h3 id="version-coexistence-on-recipient-servers">Version coexistence on recipient servers</h3>
 
 <p>On a stock HAPI server, <code class="language-plaintext highlighter-rouge">PUT Questionnaire/promis-29</code> with a new <code class="language-plaintext highlighter-rouge">Questionnaire.version</code> <strong>overwrites</strong> the existing entry. An older response referencing <code class="language-plaintext highlighter-rouge">…|2026.3.0</code> can then no longer be resolved cleanly — only one version coexists per <code class="language-plaintext highlighter-rouge">id</code>.</p>
 
@@ -443,7 +436,7 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
 
 <p><a name="pilot"></a></p>
 
-<h2 id="pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</h2>
+<h3 id="pilot-data-flow-50-first-patients">Pilot data flow, "50 First Patients"</h3>
 
 <p>Which questionnaires the pilot exchanges is machine-readable in <a href="Library-pilot-50fp.html">Library/pilot-50fp</a>: the intersection of all use cases, pinned with versions (derivation on the <a href="Fragebogen-Bibliothek.html#use-cases">questionnaire library</a> page). Senders and receivers load exactly these versions, so every <code class="language-plaintext highlighter-rouge">QuestionnaireResponse.questionnaire</code> reference resolves unambiguously.</p>
 
@@ -530,8 +523,8 @@ curl http://localhost:8097/fhir/Questionnaire?url<span class="o">=</span>…/mii
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

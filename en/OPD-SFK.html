@@ -145,7 +145,6 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"10"}
     h3,h4,h5,h6{--heading-prefix:"10"}</style>
@@ -331,6 +330,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#artefakte" id="markdown-toc-artefakte">Artefakte</a></li>
   <li><a href="#canonical" id="markdown-toc-canonical">Canonical</a></li>
   <li><a href="#eigenschaften" id="markdown-toc-eigenschaften">Eigenschaften</a></li>
+  <li><a href="#items-und-subskalen" id="markdown-toc-items-und-subskalen">Items und Subskalen</a></li>
   <li><a href="#scoring-entscheidung" id="markdown-toc-scoring-entscheidung">Scoring-Entscheidung</a></li>
   <li><a href="#lizenz" id="markdown-toc-lizenz">Lizenz</a></li>
 </ul>
@@ -348,6 +348,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Fragebogen:</strong> <a href="Questionnaire-OPDSFK.html">Questionnaire-OPDSFK</a> — vollständige Definition inkl. Items und Antwortoptionen.</li>
+  <li><strong>linkId-Abbildung:</strong> <a href="ConceptMap-pcor-cm-opd-sfk-linkids.html">ConceptMap pcor-cm-opd-sfk-linkids</a> — Dictionary-Variablen-IDs <code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code> (zugleich die <code class="language-plaintext highlighter-rouge">linkId</code>s bis Version 0.3.0) auf die <code class="language-plaintext highlighter-rouge">linkId</code>s mit OPD-SF-Itemnummern.</li>
   <li><strong>Antwortskala:</strong> <a href="ValueSet-opd-sfk-antwort-vs.html">ValueSet opd-sfk-antwort-vs</a> · <a href="CodeSystem-opd-sfk-antwort.html">CodeSystem opd-sfk-antwort</a> — fünf Konzepte mit <code class="language-plaintext highlighter-rouge">ordinalValue</code> 0–4 für das Summenscoring.</li>
 </ul>
 
@@ -358,17 +359,95 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="eigenschaften">Eigenschaften</h3>
 
 <ul>
-  <li><strong>Items</strong>: 12 (<code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code>), zusätzlich ein vorangestelltes <code class="language-plaintext highlighter-rouge">display</code>-Item mit dem für alle Items geltenden Instruktionstext</li>
+  <li><strong>Items</strong>: 12, <code class="language-plaintext highlighter-rouge">linkId</code> = Itemnummer der 95-Item-<strong>Langform OPD-SF</strong> (<code class="language-plaintext highlighter-rouge">opdsf3</code> … <code class="language-plaintext highlighter-rouge">opdsf90</code>, siehe Tabelle unten; linkId-Regel ADR-003/ADR-008), <code class="language-plaintext highlighter-rouge">prefix</code> = OPD-SFK-Nummer 1–12 in Formularreihenfolge, <code class="language-plaintext highlighter-rouge">item.code</code> = Dictionary-Variable <code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code> (ADR-011). Zusätzlich ein vorangestelltes <code class="language-plaintext highlighter-rouge">display</code>-Item mit dem für alle Items geltenden Instruktionstext</li>
   <li><strong>Sprache</strong>: Deutsch (Fragebogensprache); keine englischen Designations, da keine belegte offizielle englische Übersetzung der Kurzskala vorliegt</li>
   <li><strong>Antwortmodellierung</strong>: <code class="language-plaintext highlighter-rouge">answerValueSet</code> auf das lokale <code class="language-plaintext highlighter-rouge">opd-sfk-antwort-vs</code> mit <code class="language-plaintext highlighter-rouge">ordinalValue</code>-Gewichten (Muster: <code class="language-plaintext highlighter-rouge">mii-cs-pro-whodas-12</code> im MII-PRO-Modul)</li>
-  <li><strong>Scoring</strong>: Globalwert als <strong>Summenwert über alle 12 Items</strong> (0–48), umgesetzt als readOnly-Item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> mit SDC-<code class="language-plaintext highlighter-rouge">calculatedExpression</code> über <code class="language-plaintext highlighter-rouge">.ordinal().sum()</code></li>
+  <li><strong>Scoring</strong>: Globalwert als <strong>Summenwert über alle 12 Items</strong> (0–48), umgesetzt als readOnly-Item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> mit SDC-<code class="language-plaintext highlighter-rouge">calculatedExpression</code> über <code class="language-plaintext highlighter-rouge">.ordinal().sum()</code>; dazu die drei <strong>explorativen Subskalen</strong> (je 4 Items, 0–16) als readOnly-Items <code class="language-plaintext highlighter-rouge">opd-sfk-selbstwahrnehmung</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-beziehungsmodell</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-kontaktgestaltung</code></li>
 </ul>
+
+<h3 id="items-und-subskalen">Items und Subskalen</h3>
+
+<p>Quelle: Ehrenthal et al. 2015, Tabelle 2 (OPD-SF-Itemnummern) und Abbildung 1 (Faktorstruktur, Subskalenzuordnung).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>OPD-SFK</th>
+      <th><code class="language-plaintext highlighter-rouge">linkId</code> (OPD-SF-Nr.)</th>
+      <th>Subskala</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf3</code></td>
+      <td>Selbstwahrnehmung</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf27</code></td>
+      <td>Selbstwahrnehmung</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf32</code></td>
+      <td>Beziehungsmodell</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf81</code></td>
+      <td>Kontaktgestaltung</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf41</code></td>
+      <td>Selbstwahrnehmung</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf49</code></td>
+      <td>Kontaktgestaltung</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf50</code></td>
+      <td>Beziehungsmodell</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf73</code></td>
+      <td>Selbstwahrnehmung</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf78</code></td>
+      <td>Beziehungsmodell</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf79</code></td>
+      <td>Kontaktgestaltung</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf40</code></td>
+      <td>Kontaktgestaltung</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><code class="language-plaintext highlighter-rouge">opdsf90</code></td>
+      <td>Beziehungsmodell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die Item-Formulierungen im Questionnaire sind wortgleich mit Tabelle 2 der Publikation (abgeglichen am 2026-11-05). Dass dasselbe Item in Kurz- und Langform denselben <code class="language-plaintext highlighter-rouge">linkId</code> trägt, erlaubt später eine Langform <code class="language-plaintext highlighter-rouge">OPDSF</code> ohne Umschlüsselung (Itembank-Prinzip).</p>
 
 <h3 id="scoring-entscheidung">Scoring-Entscheidung</h3>
 
 <p>Ehrenthal et al. empfehlen primär den <strong>Globalwert</strong>; die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung, je 4 Items) sind laut Autor:innen nur explorativ auszuwerten. Der Globalwert wird als <strong>Summe</strong>, nicht als Mittelwert gebildet — belegt durch Tabelle 2 der Publikation (Summenwert 18,32 bzw. 21,82 bei Item-Mittelwerten von ca. 1,0–2,1) sowie das Fazit (S. 271).</p>
 
-<p>Die <strong>Subskalen sind bewusst nicht implementiert</strong>: Eine explizite Zuordnung von Item-Nummern zu Subskalen liegt im Fließtext der Publikation nicht vor, die zugehörige Faktorladungs-Abbildung ist eine Grafik. Falls Subskalen später benötigt werden, ist die Zuordnung zuvor anhand von Abbildung 1 des Original-PDFs zu verifizieren.</p>
+<p>Die <strong>Subskalen sind als explorative Zusatzwerte implementiert</strong> (Summenwert je 0–16, ohne Normwerte). Ihre Itemzuordnung steht nicht im Fließtext der Publikation, sondern nur in Abbildung 1 (Faktorstruktur, S. 268): Selbstwahrnehmung = Items 1, 2, 5, 8; Beziehungsmodell = Items 3, 7, 9, 12; Kontaktgestaltung = Items 4, 6, 10, 11. Die Abbildung wurde am 2026-11-05 aus dem Original-PDF abgelesen; die Zuordnung ist inhaltlich plausibel (Selbstwahrnehmung: Identität/Affekttoleranz, Beziehungsmodell: Vertrauen/Objektwahrnehmung, Kontaktgestaltung: Selbstwert/Kontaktaufnahme) und bleibt bis zu einer Rückmeldung der Autor:innen als abgelesen gekennzeichnet. Primäre Auswertung bleibt der Globalwert.</p>
 
 <h3 id="lizenz">Lizenz</h3>
 
@@ -435,8 +514,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-14 13:27:00 +0000">
-    2026-10-14
+  <span title="2026-11-06 09:31:00 +0000">
+    2026-11-06
   </span>
 
           <br/>

@@ -17,7 +17,7 @@
 * Metadata: Experimental
   * ?: true
 * Metadata: Use Context
-  * ?: [http://terminology.hl7.org/CodeSystem/usage-context-type](http://terminology.hl7.org/7.4.0/CodeSystem-usage-context-type.html)#program = AN — Anorexia nervosa
+  * ?: [http://terminology.hl7.org/CodeSystem/usage-context-type](http://terminology.hl7.org/7.5.0/CodeSystem-usage-context-type.html)#program = AN — Anorexia nervosa
 * Metadata: Jurisdiction
   * ?: Germany
 * Metadata: Steward (Publisher)
@@ -27,7 +27,7 @@
 * Metadata: Description
   * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.
 * Metadata: Type
-  * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.4.0/CodeSystem-library-type.html)#asset-collection
+  * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.5.0/CodeSystem-library-type.html)#asset-collection
 * Metadata:  Parameters
 * Metadata: Parameter
   * ?: None
