@@ -21,7 +21,7 @@
 //
 // SCORE-ITEMS: opd-sfk-globalwert und gsltpaq-score sind die im Questionnaire
 //   definierten berechneten Items; die Werte hier sind konsistent mit den
-//   Einzelantworten (OPD-SFK: Mittelwert 12 Items; GSLTPAQ: 9x3+5x2+2x1=39... 
+//   Einzelantworten (OPD-SFK: Summe 12 Items = 26 plus drei Subskalen; GSLTPAQ: 9x3+5x2+2x1=39... 
 //   siehe jeweilige Instanz).
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -30,7 +30,7 @@ Instance: OPDSFKResponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "OPD-SFK — Beispielantwort"
-Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items."
+Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert 26 als Summe der zwölf Items (0-48), Subskalen explorativ."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK)
@@ -38,45 +38,54 @@ Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS
 * subject = Reference(pcor-mii-exa-patient-pss)
 * authored = "2026-06-25T11:30:00+02:00"
 * item[+]
-  * linkId = "OPDSFK01"
+  * linkId = "opdsf3"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK02"
+  * linkId = "opdsf27"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-zu "Trifft eher zu"
 * item[+]
-  * linkId = "OPDSFK03"
+  * linkId = "opdsf32"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK04"
+  * linkId = "opdsf81"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-nicht-zu "Trifft eher nicht zu"
 * item[+]
-  * linkId = "OPDSFK05"
+  * linkId = "opdsf41"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-zu "Trifft eher zu"
 * item[+]
-  * linkId = "OPDSFK06"
+  * linkId = "opdsf49"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK07"
+  * linkId = "opdsf50"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK08"
+  * linkId = "opdsf73"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-zu "Trifft eher zu"
 * item[+]
-  * linkId = "OPDSFK09"
+  * linkId = "opdsf78"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-nicht-zu "Trifft eher nicht zu"
 * item[+]
-  * linkId = "OPDSFK10"
+  * linkId = "opdsf79"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK11"
+  * linkId = "opdsf40"
   * answer.valueCoding = OpdSfkAntwortCS#teils-teils "Teils/teils"
 * item[+]
-  * linkId = "OPDSFK12"
+  * linkId = "opdsf90"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-zu "Trifft eher zu"
-// Globalwert = Mittelwert der 12 Items = 3.17
+// Globalwert = Summe der 12 Items = 26; Subskalen (Abbildung 1): Selbstwahrnehmung 11, Beziehungsmodell 8, Kontaktgestaltung 7
 * item[+]
   * linkId = "opd-sfk-globalwert"
-  * answer.valueDecimal = 3.17
+  * answer.valueDecimal = 26
+* item[+]
+  * linkId = "opd-sfk-selbstwahrnehmung"
+  * answer.valueDecimal = 11
+* item[+]
+  * linkId = "opd-sfk-beziehungsmodell"
+  * answer.valueDecimal = 8
+* item[+]
+  * linkId = "opd-sfk-kontaktgestaltung"
+  * answer.valueDecimal = 7
 
 Instance: GSLTPAQResponse
 InstanceOf: QuestionnaireResponse

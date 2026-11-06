@@ -19,6 +19,12 @@ Jede Änderung ist einer der folgenden Kategorien zugeordnet:
 
 ### Unveröffentlicht
 
+**`improve`** OPD-SFK: `linkId`s sind jetzt die Itemnummern der OPD-SF-Langform (`opdsf3` … `opdsf90`, Ehrenthal et al. 2015, Tabelle 2) statt der Dictionary-IDs `OPDSFK01`–`OPDSFK12`; `prefix` trägt die OPD-SFK-Nummer 1–12, `item.code` weiterhin die Dictionary-Variable. **Breaking für `QuestionnaireResponse`s gegen `OPDSFK|0.3.0`** — Migration und Dictionary-Abbildung über die neue ConceptMap `pcor-cm-opd-sfk-linkids`.
+
+**`feature`** OPD-SFK: die drei explorativen Subskalen Selbstwahrnehmung (Items 1, 2, 5, 8), Beziehungsmodell (3, 7, 9, 12) und Kontaktgestaltung (4, 6, 10, 11) als berechnete readOnly-Items (Summenwert 0–16), Zuordnung aus Abbildung 1 der Publikation.
+
+**`fix`** Beispielantwort `OPDSFKResponse`: der Globalwert war als Mittelwert (3.17) angegeben, korrekt ist der Summenwert 26; Subskalenwerte ergänzt, PSS-Screening-Bundle neu gebaut.
+
 **`feature`** Neuer Questionnaire `PROMISGH` mit den PROMIS-Global-Health-Items Global01 `61577-3` und Global02 `61578-1` sowie ValueSet `promis-global-skala-5-vs` auf Basis der Answerlist `LL4280-5`. Übergangslösung bis zur Aufnahme der vollständigen 10-Item-Skala `85524-7` ins MII-PRO-Modul. Global07 ist über PROMIS-29 abgedeckt
 
 **`documentation`** PROMIS-Seite um einen Abschnitt zu PROMIS Global Health erweitert mit Item-Tabelle, Antwortskala, Übergangscharakter und Abgrenzung zu Global07
