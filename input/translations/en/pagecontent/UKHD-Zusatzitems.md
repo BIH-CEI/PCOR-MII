@@ -42,7 +42,7 @@ Group membership remains machine-readable regardless: every item carries its dic
 
 **No score, no instrument codes:** there is no instrument that could be scored. LOINC 2.83 and SNOMED CT 2026-05-01 return zero hits for the underlying concepts (searched via the fhir-terminology MCP, 2026-10-01); `Questionnaire.code` carries each questionnaire's local catalogue code from [pcor-questionnaire-catalogue](CodeSystem-pcor-questionnaire-catalogue.html).
 
-**Yes/no** uses the project-wide [DemJaNeinVS](ValueSet-dem-ja-nein.html) (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose `ukhd-an-*` prefix in id and canonical names the site and the entity, not a resource.
+**Yes/no** as SNOMED CT `373066001`/`373067005` inline per [ADR-013](Designentscheidungen.html) (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose `ukhd-an-*` prefix in id and canonical names the site and the entity, not a resource.
 
 ### Answer scales — `itemWeight` only where the scale is ordinal
 
