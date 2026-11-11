@@ -75,7 +75,7 @@ They are worth reading before writing a mapper, because both cost time when disc
 fhir validate <qr.json> \
   -version 4.0.1 \
   -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
-  -ig hl7.fhir.uv.sdc#3.0.0 \
+  -ig hl7.fhir.uv.sdc#4.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
 

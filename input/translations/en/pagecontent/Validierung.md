@@ -57,7 +57,7 @@ curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
   -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
-  -ig hl7.fhir.uv.sdc#3.0.0 \
+  -ig hl7.fhir.uv.sdc#4.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
 
@@ -116,7 +116,7 @@ for f in input/examples/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
     -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
-    -ig hl7.fhir.uv.sdc#3.0.0 \
+    -ig hl7.fhir.uv.sdc#4.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 done

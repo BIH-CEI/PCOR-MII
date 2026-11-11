@@ -10,7 +10,7 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 |---|:--:|:--:|:--:|---|---|---|---|
 | Demographie (DEM) | • | • | • | [Seite](Demographie.html) | [DEM](Questionnaire-DEM.html) | [✓ AN](QuestionnaireResponse-DEMResponse.html) · [✓ PSS](QuestionnaireResponse-DEMPSSResponse.html) | — |
 | Medical History (MHI) | • | • | • | [Seite](MHI.html) | [MHI](Questionnaire-MHI.html) | [✓ AN](QuestionnaireResponse-MHIResponse.html) · [✓ PSS](QuestionnaireResponse-MHIPSSResponse.html) | — |
-| PROMIS Global Health (Subset: Global01/Global02) | • | • | • | [Seite](PROMIS.html) | [PROMISGH](Questionnaire-PROMISGH.html) (Übergang, bis 10-Item-Skala upstream) | — | — |
+| PROMIS Global Health (Subset: Global01/Global02) | • | • | • | [Seite](PROMIS.html) | [PROMISGH](Questionnaire-PROMISGH.html) (2-Item-Zuschnitt, `derivedFrom` der 10-Item-Skala des Moduls) | — | — |
 | PROMIS-16 | • | • | • | [Seite](PROMIS-16.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) | [PROPr-ObsDef](ObservationDefinition-PcorObsDefProprUtility.html) |
 | PROMIS SF 4a (8 Domänen) = PROMIS-29 + Cognitive Function | • | • | • | [PROMIS-33](PROMIS-33.html) | MII PRO: [PROMIS-29](PROMIS-29.html) + [Cognitive Function](PROMIS-Cognitive-Function.html) | [✓ Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) | — |
 | WHODAS 2.0 (12-Item) | • | • | • | [Seite](WHODAS-12.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html) | — |

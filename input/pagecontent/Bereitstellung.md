@@ -5,7 +5,7 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | Kategorie | Resources |
 |-----------|-----------|
 | Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`, `MII PR PRO Questionnaire` (aus dem MII PRO-Modul) |
-| Questionnaire-Definitionen | **20 PCOR-MII-eigene Bögen** (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, die sechs AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, Beispiel-Questionnaire) — vollständige Tabelle: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
+| Questionnaire-Definitionen | **26 PCOR-MII-eigene Bögen** (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D Panik-Block, PROMIS-GH, die fünf AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, BAASIS, ABQ, MTSOSD-R59, MHI-NTx, NTx-Verlaufsbefragung) — vollständige Tabelle: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
 | Terminologie | lokale CodeSystems/ValueSets je Antwortskala, [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html), [`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.html), [`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.html) |
 | Beispiele | drei Beispielpatient:innen, **vier Termin-Bundles** und 46 validierte `QuestionnaireResponse`s (siehe [Beispiele](Beispiele.html)) |
 | Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.html) |
@@ -52,7 +52,7 @@ dependencies:
   hl7.fhir.uv.sdc: 4.0.0
 ```
 
-PCOR-MII selbst ist (Stand 2026-10) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
+PCOR-MII selbst liegt in **keinem Package-Register**; das Package jeder Veröffentlichung gibt es als [`package.tgz` auf dem IG](https://bih-cei.github.io/PCOR-MII/package.tgz) (entpacken nach `~/.fhir/packages/pcor-mii#<version>/package/`). Das MII-PRO-Modul erscheint nach jedem Release zuerst als `package.tgz` seiner [formalen Publikation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz) und erst danach im Register — 2027.0.0-ballot.2 ist dort noch nicht angekommen; die CI dieses IG installiert es deshalb aus der Publikation.
 
 ### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
 

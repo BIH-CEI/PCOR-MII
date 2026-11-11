@@ -5,7 +5,7 @@ This page describes **how implementers can consume the PCOR-MII data definitions
 | Category | Resources |
 |----------|-----------|
 | Profiles (structural constraints) | `MII PR PRO QuestionnaireResponse`, `MII PR PRO Questionnaire` (from the MII PRO module) |
-| Questionnaire definitions | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR example (PCOR-MII plus the MII PRO module) |
+| Questionnaire definitions | **26 PCOR-MII questionnaires** (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D panic block, PROMIS-GH, the five AN instruments, the six UKHD questionnaires, UKHD-EDP, BAASIS, ABQ, MTSOSD-R59, MHI-NTx, NTx follow-up) — full table: [Questionnaire library](Fragebogen-Bibliothek.html); the PRO instruments of the MII PRO module are referenced |
 | ValueSets | frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets |
 | Examples | three example patients, **four visit bundles** and 46 validated `QuestionnaireResponse`s (see [Examples](Beispiele.html)) |
 
