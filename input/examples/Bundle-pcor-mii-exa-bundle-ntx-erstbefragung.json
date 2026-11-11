@@ -1,0 +1,1572 @@
+{
+  "resourceType": "Bundle",
+  "id": "pcor-mii-exa-bundle-ntx-erstbefragung",
+  "type": "collection",
+  "timestamp": "2026-10-06T10:30:00+02:00",
+  "entry": [
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/Patient/pcor-mii-exa-patient-ntx",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pcor-mii-exa-patient-ntx",
+        "language": "de-DE",
+        "gender": "male",
+        "birthDate": "1968-05-21"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/MHINTXResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "MHINTXResponse",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"
+          ]
+        },
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendeart",
+                      "display": "Lebendspende"
+                    }
+                  }
+                ],
+                "linkId": "MHH_DON"
+              },
+              {
+                "answer": [
+                  {
+                    "valueDate": "2024-11-14"
+                  }
+                ],
+                "linkId": "MHH_TX_DATE"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+                      "display": "eine"
+                    }
+                  }
+                ],
+                "linkId": "MHH_PRIOR_TX"
+              }
+            ],
+            "linkId": "transplantation"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHINTX|0.9.0",
+        "_questionnaire": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/display",
+              "valueString": "MHI-NTx — Transplantationsanamnese"
+            }
+          ]
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-ntx"
+        },
+        "authored": "2026-10-06T09:30:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/NTXVERLAUFResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "NTXVERLAUFResponse",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDaten"
+          ]
+        },
+        "item": [
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373066001",
+                      "system": "http://snomed.info/sct",
+                      "display": "Yes"
+                    }
+                  }
+                ],
+                "linkId": "MHH_DIAL1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "3",
+                      "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhh-nierenersatz",
+                      "display": "Hämodialyse in der Dialysepraxis"
+                    }
+                  }
+                ],
+                "linkId": "MHH_DIAL2"
+              }
+            ],
+            "linkId": "dialyse"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_PTX_DIAB"
+              }
+            ],
+            "linkId": "diabetes"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_T01"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_T02"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_T03"
+              }
+            ],
+            "linkId": "tumoren"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373066001",
+                      "system": "http://snomed.info/sct",
+                      "display": "Yes"
+                    }
+                  }
+                ],
+                "linkId": "MHH_UTI01"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_UTI02"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_UTI03"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_UTI04"
+              }
+            ],
+            "linkId": "harnwegsinfekte"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373066001",
+                      "system": "http://snomed.info/sct",
+                      "display": "Yes"
+                    }
+                  }
+                ],
+                "linkId": "MHH_Infekt1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_Infekt2"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_Infekt3"
+              }
+            ],
+            "linkId": "infektionen"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueInteger": 132
+                  }
+                ],
+                "linkId": "MHH_BP-systolisch"
+              },
+              {
+                "answer": [
+                  {
+                    "valueInteger": 84
+                  }
+                ],
+                "linkId": "MHH_BP-diastolisch"
+              }
+            ],
+            "linkId": "MHH_BP"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373066001",
+                      "system": "http://snomed.info/sct",
+                      "display": "Yes"
+                    }
+                  }
+                ],
+                "linkId": "MHH_Medi"
+              }
+            ],
+            "linkId": "medikation"
+          },
+          {
+            "item": [
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_PTH1"
+              },
+              {
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "373067005",
+                      "system": "http://snomed.info/sct",
+                      "display": "No"
+                    }
+                  }
+                ],
+                "linkId": "MHH_PTH2"
+              }
+            ],
+            "linkId": "nebenschilddruese"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/NTXVERLAUF|0.9.0",
+        "_questionnaire": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/display",
+              "valueString": "NTx-Verlaufsbefragung (MHH)"
+            }
+          ]
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-ntx"
+        },
+        "authored": "2026-10-06T09:40:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/BAASISResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "BAASISResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "BAASIS1A"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "BAASIS1A_a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "BAASIS1B"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "BAASIS1B_a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373067005",
+                  "system": "http://snomed.info/sct",
+                  "display": "No"
+                }
+              }
+            ],
+            "linkId": "BAASIS2"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373067005",
+                  "system": "http://snomed.info/sct",
+                  "display": "No"
+                }
+              }
+            ],
+            "linkId": "BAASIS3"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373067005",
+                  "system": "http://snomed.info/sct",
+                  "display": "No"
+                }
+              }
+            ],
+            "linkId": "BAASIS4"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "BAASIS5"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "BAASIS5_a"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/BAASIS|0.9.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-ntx"
+        },
+        "authored": "2026-10-06T09:50:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/ABQResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "ABQResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_01"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_02"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_03"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "ABQ_04"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_05"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_06"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_07"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_08"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "ABQ_09"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_10"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_11"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_12"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_13"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_14"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "ABQ_15"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "ABQ_16"
+          },
+          {
+            "answer": [
+              {
+                "valueDecimal": 26
+              }
+            ],
+            "linkId": "abq-summe"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ|0.9.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-ntx"
+        },
+        "authored": "2026-10-06T10:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/MTSOSDR59Response",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "MTSOSDR59Response",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_01"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_02"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_02a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_03"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_04"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_05"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_05a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_06"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_07"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_08"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_09"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_10"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_11"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_12"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_12a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_13"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_14"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_15"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_16"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_16a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_17"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_18"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_19"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_20"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_21"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_21a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_22"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_23"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_24"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_25"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_26"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_27_male"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_28"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_29"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_30"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_30a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_31"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_32"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_33"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_34"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_34a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_35"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_36"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_37"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_38"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_39"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_40"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_41"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_41a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_42"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_43"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_44"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_45"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_45a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_46"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_47"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_48"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_49"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_50"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_51"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-1",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 1"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_52"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-2",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 2"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_52a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_53"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_54"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_55"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_56"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-3",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 3"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_57"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-4",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+                  "display": "Stufe 4"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_57a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_58"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "stufe-0",
+                  "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+                  "display": "Stufe 0"
+                }
+              }
+            ],
+            "linkId": "MTSOSDR59_59"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/MTSOSDR59|0.9.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-ntx"
+        },
+        "authored": "2026-10-06T10:15:00+02:00"
+      }
+    }
+  ]
+}

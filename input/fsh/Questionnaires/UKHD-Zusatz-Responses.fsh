@@ -104,7 +104,7 @@ Description: "Beispielantwort zum UKHD-LE-Questionnaire (belastende Lebensereign
 // Nur das Screening-Item (TIMING i); Monitoring und Entlassung fehlen.
 * item[+]
   * linkId = "life_event1_screening"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 * item[+]
   * linkId = "lifev_text"
   * answer.valueString = "Wiederholte Abwertungen durch einen Elternteil in Kindheit und Jugend; über Jahre das Gefühl, in der Familie nicht wichtig zu sein."

@@ -7,8 +7,8 @@ PCOR-MII erhebt patientenberichtete Daten in drei klinischen Entitäten:
 | Kürzel | Entität |
 |---|---|
 | **PSS** | Persistent Somatic Syndrome — siehe [PSS](PSS.html) |
-| **AN** | Anorexia Nervosa — siehe [AN](AN.html), Nachschlagetabelle: [Instrumentenliste](AN-Instrumentenliste.html) |
-| **NTx** | Nierentransplantation |
+| **AN** | Anorexia Nervosa — siehe [AN](AN.html) |
+| **NTx** | Nierentransplantation — siehe [NTx](NTx.html); Empfänger (NTXr) und Spender (NTXd) mit eigenen Manifesten |
 
 Fachliche Referenz für Instrumentenauswahl und Item-Zuschnitt ist das **Item Level Dictionary** (`MASTER_3EntitiesOverview.xlsx`, je ein Blatt pro Entität; nicht Teil dieses Repositories). Die Rechte- und Lizenzangaben stammen aus der **DIZ-Implementierungsliste PCOR-MII**.
 
@@ -35,7 +35,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 
 | Instrument | Kat. | PSS | AN | NTx | Lizenz | Umsetzung |
 |---|---|:--:|:--:|:--:|---|---|
-| PROMIS Scale v1.2 – Global Health (2 Items) | GHS | • | • | • | CPCOR-Vereinbarung | [PROMIS](PROMIS.html) (Subset offen) |
+| PROMIS Scale v1.2 – Global Health (2 Items) | GHS | • | • | • | CPCOR-Vereinbarung | [PROMIS](PROMIS.html) — `PROMISGH`, 2-Item-Zuschnitt (`derivedFrom` der 10-Item-Skala des Moduls) |
 | PROMIS-16 | GHS | • | • | • | CPCOR-Vereinbarung | [PROMIS-16](PROMIS-16.html) |
 | PROMIS SF 4a (Physical Function, Cognitive Function, Fatigue, Sleep Disturbance, Anxiety, Depression, Pain Interference, Social Roles) | GHS | • | • | • | CPCOR-Vereinbarung | teils über [PROMIS-29](PROMIS-29.html) / [Cognitive Function](PROMIS-Cognitive-Function.html) |
 | PROMIS NRS – Pain Intensity 1a (3) | GHS | • | • | • | CPCOR-Vereinbarung | offen |
@@ -43,6 +43,7 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | GAD-7 / GAD-2 / PHQ-4 (7) | GHS | • | • | • | frei | [GAD-7](GAD-7.html) — seit MII PRO 2026.7.0 |
 | PHQ-15 (13) | GHS | • | • | • | frei | [PHQ-15](PHQ-15.html) |
 | PHQ-4 / PHQ-8 / PHQ-9 / PHQ-15 (8) | GHS | • (PHQ-8) | • (PHQ-8) | • (PHQ-8) | frei | [PHQ-Übersicht](PHQ.html), [PHQ-9](PHQ-9.html) |
+| EQ-5D-5L (6) | GHS | • | • | • | EuroQol-Registrierung, nicht-kommerziell gebührenfrei | MII PRO, Variante collectable — nur Outcome, seit 2026-11-05 in allen Manifesten |
 | EURONET-SOMA 1 + 2 (je 1) | GHS | • | • | • | frei | [EURONET-SOMA](EURONET-SOMA.html) — MII PRO seit 2026.6.0 |
 | WAI / Work Ability Score (3) | GHS | • | • | • | **nicht veröffentlichbar** | [WAI](WAI.html) — metadata-only |
 | PHQ-SI (Suizidalität, 1) | MHA | • | • | — | frei | `phq-phq2i` aus [PHQ-9](PHQ-9.html) |
@@ -68,28 +69,24 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 
 Dazu kommen **standortspezifische Item-Gruppen**, die kein publiziertes Instrument abbilden und direkt aus dem Dictionary stammen — etwa `UKE-HCU/PSE/TR/DOT` (Versorgungsinanspruchnahme, PSS), die `UKHD-*`-Gruppen (AN) und `MHH-DIAL/UTI/T/BP` (Verlaufsparameter, NTx). Sie stehen in der Tabelle oben nicht, weil die Tabelle Instrumente auflistet und diese Gruppen keine sind.
 
-Für AN sind sieben dieser Gruppen inzwischen modelliert — als **ein** Sammelbogen, nicht als sieben Ressourcen ([ADR-011](Designentscheidungen.html)):
+Für AN und NTx sind diese Gruppen inzwischen modelliert — für AN sechs als je ein eigenes Questionnaire plus `UKHD-CTT` im ACE, für NTx als ein Sammelbogen ([ADR-011](Designentscheidungen.html)):
 
 | Sammelbogen | Kat. | PSS | AN | NTx | Lizenz | Umsetzung |
 |---|---|:--:|:--:|:--:|---|---|
 | UKHD-Zusatzitems (6 Bögen, 14 Items) — `UKHD-PT`, `UKHD-ANB`, `UKHD-CT`, `UKHD-LE`, `UKHD-ND`, `UKHD-D` | DCH, TCH, EFA | — | • | — | **Freigabe offen** — in der DIZ-Liste nicht geführt; Herkunft des Wortlauts ungeklärt | [UKHD-Zusatzitems](UKHD-Zusatzitems.html) |
+| NTx-Verlaufsbefragung (1 Bogen, 18 Items) — `MHH-DIAL`, `MHH-PTx-DIAB`, `MHH-T`, `MHH-UTI`, `MHH-Infection`, `MHH-BP`, `MHH-Medi` + 2 Items ohne Label; die Screening-Items `MHH-DON`, `MHH-Tx-DATE`, `MHH-PRIOR-TX` im Ergänzungsbogen [MHI-NTx](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | DCH, TCH | — | — | • | **Freigabe offen** — in der DIZ-Liste nicht geführt | [NTx-Verlaufsbefragung](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) — Sammelbogen nach MHI-Muster |
 
-**Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.** Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste **gar nicht vor** — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe [UKHD-Zusatzitems](UKHD-Zusatzitems.html) und den offenen Punkt in den [Designentscheidungen](Designentscheidungen.html)).
+**Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.** Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste **gar nicht vor** — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe [UKHD-Zusatzitems](UKHD-Zusatzitems.html) und [Rechtelage und offene Punkte](Rechtelage.html#standortgruppen)).
 
-Nicht modelliert bleiben für AN `UKHD-BI` (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary) und `UKHD-EDP` (Essstörungspathologie, 11 Items — vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Für PSS und NTx sind die Standortgruppen insgesamt noch nicht modelliert.
+Nicht modelliert bleibt für AN `UKHD-BI` (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary); `UKHD-EDP` ist als eigener Bogen metadata-only modelliert. Für NTx sind die acht quartalsweisen MHH-Gruppen als **ein** Verlaufsbogen modelliert (siehe Tabelle), die drei MHH-Screening-Items als Ergänzungsbogen MHI-NTx; für PSS sind die Standortgruppen noch nicht modelliert.
 
 ### Woher kommt welche Ressource?
 
-- **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2026.7.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
+- **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2027.0.0-ballot.2): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
 - **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S und den PHQ-D-Panik-Block, die NTx-Stubs BAASIS, ABQ und MTSOSD-R59 (metadata-only, ADR-012) sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe [ADR-003](Designentscheidungen.html)).
 
 ### Lizenz-Tiers
 
-Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wichtig es ist:
-
-- **frei** — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.
-- **Nutzungsvereinbarung** (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im `copyright`-Element.
-- **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.html), [UKHD-EDP](UKHD-EDP.html) sowie auf NTx-Seite [BAASIS, MTSOSD-R59 und ABQ](NTx-Instrumente.html) (alle umgesetzt).
-- **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft [UKHD-Zusatzitems](UKHD-Zusatzitems.html) sowie die bereits in [MHI](MHI.html) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.
+Die Rechtelage bestimmt, wie ein Instrument modelliert wird (frei · Nutzungsvereinbarung · metadata-only · Freigabe offen). Die Tiers, der Status je Instrument, die Bezugswege lizenzierter Bögen und alle offenen Rechtefragen stehen gesammelt auf [Rechtelage und offene Punkte](Rechtelage.html).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

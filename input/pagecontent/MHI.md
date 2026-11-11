@@ -13,6 +13,8 @@ Einige MHI-Items sind nicht in allen drei Szenarien (PSS, NTx, AN) zu erheben:
 
 - **Gewichtsverlauf** (`weight_outpatient_1/2`, `weight_inpatient`, `weight_discharge`) und **`AN_subtyp`** — nur im Szenario **Anorexia nervosa**.
 
+Für **Nierentransplantation** gibt es bewusst keine Gruppe im MHI, sondern den Ergänzungsbogen [MHI-NTx](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) (Spendeart, Transplantationsdatum, wievielte Spenderniere), den das Empfänger-Manifest zusätzlich zum MHI pinnt. Der MHI hat keinen Entitätsschalter; die AN-Gruppe oben ist insofern eine Altlast, deren Herauslösung offen ist.
+
 ### Standortspezifische Items — Freigabe nicht dokumentiert
 
 34 der MHI-Items stammen nicht aus einem publizierten Instrument, sondern sind **von den Standorten für die Erhebung zusammengestellt**: Körpergewichtsverlauf und AN-Subtyp aus Heidelberg (`UKHD-W`, `UKHD-AN`), die Medikationsfragen aus Heidelberg und Hamburg (`UKHD-MEDI`, `UKE-MEDI`). Das Standort-Präfix ist dabei ein Zusammenstellungs-Etikett des Dictionary, keine Autorenschaftsangabe. Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente und **kennt diese Gruppen nicht** — es gibt für sie also keine dokumentierte Freigabe.

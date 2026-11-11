@@ -9,7 +9,7 @@ name: PCOR_MII
 title: PCOR-MII Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.3.0
+version: 0.9.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: draft
@@ -32,12 +32,12 @@ publisher:
 # de.gematik.isik liefert ISiKFormularDefinition / ISiKFormularDaten. Damit
 # werden die PCOR-MII-eigenen Nicht-PRO-Fragebögen (DEM, MHI, GSLTPAQ, OPD-SFK,
 # WAI) zusätzlich als ISiK-kompatible Formulare ausgewiesen. Version bewusst
-# 5.1.1 — identisch zur transitiven Anforderung des MII-PRO-Moduls, um einen
+# 6.0.0 — identisch zur transitiven Anforderung des MII-PRO-Moduls, um einen
 # Versionskonflikt im Dependency-Baum zu vermeiden.
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
-  hl7.fhir.uv.sdc: 3.0.0
-  de.gematik.isik: 5.1.1
+  de.medizininformatikinitiative.kerndatensatz.pros: 2027.0.0-ballot.2
+  hl7.fhir.uv.sdc: 4.0.0
+  de.gematik.isik: 6.0.0
   # CRMI: Manifestprofil crmi-manifestlibrary fuer die Use-Case-Manifeste.
   # Kein Kommentar hinter der Versionsnummer: der IG Publisher liest die Zeile roh.
   hl7.fhir.uv.crmi: 2.0.0
@@ -67,8 +67,6 @@ pages:
         title: PHQ-D Panik-Block (Angst-/Panikattacken)
     AN.md:
       title: AN (Anorexia Nervosa)
-      AN-Instrumentenliste.md:
-        title: AN — Instrumentenliste mit Links
       ERQ-6.md:
         title: ERQ-S (Emotionsregulation)
       EDE-Q6.md:
@@ -83,6 +81,10 @@ pages:
         title: UKHD-Zusatzitems (sechs Bögen)
       UKHD-EDP.md:
         title: UKHD-EDP (Essstörungspathologie, metadata-only)
+    NTx.md:
+      title: NTx (Nierentransplantation)
+      NTx-Instrumente.md:
+        title: NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung
   Fragebogen-Bibliothek.md:
     title: Fragebogen-Bibliothek
   Demographie.md:
@@ -121,8 +123,6 @@ pages:
     title: EXPECT (Verlaufserwartung)
   IPQ-S.md:
     title: IPQ-S (Ursachenzuschreibung)
-  NTx-Instrumente.md:
-    title: NTx — BAASIS, ABQ, MTSOSD-R59 (metadata-only)
   Implementation.md:
     title: Anwendung
   Validierung.md:
@@ -131,6 +131,8 @@ pages:
     title: Bereitstellung
   Designentscheidungen.md:
     title: Designentscheidungen
+  Rechtelage.md:
+    title: Rechtelage und offene Punkte
   Kommende-Aenderungen.md:
     title: Kommende Änderungen (2027 / SDC 4.0.0)
   Release-Notes.md:
@@ -159,13 +161,13 @@ menu:
     Übersicht: Instrumente.html
     PSS: PSS.html
     AN: AN.html
-    AN — Instrumentenliste: AN-Instrumentenliste.html
-    NTx (metadata-only): NTx-Instrumente.html
+    NTx: NTx.html
   Fragebögen: Fragebogen-Bibliothek.html
   Anwendung: Implementation.html
   Validierung: Validierung.html
   Bereitstellung: Bereitstellung.html
   Designentscheidungen: Designentscheidungen.html
+  Rechtelage & offene Punkte: Rechtelage.html
   Release Notes: Release-Notes.html
   Kommende Änderungen: Kommende-Aenderungen.html
   Artefakte: artifacts.html

@@ -37,7 +37,7 @@ Description: "Eine offene Frage nach den drei wichtigsten subjektiven Ursachen d
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS"
 * name = "IPQS"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#ipq-s "IPQ-S"
 * status = #draft

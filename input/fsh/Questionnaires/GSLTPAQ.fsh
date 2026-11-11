@@ -105,7 +105,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
 //   Uebersetzungsebene. Die validierte deutsch-oesterreichische Fassung
 //   (Lindner et al. 2026) wird nach ADR-007 eine EIGENE Ressource im
 //   MII-PRO-Modul, keine Sprachebene und keine neue Version dieser hier.
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#gsltpaq "GSLTPAQ"
 * status = #draft
@@ -129,7 +129,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
+  * extension[=].valueCoding = $UCUM#"{count}/wk"
 * item[+]
   * linkId = "GSLTPAQ_01_m"
   * code[+] = PcorItemDictionaryCS#GSLTPAQ_01_m
@@ -138,7 +138,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#min "Minuten"
+  * extension[=].valueCoding = $UCUM#min
 
 // ── Mäßige körperliche Aktivität ────────────────────────────────────────────
 * item[+]
@@ -149,7 +149,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
+  * extension[=].valueCoding = $UCUM#"{count}/wk"
 * item[+]
   * linkId = "GSLTPAQ_02_m"
   * code[+] = PcorItemDictionaryCS#GSLTPAQ_02_m
@@ -158,7 +158,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#min "Minuten"
+  * extension[=].valueCoding = $UCUM#min
 
 // ── Leichte körperliche Aktivität ───────────────────────────────────────────
 * item[+]
@@ -169,7 +169,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#"{count}/wk" "-mal pro Woche"
+  * extension[=].valueCoding = $UCUM#"{count}/wk"
 * item[+]
   * linkId = "GSLTPAQ_03_m"
   * code[+] = PcorItemDictionaryCS#GSLTPAQ_03_m
@@ -178,7 +178,7 @@ Description: "Godin-Shephard Leisure-Time Physical Activity Questionnaire (GSLTP
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
   * extension[=].valueInteger = 0
   * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
-  * extension[=].valueCoding = $UCUM#min "Minuten"
+  * extension[=].valueCoding = $UCUM#min
 
 // ── Weekly Leisure-Time Activity Score (Godin Leisure Score Index) ─────────
 // Formel siehe Kopfkommentar; nur die Häufigkeits-Items (_w) gehen ein.

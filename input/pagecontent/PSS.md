@@ -1,37 +1,60 @@
-**PSS** (*Persistent Somatic Syndrome*) ist die psychosomatische Entität in PCOR-MII — neben [Anorexia Nervosa (AN)](AN.html) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.
+**PSS** (*Persistent Somatic Syndrome*) ist die psychosomatische Entität in PCOR-MII — neben [AN](AN.html) (Anorexia Nervosa) und [NTx](NTx.html) (Nierentransplantation). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.
 
-Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.html); diese Seite beschreibt die PSS-Batterie.
+Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.html); diese Seite beschreibt die PSS-Batterie und sagt zu jedem Bogen, wo seine FHIR-Ressource liegt. **Maschinenlesbar** ist dieselbe Zusammenstellung als [Library/use-case-pss](Library-use-case-pss.html), die alle 23 Bögen versioniert pinnt. Rechtelage und Status aller Instrumente stehen gesammelt auf [Rechtelage und offene Punkte](Rechtelage.html).
 
-### Generischer Kern (alle Entitäten)
+### Die PSS-Batterie
 
-Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:
+Die Spalte **Ressource** führt zur Ressource selbst: **PCOR-MII** — der `Questionnaire` ist in diesem IG definiert; **MII PRO** — der `Questionnaire` kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` 2027.0.0-ballot.2 mit, PCOR-MII baut ihn nicht nach; **offen** — für diese Zeile des Erhebungsplans existiert noch kein Artefakt. Die Spalte **Beispielantwort** zeigt die Antwort des PSS-Beispielpatienten zum Screening-Termin 25.06.2026 (siehe unten). Prioritäten und Frequenzen stehen im Blatt *Domain Overview* des Item Level Dictionary und im `display` der Manifest-Einträge.
 
-- [Demographie](Demographie.html) (DEM) und [MHI](MHI.html) — Soziodemographie und medizinische Vorgeschichte
-- [PROMIS](PROMIS.html) — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS
-- [WHODAS 2.0 (12-Item)](WHODAS-12.html) — Funktionsfähigkeit und Beeinträchtigung
-- [PHQ-15](PHQ-15.html), PHQ-8 (siehe [PHQ-Übersicht](PHQ.html)), [GAD-7](GAD-7.html) / GAD-2 / PHQ-4
-- EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen
-- [WAI](WAI.html) — Arbeitsfähigkeit (metadata-only)
+**Generischer Kern — in PSS, AN und NTx identisch**
 
-Der **GAD-7** ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-Instrumente referenziert, nicht nachgebaut — siehe [GAD-7](GAD-7.html).
+| Instrument | Kat. | Items | Ressource | Doku | Beispielantwort |
+|---|---|--:|---|---|---|
+| Demographie (DEM) | DEM | 23¹ | **PCOR-MII** → [`DEM`](Questionnaire-DEM.html) | [Demographie](Demographie.html) | [DEMPSSResponse](QuestionnaireResponse-DEMPSSResponse.html) |
+| Medical History (MHI) | MHI | 48¹ | **PCOR-MII** → [`MHI`](Questionnaire-MHI.html) | [MHI](MHI.html) | [MHIPSSResponse](QuestionnaireResponse-MHIPSSResponse.html) |
+| PROMIS Scale v1.2 — Global Health (Global01, Global02) | GHS | 2 | **PCOR-MII** → [`PROMISGH`](Questionnaire-PROMISGH.html) — 2-Item-Zuschnitt, `derivedFrom` der 10-Item-Skala des Moduls | [PROMIS](PROMIS.html) | — |
+| PROMIS-16 Profile v2.1 — Standortvariante | GHS | 16 | **MII PRO** → [PROMIS-16](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-16.html) | [PROMIS-16](PROMIS-16.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
+| PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans) — Standortvariante | GHS | 29 + 4 | **MII PRO** → PROMIS-29 und Cognitive Function SF 4a | [PROMIS-29](PROMIS-29.html), [Cognitive Function](PROMIS-Cognitive-Function.html) | [Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) |
+| PROMIS NRS — Pain Intensity 1a | GHS | 3 | **offen** als Einzelinstrument; das Item steckt im PROMIS-29 (`promis-global07`) | [PROMIS-29](PROMIS-29.html) | — |
+| WHODAS 2.0, 12-Item | GHS | 14 | **MII PRO** → [WHODAS 2.0](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-whodas-whodas12.html) | [WHODAS 2.0](WHODAS-12.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html) |
+| PHQ-8 — **Standard** in allen Use Cases; vollständiger PHQ-9 nur bei unmittelbarem Arztkontakt vor Ort | GHS | 8 (9) | **MII PRO** → [PHQ-9](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-phq-9.html) (PHQ-8 = Teilmenge) | [PHQ-9](PHQ-9.html), [PHQ-Übersicht](PHQ.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html) (vollständiger PHQ-9, Vor-Ort-Termin) |
+| PHQ-SI — Suizidalität, stationär | MHA | 1 | **MII PRO** — Item `phq-phq2i` des PHQ-9, kein eigener Bogen | [PHQ-9](PHQ-9.html) | im PHQ-9-Beispiel |
+| PHQ-15 | GHS | 13 | **MII PRO** → [PHQ-15](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-phq-15.html) | [PHQ-15](PHQ-15.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-phq-15-response.html) |
+| GAD-7 (auch GAD-2 / PHQ-4 als Teilmengen) | GHS | 7 | **MII PRO** → [GAD-7](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-gad-7.html) | [GAD-7](GAD-7.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html) |
+| EURONET-SOMA 1 + 2 | GHS | 2 | **MII PRO** → [EURONET-SOMA](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-euronet-soma.html) | [EURONET-SOMA](EURONET-SOMA.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html) |
+| EQ-5D-5L — nur Outcome, jährlich | GHS | 6 | **MII PRO** → [EQ-5D-5L](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html), Variante collectable | — | — |
+| WAI / Work Ability Score | GHS | 3 | **PCOR-MII** → [`WAI`](Questionnaire-WAI.html) — **metadata-only**, keine Itemtexte | [WAI](WAI.html) | [WAIResponse](QuestionnaireResponse-WAIResponse.html) |
+| OPD-SFK — Persönlichkeitsfunktion; von einzelnen Standorten erhoben, keine Empfehlung der Use-Case-Leitung | MHA | 12 | **PCOR-MII** → [`OPDSFK`](Questionnaire-OPDSFK.html) | [OPD-SFK](OPD-SFK.html) | [OPDSFKResponse](QuestionnaireResponse-OPDSFKResponse.html) |
 
-### PSS-spezifische Instrumente
+¹ Bei DEM und MHI sind das die Blatt-Items des PCOR-MII-Questionnaire, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.
 
-| Instrument | Kat. | Items | Erfasst | Status |
-|---|---|--:|---|---|
-| **SSD-12** | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | [Seite](SSD-12.html) |
-| **WI-7** | DCH | 7 | Gesundheitsangst (Whiteley-Index) | [Seite](WI-7.html) |
-| **SCOFF** | MHA | 5 | Essstörungs-Screening | [Seite](SCOFF.html) |
-| **ISR-Z** | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala | [Seite](ISR-Z.html) |
-| **PC-PTSD** | MHA | 4 | Posttraumatische Belastungsstörung, Primärversorgungs-Screen | [Seite](PC-PTSD.html) |
-| **PHQ-D Panik-Block** | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | [Seite](PHQ-Panik.html) — in PCOR-MII gepflegt (ADR-012) |
-| **PHQ-SI** | MHA | 1 | Suizidalität — das PHQ-9-Item `phq-phq2i` | über [PHQ-9](PHQ-9.html) abgedeckt |
-| **OPD-SFK** | MHA | 12 | Strukturelle Persönlichkeitsfunktion | [Seite](OPD-SFK.html) |
-| **GSLTPAQ** | TCH | 6 | Körperliche Freizeitaktivität | [Seite](GSLTPAQ.html) |
-| **EXPECT** | DCH | 3 | Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen) | [Seite](EXPECT.html) |
-| **IPQ-S** | DCH | 1 | Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ | [Seite](IPQ-S.html) |
+PROMIS-16 und PROMIS-29 + Cognitive Function sind **Standortvarianten** (entweder/oder); beide stehen im Manifest, damit Empfänger Antworten beider Standorttypen auflösen können.
 
-Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (`UKE-HCU`, `UKE-HCU2`, `UKE-PSE`, `UKE-TR`, `UKE-DOT`, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.
+**PSS-spezifische Instrumente**
+
+| Instrument | Kat. | Items | Erfasst | Ressource | Doku | Beispielantwort |
+|---|---|--:|---|---|---|---|
+| SSD-12 | DCH | 12 | B-Kriterien der somatischen Belastungsstörung | **MII PRO** → [SSD-12](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-ssd-12.html) | [SSD-12](SSD-12.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html) |
+| WI-7 | DCH | 7 | Gesundheitsangst (Whiteley-Index) | **MII PRO** → [Whiteley-7](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-wi-7.html) | [WI-7](WI-7.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html) |
+| SCOFF | MHA | 5 | Essstörungs-Screening | **MII PRO** → [SCOFF](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-scoff.html) | [SCOFF](SCOFF.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html) |
+| ISR-Z | MHA | 3 | ICD-10-Symptom-Rating, Zusatzskala Zwang | **MII PRO** → [ISR-Z](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-isr-z.html) | [ISR-Z](ISR-Z.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html) |
+| PC-PTSD | MHA | 4 | PTBS-Screening, Primärversorgung | **MII PRO** → [PC-PTSD](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-pc-ptsd.html) | [PC-PTSD](PC-PTSD.html) | [Beispiel](QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html) |
+| PHQ-D Panik-Block | MHA | 4 | Angst-/Panikattacken (`phq3a`–`phq3d`, ja/nein) | **PCOR-MII** → [`PHQPANIK`](Questionnaire-PHQPANIK.html) — in PCOR-MII gepflegt ([ADR-012](Designentscheidungen.html)) | [PHQ-D Panik-Block](PHQ-Panik.html) | [PHQPANIKResponse](QuestionnaireResponse-PHQPANIKResponse.html) |
+| GSLTPAQ | TCH | 6 | Körperliche Freizeitaktivität | **PCOR-MII** → [`GSLTPAQ`](Questionnaire-GSLTPAQ.html) | [GSLTPAQ](GSLTPAQ.html) | [GSLTPAQResponse](QuestionnaireResponse-GSLTPAQResponse.html) |
+| EXPECT | DCH | 3 | Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen) | **PCOR-MII** → [`EXPECT`](Questionnaire-EXPECT.html) | [EXPECT](EXPECT.html) | [EXPECTResponse](QuestionnaireResponse-EXPECTResponse.html) |
+| IPQ-S | DCH | 1 | Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ | **PCOR-MII** → [`IPQS`](Questionnaire-IPQS.html) | [IPQ-S](IPQ-S.html) | [IPQSResponse](QuestionnaireResponse-IPQSResponse.html) |
+| `UKE-HCU`, `UKE-HCU2`, `UKE-PSE`, `UKE-TR`, `UKE-DOT` | TCH | — | Versorgungsinanspruchnahme — standortspezifische Itemgruppen des UKE, kein publiziertes Instrument | **offen** — noch nicht modelliert | — | — |
+
+**Scores**
+
+| Score | Ressource | Doku |
+|---|---|---|
+| PHQ-9/-8, PHQ-15, GAD-7 Summenscores, SSD-12, WI-7 | **MII PRO** — `ObservationDefinition`s und Score-Items im Paket | [PHQ-Übersicht](PHQ.html), [SSD-12](SSD-12.html), [WI-7](WI-7.html) |
+| PROPr — PROMIS-Preference Utility | **PCOR-MII** → [`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.html) — vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.html#propr) |
+| PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO** — acht `ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.html) |
+| PROMIS-Domänen-T-Scores (PROMIS-16) | **offen** — upstream Roadmap 2027 | [PROMIS-16](PROMIS-16.html) |
+| OPD-SFK Globalwert | **PCOR-MII** — berechnetes Item `opd-sfk-globalwert` im Bogen | [OPD-SFK](OPD-SFK.html) |
+| EQ-5D-5L Index | **MII PRO** — Index-Score und CQL upstream | — |
 
 ### PHQ-Familie in PSS
 
@@ -48,24 +71,19 @@ Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier 
 
 ### Was PSS von AN und NTx unterscheidet
 
-- **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.
+- **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. PHQ-15 führt das Domain Overview nur für PSS (das Dictionary-Blatt NTx aber auch — siehe [NTx](NTx.html)).
 - **PSS und AN gemeinsam**: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.
-- **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe [AN](AN.html).
-- **Nur in NTx**: [BAASIS, MTSOSD-R59, ABQ](NTx-Instrumente.html) (alle metadata-only) sowie die MHH-Verlaufsparameter.
-
-### Rechtelage
-
-Die PSS-Batterie ist ganz überwiegend **frei publizierbar** — vollständige Questionnaires mit Itemtexten, Antwortoptionen und Scoring sind möglich. Zwei Ausnahmen:
-
-- **WAI** — laut DIZ-Implementierungsliste „wahrscheinlich nicht für die Veröffentlichung geeignet"; deshalb [metadata-only](WAI.html) ohne Originalwortlaut.
-- **OPD-SFK** — frei nach erfolgter Rücksprache mit den Autor:innen; die Rechte an Instrument und Formulierungen verbleiben bei Autor:innen bzw. Verlag (siehe [OPD-SFK](OPD-SFK.html)).
-
-PROMIS und WHODAS 2.0 unterliegen ihren jeweiligen Nutzungsvereinbarungen (CPCOR bzw. WHO).
+- **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Zusatzbögen — siehe [AN](AN.html).
+- **Nur in NTx**: BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung — siehe [NTx](NTx.html).
 
 ### Ein zusammenhängender Beispieldatensatz
 
 Für PSS gibt es seit dem 01.10.2026 einen **synthetischen Beispielpatienten** ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).
 
-Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2026.7.0`. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`. Alle Antworten einzeln: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html).
+Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI, PHQ-D Panik-Block) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2027.0.0-ballot.2`. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`.
+
+### Rechtelage und Status
+
+Die PSS-Batterie ist ganz überwiegend frei publizierbar; die MII-PRO-Instrumente sind dort lizenzrechtlich geregelt. Ausnahmen in PCOR-MII: [WAI](WAI.html) bleibt metadata-only, bis das WAI-Netzwerk Deutschland den deutschen Wortlaut freigibt; [OPD-SFK](OPD-SFK.html) ist frei nach erfolgter Rücksprache mit den Autor:innen; in [DEM](Demographie.html) und [MHI](MHI.html) sind die GI-PS-Items und vier PaRIS-Drittinstrumente offen. PROMIS und WHODAS 2.0 unterliegen ihren Nutzungsvereinbarungen (CPCOR bzw. WHO). Die vollständige Lage je Instrument und die offenen Fragen: [Rechtelage und offene Punkte](Rechtelage.html).
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

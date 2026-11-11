@@ -10,7 +10,7 @@ Der Block wird nur in [PSS](PSS.html) erhoben (Item Level Dictionary, Kategorie 
 
 - **Fragebogen:** [Questionnaire-PHQPANIK](Questionnaire-PHQPANIK.html)
 - **Beispielantwort:** [QuestionnaireResponse-PHQPANIKResponse](QuestionnaireResponse-PHQPANIKResponse.html) (PSS-Beispielpatient, Screening-Termin)
-- **Antwortoptionen:** das projektweite [ValueSet dem-ja-nein](ValueSet-dem-ja-nein.html) (Ja/Nein; SNOMED-Mapping dokumentiert)
+- **Antwortoptionen:** Ja/Nein als SNOMED CT `373066001`/`373067005` inline ([ADR-013](Designentscheidungen.html)), wie im MII-PRO-Modul
 
 ### Canonical
 

@@ -1281,14 +1281,14 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS5 "BAASIS5 — Neuverordnung im letzten Jahr (Zusatzitem) — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS5 "BAASIS5 — Initiierung — Neuverordnung im letzten Jahr — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
   * ^property[=].valueString = "TCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"
-* #BAASIS5_a "BAASIS5_a — Neuverordnung — eingelöst und begonnen — metadata-only, Wortlaut nicht publizierbar"
+* #BAASIS5_a "BAASIS5_a — Initiierung — Neuverordnung eingelöst und begonnen — metadata-only, Wortlaut nicht publizierbar"
   * ^property[+].code = #instrument
   * ^property[=].valueString = "BAASIS"
   * ^property[+].code = #category
@@ -2291,5 +2291,146 @@ Description: "Variablen-IDs des PCOR-MII Item Level Dictionary als Codes, damit 
   * ^property[=].valueString = "MTSOSD-R59"
   * ^property[+].code = #category
   * ^property[=].valueString = "MSE"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+
+// ── NTx: MHH-Standortitems (Screening-Items im MHI, Verlaufsitems in NTXVERLAUF) ──
+// MHH_PTH1 und MHH_PTH2 tragen KEINE instrument-Property: Das Dictionary führt die beiden
+// Items ohne Gruppenlabel (INSTRUMENT-Spalte leer, DOMAIN Hyperparathyreoidism). Die
+// Property bleibt leer, bis MHH das Label nachträgt — ein Platzhalter wäre eine Falschaussage.
+* #MHH_DON "MHH_DON — Spendeart (Lebend-/Verstorbenenspende)"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-DON"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_TX_DATE "MHH_TX_DATE — Datum der letzten Nierentransplantation"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-Tx-DATE"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_PRIOR_TX "MHH_PRIOR_TX — wievielte Spenderniere aktuell"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-PRIOR-TX"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "TCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_DIAL1 "MHH_DIAL1 — wieder an der Dialyse (seit mindestens 4 Wochen)"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-DIAL"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_DIAL2 "MHH_DIAL2 — Form der Nierenersatztherapie zuletzt vor Transplantation"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-DIAL"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_PTX_DIAB "MHH_PTX_DIAB — Diabetes mellitus nach Transplantation festgestellt"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-PTx-DIAB"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_T01 "MHH_T01 — Hauttumor nach Transplantation festgestellt"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-T"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_T02 "MHH_T02 — Hauttumor seit letzter Vorstellung in der Transplantationsambulanz"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-T"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_T03 "MHH_T03 — andere Tumore nach Transplantation festgestellt"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-T"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_UTI01 "MHH_UTI01 — Harnwegsinfektion seit letztem Kontakt in der Transplantationsambulanz"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-UTI"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_UTI02 "MHH_UTI02 — mindestens zwei Harnwegsinfektionen in den letzten 6 Monaten"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-UTI"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_UTI03 "MHH_UTI03 — Antibiotika-Prophylaxe gegen chronische Harnwegsinfekte"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-UTI"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_UTI04 "MHH_UTI04 — Impfung gegen Harnwegsinfekte seit Transplantation"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-UTI"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_Infekt1 "MHH_Infekt1 — Infektion mit Antibiotikagabe in den letzten 3 Monaten"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-Infection"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_Infekt2 "MHH_Infekt2 — mehr als 3-mal Antibiotika pro Jahr wegen Infekt"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-Infection"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_Infekt3 "MHH_Infekt3 — Intensivbehandlung wegen Infektionskomplikation seit Transplantation"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-Infection"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_BP "MHH_BP — letzter Blutdruck (systolisch/diastolisch)"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-BP"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_Medi "MHH_Medi — aktuelle Einnahme von Aspirin (ASS)"
+  * ^property[+].code = #instrument
+  * ^property[=].valueString = "MHH-Medi"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_PTH1 "MHH_PTH1 — Operation an der Nebenschilddrüse"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
+  * ^property[+].code = #entity
+  * ^property[=].valueString = "NTx"
+* #MHH_PTH2 "MHH_PTH2 — Einnahme von Cinacalcet"
+  * ^property[+].code = #category
+  * ^property[=].valueString = "DCH"
   * ^property[+].code = #entity
   * ^property[=].valueString = "NTx"

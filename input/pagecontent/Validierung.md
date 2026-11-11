@@ -4,7 +4,7 @@ Diese Seite beantwortet die Frage: **wie stelle ich sicher, dass meine Implement
 
 Eine `QuestionnaireResponse` (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:
 
-1. **Strukturell** dem [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0) entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
+1. **Strukturell** dem [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/StructureDefinition-mii-pr-pro-questionnaire-response.html) entsprechen (Datentypen, Pflichtfelder, Element-Constraints)
 2. Die **`linkId`s** müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen
 3. Jede **codierte Antwort** muss aus dem `answerValueSet` (bzw. `answerOption`) des jeweiligen Items stammen
 
@@ -28,7 +28,7 @@ flowchart TB
     style CS fill:#e1ffe1
 ```
 
-Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2026.7.0)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
+Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das **MII PRO-Modul Package (2027.0.0-ballot.2)** + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via `-ig`-Parameter bzw. via Container-Preload.
 
 ## Drei Wege zum validierten Bundle
 
@@ -56,7 +56,7 @@ curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/
 # Validieren
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
   -ig hl7.fhir.uv.sdc#3.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
@@ -72,7 +72,7 @@ Wenn du einen eigenen Implementation Guide baust, der PCOR-MII konsumiert: dekla
 Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
 - [ ] **`meta.profile`** auf der QR gesetzt — `mii-pr-pro-questionnaire-response`, **bewusst ohne Versionspin**: Die Profilversion löst sich über die Paketabhängigkeit auf; ein Pin müsste bei jedem Dependency-Update in allen Bestandsdaten nachgezogen werden. Die **`questionnaire`-Referenz dagegen immer mit Version** (nächster Punkt) — dort hängt der Wortlaut dran
-- [ ] **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2026.7.0`
+- [ ] **`questionnaire`-Referenz** mit Version — `…/mii-qst-pro-promis-16|2027.0.0-ballot.2`
 - [ ] **`linkId`s** der Answer-Items matchen *exakt* die im Questionnaire definierten linkIds
 - [ ] **Codierte Antworten** mit System + Code aus dem im Questionnaire definierten `answerValueSet` (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe [PROMIS-16](PROMIS-16.html) Item-Tabellen)
 - [ ] **`status = completed`** (bzw. `in-progress`/`amended` je nach Lebenszyklus)
@@ -107,12 +107,12 @@ Der Beispielbestand ist seit dem 01.10.2026 als **drei Use-Case-Bundles** organi
 | [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | 30.07.2026 | 10 |
 | [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | 25.06.2026 | 20 |
 
-Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html)); die Bundles entstehen daraus mit `scripts/build-example-bundles.py`. Dazu der generische [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.html) für den Beispiel-Questionnaire.
+Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html)); die Bundles entstehen daraus mit `scripts/build-example-bundles.py`.
 
 Die Beispiele sind mit **0 Errors** geprüft, aber nicht warnungsfrei — die verbleibenden Warnungsklassen sind bekannt und akzeptiert:
 
 - `dom-6` (fehlende Narrative) auf allen Beispielantworten — steht oben in der Tabelle als ignorierbar
-- Profilreferenz auf `mii-pr-pro-questionnaire-response` *„nicht geprüft, da unbekannt"*, wenn ohne das MII-PRO-Paket validiert wird — mit `-ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0` verschwindet sie
+- Profilreferenz auf `mii-pr-pro-questionnaire-response` *„nicht geprüft, da unbekannt"*, wenn ohne das MII-PRO-Paket validiert wird — mit `-ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2` verschwindet sie
 - Display-/Terminologie-Hinweise bei `-tx n/a` — der Validator kann ohne Terminologieserver BCP-47 und LOINC-Displays nicht expandieren
 
 **Ein echter Fund beim Prüfen:** Die ERQ-6-Beispielantwort hatte ihre Items zunächst nach Subskala gruppiert (erst die drei Neubewertungs-, dann die drei Unterdrückungs-Items). Der Validator lehnt das ab — *„Struktureller Fehler: Elemente in falscher Reihenfolge"*. Eine `QuestionnaireResponse` muss ihre Items in der **Reihenfolge des Questionnaire** führen; die fachliche Gruppierung gehört in Kommentare, nicht in die Anordnung. SUSHI fängt das nicht, es fällt erst in der Validierung auf.
@@ -124,7 +124,7 @@ sushi . && python3 scripts/build-example-bundles.py
 for f in input/examples/QuestionnaireResponse-*.json input/examples/Bundle-*.json fsh-generated/resources/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
-    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
+    -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
     -ig hl7.fhir.uv.sdc#3.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response

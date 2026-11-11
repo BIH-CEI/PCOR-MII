@@ -25,7 +25,7 @@ Am Rande: Eine **validierte Kurzform existiert** — die 8-Item-SSUK (Mehnert et
 
 - **Fragebogen:** [Questionnaire-SSUK2](Questionnaire-SSUK2.html)
 - **Beispielantwort:** [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) — ausgefülltes Beispiel; hoch bei der unterstützenden, niedrig bei der belastenden Interaktion
-- **CodeSystem:** [ssuk-antwort](CodeSystem-ssuk-antwort.html) — 0 = nie … 4 = immer, `ordinalValue` 0–4
+- **CodeSystem:** [ssuk-antwort](CodeSystem-ssuk-antwort.html) — 0 = nie … 4 = immer, `itemWeight` 0–4
 - **ValueSet:** [ssuk-antwort-vs](ValueSet-ssuk-antwort-vs.html)
 
 ### Der PCOR-MII-Code eines Items ist die Dictionary-Variable

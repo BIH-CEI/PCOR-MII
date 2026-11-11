@@ -1,4 +1,4 @@
-Diese Seite ist der **tabellarische Einstieg zu allen Fragebögen** — nach dem Muster der [PRO-Bibliothek des MII-PRO-Moduls](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek?version=current). Je Instrument: die Dokumentationsseite, die `Questionnaire`-Definition (PCOR-MII-Artefakt oder MII-PRO-Bibliothek), die Beispielantwort und — wo vorhanden — das Score-Artefakt.
+Diese Seite ist der **tabellarische Einstieg zu allen Fragebögen** — nach dem Muster der [PRO-Bibliothek des MII-PRO-Moduls](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/pro-library.html). Je Instrument: die Dokumentationsseite, die `Questionnaire`-Definition (PCOR-MII-Artefakt oder MII-PRO-Bibliothek), die Beispielantwort und — wo vorhanden — das Score-Artefakt.
 
 Die fachliche Auswahl und Rechtelage steht auf [Instrumente](Instrumente.html); die Use-Case-Sichten folgen [unten](#use-cases).
 
@@ -11,24 +11,27 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 | Demographie (DEM) | • | • | • | [Seite](Demographie.html) | [DEM](Questionnaire-DEM.html) | [✓ AN](QuestionnaireResponse-DEMResponse.html) · [✓ PSS](QuestionnaireResponse-DEMPSSResponse.html) | — |
 | Medical History (MHI) | • | • | • | [Seite](MHI.html) | [MHI](Questionnaire-MHI.html) | [✓ AN](QuestionnaireResponse-MHIResponse.html) · [✓ PSS](QuestionnaireResponse-MHIPSSResponse.html) | — |
 | PROMIS Global Health (Subset: Global01/Global02) | • | • | • | [Seite](PROMIS.html) | [PROMISGH](Questionnaire-PROMISGH.html) (Übergang, bis 10-Item-Skala upstream) | — | — |
-| PROMIS-16 | • | • | • | [Seite](PROMIS-16.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) | [PROPr-ObsDef](ObservationDefinition-PcorObsDefProprUtility.html) |
+| PROMIS-16 | • | • | • | [Seite](PROMIS-16.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-16.html) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) | [PROPr-ObsDef](ObservationDefinition-PcorObsDefProprUtility.html) |
 | PROMIS SF 4a (8 Domänen) = PROMIS-29 + Cognitive Function | • | • | • | [PROMIS-33](PROMIS-33.html) | MII PRO: [PROMIS-29](PROMIS-29.html) + [Cognitive Function](PROMIS-Cognitive-Function.html) | [✓ Cognitive Function](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) | — |
-| WHODAS 2.0 (12-Item) | • | • | • | [Seite](WHODAS-12.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html) | — |
-| PHQ-Familie (PHQ-8 / PHQ-9 / PHQ-15, PHQ-SI) | • | • | • | [Übersicht](PHQ.html), [PHQ-9](PHQ-9.html), [PHQ-15](PHQ-15.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html) | — |
-| GAD-7 | • | • | • | [Seite](GAD-7.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/GAD-7?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html) | — |
-| EURONET-SOMA | • | • | • | [Seite](EURONET-SOMA.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EURONET-SOMA?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html) | — |
+| WHODAS 2.0 (12-Item) | • | • | • | [Seite](WHODAS-12.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-whodas-whodas12.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html) | — |
+| PHQ-Familie (PHQ-8 / PHQ-9 / PHQ-15, PHQ-SI) | • | • | • | [Übersicht](PHQ.html), [PHQ-9](PHQ-9.html), [PHQ-15](PHQ-15.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-phq-9.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html) | — |
+| GAD-7 | • | • | • | [Seite](GAD-7.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-gad-7.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html) | — |
+| EQ-5D-5L (Outcome, jährlich) | • | • | • | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html) | [MII PRO, Variante collectable](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html) | — | MII PRO: Index, Profil, VAS |
+| EURONET-SOMA | • | • | • | [Seite](EURONET-SOMA.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-euronet-soma.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html) | — |
 | WAI / Work Ability Score | • | • | • | [Seite](WAI.html) | [WAI](Questionnaire-WAI.html) (metadata-only) | [✓](QuestionnaireResponse-WAIResponse.html) | — |
 | OPD-SFK | • | • | — | [Seite](OPD-SFK.html) | [OPDSFK](Questionnaire-OPDSFK.html) | [✓](QuestionnaireResponse-OPDSFKResponse.html) | — |
-| SSD-12 | • | — | — | [Seite](SSD-12.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/SSD-12?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html) | — |
-| Whiteley-7 | • | — | — | [Seite](WI-7.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WI-7?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html) | — |
-| SCOFF | • | — | — | [Seite](SCOFF.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/SCOFF?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html) | — |
-| ISR-Z | • | — | — | [Seite](ISR-Z.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/ISR-Z?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html) | — |
-| PC-PTSD | • | — | — | [Seite](PC-PTSD.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PC-PTSD?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html) | — |
+| SSD-12 | • | — | — | [Seite](SSD-12.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-ssd-12.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html) | — |
+| Whiteley-7 | • | — | — | [Seite](WI-7.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-wi-7.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html) | — |
+| SCOFF | • | — | — | [Seite](SCOFF.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-scoff.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html) | — |
+| ISR-Z | • | — | — | [Seite](ISR-Z.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-isr-z.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html) | — |
+| PC-PTSD | • | — | — | [Seite](PC-PTSD.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-pc-ptsd.html) | [✓](QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html) | — |
 | EXPECT | • | — | — | [Seite](EXPECT.html) | [EXPECT](Questionnaire-EXPECT.html) | [✓](QuestionnaireResponse-EXPECTResponse.html) | — |
 | PHQ-D Panik-Block | • | — | — | [Seite](PHQ-Panik.html) | [PHQPANIK](Questionnaire-PHQPANIK.html) | [✓](QuestionnaireResponse-PHQPANIKResponse.html) | — |
-| BAASIS | — | — | • | [Seite](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) (metadata-only) | — | — |
-| ABQ | — | — | • | [Seite](NTx-Instrumente.html) | [ABQ](Questionnaire-ABQ.html) (metadata-only) | — | — |
-| MTSOSD-R59 | — | — | • | [Seite](NTx-Instrumente.html) | [MTSOSDR59](Questionnaire-MTSOSDR59.html) (metadata-only) | — | — |
+| BAASIS | — | — | • | [Seite](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) (metadata-only) | [Beispiel](QuestionnaireResponse-BAASISResponse.html) | — |
+| ABQ | — | — | • | [Seite](NTx-Instrumente.html) | [ABQ](Questionnaire-ABQ.html) (metadata-only) | [Beispiel](QuestionnaireResponse-ABQResponse.html) | — |
+| MTSOSD-R59 | — | — | • | [Seite](NTx-Instrumente.html) | [MTSOSDR59](Questionnaire-MTSOSDR59.html) (metadata-only) | [Beispiel](QuestionnaireResponse-MTSOSDR59Response.html) | — |
+| MHI-NTx — Transplantationsanamnese | — | — | • | [Seite](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | [MHINTX](Questionnaire-MHINTX.html) | [Beispiel](QuestionnaireResponse-MHINTXResponse.html) | — |
+| NTx-Verlaufsbefragung (MHH) | — | — | • | [Seite](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.html) | [Beispiel](QuestionnaireResponse-NTXVERLAUFResponse.html) | — |
 | IPQ-S | • | — | — | [Seite](IPQ-S.html) | [IPQS](Questionnaire-IPQS.html) | [✓](QuestionnaireResponse-IPQSResponse.html) | — |
 | GSLTPAQ | • | — | — | [Seite](GSLTPAQ.html) | [GSLTPAQ](Questionnaire-GSLTPAQ.html) | [✓](QuestionnaireResponse-GSLTPAQResponse.html) | — |
 | ERQ-6 | — | • | — | [Seite](ERQ-6.html) | [ERQ6](Questionnaire-ERQ6.html) | [✓](QuestionnaireResponse-ERQ6Response.html) · [Monitoring](QuestionnaireResponse-ERQ6MonitoringResponse.html) | zurückgezogen — s. [ERQ-6](ERQ-6.html) |
@@ -48,13 +51,14 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 
 ### Beispielpatienten und Bundles
 
-Zwei synthetische Beispielpatienten tragen zusammenhängende **Use-Case-Datensätze**; je Erhebungstermin bündelt ein `Bundle` (type `collection`) den Patient mit allen Antworten des Termins:
+Drei synthetische Beispielpatienten tragen zusammenhängende **Use-Case-Datensätze**; je Erhebungstermin bündelt ein `Bundle` (type `collection`) den Patient mit allen Antworten des Termins:
 
 | Bundle | Patient | Termin | Inhalt |
 |---|---|---|---|
 | [AN — Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) | [Patientin AN](Patient-pcor-mii-exa-patient-an.html) | 18.06.2026 | DEM, MHI und die zehn AN-Antworten des Screening-Termins |
 | [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | [Patientin AN](Patient-pcor-mii-exa-patient-an.html) | 30.07.2026 | neun Verlaufsantworten — darunter die **erste UKHD-ND-Antwort** und die metadata-only-Antwort zu UKHD-EDP |
 | [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | [Patient PSS](Patient-pcor-mii-exa-patient-pss.html) | 25.06.2026 | die vollständige PSS-Batterie: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI plus zwölf Antworten auf MII-PRO-Questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) |
+| [NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) | [Patient NTx](Patient-pcor-mii-exa-patient-ntx.html) | 06.10.2026 | Screening und erstes Quartals-Monitoring an einem Termin: MHI-NTx, NTx-Verlaufsbefragung sowie die drei **metadata-only-Antworten** zu BAASIS, ABQ und MTSOSD-R59 (nur `linkId`s und Codes, kein Wortlaut) |
 
 Die Bundles werden mit `scripts/build-example-bundles.py` aus den Einzelantworten erzeugt und eingecheckt; die Termin-Zuordnung ist dort explizit gepflegt. Die `TIMING`-Logik wird am Terminvergleich sichtbar: Was zu einem Termin nicht erhoben wird, **fehlt** in dessen Bundle, statt leer dazustehen.
 
@@ -62,19 +66,19 @@ Die Bundles werden mit `scripts/build-example-bundles.py` aus den Einzelantworte
 
 ### Use Case PSS — Persistierende somatische Symptome
 
-Fachliche Beschreibung: [PSS](PSS.html). **Maschinenlesbar:** [Library/use-case-pss](Library-use-case-pss.html) pinnt alle 21 Bögen versioniert (`asset-collection`; Rückwärtssuche per `Library?composed-of=<canonical>`). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).
+Fachliche Beschreibung: [PSS](PSS.html). **Maschinenlesbar:** [Library/use-case-pss](Library-use-case-pss.html) pinnt alle 23 Bögen versioniert (`asset-collection`; Rückwärtssuche per `Library?composed-of=<canonical>`). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
 | DEM, MHI | [Demographie](Demographie.html), [MHI](MHI.html) | [DEM](Questionnaire-DEM.html), [MHI](Questionnaire-MHI.html) | [✓](QuestionnaireResponse-DEMResponse.html) / [✓](QuestionnaireResponse-MHIResponse.html) |
-| PROMIS-16, PROMIS-29 + Cognitive Function (SF 4a), Global Health | [PROMIS](PROMIS.html) | [MII PRO](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
+| PROMIS-16, PROMIS-29 + Cognitive Function (SF 4a), Global Health | [PROMIS](PROMIS.html) | [MII PRO](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-16.html) | [✓](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) |
 | WHODAS 2.0, PHQ-8/-15, GAD-7, EURONET-SOMA | [WHODAS](WHODAS-12.html), [PHQ](PHQ.html), [GAD-7](GAD-7.html), [EURONET-SOMA](EURONET-SOMA.html) | MII PRO (s. Gesamttabelle) | — |
 | SSD-12, Whiteley-7, SCOFF, ISR-Z, PC-PTSD | [SSD-12](SSD-12.html), [WI-7](WI-7.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [PC-PTSD](PC-PTSD.html) | MII PRO (s. Gesamttabelle) | — |
 | OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI, PHQ-D Panik-Block | [OPD-SFK](OPD-SFK.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html), [WAI](WAI.html), [PHQ-D Panik-Block](PHQ-Panik.html) | [OPDSFK](Questionnaire-OPDSFK.html), [EXPECT](Questionnaire-EXPECT.html), [IPQS](Questionnaire-IPQS.html), [GSLTPAQ](Questionnaire-GSLTPAQ.html), [WAI](Questionnaire-WAI.html), [PHQPANIK](Questionnaire-PHQPANIK.html) | — |
 
 ### Use Case AN — Anorexia nervosa
 
-Fachliche Beschreibung: [AN](AN.html); vollständige Nachschlagetabelle mit Rechtestatus: [AN — Instrumentenliste](AN-Instrumentenliste.html). **Maschinenlesbar:** [Library/use-case-an](Library-use-case-an.html) pinnt alle 24 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
+Fachliche Beschreibung und Instrumententabelle: [AN](AN.html). **Maschinenlesbar:** [Library/use-case-an](Library-use-case-an.html) pinnt alle 25 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden **einen** zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
@@ -86,10 +90,19 @@ Fachliche Beschreibung: [AN](AN.html); vollständige Nachschlagetabelle mit Rech
 
 ### Use Case NTx — Nierentransplantation
 
-Zurückgestellt — kein Manifest (die Codes `ntxr`/`ntxd` führt [pcor-use-case](CodeSystem-pcor-use-case.html) bereits; das Domain Overview trennt Empfänger und Spender). Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only **vorgesehen** (s. [Instrumente](Instrumente.html)). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-8, …) gelten auch hier.
+Fachliche Beschreibung: [NTx](NTx.html). Das Domain Overview trennt **Empfänger (NTXr)** und **Spender (NTXd)** mit eigenen Prioritätsprofilen; seit 2026-11-05 gibt es für beide ein Manifest.
+
+**Maschinenlesbar:** [Library/use-case-ntxr](Library-use-case-ntxr.html) pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs [BAASIS, ABQ und MTSOSD-R59](NTx-Instrumente.html), die Transplantationsanamnese [MHI-NTx](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) und die [NTx-Verlaufsbefragung](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh). [Library/use-case-ntxd](Library-use-case-ntxd.html) enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.
+
+| Instrument | Doku | `Questionnaire` | Beispielantwort |
+|---|---|---|---|
+| BAASIS, ABQ, MTSOSD-R59 (metadata-only) | [NTx-Instrumente](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) · [ABQ](Questionnaire-ABQ.html) · [MTSOSDR59](Questionnaire-MTSOSDR59.html) | [BAASIS](QuestionnaireResponse-BAASISResponse.html) · [ABQ](QuestionnaireResponse-ABQResponse.html) · [MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.html) |
+| MHI-NTx — Transplantationsanamnese | [NTx-Instrumente](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | [MHINTX](Questionnaire-MHINTX.html) | [Beispiel](QuestionnaireResponse-MHINTXResponse.html) |
+| NTx-Verlaufsbefragung (MHH) | [NTx-Instrumente](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.html) | [Beispiel](QuestionnaireResponse-NTXVERLAUFResponse.html) |
+| DEM, MHI, WAI, PROMIS, WHODAS, PHQ-8, GAD-7, EURONET-SOMA, EQ-5D-5L | s. Gesamttabelle | s. Gesamttabelle | — |
 
 ### Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases
 
-Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: [Bereitstellung](Bereitstellung.html#pilot)). **Maschinenlesbar:** [Library/pilot-50fp](Library-pilot-50fp.html) pinnt die **Schnittmenge** der Use Cases versioniert — genau die 11 Bögen, die in den Spalten PSS, AN **und** NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI, PROMIS-GH sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. **Standortvarianten:** PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension `crmi-intendedUsageContext` markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit `selectionBehavior = exactly-one`; die ist nicht Teil dieser Version.
+Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: [Bereitstellung](Bereitstellung.html#pilot)). **Maschinenlesbar:** [Library/pilot-50fp](Library-pilot-50fp.html) pinnt die **Schnittmenge** der Use Cases versioniert — genau die 12 Bögen, die in den Spalten PSS, AN **und** NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI, PROMIS-GH sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7, EURONET-SOMA und EQ-5D-5L. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. **Standortvarianten:** PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension `crmi-intendedUsageContext` markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit `selectionBehavior = exactly-one`; die ist nicht Teil dieser Version.
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); maschinenlesbare Gesamtliste unter [Artefakte](artifacts.html).

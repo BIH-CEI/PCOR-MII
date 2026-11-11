@@ -192,7 +192,7 @@ def render_questionnaire(q, version):
             opt_en, opt_de = label_pair(disp_text, disp_underscore)
             ord_val = ""
             for ext in opt.get("extension", []):
-                if ext.get("url", "").endswith("/ordinalValue"):
+                if ext.get("url", "").endswith(("/itemWeight", "/ordinalValue")):
                     ord_val = str(ext.get("valueDecimal", ""))
             label = opt_de or opt_en or ""
             en_suffix = f" / {opt_en}" if (opt_de and opt_en) else ""

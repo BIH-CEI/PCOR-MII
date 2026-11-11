@@ -39,7 +39,7 @@
 //   3a = ja. Das Dictionary nennt keine Bedingung; die Regel ist die des
 //   Originalformulars.
 //
-// ANTWORTEN: ja/nein über das projektweite DemJaNeinVS (Dictionary 1 = ja /
+// ANTWORTEN: ja/nein als SNOMED CT inline, RuleSet JaNeinSnomed, ADR-013 (Dictionary 1 = ja /
 //   0 = nein dokumentarisch, nicht strukturell) — wie ACE.
 //
 // SCORING: bewusst KEIN Score-Item. Der PHQ kennt für den Block keinen
@@ -117,7 +117,7 @@ Description: "Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des P
   * text.extension[=].extension[=].valueString = "Hatten Sie in den letzten 4 Wochen eine Angstattacke (plötzliches Gefühl der Furcht oder Panik?)"
   * type = #choice
   * required = true
-  * answerValueSet = Canonical(DemJaNeinVS)
+  * insert JaNeinSnomed
 * item[+]
   * linkId = "phq-phq3b"
   * code[+] = PcorItemDictionaryCS#phq3b
@@ -131,8 +131,8 @@ Description: "Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des P
   * type = #choice
   * enableWhen[+].question = "phq-phq3a"
   * enableWhen[=].operator = #=
-  * enableWhen[=].answerCoding = DemAntwortCS#ja
-  * answerValueSet = Canonical(DemJaNeinVS)
+  * enableWhen[=].answerCoding = $SCT#373066001
+  * insert JaNeinSnomed
 * item[+]
   * linkId = "phq-phq3c"
   * code[+] = PcorItemDictionaryCS#phq3c
@@ -146,8 +146,8 @@ Description: "Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des P
   * type = #choice
   * enableWhen[+].question = "phq-phq3a"
   * enableWhen[=].operator = #=
-  * enableWhen[=].answerCoding = DemAntwortCS#ja
-  * answerValueSet = Canonical(DemJaNeinVS)
+  * enableWhen[=].answerCoding = $SCT#373066001
+  * insert JaNeinSnomed
 * item[+]
   * linkId = "phq-phq3d"
   * code[+] = PcorItemDictionaryCS#phq3d
@@ -161,8 +161,8 @@ Description: "Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des P
   * type = #choice
   * enableWhen[+].question = "phq-phq3a"
   * enableWhen[=].operator = #=
-  * enableWhen[=].answerCoding = DemAntwortCS#ja
-  * answerValueSet = Canonical(DemJaNeinVS)
+  * enableWhen[=].answerCoding = $SCT#373066001
+  * insert JaNeinSnomed
 
 // ── Beispielantwort für den PSS-Beispielpatienten (Screening-Termin) ─────────
 // 3a ja, 3b ja, 3c nein, 3d ja: wiederkehrende, erwartbare Angstattacken mit
@@ -180,13 +180,13 @@ Description: "Beispielantwort zu den vier Panik-Screeningitems für den PSS-Scre
 * authored = "2026-06-25T12:05:00+02:00"
 * item[+]
   * linkId = "phq-phq3a"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 * item[+]
   * linkId = "phq-phq3b"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 * item[+]
   * linkId = "phq-phq3c"
-  * answer.valueCoding = DemAntwortCS#nein "Nein"
+  * answer.valueCoding = $SCT#373067005 "No"
 * item[+]
   * linkId = "phq-phq3d"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"

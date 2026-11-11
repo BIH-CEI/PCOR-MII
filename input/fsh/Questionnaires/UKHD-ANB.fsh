@@ -20,7 +20,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── UKHD-ANB: AN_biography (Einheitenauswahl) ────────────────────────────────
-// KEIN ordinalValue — die drei Werte sind EINHEITEN und eine Nicht-Angabe,
+// KEIN itemWeight — die drei Werte sind EINHEITEN und eine Nicht-Angabe,
 //   keine Stufen. Der Messwert steckt im Hilfsitem AN_biography-wert.
 CodeSystem: UkhdAnDauerAngabeCS
 Id: ukhd-an-dauer-angabe
@@ -46,7 +46,7 @@ Description: "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_bio
 * include codes from system UkhdAnDauerAngabeCS
 * ^expansion.timestamp = "2026-10-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "seit … Monaten"
@@ -58,7 +58,7 @@ Description: "Einheit bzw. Angabe-Status für die Dauer der Essstörung (`AN_bio
 * ^expansion.contains[=].display = "weiß ich nicht"
 
 // ── UKHD-ANB: lowBMI (Angabe-Status) ─────────────────────────────────────────
-// KEIN ordinalValue — „Wert folgt" gegen „weiss nicht" ist keine Stufung.
+// KEIN itemWeight — „Wert folgt" gegen „weiss nicht" ist keine Stufung.
 CodeSystem: UkhdAnBmiAngabeCS
 Id: ukhd-an-bmi-angabe
 Title: "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)"
@@ -82,7 +82,7 @@ Description: "Angabe-Status für den niedrigsten BMI (`lowBMI`)."
 * include codes from system UkhdAnBmiAngabeCS
 * ^expansion.timestamp = "2026-10-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "BMI-Wert"
@@ -99,7 +99,7 @@ Description: "Zwei zusammengesetzte Items zur Essstörungsanamnese aus der Dicti
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB"
 * name = "UKHDANB"
 * code[+] = PcorQuestionnaireCatalogueCS#ukhd-anb "UKHD-ANB"
-* language = #de
+* language = #de-DE
 * insert Version
 * status = #draft
 * experimental = true
@@ -108,7 +108,7 @@ Description: "Zwei zusammengesetzte Items zur Essstörungsanamnese aus der Dicti
 * publisher = "BIH-CEI"
 * copyright = "Die Items dieses Bogens sind **vom Standort Heidelberg für die PCOR-MII-Erhebung zusammengestellt** und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN). **Das `UKHD`-Präfix der Dictionary-Gruppe ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe: Woher der Wortlaut stammt — eigene Formulierung des Standorts, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument —, ist nicht dokumentiert. Eine Freigabe für die Veröffentlichung liegt ebenfalls nicht dokumentiert vor; beides ist mit dem Standort zu klären.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-ANB`, DOMAIN *AN Biography*, Kategorie DCH. Beide Items sind im Dictionary **zusammengesetzt** (Auswahl + Zahlenwert in einem Feld) und hier nach dem MHI-Muster `Q_WB151`/`Q_WB151a` in je zwei Items aufgelöst. Die Auswahl trägt die Dictionary-Variable, das Wert-Item ist PCOR-MII-eigen und trägt **keinen** `item.code`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-ANB`, DOMAIN *AN Biography*, Kategorie DCH. Beide Items sind im Dictionary **zusammengesetzt** (Auswahl + Zahlenwert in einem Feld) und hier nach dem MHI-Muster `Q_WB151`/`Q_WB151a` in je zwei Items aufgelöst. Die Auswahl trägt die Dictionary-Variable, das Wert-Item ist PCOR-MII-eigen und trägt **keinen** `item.code`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
 
 * item[+]
   * linkId = "AN_biography"

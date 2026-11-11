@@ -46,7 +46,7 @@
 // KEIN SCORE: Das EDI-2 wertet ueber Subskalen aus, die aus mehreren Items
 //   bestehen. Ein Item je Skala bildet die Skala nicht ab — dieselbe Logik wie
 //   bei EDE-Q6, ANSOCQ-2 und SSUK-2 (ADR-003 Punkt 3). Die Antwortcodes tragen
-//   ordinalValue, damit eine spaetere Auswertung moeglich bleibt.
+//   itemWeight, damit eine spaetere Auswertung moeglich bleibt.
 //
 // KEIN Questionnaire.code: Solange die Identifikation nicht bestaetigt ist,
 //   waere jede Code-Vergabe eine Behauptung ueber die Instrumentenidentitaet.
@@ -60,34 +60,34 @@
 CodeSystem: UkhdEdpStufe6CS
 Id: ukhd-edp-stufe-6
 Title: "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)"
-Description: "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt."
+Description: "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `itemWeight` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt."
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6"
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
 * ^property[=].description = "Stufe der Zustimmungsskala (1-6)."
 * ^property[=].type = #decimal
 * #1 "Stufe 1 (geringste Zustimmung)"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #2 "Stufe 2"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #3 "Stufe 3"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #4 "Stufe 4"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 * #5 "Stufe 5"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 5
 * #6 "Stufe 6 (höchste Zustimmung)"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 6
 
 ValueSet: UkhdEdpStufe6VS
@@ -109,7 +109,7 @@ Description: "Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD.
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP"
 * name = "UKHDEDP"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#ukhd-edp "UKHD-EDP"
 * status = #draft
@@ -121,7 +121,7 @@ Description: "Elf Items zur Essstörungspathologie aus der AN-Batterie des UKHD.
 
 // Designentscheidungen maschinenlesbar (ADR-003 Punkt 5)
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Itemzahl, Antwortformat und Wertebereiche sind abgebildet; Item-Texte sind neutrale Beschreibungen des erfragten Konstrukts, Antwortstufen neutral benannt. (2) **Zwei unabhängige Gründe dafür** — der Block ist vermutlich ein EDI-2-Zuschnitt (Hogrefe-Testverfahren), und für die Standort-Itemgruppen liegt ohnehin keine dokumentierte Freigabe vor. Metadata-only ist unter beiden Lesarten richtig; die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen. (3) **Die Identifikation ist nicht bestätigt** — sie stützt sich auf Inhalt und auf das sechsstufige Antwortformat (das EDI-2 nutzt sechs Stufen), nicht auf einen Wortlautabgleich. Der Abgleich gegen den deutschen EDI-2-Bogen ist der erste zu prüfende Schritt. (4) **Kein Score:** Ein Item je Subskala bildet die Subskala nicht ab (ADR-003 Punkt 3); `ordinalValue` 1–6 ist gesetzt, damit eine spätere Auswertung möglich bleibt. (5) **Kein `Questionnaire.code`** und **keine Instrumenten-`linkId`s**: Beides wäre eine Behauptung über die Instrumentenidentität, solange sie nicht bestätigt ist. Bestätigt sie sich, sind die `linkId`s nach ADR-008 Regel 1 auf die EDI-2-Itemnummern umzustellen. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Itemzahl, Antwortformat und Wertebereiche sind abgebildet; Item-Texte sind neutrale Beschreibungen des erfragten Konstrukts, Antwortstufen neutral benannt. (2) **Zwei unabhängige Gründe dafür** — der Block ist vermutlich ein EDI-2-Zuschnitt (Hogrefe-Testverfahren), und für die Standort-Itemgruppen liegt ohnehin keine dokumentierte Freigabe vor. Metadata-only ist unter beiden Lesarten richtig; die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen. (3) **Die Identifikation ist nicht bestätigt** — sie stützt sich auf Inhalt und auf das sechsstufige Antwortformat (das EDI-2 nutzt sechs Stufen), nicht auf einen Wortlautabgleich. Der Abgleich gegen den deutschen EDI-2-Bogen ist der erste zu prüfende Schritt. (4) **Kein Score:** Ein Item je Subskala bildet die Subskala nicht ab (ADR-003 Punkt 3); `itemWeight` 1–6 ist gesetzt, damit eine spätere Auswertung möglich bleibt. (5) **Kein `Questionnaire.code`** und **keine Instrumenten-`linkId`s**: Beides wäre eine Behauptung über die Instrumentenidentität, solange sie nicht bestätigt ist. Bestätigt sie sich, sind die `linkId`s nach ADR-008 Regel 1 auf die EDI-2-Itemnummern umzustellen. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
 
 * item[+]
   * linkId = "ukhd-edp-intro"

@@ -8,11 +8,11 @@ PCOR-MII collects patient-reported data in three clinical entities:
 |---|---|
 | **PSS** | Persistent Somatic Syndrome — see [PSS](PSS.html) |
 | **AN** | Anorexia Nervosa — see [AN](AN.html) |
-| **NTx** | Kidney transplantation |
+| **NTx** | Kidney transplantation — see [NTx](NTx.html) (German) |
 
 The authoritative reference for instrument selection and item subsetting is the **Item Level Dictionary** (`MASTER_3EntitiesOverview.xlsx`, one sheet per entity; not part of this repository). Rights and licence information comes from the **DIZ implementation list for PCOR-MII**.
 
-Note that the data collection plan itself distinguishes **four** use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles. The split is still to be reflected on this page.
+Note that the data collection plan itself distinguishes **four** use cases rather than three: kidney transplantation splits into recipient (NTXr) and donor (NTXd) with separate priority profiles — see [NTx](NTx.html).
 
 ### Categories
 
@@ -37,7 +37,7 @@ A • marks that the instrument is collected in that entity; the number is the i
 
 | Instrument | Cat. | PSS | AN | NTx | Licence | Implementation |
 |---|---|:--:|:--:|:--:|---|---|
-| PROMIS Scale v1.2 – Global Health (2 items) | GHS | • | • | • | CPCOR agreement | [PROMIS](PROMIS.html) (subset open) |
+| PROMIS Scale v1.2 – Global Health (2 items) | GHS | • | • | • | CPCOR agreement | [PROMIS](PROMIS.html) — `PROMISGH`, 2-item subset (`derivedFrom` the module's 10-item scale) |
 | PROMIS-16 | GHS | • | • | • | CPCOR agreement | [PROMIS-16](PROMIS-16.html) |
 | PROMIS SF 4a (Physical Function, Cognitive Function, Fatigue, Sleep Disturbance, Anxiety, Depression, Pain Interference, Social Roles) | GHS | • | • | • | CPCOR agreement | partly via [PROMIS-29](PROMIS-29.html) / [Cognitive Function](PROMIS-Cognitive-Function.html) |
 | PROMIS NRS – Pain Intensity 1a (3) | GHS | • | • | • | CPCOR agreement | open |
@@ -73,16 +73,11 @@ For AN, seven of these groups are now modelled — six as **free-standing Questi
 
 ### Where does each resource come from?
 
-- **MII PRO module** (`de.medizininformatikinitiative.kerndatensatz.pros`, currently 2026.7.0): every instrument reused module-wide — the PHQ family, WHODAS, PROMIS, and since 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 and WI-7, plus the GAD-7 since 2026.7.0. PCOR-MII references them rather than rebuilding them ([ADR-002](Designentscheidungen.html)).
+- **MII PRO module** (`de.medizininformatikinitiative.kerndatensatz.pros`, currently 2027.0.0-ballot.2): every instrument reused module-wide — the PHQ family, WHODAS, PROMIS, and since 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 and WI-7, plus the GAD-7 since 2026.7.0. PCOR-MII references them rather than rebuilding them ([ADR-002](Designentscheidungen.html)).
 - **PCOR-MII itself**: DEM and MHI (project-specific compilations), OPD-SFK, WAI, GSLTPAQ, EXPECT and IPQ-S, and — provisionally, pending possible adoption into the MII PRO module — the AN instruments ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 and ACE (see [ADR-003](Designentscheidungen.html)).
 
 ### Licence tiers
 
-The rights situation determines how an instrument is modelled — not how important it is:
-
-- **free** — complete questionnaire with item texts, answer options and scoring.
-- **Usage agreement** (PROMIS via CPCOR, WHODAS via WHO) — complete, but under the respective agreement; conditions are stated in the `copyright` element.
-- **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.html), [UKHD-EDP](UKHD-EDP.html) and, on the NTx side, to [BAASIS, MTSOSD-R59 and ABQ](NTx-Instrumente.html) (all implemented).
-- **clearance open** — the wording is published, but **no permission is on record**. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing at all about the site-specific item groups. Applies to [UKHD-AN](UKHD-AN.html) and to the 34 site items already published in [MHI](MHI.html). Should a restriction emerge, metadata-only is the intended remedy.
+The rights situation determines how an instrument is modelled (free · usage agreement · metadata-only · clearance open). The tiers, the status per instrument, the sources of the licensed questionnaires and every open rights question are collected on [Rights and open points](Rechtelage.html).
 
 Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); all artefacts are listed under [Artifacts](artifacts.html).

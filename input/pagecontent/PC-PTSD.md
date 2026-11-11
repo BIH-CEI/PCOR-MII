@@ -2,7 +2,7 @@ Der **PC-PTSD** (*Primary Care PTSD Screen*) ist ein **Screening auf posttraumat
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben **nur im Szenario [PSS](PSS.html)**, Kategorie MHA, Priorität **B**.
 
@@ -31,6 +31,6 @@ PC-PTSD © Prins A, et al. 2003; deutsche Fassung Schäfer I, Schulze C, 2010. *
 
 - Entwicklung: Prins A, Ouimette P, Kimerling R, et al.; validiert in Freedy JR, et al. *Assessing psychological trauma and PTSD.* J Anxiety Disord 2007. [doi:10.1016/j.janxdis.2007.02.010](https://doi.org/10.1016/j.janxdis.2007.02.010)
 - Deutsche Fassung: Schäfer I, Schulze C. *Deutsche Version des „Primary Care Posttraumatic Stress Disorder Screening Questionnaire".* Universität Hamburg, 2010
-- Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

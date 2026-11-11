@@ -11,9 +11,10 @@
 //
 // Die lokalen CodeSystems/ValueSets bleiben als wiederverwendbare Artefakte.
 //
-// Ja/Nein: EIN gemeinsames CodeSystem DemAntwortCS (ja/nein/nicht-zutreffend/
-//   keine-angabe). Frage-spezifische Subsets via DemJaNeinVS / DemJaNeinNzVS /
-//   DemJaNeinKaVS. SNOMED-Mapping (373066001 Yes / 373067005 No) im VS.
+// Ja/Nein: SNOMED CT 373066001/373067005 inline über die RuleSets in
+//   rulesets/antwortskalen.fsh (ADR-013; JaNeinSnomed, JaNeinNichtZutreffendSnomed für
+//   Q_MONMED, JaNeinKeineAngabeSnomed für Q_GENDERID). Das frühere lokale CodeSystem
+//   dem-antwort mit seinen drei ValueSets ist mit 0.9.0 entfernt (Breaking Change).
 //
 // OFFENE PUNKTE (siehe Mapping-Doc):
 //   - Q_SEX: Geschlecht-VS ggf. an MII-Person-Modul angleichen.
@@ -27,27 +28,6 @@
 // ═════════════════════════════════════════════════════════════════════════════
 //  LOKALE CODE SYSTEMS
 // ═════════════════════════════════════════════════════════════════════════════
-
-CodeSystem: DemAntwortCS
-Id: dem-antwort
-Title: "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)"
-Description: "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."
-* insert PR_CS_VS_Version
-* ^status = #draft
-* ^experimental = true
-* ^caseSensitive = true
-* #ja "Ja"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Yes"
-* #nein "Nein"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "No"
-* #nicht-zutreffend "Nicht zutreffend"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Not applicable"
-* #keine-angabe "Möchte ich nicht sagen"
-  * ^designation[+].language = #en
-  * ^designation[=].value = "Prefer not to say"
 
 CodeSystem: DemHaeufigkeit5CS
 Id: dem-haeufigkeit-5
@@ -275,71 +255,6 @@ Description: "Selbstbeschriebenes Geschlecht (Q_SEX). HINWEIS: Im MII-Kontext be
 //   => Bei Änderung eines CS-Codes/Displays die zugehörige expansion mitpflegen.
 //   Verbleibende QA-Warning "expansion has no parameters" ist advisory/benigne.
 
-ValueSet: DemJaNeinVS
-Id: dem-ja-nein
-Title: "DEM Ja/Nein"
-Description: "Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."
-* insert PR_CS_VS_Version
-* ^status = #draft
-* ^experimental = true
-* DemAntwortCS#ja "Ja"
-* DemAntwortCS#nein "Nein"
-* ^expansion.timestamp = "2026-06-10T00:00:00Z"
-* ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
-* ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[0].code = #ja
-* ^expansion.contains[0].display = "Ja"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[=].code = #nein
-* ^expansion.contains[=].display = "Nein"
-
-ValueSet: DemJaNeinNzVS
-Id: dem-ja-nein-nz-vs
-Title: "DEM Ja/Nein/Nicht zutreffend"
-Description: "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS."
-* insert PR_CS_VS_Version
-* ^status = #draft
-* ^experimental = true
-* DemAntwortCS#ja "Ja"
-* DemAntwortCS#nein "Nein"
-* DemAntwortCS#nicht-zutreffend "Nicht zutreffend"
-* ^expansion.timestamp = "2026-06-10T00:00:00Z"
-* ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
-* ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[0].code = #ja
-* ^expansion.contains[0].display = "Ja"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[=].code = #nein
-* ^expansion.contains[=].display = "Nein"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[=].code = #nicht-zutreffend
-* ^expansion.contains[=].display = "Nicht zutreffend"
-
-ValueSet: DemJaNeinKaVS
-Id: dem-ja-nein-ka-vs
-Title: "DEM Ja/Nein/Keine Angabe"
-Description: "Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS."
-* insert PR_CS_VS_Version
-* ^status = #draft
-* ^experimental = true
-* DemAntwortCS#ja "Ja"
-* DemAntwortCS#nein "Nein"
-* DemAntwortCS#keine-angabe "Möchte ich nicht sagen"
-* ^expansion.timestamp = "2026-06-10T00:00:00Z"
-* ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort|0.3.0"
-* ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[0].code = #ja
-* ^expansion.contains[0].display = "Ja"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[=].code = #nein
-* ^expansion.contains[=].display = "Nein"
-* ^expansion.contains[+].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"
-* ^expansion.contains[=].code = #keine-angabe
-* ^expansion.contains[=].display = "Möchte ich nicht sagen"
-
 ValueSet: DemHaeufigkeit5VS
 Id: dem-haeufigkeit-5-vs
 Title: "DEM Häufigkeit (5-stufig)"
@@ -350,7 +265,7 @@ Description: "5-stufige Häufigkeitsskala (MONMEAL/MONRENT/MONBILLS)."
 * include codes from system DemHaeufigkeit5CS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5"
 * ^expansion.contains[0].code = #staendig
 * ^expansion.contains[0].display = "Always"
@@ -377,7 +292,7 @@ Description: "Leichtigkeit, Unterstützung zu erhalten (WHODIS1/2)."
 * include codes from system DemLeichtigkeit6CS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6"
 * ^expansion.contains[0].code = #sehr-einfach
 * ^expansion.contains[0].display = "Very easy"
@@ -407,7 +322,7 @@ Description: "Höchster Bildungsabschluss (Q_ISCED)."
 * include codes from system DemIscedCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de"
 * ^expansion.contains[0].code = #primar
 * ^expansion.contains[0].display = "Primarstufe (inkl. 4-6 Jahre Grund- o. Förderschule)"
@@ -440,7 +355,7 @@ Description: "Aktuelle Arbeitssituation (Q_OECDLIT5a)."
 * include codes from system DemErwerbsstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus"
 * ^expansion.contains[0].code = #selbststaendig
 * ^expansion.contains[0].display = "Self-employed [work for yourself]"
@@ -485,7 +400,7 @@ Description: "Einkommensbänder (Q_OECDLIT7a)."
 * include codes from system DemEinkommenCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen"
 * ^expansion.contains[0].code = #band-niedrig
 * ^expansion.contains[0].display = "Up to €2,300 a month"
@@ -512,7 +427,7 @@ Description: "Wohnort-Typ (Q_OECDLITii)."
 * include codes from system DemUrbanizitaetCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet"
 * ^expansion.contains[0].code = #stadt
 * ^expansion.contains[0].display = "City"
@@ -536,7 +451,7 @@ Description: "Rentenstatus (GIPS10)."
 * include codes from system DemRentenstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus"
 * ^expansion.contains[0].code = #keine
 * ^expansion.contains[0].display = "Keine Rente"
@@ -560,7 +475,7 @@ Description: "Zigaretten/Tag in Bändern (GIPS57b)."
 * include codes from system DemZigarettenBandCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band"
 * ^expansion.contains[0].code = #b1
 * ^expansion.contains[0].display = "1-10"
@@ -584,7 +499,7 @@ Description: "Partnerschaftsstatus (GIPS04)."
 * include codes from system DemBeziehungsstatusCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus"
 * ^expansion.contains[0].code = #keine-feste
 * ^expansion.contains[0].display = "Keine feste Partnerschaft"
@@ -602,7 +517,7 @@ Description: "Selbstbeschriebenes Geschlecht (Q_SEX)."
 * include codes from system DemGeschlechtCS
 * ^expansion.timestamp = "2026-06-10T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht"
 * ^expansion.contains[0].code = #weiblich
 * ^expansion.contains[0].display = "Female"
@@ -685,7 +600,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
 
 // Designentscheidungen direkt am Questionnaire (designNote)
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Wortlaut wird unverändert übernommen.** Der deutsche Text der PaRIS-Blöcke stammt aus der **Schweizer** PaRIS-Fassung (Belege: „einschliesslich“ in `WHODIS1`, sechsmal „Ich weiss es nicht“, CHF-Einkommensbänder im Layoutblatt des Item Level Dictionary). Die Helvetismen werden **bewusst beibehalten** und nicht eingedeutscht. Drei Gründe: (1) **Validierung** — der Wortlaut ist im TRAPD-Verfahren sprachlich validiert; eine Änderung macht aus dem validierten Item ein anderes. (2) **Rechte** — eine unveränderte Übernahme bleibt Nachnutzung von OECD-Material; eine Bearbeitung würde PCOR-MII zum Urheber einer Adaption machen und den Adaptions-Disclaimer der OECD-Bedingungen auslösen. (3) **Vergleichbarkeit** — der Wortlaut entspricht dem, unter dem die Schweizer PaRIS-Daten erhoben wurden.\n\n**Mehrsprachigkeit — umgesetzt (2026-09-29):** `item.text` trägt den englischen Originalwortlaut aus dem publizierten PaRIS-PQ; die Schweizer Fassung hängt als `translation`-Extension mit `de-CH` daran (19 Items). Ebenso tragen die sechs DEM-eigenen Antwortskalen englische Displays mit `de-CH`-Designation (36 Konzepte). Muster und RuleSets stammen aus dem MII-PRO-Modul.\n\n**Bewusst deutsch-primär geblieben:** `AGE` (in PCOR-MII auf Geburtsdatum umgestellt, entspricht nicht mehr dem PaRIS-Altersband), `Q_GENDERID` (im PaRIS-PQ nur als länderspezifische Frage ohne Wortlaut geführt), `Zipcode` und `CPCOR_REQ` (nicht aus PaRIS), `GIPS04`/`GIPS10` samt ihrer Antwortskalen (GI-PS — dessen Lizenz untersagt eine Übersetzung ausdrücklich), `DemIscedCS` (Bildungsabschlüsse nach deutschem KMK-System, keine Übersetzung des PaRIS-Wortlauts, sondern eigenständige Anpassung) sowie `DemAntwortCS` (projektweit von MHI, ACE und EDE-Q6 mitgenutzt; dort nur englische Designations ergänzt, eine Umstellung wäre ein IG-weiter Schritt). Siehe <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>."
+* extension[=].valueMarkdown = "**Wortlaut wird unverändert übernommen.** Der deutsche Text der PaRIS-Blöcke stammt aus der **Schweizer** PaRIS-Fassung (Belege: „einschliesslich“ in `WHODIS1`, sechsmal „Ich weiss es nicht“, CHF-Einkommensbänder im Layoutblatt des Item Level Dictionary). Die Helvetismen werden **bewusst beibehalten** und nicht eingedeutscht. Drei Gründe: (1) **Validierung** — der Wortlaut ist im TRAPD-Verfahren sprachlich validiert; eine Änderung macht aus dem validierten Item ein anderes. (2) **Rechte** — eine unveränderte Übernahme bleibt Nachnutzung von OECD-Material; eine Bearbeitung würde PCOR-MII zum Urheber einer Adaption machen und den Adaptions-Disclaimer der OECD-Bedingungen auslösen. (3) **Vergleichbarkeit** — der Wortlaut entspricht dem, unter dem die Schweizer PaRIS-Daten erhoben wurden.\n\n**Mehrsprachigkeit — umgesetzt (2026-09-29):** `item.text` trägt den englischen Originalwortlaut aus dem publizierten PaRIS-PQ; die Schweizer Fassung hängt als `translation`-Extension mit `de-CH` daran (19 Items). Ebenso tragen die sechs DEM-eigenen Antwortskalen englische Displays mit `de-CH`-Designation (36 Konzepte). Muster und RuleSets stammen aus dem MII-PRO-Modul.\n\n**Bewusst deutsch-primär geblieben:** `AGE` (in PCOR-MII auf Geburtsdatum umgestellt, entspricht nicht mehr dem PaRIS-Altersband), `Q_GENDERID` (im PaRIS-PQ nur als länderspezifische Frage ohne Wortlaut geführt), `Zipcode` und `CPCOR_REQ` (nicht aus PaRIS), `GIPS04`/`GIPS10` samt ihrer Antwortskalen (GI-PS — dessen Lizenz untersagt eine Übersetzung ausdrücklich), `DemIscedCS` (Bildungsabschlüsse nach deutschem KMK-System, keine Übersetzung des PaRIS-Wortlauts, sondern eigenständige Anpassung) sowie die Ja/Nein-Antworten, die seit 0.9.0 als SNOMED CT inline kodiert sind (ADR-013) und ihre Designations aus SNOMED CT beziehen. Siehe <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>."
 
 // ── Gruppe: Medizinische Vorgeschichte (Anthropometrie) ───────────────────────
 // Anthropometrie (Q_WB151/152) ist laut Item Level Dictionary Kategorie MHI
@@ -701,7 +616,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * code[+] = PcorItemDictionaryCS#AGE
     * text = "Bitte geben Sie Ihr Geburtsdatum an"
     * type = #date
-    * code[+] = $LOINC#21112-8 "Geburtsdatum"
+    * code[+] = $LOINC#21112-8 "Birth date"
   * item[+]
     * linkId = "Q_ISCED"
     * code[+] = PcorItemDictionaryCS#Q_ISCED
@@ -731,7 +646,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * code[+] = PcorItemDictionaryCS#Q_GENDERID
     * text = "Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinKaVS)
+    * insert JaNeinKeineAngabeSnomed
   * item[+]
     * linkId = "Q_OECDLIT5a"
     * code[+] = PcorItemDictionaryCS#Q_OECDLIT5a
@@ -766,7 +681,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * text.extension[=].extension[+].url = "content"
     * text.extension[=].extension[=].valueString = "Hatten Sie in den vergangenen 12 Monaten Schwierigkeiten, Rechnungen für medizinische Leistungen zu bezahlen bzw. konnten diese nicht bezahlen?"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinNzVS)
+    * insert JaNeinNichtZutreffendSnomed
 
   // ── Untergruppe: Finanzielle Sorgen (Q_MON) ─────────────────────────────────
   * item[+]
@@ -824,7 +739,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * text.extension[=].extension[=].valueString = "Sind Sie in Deutschland geboren?"
     * type = #choice
     * code[+] = $LOINC#78746-5 "Country of birth [Location]"
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
   * item[+]
     * linkId = "MEDHIMS6_country"
     * code[+] = PcorItemDictionaryCS#MEDHIMS6_country
@@ -837,7 +752,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * type = #string
     * enableWhen[+].question = "MEDHIMS6"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#nein "Nein"
+    * enableWhen[=].answerCoding = $SCT#373067005
   * item[+]
     * linkId = "MEDHIMS7"
     * code[+] = PcorItemDictionaryCS#MEDHIMS7
@@ -849,7 +764,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * text.extension[=].extension[=].valueString = "Sind Sie Deutsche/r Staatsbürger/in?"
     * type = #choice
     * code[+] = $LOINC#66476-3 "Country of citizenship"
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
   * item[+]
     * linkId = "MEDHIMS7_nationality"
     * code[+] = PcorItemDictionaryCS#MEDHIMS7_nationality
@@ -862,7 +777,7 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * type = #string
     * enableWhen[+].question = "MEDHIMS7"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#nein "Nein"
+    * enableWhen[=].answerCoding = $SCT#373067005
   * item[+]
     * linkId = "Q_OECDLITii"
     * code[+] = PcorItemDictionaryCS#Q_OECDLITii
@@ -959,4 +874,4 @@ Description: "Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt d
     * code[+] = PcorItemDictionaryCS#CPCOR_REQ
     * text = "Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed

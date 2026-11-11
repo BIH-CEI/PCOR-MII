@@ -9,7 +9,7 @@ Erhoben wird der OPD-SFK in PSS und AN **von einzelnen Standorten**; eine direkt
 ### Artefakte
 
 - **Fragebogen:** [Questionnaire-OPDSFK](Questionnaire-OPDSFK.html) — vollständige Definition inkl. Items und Antwortoptionen.
-- **Antwortskala:** [ValueSet opd-sfk-antwort-vs](ValueSet-opd-sfk-antwort-vs.html) · [CodeSystem opd-sfk-antwort](CodeSystem-opd-sfk-antwort.html) — fünf Konzepte mit `ordinalValue` 0–4 für das Summenscoring.
+- **Antwortskala:** [ValueSet opd-sfk-antwort-vs](ValueSet-opd-sfk-antwort-vs.html) · [CodeSystem opd-sfk-antwort](CodeSystem-opd-sfk-antwort.html) — fünf Konzepte mit `itemWeight` 0–4 für das Summenscoring.
 
 ### Canonical
 
@@ -19,8 +19,8 @@ Erhoben wird der OPD-SFK in PSS und AN **von einzelnen Standorten**; eine direkt
 
 - **Items**: 12 (`OPDSFK01`–`OPDSFK12`), zusätzlich ein vorangestelltes `display`-Item mit dem für alle Items geltenden Instruktionstext
 - **Sprache**: Deutsch (Fragebogensprache); keine englischen Designations, da keine belegte offizielle englische Übersetzung der Kurzskala vorliegt
-- **Antwortmodellierung**: `answerValueSet` auf das lokale `opd-sfk-antwort-vs` mit `ordinalValue`-Gewichten (Muster: `mii-cs-pro-whodas-12` im MII-PRO-Modul)
-- **Scoring**: Globalwert als **Summenwert über alle 12 Items** (0–48), umgesetzt als readOnly-Item `opd-sfk-globalwert` mit SDC-`calculatedExpression` über `.ordinal().sum()`
+- **Antwortmodellierung**: `answerValueSet` auf das lokale `opd-sfk-antwort-vs` mit `itemWeight`-Gewichten (Muster: `mii-cs-pro-whodas-12` im MII-PRO-Modul)
+- **Scoring**: Globalwert als **Summenwert über alle 12 Items** (0–48), umgesetzt als readOnly-Item `opd-sfk-globalwert` mit SDC-`calculatedExpression` über `.weight().sum()`
 
 ### Scoring-Entscheidung
 

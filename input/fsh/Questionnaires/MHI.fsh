@@ -21,7 +21,7 @@ Description: "Diagnosegruppe zur Selbstzuordnung (CPCOR-DIAG)."
 * include codes from system MhiCpcorDiagCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "Essstörung"
@@ -79,7 +79,7 @@ Description: "Liste chronischer Erkrankungen (GIPS13, Mehrfachauswahl)."
 * include codes from system MhiChronischCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "keine chronische Erkrankung"
@@ -180,7 +180,7 @@ Description: "Tageszeit der Medikamenteneinnahme (medi_02_time)."
 * include codes from system MhiEinnahmezeitCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "morgens"
@@ -222,7 +222,7 @@ Description: "Wie wurde das Gewicht ermittelt? (weight_outpatient_2)."
 * include codes from system MhiGewichtsmethodeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "Hausarzt"
@@ -265,7 +265,7 @@ Description: "Subtyp der Anorexia nervosa (AN_subtyp)."
 * include codes from system MhiAnSubtypCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "restriktiver Typ (Kontrolle des Gewichts vorwiegend über geringe Nahrungsaufnahme und/oder Sport)"
@@ -301,7 +301,7 @@ Description: "Einheit/Angabe-Status für Gewicht (Q_WB151)."
 * include codes from system MhiGewichtAngabeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe"
 * ^expansion.contains[=].code = #kg
 * ^expansion.contains[=].display = "kg"
@@ -334,7 +334,7 @@ Description: "Einheit/Angabe-Status für Körpergröße (Q_WB152)."
 * include codes from system MhiGroesseAngabeCS
 * ^expansion.timestamp = "2026-06-17T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe"
 * ^expansion.contains[=].code = #cm
 * ^expansion.contains[=].display = "cm"
@@ -349,7 +349,7 @@ Description: "Einheit/Angabe-Status für Körpergröße (Q_WB152)."
 // MHI — Medical History
 // Quelle: PCOR Item Level Dictionary (Kategorie MHI + zugehörige Folge-Items).
 // DEM ist kein PRO; MHI ebenso (Anamnese/Medizinische Vorgeschichte) -> SDC-Base.
-// Geteilte Antwort-ValueSets (DemJaNeinVS, DemZigarettenBandVS) liegen in DEM.fsh
+// Geteilte Antwort-ValueSets (DemZigarettenBandVS) liegen in DEM.fsh; Ja/Nein als SNOMED CT inline (RuleSet JaNeinSnomed, ADR-013)
 //   und werden hier mitgenutzt. MHI-spezifische CS/VS siehe oben in dieser Datei.
 // AN-spezifische Items (Gewichtsverlauf, AN_subtyp) nur im Szenario Anorexia nervosa.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -358,14 +358,14 @@ Instance: MHI
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "MHI — Medical History"
-Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument."
+Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument. Die NTx-spezifische Transplantationsanamnese ist ein eigener Ergänzungsbogen (MHI-NTx)."
 // Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
 // Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
 // die verwendeten SDC-Extensions sind davon unberührt.
 * meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI"
 * name = "MHI"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#mhi "PCOR-MII Medical History (MHI)"
 * status = #draft
@@ -449,7 +449,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * text = "Rauchen Sie (einschließlich E-Zigaretten)?"
     * type = #choice
     * code[+] = $LOINC#72166-2 "Raucherstatus"
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
   * item[+]
     * linkId = "GIPS57b"
     * code[+] = PcorItemDictionaryCS#GIPS57b
@@ -459,57 +459,57 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * answerValueSet = Canonical(DemZigarettenBandVS)
     * enableWhen[+].question = "GIPS57a"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "GIPS56a"
     * code[+] = PcorItemDictionaryCS#GIPS56a
     * text = "Trinken Sie Alkohol?"
     * type = #choice
     * code[+] = $LOINC#11331-6 "History of Alcohol use"
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
   * item[+]
     * linkId = "GIPS56b1"
     * code[+] = PcorItemDictionaryCS#GIPS56b1
     * text = "Haben Sie jemals daran gedacht, weniger zu trinken? (CAGE 1)"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
     * enableWhen[+].question = "GIPS56a"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "GIPS56b2"
     * code[+] = PcorItemDictionaryCS#GIPS56b2
     * text = "Haben Sie sich schon einmal darüber geärgert, dass Sie von anderen wegen Ihres Alkoholkonsums kritisiert wurden? (CAGE 2)"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
     * enableWhen[+].question = "GIPS56a"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "GIPS56b3"
     * code[+] = PcorItemDictionaryCS#GIPS56b3
     * text = "Haben Sie sich jemals wegen Ihres Trinkens schuldig gefühlt? (CAGE 3)"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
     * enableWhen[+].question = "GIPS56a"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "GIPS56b4"
     * code[+] = PcorItemDictionaryCS#GIPS56b4
     * text = "Haben Sie jemals morgens als erstes Alkohol getrunken, um sich nervlich zu stabilisieren oder einen Kater loszuwerden? (CAGE 4 — Eye-opener)"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
     * enableWhen[+].question = "GIPS56a"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "GIPS58"
     * code[+] = PcorItemDictionaryCS#GIPS58
     * text = "Nutzen Sie hin und wieder eine der folgenden Substanzen: Cannabis, Ecstasy, Kokain, Amphetamine, Anabolika, Crystal?"
     * type = #choice
     * code[+] = $LOINC#96873-5 "Illegal or recreational drug(s) used in past 3 months"
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
 
 * item[+]
   * linkId = "medikation"
@@ -520,7 +520,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * code[+] = PcorItemDictionaryCS#medication1
     * text = "Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?"
     * type = #choice
-    * answerValueSet = Canonical(DemJaNeinVS)
+    * insert JaNeinSnomed
   * item[+]
     * linkId = "medication_text"
     * code[+] = PcorItemDictionaryCS#medication_text
@@ -528,7 +528,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #text
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "MEDI_01"
     * code[+] = PcorItemDictionaryCS#MEDI_01
@@ -536,14 +536,14 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #integer
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
   * item[+]
     * linkId = "medi_02_01"
     * text = "Medikament 1"
     * type = #group
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
     * item[+]
       * linkId = "medi_02_name_01"
       * code[+] = PcorItemDictionaryCS#medi_02_name_01
@@ -576,7 +576,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #group
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
     * item[+]
       * linkId = "medi_02_name_02"
       * code[+] = PcorItemDictionaryCS#medi_02_name_02
@@ -609,7 +609,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #group
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
     * item[+]
       * linkId = "medi_02_name_03"
       * code[+] = PcorItemDictionaryCS#medi_02_name_03
@@ -642,7 +642,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #group
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
     * item[+]
       * linkId = "medi_02_name_04"
       * code[+] = PcorItemDictionaryCS#medi_02_name_04
@@ -675,7 +675,7 @@ Description: "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary)
     * type = #group
     * enableWhen[+].question = "medication1"
     * enableWhen[=].operator = #=
-    * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+    * enableWhen[=].answerCoding = $SCT#373066001
     * item[+]
       * linkId = "medi_02_name_05"
       * code[+] = PcorItemDictionaryCS#medi_02_name_05

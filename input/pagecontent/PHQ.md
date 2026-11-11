@@ -4,7 +4,7 @@ Wer nur ein einzelnes Instrument umsetzt, muss sich mit dem gemeinsamen Namespac
 
 ### PHQ-Instrumente in PCOR-MII
 
-PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0.
+PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2027.0.0-ballot.2.
 
 | Instrument | Erfasst | Im MII PRO-Modul | PCOR-MII-Seite |
 |---|---|---|---|
@@ -83,7 +83,7 @@ Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die Questionnair
 
 Mit 2026.5.0 wurden die PHQ-9-Item-`linkId`s vom alten, instrumentspezifischen Schema (`phq-phq9-q01…q10`) auf den geteilten PHQ-D-Block-Namespace (`phq-phq2a…i` sowie `phq-phq9-difficulty`) umgestellt. Standorte, die PHQ-9-Antworten vor 2026.5.0 erfasst haben, halten `QuestionnaireResponse`s mit den alten `linkId`s vor, die nicht mehr zur aktuellen Questionnaire-Definition passen.
 
-Das MII PRO-Modul liefert dafür die ConceptMap [`mii-cm-pro-phq-9-linkid-migration`](https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration). Angewendet auf bestehende PHQ-9-`QuestionnaireResponse`s bringt sie deren `item.linkId` wieder mit dem aktuellen Questionnaire in Einklang:
+Das MII PRO-Modul liefert dafür die ConceptMap `mii-cm-pro-phq-9-linkid-migration`. Angewendet auf bestehende PHQ-9-`QuestionnaireResponse`s bringt sie deren `item.linkId` wieder mit dem aktuellen Questionnaire in Einklang:
 
 | Alt (`linkId` ≤ 2026.4.x) | Neu (`linkId` ab 2026.5.0) | Äquivalenz | Item |
 |---|---|---|---|
@@ -102,7 +102,7 @@ Alle Zuordnungen sind 1:1 und `equal` — es ändert sich ausschließlich die `l
 
 ### linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)
 
-Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) erfasst wurden, liefert das MII PRO-Modul die ConceptMap [`mii-cm-pro-gad-7-linkids`](https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids):
+Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) erfasst wurden, liefert das MII PRO-Modul die ConceptMap `mii-cm-pro-gad-7-linkids`:
 
 | Alt (`linkId`) | Neu (`linkId`) | Item |
 |---|---|---|
@@ -118,7 +118,7 @@ Auch hier sind alle Zuordnungen 1:1; es ändert sich ausschließlich die `linkId
 
 ### Quellen
 
-- Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
 - Lizenz: PHQ / PHQ-D © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
 - Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
 - PHQ-SADS: Kroenke K, Spitzer RL, Williams JBW, Löwe B. *The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales: a systematic review*. Gen Hosp Psychiatry. 2010;32(4):345–359. [doi:10.1016/j.genhosppsych.2010.03.006](https://doi.org/10.1016/j.genhosppsych.2010.03.006)

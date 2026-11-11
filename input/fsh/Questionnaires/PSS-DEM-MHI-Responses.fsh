@@ -36,7 +36,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispiel
     * answer.valueCoding = DemGeschlechtCS#maennlich "Männlich"
   * item[+]
     * linkId = "Q_GENDERID"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "Q_OECDLIT5a"
     * answer.valueCoding = DemErwerbsstatusCS#angestellt "Angestellt"
@@ -45,7 +45,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispiel
     * answer.valueCoding = DemEinkommenCS#band-mittel "Zwischen 2.300 € und 5.200 € pro Monat"
   * item[+]
     * linkId = "Q_MONMED"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "Q_MON"
     * item[+]
@@ -59,10 +59,10 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispiel
       * answer.valueCoding = DemHaeufigkeit5CS#selten "Selten"
   * item[+]
     * linkId = "MEDHIMS6"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "MEDHIMS7"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "Q_OECDLITii"
     * answer.valueCoding = DemUrbanizitaetCS#stadt "Stadt"
@@ -95,7 +95,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire für den PSS-Beispiel
     * answer.valueCoding = DemRentenstatusCS#keine "Keine Rente"
   * item[+]
     * linkId = "CPCOR_REQ"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
 
 Instance: MHIPSSResponse
 InstanceOf: QuestionnaireResponse
@@ -148,35 +148,35 @@ Description: "Ausgefülltes Beispiel zum MHI-Questionnaire für den PSS-Beispiel
   * linkId = "lifestyle"
   * item[+]
     * linkId = "GIPS57a"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS57b"
     * answer.valueCoding = DemZigarettenBandCS#b1 "1-10"
   * item[+]
     * linkId = "GIPS56a"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS56b1"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS56b2"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS56b3"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS56b4"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS58"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
 
 // ── Aktuelle Medikamente ──────────────────────────────────────────────────────
 * item[+]
   * linkId = "medikation"
   * item[+]
     * linkId = "medication1"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "medication_text"
     * answer.valueString = "Ibuprofen 600 mg bei Bedarf; Pantoprazol 20 mg morgens"

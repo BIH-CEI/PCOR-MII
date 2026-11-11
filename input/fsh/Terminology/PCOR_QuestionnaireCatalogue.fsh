@@ -82,3 +82,7 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * #baasis "BAASIS" "Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)"
 * #abq "ABQ" "Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann & Wilke 2015)"
 * #mtsosd-r59 "MTSOSD-R59" "Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)"
+
+// ── NTx-Standortitems (MHH), in PCOR-MII gepflegt ────────────────────────────
+* #ntx-verlauf "NTx-Verlaufsbefragung (MHH)" "Quartalsweise Verlaufsanamnese nach Nierentransplantation des Standorts Hannover, 18 patient-reported Variablen der Dictionary-Gruppen MHH-DIAL, MHH-PTx-DIAB, MHH-T, MHH-UTI, MHH-Infection, MHH-BP, MHH-Medi und MHH_PTH (Sammelbogen nach MHI-Muster, kein PRO-Instrument); die drei Screening-Items MHH-DON/Tx-DATE/PRIOR-TX liegen im Ergänzungsbogen MHI-NTx"
+* #mhi-ntx "MHI-NTx — Transplantationsanamnese" "Ergänzung zum MHI für Empfänger einer Nierentransplantation: Spendeart, Transplantationsdatum, wievielte Spenderniere (Dictionary-Gruppen MHH-DON, MHH-Tx-DATE, MHH-PRIOR-TX; Screening, kein PRO-Instrument)"

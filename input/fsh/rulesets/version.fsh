@@ -29,7 +29,7 @@
 // nutzt — die Angabe ist also kein Formalismus, sondern sagt, wie zwei
 // Versionsangaben zu ordnen sind.
 RuleSet: Version
-* version = "0.3.0"
+* version = "0.9.0"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
 * extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 
@@ -39,24 +39,24 @@ RuleSet: Version
 // "|0.1.0" am CodeSystem, das dort nie deklariert war. Beides ist damit
 // geschlossen.
 RuleSet: PR_CS_VS_Version
-* ^version = "0.3.0"
+* ^version = "0.9.0"
 
 // Fuer ObservationDefinition. R4 hat dort KEIN version-Element — es kam erst in
 // R5 dazu. Deshalb der R4-Backport ueber die artifact-version-Extension.
 // Siehe https://hl7.org/fhir/extensions/StructureDefinition-artifact-version.html
 RuleSet: ObsDefVersion
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-version"
-* extension[=].valueString = "0.3.0"
+* extension[=].valueString = "0.9.0"
 
 // Fuer Instanzen definitorischer Typen, bei denen Caret-Regeln nicht greifen
 // (SUSHI: "CaretValueRule cannot be applied to entity of type Instance") —
 // etwa die ConceptMap pcor-cm-erq-s-linkids.
 RuleSet: InstanceVersion
-* version = "0.3.0"
+* version = "0.9.0"
 
 // Fuer QuestionnaireResponse: die Antwort haelt fest, WELCHE Version des
 // Questionnaire beantwortet wurde. Ohne Pin ist aus der Antwort nicht
 // ablesbar, welcher Wortlaut vorlag — und genau das ist bei mehreren
 // Sprachebenen und bei Zuschnitten die entscheidende Information.
 RuleSet: QuestionnaireRef(canonical)
-* questionnaire = "{canonical}|0.3.0"
+* questionnaire = "{canonical}|0.9.0"

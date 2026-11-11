@@ -33,9 +33,9 @@
 //   Outcomes, deshalb traegt die Antwort mii-pr-pro-questionnaire-response
 //   (Basis: SDC QuestionnaireResponse). DEM und MHI tun das bewusst NICHT —
 //   sie sind keine PROs. Die Version ist absichtlich nicht angepinnt; sie loest
-//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die drei aelteren
-//   Handbeispiele unter input/examples/ pinnen noch |2026.4.1 und laufen damit
-//   der Abhaengigkeit (2026.7.0) hinterher.
+//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die Handbeispiele
+//   unter input/examples/ pinnen die Questionnaire-Canonical auf die
+//   Abhaengigkeit (|2027.0.0-ballot.2).
 // ─────────────────────────────────────────────────────────────────────────────
 
 Instance: ERQ6Response

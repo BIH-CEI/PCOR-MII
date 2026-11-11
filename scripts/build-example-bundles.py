@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Baut die drei Beispiel-Bundles aus den kompilierten Beispielressourcen.
+"""Baut die vier Beispiel-Bundles aus den kompilierten Beispielressourcen.
 
 Aufruf NACH `sushi .` aus dem Repo-Root:
     python3 scripts/build-example-bundles.py
@@ -58,6 +58,14 @@ BUNDLES = {
                  "pcor-mii-exa-pss-wi-7-response", "pcor-mii-exa-pss-scoff-response",
                  "pcor-mii-exa-pss-isr-z-response", "pcor-mii-exa-pss-pc-ptsd-response",
                  "pcor-mii-exa-promis-16-response", "pcor-mii-exa-promis-cognitive-function-response"],
+    },
+    "pcor-mii-exa-bundle-ntx-erstbefragung": {
+        "title": "NTx — Erstbefragung 06.10.2026 (Screening + erstes Quartals-Monitoring)",
+        "timestamp": "2026-10-06T10:30:00+02:00",
+        "patient": "pcor-mii-exa-patient-ntx",
+        "fsh": ["MHINTXResponse", "NTXVERLAUFResponse", "BAASISResponse",
+                "ABQResponse", "MTSOSDR59Response"],
+        "json": [],
     },
 }
 

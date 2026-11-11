@@ -9,8 +9,8 @@ Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 // ─────────────────────────────────────────────────────────────────────────────
 // Profil-Canonicals für meta.profile — BEWUSST OHNE Versionspin (Konvention
 // aus dem Bereitstellungs-Review, #26): Die Auflösung läuft über die in
-// sushi-config.yaml deklarierte Paketversion (de.gematik.isik 5.1.1,
-// kerndatensatz.pros 2026.7.0). Ein Pin, der von der Dependency abweicht, ist
+// sushi-config.yaml deklarierte Paketversion (de.gematik.isik 6.0.0,
+// kerndatensatz.pros 2027.0.0-ballot.2). Ein Pin, der von der Dependency abweicht, ist
 // für den Validator unauflösbar und lässt die Instanz ungeprüft (so geschehen
 // mit |2026.4.1). Wer pinnt, pinnt zentral hier und zieht bei jedem Bump nach.
 // ─────────────────────────────────────────────────────────────────────────────

@@ -8,7 +8,7 @@
 //    kostenfrei, jedes Zentrum benötigt eine eigene Lizenzvereinbarung. Der Bezugsweg ist
 //    zu klären. Diese Instanz bildet daher NUR Struktur, linkIds, Typen und Wertebereiche ab:
 //      - Item-Texte sind NEUTRALE Labels ("Erfasst: …"), KEIN Originalwortlaut.
-//      - Antworten heißen neutral "Stufe 1" … "Stufe 4" (ordinalValue 1-4).
+//      - Antworten heißen neutral "Stufe 1" … "Stufe 4" (itemWeight 1-4).
 //    Muster: WAI.fsh und UKHD-EDP.fsh im selben Verzeichnis. Die wortgleiche Vollversion
 //    kommt nie in dieses Package.
 //
@@ -19,10 +19,10 @@
 //   BAASIS3 = ja ODER BAASIS4 = ja. Für ABQ_01 nennt das Dictionary nur BAASIS1A = ja;
 //   vermutlich eine Inkonsistenz, zu klären. Die Steuerung liegt im aufrufenden Prozess.
 //
-// SCORING: Summe der 16 Items (ordinalValue 1-4), Bereich 16-64, als SDC calculatedExpression
-//   über .ordinal().sum() (Muster OPD-SFK.fsh). Höhere Werte = mehr Adhärenzbarrieren (laut
+// SCORING: Summe der 16 Items (itemWeight 1-4), Bereich 16-64, als SDC calculatedExpression
+//   über .weight().sum() (Muster OPD-SFK.fsh). Höhere Werte = mehr Adhärenzbarrieren (laut
 //   Auftrag). OFFEN: Die Polung ist NICHT gegen das Originalinstrument verifiziert — das
-//   Dictionary führt die volle Zustimmung als Stufe 1, und ob ordinalValue 1-4 in Reihenfolge der Stufen
+//   Dictionary führt die volle Zustimmung als Stufe 1, und ob itemWeight 1-4 in Reihenfolge der Stufen
 //   die Barrierenstärke abbildet, ist vor produktiver Nutzung zu prüfen. Keine Cut-offs.
 //
 // Terminologie-Recherche: nicht durchgeführt — Terminologie-MCP in der Session nicht
@@ -33,28 +33,28 @@
 CodeSystem: AbqSkala4CS
 Id: abq-skala-4
 Title: "ABQ Antwortskala 4-stufig (Codes)"
-Description: "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. ordinalValue-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung."
+Description: "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. itemWeight-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung."
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4"
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
 * ^content = #complete
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
 * ^property[=].description = "Numerischer Ordinalwert (1-4); Polung nicht gegen das Originalinstrument verifiziert."
 * ^property[=].type = #decimal
 * #stufe-1 "Stufe 1"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #stufe-2 "Stufe 2"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #stufe-3 "Stufe 3"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #stufe-4 "Stufe 4"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 
 ValueSet: AbqSkala4VS
@@ -68,7 +68,7 @@ Description: "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe
 * include codes from system AbqSkala4CS
 * ^expansion.timestamp = "2026-11-05T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4"
 * ^expansion.contains[=].code = #stufe-1
 * ^expansion.contains[=].display = "Stufe 1"
@@ -90,12 +90,12 @@ Instance: ABQ
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "ABQ — Adherence Barriers Questionnaire (NTx, metadata-only)"
-Description: "Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary (Kategorie TCH). **Metadata-only:** Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht. Summenscore 16-64 über `ordinalValue`; die Polung ist nicht gegen das Original verifiziert. Wird nur bei Hinweis auf Nonadhärenz im BAASIS erhoben."
+Description: "Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary (Kategorie TCH). **Metadata-only:** Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht. Summenscore 16-64 über `itemWeight`; die Polung ist nicht gegen das Original verifiziert. Wird nur bei Hinweis auf Nonadhärenz im BAASIS erhoben."
 // Selbstauskunfts-PRO -> MII-PRO-Profil (nicht ISiKFormularDefinition, die nur für Nicht-PRO-Bögen gilt).
 * meta.profile = $mii-pro-questionnaire
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ"
 * name = "ABQ"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#abq "ABQ"
 * status = #draft
@@ -105,7 +105,7 @@ Description: "Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary 
 * publisher = "BIH-CEI"
 * copyright = "METADATA-ONLY: ABQ © Müller S, Kohlmann T, Wilke T (2015), Adherence Barriers Questionnaire. Diese Instanz bildet ausschließlich Struktur, linkIds, Typen und Wertebereiche ab. Item-Texte sind neutrale, selbst formulierte Labels, die Antwortstufen sind neutral benannt (Stufe 1-4). Eine Veröffentlichung der konkreten Items einschließlich Antwortmöglichkeiten ist nicht erlaubt; wissenschaftliche Nutzung ohne Pharma-Beteiligung ist kostenfrei; jedes Zentrum benötigt eine eigene Lizenzvereinbarung. Bezugsweg: zu klären. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0)."
 // Vom MII-PRO-Profil gefordert: capabilities-Extension (1..1). calculatable = true, weil das
-// Summenscore-Item unten per calculatedExpression über .ordinal().sum() berechnet wird.
+// Summenscore-Item unten per calculatedExpression über .weight().sum() berechnet wird.
 * extension[+].url = $mii-pro-capabilities
 * extension[=].extension[+].url = "displayable"
 * extension[=].extension[=].valueBoolean = false
@@ -119,12 +119,12 @@ Description: "Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary 
 * extension[=].extension[=].valueBoolean = false
 // Designentscheidungen maschinenlesbar
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet; Item-Texte sind neutrale Labels, Antwortstufen neutral benannt (Veröffentlichung der Items nicht erlaubt, jedes Zentrum braucht eine eigene Lizenzvereinbarung, Bezugsweg zu klären). (2) **Summenscore 16-64** über `ordinalValue` 1-4 und `.ordinal().sum()` (Muster OPD-SFK); höhere Werte bedeuten mehr Adhärenzbarrieren. **Offen:** Die Polung ist nicht gegen das Originalinstrument verifiziert; keine Cut-offs. (3) **Cross-Questionnaire-Bedingung:** Der ABQ wird nur erhoben, wenn BAASIS1A, BAASIS2, BAASIS3 oder BAASIS4 = ja; nur dokumentiert, nicht als `enableWhen` modelliert. Für ABQ_01 nennt das Dictionary nur BAASIS1A, vermutlich eine Inkonsistenz. (4) **Keine Instrumenten-Codes verifiziert** (Terminologie-Recherche nicht durchgeführt). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
-// FHIR variable: Summe der 16 Item-Antworten (ordinalValue 1-4), Bereich 16-64.
+* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet; Item-Texte sind neutrale Labels, Antwortstufen neutral benannt (Veröffentlichung der Items nicht erlaubt, jedes Zentrum braucht eine eigene Lizenzvereinbarung, Bezugsweg zu klären). (2) **Summenscore 16-64** über `itemWeight` 1-4 und `.weight().sum()` (Muster OPD-SFK); höhere Werte bedeuten mehr Adhärenzbarrieren. **Offen:** Die Polung ist nicht gegen das Originalinstrument verifiziert; keine Cut-offs. (3) **Cross-Questionnaire-Bedingung:** Der ABQ wird nur erhoben, wenn BAASIS1A, BAASIS2, BAASIS3 oder BAASIS4 = ja; nur dokumentiert, nicht als `enableWhen` modelliert. Für ABQ_01 nennt das Dictionary nur BAASIS1A, vermutlich eine Inkonsistenz. (4) **Keine Instrumenten-Codes verifiziert** (Terminologie-Recherche nicht durchgeführt). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+// FHIR variable: Summe der 16 Item-Antworten (itemWeight 1-4), Bereich 16-64.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "abqSumme"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^ABQ_(0[1-9]|1[0-6])$')).answer.value.ordinal().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^ABQ_(0[1-9]|1[0-6])$')).answer.value.weight().sum()"
 
 * item[+]
   * linkId = "ABQ_01"

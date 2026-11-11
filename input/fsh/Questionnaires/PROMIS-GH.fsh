@@ -7,20 +7,22 @@
 //   Global10), PROMIS Health Organization / Northwestern University.
 //
 // ⚠️ 2-ITEM-SHORTFORM — BEWUSST NUR 2 VON 10 ITEMS.
-//   Das MII-PRO-Modul (de.medizininformatikinitiative.kerndatensatz.pros,
-//   geprüft gegen 2026.6.0) enthält KEINEN Global-Health-Questionnaire: eine
-//   Suche über alle 31 Questionnaires des Pakets findet weder 61577-3 noch
-//   61578-1; der Katalog mii-cs-pro-questionnaire-catalogue (25 Einträge) hat
-//   keinen passenden Eintrag. (Ebenso geprüft gegen 2026.5.2.) Da die
-//   PCOR-MII-Erhebung nur diese beiden Items verwendet, wird hier kurzfristig
-//   ein lokaler Questionnaire mit exakt diesen zwei Items gebaut.
+//   Bis 2026.7.0 enthielt das MII-PRO-Modul keinen Global-Health-Questionnaire
+//   (geprüft gegen 2026.5.2 und 2026.6.0: weder 61577-3 noch 61578-1 in den
+//   31 Questionnaires, kein Katalogeintrag); deshalb entstand dieser lokale
+//   2-Item-Bogen. Seit 2027.0.0-ballot.2 führt das Modul die vollständige
+//   Skala als mii-qst-pro-promis-global-health (10 Items, LOINC-Panel 85524-7,
+//   status draft, linkIds promis-global01 … promis-global10, Antwortoptionen
+//   inline mit itemWeight 5…1, Katalogcode promis-global-health). Dieser Bogen
+//   ist seitdem per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen.
 //
-//   LANGFRISTIG: Der vollständige Fragebogen "PROMIS Scale v1.2 – Global Health"
-//   soll ins MII-PRO-Modul aufgenommen werden (LOINC-Panel 85524-7 "PROMIS short
-//   form - global - version 1.2"; Vorgängerversion v1.1 = 61576-5). Sobald das
-//   passiert ist, wird dieser lokale Questionnaire durch eine Referenz auf den
-//   Upstream-Questionnaire ersetzt (bzw. per derivedFrom als 2-Item-Subset davon
-//   abgeleitet) und dieses File entfällt.
+//   OFFEN (Entscheidung Maintainer, nicht Teil von 0.9.0):
+//   - linkIds: hier die Dictionary-Variablen Global01/Global02, upstream
+//     promis-global01/promis-global02. ADR-008 (Original-IDs der Langform)
+//     spräche für die Upstream-IDs — Breaking Change für Bestandsantworten.
+//   - Fortbestand: entfällt der lokale Bogen zugunsten der Upstream-Definition,
+//     erheben die Standorte 10 statt 2 Items — das entscheidet der
+//     Erhebungsplan, nicht die Technik.
 //
 // ABGRENZUNG Global07: Das dritte GHS-Einzelitem der Mastertabelle, Global07
 //   ("PROMIS Numeric Rating Scale - Pain Intensity 1a", LOINC 61583-1), ist hier
@@ -48,12 +50,12 @@
 //       domainAligned bewusst false.
 //     - Questionnaire.code (1..*) -> 85524-7, der Panel-Code der vollständigen
 //       10-Item-Skala. Ein Code für das 2-Item-Subset existiert nicht; der
-//       MII-Katalog kennt PROMIS Global Health gar nicht und SNOMED CT führt
-//       kein passendes Assessment-Konzept (beides geprüft). Der Code benennt
+//       MII-Katalog führt seit 2027.0.0-ballot.2 promis-global-health für die
+//       10-Item-Skala, SNOMED CT kein passendes Assessment-Konzept. Der Code benennt
 //       daher das Herkunftsinstrument, nicht den Erhebungsumfang — dieser
 //       Vorbehalt steht in Title und Description.
-//   Sobald der Fragebogen upstream vollständig vorliegt, wird dieser lokale
-//   Questionnaire ersetzt und die Frage erledigt sich.
+//   Ob der lokale Questionnaire zugunsten der Upstream-Definition entfällt,
+//   ist offen (siehe oben).
 //
 // SCORING: Nicht implementiert. Die PROMIS-Scores Global Physical Health
 //   (71972-4) und Global Mental Health (71970-8) setzen jeweils vier bzw. vier
@@ -73,6 +75,7 @@ ValueSet: PromisGlobalSkala5VS
 Id: promis-global-skala-5-vs
 Title: "PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)"
 Description: "5-stufige Antwortskala der PROMIS-Global-Health-Items Global01 und Global02 (LOINC-Answerlist LL4280-5): 5 = Ausgezeichnet … 1 = Schlecht. Displays in der expansion sind die deutschen Formulierungen der validierten PROMIS-Übersetzung, die englischen LOINC-Displays als designation."
+* insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^copyright = "LOINC® ist eingetragene Marke des Regenstrief Institute, Inc. LOINC-Codes und -Answerlists © Regenstrief Institute, Inc., Nutzung unter http://loinc.org/terms-of-use."
@@ -114,11 +117,14 @@ Instance: PROMISGH
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)"
-Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."
+Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist seit MII-PRO-Modul 2027.0.0-ballot.2 als mii-qst-pro-promis-global-health enthalten; dieser Questionnaire ist per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen (linkIds nach Item Level Dictionary: Global01/Global02, upstream promis-global01/promis-global02). Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."
 // PROMIS ist ein PRO-Instrument -> MII-PRO-Profil (nicht ISiKFormularDefinition,
 // die nur für die Nicht-PRO-Bögen DEM/MHI/GSLTPAQ/OPD-SFK/WAI gesetzt wird).
 * meta.profile = $mii-pro-questionnaire
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH"
+// 2-Item-Zuschnitt der Modul-Definition (seit 2027.0.0-ballot.2); Pin wie in
+// den Manifesten, damit die Herkunft versionsgenau bleibt.
+* derivedFrom = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-global-health|2027.0.0-ballot.2"
 * name = "PROMISGH"
 * insert Version
 * status = #draft
@@ -143,8 +149,9 @@ Description: "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1
 * extension[=].extension[=].valueBoolean = false
 // Vom MII-PRO-Profil gefordert: code (1..*). Verfügbar ist nur der LOINC-Panel-
 // Code der vollständigen 10-Item-Skala; ein eigener Code für das 2-Item-Subset
-// existiert nicht (im MII-Katalog mii-cs-pro-questionnaire-catalogue fehlt
-// PROMIS Global Health ganz, SNOMED CT führt kein passendes Assessment-Konzept).
+// existiert nicht (der MII-Katalog mii-cs-pro-questionnaire-catalogue führt
+// seit 2027.0.0-ballot.2 promis-global-health für die 10-Item-Skala, SNOMED CT
+// kein passendes Assessment-Konzept).
 // Der Code benennt daher das Instrument, aus dem die Items stammen — dass nur
 // 2 der 10 Items realisiert sind, steht in Title und Description.
 * code = $LOINC#85524-7 "PROMIS short form - global - version 1.2"

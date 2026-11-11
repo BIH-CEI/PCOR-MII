@@ -57,35 +57,35 @@ Description: "Vollständig ausgefüllte Beispielantwort zum MHI-Questionnaire (M
   * linkId = "lifestyle"
   * item[+]
     * linkId = "GIPS57a"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS57b"
     * answer.valueCoding = DemZigarettenBandCS#b1 "1-10"
   * item[+]
     * linkId = "GIPS56a"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS56b1"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "GIPS56b2"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS56b3"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS56b4"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "GIPS58"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
 
 // ── Aktuelle Medikamente ──────────────────────────────────────────────────────
 * item[+]
   * linkId = "medikation"
   * item[+]
     * linkId = "medication1"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "medication_text"
     * answer.valueString = "Sertralin 50 mg morgens; Ibuprofen 400 mg bei Bedarf"

@@ -20,7 +20,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── UKHD-PT: bdkm15 ──────────────────────────────────────────────────────────
-// KEIN ordinalValue — NOMINAL, und zwar aus zwei Gruenden. Erstens sind die
+// KEIN itemWeight — NOMINAL, und zwar aus zwei Gruenden. Erstens sind die
 //   drei Stufen keine Menge, sondern ZEITBEZUEGE (nie / frueher / jetzt); „2"
 //   ist nicht doppelt so viel Behandlung wie „1". Zweitens ist die Skala nicht
 //   erschoepfend geordnet: Wer frueher UND jetzt in Behandlung ist, findet
@@ -29,7 +29,7 @@
 CodeSystem: UkhdAnPsychotherapieCS
 Id: ukhd-an-psychotherapie
 Title: "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell (Codes)"
-Description: "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `ordinalValue`."
+Description: "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `itemWeight`."
 * insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie"
 * ^status = #draft
@@ -50,7 +50,7 @@ Description: "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`)."
 * include codes from system UkhdAnPsychotherapieCS
 * ^expansion.timestamp = "2026-10-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "noch nie"
@@ -62,44 +62,44 @@ Description: "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`)."
 * ^expansion.contains[=].display = "zurzeit in Behandlung"
 
 // ── UKHD-PT: bdkm16 ──────────────────────────────────────────────────────────
-// MIT ordinalValue — ORDINAL. Die vier Stufen sind eine monoton steigende
+// MIT itemWeight — ORDINAL. Die vier Stufen sind eine monoton steigende
 //   Haeufigkeit (gar nicht < einmalig < zweimalig < drei oder mehrfach), und
 //   die letzte Stufe ist offen nach oben. Das ist eine echte Rangskala.
 //
-// ACHTUNG BEI DER AUSWERTUNG: ordinalValue traegt die DICTIONARY-CODES 1-4,
+// ACHTUNG BEI DER AUSWERTUNG: itemWeight traegt die DICTIONARY-CODES 1-4,
 //   nicht die Besuchszahl. „gar nicht" ist also 1, nicht 0. Wer die Werte als
 //   Anzahl Arztbesuche liest, verschiebt die Skala um eins; eine
 //   zaehlbasierte Auswertung braucht die Abbildung 1->0, 2->1, 3->2, 4->3+.
 CodeSystem: UkhdAnArztbesucheCS
 Id: ukhd-an-arztbesuche
 Title: "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)"
-Description: "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0)."
+Description: "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `itemWeight`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0)."
 * insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche"
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
 * ^property[=].description = "Numerischer Ordinalwert (1-4, Dictionary-Codes — kein Besuchszaehler)."
 * ^property[=].type = #decimal
 * #1 "gar nicht"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #2 "einmalig"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #3 "zweimalig"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #4 "drei oder mehrfach"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 
 ValueSet: UkhdAnArztbesucheVS
 Id: ukhd-an-arztbesuche-vs
 Title: "UKHD-AN Arztbesuche in den letzten 4 Wochen"
-Description: "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4."
+Description: "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `itemWeight` 1–4."
 * insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-arztbesuche-vs"
 * ^status = #draft
@@ -107,7 +107,7 @@ Description: "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier 
 * include codes from system UkhdAnArztbesucheCS
 * ^expansion.timestamp = "2026-10-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "gar nicht"
@@ -130,7 +130,7 @@ Description: "Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: 
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT"
 * name = "UKHDPT"
 * code[+] = PcorQuestionnaireCatalogueCS#ukhd-pt "UKHD-PT"
-* language = #de
+* language = #de-DE
 * insert Version
 * status = #draft
 * experimental = true
@@ -139,7 +139,7 @@ Description: "Zwei Items zur Vorbehandlung aus der Dictionary-Gruppe `UKHD-PT`: 
 * publisher = "BIH-CEI"
 * copyright = "Die Items dieses Bogens sind **vom Standort Heidelberg für die PCOR-MII-Erhebung zusammengestellt** und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN). **Das `UKHD`-Präfix der Dictionary-Gruppe ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe: Woher der Wortlaut stammt — eigene Formulierung des Standorts, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument —, ist nicht dokumentiert. Eine Freigabe für die Veröffentlichung liegt ebenfalls nicht dokumentiert vor; beides ist mit dem Standort zu klären.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-PT`, DOMAIN *Past Treatment*, Kategorie TCH. **Zwei Auffälligkeiten, die eine fachliche Prüfung brauchen:** (a) Die Variablen-IDs `bdkm15`/`bdkm16` passen zu keiner anderen Variable dieser Gruppen und deuten auf ein anderes Erhebungsinstrument als Ursprung — das Präfix ist im Dictionary nicht erläutert. (b) `bdkm16` fragt nach **Arztbesuchen**, nicht nach Psychotherapie, steht aber in der Gruppe *Past Treatment* mit 4-Wochen-Recall; inhaltlich gehört es eher zur Versorgungsinanspruchnahme. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-PT`, DOMAIN *Past Treatment*, Kategorie TCH. **Zwei Auffälligkeiten, die eine fachliche Prüfung brauchen:** (a) Die Variablen-IDs `bdkm15`/`bdkm16` passen zu keiner anderen Variable dieser Gruppen und deuten auf ein anderes Erhebungsinstrument als Ursprung — das Präfix ist im Dictionary nicht erläutert. (b) `bdkm16` fragt nach **Arztbesuchen**, nicht nach Psychotherapie, steht aber in der Gruppe *Past Treatment* mit 4-Wochen-Recall; inhaltlich gehört es eher zur Versorgungsinanspruchnahme. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
 
 * item[+]
   * linkId = "bdkm15"
