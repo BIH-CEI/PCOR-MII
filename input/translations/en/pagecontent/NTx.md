@@ -60,9 +60,9 @@ BAASIS and ABQ are linked: the ABQ is collected only when the BAASIS indicates n
 
 The MHI has no entity switch; which questionnaires a use case collects is determined by its manifest. The recipient manifest therefore pins MHI **and** MHI-NTx, the donor manifest only the MHI ([ADR-011](Designentscheidungen.html)).
 
-### One coherent example data set
+### Example data set
 
-Since 6 October 2026 there is a **synthetic example patient** ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)), recipient of a donor kidney. The [bundle NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) combines screening and the first quarterly monitoring at one visit: [MHI-NTx](QuestionnaireResponse-MHINTXResponse.html), [NTx follow-up questionnaire](QuestionnaireResponse-NTXVERLAUFResponse.html) and the three **metadata-only responses** to [BAASIS](QuestionnaireResponse-BAASISResponse.html), [ABQ](QuestionnaireResponse-ABQResponse.html) (sum 26 in the calculated item) and [MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.html) (11 symptoms present, distress only there). The responses to licensed questionnaires carry only `linkId`s and codes, no wording — exactly as responses arrive in exchange ([ADR-014](Designentscheidungen.html)). The generic responses (DEM, MHI, PROMIS, PHQ …) are shown by the examples of the use cases [PSS](PSS.html) and [AN](AN.html).
+The NTx example patient ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)) is the recipient of a living-donor kidney; the [bundle NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) (6 October 2026) combines screening and the first quarterly monitoring, with the three metadata-only responses to BAASIS, ABQ and MTSOSD-R59. Profile, values and what each response demonstrates: [Examples](Beispiele.html).
 
 ### Rights and status
 

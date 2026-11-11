@@ -51,7 +51,7 @@ BUNDLES = {
         "patient": "pcor-mii-exa-patient-pss",
         "fsh": ["DEMPSSResponse", "MHIPSSResponse", "OPDSFKResponse",
                 "GSLTPAQResponse", "EXPECTResponse", "IPQSResponse",
-                "WAIResponse"],
+                "WAIResponse", "PHQPANIKResponse"],
         "json": ["pcor-mii-exa-pss-phq-9-response", "pcor-mii-exa-pss-gad-7-response",
                  "pcor-mii-exa-pss-phq-15-response", "pcor-mii-exa-pss-ssd-12-response",
                  "pcor-mii-exa-pss-whodas-12-response", "pcor-mii-exa-pss-euronet-soma-response",

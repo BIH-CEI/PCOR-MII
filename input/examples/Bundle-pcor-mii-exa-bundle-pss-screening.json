@@ -800,7 +800,7 @@
           {
             "answer": [
               {
-                "valueDecimal": 3.17
+                "valueDecimal": 26
               }
             ],
             "linkId": "opd-sfk-globalwert"
@@ -998,6 +998,75 @@
           "reference": "Patient/pcor-mii-exa-patient-pss"
         },
         "authored": "2026-06-25T12:10:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://bih-cei.github.io/PCOR-MII/QuestionnaireResponse/PHQPANIKResponse",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "PHQPANIKResponse",
+        "meta": {
+          "profile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
+          ]
+        },
+        "item": [
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "phq-phq3a"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "phq-phq3b"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373067005",
+                  "system": "http://snomed.info/sct",
+                  "display": "No"
+                }
+              }
+            ],
+            "linkId": "phq-phq3c"
+          },
+          {
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "373066001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Yes"
+                }
+              }
+            ],
+            "linkId": "phq-phq3d"
+          }
+        ],
+        "language": "de-DE",
+        "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK|0.9.0",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pcor-mii-exa-patient-pss"
+        },
+        "authored": "2026-06-25T12:05:00+02:00"
       }
     },
     {

@@ -21,7 +21,7 @@
 //
 // SCORE-ITEMS: opd-sfk-globalwert und gsltpaq-score sind die im Questionnaire
 //   definierten berechneten Items; die Werte hier sind konsistent mit den
-//   Einzelantworten (OPD-SFK: Mittelwert 12 Items; GSLTPAQ: 9x3+5x2+2x1=39... 
+//   Einzelantworten (OPD-SFK: Summe der 12 Items = 26; GSLTPAQ: 9x3+5x2+2x1=39... 
 //   siehe jeweilige Instanz).
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -30,7 +30,7 @@ Instance: OPDSFKResponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "OPD-SFK — Beispielantwort"
-Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Mittelwert der zwölf Items."
+Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS-Screening-Termin: mäßig eingeschränktes Strukturniveau, Globalwert als Summenwert 26 von 48."
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
 * language = #de-DE
 * insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK)
@@ -73,10 +73,12 @@ Description: "Beispielantwort zum OPD-Strukturfragebogen (Kurzform) für den PSS
 * item[+]
   * linkId = "OPDSFK12"
   * answer.valueCoding = OpdSfkAntwortCS#trifft-eher-zu "Trifft eher zu"
-// Globalwert = Mittelwert der 12 Items = 3.17
+// Globalwert = SUMME der 12 Items (0-48, Ehrenthal et al. 2015; Gewichte 0-4):
+// 2+3+2+1+3+2+2+3+1+2+2+3 = 26. Bis 2026-11-11 stand hier faelschlich 3.17
+// (ein Mittelwert auf einer 1-5-Skala) — weder Summe noch die 0-4-Gewichte.
 * item[+]
   * linkId = "opd-sfk-globalwert"
-  * answer.valueDecimal = 3.17
+  * answer.valueDecimal = 26
 
 Instance: GSLTPAQResponse
 InstanceOf: QuestionnaireResponse

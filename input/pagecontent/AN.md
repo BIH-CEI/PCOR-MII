@@ -84,26 +84,9 @@ Der [ACE](ACE.html) trägt in derselben Spalte eine andere Angabe — *„die er
 
 Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes Item je Skala bildet die Skala nicht ab.** Deshalb trägt **keiner** dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in [ADR-003](Designentscheidungen.html). Die Antwortcodes tragen vorsorglich `itemWeight`, damit eine spätere Auswertung möglich bleibt, sobald eine Regel fachlich abgestimmt ist ([offener Punkt](Rechtelage.html#an-scoring)).
 
-### Ein zusammenhängender Beispieldatensatz
+### Beispieldatensatz
 
-Für die fünf AN-Instrumente und die [UKHD-Zusatzitems](UKHD-Zusatzitems.html) liegen ausgefüllte Beispielantworten vor — und zwar **nicht** als unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei **derselben Beispiel-Patientin**, die schon [DEM](Demographie.html) und [MHI](MHI.html) nutzen ([pcor-mii-exa-patient-an](Patient-pcor-mii-exa-patient-an.html)): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.
-
-| Beispielantwort | Zeigt |
-|---|---|
-| [ERQ6Response](QuestionnaireResponse-ERQ6Response.html) | niedrige Neubewertung bei hoher Unterdrückung — das für AN beschriebene Muster |
-| [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html) | residuelle Pathologie; belegt die über `enableWhen` abhängige Frage `edeq30` |
-| [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html) | mittlere Veränderungsmotivation; `language` = `de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde |
-| [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) | gegenläufige Items: hoch bei der unterstützenden, niedrig bei der belastenden Interaktion |
-| [ACEResponse](QuestionnaireResponse-ACEResponse.html) | zwei bejahte Items in der emotionalen Dimension; von den drei Zeitangabe-Gruppen ist **nur die erste** belegt, weil nur `ace1` bejaht ist — die beiden anderen sind per `enableWhen` nicht freigeschaltet |
-| [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.html), [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.html), [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.html), [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.html), [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.html) | ein **Initial-/Screening-Termin** über fünf UKHD-Zusatzbögen; für [UKHD-ND](Questionnaire-UKHDND.html) existiert zu diesem Termin bewusst **keine** Antwort — die erste ND-Antwort gehört zum Monitoring-Termin |
-
-**Seit dem 30.07.2026 gibt es einen zweiten Termin:** Das [Monitoring-Bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.html) bündelt neun Verlaufsantworten derselben Patientin, sechs Wochen nach dem Initial-Termin — leicht gebessert, nicht remittiert. Darin die **erste [UKHD-ND-Antwort](QuestionnaireResponse-UKHDNDMonitoringResponse.html)** (die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben), eine bewusste **Teilantwort** zu UKHD-PT (nur `bdkm16` — `bdkm15` ist ein Initial-Item) und die erste Antwort zum metadata-only-Bogen [UKHD-EDP](QuestionnaireResponse-UKHDEDPMonitoringResponse.html). Beide Termine als Bundles: [Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) · [Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html).
-
-Die UKHD-Antworten tragen dabei eine Aussage, die keine der anderen macht: Die `TIMING`-Spalte des Item Level Dictionary ist in den Questionnaires bewusst nicht modelliert — sichtbar wird sie im **Ressourcenzuschnitt der Antworten**: fünf Antworten für sechs Bögen, weil [UKHD-ND](Questionnaire-UKHDND.html) zum Initial-Termin nicht erhoben wird (Begründung auf [UKHD-Zusatzitems](UKHD-Zusatzitems.html)).
-
-**Score-Observations gibt es im AN-Block nicht.** Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe [ERQ-6](ERQ-6.html)).
-
-Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei. Alle Instanzen sind mit dem FHIR-Validator geprüft: **0 errors** (Details unter [Validierung](Validierung.html)).
+Die AN-Beispielantworten gehören zu **einer** Patientin ([pcor-mii-exa-patient-an](Patient-pcor-mii-exa-patient-an.html)) und zwei Terminen: dem Initial-/Screening-Termin 18.06.2026 ([Bundle](Bundle-pcor-mii-exa-bundle-an-initial.html), 13 Entries) und dem Monitoring-Termin 30.07.2026 ([Bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.html), 10 Entries) — leicht gebessert, nicht remittiert, mit der ersten UKHD-ND-Antwort, einer bewussten Teilantwort zu UKHD-PT und der Antwort auf den metadata-only-Bogen UKHD-EDP. Was jede Antwort belegt, warum UKHD-ND zum Initial-Termin fehlt und wie die Werte gewählt sind, steht auf [Beispiele](Beispiele.html).
 
 ### Nicht in AN erhoben
 

@@ -48,15 +48,7 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 
 ### Example patients and bundles
 
-Two synthetic example patients carry coherent **use-case datasets**; per collection visit one `Bundle` (type `collection`) groups the patient with all responses of that visit:
-
-| Bundle | Patient | Visit | Content |
-|---|---|---|---|
-| [AN — initial](Bundle-pcor-mii-exa-bundle-an-initial.html) | [patient AN](Patient-pcor-mii-exa-patient-an.html) | 2026-06-18 | DEM, MHI and the ten AN responses of the screening visit |
-| [AN — monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | [patient AN](Patient-pcor-mii-exa-patient-an.html) | 2026-07-30 | nine follow-up responses — including the **first UKHD-ND response** and the metadata-only response to UKHD-EDP |
-| [PSS — screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | [patient PSS](Patient-pcor-mii-exa-patient-pss.html) | 2026-06-25 | the full PSS battery: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI plus twelve responses to MII PRO questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) |
-
-The bundles are generated from the individual responses by `scripts/build-example-bundles.py` and checked in; the visit assignment is maintained explicitly there. The `TIMING` logic becomes visible when comparing visits: what is not collected at a visit is **absent** from its bundle rather than standing empty.
+Three synthetic example patients (AN, PSS, NTx), four visit bundles and 46 example responses are described on the [Examples](Beispiele.html) page — with profile, visit, bundle contents and what each response demonstrates. The tables above list the example response per questionnaire.
 
 <a name="use-cases"></a>
 

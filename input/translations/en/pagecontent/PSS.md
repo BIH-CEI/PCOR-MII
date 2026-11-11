@@ -76,11 +76,9 @@ The **PHQ-D panic block** (`phq3a`–`phq3d`) is something different from PHQ-4:
 - **AN only**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE and the UKHD supplementary questionnaires — see [AN](AN.html).
 - **NTx only**: BAASIS, ABQ, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire — see [NTx](NTx.html).
 
-### One coherent example data set
+### Example data set
 
-Since 1 October 2026 PSS has a **synthetic example patient** ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)): 48 years old, persistent somatic symptoms for about two years (exhaustion, back and gastrointestinal complaints), moderate somatic symptom burden (PHQ-15 = 12, SSD-12 = 22), mild depressive (PHQ-8 = 9) and anxious (GAD-7 = 7) symptoms, moderately reduced work ability (WAI 6/10).
-
-The screening visit of 25 June 2026 is bundled as a **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** and covers the **complete battery** — the PCOR-MII questionnaires (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI, PHQ-D panic block) as FHIR Shorthand instances and twelve responses to **MII PRO questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) as examples under `input/examples/`, referencing the upstream canonicals with the version pin `|2027.0.0-ballot.2`. That the full PHQ-9 is answered here is consistent with the usage rule: the screening visit is an on-site visit with an immediate physician contact. The values are coordinated, not rolled — details in the header of `PSS-Responses.fsh`.
+The PSS example patient ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)) has one screening visit on 25 June 2026, bundled as a [Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html) with the complete battery: eight PCOR-MII questionnaires as FHIR Shorthand instances and twelve responses to MII PRO questionnaires. Profile, values and what each response demonstrates: [Examples](Beispiele.html).
 
 ### Rights and status
 

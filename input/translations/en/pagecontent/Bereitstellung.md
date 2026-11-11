@@ -7,7 +7,7 @@ This page describes **how implementers can consume the PCOR-MII data definitions
 | Profiles (structural constraints) | `MII PR PRO QuestionnaireResponse`, `MII PR PRO Questionnaire` (from the MII PRO module) |
 | Questionnaire definitions | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR example (PCOR-MII plus the MII PRO module) |
 | ValueSets | frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets |
-| Examples | validated `QuestionnaireResponse`s (see [Validation](Validierung.html)) |
+| Examples | three example patients, **four visit bundles** and 46 validated `QuestionnaireResponse`s (see [Examples](Beispiele.html)) |
 
 ## Ways to get it
 

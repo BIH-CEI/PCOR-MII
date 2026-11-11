@@ -7,7 +7,7 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`, `MII PR PRO Questionnaire` (aus dem MII PRO-Modul) |
 | Questionnaire-Definitionen | **20 PCOR-MII-eigene Bögen** (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, die sechs AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, Beispiel-Questionnaire) — vollständige Tabelle: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
 | Terminologie | lokale CodeSystems/ValueSets je Antwortskala, [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html), [`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.html), [`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.html) |
-| Beispiele | zwei Beispielpatienten, **drei Termin-Bundles** und >30 validierte `QuestionnaireResponse`s (siehe [Validierung](Validierung.html)) |
+| Beispiele | drei Beispielpatient:innen, **vier Termin-Bundles** und 46 validierte `QuestionnaireResponse`s (siehe [Beispiele](Beispiele.html)) |
 | Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.html) |
 
 ## Wege, das zu bekommen

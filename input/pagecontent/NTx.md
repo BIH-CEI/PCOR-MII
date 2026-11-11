@@ -60,9 +60,9 @@ BAASIS und ABQ hängen zusammen: Der ABQ wird nur erhoben, wenn der BAASIS auf N
 
 Der MHI hat keinen Entitätsschalter; welche Bögen ein Use Case erhebt, legt sein Manifest fest. Das Empfänger-Manifest pinnt deshalb MHI **und** MHI-NTx, das Spender-Manifest nur den MHI ([ADR-011](Designentscheidungen.html)).
 
-### Ein zusammenhängender Beispieldatensatz
+### Beispieldatensatz
 
-Seit dem 06.10.2026 gibt es einen **synthetischen Beispielpatienten** ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)), Empfänger einer Spenderniere. Das [Bundle NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) fasst Screening und erstes Quartals-Monitoring an einem Termin zusammen: [MHI-NTx](QuestionnaireResponse-MHINTXResponse.html), [NTx-Verlaufsbefragung](QuestionnaireResponse-NTXVERLAUFResponse.html) sowie die drei **metadata-only-Antworten** zu [BAASIS](QuestionnaireResponse-BAASISResponse.html), [ABQ](QuestionnaireResponse-ABQResponse.html) (Summe 26 im berechneten Item) und [MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.html) (11 aufgetretene Symptome, Belastung nur dort). Die Antworten lizenzierter Bögen tragen nur `linkId`s und Codes, keinen Wortlaut — genau so, wie Antworten im Austausch ankommen ([ADR-014](Designentscheidungen.html)). Die generischen Antworten (DEM, MHI, PROMIS, PHQ …) zeigen die Beispiele der Use Cases [PSS](PSS.html) und [AN](AN.html).
+Der NTx-Beispielpatient ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)) ist Empfänger einer Lebendspende; das [Bundle NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) (06.10.2026) fasst Screening und erstes Quartals-Monitoring zusammen, mit den drei metadata-only-Antworten zu BAASIS, ABQ und MTSOSD-R59. Profil, Werte und was jede Antwort belegt: [Beispiele](Beispiele.html).
 
 ### Rechtelage und Status
 

@@ -99,15 +99,7 @@ Praktische Checkliste für Mapper/ePRO-App/Empfänger-Server-Bestückung:
 
 ## Validierte Beispiele als Referenz
 
-Der Beispielbestand ist seit dem 01.10.2026 als **drei Use-Case-Bundles** organisiert — je Erhebungstermin ein `collection`-Bundle mit Patient und allen Antworten des Termins, alle drei mit **0 Errors** validiert:
-
-| Bundle | Termin | Entries |
-|---|---|---|
-| [AN — Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) | 18.06.2026 | 13 |
-| [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | 30.07.2026 | 10 |
-| [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | 25.06.2026 | 20 |
-
-Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html)); die Bundles entstehen daraus mit `scripts/build-example-bundles.py`.
+Der Beispielbestand ist als **vier Use-Case-Bundles** organisiert — je Erhebungstermin ein `collection`-Bundle mit Patient und allen Antworten des Termins (AN Initial 13, AN Monitoring 10, PSS Screening 21, NTx Erstbefragung 6 Entries), alle mit **0 Errors**. Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel; Patient:innen, Bundles und alle 46 Antworten mit dem, was sie belegen, stehen auf [Beispiele](Beispiele.html). Die Bundles entstehen mit `scripts/build-example-bundles.py` aus den Einzelantworten.
 
 Die Beispiele sind mit **0 Errors** geprüft, aber nicht warnungsfrei — die verbleibenden Warnungsklassen sind bekannt und akzeptiert:
 

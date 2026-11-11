@@ -100,16 +100,11 @@ A practical checklist for mappers, ePRO apps and populating a recipient server:
 
 ## Validated examples for reference
 
-The three original examples, all with **0 errors, 0 warnings**:
+The example set is organised as **four use-case bundles** — one `collection` bundle per assessment visit with the patient and all responses of that visit (AN initial 13, AN monitoring 10, PSS screening 21, NTx initial assessment 6 entries), all at **0 errors**. Every contained response also exists as a stand-alone example; patients, bundles and all 46 responses with what they demonstrate are on [Examples](Beispiele.html). The bundles are generated from the individual responses by `scripts/build-example-bundles.py`.
 
-- [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html)
-- [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html)
+The examples are checked at **0 errors** but are not warning-free; the remaining warnings are known and accepted:
 
-Plus the **AN data set** — five responses and two score observations from a single assessment session with the same patient (overview on the [AN](AN.html) page): [ERQ6Response](QuestionnaireResponse-ERQ6Response.html), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html), [SSUK2Response](QuestionnaireResponse-SSUK2Response.html), [ACEResponse](QuestionnaireResponse-ACEResponse.html), and [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.html) and [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.html).
-
-These seven are checked at **0 errors** but are not warning-free, and both remaining warnings are known and accepted:
-
-- `dom-6` (missing narrative) on all seven — listed as ignorable in the table above
+- `dom-6` (missing narrative) on all example responses — listed as ignorable in the table above
 - a `java.net.SocketTimeoutException` during the UCUM check of the two `valueQuantity` values — a network timeout against the terminology server, not a finding about the resource
 
 **One real defect found while validating:** the ERQ-6 example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: *"structural error: elements in the wrong order"*. A `QuestionnaireResponse` must list its items in the **order of the questionnaire**; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.

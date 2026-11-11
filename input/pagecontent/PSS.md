@@ -76,11 +76,9 @@ Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier 
 - **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Zusatzbögen — siehe [AN](AN.html).
 - **Nur in NTx**: BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung — siehe [NTx](NTx.html).
 
-### Ein zusammenhängender Beispieldatensatz
+### Beispieldatensatz
 
-Für PSS gibt es seit dem 01.10.2026 einen **synthetischen Beispielpatienten** ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).
-
-Der Screening-Termin 25.06.2026 ist als **[Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html)** gebündelt und umfasst die **vollständige Batterie** — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI, PHQ-D Panik-Block) als FHIR-Shorthand-Instanzen und zwölf Antworten auf **MII-PRO-Questionnaires** (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter `input/examples/`, referenziert gegen die Upstream-Canonicals mit Versionspin `|2027.0.0-ballot.2`. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von `PSS-Responses.fsh`.
+Der PSS-Beispielpatient ([pcor-mii-exa-patient-pss](Patient-pcor-mii-exa-patient-pss.html)) hat einen Screening-Termin 25.06.2026, gebündelt als [Bundle](Bundle-pcor-mii-exa-bundle-pss-screening.html) mit der vollständigen Batterie: acht PCOR-MII-Bögen als FHIR-Shorthand-Instanzen und zwölf Antworten auf MII-PRO-Questionnaires. Profil, Werte und was jede Antwort belegt: [Beispiele](Beispiele.html).
 
 ### Rechtelage und Status
 

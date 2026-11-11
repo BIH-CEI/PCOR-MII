@@ -51,16 +51,7 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 
 ### Beispielpatienten und Bundles
 
-Drei synthetische Beispielpatienten tragen zusammenhängende **Use-Case-Datensätze**; je Erhebungstermin bündelt ein `Bundle` (type `collection`) den Patient mit allen Antworten des Termins:
-
-| Bundle | Patient | Termin | Inhalt |
-|---|---|---|---|
-| [AN — Initial](Bundle-pcor-mii-exa-bundle-an-initial.html) | [Patientin AN](Patient-pcor-mii-exa-patient-an.html) | 18.06.2026 | DEM, MHI und die zehn AN-Antworten des Screening-Termins |
-| [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html) | [Patientin AN](Patient-pcor-mii-exa-patient-an.html) | 30.07.2026 | neun Verlaufsantworten — darunter die **erste UKHD-ND-Antwort** und die metadata-only-Antwort zu UKHD-EDP |
-| [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.html) | [Patient PSS](Patient-pcor-mii-exa-patient-pss.html) | 25.06.2026 | die vollständige PSS-Batterie: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI plus zwölf Antworten auf MII-PRO-Questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) |
-| [NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) | [Patient NTx](Patient-pcor-mii-exa-patient-ntx.html) | 06.10.2026 | Screening und erstes Quartals-Monitoring an einem Termin: MHI-NTx, NTx-Verlaufsbefragung sowie die drei **metadata-only-Antworten** zu BAASIS, ABQ und MTSOSD-R59 (nur `linkId`s und Codes, kein Wortlaut) |
-
-Die Bundles werden mit `scripts/build-example-bundles.py` aus den Einzelantworten erzeugt und eingecheckt; die Termin-Zuordnung ist dort explizit gepflegt. Die `TIMING`-Logik wird am Terminvergleich sichtbar: Was zu einem Termin nicht erhoben wird, **fehlt** in dessen Bundle, statt leer dazustehen.
+Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 46 Beispielantworten sind auf der Seite [Beispiele](Beispiele.html) beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.
 
 <a name="use-cases"></a>
 

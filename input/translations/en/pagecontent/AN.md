@@ -84,26 +84,9 @@ The [ACE](ACE.html) carries a different entry in the same column — *"the first
 
 For the analysis the consequence is the same throughout: **one most discriminating item per scale does not represent the scale.** That is why **none** of these subsets carries a score — details on the respective instrument pages and in [ADR-003](Designentscheidungen.html). The answer codes carry `itemWeight` as a precaution so that an evaluation remains possible once a rule is agreed ([open point](Rechtelage.html#an-scoring)).
 
-### One coherent example data set
+### Example data set
 
-For the five AN instruments and the [UKHD supplementary items](UKHD-Zusatzitems.html) there are filled-in example responses — **not** as unconnected test data, but as one assessment visit (18 June 2026) of **the same example patient** that [DEM](Demographie.html) and [MHI](MHI.html) already use ([pcor-mii-exa-patient-an](Patient-pcor-mii-exa-patient-an.html)): anorexia nervosa, restricting type, since 2020, in treatment, weight partially restored. The data set can therefore be read as a whole.
-
-| Example response | Shows |
-|---|---|
-| [ERQ6Response](QuestionnaireResponse-ERQ6Response.html) | low reappraisal with high suppression — the pattern described for AN |
-| [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html) | residual pathology; exercises the `enableWhen`-dependent question `edeq30` |
-| [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html) | moderate motivation to change; `language` = `de-CH` because the validated Swiss version was presented |
-| [SSUK2Response](QuestionnaireResponse-SSUK2Response.html) | opposing items: high on supportive, low on problematic interaction |
-| [ACEResponse](QuestionnaireResponse-ACEResponse.html) | two affirmed items in the emotional dimension; of the three timing groups **only the first** is filled, because only `ace1` is affirmed — the other two are not enabled by `enableWhen` |
-| [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.html), [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.html), [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.html), [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.html), [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.html) | one **initial/screening visit** across five UKHD questionnaires; for [UKHD-ND](Questionnaire-UKHDND.html) there is deliberately **no** response at this visit — the first ND response belongs to the monitoring visit |
-
-**Since 30 July 2026 there is a second visit:** the [monitoring bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.html) collects nine follow-up responses of the same patient six weeks after the initial visit — slightly improved, not remitted. It contains the **first [UKHD-ND response](QuestionnaireResponse-UKHDNDMonitoringResponse.html)** (the group is only collected between admission and discharge), a deliberate **partial response** to UKHD-PT (only `bdkm16` — `bdkm15` is an initial item) and the first response to the metadata-only questionnaire [UKHD-EDP](QuestionnaireResponse-UKHDEDPMonitoringResponse.html). Both visits as bundles: [initial](Bundle-pcor-mii-exa-bundle-an-initial.html) · [monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.html).
-
-The UKHD responses make a statement none of the others makes: the `TIMING` column of the Item Level Dictionary is deliberately not modelled in the questionnaires — it becomes visible in the **resource cut of the responses**: five responses for six questionnaires, because [UKHD-ND](Questionnaire-UKHDND.html) is not collected at the initial visit (rationale on [UKHD supplementary items](UKHD-Zusatzitems.html)).
-
-**There are no score Observations in the AN block.** Until release 0.3.0 two ERQ scores were included; they were withdrawn on 1 October 2026 because the questionnaire is not the ERQ-S and therefore has no validated scoring rule (see [ERQ-6](ERQ-6.html)).
-
-The answer values are chosen deliberately, not at random: a uniformly medium profile would have put both ERQ-6 item groups on the same value and hidden the opposition of the SSUK-2 items. The rationale is in the header comment of each FSH file. All instances are checked with the FHIR validator: **0 errors** (details under [Validation](Validierung.html)).
+The AN example responses belong to **one** patient ([pcor-mii-exa-patient-an](Patient-pcor-mii-exa-patient-an.html)) and two visits: the initial/screening visit of 18 June 2026 ([bundle](Bundle-pcor-mii-exa-bundle-an-initial.html), 13 entries) and the monitoring visit of 30 July 2026 ([bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.html), 10 entries) — slightly improved, not remitted, with the first UKHD-ND response, a deliberate partial response to UKHD-PT and the response to the metadata-only questionnaire UKHD-EDP. What each response demonstrates, why UKHD-ND is absent at the initial visit and how the values were chosen is on [Examples](Beispiele.html).
 
 ### Not collected in AN
 
