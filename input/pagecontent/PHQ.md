@@ -118,7 +118,7 @@ Auch hier sind alle Zuordnungen 1:1; es ändert sich ausschließlich die `linkId
 
 ### Quellen
 
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 - Lizenz: PHQ / PHQ-D © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
 - Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
 - PHQ-SADS: Kroenke K, Spitzer RL, Williams JBW, Löwe B. *The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales: a systematic review*. Gen Hosp Psychiatry. 2010;32(4):345–359. [doi:10.1016/j.genhosppsych.2010.03.006](https://doi.org/10.1016/j.genhosppsych.2010.03.006)

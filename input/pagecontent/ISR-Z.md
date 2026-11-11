@@ -30,6 +30,6 @@ ICD-10-Symptom-Rating (ISR) © Tritt, von Heymann, Zaudig, Zacharias, Söllner &
 ### Quellen
 
 - Entwicklung: Tritt K, von Heymann F, Zaudig M, et al. *Entwicklung des Fragebogens „ICD-10-Symptom-Rating" (ISR).* Z Psychosom Med Psychother 2008;54(4):409–418. [doi:10.13109/zptm.2008.54.4.409](https://doi.org/10.13109/zptm.2008.54.4.409)
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

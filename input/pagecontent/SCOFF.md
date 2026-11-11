@@ -36,6 +36,6 @@ Das MII-PRO-Modul liefert ein vollständiges Beispiel mit (`mii-exa-pro-scoff-re
 
 - Entwicklung: Morgan JF, Reid F, Lacey JH. *The SCOFF questionnaire: assessment of a new screening tool for eating disorders.* BMJ 1999;319(7223):1467–1468. [doi:10.1136/bmj.319.7223.1467](https://doi.org/10.1136/bmj.319.7223.1467)
 - Deutscher Kontext: Hölling H, Schlack R. *Essstörungen im Kindes- und Jugendalter.* Bundesgesundheitsblatt 2007;50:794–799. [doi:10.1007/s00103-007-0242-6](https://doi.org/10.1007/s00103-007-0242-6)
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

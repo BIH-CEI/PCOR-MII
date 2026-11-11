@@ -30,6 +30,6 @@ EURONET-SOMA-Items © Rief, Burton, Frostholm et al. 2017 (Psychosomatic Medicin
 ### Quellen
 
 - Rief W, Burton C, Frostholm L, et al. *Core Outcome Domains for Clinical Trials on Somatic Symptom Disorder, Bodily Distress Disorder, and Functional Somatic Syndromes: European Network on Somatic Symptom Disorders Recommendations.* Psychosom Med 2017;79(9):1008–1015. [doi:10.1097/PSY.0000000000000502](https://doi.org/10.1097/PSY.0000000000000502)
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

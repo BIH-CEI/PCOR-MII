@@ -40,4 +40,4 @@ Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit (`mii-exa-pro-gad-7
 
 - Entwicklung: Spitzer RL, Kroenke K, Williams JBW, Löwe B. *A brief measure for assessing generalized anxiety disorder: the GAD-7*. Arch Intern Med. 2006;166(10):1092–1097. [doi:10.1001/archinte.166.10.1092](https://doi.org/10.1001/archinte.166.10.1092)
 - Deutsche Validierung: Löwe B et al. *Validation and standardization of the Generalized Anxiety Disorder Screener (GAD-7) in the general population*. Med Care. 2008;46(3):266–274. [doi:10.1097/MLR.0b013e318160d093](https://doi.org/10.1097/MLR.0b013e318160d093)
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)

@@ -39,6 +39,6 @@ Whiteley-7 — Fink, Ewald, Jensen, Sørensen, Engberg, Holm & Munk-Jørgensen 1
 - Ursprung: Pilowsky I. *Dimensions of hypochondriasis.* Br J Psychiatry 1967;113:89–93
 - WI-7: Fink P, Ewald H, Jensen J, et al. *Screening for somatization and hypochondriasis in primary care and neurological in-patients.* J Psychosom Res 1999;46(3):261–273. [doi:10.1016/S0022-3999(98)00092-0](https://doi.org/10.1016/S0022-3999(98)00092-0)
 - Deutsche Fassung: Rief W, Hiller W, Geissner E, Fichter MM. *Hypochondrie: Erfassung und erste klinische Ergebnisse.* Z Klin Psychol 1994;23(1):34–42
-- Raw-Package: [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

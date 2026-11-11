@@ -14,10 +14,10 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Beispiel-QuestionnaireResponse
 
-Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-15-response`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/QuestionnaireResponse-mii-exa-pro-phq-15-response.html) (Upstream, Simplifier). Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
+Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-15-response`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-phq-15-response.html) (Upstream, Simplifier). Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
 
 ### Quellen
 
-- [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 - Lizenz: PHQ / PHQ-15 © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung erforderlich. Deutsche Fassung: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002).
 - Referenz: Kroenke K, Spitzer RL, Williams JBW. The PHQ-15. *Psychosom Med.* 2002;64(2):258–266.

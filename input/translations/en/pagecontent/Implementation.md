@@ -4,7 +4,7 @@ This page describes how the questionnaires defined in the PCOR-MII Implementatio
 
 The capture system may sit **outside FHIR** (REDCap, LimeSurvey, in-house ePRO apps, paper with a data-entry form) **or run directly in FHIR** (for example via LHC-Forms or an SDC-capable renderer against a PCOR-MII container). **FHIR is primarily the storage and exchange form** — the structured, versioned and validatable representation of the captured data between sites, consortia and research recipients.
 
-Either way the result is `QuestionnaireResponse`s, and where applicable `Observation`s, conforming to the [`MII PR PRO QuestionnaireResponse` profile](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/StructureDefinition-mii-pr-pro-questionnaire-response.html). Validation and exchange therefore look the same in both cases — see [Validation](Validierung.html) and [Distribution](Bereitstellung.html).
+Either way the result is `QuestionnaireResponse`s, and where applicable `Observation`s, conforming to the [`MII PR PRO QuestionnaireResponse` profile](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html). Validation and exchange therefore look the same in both cases — see [Validation](Validierung.html) and [Distribution](Bereitstellung.html).
 
 ### From questionnaire to response
 

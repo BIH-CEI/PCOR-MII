@@ -17,10 +17,10 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Beispiel-QuestionnaireResponse
 
-Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-9-response`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/QuestionnaireResponse-mii-exa-pro-phq-9-response.html) (Upstream, Simplifier), sowie das Bundle `mii-exa-pro-phq-9-bundle` inklusive berechneter Score-`Observation`. Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
+Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-phq-9-response`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-phq-9-response.html) (Upstream, Simplifier), sowie das Bundle `mii-exa-pro-phq-9-bundle` inklusive berechneter Score-`Observation`. Die Pflege erfolgt zentral im MII PRO-Modul und wird hier bewusst nicht dupliziert.
 
 ### Quellen
 
-- [PHQ-9 im MII PRO IG (Doku)](https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html) · [MII PRO 2027.0.0-ballot.2 (CI-Build, package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- [PHQ-9 im MII PRO IG (Doku)](https://www.medizininformatik-initiative.de/Kerndatensatz/KDS_PRO/MIIIGModulPRO-PRO-Bibliothek-PHQ-9.html) · [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 - Lizenz: PHQ / PHQ-9 © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung erforderlich. Deutsche Fassung: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002).
 - Referenz: Kroenke K, Spitzer RL, Williams JBW. The PHQ-9. *J Gen Intern Med.* 2001;16(9):606–613.

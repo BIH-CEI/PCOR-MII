@@ -10,9 +10,9 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- IG-Doku-Seite: [PROMIS-16 im MII PRO IG (CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-16.html)
-- Raw-Resource: [PROMIS-16 Questionnaire (MII PRO CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-16.html)
-- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/promis.html)
+- IG-Doku-Seite: [PROMIS-16 im MII PRO IG](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html)
+- Raw-Resource: [PROMIS-16 Questionnaire (MII PRO 2027.0.0-ballot.2)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html)
+- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html)
 - Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"
 
 ### Eigenschaften
@@ -112,7 +112,7 @@ Für PCOR-MII heißt das: PROMIS-16 ist als **Datenerfassungsinstrument** nutzba
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/StructureDefinition-mii-pr-pro-questionnaire-response.html) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-16-response`**](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 ### Item-Tabelle
 

@@ -37,7 +37,7 @@ PROMIS-Ressourcen unterliegen dem 4-Schichten-Modell aus dem MII PRO-Modul:
 3. **Offizielle deutsche Übersetzungen** bereitgestellt durch PCOR-MII, kuratiert durch PROMIS National Center Deutschland
 4. **LOINC-Codes** © Regenstrief Institute
 
-Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/promis.html).
+Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html).
 
 ### Item-Überlapp
 
@@ -49,6 +49,6 @@ Bei kombinierter Erfassung sollten die 11 überlappenden Items nicht doppelt erh
 
 ### Quellen
 
-- Übergeordneter IG: [MII PRO-Modul IG-Doku (CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/index.html) · [PRO-Bibliothek PROMIS-Sektion](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/promis.html) · [Raw-Package (CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/package.tgz)
+- Übergeordneter IG: [MII PRO-Modul IG-Doku](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/index.html) · [PRO-Bibliothek PROMIS-Sektion](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html) · [Raw-Package](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 - PROMIS Health Organization: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
 - PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer

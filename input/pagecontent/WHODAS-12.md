@@ -10,8 +10,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG (CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-whodas-whodas12.html)
-- Raw-Resource: [WHODAS 2.0 Questionnaire (MII PRO CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-whodas-whodas12.html)
+- IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html)
+- Raw-Resource: [WHODAS 2.0 Questionnaire (MII PRO 2027.0.0-ballot.2)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html)
 - Offizielle Quelle: WHO. *Measuring Health and Disability: Manual for WHODAS 2.0*. Genf: WHO; 2010. ISBN 9789241547598.
 - Deutsche Wortlaute: validiertes PCOR-MII Item Level Dictionary
 
@@ -35,8 +35,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 ### Hinweise
 
 - Der Score wird als `ObservationDefinition` (`mii-obsdef-pro-score-whodas12-simple-sum`, 0–48, SNOMED `715823002`) abgebildet.
-- Die Links führen auf die Artefaktseiten des CI-Builds des MII-PRO-Moduls (WHODAS-12 ist seit 2026.5.0 enthalten); die Canonical-URL ist stabil.
+- Die Links führen auf die Artefaktseiten der formalen Veröffentlichung des MII-PRO-Moduls (WHODAS-12 ist seit 2026.5.0 enthalten); die Canonical-URL ist stabil.
 
 ### Beispiel-QuestionnaireResponse
 
-Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-whodas12-response-01`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/QuestionnaireResponse-mii-exa-pro-whodas12-response-01.html) (Upstream, Simplifier).
+Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-whodas12-response-01`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-whodas12-response-01.html) (Upstream, Simplifier).

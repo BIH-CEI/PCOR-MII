@@ -10,9 +10,9 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- IG-Doku-Seite: [PROMIS-29 im MII PRO IG (CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-29.html)
-- Raw-Resource: [PROMIS-29 Questionnaire (MII PRO CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-29.html)
-- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/promis.html)
+- IG-Doku-Seite: [PROMIS-29 im MII PRO IG](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-29.html)
+- Raw-Resource: [PROMIS-29 Questionnaire (MII PRO 2027.0.0-ballot.2)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-29.html)
+- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html)
 - Offizielle deutsche Quelle: PHO PDF "PROMIS-29 Profile v2.1 German, 06 April 2020"
 
 ### Eigenschaften
@@ -31,7 +31,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 Das MII PRO-Modul liefert ein vollständiges, professionell kuratiertes QR-Beispiel direkt mit:
 
-- [**`mii-exa-pro-promis-29-response`**](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/QuestionnaireResponse-mii-exa-pro-promis-29-response.html) (Upstream, Simplifier) — vollständige Antwort über alle 7 Domänen + Schmerzintensität, konform zum `MII PR PRO QuestionnaireResponse`-Profil (validiert: 0 Errors).
+- [**`mii-exa-pro-promis-29-response`**](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-promis-29-response.html) (Upstream, Simplifier) — vollständige Antwort über alle 7 Domänen + Schmerzintensität, konform zum `MII PR PRO QuestionnaireResponse`-Profil (validiert: 0 Errors).
 
 Diese Referenz wird hier bewusst **nicht dupliziert** — Pflege erfolgt zentral im MII PRO-Modul.
 

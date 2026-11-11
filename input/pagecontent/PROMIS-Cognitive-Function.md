@@ -10,8 +10,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- Raw-Resource: [PROMIS Cognitive Function SF 4a Questionnaire (MII PRO CI-Build)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html) (eine dedizierte IG-Doku-Seite gibt es im MII PRO IG noch nicht)
-- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/promis.html)
+- Raw-Resource: [PROMIS Cognitive Function SF 4a Questionnaire (MII PRO 2027.0.0-ballot.2)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html) (eine dedizierte IG-Doku-Seite gibt es im MII PRO IG noch nicht)
+- Lizenz & Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): [PROMIS-Lizenzierung](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html)
 
 ### Eigenschaften
 
@@ -27,7 +27,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Beispiel-QuestionnaireResponse
 
-[**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/branches/dev/StructureDefinition-mii-pr-pro-questionnaire-response.html) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
+[**`pcor-mii-exa-promis-cognitive-function-response`**](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html) — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html) (`meta.profile`: `mii-pr-pro-questionnaire-response|2026.4.1`).
 
 Im **50-First-Patients Pilot-Datenaustausch** ist dieses Instrument zusammen mit PROMIS-29 Teil der PROMIS-33-Abdeckung — siehe [PROMIS-33](PROMIS-33.html).
 
