@@ -61,7 +61,7 @@ dependencies:
 
 ```
 
-PCOR-MII selbst liegt in **keinem Package-Register**; das Package jeder Veröffentlichung gibt es als [`package.tgz` auf dem IG](https://bih-cei.github.io/PCOR-MII/package.tgz) (entpacken nach `~/.fhir/packages/pcor-mii#<version>/package/`). Das MII-PRO-Modul erscheint nach jedem Release zuerst als `package.tgz` seiner [formalen Publikation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz) und erst danach im Register — 2027.0.0-ballot.2 ist dort noch nicht angekommen; die CI dieses IG installiert es deshalb aus der Publikation.
+PCOR-MII selbst liegt in **keinem Package-Register**; das Package jeder Veröffentlichung gibt es als `package.tgz` auf dem IG (`https://bih-cei.github.io/PCOR-MII/package.tgz`) (entpacken nach `~/.fhir/packages/pcor-mii#<version>/package/`). Das MII-PRO-Modul erscheint nach jedem Release zuerst als `package.tgz` seiner [formalen Publikation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz) und erst danach im Register — 2027.0.0-ballot.2 ist dort noch nicht angekommen; die CI dieses IG installiert es deshalb aus der Publikation.
 
 #### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
 

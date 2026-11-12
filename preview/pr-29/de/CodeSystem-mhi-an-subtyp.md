@@ -24,7 +24,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MHI Anorexia-nervosa-Subtyp (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-12T18:10:53+00:00",
+  "date" : "2026-11-12T18:22:58+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
