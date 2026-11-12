@@ -57,9 +57,43 @@ jobs:
           chmod +x _updatePublisher.sh
           ./_updatePublisher.sh -y
 
+      # MII-weiter Paket-Cache (Muster: kerndatensatzmodul-intensivmedizin, mii-testdata):
+      # der cache-store-Branch des fhir-package-store traegt u. a. de.gematik.isik 6.0.0
+      # MIT nachgebauten Snapshots (das Registry-Paket hat keine), hl7.fhir.uv.sdc 4.0.0
+      # und die Terminologie-Pakete. Nur fehlende Pakete werden uebernommen (cp -n).
+      - name: FHIR-Paket-Cache aus dem fhir-package-store laden
+        uses: actions/checkout@v4
+        with:
+          repository: medizininformatik-initiative/fhir-package-store
+          ref: cache-store
+          path: .fhir-package-store
+          persist-credentials: false
+
+      - name: Paket-Cache nach ~/.fhir uebernehmen
+        run: |
+          mkdir -p ~/.fhir/packages
+          cp -rn .fhir-package-store/packages/* ~/.fhir/packages/ || true
+          rm -rf .fhir-package-store
+
+      # Das MII-PRO-Modul wird formal unter seinem GitHub-Pages-Canonical publiziert
+      # (package.tgz), bevor es im Simplifier-Register liegt. Solange die gepinnte
+      # Version dort fehlt, holt dieser Schritt sie aus der Publikation; liegt sie
+      # schon im Cache (Registry oder actions/cache), passiert nichts.
+      - name: MII-PRO-Modul aus der formalen Publikation installieren, falls nicht im Cache
+        run: |
+          PKG=de.medizininformatikinitiative.kerndatensatz.pros
+          VER=$(grep -E "^  $PKG:" sushi-config.yaml | awk '{print $2}')
+          DIR="$HOME/.fhir/packages/$PKG#$VER"
+          if [ -d "$DIR/package" ]; then echo "im Cache: $PKG#$VER"; exit 0; fi
+          curl -fsSL "https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz" -o /tmp/pros.tgz
+          mkdir -p /tmp/pros && tar -xzf /tmp/pros.tgz -C /tmp/pros
+          GOT=$(python3 -c "import json;print(json.load(open('/tmp/pros/package/package.json'))['version'])")
+          if [ "$GOT" != "$VER" ]; then echo "Publikation liefert $GOT, gepinnt ist $VER" >&2; exit 1; fi
+          mkdir -p "$DIR" && mv /tmp/pros/package "$DIR/package"
+          echo "installiert: $PKG#$VER aus der Publikation"
+
       - name: Run SUSHI (triggers FHIR package download to ~/.fhir/packages)
         run: |
-          npm install -g fsh-sushi
           sushi .
 
       - name: Render PROMIS translation tables into pagecontent

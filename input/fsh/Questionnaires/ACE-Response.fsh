@@ -10,7 +10,7 @@
 //   die uebrigen drei. Das ergibt ein plausibles Profil — die emotionalen
 //   Belastungen sind die haeufigsten ACE-Kategorien und in AN-Stichproben
 //   ueberrepraesentiert — und belegt technisch beides: bejahte und verneinte
-//   Items, beide ueber dasselbe DemJaNeinVS.
+//   Items, beide als SNOMED-Ja/Nein (ADR-013).
 //
 //   ace3 (sexueller Missbrauch) steht ABSICHTLICH auf "nein". Alle fuenf Items
 //   nutzen dasselbe ValueSet und denselben Datentyp, technisch belegt eine
@@ -56,9 +56,9 @@
 //   Outcomes, deshalb traegt die Antwort mii-pr-pro-questionnaire-response
 //   (Basis: SDC QuestionnaireResponse). DEM und MHI tun das bewusst NICHT —
 //   sie sind keine PROs. Die Version ist absichtlich nicht angepinnt; sie loest
-//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die drei aelteren
-//   Handbeispiele unter input/examples/ pinnen noch |2026.4.1 und laufen damit
-//   der Abhaengigkeit (2026.7.0) hinterher.
+//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die Handbeispiele
+//   unter input/examples/ pinnen die Questionnaire-Canonical auf die
+//   Abhaengigkeit (|2027.0.0-ballot.2).
 // ─────────────────────────────────────────────────────────────────────────────
 
 Instance: ACEResponse
@@ -76,27 +76,27 @@ Description: "Vollständig ausgefüllte Beispielantwort zum PCOR-MII-Komposit au
 // ── Emotionale Misshandlung ───────────────────────────────────────────────────
 * item[+]
   * linkId = "ace1"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 
 // ── Körperliche Misshandlung ──────────────────────────────────────────────────
 * item[+]
   * linkId = "ace2"
-  * answer.valueCoding = DemAntwortCS#nein "Nein"
+  * answer.valueCoding = $SCT#373067005 "No"
 
 // ── Sexueller Missbrauch (bewusst "nein", siehe Kopfkommentar) ────────────────
 * item[+]
   * linkId = "ace3"
-  * answer.valueCoding = DemAntwortCS#nein "Nein"
+  * answer.valueCoding = $SCT#373067005 "No"
 
 // ── Emotionale Vernachlässigung ───────────────────────────────────────────────
 * item[+]
   * linkId = "ace4"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 
 // ── Körperliche Vernachlässigung ──────────────────────────────────────────────
 * item[+]
   * linkId = "ace5"
-  * answer.valueCoding = DemAntwortCS#nein "Nein"
+  * answer.valueCoding = $SCT#373067005 "No"
 
 // ── Zeitliche Einordnung des Ereignisses aus ace1 ─────────────────────────────
 // Freigeschaltet, weil ace1 bejaht ist. Die Gruppen zu ace2 und ace3 fehlen

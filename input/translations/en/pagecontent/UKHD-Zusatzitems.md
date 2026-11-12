@@ -42,18 +42,18 @@ Group membership remains machine-readable regardless: every item carries its dic
 
 **No score, no instrument codes:** there is no instrument that could be scored. LOINC 2.83 and SNOMED CT 2026-05-01 return zero hits for the underlying concepts (searched via the fhir-terminology MCP, 2026-10-01); `Questionnaire.code` carries each questionnaire's local catalogue code from [pcor-questionnaire-catalogue](CodeSystem-pcor-questionnaire-catalogue.html).
 
-**Yes/no** uses the project-wide [DemJaNeinVS](ValueSet-dem-ja-nein.html) (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose `ukhd-an-*` prefix in id and canonical names the site and the entity, not a resource.
+**Yes/no** as SNOMED CT `373066001`/`373067005` inline per [ADR-013](Designentscheidungen.html) (dictionary coding 1 = yes / 0 = no, documentary). The remaining scales are dedicated CodeSystems whose `ukhd-an-*` prefix in id and canonical names the site and the entity, not a resource.
 
-### Answer scales — `ordinalValue` only where the scale is ordinal
+### Answer scales — `itemWeight` only where the scale is ordinal
 
-| Scale (questionnaire) | `ordinalValue` | Rationale |
+| Scale (questionnaire) | `itemWeight` | Rationale |
 |---|---|---|
 | [ukhd-an-arztbesuche](CodeSystem-ukhd-an-arztbesuche.html) — `bdkm16` (UKHD-PT) | **yes**, 1–4 | monotonically increasing frequency, last step open-ended |
 | [ukhd-an-psychotherapie](CodeSystem-ukhd-an-psychotherapie.html) — `bdkm15` (UKHD-PT) | **no** | three temporal references, not a quantity; someone in treatment both earlier *and* now has no step |
 | [ukhd-an-behandlungsstatus](CodeSystem-ukhd-an-behandlungsstatus.html) — `treatment_outpatient` (UKHD-CT) | **no** | mixes two axes: 2→3 is a status change, 3→4 a setting change |
 | [ukhd-an-dauer-angabe](CodeSystem-ukhd-an-dauer-angabe.html), [ukhd-an-bmi-angabe](CodeSystem-ukhd-an-bmi-angabe.html) (UKHD-ANB) | **no** | units and a reporting status, not steps; the measured value lives in the helper item |
 
-**The trap in `bdkm16`:** the `ordinalValue` carries the dictionary codes 1–4 and thus rank positions, **not** visit counts — "not at all" is 1, not 0. A count-based analysis needs the mapping 1→0, 2→1, 3→2, 4→3+.
+**The trap in `bdkm16`:** the `itemWeight` carries the dictionary codes 1–4 and thus rank positions, **not** visit counts — "not at all" is 1, not 0. A count-based analysis needs the mapping 1→0, 2→1, 3→2, 4→3+.
 
 <a name="timing"></a>
 

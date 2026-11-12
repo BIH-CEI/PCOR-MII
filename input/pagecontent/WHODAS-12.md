@@ -10,8 +10,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 ### Quellen
 
-- IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current)
-- Raw-Resource: [MII PRO Package (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0)
+- IG-Doku-Seite: [WHODAS 2.0 im MII PRO IG](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html)
+- Raw-Resource: [WHODAS 2.0 Questionnaire (MII PRO 2027.0.0-ballot.2)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html)
 - Offizielle Quelle: WHO. *Measuring Health and Disability: Manual for WHODAS 2.0*. Genf: WHO; 2010. ISBN 9789241547598.
 - Deutsche Wortlaute: validiertes PCOR-MII Item Level Dictionary
 
@@ -19,7 +19,7 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 
 - **Items**: 12 (5-Punkt-Skala 0–4), 6 ICF-Domänen
 - **Primärsprache**: Englisch mit deutschen Translations/Designations
-- **Antwortmodellierung**: `answerValueSet` (`mii-vs-pro-whodas-12-answer-list`) mit ordinalValue-Gewichten
+- **Antwortmodellierung**: `answerValueSet` (`mii-vs-pro-whodas-12-answer-list`) mit itemWeight-Gewichten
 - **Scoring**: einfacher Summenscore 0–48 (WHO „simple scoring"), höher = stärkere Beeinträchtigung (Einschränkungsscore); IRT-basiertes 0–100-Scoring als Folgearbeit
 - **Capabilities**: displayable, collectable, calculatable, extractable, domain-aligned
 
@@ -35,8 +35,8 @@ PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eig
 ### Hinweise
 
 - Der Score wird als `ObservationDefinition` (`mii-obsdef-pro-score-whodas12-simple-sum`, 0–48, SNOMED `715823002`) abgebildet.
-- Die Simplifier-Links lösen auf, sobald **v2026.5.0** des MII PRO-Moduls nach Simplifier publiziert ist (WHODAS-12 ist ab 2026.5.0 enthalten); die Canonical-URL ist stabil.
+- Die Links führen auf die Artefaktseiten der formalen Veröffentlichung des MII-PRO-Moduls (WHODAS-12 ist seit 2026.5.0 enthalten); die Canonical-URL ist stabil.
 
 ### Beispiel-QuestionnaireResponse
 
-Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-whodas12-response-01`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0) (Upstream, Simplifier).
+Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — [`mii-exa-pro-whodas12-response-01`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-whodas12-response-01.html) (Upstream, Simplifier).

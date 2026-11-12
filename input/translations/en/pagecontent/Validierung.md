@@ -4,7 +4,7 @@ This page answers one question: **how do I make sure my implementation is valid 
 
 A `QuestionnaireResponse` — or a FHIR bundle containing one — has to satisfy three things to count as valid:
 
-1. **Structurally** conform to the [`MII PR PRO QuestionnaireResponse` profile](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0): data types, required elements, element constraints
+1. **Structurally** conform to the [`MII PR PRO QuestionnaireResponse` profile](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html): data types, required elements, element constraints
 2. Its **`linkId`s** must match the item structure of the referenced questionnaire
 3. Every **coded answer** must come from that item's `answerValueSet` (or `answerOption`)
 
@@ -28,7 +28,7 @@ flowchart TB
     style CS fill:#e1ffe1
 ```
 
-For that to work the validator has to know all four resource levels — the **MII PRO module package (2026.7.0)** plus SDC plus LOINC. All the routes below arrange this automatically, either through `-ig` parameters or through the container preload.
+For that to work the validator has to know all four resource levels — the **MII PRO module package (2027.0.0-ballot.2)** plus SDC plus LOINC. All the routes below arrange this automatically, either through `-ig` parameters or through the container preload.
 
 ## Three routes to a validated bundle
 
@@ -56,8 +56,8 @@ curl -L "https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/
 # Validate
 java -jar ~/.fhir/validator_cli.jar my-questionnaire-response.json \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
-  -ig hl7.fhir.uv.sdc#3.0.0 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
+  -ig hl7.fhir.uv.sdc#4.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
 
@@ -71,8 +71,8 @@ If you build your own Implementation Guide that consumes PCOR-MII: declare your 
 
 A practical checklist for mappers, ePRO apps and populating a recipient server:
 
-- [ ] **`meta.profile`** set on the response — `mii-pr-pro-questionnaire-response|2026.7.0`
-- [ ] **`questionnaire` reference** with version — `…/mii-qst-pro-promis-16|2026.7.0`
+- [ ] **`meta.profile`** set on the response — `mii-pr-pro-questionnaire-response|2027.0.0-ballot.2`
+- [ ] **`questionnaire` reference** with version — `…/mii-qst-pro-promis-16|2027.0.0-ballot.2`
 - [ ] **`linkId`s** of the answer items match *exactly* those defined in the questionnaire
 - [ ] **Coded answers** with system and code from the item's `answerValueSet` (for the PROMIS value sets the LA codes are documented inline — see the item tables on [PROMIS-16](PROMIS-16.html))
 - [ ] **Item order** follows the questionnaire, not your own grouping (see below — this one is easy to get wrong)
@@ -100,17 +100,11 @@ A practical checklist for mappers, ePRO apps and populating a recipient server:
 
 ## Validated examples for reference
 
-The three original examples, all with **0 errors, 0 warnings**:
+The example set is organised as **four use-case bundles** — one `collection` bundle per assessment visit with the patient and all responses of that visit (AN initial 13, AN monitoring 10, PSS screening 21, NTx initial assessment 6 entries), all at **0 errors**. Every contained response also exists as a stand-alone example; patients, bundles and all 46 responses with what they demonstrate are on [Examples](Beispiele.html). The bundles are generated from the individual responses by `scripts/build-example-bundles.py`.
 
-- [`pcor-mii-exa-promis-16-response`](QuestionnaireResponse-pcor-mii-exa-promis-16-response.html)
-- [`pcor-mii-exa-promis-cognitive-function-response`](QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html)
-- [`pcor-mii-exa-example-response`](QuestionnaireResponse-pcor-mii-exa-example-response.html) (for the example questionnaire)
+The examples are checked at **0 errors** but are not warning-free; the remaining warnings are known and accepted:
 
-Plus the **AN data set** — five responses and two score observations from a single assessment session with the same patient (overview on the [AN](AN.html) page): [ERQ6Response](QuestionnaireResponse-ERQ6Response.html), [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html), [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.html), [SSUK2Response](QuestionnaireResponse-SSUK2Response.html), [ACEResponse](QuestionnaireResponse-ACEResponse.html), and [ErqsReappraisalObservation](Observation-ErqsReappraisalObservation.html) and [ErqsSuppressionObservation](Observation-ErqsSuppressionObservation.html).
-
-These seven are checked at **0 errors** but are not warning-free, and both remaining warnings are known and accepted:
-
-- `dom-6` (missing narrative) on all seven — listed as ignorable in the table above
+- `dom-6` (missing narrative) on all example responses — listed as ignorable in the table above
 - a `java.net.SocketTimeoutException` during the UCUM check of the two `valueQuantity` values — a network timeout against the terminology server, not a finding about the resource
 
 **One real defect found while validating:** the ERQ-6 example response initially grouped its items by subscale — the three reappraisal items first, then the three suppression items. The validator rejects that: *"structural error: elements in the wrong order"*. A `QuestionnaireResponse` must list its items in the **order of the questionnaire**; the clinical grouping belongs in comments, not in the arrangement. SUSHI does not catch this, so it only surfaces here.
@@ -121,8 +115,8 @@ Reproduce:
 for f in input/examples/QuestionnaireResponse-*.json; do
   java -jar ~/.fhir/validator_cli.jar "$f" \
     -version 4.0.1 \
-    -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
-    -ig hl7.fhir.uv.sdc#3.0.0 \
+    -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
+    -ig hl7.fhir.uv.sdc#4.0.0 \
     -ig fsh-generated/resources \
     -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 done

@@ -2,7 +2,7 @@ Der **SSD-12** erfasst die **B-Kriterien der somatischen Belastungsstörung** na
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben **nur im Szenario [PSS](PSS.html)**, Kategorie DCH — **vollständig**. Die Abgrenzung zum [PHQ-15](PHQ-15.html) ist der eigentliche Punkt des Instruments: Der PHQ-15 zählt die Symptomlast, der SSD-12 die Belastung dadurch. Beide werden in PSS erhoben, weil erst zusammen die DSM-5-Kriterien A und B abgebildet sind.
 
@@ -15,7 +15,7 @@ Erhoben **nur im Szenario [PSS](PSS.html)**, Kategorie DCH — **vollständig**.
 - **Items**: 12 (`ssd12-q01`–`ssd12-q12`) plus Instruktions-`display` und das berechnete `ssd12-score-total`
 - **Primärsprache**: **Deutsch** (`language = de`) — der SSD-12 wurde auf Deutsch entwickelt (Toussaint, Löwe et al., UKE Hamburg); hier ist Deutsch also das Original und nicht eine Übersetzung
 - **Recall**: letzte **7 Tage**
-- **Antwortskala**: fünfstufig über [`mii-vs-pro-ssd-12-answers`](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0) — 0 = nie · 1 = selten · 2 = manchmal · 3 = oft · 4 = sehr oft
+- **Antwortskala**: fünfstufig über [`mii-vs-pro-ssd-12-answers`](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/ValueSet-mii-vs-pro-ssd-12-answers.html) — 0 = nie · 1 = selten · 2 = manchmal · 3 = oft · 4 = sehr oft
 - **Capabilities**: displayable, collectable, calculatable, extractable, domainAligned
 
 ### Score
@@ -29,6 +29,6 @@ SSD-12 © Toussaint, Löwe et al. **Frei verfügbar** für Forschung und klinisc
 ### Quellen
 
 - Entwicklung: Toussaint A, Murray AM, Voigt K, et al. *Development and Validation of the Somatic Symptom Disorder-B Criteria Scale (SSD-12).* Psychosom Med 2016;78(1):5–12. [doi:10.1097/PSY.0000000000000240](https://doi.org/10.1097/PSY.0000000000000240)
-- Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

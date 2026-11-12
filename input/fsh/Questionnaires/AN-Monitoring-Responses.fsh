@@ -77,7 +77,7 @@ Description: "Monitoring-Antwort: Essstörungspathologie leicht rückläufig (Ta
   * answer.valueInteger = 3
 * item[+]
   * linkId = "edeq29"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 * item[+]
   * linkId = "edeq30"
   * answer.valueInteger = 2
@@ -166,7 +166,7 @@ Description: "Monitoring-Antwort: keine neuen belastenden Lebensereignisse seit 
 // verneint — lifev_text bleibt deshalb per enableWhen gesperrt und fehlt.
 * item[+]
   * linkId = "life_event1_monitoring"
-  * answer.valueCoding = DemAntwortCS#nein "Nein"
+  * answer.valueCoding = $SCT#373067005 "No"
 
 Instance: UKHDNDMonitoringResponse
 InstanceOf: QuestionnaireResponse
@@ -181,7 +181,7 @@ Description: "Die **erste UKHD-ND-Antwort überhaupt** — die Gruppe wird nur z
 * authored = "2026-07-30T10:15:00+02:00"
 * item[+]
   * linkId = "new_diagnosis_monitoring"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 * item[+]
   * linkId = "new_diagnosis_text"
   * answer.valueString = "Eisenmangelanämie, festgestellt bei der Laborkontrolle im Juli 2026"

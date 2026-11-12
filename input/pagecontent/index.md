@@ -22,10 +22,13 @@ Dieser IG stellt einheitliche, interoperable Fragebögen bereit, mit denen patie
 
 Über die Menüleiste erreichbar:
 
-1. **Fragebögen** – Überblick über die definierten Questionnaires und ihren Aufbau
-2. **Anwendung** – detaillierte Beschreibung, wie die Fragebögen ausgefüllt und ausgewertet werden
-3. **Release Notes** – Versionierung und Änderungshistorie
-4. **Artefakte** – maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme)
+1. **Instrumente** – Gesamtübersicht und je Use Case eine Seite ([PSS](PSS.html), [AN](AN.html), [NTx](NTx.html)) mit der Batterie als Tabelle, darunter die Instrumentenseiten
+2. **Fragebögen** – tabellarischer Einstieg zu allen Questionnaires mit Doku, Ressource, Beispielantwort und Score, dazu die Use-Case-Manifeste
+3. **Beispiele** – drei Beispielpatient:innen, vier Termin-Bundles und alle Beispielantworten
+4. **Anwendung**, **Validierung**, **Bereitstellung** – vom Questionnaire zur Antwort, Prüfung und Bezug der Definitionen
+5. **Designentscheidungen** – die ADRs; **Rechtelage & offene Punkte** – Rechtelage aller Instrumente und alles, was noch auf Rückmeldung wartet
+6. **Release Notes** und **Kommende Änderungen** – Änderungshistorie und der Stand gegenüber dem MII-PRO-Modul 2027
+7. **Artefakte** – maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme, Libraries, Beispiele)
 
 ### Kontakt
 

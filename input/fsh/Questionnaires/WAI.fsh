@@ -7,10 +7,18 @@
 // der Kurzfassung, die üblicherweise als "Work Ability Score" bezeichnet wird
 // (Item 1 der WAI-Vollversion, ergänzt um zwei weitere Anforderungs-Items).
 //
-// ⚠️ METADATA-ONLY — die DIZ-Implementierungsliste PCOR-MII vermerkt für WAI:
-// "wahrscheinlich nicht für die Veröffentlichung". Die Publikationsrechte am
-// Originalwortlaut sind ungeklärt. Diese Instanz bildet daher bewusst NUR
-// Struktur und Metadaten ab:
+// ⚠️ METADATA-ONLY (Stand in Prüfung, 2026-11-05) — Ausgangspunkt war der
+// Vermerk der DIZ-Implementierungsliste PCOR-MII: "wahrscheinlich nicht für die
+// Veröffentlichung geeignet" (ohne Quelle). Die Nutzungsbedingungen des FIOH
+// (ttl.fi, abgerufen 2026-11-05) sagen dagegen: "The method is publicly
+// available. You do not need permission from the Finnish Institute of
+// Occupational Health to use the Work Ability Index." — Nutzung für Forschung
+// und eigenen Betrieb frei, eigene Bögen/Übersetzungen erlaubt, Bedingungen:
+// Tuomi et al. 1998 zitieren, nicht als solchen verkaufen, abgewandelte Fassung
+// anders benennen. Offen ist allein die Weitergabe des DEUTSCHEN Wortlauts
+// (WAI-Netzwerk Deutschland, Uni Wuppertal/BAuA) — Anfrage läuft, siehe
+// Designentscheidungen. Bis dahin bildet diese Instanz bewusst NUR Struktur und
+// Metadaten ab:
 //   - Item-Texte sind NEUTRALE, selbst formulierte Kurzbeschreibungen dessen,
 //     was erfragt wird — KEIN Originalwortlaut der WAI-Fragen.
 //   - Antwortkonzepte (WAI02a/WAI02b) sind neutral benannt ("Stufe 1" … "Stufe 5")
@@ -18,8 +26,7 @@
 //   - Struktur, linkIds, Wertebereiche (0-10 bzw. 1-5) und technische Metadaten
 //     sind lizenzfrei und daher vollständig angelegt.
 // Siehe `* copyright` auf der Instance unten für den vollständigen Hinweis. Die
-// vollständige, wortgleiche Originalversion des WAI/Work Ability Score darf nur
-// über die berechtigte Bezugsquelle bezogen und genutzt werden.
+// wortgleiche Fassung steht auf dem zugangsbeschränkten Form Server (ADR-012).
 //
 // Terminologie-Recherche (mcp__fhir-terminology__search_codes, Stand 2026-09-01):
 //   - LOINC: keine Item- oder Panel-Codes für WAI / Work Ability Score gefunden
@@ -39,29 +46,29 @@
 CodeSystem: WaiSkala5CS
 Id: wai-skala-5
 Title: "WAI Antwortskala 5-stufig (Codes)"
-Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."
+Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. itemWeight-Property je Konzept ermöglicht Scoring."
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
 * ^property[=].description = "Numerischer Ordinalwert (1-5); 5 = bester Wert."
 * ^property[=].type = #decimal
 * #stufe-1 "Stufe 1"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #stufe-2 "Stufe 2"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #stufe-3 "Stufe 3"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #stufe-4 "Stufe 4"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 * #stufe-5 "Stufe 5"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 5
 
 ValueSet: WaiSkala5VS
@@ -74,7 +81,7 @@ Description: "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b. Stufe 
 * include codes from system WaiSkala5CS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5"
 * ^expansion.contains[=].code = #stufe-1
 * ^expansion.contains[=].display = "Stufe 1"
@@ -106,7 +113,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI"
 * name = "WAI"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#wai "WAI / Work Ability Score"
 * status = #draft
@@ -115,7 +122,7 @@ Description: "Work Ability Index / Work Ability Score, 3-Item-Kurzfassung (Kateg
 * date = "2026-09-01"
 * publisher = "BIH-CEI"
 * code[+] = $SCT#446174004 "Assessment using work ability index"
-* copyright = "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5) — die Publikationsrechte am WAI sind ungeklärt (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Rechteinhaber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi et al. 1998). Die vollständige, wortgleiche Originalversion des WAI/Work Ability Score darf ausschließlich über die berechtigte Bezugsquelle (FIOH bzw. deren lizenzierte Vertriebspartner) bezogen und genutzt werden."
+* copyright = "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5). Urheber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi K, Ilmarinen J, Jahkola A, Katajarinne L, Tulkki A. Work Ability Index. 2nd revised ed. Helsinki: FIOH, 1998). Nach den Nutzungsbedingungen des FIOH ist der WAI öffentlich verfügbar und ohne Genehmigung für Forschung und eigenen Betrieb nutzbar; er darf nicht als solcher verkauft werden, die Autor:innen sind zu nennen. Die Weitergabe des deutschen Wortlauts (WAI-Netzwerk Deutschland / BAuA) ist noch nicht geklärt; der Vermerk der DIZ-Implementierungsliste PCOR-MII ('wahrscheinlich nicht für die Veröffentlichung geeignet') nennt keine Quelle. Bis zur Klärung bleibt diese Instanz metadata-only; die wortgleiche Fassung steht auf dem zugangsbeschränkten Form Server bereit (ADR-012)."
 
 * item[+]
   * linkId = "wai"

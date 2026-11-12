@@ -2,7 +2,7 @@
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.html)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben in **allen drei Entitäten** (PSS, AN, NTx), Kategorie GHS — gehört also zum generischen Kern und nicht zu den entitätsspezifischen Instrumenten.
 
@@ -30,6 +30,6 @@ EURONET-SOMA-Items © Rief, Burton, Frostholm et al. 2017 (Psychosomatic Medicin
 ### Quellen
 
 - Rief W, Burton C, Frostholm L, et al. *Core Outcome Domains for Clinical Trials on Somatic Symptom Disorder, Bodily Distress Disorder, and Functional Somatic Syndromes: European Network on Somatic Symptom Disorders Recommendations.* Psychosom Med 2017;79(9):1008–1015. [doi:10.1097/PSY.0000000000000502](https://doi.org/10.1097/PSY.0000000000000502)
-- Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+- Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.html); alle Artefakte unter [Artefakte](artifacts.html).

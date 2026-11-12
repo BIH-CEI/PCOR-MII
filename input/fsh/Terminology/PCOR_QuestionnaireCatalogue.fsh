@@ -61,6 +61,7 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * #promis-gh "PROMIS-GH" "PROMIS Global Health, 2-Item-Zuschnitt (Global01, Global02) — Übergangslösung bis zur Aufnahme der 10-Item-Skala ins MII-PRO-Modul"
 * #expect "EXPECT" "Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen"
 * #ipq-s "IPQ-S" "Die offene Ursachenfrage des B-IPQ, Einzelitem"
+* #phq-panik "PHQ-D Panik-Block" "Die vier Ja/Nein-Screeningitems 3a–3d des PHQ zu Angst-/Panikattacken (PHQ-D-Block 3); in PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt führt (ADR-012)"
 
 // ── AN-spezifisch, in PCOR-MII gepflegt ─────────────────────────────────────
 // Die Codes bezeichnen jeweils den PCOR-MII-ZUSCHNITT, nicht das Vollinstrument.
@@ -76,3 +77,12 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 * #ukhd-nd "UKHD-ND" "Neue Diagnosen, 3 Items (UKHD-Zusatzitems AN)"
 * #ukhd-d "UKHD-D" "Diagnosen bei Aufnahme, 2 Items (UKHD-Zusatzitems AN; Dictionary-Schreibweise UKHD_D)"
 * #ukhd-edp "UKHD-EDP" "11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"
+
+// ── NTx-spezifisch, in PCOR-MII gepflegt (alle metadata-only, ADR-012) ───────
+* #baasis "BAASIS" "Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)"
+* #abq "ABQ" "Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann & Wilke 2015)"
+* #mtsosd-r59 "MTSOSD-R59" "Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)"
+
+// ── NTx-Standortitems (MHH), in PCOR-MII gepflegt ────────────────────────────
+* #ntx-verlauf "NTx-Verlaufsbefragung (MHH)" "Quartalsweise Verlaufsanamnese nach Nierentransplantation des Standorts Hannover, 18 patient-reported Variablen der Dictionary-Gruppen MHH-DIAL, MHH-PTx-DIAB, MHH-T, MHH-UTI, MHH-Infection, MHH-BP, MHH-Medi und MHH_PTH (Sammelbogen nach MHI-Muster, kein PRO-Instrument); die drei Screening-Items MHH-DON/Tx-DATE/PRIOR-TX liegen im Ergänzungsbogen MHI-NTx"
+* #mhi-ntx "MHI-NTx — Transplantationsanamnese" "Ergänzung zum MHI für Empfänger einer Nierentransplantation: Spendeart, Transplantationsdatum, wievielte Spenderniere (Dictionary-Gruppen MHH-DON, MHH-Tx-DATE, MHH-PRIOR-TX; Screening, kein PRO-Instrument)"

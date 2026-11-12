@@ -4,7 +4,7 @@ Diese Seite beschreibt, wie die im PCOR-MII Implementation Guide definierten Fra
 
 Das Erfassungs-System kann **außerhalb FHIR** liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) **oder direkt in FHIR** erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). **FHIR ist primär die Ablage- und Austausch-Form** — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.
 
-In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.html) und [Bereitstellung](Bereitstellung.html).
+In beiden Fällen entstehen `QuestionnaireResponse`s + ggf. `Observation`s konform zum [`MII PR PRO QuestionnaireResponse`-Profil](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html). Validierung und Austausch sehen deshalb gleich aus — siehe [Validierung](Validierung.html) und [Bereitstellung](Bereitstellung.html).
 
 ### Vom Questionnaire zur Antwort
 
@@ -32,28 +32,26 @@ Dadurch bleibt jede erfasste Antwort eindeutig der Frage zugeordnet – auch üb
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"
     ]
   },
-  "language": "de",
-  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0",
+  "language": "de-DE",
+  "questionnaire": "https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK|0.9.0",
   "status": "completed",
-  "subject": { "reference": "Patient/pcor-mii-exa-patient-an" },
-  "authored": "2026-06-16T10:00:00+02:00",
+  "subject": { "reference": "Patient/pcor-mii-exa-patient-pss" },
+  "authored": "2026-06-25T12:05:00+02:00",
   "item": [{
-    "linkId": "pro",
-    "item": [{
-      "linkId": "pro.general-health",
-      "answer": [{
-        "valueCoding": {
-          "system": "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
-          "code": "good",
-          "display": "Good"
-        }
-      }]
+    "linkId": "phq-phq3a",
+    "answer": [{
+      "valueCoding": { "system": "http://snomed.info/sct", "code": "373066001", "display": "Yes" }
+    }]
+  }, {
+    "linkId": "phq-phq3b",
+    "answer": [{
+      "valueCoding": { "system": "http://snomed.info/sct", "code": "373066001", "display": "Yes" }
     }]
   }]
 }
 ```
 
-Vollständige, validierte Beispiele: zwei synthetische **Beispielpatienten** (AN und PSS) mit drei **Termin-Bundles** und über dreißig Einzelantworten — Übersicht in der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html), Validierungsstatus auf [Validierung](Validierung.html). Für PROMIS-29 wird das Upstream-Beispiel `mii-exa-pro-promis-29-response` aus dem MII PRO-Modul verwendet (siehe [PROMIS-29-Seite](PROMIS-29.html)).
+Der Auszug stammt aus der Beispielantwort [PHQPANIKResponse](QuestionnaireResponse-PHQPANIKResponse.html) (PHQ-D Panik-Block, Ja/Nein als SNOMED CT nach ADR-013). Vollständige, validierte Beispiele: drei synthetische **Beispielpatienten** (AN, PSS und NTx) mit vier **Termin-Bundles** und über vierzig Einzelantworten — Übersicht in der [Fragebogen-Bibliothek](Fragebogen-Bibliothek.html), Validierungsstatus auf [Validierung](Validierung.html). Für PROMIS-29 wird das Upstream-Beispiel `mii-exa-pro-promis-29-response` aus dem MII PRO-Modul verwendet (siehe [PROMIS-29-Seite](PROMIS-29.html)).
 
 ### Validierung
 
@@ -62,8 +60,8 @@ Vollständige, validierte Beispiele: zwei synthetische **Beispielpatienten** (AN
 ```bash
 fhir validate <qr.json> \
   -version 4.0.1 \
-  -ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 \
-  -ig hl7.fhir.uv.sdc#3.0.0 \
+  -ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 \
+  -ig hl7.fhir.uv.sdc#4.0.0 \
   -profile https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 ```
 

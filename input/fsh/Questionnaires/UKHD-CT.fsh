@@ -20,7 +20,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── UKHD-CT: treatment_outpatient ────────────────────────────────────────────
-// KEIN ordinalValue — die Skala MISCHT ZWEI ACHSEN. Stufen 1 und 2 sagen
+// KEIN itemWeight — die Skala MISCHT ZWEI ACHSEN. Stufen 1 und 2 sagen
 //   beide „nein" und unterscheiden sich nur darin, ob eine Behandlung gesucht
 //   oder geplant ist; Stufen 3 und 4 sagen beide „ja" und unterscheiden das
 //   SETTING (ambulant gegen stationaer/teilstationaer). Eine Zahl kann das
@@ -34,7 +34,7 @@
 CodeSystem: UkhdAnBehandlungsstatusCS
 Id: ukhd-an-behandlungsstatus
 Title: "UKHD-AN Aktueller Behandlungsstatus (Codes)"
-Description: "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4)."
+Description: "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `itemWeight`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4)."
 * insert PR_CS_VS_Version
 * ^url = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus"
 * ^status = #draft
@@ -56,7 +56,7 @@ Description: "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus 
 * include codes from system UkhdAnBehandlungsstatusCS
 * ^expansion.timestamp = "2026-10-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus"
 * ^expansion.contains[=].code = #1
 * ^expansion.contains[=].display = "nein"
@@ -79,7 +79,7 @@ Description: "Ein Item zum aktuellen Behandlungsstatus aus der Dictionary-Gruppe
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT"
 * name = "UKHDCT"
 * code[+] = PcorQuestionnaireCatalogueCS#ukhd-ct "UKHD-CT"
-* language = #de
+* language = #de-DE
 * insert Version
 * status = #draft
 * experimental = true
@@ -88,7 +88,7 @@ Description: "Ein Item zum aktuellen Behandlungsstatus aus der Dictionary-Gruppe
 * publisher = "BIH-CEI"
 * copyright = "Die Items dieses Bogens sind **vom Standort Heidelberg für die PCOR-MII-Erhebung zusammengestellt** und stammen aus dem PCOR-MII Item Level Dictionary (Entität AN). **Das `UKHD`-Präfix der Dictionary-Gruppe ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe: Woher der Wortlaut stammt — eigene Formulierung des Standorts, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument —, ist nicht dokumentiert. Eine Freigabe für die Veröffentlichung liegt ebenfalls nicht dokumentiert vor; beides ist mit dem Standort zu klären.** Die DIZ-Implementierungsliste PCOR-MII führt ausschließlich publizierte Instrumente; die standortspezifischen Itemgruppen von UKHD, UKE und MHH kommen dort nicht vor — es gibt für sie damit weder eine dokumentierte Erlaubnis noch eine dokumentierte Einschränkung. Dass der Wortlaut hier aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung und keine geklärte Rechtslage; die Ressource trägt deshalb `status = draft` und `experimental = true`. Ergibt die Rückmeldung des Standorts eine Einschränkung, ist eine Umstellung auf metadata-only vorgesehen (Muster WAI). Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-CT`, DOMAIN *Current Treatment*, Kategorie TCH — ein Item. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+* extension[=].valueMarkdown = "Dictionary-Gruppe `UKHD-CT`, DOMAIN *Current Treatment*, Kategorie TCH — ein Item. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
 
 * item[+]
   * linkId = "treatment_outpatient"
@@ -97,4 +97,4 @@ Description: "Ein Item zum aktuellen Behandlungsstatus aus der Dictionary-Gruppe
   * type = #choice
   * answerValueSet = Canonical(UkhdAnBehandlungsstatusVS)
   * extension[+].url = $designNote
-  * extension[=].valueMarkdown = "**Der Variablenname ist irreführend:** `treatment_outpatient` legt eine Frage nach ambulanter Behandlung nahe, aber Stufe 4 der Antwortskala erfasst ausdrücklich **klinische (stationäre) oder tagesklinische (teilstationäre)** Behandlung. Das Item fragt also den Behandlungsstatus insgesamt ab, nicht nur den ambulanten. Der Name bleibt als `linkId` und `item.code` stehen, weil er die Dictionary-Variable ist — **aber er darf nicht als Bedeutungsangabe gelesen werden.** Zur Überschneidung mit `bdkm15` siehe dort. Zur bewussten Entscheidung gegen `ordinalValue` siehe das CodeSystem `ukhd-an-behandlungsstatus`."
+  * extension[=].valueMarkdown = "**Der Variablenname ist irreführend:** `treatment_outpatient` legt eine Frage nach ambulanter Behandlung nahe, aber Stufe 4 der Antwortskala erfasst ausdrücklich **klinische (stationäre) oder tagesklinische (teilstationäre)** Behandlung. Das Item fragt also den Behandlungsstatus insgesamt ab, nicht nur den ambulanten. Der Name bleibt als `linkId` und `item.code` stehen, weil er die Dictionary-Variable ist — **aber er darf nicht als Bedeutungsangabe gelesen werden.** Zur Überschneidung mit `bdkm15` siehe dort. Zur bewussten Entscheidung gegen `itemWeight` siehe das CodeSystem `ukhd-an-behandlungsstatus`."

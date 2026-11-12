@@ -101,15 +101,15 @@
 //
 // STRUKTUR:
 //   - edeq1/edeq7/edeq12: 28-Tage-Häufigkeit, 7-stufig (0 = kein Tag ...
-//     6 = jeden Tag) -> choice mit EdeQ6TageVS (ordinalValue 0-6).
+//     6 = jeden Tag) -> choice mit EdeQ6TageVS (itemWeight 0-6).
 //   - edeq27: "Visual Likert Scale" (Reiter "EDE-Q27" im Dictionary = Grafik
 //     des Original-Antwortblocks Fragen 22-28): Zahlenreihe 0-6 mit den
 //     Spaltenüberschriften "überhaupt nicht" (0), "leicht" (1-2), "mäßig"
 //     (3-4), "deutlich" (5-6). Umsetzung analog EXPECT als integer + Slider
 //     mit Anker-display-Item.
-//   - edeq29 (Für Frauen, ja/nein) -> DemJaNeinVS (gemeinsames Ja/Nein des
+//   - edeq29 (Für Frauen, ja/nein) -> SNOMED CT inline, RuleSet JaNeinSnomed, ADR-013 (vorher DemJaNeinVS des
 //     Projekts). Das Dictionary kodiert hier 1 = ja / 2 = nein; die Kodierung
-//     ist im Mapping auf DemAntwortCS dokumentarisch, nicht strukturell.
+//     ist nur dokumentarisch, nicht strukturell.
 //   - edeq30 (Anzahl ausgebliebener Regelblutungen) -> integer, enableWhen
 //     edeq29 = ja. Das Dictionary nennt als Bedingung "If edeq31 = 1" — eine
 //     Variable edeq31 existiert im AN-Blatt nicht; gemeint ist offenkundig
@@ -132,49 +132,49 @@
 CodeSystem: EdeQ6TageCS
 Id: ede-q6-tage
 Title: "EDE-Q6 Häufigkeit in 28 Tagen (Codes)"
-Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."
+Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). itemWeight-Property je Konzept für SDC-Scoring via .weight(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
-* ^property[=].description = "Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal()."
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
+* ^property[=].description = "Numerischer Ordinalwert (0-6) für SDC-Scoring über .weight()."
 * ^property[=].type = #decimal
 * #0 "No days"
   * ^designation[+].language = #de
   * ^designation[=].value = "kein Tag"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 0
 * #1 "1-5 days"
   * ^designation[+].language = #de
   * ^designation[=].value = "1–5 Tage"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #2 "6-12 days"
   * ^designation[+].language = #de
   * ^designation[=].value = "6–12 Tage"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #3 "13-15 days"
   * ^designation[+].language = #de
   * ^designation[=].value = "13–15 Tage"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #4 "16-22 days"
   * ^designation[+].language = #de
   * ^designation[=].value = "16–22 Tage"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 * #5 "23-27 days"
   * ^designation[+].language = #de
   * ^designation[=].value = "23–27 Tage"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 5
 * #6 "Every day"
   * ^designation[+].language = #de
   * ^designation[=].value = "jeden Tag"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 6
 
 ValueSet: EdeQ6TageVS
@@ -187,7 +187,7 @@ Description: "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 T
 * include codes from system EdeQ6TageCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "kein Tag"
@@ -343,7 +343,7 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
   * text.extension[=].extension[+].url = "content"
   * text.extension[=].extension[=].valueString = "Ist Ihre Regelblutung während der letzten drei bis vier Monate ausgeblieben?"
   * type = #choice
-  * answerValueSet = Canonical(DemJaNeinVS)
+  * insert JaNeinSnomed
 * item[+]
   * linkId = "edeq30"
   * code[+] = PcorItemDictionaryCS#edeq30
@@ -358,4 +358,4 @@ Description: "Sechs Items aus dem Eating Disorder Examination-Questionnaire (EDE
   * extension[=].valueMarkdown = "Das Item Level Dictionary nennt als Bedingung „If edeq31 = 1“; eine Variable `edeq31` existiert im AN-Blatt nicht (Erratum). Umgesetzt als `enableWhen` auf `edeq29` = ja — die Ja/Nein-Frage direkt davor."
   * enableWhen[+].question = "edeq29"
   * enableWhen[=].operator = #=
-  * enableWhen[=].answerCoding = DemAntwortCS#ja "Ja"
+  * enableWhen[=].answerCoding = $SCT#373066001

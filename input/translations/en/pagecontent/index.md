@@ -22,10 +22,13 @@ This IG provides uniform, interoperable questionnaires with which patient-report
 
 Reachable from the menu bar:
 
-1. **Questionnaires** — the defined questionnaires and how they are built
-2. **Implementation** — how the questionnaires are completed and evaluated
-3. **Release Notes** — versioning and change history
-4. **Artifacts** — the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)
+1. **Instruments** — the overall view and one page per use case ([PSS](PSS.html), [AN](AN.html), [NTx](NTx.html)) with the battery as a table, with the instrument pages beneath
+2. **Questionnaires** — the tabular entry to every questionnaire with docs, resource, example response and score, plus the use-case manifests
+3. **Examples** — three example patients, four visit bundles and every example response
+4. **Implementation**, **Validation**, **Deployment** — from questionnaire to response, checking, and how to obtain the definitions
+5. **Design decisions** — the ADRs; **Rights & open points** — the rights situation of every instrument and everything still awaiting an answer
+6. **Release Notes** and **Upcoming changes** — change history and the state relative to the MII PRO module 2027
+7. **Artifacts** — the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems, Libraries, examples)
 
 ### A note on language
 

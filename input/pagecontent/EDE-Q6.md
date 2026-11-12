@@ -16,10 +16,10 @@ Der EDE-Q6 ist ein **projektspezifischer Zuschnitt** des EDE-Q (Fairburn & Begli
 
 - **Fragebogen:** [Questionnaire-EDEQ6](Questionnaire-EDEQ6.html)
 - **Beispielantwort:** [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.html) — ausgefülltes Beispiel, einschließlich der über `enableWhen` abhängigen Frage `edeq30`
-- **CodeSystem:** [ede-q6-tage](CodeSystem-ede-q6-tage.html) — 28-Tage-Häufigkeit (0 = kein Tag … 6 = jeden Tag), `ordinalValue` 0–6
+- **CodeSystem:** [ede-q6-tage](CodeSystem-ede-q6-tage.html) — 28-Tage-Häufigkeit (0 = kein Tag … 6 = jeden Tag), `itemWeight` 0–6
 - **ValueSet:** [ede-q6-tage-vs](ValueSet-ede-q6-tage-vs.html)
 
-Die Ja/Nein-Frage `edeq29` nutzt das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.html).
+Die Ja/Nein-Frage `edeq29` kodiert als SNOMED CT `373066001`/`373067005` inline ([ADR-013](Designentscheidungen.html)).
 
 ### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
 

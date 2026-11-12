@@ -10,8 +10,8 @@
 //   Instruktionstext -> hier als eigenständiges display-Item vorangestellt.
 //
 // ANTWORT-MUSTER: item.answerValueSet -> lokales ValueSet (analog DEM/MHI).
-//   Eigenes CodeSystem OpdSfkAntwortCS mit ordinalValue-Property je Konzept
-//   (0-4) für SDC-Summenscoring via .ordinal() (Muster: mii-cs-pro-whodas-12
+//   Eigenes CodeSystem OpdSfkAntwortCS mit itemWeight-Property je Konzept
+//   (0-4) für SDC-Summenscoring via .weight() (Muster: mii-cs-pro-whodas-12
 //   im MII-PRO-Modul). Display-Werte deutsch (Fragebogensprache); keine
 //   erfundenen englischen designations ergänzt, da keine belegte offizielle
 //   englische Übersetzung dieser Kurzskala vorliegt.
@@ -28,7 +28,7 @@
 //   Fazit (S. 271): "Primär wird empfohlen, den Globalwert zu verwenden [...]
 //   Ebenso ist er durch die Bildung von Summen- anstelle von Mittelwerten leichter
 //   auszuwerten als die Vollversion des OPD-SF." -> Range 0-48 (12 Items x 0-4).
-//   Globalwert-Item unten als SDC calculatedExpression (Summe via .ordinal()) umgesetzt.
+//   Globalwert-Item unten als SDC calculatedExpression (Summe via .weight()) umgesetzt.
 //   Subskalen (explorativ, Summenwert 0-16) nach Abbildung 1 (S. 268, Faktorstruktur,
 //   am 2026-11-05 aus dem Original-PDF abgelesen):
 //     Selbstwahrnehmung  = OPD-SFK-Items 1, 2, 5, 8   (opdsf3, opdsf27, opdsf41, opdsf73)
@@ -48,29 +48,29 @@
 CodeSystem: OpdSfkAntwortCS
 Id: opd-sfk-antwort
 Title: "OPD-SFK Antwortskala (Codes)"
-Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."
+Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). itemWeight-Property je Konzept für SDC-Summenscoring via .weight()."
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
-* ^property[=].description = "Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal()."
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
+* ^property[=].description = "Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .weight()."
 * ^property[=].type = #decimal
 * #trifft-gar-nicht-zu "Trifft gar nicht zu"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 0
 * #trifft-eher-nicht-zu "Trifft eher nicht zu"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #teils-teils "Teils/teils"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #trifft-eher-zu "Trifft eher zu"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #trifft-voellig-zu "Trifft völlig zu"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 
 ValueSet: OpdSfkAntwortVS
@@ -83,7 +83,7 @@ Description: "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 
 * include codes from system OpdSfkAntwortCS
 * ^expansion.timestamp = "2026-09-01T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort"
 * ^expansion.contains[=].code = #trifft-gar-nicht-zu
 * ^expansion.contains[=].display = "Trifft gar nicht zu"
@@ -111,7 +111,7 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * meta.profile = $isik-formulardefinition
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"
 * name = "OPDSFK"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#opd-sfk "OPD-SFK"
 * status = #draft
@@ -121,30 +121,30 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * publisher = "BIH-CEI"
 * copyright = "Quelle: Ehrenthal JC, Dinger U, Schauenburg H, Horsch L, Dahlbender RW, Gierk B. Entwicklung einer Zwölf-Item-Version des OPD-Strukturfragebogens (OPD-SFK). Z Psychosom Med Psychother 2015; 61(3):262-274. doi:10.13109/zptm.2015.61.3.262. Verlagsrechte: © 2015 Vandenhoeck & Ruprecht GmbH & Co. KG, Göttingen. Der Artikel ist beim Verlag als Open Access verfügbar; eine explizite Creative-Commons-Lizenz ist dort nicht ausgewiesen. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei verfügbar, nach erfolgter Rücksprache mit den Autor:innen. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen bzw. beim Verlag; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Profile, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0)."
 
-// FHIR variable: Globalwert = Summe der 12 Item-Antworten (ordinalValue 0-4).
+// FHIR variable: Globalwert = Summe der 12 Item-Antworten (itemWeight 0-4).
 // Beleg für Summe (statt Mittelwert): siehe Kopfkommentar / Ehrenthal et al. 2015, Tab. 2 + S. 271.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "opdSfkSumme"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.ordinal().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.weight().sum()"
 
 // FHIR variable: Subskala Selbstwahrnehmung = Summe der OPD-SFK-Items 1, 2, 5, 8 (Abbildung 1, S. 268), 0-16.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "opdSfkSelbstwahrnehmung"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.ordinal().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.weight().sum()"
 
 // FHIR variable: Subskala Beziehungsmodell = Summe der OPD-SFK-Items 3, 7, 9, 12 (Abbildung 1, S. 268), 0-16.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "opdSfkBeziehungsmodell"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.ordinal().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.weight().sum()"
 
 // FHIR variable: Subskala Kontaktgestaltung = Summe der OPD-SFK-Items 4, 6, 10, 11 (Abbildung 1, S. 268), 0-16.
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "opdSfkKontaktgestaltung"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.ordinal().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.weight().sum()"
 
 // ── Instruktionstext (gilt für alle 12 Items) ─────────────────────────────────
 * item[+]

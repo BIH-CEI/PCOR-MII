@@ -56,7 +56,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
     * answer.valueCoding = DemGeschlechtCS#weiblich "Weiblich"
   * item[+]
     * linkId = "Q_GENDERID"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "Q_OECDLIT5a"
     * answer.valueCoding = DemErwerbsstatusCS#angestellt "Angestellt"
@@ -65,7 +65,7 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
     * answer.valueCoding = DemEinkommenCS#band-mittel "Zwischen 2.300 € und 5.200 € pro Monat"
   * item[+]
     * linkId = "Q_MONMED"
-    * answer.valueCoding = DemAntwortCS#nein "Nein"
+    * answer.valueCoding = $SCT#373067005 "No"
   * item[+]
     * linkId = "Q_MON"
     * item[+]
@@ -79,10 +79,10 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
       * answer.valueCoding = DemHaeufigkeit5CS#selten "Selten"
   * item[+]
     * linkId = "MEDHIMS6"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "MEDHIMS7"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"
   * item[+]
     * linkId = "Q_OECDLITii"
     * answer.valueCoding = DemUrbanizitaetCS#stadt "Stadt"
@@ -115,4 +115,4 @@ Description: "Ausgefülltes Beispiel zum DEM-Questionnaire (Demographie)."
     * answer.valueCoding = DemRentenstatusCS#keine "Keine Rente"
   * item[+]
     * linkId = "CPCOR_REQ"
-    * answer.valueCoding = DemAntwortCS#ja "Ja"
+    * answer.valueCoding = $SCT#373066001 "Yes"

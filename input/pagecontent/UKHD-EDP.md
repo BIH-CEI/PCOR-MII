@@ -28,7 +28,7 @@ Das ist dasselbe Zuschnittmuster wie bei [EDE-Q6](EDE-Q6.html), [ANSOCQ-2](ANSOC
 
 Das EDI-2 ist in der deutschen Fassung ein **Hogrefe-Testverfahren**, also verlegte Ware wie das BDI-II. Für das BDI-II zieht das MII-PRO-Modul genau diese Konsequenz: *„commercial (Pearson) — data + scoring only, not displayable."*
 
-**Zweitens: auch ohne das fehlt jede dokumentierte Freigabe.** Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente; weder „EDI" noch `UKHD-EDP` kommen dort vor. Für entworfene Item-Batterien der Standorte gilt nach dem [offenen Punkt](Designentscheidungen.html): ohne Freigabe kein Wortlaut.
+**Zweitens: auch ohne das fehlt jede dokumentierte Freigabe.** Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente; weder „EDI" noch `UKHD-EDP` kommen dort vor. Für entworfene Item-Batterien der Standorte gilt nach dem [offenen Punkt](Rechtelage.html#standortgruppen): ohne Freigabe kein Wortlaut.
 
 **Das ist der eigentliche Grund, jetzt zu entscheiden statt zu warten.** Metadata-only ist unter *beiden* Lesarten richtig — ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen.
 
@@ -42,7 +42,7 @@ Die Zuordnung zum EDI-2 stützt sich auf **Inhalt und Antwortformat**, nicht auf
 ### Artefakte
 
 - **Fragebogen:** [Questionnaire-UKHDEDP](Questionnaire-UKHDEDP.html)
-- **CodeSystem:** [ukhd-edp-stufe-6](CodeSystem-ukhd-edp-stufe-6.html) — sechs Stufen, **neutral benannt**, mit `ordinalValue` 1–6
+- **CodeSystem:** [ukhd-edp-stufe-6](CodeSystem-ukhd-edp-stufe-6.html) — sechs Stufen, **neutral benannt**, mit `itemWeight` 1–6
 - **ValueSet:** [ukhd-edp-stufe-6-vs](ValueSet-ukhd-edp-stufe-6-vs.html)
 
 Eine Beispielantwort gibt es bewusst **nicht**: Sie würde Antwortwerte zu Items zeigen, deren Wortlaut nicht abgebildet ist, und damit mehr Verwirrung stiften als Nutzen.
@@ -71,7 +71,7 @@ Auch die Displays im CodeSystem [pcor-item-dictionary](CodeSystem-pcor-item-dict
 
 ### Kein Score
 
-Das EDI-2 wertet über Subskalen aus, die aus mehreren Items bestehen. **Ein Item je Subskala bildet die Subskala nicht ab** — dieselbe Logik wie bei [EDE-Q6](EDE-Q6.html), [ANSOCQ-2](ANSOCQ-2.html) und [SSUK-2](SSUK-2.html), festgehalten in [ADR-003](Designentscheidungen.html) Punkt 3. Die Antwortcodes tragen `ordinalValue` 1–6, damit eine spätere Auswertung möglich bleibt.
+Das EDI-2 wertet über Subskalen aus, die aus mehreren Items bestehen. **Ein Item je Subskala bildet die Subskala nicht ab** — dieselbe Logik wie bei [EDE-Q6](EDE-Q6.html), [ANSOCQ-2](ANSOCQ-2.html) und [SSUK-2](SSUK-2.html), festgehalten in [ADR-003](Designentscheidungen.html) Punkt 3. Die Antwortcodes tragen `itemWeight` 1–6, damit eine spätere Auswertung möglich bleibt.
 
 ### Einordnung im Erhebungsplan
 

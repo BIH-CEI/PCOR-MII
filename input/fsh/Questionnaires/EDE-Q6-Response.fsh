@@ -28,9 +28,9 @@
 //   Outcomes, deshalb traegt die Antwort mii-pr-pro-questionnaire-response
 //   (Basis: SDC QuestionnaireResponse). DEM und MHI tun das bewusst NICHT —
 //   sie sind keine PROs. Die Version ist absichtlich nicht angepinnt; sie loest
-//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die drei aelteren
-//   Handbeispiele unter input/examples/ pinnen noch |2026.4.1 und laufen damit
-//   der Abhaengigkeit (2026.7.0) hinterher.
+//   sich aus der Abhaengigkeit in sushi-config.yaml auf. Die Handbeispiele
+//   unter input/examples/ pinnen die Questionnaire-Canonical auf die
+//   Abhaengigkeit (|2027.0.0-ballot.2).
 // ─────────────────────────────────────────────────────────────────────────────
 
 Instance: EDEQ6Response
@@ -62,7 +62,7 @@ Description: "Vollständig ausgefüllte Beispielantwort zum EDE-Q6-Questionnaire
 // ── Zusatzfragen zur Regelblutung ─────────────────────────────────────────────
 * item[+]
   * linkId = "edeq29"
-  * answer.valueCoding = DemAntwortCS#ja "Ja"
+  * answer.valueCoding = $SCT#373066001 "Yes"
 // Drei ausgebliebene Regelblutungen — passend zum Zeitfenster von edeq29
 // ("letzte 3-4 Monate"). Ein hoeherer Wert waere mit der Frage unvereinbar.
 * item[+]

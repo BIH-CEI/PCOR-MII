@@ -162,29 +162,29 @@
 CodeSystem: SsukAntwortCS
 Id: ssuk-antwort
 Title: "SSUK Antwortskala (Codes)"
-Description: "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."
+Description: "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."
 * insert PR_CS_VS_Version
 * ^status = #draft
 * ^experimental = true
 * ^caseSensitive = true
-* ^property[+].code = #ordinalValue
-* ^property[=].uri = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+* ^property[+].code = #itemWeight
+* ^property[=].uri = "http://hl7.org/fhir/concept-properties#itemWeight"
 * ^property[=].description = "Numerischer Ordinalwert (0-4)."
 * ^property[=].type = #decimal
 * #0 "nie"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 0
 * #1 "selten"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 1
 * #2 "manchmal"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 2
 * #3 "oft"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 3
 * #4 "immer"
-  * ^property[+].code = #ordinalValue
+  * ^property[+].code = #itemWeight
   * ^property[=].valueDecimal = 4
 
 ValueSet: SsukAntwortVS
@@ -197,7 +197,7 @@ Description: "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer)."
 * include codes from system SsukAntwortCS
 * ^expansion.timestamp = "2026-09-23T00:00:00Z"
 * ^expansion.parameter[0].name = "used-codesystem"
-* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort|0.3.0"
+* ^expansion.parameter[0].valueUri = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort|0.9.0"
 * ^expansion.contains[0].system = "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort"
 * ^expansion.contains[=].code = #0
 * ^expansion.contains[=].display = "nie"
@@ -222,7 +222,7 @@ Description: "Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankhei
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2"
 * name = "SSUK2"
-* language = #de
+* language = #de-DE
 * insert Version
 * code[+] = PcorQuestionnaireCatalogueCS#ssuk-2 "SSUK-2"
 * status = #draft

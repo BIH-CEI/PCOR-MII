@@ -52,7 +52,7 @@ RUN cd /build/package && \
 RUN cd /build && tar -czf /pcor-mii.tgz package/
 
 # MII PRO aus Simplifier ziehen
-ARG MII_PRO_VERSION=2026.7.0
+ARG MII_PRO_VERSION=2027.0.0-ballot.2
 RUN curl -L --fail "https://packages.simplifier.net/de.medizininformatikinitiative.kerndatensatz.pros/${MII_PRO_VERSION}" \
        -o /mii-pro.tgz
 
