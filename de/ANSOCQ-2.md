@@ -1,4 +1,4 @@
-# ANSOCQ-2 (Veränderungsmotivation) - PCOR-MII Implementation Guide v0.3.0
+# ANSOCQ-2 (Veränderungsmotivation) - PCOR-MII Implementation Guide v0.9.0
 
 ## ANSOCQ-2 (Veränderungsmotivation)
 
@@ -12,7 +12,7 @@ Der ANSOCQ-2 ist ein **projektspezifischer Zuschnitt**: 2 der 20 ANSOCQ-Items (R
 
 * **Fragebogen:** [Questionnaire-ANSOCQ2](Questionnaire-ANSOCQ2.md)
 * **Beispielantwort:** [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) — ausgefülltes Beispiel; `language` ist `de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde
-* **CodeSysteme:** [ansocq-koerperteile](CodeSystem-ansocq-koerperteile.md), [ansocq-gedanken](CodeSystem-ansocq-gedanken.md) — je fünf Feststellungen mit `ordinalValue` 1–5 (Stadienlogik)
+* **CodeSysteme:** [ansocq-koerperteile](CodeSystem-ansocq-koerperteile.md), [ansocq-gedanken](CodeSystem-ansocq-gedanken.md) — je fünf Feststellungen mit `itemWeight` 1–5 (Stadienlogik)
 * **ValueSets:** [ansocq-koerperteile-vs](ValueSet-ansocq-koerperteile-vs.md), [ansocq-gedanken-vs](ValueSet-ansocq-gedanken-vs.md)
 
 ### Der PCOR-MII-Code eines Items ist die Dictionary-Variable
@@ -34,7 +34,7 @@ Der Code bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer üb
 
 `linkId` und `item.code` stimmen hier überein — beim [ERQ-6](ERQ-6.md) ausdrücklich **nicht**.
 
-Die `linkId`s sind die Dictionary-Variablen-IDs und entsprechen den Itemnummern des ANSOCQ. Feststellungs-Texte und Instruktionstext sind wortgleich aus dem Item Level Dictionary übernommen; jedem Antwortcode (1–5) ist per `ordinalValue` das Stadium der Veränderungsbereitschaft zugeordnet (1 ≈ Precontemplation … 5 ≈ Maintenance).
+Die `linkId`s sind die Dictionary-Variablen-IDs und entsprechen den Itemnummern des ANSOCQ. Feststellungs-Texte und Instruktionstext sind wortgleich aus dem Item Level Dictionary übernommen; jedem Antwortcode (1–5) ist per `itemWeight` das Stadium der Veränderungsbereitschaft zugeordnet (1 ≈ Precontemplation … 5 ≈ Maintenance).
 
 ### Die Auswahl folgt der publizierten Faktorenstruktur
 

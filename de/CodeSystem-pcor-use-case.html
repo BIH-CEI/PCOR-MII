@@ -8,7 +8,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PCOR-MII Use Cases - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PCOR-MII Use Cases - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -148,8 +148,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.87"}
-    h3,h4,h5,h6{--heading-prefix:"21.87"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.104"}
+    h3,h4,h5,h6{--heading-prefix:"23.104"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -169,7 +169,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -219,12 +219,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -237,6 +240,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -301,7 +307,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-codesystem -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -351,7 +357,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -376,7 +382,7 @@ a[name="test"] + h3 + div {
           
 
             Stand: 
-2026-11-06
+2026-11-12
 
           
         
@@ -393,7 +399,7 @@ a[name="test"] + h3 + div {
   </table>
 
 <div data-fhir="generated">
-<p>Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (<code class="language-plaintext highlighter-rouge">Library</code>, type <code class="language-plaintext highlighter-rouge">asset-collection</code>), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.</p>
+<p>Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je Use Case existiert ein Manifest (<code class="language-plaintext highlighter-rouge">Library</code>, type <code class="language-plaintext highlighter-rouge">asset-collection</code>), das die benötigten Questionnaire-Definitionen versioniert pinnt; NTXr und NTXd seit 2026-11-05. Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.</p>
 
 </div>
 
@@ -418,10 +424,10 @@ a[name="test"] + h3 + div {
 <td></td></tr>
 <tr><td style="white-space:nowrap">ntxr<a name="pcor-use-case-ntxr"> </a></td>
 <td>NTXr — Nierentransplantation, Empfänger</td>
-<td>Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert.</td></tr>
+<td>Generische Batterie plus BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A.</td></tr>
 <tr><td style="white-space:nowrap">ntxd<a name="pcor-use-case-ntxd"> </a></td>
 <td>NTXd — Nierentransplantation, Spender</td>
-<td>Zurückgestellt: kein Manifest.</td></tr>
+<td>Nur die generische Batterie: laut Domain Overview keine spezifischen Instrumente und kein Monitoring.</td></tr>
 <tr><td style="white-space:nowrap">pilot-50fp<a name="pcor-use-case-pilot-50fp"> </a></td>
 <td>Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases</td>
 <td>Kein klinischer Use Case, sondern das Pilotprogramm des Datenaustauschs. Das Manifest enthält genau die Bögen, die in PSS, AN und NTx erhoben werden (Schnittmenge des Erhebungsplans).</td></tr></table></div>
@@ -484,10 +490,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

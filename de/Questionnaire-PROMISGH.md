@@ -1,4 +1,4 @@
-# PROMIS-GH — PROMIS Global Health (2-Item-ShortForm) - PCOR-MII Implementation Guide v0.3.0
+# PROMIS-GH — PROMIS Global Health (2-Item-ShortForm) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: PROMIS-GH — PROMIS Global Health (2-Item-ShortForm) (Experimentell) 
 
@@ -55,9 +55,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-questionnaire-capabilities"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "PROMISGH",
   "title" : "PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)",
+  "derivedFrom" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-global-health|2027.0.0-ballot.2"],
   "status" : "draft",
   "experimental" : true,
   "subjectType" : ["Patient"],
@@ -70,7 +71,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).",
+  "description" : "Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist seit MII-PRO-Modul 2027.0.0-ballot.2 als mii-qst-pro-promis-global-health enthalten; dieser Questionnaire ist per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen (linkIds nach Item Level Dictionary: Global01/Global02, upstream promis-global01/promis-global02). Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

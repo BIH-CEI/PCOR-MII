@@ -1,4 +1,4 @@
-# UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN) (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "Dictionary-Gruppe `UKHD-ANB`, DOMAIN *AN Biography*, Kategorie DCH. Beide Items sind im Dictionary **zusammengesetzt** (Auswahl + Zahlenwert in einem Feld) und hier nach dem MHI-Muster `Q_WB151`/`Q_WB151a` in je zwei Items aufgelöst. Die Auswahl trägt die Dictionary-Variable, das Wert-Item ist PCOR-MII-eigen und trägt **keinen** `item.code`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+    "valueMarkdown" : "Dictionary-Gruppe `UKHD-ANB`, DOMAIN *AN Biography*, Kategorie DCH. Beide Items sind im Dictionary **zusammengesetzt** (Auswahl + Zahlenwert in einem Feld) und hier nach dem MHI-Muster `Q_WB151`/`Q_WB151a` in je zwei Items aufgelöst. Die Auswahl trägt die Dictionary-Variable, das Wert-Item ist PCOR-MII-eigen und trägt **keinen** `item.code`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UKHDANB",
   "title" : "UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)",
   "status" : "draft",

@@ -1,4 +1,4 @@
-# PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.3.0
+# PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: PCOR-MII Item Level Dictionary — Variablen-IDs (Experimental) 
 
@@ -19,7 +19,7 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "pcor-item-dictionary",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "PcorItemDictionaryCS",
   "title" : "PCOR-MII Item Level Dictionary — Variablen-IDs",
   "status" : "draft",
@@ -2334,6 +2334,70 @@ This Code system is referenced in the definition of the following value sets:
     }]
   },
   {
+    "code" : "phq3a",
+    "display" : "phq3a — Hatten Sie in den letzten 4 Wochen eine Angstattacke (plötzliches Gefühl der …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "PHQ-D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MHA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "PSS"
+    }]
+  },
+  {
+    "code" : "phq3b",
+    "display" : "phq3b — Ist dies bereits früher einmal vorgekommen?",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "PHQ-D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MHA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "PSS"
+    }]
+  },
+  {
+    "code" : "phq3c",
+    "display" : "phq3c — Treten manche dieser Anfälle völlig unerwartet auf - d.h. in Situationen, in …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "PHQ-D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MHA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "PSS"
+    }]
+  },
+  {
+    "code" : "phq3d",
+    "display" : "phq3d — Empfinden Sie diese Anfälle als stark beeinträchtigend, und/oder haben Sie …",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "PHQ-D"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MHA"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "PSS"
+    }]
+  },
+  {
     "code" : "WAI01",
     "display" : "WAI01 — Wenn Sie Ihre beste, je erreichte Arbeitsfähigkeit mit 10 Punkten …",
     "property" : [{
@@ -2379,6 +2443,2750 @@ This Code system is referenced in the definition of the following value sets:
     {
       "code" : "entity",
       "valueString" : "AN, NTx, PSS"
+    }]
+  },
+  {
+    "code" : "BAASIS1A",
+    "display" : "BAASIS1A — Einnahme — Dosis ausgelassen, 4 Wochen — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS1A_a",
+    "display" : "BAASIS1A_a — Einnahme — Häufigkeit des Auslassens — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS1B",
+    "display" : "BAASIS1B — Einnahme — mehrere Dosen in Folge ausgelassen — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS1B_a",
+    "display" : "BAASIS1B_a — Einnahme — Häufigkeit des mehrfachen Auslassens — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS2",
+    "display" : "BAASIS2 — Timing — Einnahmezeitpunkt um mehr als 2 h verfehlt — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS2_a",
+    "display" : "BAASIS2_a — Timing — Häufigkeit der Zeitabweichung — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS3",
+    "display" : "BAASIS3 — Dosis — eigenmächtig geändert, 4 Wochen — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS4",
+    "display" : "BAASIS4 — Persistenz — eigenmächtig abgesetzt, 1 Jahr — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS5",
+    "display" : "BAASIS5 — Initiierung — Neuverordnung im letzten Jahr — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "BAASIS5_a",
+    "display" : "BAASIS5_a — Initiierung — Neuverordnung eingelöst und begonnen — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "BAASIS"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_01",
+    "display" : "ABQ_01 — Adhärenzbarriere Item 01 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_02",
+    "display" : "ABQ_02 — Adhärenzbarriere Item 02 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_03",
+    "display" : "ABQ_03 — Adhärenzbarriere Item 03 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_04",
+    "display" : "ABQ_04 — Adhärenzbarriere Item 04 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_05",
+    "display" : "ABQ_05 — Adhärenzbarriere Item 05 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_06",
+    "display" : "ABQ_06 — Adhärenzbarriere Item 06 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_07",
+    "display" : "ABQ_07 — Adhärenzbarriere Item 07 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_08",
+    "display" : "ABQ_08 — Adhärenzbarriere Item 08 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_09",
+    "display" : "ABQ_09 — Adhärenzbarriere Item 09 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_10",
+    "display" : "ABQ_10 — Adhärenzbarriere Item 10 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_11",
+    "display" : "ABQ_11 — Adhärenzbarriere Item 11 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_12",
+    "display" : "ABQ_12 — Adhärenzbarriere Item 12 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_13",
+    "display" : "ABQ_13 — Adhärenzbarriere Item 13 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_14",
+    "display" : "ABQ_14 — Adhärenzbarriere Item 14 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_15",
+    "display" : "ABQ_15 — Adhärenzbarriere Item 15 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "ABQ_16",
+    "display" : "ABQ_16 — Adhärenzbarriere Item 16 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "ABQ"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_01",
+    "display" : "MTSOSDR59_01 — Auftreten Symptom 01 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_01a",
+    "display" : "MTSOSDR59_01a — Belastung Symptom 01 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_02",
+    "display" : "MTSOSDR59_02 — Auftreten Symptom 02 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_02a",
+    "display" : "MTSOSDR59_02a — Belastung Symptom 02 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_03",
+    "display" : "MTSOSDR59_03 — Auftreten Symptom 03 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_03a",
+    "display" : "MTSOSDR59_03a — Belastung Symptom 03 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_04",
+    "display" : "MTSOSDR59_04 — Auftreten Symptom 04 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_04a",
+    "display" : "MTSOSDR59_04a — Belastung Symptom 04 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_05",
+    "display" : "MTSOSDR59_05 — Auftreten Symptom 05 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_05a",
+    "display" : "MTSOSDR59_05a — Belastung Symptom 05 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_06",
+    "display" : "MTSOSDR59_06 — Auftreten Symptom 06 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_06a",
+    "display" : "MTSOSDR59_06a — Belastung Symptom 06 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_07",
+    "display" : "MTSOSDR59_07 — Auftreten Symptom 07 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_07a",
+    "display" : "MTSOSDR59_07a — Belastung Symptom 07 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_08",
+    "display" : "MTSOSDR59_08 — Auftreten Symptom 08 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_08a",
+    "display" : "MTSOSDR59_08a — Belastung Symptom 08 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_09",
+    "display" : "MTSOSDR59_09 — Auftreten Symptom 09 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_09a",
+    "display" : "MTSOSDR59_09a — Belastung Symptom 09 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_10",
+    "display" : "MTSOSDR59_10 — Auftreten Symptom 10 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_10a",
+    "display" : "MTSOSDR59_10a — Belastung Symptom 10 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_11",
+    "display" : "MTSOSDR59_11 — Auftreten Symptom 11 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_11a",
+    "display" : "MTSOSDR59_11a — Belastung Symptom 11 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_12",
+    "display" : "MTSOSDR59_12 — Auftreten Symptom 12 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_12a",
+    "display" : "MTSOSDR59_12a — Belastung Symptom 12 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_13",
+    "display" : "MTSOSDR59_13 — Auftreten Symptom 13 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_13a",
+    "display" : "MTSOSDR59_13a — Belastung Symptom 13 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_14",
+    "display" : "MTSOSDR59_14 — Auftreten Symptom 14 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_14a",
+    "display" : "MTSOSDR59_14a — Belastung Symptom 14 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_15",
+    "display" : "MTSOSDR59_15 — Auftreten Symptom 15 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_15a",
+    "display" : "MTSOSDR59_15a — Belastung Symptom 15 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_16",
+    "display" : "MTSOSDR59_16 — Auftreten Symptom 16 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_16a",
+    "display" : "MTSOSDR59_16a — Belastung Symptom 16 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_17",
+    "display" : "MTSOSDR59_17 — Auftreten Symptom 17 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_17a",
+    "display" : "MTSOSDR59_17a — Belastung Symptom 17 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_18",
+    "display" : "MTSOSDR59_18 — Auftreten Symptom 18 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_18a",
+    "display" : "MTSOSDR59_18a — Belastung Symptom 18 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_19",
+    "display" : "MTSOSDR59_19 — Auftreten Symptom 19 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_19a",
+    "display" : "MTSOSDR59_19a — Belastung Symptom 19 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_20",
+    "display" : "MTSOSDR59_20 — Auftreten Symptom 20 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_20a",
+    "display" : "MTSOSDR59_20a — Belastung Symptom 20 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_21",
+    "display" : "MTSOSDR59_21 — Auftreten Symptom 21 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_21a",
+    "display" : "MTSOSDR59_21a — Belastung Symptom 21 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_22",
+    "display" : "MTSOSDR59_22 — Auftreten Symptom 22 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_22a",
+    "display" : "MTSOSDR59_22a — Belastung Symptom 22 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_23",
+    "display" : "MTSOSDR59_23 — Auftreten Symptom 23 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_23a",
+    "display" : "MTSOSDR59_23a — Belastung Symptom 23 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_24",
+    "display" : "MTSOSDR59_24 — Auftreten Symptom 24 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_24a",
+    "display" : "MTSOSDR59_24a — Belastung Symptom 24 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_25",
+    "display" : "MTSOSDR59_25 — Auftreten Symptom 25 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_25a",
+    "display" : "MTSOSDR59_25a — Belastung Symptom 25 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_26",
+    "display" : "MTSOSDR59_26 — Auftreten Symptom 26 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_26a",
+    "display" : "MTSOSDR59_26a — Belastung Symptom 26 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_27_male",
+    "display" : "MTSOSDR59_27_male — Auftreten Symptom 27 (männlich) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_27a_male",
+    "display" : "MTSOSDR59_27a_male — Belastung Symptom 27 (männlich) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_27_female",
+    "display" : "MTSOSDR59_27_female — Auftreten Symptom 27 (weiblich) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_27a_female",
+    "display" : "MTSOSDR59_27a_female — Belastung Symptom 27 (weiblich) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_28",
+    "display" : "MTSOSDR59_28 — Auftreten Symptom 28 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_28a",
+    "display" : "MTSOSDR59_28a — Belastung Symptom 28 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_29",
+    "display" : "MTSOSDR59_29 — Auftreten Symptom 29 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_29a",
+    "display" : "MTSOSDR59_29a — Belastung Symptom 29 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_30",
+    "display" : "MTSOSDR59_30 — Auftreten Symptom 30 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_30a",
+    "display" : "MTSOSDR59_30a — Belastung Symptom 30 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_31",
+    "display" : "MTSOSDR59_31 — Auftreten Symptom 31 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_31a",
+    "display" : "MTSOSDR59_31a — Belastung Symptom 31 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_32",
+    "display" : "MTSOSDR59_32 — Auftreten Symptom 32 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_32a",
+    "display" : "MTSOSDR59_32a — Belastung Symptom 32 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_33",
+    "display" : "MTSOSDR59_33 — Auftreten Symptom 33 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_33a",
+    "display" : "MTSOSDR59_33a — Belastung Symptom 33 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_34",
+    "display" : "MTSOSDR59_34 — Auftreten Symptom 34 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_34a",
+    "display" : "MTSOSDR59_34a — Belastung Symptom 34 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_35",
+    "display" : "MTSOSDR59_35 — Auftreten Symptom 35 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_35a",
+    "display" : "MTSOSDR59_35a — Belastung Symptom 35 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_36",
+    "display" : "MTSOSDR59_36 — Auftreten Symptom 36 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_36a",
+    "display" : "MTSOSDR59_36a — Belastung Symptom 36 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_37",
+    "display" : "MTSOSDR59_37 — Auftreten Symptom 37 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_37a",
+    "display" : "MTSOSDR59_37a — Belastung Symptom 37 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_38",
+    "display" : "MTSOSDR59_38 — Auftreten Symptom 38 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_38a",
+    "display" : "MTSOSDR59_38a — Belastung Symptom 38 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_39",
+    "display" : "MTSOSDR59_39 — Auftreten Symptom 39 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_39a",
+    "display" : "MTSOSDR59_39a — Belastung Symptom 39 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_40",
+    "display" : "MTSOSDR59_40 — Auftreten Symptom 40 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_40a",
+    "display" : "MTSOSDR59_40a — Belastung Symptom 40 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_41",
+    "display" : "MTSOSDR59_41 — Auftreten Symptom 41 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_41a",
+    "display" : "MTSOSDR59_41a — Belastung Symptom 41 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_42",
+    "display" : "MTSOSDR59_42 — Auftreten Symptom 42 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_42a",
+    "display" : "MTSOSDR59_42a — Belastung Symptom 42 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_43",
+    "display" : "MTSOSDR59_43 — Auftreten Symptom 43 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_43a",
+    "display" : "MTSOSDR59_43a — Belastung Symptom 43 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_44",
+    "display" : "MTSOSDR59_44 — Auftreten Symptom 44 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_44a",
+    "display" : "MTSOSDR59_44a — Belastung Symptom 44 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_45",
+    "display" : "MTSOSDR59_45 — Auftreten Symptom 45 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_45a",
+    "display" : "MTSOSDR59_45a — Belastung Symptom 45 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_46",
+    "display" : "MTSOSDR59_46 — Auftreten Symptom 46 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_46a",
+    "display" : "MTSOSDR59_46a — Belastung Symptom 46 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_47",
+    "display" : "MTSOSDR59_47 — Auftreten Symptom 47 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_47a",
+    "display" : "MTSOSDR59_47a — Belastung Symptom 47 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_48",
+    "display" : "MTSOSDR59_48 — Auftreten Symptom 48 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_48a",
+    "display" : "MTSOSDR59_48a — Belastung Symptom 48 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_49",
+    "display" : "MTSOSDR59_49 — Auftreten Symptom 49 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_49a",
+    "display" : "MTSOSDR59_49a — Belastung Symptom 49 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_50",
+    "display" : "MTSOSDR59_50 — Auftreten Symptom 50 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_50a",
+    "display" : "MTSOSDR59_50a — Belastung Symptom 50 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_51",
+    "display" : "MTSOSDR59_51 — Auftreten Symptom 51 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_51a",
+    "display" : "MTSOSDR59_51a — Belastung Symptom 51 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_52",
+    "display" : "MTSOSDR59_52 — Auftreten Symptom 52 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_52a",
+    "display" : "MTSOSDR59_52a — Belastung Symptom 52 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_53",
+    "display" : "MTSOSDR59_53 — Auftreten Symptom 53 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_53a",
+    "display" : "MTSOSDR59_53a — Belastung Symptom 53 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_54",
+    "display" : "MTSOSDR59_54 — Auftreten Symptom 54 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_54a",
+    "display" : "MTSOSDR59_54a — Belastung Symptom 54 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_55",
+    "display" : "MTSOSDR59_55 — Auftreten Symptom 55 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_55a",
+    "display" : "MTSOSDR59_55a — Belastung Symptom 55 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_56",
+    "display" : "MTSOSDR59_56 — Auftreten Symptom 56 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_56a",
+    "display" : "MTSOSDR59_56a — Belastung Symptom 56 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_57",
+    "display" : "MTSOSDR59_57 — Auftreten Symptom 57 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_57a",
+    "display" : "MTSOSDR59_57a — Belastung Symptom 57 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_58",
+    "display" : "MTSOSDR59_58 — Auftreten Symptom 58 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_58a",
+    "display" : "MTSOSDR59_58a — Belastung Symptom 58 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_59",
+    "display" : "MTSOSDR59_59 — Auftreten Symptom 59 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_59a",
+    "display" : "MTSOSDR59_59a — Belastung Symptom 59 — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_60",
+    "display" : "MTSOSDR59_60 — Auftreten Symptom 60 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_60a",
+    "display" : "MTSOSDR59_60a — Belastung Symptom 60 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_61",
+    "display" : "MTSOSDR59_61 — Auftreten Symptom 61 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_61a",
+    "display" : "MTSOSDR59_61a — Belastung Symptom 61 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_62",
+    "display" : "MTSOSDR59_62 — Auftreten Symptom 62 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MTSOSDR59_62a",
+    "display" : "MTSOSDR59_62a — Belastung Symptom 62 (Freitext) — metadata-only, Wortlaut nicht publizierbar",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MTSOSD-R59"
+    },
+    {
+      "code" : "category",
+      "valueString" : "MSE"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_DON",
+    "display" : "MHH_DON — Spendeart (Lebend-/Verstorbenenspende)",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-DON"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_TX_DATE",
+    "display" : "MHH_TX_DATE — Datum der letzten Nierentransplantation",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-Tx-DATE"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_PRIOR_TX",
+    "display" : "MHH_PRIOR_TX — wievielte Spenderniere aktuell",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-PRIOR-TX"
+    },
+    {
+      "code" : "category",
+      "valueString" : "TCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_DIAL1",
+    "display" : "MHH_DIAL1 — wieder an der Dialyse (seit mindestens 4 Wochen)",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-DIAL"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_DIAL2",
+    "display" : "MHH_DIAL2 — Form der Nierenersatztherapie zuletzt vor Transplantation",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-DIAL"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_PTX_DIAB",
+    "display" : "MHH_PTX_DIAB — Diabetes mellitus nach Transplantation festgestellt",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-PTx-DIAB"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_T01",
+    "display" : "MHH_T01 — Hauttumor nach Transplantation festgestellt",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-T"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_T02",
+    "display" : "MHH_T02 — Hauttumor seit letzter Vorstellung in der Transplantationsambulanz",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-T"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_T03",
+    "display" : "MHH_T03 — andere Tumore nach Transplantation festgestellt",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-T"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_UTI01",
+    "display" : "MHH_UTI01 — Harnwegsinfektion seit letztem Kontakt in der Transplantationsambulanz",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-UTI"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_UTI02",
+    "display" : "MHH_UTI02 — mindestens zwei Harnwegsinfektionen in den letzten 6 Monaten",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-UTI"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_UTI03",
+    "display" : "MHH_UTI03 — Antibiotika-Prophylaxe gegen chronische Harnwegsinfekte",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-UTI"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_UTI04",
+    "display" : "MHH_UTI04 — Impfung gegen Harnwegsinfekte seit Transplantation",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-UTI"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_Infekt1",
+    "display" : "MHH_Infekt1 — Infektion mit Antibiotikagabe in den letzten 3 Monaten",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-Infection"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_Infekt2",
+    "display" : "MHH_Infekt2 — mehr als 3-mal Antibiotika pro Jahr wegen Infekt",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-Infection"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_Infekt3",
+    "display" : "MHH_Infekt3 — Intensivbehandlung wegen Infektionskomplikation seit Transplantation",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-Infection"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_BP",
+    "display" : "MHH_BP — letzter Blutdruck (systolisch/diastolisch)",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-BP"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_Medi",
+    "display" : "MHH_Medi — aktuelle Einnahme von Aspirin (ASS)",
+    "property" : [{
+      "code" : "instrument",
+      "valueString" : "MHH-Medi"
+    },
+    {
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_PTH1",
+    "display" : "MHH_PTH1 — Operation an der Nebenschilddrüse",
+    "property" : [{
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
+    }]
+  },
+  {
+    "code" : "MHH_PTH2",
+    "display" : "MHH_PTH2 — Einnahme von Cinacalcet",
+    "property" : [{
+      "code" : "category",
+      "valueString" : "DCH"
+    },
+    {
+      "code" : "entity",
+      "valueString" : "NTx"
     }]
   }]
 }

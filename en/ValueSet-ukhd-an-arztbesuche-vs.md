@@ -1,4 +1,4 @@
-# UKHD-AN Arztbesuche in den letzten 4 Wochen - PCOR-MII Implementation Guide v0.3.0
+# UKHD-AN Arztbesuche in den letzten 4 Wochen - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: UKHD-AN Arztbesuche in den letzten 4 Wochen (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "ukhd-an-arztbesuche-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-arztbesuche-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdAnArztbesucheVS",
   "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -39,7 +39,7 @@
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4.",
+  "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `itemWeight` 1–4.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -1,4 +1,4 @@
-# ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) - PCOR-MII Implementation Guide v0.3.0
+# ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "en",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "**Designentscheidungen (ADR-003):** (-1) **Dies ist ein PCOR-MII-Komposit, nicht der ACE.** Zu den fünf ACE-Items kommen sechs Items der Dictionary-Gruppe `UKHD-CTT` (`traumaspecific1`–`6`), die die berichteten Ereignisse zeitlich einordnen. Das Dictionary nennt deren Bezug ausdrücklich — Paare auf `ace1`, `ace2` und `ace3` —, und `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Die Items mussten also dorthin, wo ihre Bedingung steht. Dass die Gruppe im Dictionary `UKHD-CTT` heißt, bleibt über `item.code` und die Property `instrument` in [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) lesbar: Die Gruppenzugehörigkeit hängt am Code, nicht an der Ressourcengrenze ([ADR-011](Designentscheidungen.html)). Die Rechtelage ist dadurch **doppelt** — ACE frei, UKHD-Wortlaut ohne dokumentierte Freigabe; siehe `copyright`. (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* hier **nicht** die Trennschärfe-Formel der übrigen AN-Zuschnitte, sondern *„die ersten 5 Fragen“*. Der Zuschnitt ist also der vordere Block des Instruments (Misshandlung und Vernachlässigung) ohne die Haushalts-Dysfunktions-Fragen 6-10, keine psychometrische Auswahl. (1) `linkId`s = Original-ACE-Fragennummern (1–5); die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. (1a) **Englisch primär** (ADR-005): `item.text` trägt den englischen Originalwortlaut nach Felitti et al. 1998, die deutsche Fassung ACE-D hängt als `translation` mit `lang = de` daran. Das ist hier auch rechtlich die bessere Anordnung, denn die Rechtelage ist **nicht symmetrisch**: Das englische Original ist ein frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen. (2) Kein Score: Der ACE-Score ist die Anzahl der Ja-Antworten über alle 10 Fragen — eine Summe über den 5-Fragen-Zuschnitt ist kein validierter ACE-Score. (3) **Kein LOINC-Panel-Code:** `82813-7` bezeichnet das 10-Fragen-Vollinstrument und wird dem Zuschnitt nicht zugewiesen. `Questionnaire.code` trägt stattdessen den lokalen Katalogcode `ace` aus [`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.html), der ausdrücklich dieses PCOR-MII-Komposit bezeichnet und nicht den ACE (ADR-003 Punkt 2, ADR-004). (4) Ja/Nein über das projektweite `DemJaNeinVS`; Dictionary-Kodierung 1 = ja / 0 = nein nur dokumentarisch. (5) Governance der Auswertung (hochsensible Inhalte, analog PHQ-SI) fachlich zu klären. (5) **`item.code` trägt zwei Codings:** die PCOR-MII-Dictionary-Variable gegen [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) — das ist der PCOR-MII-Code des Items — und den item-genauen LOINC-Code. Genau dafür ist `item.code` `0..*`. Die Dictionary-Variable bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein; ein weiteres lokales CodeSystem gibt es bewusst nicht. Zweck: das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (ADR-011). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+    "valueMarkdown" : "**Designentscheidungen (ADR-003):** (-1) **Dies ist ein PCOR-MII-Komposit, nicht der ACE.** Zu den fünf ACE-Items kommen sechs Items der Dictionary-Gruppe `UKHD-CTT` (`traumaspecific1`–`6`), die die berichteten Ereignisse zeitlich einordnen. Das Dictionary nennt deren Bezug ausdrücklich — Paare auf `ace1`, `ace2` und `ace3` —, und `enableWhen.question` nimmt laut R4 eine `linkId` **innerhalb desselben Questionnaire**. Die Items mussten also dorthin, wo ihre Bedingung steht. Dass die Gruppe im Dictionary `UKHD-CTT` heißt, bleibt über `item.code` und die Property `instrument` in [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) lesbar: Die Gruppenzugehörigkeit hängt am Code, nicht an der Ressourcengrenze ([ADR-011](Designentscheidungen.html)). Die Rechtelage ist dadurch **doppelt** — ACE frei, UKHD-Wortlaut ohne dokumentierte Freigabe; siehe `copyright`. (0) **Auswahlregel des Zuschnitts:** Die DIZ-Implementierungsliste nennt in der Spalte *„verkürzte Version?“* hier **nicht** die Trennschärfe-Formel der übrigen AN-Zuschnitte, sondern *„die ersten 5 Fragen“*. Der Zuschnitt ist also der vordere Block des Instruments (Misshandlung und Vernachlässigung) ohne die Haushalts-Dysfunktions-Fragen 6-10, keine psychometrische Auswahl. (1) `linkId`s = Original-ACE-Fragennummern (1–5); die Haushalts-Dysfunktions-Fragen 6–10 sind nicht enthalten. (1a) **Englisch primär** (ADR-005): `item.text` trägt den englischen Originalwortlaut nach Felitti et al. 1998, die deutsche Fassung ACE-D hängt als `translation` mit `lang = de` daran. Das ist hier auch rechtlich die bessere Anordnung, denn die Rechtelage ist **nicht symmetrisch**: Das englische Original ist ein frei verwendetes Public-Health-Instrument, für die deutsche ACE-D-Fassung ist die Freigabe dagegen offen. (2) Kein Score: Der ACE-Score ist die Anzahl der Ja-Antworten über alle 10 Fragen — eine Summe über den 5-Fragen-Zuschnitt ist kein validierter ACE-Score. (3) **Kein LOINC-Panel-Code:** `82813-7` bezeichnet das 10-Fragen-Vollinstrument und wird dem Zuschnitt nicht zugewiesen. `Questionnaire.code` trägt stattdessen den lokalen Katalogcode `ace` aus [`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.html), der ausdrücklich dieses PCOR-MII-Komposit bezeichnet und nicht den ACE (ADR-003 Punkt 2, ADR-004). (4) Ja/Nein als SNOMED CT `373066001`/`373067005` inline ([ADR-013](Designentscheidungen.html)); Dictionary-Kodierung 1 = ja / 0 = nein nur dokumentarisch. (5) Governance der Auswertung (hochsensible Inhalte, analog PHQ-SI) fachlich zu klären. (5) **`item.code` trägt zwei Codings:** die PCOR-MII-Dictionary-Variable gegen [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) — das ist der PCOR-MII-Code des Items — und den item-genauen LOINC-Code. Genau dafür ist `item.code` `0..*`. Die Dictionary-Variable bezeichnet das **Erhebungsfeld** und stimmt hier mit der Itemnummer überein; ein weiteres lokales CodeSystem gibt es bewusst nicht. Zweck: das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (ADR-011). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "ACE",
   "title" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
   "status" : "draft",
@@ -110,7 +110,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "ace2",
@@ -138,7 +151,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "ace3",
@@ -166,7 +192,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "ace4",
@@ -194,7 +233,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "ace5",
@@ -222,7 +274,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "extension" : [{
@@ -236,8 +301,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "question" : "ace1",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }],
     "item" : [{
@@ -269,8 +334,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "question" : "ace2",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }],
     "item" : [{
@@ -302,8 +367,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "question" : "ace3",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }],
     "item" : [{

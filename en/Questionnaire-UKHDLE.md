@@ -1,4 +1,4 @@
-# UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN) (Experimental) 
 
@@ -23,7 +23,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "Dictionary-Gruppe `UKHD-LE`, DOMAIN *Life Events*, Kategorie EFA. Die drei Ja/Nein-Items sind **dieselbe Frage für drei Erhebungszeitpunkte** (`TIMING` i / alle außer Aufnahme und Entlassung / Entlassung) und unterscheiden sich nur im Zeitfenster — „in Ihrem Leben“, „seit der letzten Befragung“, „seit Ihrer Aufnahme“. Pro Termin wird genau eine gestellt; `lifev_text` hängt deshalb mit `enableBehavior = any` an allen drei. **Zwei Dictionary-Befunde:** (a) Die Variablennamen sind uneinheitlich — `life_event1_screening`/`life_event1_monitoring` gegen `lifev_discharge`/`lifev_text`, und ein `life_event2` existiert nicht. (b) Die Beispielliste von `life_event1_screening` nennt bloß „Partnerschaften“, wo die beiden anderen „Auflösung einer Partnerschaften“ sagen — dort fehlt offenbar der Kopf der Wendung. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+    "valueMarkdown" : "Dictionary-Gruppe `UKHD-LE`, DOMAIN *Life Events*, Kategorie EFA. Die drei Ja/Nein-Items sind **dieselbe Frage für drei Erhebungszeitpunkte** (`TIMING` i / alle außer Aufnahme und Entlassung / Entlassung) und unterscheiden sich nur im Zeitfenster — „in Ihrem Leben“, „seit der letzten Befragung“, „seit Ihrer Aufnahme“. Pro Termin wird genau eine gestellt; `lifev_text` hängt deshalb mit `enableBehavior = any` an allen drei. **Zwei Dictionary-Befunde:** (a) Die Variablennamen sind uneinheitlich — `life_event1_screening`/`life_event1_monitoring` gegen `lifev_discharge`/`lifev_text`, und ein `life_event2` existiert nicht. (b) Die Beispielliste von `life_event1_screening` nennt bloß „Partnerschaften“, wo die beiden anderen „Auflösung einer Partnerschaften“ sagen — dort fehlt offenbar der Kopf der Wendung. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UKHDLE",
   "title" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)",
   "status" : "draft",
@@ -74,7 +74,20 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }],
     "text" : "Gab es in Ihrem Leben prägende belastende Lebensereignisse, die Sie nachhaltig beeinflussen? (z.B. Tod einer nahestehenden Person, Partnerschaften, Missbrauch, Verlust ihres Zuhauses)",
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "life_event1_monitoring",
@@ -84,7 +97,20 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }],
     "text" : "Gab es seit der letzten Befragung prägende belastende Lebensereignisse, die Sie nachhaltig beeinflussen? (z.B. Tod einer nahestehenden Person, Auflösung einer Partnerschaften, Missbrauch, Verlust ihres Zuhauses)",
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "lifev_discharge",
@@ -94,7 +120,20 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }],
     "text" : "Gab es seit Ihrer Aufnahme prägende belastende Lebensereignisse, die Sie nachhaltig beeinflussen? (z.B. Tod einer nahestehenden Person, Auflösung einer Partnerschaften, Missbrauch, Verlust ihres Zuhauses)",
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "extension" : [{
@@ -112,27 +151,24 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
       "question" : "life_event1_screening",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     },
     {
       "question" : "life_event1_monitoring",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     },
     {
       "question" : "lifev_discharge",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }],
     "enableBehavior" : "any"

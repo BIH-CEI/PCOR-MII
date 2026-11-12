@@ -1,4 +1,4 @@
-# Beispiel-Patient PSS - PCOR-MII Implementation Guide v0.3.0
+# Beispiel-Patient PSS - PCOR-MII Implementation Guide v0.9.0
 
 ## Beispiel Patient: Beispiel-Patient PSS
 

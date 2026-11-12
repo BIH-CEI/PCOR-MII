@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.4"}
-    h3,h4,h5,h6{--heading-prefix:"21.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.7"}
+    h3,h4,h5,h6{--heading-prefix:"23.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -218,12 +218,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -236,6 +239,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -280,7 +286,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Library-use-case-pss.json.html">&lt; zurück</a> | 
+            <a href="Questionnaire-ABQ.json.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -300,7 +306,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -348,7 +354,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -423,13 +429,13 @@ a[name="test"] + h3 + div {
       <div id="tbl-tree">
         <div id="tbl-tree-inner">
           <div data-fhir="generated"><p class="res-header-id"></p><a name="ACE"> </a><a name="hcACE"> </a>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div><b>Structure</b>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=ACE" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> ACE</td>
 <td style="" class="hierarchy xhtCellBorder1">**PCOR-MII-spezifisches Komposit**, nicht der ACE allein: die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire (Felitti et al. 1998) plus sechs UKHD-Items zur zeitlichen Einordnung der berichteten Ereignisse. Die sechs Zeitangaben sind in drei Paare gegliedert; jedes Paar wird über `enableWhen` von einem bejahten ACE-Item freigeschaltet — `ace1`, `ace2` bzw. `ace3`, so wie das Item Level Dictionary es vorgibt. Die fünf ACE-Items im Einzelnen: emotionale und körperliche Misshandlung, sexueller Missbrauch, emotionale und körperliche Vernachlässigung vor dem 18. Lebensjahr, je ja/nein. Kein Score — die Summe über den 5-Item-Zuschnitt ist kein validierter ACE-Score. Quelle: PCOR-MII Item Level Dictionary (Entität AN). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items — und zusätzlich seinen LOINC-Code.</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
 <td style="" class="hierarchy xhtCellBorder1">Questionnaire</td>
-<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE#0.3.0</td></tr>
+<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE#0.9.0</td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.ace-intro" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="display" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ace-intro</td>
 <td style="" class="hierarchy xhtCellBorder1">The next questions are about difficult experiences during your childhood (before the age of 18).</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -439,32 +445,32 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Did a parent or other adult in the household often or very often… Swear at you, insult you, put you down, or humiliate you? Or act in a way that made you afraid that you might be physically hurt?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.ace1">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-ac" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.ace2" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ace2</td>
 <td style="" class="hierarchy xhtCellBorder1">Did a parent or other adult in the household often or very often… Push, grab, slap, or throw something at you? Or ever hit you so hard that you had marks or were injured?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.ace2">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-ad" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.ace3" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ace3</td>
 <td style="" class="hierarchy xhtCellBorder1">Did an adult or person at least 5 years older than you ever… Touch or fondle you or have you touch their body in a sexual way? Or attempt or actually have oral, anal, or vaginal intercourse with you?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.ace3">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-ae" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.ace4" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ace4</td>
 <td style="" class="hierarchy xhtCellBorder1">Did you often or very often feel that… No one in your family loved you or thought you were important or special? Or your family didn’t look out for each other, feel close to each other, or support each other?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.ace4">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-af" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.ace5" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ace5</td>
 <td style="" class="hierarchy xhtCellBorder1">Did you often or very often feel that… You didn’t have enough to eat, had to wear dirty clothes, and had no one to protect you? Or your parents were too drunk or high to take care of you or take you to the doctor if you needed it?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.ace5">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-ag" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.ctt-ereignis-1" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / </span>ctt-ereignis-1</td>
 <td style="" class="hierarchy xhtCellBorder1">Zeitliche Einordnung des Ereignisses aus Frage 1</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-group">group</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace1">ace1</a> = Ja (DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)#ja)</span><br/>Value Set: </td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace1">ace1</a> = Yes (SNOMED CT#373066001)</span><br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-aga" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.traumaspecific1" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / ctt-ereignis-1 / </span>traumaspecific1</td>
 <td style="" class="hierarchy xhtCellBorder1">Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -479,7 +485,7 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Zeitliche Einordnung des Ereignisses aus Frage 2</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-group">group</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace2">ace2</a> = Ja (DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)#ja)</span><br/>Value Set: </td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace2">ace2</a> = Yes (SNOMED CT#373066001)</span><br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-aha" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.traumaspecific3" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / ctt-ereignis-2 / </span>traumaspecific3</td>
 <td style="" class="hierarchy xhtCellBorder1">Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -494,7 +500,7 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Zeitliche Einordnung des Ereignisses aus Frage 3</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-group">group</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace3">ace3</a> = Ja (DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)#ja)</span><br/>Value Set: </td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.ace3">ace3</a> = Yes (SNOMED CT#373066001)</span><br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="qt-ACE-aia" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck010.png)" id="item.traumaspecific5" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ACE / ctt-ereignis-3 / </span>traumaspecific5</td>
 <td style="" class="hierarchy xhtCellBorder1">Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -505,7 +511,17 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-ukhd-an-ereigniszeitpunkt-vs.html">UKHD-AN Ereignis vor oder nach Beginn der Essstoerung</a></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table><hr/><p><b>Options Sets</b></p><a name="opt-item.ace1"> </a><p><b>Answer options for ace1 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.ace2"> </a><p><b>Answer options for ace2 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.ace3"> </a><p><b>Answer options for ace3 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.ace4"> </a><p><b>Answer options for ace4 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.ace5"> </a><p><b>Answer options for ace5 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul></div>
         </div>
       </div>
     </div>
@@ -514,18 +530,18 @@ a[name="test"] + h3 + div {
       <div id="tbl-sample">
         <div id="tbl-sample-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div>
 <div><div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace-intro">The next questions are about difficult experiences during your childhood (before the age of 18).</span></p></div><div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace-intro</li><li style="font-size: 10px">Answers: </li></ul></div></div>
-<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace1">Did a parent or other adult in the household often or very often… Swear at you, insult you, put you down, or humiliate you? Or act in a way that made you afraid that you might be physically hurt?</span><select size="1" name="ace1" aria-label="Did a parent or other adult in the household often or very often… Swear at you, insult you, put you down, or humiliate you? Or act in a way that made you afraid that you might be physically hurt?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace1</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
-<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace2">Did a parent or other adult in the household often or very often… Push, grab, slap, or throw something at you? Or ever hit you so hard that you had marks or were injured?</span><select size="1" name="ace2" aria-label="Did a parent or other adult in the household often or very often… Push, grab, slap, or throw something at you? Or ever hit you so hard that you had marks or were injured?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace2</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
-<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace3">Did an adult or person at least 5 years older than you ever… Touch or fondle you or have you touch their body in a sexual way? Or attempt or actually have oral, anal, or vaginal intercourse with you?</span><select size="1" name="ace3" aria-label="Did an adult or person at least 5 years older than you ever… Touch or fondle you or have you touch their body in a sexual way? Or attempt or actually have oral, anal, or vaginal intercourse with you?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace3</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
-<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace4">Did you often or very often feel that… No one in your family loved you or thought you were important or special? Or your family didn’t look out for each other, feel close to each other, or support each other?</span><select size="1" name="ace4" aria-label="Did you often or very often feel that… No one in your family loved you or thought you were important or special? Or your family didn’t look out for each other, feel close to each other, or support each other?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace4</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
-<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace5">Did you often or very often feel that… You didn’t have enough to eat, had to wear dirty clothes, and had no one to protect you? Or your parents were too drunk or high to take care of you or take you to the doctor if you needed it?</span><select size="1" name="ace5" aria-label="Did you often or very often feel that… You didn’t have enough to eat, had to wear dirty clothes, and had no one to protect you? Or your parents were too drunk or high to take care of you or take you to the doctor if you needed it?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace5</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
+<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace1">Did a parent or other adult in the household often or very often… Swear at you, insult you, put you down, or humiliate you? Or act in a way that made you afraid that you might be physically hurt?</span><select size="1" name="ace1" aria-label="Did a parent or other adult in the household often or very often… Swear at you, insult you, put you down, or humiliate you? Or act in a way that made you afraid that you might be physically hurt?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace1</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.ace1">Answers: 2 options</a></li></ul></div></div>
+<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace2">Did a parent or other adult in the household often or very often… Push, grab, slap, or throw something at you? Or ever hit you so hard that you had marks or were injured?</span><select size="1" name="ace2" aria-label="Did a parent or other adult in the household often or very often… Push, grab, slap, or throw something at you? Or ever hit you so hard that you had marks or were injured?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace2</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.ace2">Answers: 2 options</a></li></ul></div></div>
+<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace3">Did an adult or person at least 5 years older than you ever… Touch or fondle you or have you touch their body in a sexual way? Or attempt or actually have oral, anal, or vaginal intercourse with you?</span><select size="1" name="ace3" aria-label="Did an adult or person at least 5 years older than you ever… Touch or fondle you or have you touch their body in a sexual way? Or attempt or actually have oral, anal, or vaginal intercourse with you?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace3</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.ace3">Answers: 2 options</a></li></ul></div></div>
+<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace4">Did you often or very often feel that… No one in your family loved you or thought you were important or special? Or your family didn’t look out for each other, feel close to each other, or support each other?</span><select size="1" name="ace4" aria-label="Did you often or very often feel that… No one in your family loved you or thought you were important or special? Or your family didn’t look out for each other, feel close to each other, or support each other?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace4</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.ace4">Answers: 2 options</a></li></ul></div></div>
+<div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: ace5">Did you often or very often feel that… You didn’t have enough to eat, had to wear dirty clothes, and had no one to protect you? Or your parents were too drunk or high to take care of you or take you to the doctor if you needed it?</span><select size="1" name="ace5" aria-label="Did you often or very often feel that… You didn’t have enough to eat, had to wear dirty clothes, and had no one to protect you? Or your parents were too drunk or high to take care of you or take you to the doctor if you needed it?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ace5</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.ace5">Answers: 2 options</a></li></ul></div></div>
 <div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><b><span title="linkId: ctt-ereignis-1">Zeitliche Einordnung des Ereignisses aus Frage 1</span></b></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ctt-ereignis-1</li><li style="font-size: 10px">Enable When: todo</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: traumaspecific1">Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?</span><select size="1" name="traumaspecific1" aria-label="Handelt es sich bei Ihrer Angabe um ein einmaliges oder um ein sich wiederholendes Ereignis?"><option value="1" selected="false">um ein einmaliges</option><option value="2" selected="false">um ein mehrfaches Ereignis</option></select></p></div>
@@ -552,20 +568,20 @@ a[name="test"] + h3 + div {
       <div id="tbl-logic">
         <div id="tbl-logic-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qlogic=ACE" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="" style="background-color: white; background-color: inherit" title="display" class="hierarchy"/> ace-intro</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-b" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> ace1</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.ace1">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-c" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> ace2</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.ace2">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-d" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> ace3</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.ace3">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-e" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> ace4</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.ace4">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-f" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> ace5</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.ace5">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-g" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> ctt-ereignis-1</td>
 <td style="" class="hierarchy xhtCellBorder1">Enable When: Noch nicht unterstützt<br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="ql-ACE-ga" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">ctt-ereignis-1 / </span>traumaspecific1</td>
@@ -595,7 +611,7 @@ a[name="test"] + h3 + div {
   <a name="test"> </a>
   <h3>Diesen Fragebogen testen</h3>
   <div data-fhir="generated"><p>Try this questionnaire out:</p>
-<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE&amp;pID=pcor-mii&amp;pVersion=0.3.0">NLM Forms Library</a></li></ul></div>
+<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE&amp;pID=pcor-mii&amp;pVersion=0.9.0">NLM Forms Library</a></li></ul></div>
 
   <a name="responses"> </a>
   <h3>Antworten zu diesem Fragebogen</h3>
@@ -637,7 +653,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Library-use-case-pss.json.html">&lt; zurück</a>
+                <a href="Questionnaire-ABQ.json.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -659,10 +675,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

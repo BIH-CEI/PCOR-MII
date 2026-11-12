@@ -1,4 +1,4 @@
-# Startseite - PCOR-MII Implementation Guide v0.3.0
+# Startseite - PCOR-MII Implementation Guide v0.9.0
 
 ## Startseite
 
@@ -28,10 +28,13 @@ Dieser IG stellt einheitliche, interoperable Fragebögen bereit, mit denen patie
 
 Über die Menüleiste erreichbar:
 
-1. **Fragebögen**– Überblick über die definierten Questionnaires und ihren Aufbau
-1. **Anwendung**– detaillierte Beschreibung, wie die Fragebögen ausgefüllt und ausgewertet werden
-1. **Release Notes**– Versionierung und Änderungshistorie
-1. **Artefakte**– maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme)
+1. **Instrumente**– Gesamtübersicht und je Use Case eine Seite ([PSS](PSS.md),[AN](AN.md),[NTx](NTx.md)) mit der Batterie als Tabelle, darunter die Instrumentenseiten
+1. **Fragebögen**– tabellarischer Einstieg zu allen Questionnaires mit Doku, Ressource, Beispielantwort und Score, dazu die Use-Case-Manifeste
+1. **Beispiele**– drei Beispielpatient:innen, vier Termin-Bundles und alle Beispielantworten
+1. **Anwendung**,**Validierung**,**Bereitstellung**– vom Questionnaire zur Antwort, Prüfung und Bezug der Definitionen
+1. **Designentscheidungen**– die ADRs;**Rechtelage & offene Punkte**– Rechtelage aller Instrumente und alles, was noch auf Rückmeldung wartet
+1. **Release Notes**und**Kommende Änderungen**– Änderungshistorie und der Stand gegenüber dem MII-PRO-Modul 2027
+1. **Artefakte**– maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme, Libraries, Beispiele)
 
 ### Kontakt
 

@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Validierung - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Validierung - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"16"}
-    h3,h4,h5,h6{--heading-prefix:"16"}</style>
+    <style type="text/css">h2{--heading-prefix:"17"}
+    h3,h4,h5,h6{--heading-prefix:"17"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Validierung</h2>
   
 
@@ -340,7 +346,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> (oder ein FHIR-Bundle das sie enthält) muss drei Dinge erfüllen, um "valide" zu sein:</p>
 
 <ol>
-  <li><strong>Strukturell</strong> dem <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
+  <li><strong>Strukturell</strong> dem <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> entsprechen (Datentypen, Pflichtfelder, Element-Constraints)</li>
   <li>Die <strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> müssen mit der Item-Struktur des referenzierten Questionnaire übereinstimmen</li>
   <li>Jede <strong>codierte Antwort</strong> muss aus dem <code class="language-plaintext highlighter-rouge">answerValueSet</code> (bzw. <code class="language-plaintext highlighter-rouge">answerOption</code>) des jeweiligen Items stammen</li>
 </ol>
@@ -364,7 +370,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     style CS fill:#e1ffe1
 </code></pre>
 
-<p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2026.7.0)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
+<p>Damit das funktioniert, muss der Validator alle vier Resource-Ebenen kennen — sprich das <strong>MII PRO-Modul Package (2027.0.0-ballot.2)</strong> + SDC + LOINC. Bei den unten gezeigten Wegen passiert das automatisch via <code class="language-plaintext highlighter-rouge">-ig</code>-Parameter bzw. via Container-Preload.</p>
 
 <h3 id="drei-wege-zum-validierten-bundle">Drei Wege zum validierten Bundle</h3>
 
@@ -390,8 +396,8 @@ curl <span class="nt">-L</span> <span class="s2">"https://github.com/hapifhir/or
 <span class="c"># Validieren</span>
 java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-response.json <span class="se">\</span>
   <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
-  <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
+  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 <span class="se">\</span>
+  <span class="nt">-ig</span> hl7.fhir.uv.sdc#4.0.0 <span class="se">\</span>
   <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 </code></pre></div></div>
 
@@ -407,7 +413,7 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">meta.profile</code></strong> auf der QR gesetzt — <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response</code>, <strong>bewusst ohne Versionspin</strong>: Die Profilversion löst sich über die Paketabhängigkeit auf; ein Pin müsste bei jedem Dependency-Update in allen Bestandsdaten nachgezogen werden. Die <strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz dagegen immer mit Version</strong> (nächster Punkt) — dort hängt der Wortlaut dran</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2026.7.0</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">questionnaire</code>-Referenz</strong> mit Version — <code class="language-plaintext highlighter-rouge">…/mii-qst-pro-promis-16|2027.0.0-ballot.2</code></li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">linkId</code>s</strong> der Answer-Items matchen <em>exakt</em> die im Questionnaire definierten linkIds</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong>Codierte Antworten</strong> mit System + Code aus dem im Questionnaire definierten <code class="language-plaintext highlighter-rouge">answerValueSet</code> (für PROMIS-VS sind die LA-Codes inline in der VS dokumentiert — siehe <a href="PROMIS-16.html">PROMIS-16</a> Item-Tabellen)</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><strong><code class="language-plaintext highlighter-rouge">status = completed</code></strong> (bzw. <code class="language-plaintext highlighter-rouge">in-progress</code>/<code class="language-plaintext highlighter-rouge">amended</code> je nach Lebenszyklus)</li>
@@ -476,42 +482,13 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 <h3 id="validierte-beispiele-als-referenz">Validierte Beispiele als Referenz</h3>
 
-<p>Der Beispielbestand ist seit dem 01.10.2026 als <strong>drei Use-Case-Bundles</strong> organisiert — je Erhebungstermin ein <code class="language-plaintext highlighter-rouge">collection</code>-Bundle mit Patient und allen Antworten des Termins, alle drei mit <strong>0 Errors</strong> validiert:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Bundle</th>
-      <th>Termin</th>
-      <th>Entries</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-an-initial.html">AN — Initial</a></td>
-      <td>18.06.2026</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">AN — Monitoring</a></td>
-      <td>30.07.2026</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">PSS — Screening</a></td>
-      <td>25.06.2026</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel (vollständige Liste: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>); die Bundles entstehen daraus mit <code class="language-plaintext highlighter-rouge">scripts/build-example-bundles.py</code>. Dazu der generische <a href="QuestionnaireResponse-pcor-mii-exa-example-response.html"><code class="language-plaintext highlighter-rouge">pcor-mii-exa-example-response</code></a> für den Beispiel-Questionnaire.</p>
+<p>Der Beispielbestand ist als <strong>vier Use-Case-Bundles</strong> organisiert — je Erhebungstermin ein <code class="language-plaintext highlighter-rouge">collection</code>-Bundle mit Patient und allen Antworten des Termins (AN Initial 13, AN Monitoring 10, PSS Screening 21, NTx Erstbefragung 6 Entries), alle mit <strong>0 Errors</strong>. Jede enthaltene Antwort existiert zusätzlich als eigenständiges Beispiel; Patient:innen, Bundles und alle 46 Antworten mit dem, was sie belegen, stehen auf <a href="Beispiele.html">Beispiele</a>. Die Bundles entstehen mit <code class="language-plaintext highlighter-rouge">scripts/build-example-bundles.py</code> aus den Einzelantworten.</p>
 
 <p>Die Beispiele sind mit <strong>0 Errors</strong> geprüft, aber nicht warnungsfrei — die verbleibenden Warnungsklassen sind bekannt und akzeptiert:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">dom-6</code> (fehlende Narrative) auf allen Beispielantworten — steht oben in der Tabelle als ignorierbar</li>
-  <li>Profilreferenz auf <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response</code> <em>„nicht geprüft, da unbekannt"</em>, wenn ohne das MII-PRO-Paket validiert wird — mit <code class="language-plaintext highlighter-rouge">-ig de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0</code> verschwindet sie</li>
+  <li>Profilreferenz auf <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response</code> <em>„nicht geprüft, da unbekannt"</em>, wenn ohne das MII-PRO-Paket validiert wird — mit <code class="language-plaintext highlighter-rouge">-ig de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2</code> verschwindet sie</li>
   <li>Display-/Terminologie-Hinweise bei <code class="language-plaintext highlighter-rouge">-tx n/a</code> — der Validator kann ohne Terminologieserver BCP-47 und LOINC-Displays nicht expandieren</li>
 </ul>
 
@@ -523,8 +500,8 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 <span class="k">for </span>f <span class="k">in </span>input/examples/QuestionnaireResponse-<span class="k">*</span>.json input/examples/Bundle-<span class="k">*</span>.json fsh-generated/resources/QuestionnaireResponse-<span class="k">*</span>.json<span class="p">;</span> <span class="k">do
   </span>java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span> <span class="se">\</span>
     <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
-    <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
+    <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 <span class="se">\</span>
+    <span class="nt">-ig</span> hl7.fhir.uv.sdc#4.0.0 <span class="se">\</span>
     <span class="nt">-ig</span> fsh-generated/resources <span class="se">\</span>
     <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 <span class="k">done</span>
@@ -584,10 +561,10 @@ java <span class="nt">-jar</span> ~/.fhir/validator_cli.jar my-questionnaire-res
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

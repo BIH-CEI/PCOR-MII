@@ -1,4 +1,4 @@
-# EXPECT — Erwartung an den Verlauf der Körperbeschwerden - PCOR-MII Implementation Guide v0.3.0
+# EXPECT — Erwartung an den Verlauf der Körperbeschwerden - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: EXPECT — Erwartung an den Verlauf der Körperbeschwerden (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -33,7 +33,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "EXPECT",
   "title" : "EXPECT — Erwartung an den Verlauf der Körperbeschwerden",
   "status" : "draft",

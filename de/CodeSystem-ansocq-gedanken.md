@@ -1,4 +1,4 @@
-# ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes) - PCOR-MII Implementation Guide v0.3.0
+# ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes) (Experimentell) 
 
@@ -19,12 +19,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ansocq-gedanken",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "AnsocqGedankenCS",
   "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept.",
+  "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. itemWeight-Property je Konzept.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,8 +45,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "content" : "complete",
   "count" : 5,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
     "description" : "Stadium der Veränderungsbereitschaft (1-5).",
     "type" : "decimal"
   }],
@@ -62,7 +62,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist völlig in Ordnung."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -78,7 +78,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Die Zeitdauer, die ich mit Gedanken an Nahrung und Gewicht verbringe, ist manchmal ein Problem für mich."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   },
@@ -94,7 +94,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich habe mich entschieden, dass ich Strategien entwickeln muss, um die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 3
     }]
   },
@@ -110,7 +110,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich benutze Strategien, die mir helfen, die Zeitdauer zu reduzieren, die ich mit Gedanken an Nahrung und Gewicht verbringe."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 4
     }]
   },
@@ -126,7 +126,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich verbrachte früher zu viel Zeit mit Gedanken an Nahrung und Gewicht, was ich nun reduzieren konnte, und ich arbeite daran, dass dies so bleibt."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 5
     }]
   }]

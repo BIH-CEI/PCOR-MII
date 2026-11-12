@@ -1,4 +1,4 @@
-# UKHD-AN Niedrigster BMI — Angabe-Status (Codes) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-AN Niedrigster BMI — Angabe-Status (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: UKHD-AN Niedrigster BMI — Angabe-Status (Codes) (Experimental) 
 
@@ -19,12 +19,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "ukhd-an-bmi-angabe",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdAnBmiAngabeCS",
   "title" : "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

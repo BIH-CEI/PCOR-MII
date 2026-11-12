@@ -1,4 +1,4 @@
-# OPD-SFK Antwortskala (Codes) - PCOR-MII Implementation Guide v0.3.0
+# OPD-SFK Antwortskala (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: OPD-SFK Antwortskala (Codes) (Experimental) 
 
@@ -19,12 +19,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "opd-sfk-antwort",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "OpdSfkAntwortCS",
   "title" : "OPD-SFK Antwortskala (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+  "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). itemWeight-Property je Konzept für SDC-Summenscoring via .weight().",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,16 +45,16 @@ This Code system is referenced in the definition of the following value sets:
   "content" : "complete",
   "count" : 5,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
-    "description" : "Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .ordinal().",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
+    "description" : "Numerischer Ordinalwert (0-4) für SDC-Summenscoring über .weight().",
     "type" : "decimal"
   }],
   "concept" : [{
     "code" : "trifft-gar-nicht-zu",
     "display" : "Trifft gar nicht zu",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 0
     }]
   },
@@ -62,7 +62,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "trifft-eher-nicht-zu",
     "display" : "Trifft eher nicht zu",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -70,7 +70,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "teils-teils",
     "display" : "Teils/teils",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   },
@@ -78,7 +78,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "trifft-eher-zu",
     "display" : "Trifft eher zu",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 3
     }]
   },
@@ -86,7 +86,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "trifft-voellig-zu",
     "display" : "Trifft völlig zu",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 4
     }]
   }]

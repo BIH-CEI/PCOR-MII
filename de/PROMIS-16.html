@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PROMIS-16 Profile v2.1 (PROPr) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6.4"}
-    h3,h4,h5,h6{--heading-prefix:"6.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"7.4"}
+    h3,h4,h5,h6{--heading-prefix:"7.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PROMIS-16 Profile v2.1 (PROPr)</h2>
   
 
@@ -358,9 +364,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>IG-Doku-Seite: <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current">PROMIS-16 im MII PRO IG (Simplifier)</a></li>
-  <li>Raw-Resource: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538121">PROMIS-16 Questionnaire (Simplifier Package)</a></li>
-  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1">PROMIS-Lizenzierung</a></li>
+  <li>IG-Doku-Seite: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">PROMIS-16 im MII PRO IG</a></li>
+  <li>Raw-Resource: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">PROMIS-16 Questionnaire (MII PRO 2027.0.0-ballot.2)</a></li>
+  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html">PROMIS-Lizenzierung</a></li>
   <li>Offizielle deutsche Quelle: PHO PDF "PROMIS-16 Profile v2.1 (PROPr), German, 20 September 2024"</li>
 </ul>
 
@@ -541,7 +547,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Die Zuständigkeit liegt gleichwohl upstream.</strong> PROPr ist PROMIS-spezifisch, und die PROMIS-Artefakte pflegt das MII-PRO-Modul. Dort wären nachzuziehen: der Code <code class="language-plaintext highlighter-rouge">promis-propr-utility</code> im Score-Katalog, eine <code class="language-plaintext highlighter-rouge">mii-obsdef-pro-score-promis-propr-utility</code> nach dem Muster des EQ-5D-5L-Index und ein Verweis vom PROMIS-16-Questionnaire auf den Score. Der lokale Code trägt bereits denselben Namen, damit die Ergänzung ein reines Hinzufügen bleibt. Was hier steht, ist eine arbeitsfähige Vorwegnahme für die Erprobung.</p>
 
-<p><strong>Stand 2026-09-29: keiner der beiden Scores ist verfügbar.</strong> Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2026.7.0 existiert upstream <strong>ausschließlich der Questionnaire</strong> — keine <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>, keine CQL Library, keine Score-Codes im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt <code class="language-plaintext highlighter-rouge">calculatable</code> ausdrücklich auf <code class="language-plaintext highlighter-rouge">false</code> mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen <strong>Roadmap 2027</strong>.</p>
+<p><strong>Stand 2026-09-29: keiner der beiden Scores ist verfügbar.</strong> Die frühere Ankündigung, beide Varianten würden im MII-PRO-Modul v2026.5.0 als CQL Library <code class="language-plaintext highlighter-rouge">mii-lib-promis-16</code> implementiert, hat sich nicht erfüllt. Auch in der aktuellen Abhängigkeit 2027.0.0-ballot.2 existiert upstream <strong>ausschließlich der Questionnaire</strong> — keine <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>, keine CQL Library, keine Score-Codes im <code class="language-plaintext highlighter-rouge">mii-cs-pro-score-catalogue</code> (zum Vergleich: PROMIS-29 hat dort acht T-Score-Codes). Der Questionnaire setzt <code class="language-plaintext highlighter-rouge">calculatable</code> ausdrücklich auf <code class="language-plaintext highlighter-rouge">false</code> mit der Begründung, der Pattern-basierte T-Score-Lookup (Supplement S4 der Entwicklungspublikation) werde an eine CQL Library delegiert — laut Beschreibung dort inzwischen <strong>Roadmap 2027</strong>.</p>
 
 <p>Für PCOR-MII heißt das: PROMIS-16 ist als <strong>Datenerfassungsinstrument</strong> nutzbar, die Score-Berechnung muss extern erfolgen.</p>
 
@@ -571,13 +577,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
 
-<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
+<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-16-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 8 Domänen (inkl. Cognitive Function), konform zum <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
 
 <h3 id="item-tabelle">Item-Tabelle</h3>
 
 <!-- BEGIN AUTO-TRANSLATION-TABLE -->
 
-<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-16</code> v2026.7.0 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
+<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-16</code> v2027.0.0-ballot.2 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
 
 <p>Wo Translation-Extensions auf den <code class="language-plaintext highlighter-rouge">text</code>-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.</p>
 
@@ -919,10 +925,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

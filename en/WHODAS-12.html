@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>WHODAS 2.0 (12-Item) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>WHODAS 2.0 (12-Item) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>WHODAS 2.0 (12-Item)</h2>
   
 
@@ -349,8 +355,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>IG-Doku-Seite: <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current">WHODAS 2.0 im MII PRO IG (Simplifier)</a></li>
-  <li>Raw-Resource: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0">MII PRO Package (Simplifier)</a></li>
+  <li>IG-Doku-Seite: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">WHODAS 2.0 im MII PRO IG</a></li>
+  <li>Raw-Resource: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">WHODAS 2.0 Questionnaire (MII PRO 2027.0.0-ballot.2)</a></li>
   <li>Offizielle Quelle: WHO. <em>Measuring Health and Disability: Manual for WHODAS 2.0</em>. Genf: WHO; 2010. ISBN 9789241547598.</li>
   <li>Deutsche Wortlaute: validiertes PCOR-MII Item Level Dictionary</li>
 </ul>
@@ -360,7 +366,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Items</strong>: 12 (5-Punkt-Skala 0–4), 6 ICF-Domänen</li>
   <li><strong>Primärsprache</strong>: Englisch mit deutschen Translations/Designations</li>
-  <li><strong>Antwortmodellierung</strong>: <code class="language-plaintext highlighter-rouge">answerValueSet</code> (<code class="language-plaintext highlighter-rouge">mii-vs-pro-whodas-12-answer-list</code>) mit ordinalValue-Gewichten</li>
+  <li><strong>Antwortmodellierung</strong>: <code class="language-plaintext highlighter-rouge">answerValueSet</code> (<code class="language-plaintext highlighter-rouge">mii-vs-pro-whodas-12-answer-list</code>) mit itemWeight-Gewichten</li>
   <li><strong>Scoring</strong>: einfacher Summenscore 0–48 (WHO „simple scoring"), höher = stärkere Beeinträchtigung (Einschränkungsscore); IRT-basiertes 0–100-Scoring als Folgearbeit</li>
   <li><strong>Capabilities</strong>: displayable, collectable, calculatable, extractable, domain-aligned</li>
 </ul>
@@ -382,12 +388,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Der Score wird als <code class="language-plaintext highlighter-rouge">ObservationDefinition</code> (<code class="language-plaintext highlighter-rouge">mii-obsdef-pro-score-whodas12-simple-sum</code>, 0–48, SNOMED <code class="language-plaintext highlighter-rouge">715823002</code>) abgebildet.</li>
-  <li>Die Simplifier-Links lösen auf, sobald <strong>v2026.5.0</strong> des MII PRO-Moduls nach Simplifier publiziert ist (WHODAS-12 ist ab 2026.5.0 enthalten); die Canonical-URL ist stabil.</li>
+  <li>Die Links führen auf die Artefaktseiten der formalen Veröffentlichung des MII-PRO-Moduls (WHODAS-12 ist seit 2026.5.0 enthalten); die Canonical-URL ist stabil.</li>
 </ul>
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
 
-<p>Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.5.0"><code class="language-plaintext highlighter-rouge">mii-exa-pro-whodas12-response-01</code></a> (Upstream, Simplifier).</p>
+<p>Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit — <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/QuestionnaireResponse-mii-exa-pro-whodas12-response-01.html"><code class="language-plaintext highlighter-rouge">mii-exa-pro-whodas12-response-01</code></a> (Upstream, Simplifier).</p>
 
 
 
@@ -437,10 +443,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

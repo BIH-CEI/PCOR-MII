@@ -1,4 +1,4 @@
-# SSUK-2 (Soziale Unterstützung) - PCOR-MII Implementation Guide v0.3.0
+# SSUK-2 (Soziale Unterstützung) - PCOR-MII Implementation Guide v0.9.0
 
 ## SSUK-2 (Soziale Unterstützung)
 
@@ -29,7 +29,7 @@ Am Rande: Eine **validierte Kurzform existiert** — die 8-Item-SSUK (Mehnert et
 
 * **Fragebogen:** [Questionnaire-SSUK2](Questionnaire-SSUK2.md)
 * **Beispielantwort:** [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) — ausgefülltes Beispiel; hoch bei der unterstützenden, niedrig bei der belastenden Interaktion
-* **CodeSystem:** [ssuk-antwort](CodeSystem-ssuk-antwort.md) — 0 = nie … 4 = immer, `ordinalValue` 0–4
+* **CodeSystem:** [ssuk-antwort](CodeSystem-ssuk-antwort.md) — 0 = nie … 4 = immer, `itemWeight` 0–4
 * **ValueSet:** [ssuk-antwort-vs](ValueSet-ssuk-antwort-vs.md)
 
 ### Der PCOR-MII-Code eines Items ist die Dictionary-Variable

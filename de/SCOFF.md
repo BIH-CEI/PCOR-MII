@@ -1,4 +1,4 @@
-# SCOFF (Essstörungs-Screening) - PCOR-MII Implementation Guide v0.3.0
+# SCOFF (Essstörungs-Screening) - PCOR-MII Implementation Guide v0.9.0
 
 ## SCOFF (Essstörungs-Screening)
 
@@ -6,7 +6,7 @@ Der **SCOFF** ist ein **Screening auf Essstörungen** aus fünf Ja/Nein-Fragen. 
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben wird der SCOFF **nur im Szenario [PSS](PSS.md)**, Kategorie MHA — nicht in AN. Das ist auf den ersten Blick überraschend, hat aber einen Grund: In der AN-Batterie steht die Essstörungspathologie nicht als Screening zur Frage, sondern wird mit [EDE-Q6](EDE-Q6.md) und den weiteren AN-Instrumenten differenziert erfasst. Ein Screening-Instrument wäre dort redundant.
 
@@ -40,7 +40,7 @@ Das MII-PRO-Modul liefert ein vollständiges Beispiel mit (`mii-exa-pro-scoff-re
 
 * Entwicklung: Morgan JF, Reid F, Lacey JH. **The SCOFF questionnaire: assessment of a new screening tool for eating disorders.** BMJ 1999;319(7223):1467–1468. [doi:10.1136/bmj.319.7223.1467](https://doi.org/10.1136/bmj.319.7223.1467)
 * Deutscher Kontext: Hölling H, Schlack R. **Essstörungen im Kindes- und Jugendalter.** Bundesgesundheitsblatt 2007;50:794–799. [doi:10.1007/s00103-007-0242-6](https://doi.org/10.1007/s00103-007-0242-6)
-* Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+* Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

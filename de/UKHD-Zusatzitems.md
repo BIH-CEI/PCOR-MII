@@ -1,4 +1,4 @@
-# UKHD-Zusatzitems (sechs Bögen) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-Zusatzitems (sechs Bögen) - PCOR-MII Implementation Guide v0.9.0
 
 ## UKHD-Zusatzitems (sechs Bögen)
 
@@ -46,9 +46,9 @@ Die Gruppenzugehörigkeit bleibt unabhängig davon maschinenlesbar: Jedes Item t
 
 **Kein Score, keine Instrument-Codes:** Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer (Recherche via fhir-terminology MCP, 2026-10-01); `Questionnaire.code` trägt je Bogen den lokalen Katalogcode aus [pcor-questionnaire-catalogue](CodeSystem-pcor-questionnaire-catalogue.md).
 
-**Ja/Nein** über das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.md) (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem `ukhd-an-*`-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.
+**Ja/Nein** als SNOMED CT `373066001`/`373067005` inline nach [ADR-013](Designentscheidungen.md) (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem `ukhd-an-*`-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.
 
-### Antwortskalen — ordinalValue nur, wo die Skala ordinal ist
+### Antwortskalen — itemWeight nur, wo die Skala ordinal ist
 
 | | | |
 | :--- | :--- | :--- |
@@ -57,7 +57,7 @@ Die Gruppenzugehörigkeit bleibt unabhängig davon maschinenlesbar: Jedes Item t
 | [ukhd-an-behandlungsstatus](CodeSystem-ukhd-an-behandlungsstatus.md)—`treatment_outpatient`(UKHD-CT) | **nein** | mischt zwei Achsen: 2→3 ist ein Statuswechsel, 3→4 ein Settingwechsel |
 | [ukhd-an-dauer-angabe](CodeSystem-ukhd-an-dauer-angabe.md),[ukhd-an-bmi-angabe](CodeSystem-ukhd-an-bmi-angabe.md)(UKHD-ANB) | **nein** | Einheiten und ein Angabe-Status, keine Stufen; der Messwert steckt im Hilfsitem |
 
-**Zur Falle bei `bdkm16`:** Der `ordinalValue` trägt die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.
+**Zur Falle bei `bdkm16`:** Der `itemWeight` trägt die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.
 
 ### TIMING wird nicht modelliert — und ist trotzdem sichtbar
 
@@ -77,23 +77,7 @@ Dass der Wortlaut dennoch aufgenommen ist, ist eine **bewusste Projektentscheidu
 
 ### Offene Punkte zum Dictionary
 
-Beim Modellieren sind Auffälligkeiten aufgefallen, die **nicht in FHIR zu lösen** sind, sondern im Item Level Dictionary oder mit dem Standort. Sie stehen zusätzlich als `designNote` am jeweiligen Item.
-
-**1. Herkunft des Wortlauts je Gruppe ungeklärt** — siehe [Rechtelage](#rechtelage); konkret nachzufragen für `bdkm`, `erwEV` und `edp`.
-
-**2. `bdkm15` und `treatment_outpatient` überschneiden sich.** Beide fragen nach aktueller psychotherapeutischer Behandlung — in zwei Bögen, mit zwei verschiedenen Antwortskalen. Sie unterscheiden sich im Zeitbezug (`bdkm15` nur zur Aufnahme und mit Vorgeschichte, `treatment_outpatient` zu jedem Termin und mit Setting), liefern zur Aufnahme aber teilweise dieselbe Information. Im Dictionary zu prüfen, ob das beabsichtigt ist.
-
-**3. Der Variablenname `treatment_outpatient` ist irreführend.** Stufe 4 der Antwortskala erfasst ausdrücklich **stationäre oder teilstationäre** Behandlung; das Item fragt den Behandlungsstatus insgesamt ab. Der Name bleibt als `linkId` und `item.code` stehen, weil er die Dictionary-Variable ist — aber er darf nicht als Bedeutungsangabe gelesen werden.
-
-**4. `comorbid1` — formal unsauber, bewusst so belassen (entschieden 01.10.2026).** Die Frage ist wörtlich eine Ja/Nein-Frage, das Dictionary sieht ein **Textfeld** vor. Gemeint ist das Textfeld: Dort sollen die weiteren **Diagnosen** stehen, nicht ein „ja". `type = text` bildet die Erhebung korrekt ab; der Wortlaut bleibt nach [ADR-010](Designentscheidungen.md) unverändert. Praktische Folge: **Das Feld enthält Diagnosetext, keine Ja/Nein-Angabe.**
-
-**5. Uneinheitliche Variablennamen in `UKHD-LE`.** `life_event1_screening`/`life_event1_monitoring` gegen `lifev_discharge`/`lifev_text` — zwei Präfixe für eine Gruppe, und ein `life_event2` existiert nicht. Außerdem nennt die Beispielliste von `life_event1_screening` bloß „Partnerschaften", wo die beiden anderen „Auflösung einer Partnerschaften" sagen; dort fehlt offenbar der Kopf der Wendung.
-
-**6. Die Gruppen-ID `UKHD_D` trägt einen Unterstrich**, während alle anderen Gruppen einen Bindestrich führen. Im Dictionary zu vereinheitlichen; Ressourcen-Id und Katalogcode folgen der Hauskonvention (`UKHD-D`/`ukhd-d`), die Dictionary-Schreibweise bleibt in der Property `instrument` erhalten.
-
-**7. `bdkm16` fragt nach Arztbesuchen, steht aber in **Past Treatment**.** Inhaltlich gehört das Item eher zur Versorgungsinanspruchnahme (vgl. `UKE-HCU` in PSS).
-
-**8. `UKHD-D` überschneidet sich mit dem [MHI](MHI.md).** Dort erheben `CPCOR-DIAG` (Diagnosegruppe zur Selbstzuordnung) und `GIPS13` (Liste chronischer Erkrankungen) **kodiert**, was hier als **Freitext** erhoben wird. Welche Darstellung für die Auswertung maßgeblich ist, ist fachlich zu klären.
+Beim Modellieren sind Auffälligkeiten aufgefallen, die nicht in FHIR zu lösen sind, sondern im Item Level Dictionary oder mit dem Standort (Überschneidungen `bdkm15`/`treatment_outpatient` und `UKHD-D`/MHI, irreführende Variablennamen, uneinheitliche Präfixe in `UKHD-LE`, Unterstrich in `UKHD_D`, Einordnung von `bdkm16`). Sie stehen als `designNote` am jeweiligen Item und gesammelt auf [Rechtelage und offene Punkte](Rechtelage.md#ukhd-dictionary).
 
 ### Hinweis zur Erhebung
 

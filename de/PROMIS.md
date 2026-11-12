@@ -1,4 +1,4 @@
-# PROMIS - PCOR-MII Implementation Guide v0.3.0
+# PROMIS - PCOR-MII Implementation Guide v0.9.0
 
 ## PROMIS
 
@@ -26,7 +26,7 @@ Zwei Einzelitems der **PROMIS Scale v1.2 – Global Health** werden in PCOR-MII 
 
 Antwortskala beider Items ist die LOINC-Answerlist [`LL4280-5`](https://loinc.org/LL4280-5) (5 = Ausgezeichnet · 4 = Sehr gut · 3 = Gut · 2 = Einigermaßen · 1 = Schlecht), abgebildet im ValueSet [`promis-global-skala-5-vs`](ValueSet-promis-global-skala-5-vs.md).
 
-Als **Übergangslösung** stellt PCOR-MII dafür den lokalen Questionnaire [`PROMISGH`](Questionnaire-PROMISGH.md) mit exakt diesen zwei Items bereit. Ziel ist, die vollständige 10-Item-Skala (LOINC-Panel [`85524-7`](https://loinc.org/85524-7) „PROMIS short form - global - version 1.2") ins MII PRO-Modul aufzunehmen; danach wird der lokale Questionnaire durch die Upstream-Referenz ersetzt.
+Die vollständige 10-Item-Skala (LOINC-Panel [`85524-7`](https://loinc.org/85524-7) „PROMIS short form - global - version 1.2") ist seit MII PRO 2027.0.0-ballot.2 als `mii-qst-pro-promis-global-health` im Modul enthalten (Status `draft`; die offizielle deutsche Übersetzung liegt dort bisher nur für Global01, Global02 und Global07 vor). PCOR-MII stellt weiterhin den lokalen Questionnaire [`PROMISGH`](Questionnaire-PROMISGH.md) mit exakt diesen zwei Items bereit, seit 0.9.0 per `derivedFrom` als 2-Item-Zuschnitt der Modul-Definition ausgewiesen. **Offen** sind die `linkId`s (Dictionary `Global01`/`Global02` gegen upstream `promis-global01`/`promis-global02`) und ob der lokale Bogen zugunsten der Upstream-Definition entfällt — siehe [Rechtelage und offene Punkte](Rechtelage.md#promis-gh).
 
 Die PROMIS-Scores Global Physical Health (`71972-4`) und Global Mental Health (`71970-8`) sind aus diesen beiden Items **nicht** berechenbar — sie setzen je vier Items der Gesamtskala voraus. Global01 und Global02 werden daher als Einzelindikatoren verwendet.
 
@@ -41,7 +41,7 @@ PROMIS-Ressourcen unterliegen dem 4-Schichten-Modell aus dem MII PRO-Modul:
 1. **Offizielle deutsche Übersetzungen**bereitgestellt durch PCOR-MII, kuratiert durch PROMIS National Center Deutschland
 1. **LOINC-Codes**© Regenstrief Institute
 
-Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1).
+Details und Nutzungsanfragen: [PROMIS-Lizenzierung im MII PRO-Modul](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html).
 
 ### Item-Überlapp
 
@@ -53,7 +53,7 @@ Bei kombinierter Erfassung sollten die 11 überlappenden Items nicht doppelt erh
 
 ### Quellen
 
-* Übergeordneter IG: [MII PRO-Modul IG-Doku (Simplifier)](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/Index.page.md?version=current) · [PRO-Bibliothek PROMIS-Sektion](https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/Index.page.md?version=current) · [Raw-Package](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1)
+* Übergeordneter IG: [MII PRO-Modul IG-Doku](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/index.html) · [PRO-Bibliothek PROMIS-Sektion](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html) · [Raw-Package](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 * PROMIS Health Organization: [healthmeasures.net](https://www.healthmeasures.net/explore-measurement-systems/promis)
 * PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer
 

@@ -1,4 +1,4 @@
-# PCOR-MII Use Cases - PCOR-MII Implementation Guide v0.3.0
+# PCOR-MII Use Cases - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: PCOR-MII Use Cases (Experimentell) 
 
@@ -19,12 +19,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "pcor-use-case",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-use-case",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "PcorUseCaseCS",
   "title" : "PCOR-MII Use Cases",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.",
+  "description" : "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt; NTXr und NTXd seit 2026-11-05. Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -55,12 +55,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   {
     "code" : "ntxr",
     "display" : "NTXr — Nierentransplantation, Empfänger",
-    "definition" : "Zurückgestellt: kein Manifest; spezifische Instrumente (BAASIS, MTSOSD-R59, ABQ) nicht publizierbar bzw. nicht modelliert."
+    "definition" : "Generische Batterie plus BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A."
   },
   {
     "code" : "ntxd",
     "display" : "NTXd — Nierentransplantation, Spender",
-    "definition" : "Zurückgestellt: kein Manifest."
+    "definition" : "Nur die generische Batterie: laut Domain Overview keine spezifischen Instrumente und kein Monitoring."
   },
   {
     "code" : "pilot-50fp",

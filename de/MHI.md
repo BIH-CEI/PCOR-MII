@@ -1,4 +1,4 @@
-# MHI - PCOR-MII Implementation Guide v0.3.0
+# MHI - PCOR-MII Implementation Guide v0.9.0
 
 ## MHI
 
@@ -16,6 +16,8 @@ Der **MHI**-Fragebogen (**Medical History**) erfasst die medizinische Vorgeschic
 Einige MHI-Items sind nicht in allen drei Szenarien (PSS, NTx, AN) zu erheben:
 
 * **Gewichtsverlauf** (`weight_outpatient_1/2`, `weight_inpatient`, `weight_discharge`) und **`AN_subtyp`** — nur im Szenario **Anorexia nervosa**.
+
+Für **Nierentransplantation** gibt es bewusst keine Gruppe im MHI, sondern den Ergänzungsbogen [MHI-NTx](NTx-Instrumente.md#mhi-ntx-transplantationsanamnese) (Spendeart, Transplantationsdatum, wievielte Spenderniere), den das Empfänger-Manifest zusätzlich zum MHI pinnt. Der MHI hat keinen Entitätsschalter; die AN-Gruppe oben ist insofern eine Altlast, deren Herauslösung offen ist.
 
 ### Standortspezifische Items — Freigabe nicht dokumentiert
 

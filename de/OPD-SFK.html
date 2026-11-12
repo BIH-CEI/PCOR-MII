@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10"}
-    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>OPD-SFK (Strukturfragebogen, 12 Items)</h2>
   
 
@@ -347,7 +353,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Fragebogen:</strong> <a href="Questionnaire-OPDSFK.html">Questionnaire-OPDSFK</a> — vollständige Definition inkl. Items und Antwortoptionen.</li>
   <li><strong>linkId-Abbildung:</strong> <a href="ConceptMap-pcor-cm-opd-sfk-linkids.html">ConceptMap pcor-cm-opd-sfk-linkids</a> — Dictionary-Variablen-IDs <code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code> (zugleich die <code class="language-plaintext highlighter-rouge">linkId</code>s bis Version 0.3.0) auf die <code class="language-plaintext highlighter-rouge">linkId</code>s mit OPD-SF-Itemnummern.</li>
-  <li><strong>Antwortskala:</strong> <a href="ValueSet-opd-sfk-antwort-vs.html">ValueSet opd-sfk-antwort-vs</a> · <a href="CodeSystem-opd-sfk-antwort.html">CodeSystem opd-sfk-antwort</a> — fünf Konzepte mit <code class="language-plaintext highlighter-rouge">ordinalValue</code> 0–4 für das Summenscoring.</li>
+  <li><strong>Antwortskala:</strong> <a href="ValueSet-opd-sfk-antwort-vs.html">ValueSet opd-sfk-antwort-vs</a> · <a href="CodeSystem-opd-sfk-antwort.html">CodeSystem opd-sfk-antwort</a> — fünf Konzepte mit <code class="language-plaintext highlighter-rouge">itemWeight</code> 0–4 für das Summenscoring.</li>
 </ul>
 
 <h3 id="canonical">Canonical</h3>
@@ -359,8 +365,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Items</strong>: 12, <code class="language-plaintext highlighter-rouge">linkId</code> = Itemnummer der 95-Item-<strong>Langform OPD-SF</strong> (<code class="language-plaintext highlighter-rouge">opdsf3</code> … <code class="language-plaintext highlighter-rouge">opdsf90</code>, siehe Tabelle unten; linkId-Regel ADR-003/ADR-008), <code class="language-plaintext highlighter-rouge">prefix</code> = OPD-SFK-Nummer 1–12 in Formularreihenfolge, <code class="language-plaintext highlighter-rouge">item.code</code> = Dictionary-Variable <code class="language-plaintext highlighter-rouge">OPDSFK01</code>–<code class="language-plaintext highlighter-rouge">OPDSFK12</code> (ADR-011). Zusätzlich ein vorangestelltes <code class="language-plaintext highlighter-rouge">display</code>-Item mit dem für alle Items geltenden Instruktionstext</li>
   <li><strong>Sprache</strong>: Deutsch (Fragebogensprache); keine englischen Designations, da keine belegte offizielle englische Übersetzung der Kurzskala vorliegt</li>
-  <li><strong>Antwortmodellierung</strong>: <code class="language-plaintext highlighter-rouge">answerValueSet</code> auf das lokale <code class="language-plaintext highlighter-rouge">opd-sfk-antwort-vs</code> mit <code class="language-plaintext highlighter-rouge">ordinalValue</code>-Gewichten (Muster: <code class="language-plaintext highlighter-rouge">mii-cs-pro-whodas-12</code> im MII-PRO-Modul)</li>
-  <li><strong>Scoring</strong>: Globalwert als <strong>Summenwert über alle 12 Items</strong> (0–48), umgesetzt als readOnly-Item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> mit SDC-<code class="language-plaintext highlighter-rouge">calculatedExpression</code> über <code class="language-plaintext highlighter-rouge">.ordinal().sum()</code>; dazu die drei <strong>explorativen Subskalen</strong> (je 4 Items, 0–16) als readOnly-Items <code class="language-plaintext highlighter-rouge">opd-sfk-selbstwahrnehmung</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-beziehungsmodell</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-kontaktgestaltung</code></li>
+  <li><strong>Antwortmodellierung</strong>: <code class="language-plaintext highlighter-rouge">answerValueSet</code> auf das lokale <code class="language-plaintext highlighter-rouge">opd-sfk-antwort-vs</code> mit <code class="language-plaintext highlighter-rouge">itemWeight</code>-Gewichten (Muster: <code class="language-plaintext highlighter-rouge">mii-cs-pro-whodas-12</code> im MII-PRO-Modul)</li>
+  <li><strong>Scoring</strong>: Globalwert als <strong>Summenwert über alle 12 Items</strong> (0–48), umgesetzt als readOnly-Item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> mit SDC-<code class="language-plaintext highlighter-rouge">calculatedExpression</code> über <code class="language-plaintext highlighter-rouge">.weight().sum()</code>; dazu die drei <strong>explorativen Subskalen</strong> (je 4 Items, 0–16) als readOnly-Items <code class="language-plaintext highlighter-rouge">opd-sfk-selbstwahrnehmung</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-beziehungsmodell</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-kontaktgestaltung</code></li>
 </ul>
 
 <h3 id="items-und-subskalen">Items und Subskalen</h3>
@@ -510,10 +516,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

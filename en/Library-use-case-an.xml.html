@@ -10,7 +10,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Use-Case-Manifest AN — Anorexia nervosa - XML Representation - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Use-Case-Manifest AN — Anorexia nervosa - XML Representation - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -150,8 +150,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.2"}
-    h3,h4,h5,h6{--heading-prefix:"21.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.2"}
+    h3,h4,h5,h6{--heading-prefix:"23.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -171,7 +171,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -221,12 +221,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -239,6 +242,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -303,7 +309,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -418,7 +424,7 @@ a[name="test"] + h3 + div {
 
 
 
-&lt;td class=&quot;content-container&quot;&gt;0.3.0&lt;/td&gt;
+&lt;td class=&quot;content-container&quot;&gt;0.9.0&lt;/td&gt;
 
 
 &lt;/tr&gt;
@@ -558,7 +564,7 @@ a[name="test"] + h3 + div {
 
 
 
-&lt;td class=&quot;content-container&quot;&gt;&lt;div&gt;&lt;p&gt;Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: &lt;code&gt;UKHD-BI&lt;/code&gt; (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt &lt;code&gt;PROMISGH&lt;/code&gt; enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind &lt;strong&gt;Standortvarianten&lt;/strong&gt; (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension &lt;code&gt;crmi-intendedUsageContext&lt;/code&gt;.&lt;/p&gt;
+&lt;td class=&quot;content-container&quot;&gt;&lt;div&gt;&lt;p&gt;Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: &lt;code&gt;UKHD-BI&lt;/code&gt; (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt &lt;code&gt;PROMISGH&lt;/code&gt; enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind &lt;strong&gt;Standortvarianten&lt;/strong&gt; (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension &lt;code&gt;crmi-intendedUsageContext&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;&lt;/td&gt;
 
 
@@ -661,9 +667,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-DEM.html&quot;&gt;DEM — Demographics &amp;amp; Medical History&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-DEM.html&quot;&gt;DEM — Demographics &amp;amp; Medical History&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0&lt;/tt&gt;
     
     
     
@@ -693,9 +699,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-MHI.html&quot;&gt;MHI — Medical History&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-MHI.html&quot;&gt;MHI — Medical History&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0&lt;/tt&gt;
     
     
     
@@ -725,9 +731,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ERQ6.html&quot;&gt;ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ERQ6.html&quot;&gt;ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0&lt;/tt&gt;
     
     
     
@@ -757,9 +763,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-EDEQ6.html&quot;&gt;EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-EDEQ6.html&quot;&gt;EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0&lt;/tt&gt;
     
     
     
@@ -789,9 +795,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ANSOCQ2.html&quot;&gt;ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ANSOCQ2.html&quot;&gt;ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0&lt;/tt&gt;
     
     
     
@@ -821,9 +827,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-SSUK2.html&quot;&gt;SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-SSUK2.html&quot;&gt;SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0&lt;/tt&gt;
     
     
     
@@ -853,9 +859,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ACE.html&quot;&gt;ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-ACE.html&quot;&gt;ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0&lt;/tt&gt;
     
     
     
@@ -885,9 +891,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDPT.html&quot;&gt;UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDPT.html&quot;&gt;UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0&lt;/tt&gt;
     
     
     
@@ -917,9 +923,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDANB.html&quot;&gt;UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDANB.html&quot;&gt;UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.9.0&lt;/tt&gt;
     
     
     
@@ -949,9 +955,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDCT.html&quot;&gt;UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDCT.html&quot;&gt;UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0&lt;/tt&gt;
     
     
     
@@ -981,9 +987,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDLE.html&quot;&gt;UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDLE.html&quot;&gt;UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0&lt;/tt&gt;
     
     
     
@@ -1013,9 +1019,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDND.html&quot;&gt;UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDND.html&quot;&gt;UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.9.0&lt;/tt&gt;
     
     
     
@@ -1045,9 +1051,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDD.html&quot;&gt;UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDD.html&quot;&gt;UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.9.0&lt;/tt&gt;
     
     
     
@@ -1077,9 +1083,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDEDP.html&quot;&gt;UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-UKHDEDP.html&quot;&gt;UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.9.0&lt;/tt&gt;
     
     
     
@@ -1109,9 +1115,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-OPDSFK.html&quot;&gt;OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-OPDSFK.html&quot;&gt;OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0&lt;/tt&gt;
     
     
     
@@ -1141,9 +1147,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-WAI.html&quot;&gt;WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-WAI.html&quot;&gt;WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0&lt;/tt&gt;
     
     
     
@@ -1173,9 +1179,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-PROMISGH.html&quot;&gt;PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)&lt;/a&gt; version: 0.3.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;Questionnaire-PROMISGH.html&quot;&gt;PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)&lt;/a&gt; version: 0.9.0
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0&lt;/tt&gt;
     
     
     
@@ -1205,9 +1211,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9&quot;&gt;MII QST PRO PHQ-9&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-phq-9.html&quot;&gt;MII QST PRO PHQ-9&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1237,9 +1243,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7&quot;&gt;MII QST PRO GAD-7&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-gad-7.html&quot;&gt;MII QST PRO GAD-7&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1269,9 +1275,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16&quot;&gt;MII QST PRO PROMIS-16 (Adults)&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-16.html&quot;&gt;MII QST PRO PROMIS-16 (Adults)&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1301,9 +1307,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29&quot;&gt;MII QST PRO PROMIS-29 (Adults)&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-29.html&quot;&gt;MII QST PRO PROMIS-29 (Adults)&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1333,9 +1339,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a&quot;&gt;MII QST PRO PROMIS Cognitive Function SF 4a&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html&quot;&gt;MII QST PRO PROMIS Cognitive Function SF 4a&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1365,9 +1371,9 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12&quot;&gt;MII QST PRO WHODAS 2.0 12-Item&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-whodas-whodas12.html&quot;&gt;MII QST PRO WHODAS 2.0 12-Item&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1397,9 +1403,41 @@ a[name="test"] + h3 + div {
     
     
     
-    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma&quot;&gt;MII QST PRO EURONET-SOMA&lt;/a&gt; version: 2026.7.0
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euronet-soma.html&quot;&gt;MII QST PRO EURONET-SOMA&lt;/a&gt; version: 2027.0.0-ballot.2
     &lt;br/&gt;
-    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0&lt;/tt&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2027.0.0-ballot.2&lt;/tt&gt;
+    
+    
+    
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+  
+  
+  
+  
+  
+  
+
+&lt;th scope=&quot;row&quot; class=&quot;row-header&quot;&gt;Component&lt;/th&gt;
+
+
+  
+  &lt;td class=&quot;content-container&quot;&gt;
+    
+    &lt;em&gt;Description&lt;/em&gt;: EQ-5D-5L — Erhebungsvariante „collectable“ [Outcome, Prio A, jährlich; Index-Score upstream]
+    
+    &lt;br/&gt;
+    
+    
+    
+    
+    
+    
+    &lt;em&gt;Resource&lt;/em&gt;: &lt;a href=&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html&quot;&gt;MII QST PRO EQ-5D-5L Collectable&lt;/a&gt; version: 2027.0.0-ballot.2
+    &lt;br/&gt;
+    &lt;em&gt;Canonical URL&lt;/em&gt;: &lt;tt&gt;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euroqol-eq5d5l-collectable|2027.0.0-ballot.2&lt;/tt&gt;
     
     
     
@@ -1418,7 +1456,7 @@ a[name="test"] + h3 + div {
 &lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Library.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Library/use-case-an&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.3.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.9.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UseCaseAN&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Use-Case-Manifest AN — Anorexia nervosa&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
@@ -1439,7 +1477,7 @@ a[name="test"] + h3 + div {
     &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.description">description</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.useContext">useContext</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#UsageContext#UsageContext.code">code</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
@@ -1466,121 +1504,121 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;DEM — Demographie-Sammelbogen&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MHI — Medical History [inkl. AN-Gruppe gewicht-an]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ERQ-6 — Emotionsregulation [Prio A]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EDE-Q6 — Essstörungspathologie [Prio A]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANSOCQ-2 — Veränderungsmotivation [Prio A; Monitoring-Kurzform]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SSUK-2 — Soziale Unterstützung [Prio A]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ACE + Zeitangaben — PCOR-MII-Komposit [Prio A; nur Initial]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-PT — Vorbehandlung [Freigabe offen]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-ANB — Essstörungsanamnese [Freigabe offen; nur Initial]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-CT — Aktuelle Behandlung [Freigabe offen]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-LE — Lebensereignisse [Freigabe offen]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-ND — Neue Diagnosen [Freigabe offen; nicht beim Initial-Termin]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-D — Diagnosen bei Aufnahme [Freigabe offen; nur Initial]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UKHD-EDP — Essstörungspathologie [metadata-only]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;OPD-SFK — Strukturfragebogen Kurzform&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WAI — Work Ability Score [metadata-only]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHQ-9 — inkl. PHQ-SI&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAD-7&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#RelatedArtifact.extension">extension</a>
@@ -1599,7 +1637,7 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PROMIS-16 — Standortvariante kurz&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#RelatedArtifact.extension">extension</a>
@@ -1620,7 +1658,7 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#RelatedArtifact.extension">extension</a>
@@ -1641,19 +1679,26 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WHODAS 2.0 12-Item&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EURONET-SOMA&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2027.0.0-ballot.2&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;composed-of&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EQ-5D-5L — Erhebungsvariante „collectable“ [Outcome, Prio A, jährlich; Index-Score upstream]&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euroqol-eq5d5l-collectable|2027.0.0-ballot.2&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
 &lt;/<a href="http://hl7.org/fhir/R4/library.html#Library">Library</a>&gt;</code></pre>
 
@@ -1708,10 +1753,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

@@ -1,4 +1,4 @@
-# EDE-Q6 Häufigkeit in 28 Tagen - PCOR-MII Implementation Guide v0.3.0
+# EDE-Q6 Häufigkeit in 28 Tagen - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: EDE-Q6 Häufigkeit in 28 Tagen (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "ede-q6-tage-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ede-q6-tage-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "EdeQ6TageVS",
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

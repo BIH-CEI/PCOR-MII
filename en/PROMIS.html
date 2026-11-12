@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROMIS - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PROMIS - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6"}
-    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PROMIS</h2>
   
 
@@ -376,7 +382,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Antwortskala beider Items ist die LOINC-Answerlist <a href="https://loinc.org/LL4280-5"><code class="language-plaintext highlighter-rouge">LL4280-5</code></a> (5 = Ausgezeichnet · 4 = Sehr gut · 3 = Gut · 2 = Einigermaßen · 1 = Schlecht), abgebildet im ValueSet <a href="ValueSet-promis-global-skala-5-vs.html"><code class="language-plaintext highlighter-rouge">promis-global-skala-5-vs</code></a>.</p>
 
-<p>Als <strong>Übergangslösung</strong> stellt PCOR-MII dafür den lokalen Questionnaire <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> mit exakt diesen zwei Items bereit. Ziel ist, die vollständige 10-Item-Skala (LOINC-Panel <a href="https://loinc.org/85524-7"><code class="language-plaintext highlighter-rouge">85524-7</code></a> „PROMIS short form - global - version 1.2") ins MII PRO-Modul aufzunehmen; danach wird der lokale Questionnaire durch die Upstream-Referenz ersetzt.</p>
+<p>Die vollständige 10-Item-Skala (LOINC-Panel <a href="https://loinc.org/85524-7"><code class="language-plaintext highlighter-rouge">85524-7</code></a> „PROMIS short form - global - version 1.2") ist seit MII PRO 2027.0.0-ballot.2 als <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-global-health</code> im Modul enthalten (Status <code class="language-plaintext highlighter-rouge">draft</code>; die offizielle deutsche Übersetzung liegt dort bisher nur für Global01, Global02 und Global07 vor). PCOR-MII stellt weiterhin den lokalen Questionnaire <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> mit exakt diesen zwei Items bereit, seit 0.9.0 per <code class="language-plaintext highlighter-rouge">derivedFrom</code> als 2-Item-Zuschnitt der Modul-Definition ausgewiesen. <strong>Offen</strong> sind die <code class="language-plaintext highlighter-rouge">linkId</code>s (Dictionary <code class="language-plaintext highlighter-rouge">Global01</code>/<code class="language-plaintext highlighter-rouge">Global02</code> gegen upstream <code class="language-plaintext highlighter-rouge">promis-global01</code>/<code class="language-plaintext highlighter-rouge">promis-global02</code>) und ob der lokale Bogen zugunsten der Upstream-Definition entfällt — siehe <a href="Rechtelage.html#promis-gh">Rechtelage und offene Punkte</a>.</p>
 
 <p>Die PROMIS-Scores Global Physical Health (<code class="language-plaintext highlighter-rouge">71972-4</code>) und Global Mental Health (<code class="language-plaintext highlighter-rouge">71970-8</code>) sind aus diesen beiden Items <strong>nicht</strong> berechenbar — sie setzen je vier Items der Gesamtskala voraus. Global01 und Global02 werden daher als Einzelindikatoren verwendet.</p>
 
@@ -393,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>LOINC-Codes</strong> © Regenstrief Institute</li>
 </ol>
 
-<p>Details und Nutzungsanfragen: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1">PROMIS-Lizenzierung im MII PRO-Modul</a>.</p>
+<p>Details und Nutzungsanfragen: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html">PROMIS-Lizenzierung im MII PRO-Modul</a>.</p>
 
 <h3 id="item-überlapp">Item-Überlapp</h3>
 
@@ -406,7 +412,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>Übergeordneter IG: <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/Index.page.md?version=current">MII PRO-Modul IG-Doku (Simplifier)</a> · <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/Index.page.md?version=current">PRO-Bibliothek PROMIS-Sektion</a> · <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1">Raw-Package</a></li>
+  <li>Übergeordneter IG: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/index.html">MII PRO-Modul IG-Doku</a> · <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html">PRO-Bibliothek PROMIS-Sektion</a> · <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz">Raw-Package</a></li>
   <li>PROMIS Health Organization: <a href="https://www.healthmeasures.net/explore-measurement-systems/promis">healthmeasures.net</a></li>
   <li>PROMIS National Center Deutschland (CPCOR Charité): Felix Fischer</li>
 </ul>
@@ -459,10 +465,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

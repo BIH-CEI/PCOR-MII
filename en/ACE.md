@@ -1,4 +1,4 @@
-# ACE + Zeitangaben (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.3.0
+# ACE + Zeitangaben (Belastende Kindheitserfahrungen) - PCOR-MII Implementation Guide v0.9.0
 
 ## ACE + Zeitangaben (Belastende Kindheitserfahrungen)
 
@@ -30,7 +30,7 @@ Die sechs Items `traumaspecific1` bis `traumaspecific6` sind **drei Paare**: je 
 
 **Was die Verschiebung nicht ändert:** Die sechs Items behalten ihre Dictionary-Variablen als `item.code` und dort die Property `instrument = UKHD-CTT`. Wer die Gruppe abfragt, findet sie weiterhin — die Ressourcengrenze hat sich verschoben, die Gruppenzugehörigkeit nicht. Das ist genau die Trennung, die [ADR-011](Designentscheidungen.md) behauptet.
 
-Antwortoptionen der sechs Items: [ukhd-an-ereignishaeufigkeit-vs](ValueSet-ukhd-an-ereignishaeufigkeit-vs.md) (1/2, `ordinalValue` — „einmalig" < „mehrfach" ist eine monotone Häufigkeitsaussage) und [ukhd-an-ereigniszeitpunkt-vs](ValueSet-ukhd-an-ereigniszeitpunkt-vs.md) (1/2/3, **nominal** — „vor" und „nach" sind eine Zeitrelation, und Stufe 3 „ich weiß es nicht mehr" hat in einer Rangfolge keinen Platz; sie bleibt bewusst im Wertebereich, weil die Erinnerungslücke hier eine **vorgelegte Antwort** ist und keine fehlende Information).
+Antwortoptionen der sechs Items: [ukhd-an-ereignishaeufigkeit-vs](ValueSet-ukhd-an-ereignishaeufigkeit-vs.md) (1/2, `itemWeight` — „einmalig" < „mehrfach" ist eine monotone Häufigkeitsaussage) und [ukhd-an-ereigniszeitpunkt-vs](ValueSet-ukhd-an-ereigniszeitpunkt-vs.md) (1/2/3, **nominal** — „vor" und „nach" sind eine Zeitrelation, und Stufe 3 „ich weiß es nicht mehr" hat in einer Rangfolge keinen Platz; sie bleibt bewusst im Wertebereich, weil die Erinnerungslücke hier eine **vorgelegte Antwort** ist und keine fehlende Information).
 
 **Dictionary-Befund, unverändert übernommen:** `traumaspecific2/4/6` enthalten **zwei Fragesätze in einem Item**, die sich nur im Numerus unterscheiden („dieses Ereignis" gegen „der Beginn dieser Ereignisse"). Sehr wahrscheinlich sind das alternative Darbietungen, die von der Häufigkeitsfrage desselben Paares abhängen. Eine Aufspaltung wäre aus dem Dictionary nicht belegbar — beide Sätze bedienen dieselbe Variable mit derselben Antwortskala.
 
@@ -52,7 +52,7 @@ Zur Quelle des englischen Wortlauts: ein an die Originalpublikation zitierendes 
 * **Beispielantwort:** [ACEResponse](QuestionnaireResponse-ACEResponse.md) — ausgefülltes Beispiel; zwei bejahte Items in der emotionalen Dimension, und **nur eine der drei Zeitangabe-Gruppen belegt**. Das ist kein Versäumnis, sondern der Punkt: Bejaht ist von den drei Trägeritems nur `ace1`, also ist nur `ctt-ereignis-1` freigeschaltet — die beiden anderen Gruppen fehlen in der Antwort, statt leer dazustehen. Ein einziger Fall belegt damit die Verzweigung in beide Richtungen.
 * **CodeSystems / ValueSets der Zeitangaben:** [ukhd-an-ereignishaeufigkeit](CodeSystem-ukhd-an-ereignishaeufigkeit.md) / [-vs](ValueSet-ukhd-an-ereignishaeufigkeit-vs.md) und [ukhd-an-ereigniszeitpunkt](CodeSystem-ukhd-an-ereigniszeitpunkt.md) / [-vs](ValueSet-ukhd-an-ereigniszeitpunkt-vs.md). Ids und Canonicals behalten das `ukhd-an`-Präfix: Es benennt den Standort und die Dictionary-Gruppe, nicht die Datei.
 
-Die fünf ACE-Items nutzen das projektweite [DemJaNeinVS](ValueSet-dem-ja-nein.md). Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist im Mapping auf `DemAntwortCS` dokumentarisch, nicht strukturell.
+Die fünf ACE-Items kodieren Ja/Nein als SNOMED CT `373066001`/`373067005` inline ([ADR-013](Designentscheidungen.md)). Das Dictionary kodiert 1 = ja / 0 = nein; die Kodierung ist nur dokumentarisch, nicht strukturell.
 
 ### Die Codes eines Items — Dictionary-Variable und LOINC nebeneinander
 

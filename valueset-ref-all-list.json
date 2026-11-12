@@ -1,7 +1,19 @@
 {
   "codeSystems" : [{
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/abq-skala-4-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "AbqSkala4VS",
+    "title" : "ABQ Antwortskala 4-stufig",
+    "description" : "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. Metadata-only, siehe AbqSkala4CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4"],
+    "uses" : {
+    },
+    "Questionnaire-ABQ.html" : "ABQ — Adherence Barriers Questionnaire (NTx, metadata-only)"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-gedanken-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "AnsocqGedankenVS",
     "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht",
@@ -13,7 +25,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ansocq-koerperteile-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "AnsocqKoerperteileVS",
     "title" : "ANSOCQ Item 3 — Körperteile",
@@ -24,8 +36,32 @@
     "Questionnaire-ANSOCQ2.html" : "ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/baasis-haeufigkeit-5-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "BaasisHaeufigkeit5VS",
+    "title" : "BAASIS Häufigkeit 5-stufig",
+    "description" : "Neutral benannte 5-stufige Anzahl-Skala der BAASIS-Teilfragen 1A_a und 1B_a (Stufe 1 bis Stufe 5). Metadata-only, siehe BaasisHaeufigkeit5CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-5"],
+    "uses" : {
+    },
+    "Questionnaire-BAASIS.html" : "BAASIS — Adhärenz gegenüber immunsuppressiver Medikation (NTx, metadata-only)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/baasis-haeufigkeit-zeit-5-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "BaasisHaeufigkeitZeit5VS",
+    "title" : "BAASIS Häufigkeit Zeitabweichung 5-stufig",
+    "description" : "Neutral benannte 5-stufige Häufigkeitsskala der BAASIS-Teilfrage 2_a (Stufe 1 bis Stufe 5). Metadata-only, siehe BaasisHaeufigkeitZeit5CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-zeit-5"],
+    "uses" : {
+    },
+    "Questionnaire-BAASIS.html" : "BAASIS — Adhärenz gegenüber immunsuppressiver Medikation (NTx, metadata-only)"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-beziehungsstatus-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemBeziehungsstatusVS",
     "title" : "DEM Beziehungsstatus",
@@ -37,7 +73,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-einkommen-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemEinkommenVS",
     "title" : "DEM Haushaltseinkommen",
@@ -49,7 +85,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-erwerbsstatus-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemErwerbsstatusVS",
     "title" : "DEM Erwerbsstatus",
@@ -61,7 +97,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-geschlecht-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemGeschlechtVS",
     "title" : "DEM Geschlecht",
@@ -73,7 +109,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-haeufigkeit-5-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemHaeufigkeit5VS",
     "title" : "DEM Häufigkeit (5-stufig)",
@@ -85,7 +121,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-isced-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemIscedVS",
     "title" : "DEM Bildungsabschluss (ISCED)",
@@ -96,49 +132,8 @@
     "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
   },
   {
-    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein",
-    "version" : "0.3.0",
-    "status" : "draft",
-    "name" : "DemJaNeinVS",
-    "title" : "DEM Ja/Nein",
-    "description" : "Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
-    "uses" : {
-    },
-    "Questionnaire-UKHDND.html" : "UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)",
-    "Questionnaire-MHI.html" : "MHI — Medical History",
-    "Questionnaire-ACE.html" : "ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)",
-    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History",
-    "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
-    "Questionnaire-UKHDLE.html" : "UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)"
-  },
-  {
-    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-ka-vs",
-    "version" : "0.3.0",
-    "status" : "draft",
-    "name" : "DemJaNeinKaVS",
-    "title" : "DEM Ja/Nein/Keine Angabe",
-    "description" : "Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS.",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
-    "uses" : {
-    },
-    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
-  },
-  {
-    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein-nz-vs",
-    "version" : "0.3.0",
-    "status" : "draft",
-    "name" : "DemJaNeinNzVS",
-    "title" : "DEM Ja/Nein/Nicht zutreffend",
-    "description" : "Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS.",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"],
-    "uses" : {
-    },
-    "Questionnaire-DEM.html" : "DEM — Demographics & Medical History"
-  },
-  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-leichtigkeit-6-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemLeichtigkeit6VS",
     "title" : "DEM Leichtigkeit Unterstützung (6-stufig)",
@@ -150,7 +145,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-rentenstatus-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemRentenstatusVS",
     "title" : "DEM Rentenstatus",
@@ -162,7 +157,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-urbanizitaet-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemUrbanizitaetVS",
     "title" : "DEM Urbanizität",
@@ -174,7 +169,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-zigaretten-band-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemZigarettenBandVS",
     "title" : "DEM Zigaretten pro Tag",
@@ -186,7 +181,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ede-q6-tage-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "EdeQ6TageVS",
     "title" : "EDE-Q6 Häufigkeit in 28 Tagen",
@@ -197,8 +192,20 @@
     "Questionnaire-EDEQ6.html" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhh-nierenersatz-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhhNierenersatzVS",
+    "title" : "NTx-Verlaufsbefragung Nierenersatztherapie vor Transplantation",
+    "description" : "Zuletzt vor der Transplantation durchgeführte Form der Nierenersatztherapie (`MHH_DIAL2`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/mhh-nierenersatz"],
+    "uses" : {
+    },
+    "Questionnaire-NTXVERLAUF.html" : "NTx-Verlaufsbefragung — Verlaufsanamnese nach Nierentransplantation (MHH)"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-an-subtyp-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiAnSubtypVS",
     "title" : "MHI Anorexia-nervosa-Subtyp",
@@ -210,7 +217,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-chronisch-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiChronischVS",
     "title" : "MHI Chronische Erkrankungen (GIPS13)",
@@ -222,7 +229,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-cpcor-diag-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiCpcorDiagVS",
     "title" : "MHI Diagnosegruppe (CPCOR)",
@@ -234,7 +241,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-einnahmezeit-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiEinnahmezeitVS",
     "title" : "MHI Einnahmezeitpunkt Medikament",
@@ -246,7 +253,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-gewicht-angabe-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGewichtAngabeVS",
     "title" : "MHI Gewichtsangabe",
@@ -258,7 +265,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-gewichtsmethode-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGewichtsmethodeVS",
     "title" : "MHI Gewichtsmessung Methode",
@@ -270,7 +277,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-groesse-angabe-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGroesseAngabeVS",
     "title" : "MHI Größenangabe",
@@ -281,8 +288,56 @@
     "Questionnaire-MHI.html" : "MHI — Medical History"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-ntx-spendeart-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhiNtxSpendeartVS",
+    "title" : "MHI-NTx Spendeart",
+    "description" : "Art der erhaltenen Nierenspende (`MHH_DON`).",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendeart"],
+    "uses" : {
+    },
+    "Questionnaire-MHINTX.html" : "MHI-NTx — Transplantationsanamnese (Ergänzung zum MHI, Nierentransplantation)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-ntx-spendernieren-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhiNtxSpendernierenVS",
+    "title" : "MHI-NTx Anzahl Spendernieren",
+    "description" : "Die wievielte Spenderniere aktuell (`MHH_PRIOR_TX`), `itemWeight` 1–4.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren"],
+    "uses" : {
+    },
+    "Questionnaire-MHINTX.html" : "MHI-NTx — Transplantationsanamnese (Ergänzung zum MHI, Nierentransplantation)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mtsosd-r59-auftreten-5-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MtsosdR59Auftreten5VS",
+    "title" : "MTSOSD-R59 Auftreten 5-stufig",
+    "description" : "Neutral benannte 5-stufige Auftretensskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Metadata-only, siehe MtsosdR59Auftreten5CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5"],
+    "uses" : {
+    },
+    "Questionnaire-MTSOSDR59.html" : "MTSOSD-R59 — Symptomlast, 59 Symptome und 3 Freitext (NTx, metadata-only)"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mtsosd-r59-belastung-5-vs",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MtsosdR59Belastung5VS",
+    "title" : "MTSOSD-R59 Belastung 5-stufig",
+    "description" : "Neutral benannte 5-stufige Belastungsskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Metadata-only, siehe MtsosdR59Belastung5CS.",
+    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5"],
+    "uses" : {
+    },
+    "Questionnaire-MTSOSDR59.html" : "MTSOSD-R59 — Symptomlast, 59 Symptome und 3 Freitext (NTx, metadata-only)"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "OpdSfkAntwortVS",
     "title" : "OPD-SFK Antwortskala",
@@ -293,20 +348,8 @@
     "Questionnaire-OPDSFK.html" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"
   },
   {
-    "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/pcor-example-general-health",
-    "version" : "0.3.0",
-    "status" : "draft",
-    "name" : "PcorExampleGeneralHealthVS",
-    "title" : "PCOR Example General Health Self-Assessment",
-    "description" : "ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt.",
-    "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health"],
-    "uses" : {
-    },
-    "Questionnaire-PcorExampleQuestionnaire.html" : "PCOR Beispiel-Fragebogen"
-  },
-  {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/promis-global-skala-5-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "PromisGlobalSkala5VS",
     "title" : "PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)",
@@ -318,7 +361,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ssuk-antwort-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "SsukAntwortVS",
     "title" : "SSUK Antwortskala",
@@ -330,11 +373,11 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-arztbesuche-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnArztbesucheVS",
     "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen",
-    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4.",
+    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `itemWeight` 1–4.",
     "systems" : ["https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche"],
     "uses" : {
     },
@@ -342,7 +385,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-behandlungsstatus-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnBehandlungsstatusVS",
     "title" : "UKHD-AN Aktueller Behandlungsstatus",
@@ -354,7 +397,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-bmi-angabe-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnBmiAngabeVS",
     "title" : "UKHD-AN Niedrigster BMI — Angabe-Status",
@@ -366,7 +409,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-dauer-angabe-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnDauerAngabeVS",
     "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status",
@@ -378,7 +421,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereignishaeufigkeit-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnEreignishaeufigkeitVS",
     "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
@@ -390,7 +433,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereigniszeitpunkt-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnEreigniszeitpunktVS",
     "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung",
@@ -402,7 +445,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-psychotherapie-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnPsychotherapieVS",
     "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell",
@@ -414,7 +457,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-edp-stufe-6-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdEdpStufe6VS",
     "title" : "UKHD-EDP Antwortstufen (neutralisiert)",
@@ -426,7 +469,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/wai-skala-5-vs",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "WaiSkala5VS",
     "title" : "WAI Antwortskala 5-stufig",

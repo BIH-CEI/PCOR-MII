@@ -1,4 +1,4 @@
-# EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q) - PCOR-MII Implementation Guide v0.3.0
+# EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q) (Experimentell) 
 
@@ -37,7 +37,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     "valueMarkdown" : "**Designentscheidungen (ADR-003):** (0) **Auswahlregel des Zuschnitts** laut DIZ-Implementierungsliste, Spalte *„verkürzte Version?“*: *„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“*. Gegen die Standardzusammensetzung des EDE-Q nachgeprüft — die vier Skalen-Items sind je eines pro Subskala (Restraint, Eating Concern, Weight Concern, Shape Concern). Der Zuschnitt ist damit nach einem psychometrischen Kriterium gebildet, nicht willkürlich gekürzt; ein trennschärfstes Item bildet die Skala aber nicht ab, daher kein Score. (1) `linkId`s = Original-EDE-Q-Itemnummern (1, 7, 12, 27, 29, 30) — **verifiziert** über die Subskalen-zuordnung: Die vier Skalen-Items sind je eines pro Subskala (Restraint `edeq1`, Eating Concern `edeq7`, Weight Concern `edeq12`, Shape Concern `edeq27`), was die Angabe „ein Item je Skala“ der DIZ-Liste wörtlich bestätigt. (1a) **Keine offizielle Kurzform:** Vom EDE-Q gibt es zwar validierte Kurzfassungen (EDE-QS, EDE-Q-13, EDE-Q-8), aber keine 4-Item-Version je Subskala — anders als beim ERQ-S ist dieser Zuschnitt projektspezifisch, daher kein Score. (2) Kein Score: Der EDE-Q wird über Subskalen-/Global-Mittelwerte ausgewertet; für den 6-Item-Zuschnitt liegt keine validierte Scoring-Vorschrift vor, `edeq29`/`edeq30` sind nicht skalenbildend. (3a) **Englisch primär** (ADR-005): `item.text` und die sieben Antwortkonzepte tragen den Wortlaut des autorisierten Bogens EDE-Q 6.0 (© Fairburn and Beglin 2008, frei bereitgestellt von CREDO Oxford); die deutsche Fassung hängt als `translation` bzw. `designation` mit `lang = de` daran. Das verschiebt zugleich den rechtlich heikleren deutschen Wortlaut aus dem Hauptinhalt in eine Übersetzungsebene. (3b) **Zur Nummerierung von `edeq29` und `edeq30`:** Im englischen EDE-Q 6.0 sind diese beiden Fragen **nicht nummeriert** — sie stehen in einem unnummerierten Schlussblock nach Item 28, zusammen mit Gewicht, Größe und der Frage nach der Pille. Die Nummern 29 und 30 stammen aus der deutschen Ausgabe. Die `linkId`s folgen damit der deutschen Zählung, nicht dem Originalbogen. (3) Kein `Questionnaire.code`: SNOMED `446825002` bezeichnet das Vollinstrument und wird dem Zuschnitt nicht zugewiesen. (4) `edeq27` als integer+Slider nach dem Original-Antwortblock (0 = überhaupt nicht … 6 = deutlich). (5) **`item.code` trägt die PCOR-MII-Dictionary-Variable** gegen [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) — das ist der PCOR-MII-Code des Items, ein weiteres lokales CodeSystem gibt es dafür bewusst nicht. Er bezeichnet das **Erhebungsfeld**; hier stimmt es mit der Itemnummer überein, anders als beim [ERQ-S](ERQ-6.html). Wozu der Code gut ist: das maschinelle Verteilen eines flach erhobenen Datensatzes auf die Instrumenten-Questionnaires (ADR-011). Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "EDEQ6",
   "title" : "EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)",
   "status" : "draft",
@@ -254,7 +254,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }]
     },
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "extension" : [{
@@ -285,9 +298,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "question" : "edeq29",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }]
   }]

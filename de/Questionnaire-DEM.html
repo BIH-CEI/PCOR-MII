@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>DEM — Demographics &amp; Medical History - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>DEM — Demographics &amp; Medical History - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.6"}
-    h3,h4,h5,h6{--heading-prefix:"21.6"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.10"}
+    h3,h4,h5,h6{--heading-prefix:"23.10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -218,12 +218,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -236,6 +239,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -280,7 +286,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Questionnaire-ANSOCQ2.json.html">&lt; zurück</a> | 
+            <a href="Questionnaire-BAASIS.json.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -300,7 +306,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -348,7 +354,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -431,13 +437,13 @@ a[name="test"] + h3 + div {
       <div id="tbl-tree">
         <div id="tbl-tree-inner">
           <div data-fhir="generated"><p class="res-header-id"></p><a name="DEM"> </a><a name="hcDEM"> </a>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div><b>Structure</b>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=DEM" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> DEM</td>
 <td style="" class="hierarchy xhtCellBorder1">Screening-Fragebogen zur Soziodemographie (Kategorie DEM). Folgt den Konventionen des MII-PRO-Moduls (SDC-Basis); ist selbst kein PRO-Instrument.</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
 <td style="" class="hierarchy xhtCellBorder1">Questionnaire</td>
-<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM#0.3.0</td></tr>
+<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM#0.9.0</td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.soziodemographie" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / </span>soziodemographie</td>
 <td style="" class="hierarchy xhtCellBorder1">Soziodemographische Angaben</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -462,7 +468,7 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein-ka-vs.html">DEM Ja/Nein/Keine Angabe</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.Q_GENDERID">3 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aae" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.Q_OECDLIT5a" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>Q_OECDLIT5a</td>
 <td style="" class="hierarchy xhtCellBorder1">Which of these terms best describes your current work situation?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -477,7 +483,7 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">In the past 12 months, did you have problems paying or were unable to pay any medical bills?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein-nz-vs.html">DEM Ja/Nein/Nicht zutreffend</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.Q_MONMED">3 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aah" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" id="item.Q_MON" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>Q_MON</td>
 <td style="" class="hierarchy xhtCellBorder1">How often in the past 12 months would you say you were worried or stressed about the following things?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -502,22 +508,22 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Were you born in Germany?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.MEDHIMS6">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aaj" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.MEDHIMS6_country" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="string" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>MEDHIMS6_country</td>
 <td style="" class="hierarchy xhtCellBorder1">Please state the country you were born in</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-string">string</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.MEDHIMS6">MEDHIMS6</a> = Nein (DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)#nein)</span><br/>Value Set: </td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.MEDHIMS6">MEDHIMS6</a> = No (SNOMED CT#373067005)</span><br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aak" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.MEDHIMS7" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>MEDHIMS7</td>
 <td style="" class="hierarchy xhtCellBorder1">Are you a citizen of Germany?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.MEDHIMS7">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aal" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.MEDHIMS7_nationality" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="string" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>MEDHIMS7_nationality</td>
 <td style="" class="hierarchy xhtCellBorder1">Please state what country you are a citizen of</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-string">string</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.MEDHIMS7">MEDHIMS7</a> = Nein (DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)#nein)</span><br/>Value Set: </td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.MEDHIMS7">MEDHIMS7</a> = No (SNOMED CT#373067005)</span><br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="qt-DEM-aam" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.Q_OECDLITii" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">DEM / soziodemographie / </span>Q_OECDLITii</td>
 <td style="" class="hierarchy xhtCellBorder1">Which of these best describes the type of area in which you live?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -572,8 +578,20 @@ a[name="test"] + h3 + div {
 <td style="" class="hierarchy xhtCellBorder1">Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
 <td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice">choice</a></td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#opt-item.CPCOR_REQ">2 options</a></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table><hr/><p><b>Options Sets</b></p><a name="opt-item.Q_GENDERID"> </a><p><b>Answer options for Q_GENDERID </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li>
+<li style="font-size: 11px">http://loinc.org#LA31066-6 ("Refused to answer")</li></ul><a name="opt-item.Q_MONMED"> </a><p><b>Answer options for Q_MONMED </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li>
+<li style="font-size: 11px">http://snomed.info/sct#385432009 ("Not applicable")</li></ul><a name="opt-item.MEDHIMS6"> </a><p><b>Answer options for MEDHIMS6 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.MEDHIMS7"> </a><p><b>Answer options for MEDHIMS7 </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul><a name="opt-item.CPCOR_REQ"> </a><p><b>Answer options for CPCOR_REQ </b></p>
+<ul><li style="font-size: 11px">http://snomed.info/sct#373066001 ("Yes")</li>
+<li style="font-size: 11px">http://snomed.info/sct#373067005 ("No")</li></ul></div>
         </div>
       </div>
     </div>
@@ -582,7 +600,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-sample">
         <div id="tbl-sample-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
 <div><div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><b><span title="linkId: soziodemographie">Soziodemographische Angaben</span></b></p></div><div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: soziodemographie</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: AGE">Bitte geben Sie Ihr Geburtsdatum an</span> <input size="10" name="AGE" placeholder="Date" type="date" aria-label="Bitte geben Sie Ihr Geburtsdatum an"/></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: AGE</li><li style="font-size: 10px">Answers: </li></ul></div></div>
@@ -590,14 +608,14 @@ a[name="test"] + h3 + div {
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_ISCED</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-isced-vs.html">DEM Bildungsabschluss (ISCED)</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_SEX">Which of the following best describes you?</span><select size="1" name="Q_SEX" aria-label="Which of the following best describes you?"><option value="weiblich" selected="false">Female</option><option value="maennlich" selected="false">Male</option><option value="nicht-binaer" selected="false">Non-binary</option><option value="andere" selected="false">Other</option><option value="keine-angabe" selected="false">Prefer not to say</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_SEX</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-geschlecht-vs.html">DEM Geschlecht</a></li></ul></div></div>
-<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_GENDERID">Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?</span><select size="1" name="Q_GENDERID" aria-label="Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option><option value="keine-angabe" selected="false">Möchte ich nicht sagen</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_GENDERID</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein-ka-vs.html">DEM Ja/Nein/Keine Angabe</a></li></ul></div></div>
+<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_GENDERID">Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?</span><select size="1" name="Q_GENDERID" aria-label="Entspricht Ihre Geschlechtsidentität dem Geschlecht, das Ihnen bei Geburt zugewiesen wurde?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_GENDERID</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.Q_GENDERID">Answers: 3 options</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_OECDLIT5a">Which of these terms best describes your current work situation?</span><select size="1" name="Q_OECDLIT5a" aria-label="Which of these terms best describes your current work situation?"><option value="selbststaendig" selected="false">Self-employed [work for yourself]</option><option value="angestellt" selected="false">In paid employment [work for someone else]</option><option value="arbeitssuchend" selected="false">Looking for work</option><option value="haushalt" selected="false">Looking after the home</option><option value="arbeitsunfaehig" selected="false">Unable to work due to sickness or ill-health</option><option value="pensioniert" selected="false">Retired</option><option value="student" selected="false">Student</option><option value="nicht-arbeitend" selected="false">Not working and not looking for work</option><option value="lernende" selected="false">Apprentice</option><option value="anderes" selected="false">Other</option><option value="weiss-nicht" selected="false">Don't know</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_OECDLIT5a</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-erwerbsstatus-vs.html">DEM Erwerbsstatus</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_OECDLIT7a">Which of these categories does your household net income usually fall into?</span><select size="1" name="Q_OECDLIT7a" aria-label="Which of these categories does your household net income usually fall into?"><option value="band-niedrig" selected="false">Up to €2,300 a month</option><option value="band-mittel" selected="false">Between €2,300 and €5,200 a month</option><option value="band-hoch" selected="false">€5,200 a month or more</option><option value="weiss-nicht" selected="false">Don't know</option><option value="keine-angabe" selected="false">Prefer not to say</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_OECDLIT7a</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-einkommen-vs.html">DEM Haushaltseinkommen</a></li></ul></div></div>
-<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_MONMED">In the past 12 months, did you have problems paying or were unable to pay any medical bills?</span><select size="1" name="Q_MONMED" aria-label="In the past 12 months, did you have problems paying or were unable to pay any medical bills?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option><option value="nicht-zutreffend" selected="false">Nicht zutreffend</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_MONMED</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein-nz-vs.html">DEM Ja/Nein/Nicht zutreffend</a></li></ul></div></div>
+<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_MONMED">In the past 12 months, did you have problems paying or were unable to pay any medical bills?</span><select size="1" name="Q_MONMED" aria-label="In the past 12 months, did you have problems paying or were unable to pay any medical bills?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_MONMED</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.Q_MONMED">Answers: 3 options</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><b><span title="linkId: Q_MON">How often in the past 12 months would you say you were worried or stressed about the following things?</span></b></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Q_MON</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 880px; border-top: 1px #eeeeee solid; margin-left: 20px"><div style="display: inline-block; width: 480px"><p><span title="linkId: MONMEAL">Having enough money to buy healthy meals?</span><select size="1" name="MONMEAL" aria-label="Having enough money to buy healthy meals?"><option value="staendig" selected="false">Always</option><option value="meistens" selected="false">Often</option><option value="manchmal" selected="false">Sometimes</option><option value="selten" selected="false">Rarely</option><option value="nie" selected="false">Never</option></select></p></div>
@@ -606,12 +624,12 @@ a[name="test"] + h3 + div {
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MONRENT</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-haeufigkeit-5-vs.html">DEM Häufigkeit (5-stufig)</a></li></ul></div></div>
 <div style="width: 880px; border-top: 1px #eeeeee solid; margin-left: 20px"><div style="display: inline-block; width: 480px"><p><span title="linkId: MONBILLS">Having enough money to pay for other monthly bills, like electricity, heat, and your telephone?</span><select size="1" name="MONBILLS" aria-label="Having enough money to pay for other monthly bills, like electricity, heat, and your telephone?"><option value="staendig" selected="false">Always</option><option value="meistens" selected="false">Often</option><option value="manchmal" selected="false">Sometimes</option><option value="selten" selected="false">Rarely</option><option value="nie" selected="false">Never</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MONBILLS</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-haeufigkeit-5-vs.html">DEM Häufigkeit (5-stufig)</a></li></ul></div></div>
-<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS6">Were you born in Germany?</span><select size="1" name="MEDHIMS6" aria-label="Were you born in Germany?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS6</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
+<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS6">Were you born in Germany?</span><select size="1" name="MEDHIMS6" aria-label="Were you born in Germany?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS6</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.MEDHIMS6">Answers: 2 options</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS6_country">Please state the country you were born in</span> <input size="60" name="MEDHIMS6_country" placeholder="String" type="text" aria-label="Please state the country you were born in"/></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS6_country</li><li style="font-size: 10px">Enable When: todo</li><li style="font-size: 10px">Answers: </li></ul></div></div>
-<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS7">Are you a citizen of Germany?</span><select size="1" name="MEDHIMS7" aria-label="Are you a citizen of Germany?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS7</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div>
+<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS7">Are you a citizen of Germany?</span><select size="1" name="MEDHIMS7" aria-label="Are you a citizen of Germany?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS7</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.MEDHIMS7">Answers: 2 options</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: MEDHIMS7_nationality">Please state what country you are a citizen of</span> <input size="60" name="MEDHIMS7_nationality" placeholder="String" type="text" aria-label="Please state what country you are a citizen of"/></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: MEDHIMS7_nationality</li><li style="font-size: 10px">Enable When: todo</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: Q_OECDLITii">Which of these best describes the type of area in which you live?</span><select size="1" name="Q_OECDLITii" aria-label="Which of these best describes the type of area in which you live?"><option value="stadt" selected="false">City</option><option value="dorf-vorort" selected="false">Town or suburb</option><option value="laendlich" selected="false">Rural area</option><option value="weiss-nicht" selected="false">Don't know</option></select></p></div>
@@ -634,8 +652,8 @@ a[name="test"] + h3 + div {
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: GIPS04</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-beziehungsstatus-vs.html">DEM Beziehungsstatus</a></li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: GIPS10">Rente</span><select size="1" name="GIPS10" aria-label="Rente"><option value="keine" selected="false">Keine Rente</option><option value="laufend" selected="false">Laufendes Rentenverfahren</option><option value="auf-zeit" selected="false">Rente auf Zeit</option><option value="auf-dauer" selected="false">Rente auf Dauer</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: GIPS10</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-rentenstatus-vs.html">DEM Rentenstatus</a></li></ul></div></div>
-<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: CPCOR_REQ">Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?</span><select size="1" name="CPCOR_REQ" aria-label="Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?"><option value="ja" selected="false">Ja</option><option value="nein" selected="false">Nein</option></select></p></div>
-<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: CPCOR_REQ</li><li style="font-size: 10px">Answers: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></li></ul></div></div></div></div>
+<div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: CPCOR_REQ">Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?</span><select size="1" name="CPCOR_REQ" aria-label="Möchten Sie kontaktiert werden, um den aktuellen Gesundheitsstatus zu besprechen?"><option value="a" selected="false">??</option></select></p></div>
+<div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: CPCOR_REQ</li><li style="font-size: 10px">Answers: </li><li style="font-size: 10px"><a href="#item.CPCOR_REQ">Answers: 2 options</a></li></ul></div></div></div></div>
         </div>
       </div>
     </div>
@@ -644,7 +662,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-logic">
         <div id="tbl-logic-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qlogic=DEM" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> soziodemographie</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
@@ -655,13 +673,13 @@ a[name="test"] + h3 + div {
 <tr fhir="generated-heirarchy" id="ql-DEM-ac" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_SEX</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-geschlecht-vs.html">DEM Geschlecht</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ad" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_GENDERID</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein-ka-vs.html">DEM Ja/Nein/Keine Angabe</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.Q_GENDERID">3 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ae" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_OECDLIT5a</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-erwerbsstatus-vs.html">DEM Erwerbsstatus</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-af" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_OECDLIT7a</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-einkommen-vs.html">DEM Haushaltseinkommen</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ag" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_MONMED</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein-nz-vs.html">DEM Ja/Nein/Nicht zutreffend</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.Q_MONMED">3 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ah" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_MON</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-aha" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / Q_MON / </span>MONMEAL</td>
@@ -671,11 +689,11 @@ a[name="test"] + h3 + div {
 <tr fhir="generated-heirarchy" id="ql-DEM-ahc" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / Q_MON / </span>MONBILLS</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-haeufigkeit-5-vs.html">DEM Häufigkeit (5-stufig)</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ai" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>MEDHIMS6</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.MEDHIMS6">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-aj" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="string" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>MEDHIMS6_country</td>
 <td style="" class="hierarchy xhtCellBorder1">Enable When: Noch nicht unterstützt<br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-ak" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>MEDHIMS7</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.MEDHIMS7">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-al" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="string" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>MEDHIMS7_nationality</td>
 <td style="" class="hierarchy xhtCellBorder1">Enable When: Noch nicht unterstützt<br/>Value Set: </td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-am" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">soziodemographie / </span>Q_OECDLITii</td>
@@ -699,7 +717,7 @@ a[name="test"] + h3 + div {
 <tr fhir="generated-heirarchy" id="ql-DEM-bb" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">weitere / </span>GIPS10</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-rentenstatus-vs.html">DEM Rentenstatus</a></td></tr>
 <tr fhir="generated-heirarchy" id="ql-DEM-bc" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck00.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">weitere / </span>CPCOR_REQ</td>
-<td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-dem-ja-nein.html">DEM Ja/Nein</a></td></tr>
+<td style="" class="hierarchy xhtCellBorder1">Value Set: <br/>Optionen: <a href="#item.CPCOR_REQ">2 options</a></td></tr>
 <tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="2" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
         </div>
       </div>
@@ -711,7 +729,7 @@ a[name="test"] + h3 + div {
   <a name="test"> </a>
   <h3>Diesen Fragebogen testen</h3>
   <div data-fhir="generated"><p>Try this questionnaire out:</p>
-<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM&amp;pID=pcor-mii&amp;pVersion=0.3.0">NLM Forms Library</a></li></ul></div>
+<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM&amp;pID=pcor-mii&amp;pVersion=0.9.0">NLM Forms Library</a></li></ul></div>
 
   <a name="responses"> </a>
   <h3>Antworten zu diesem Fragebogen</h3>
@@ -753,7 +771,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Questionnaire-ANSOCQ2.json.html">&lt; zurück</a>
+                <a href="Questionnaire-BAASIS.json.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -775,10 +793,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

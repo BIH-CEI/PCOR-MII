@@ -1,55 +1,78 @@
-# AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.3.0
+# AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.9.0
 
 ## AN (Anorexia Nervosa)
 
-**AN** (**Anorexia Nervosa**) ist die essstörungsbezogene Entität in PCOR-MII — neben [PSS](PSS.md) (Persistent Somatic Syndrome) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und AN-spezifischen Instrumenten zu Essstörungspathologie, Emotionsregulation, Veränderungsmotivation, sozialem Umfeld und Kindheitsbelastungen.
+**AN** (**Anorexia Nervosa**) ist die essstörungsbezogene Entität in PCOR-MII — neben [PSS](PSS.md) (Persistent Somatic Syndrome) und [NTx](NTx.md) (Nierentransplantation). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und AN-spezifischen Instrumenten zu Essstörungspathologie, Emotionsregulation, Veränderungsmotivation, sozialem Umfeld und Kindheitsbelastungen.
 
-Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.md); diese Seite beschreibt die AN-Batterie.
+Die entitätsübergreifende Sicht steht unter [Instrumente](Instrumente.md); diese Seite beschreibt die AN-Batterie und sagt zu jedem Bogen, wo seine FHIR-Ressource liegt. **Maschinenlesbar** ist dieselbe Zusammenstellung als [Library/use-case-an](Library-use-case-an.md), die alle 25 Bögen versioniert pinnt. Rechtelage und Status aller Instrumente stehen gesammelt auf [Rechtelage und offene Punkte](Rechtelage.md).
 
-**Wer nur wissen will, wo welcher Fragebogen liegt**, ist auf der [AN — Instrumentenliste](AN-Instrumentenliste.md) schneller: eine Tabelle, jede Zeile ein Instrument, jeder Link direkt auf die Ressource — im PCOR-MII-IG oder im MII-PRO-IG.
+### Die AN-Batterie
 
-### Generischer Kern (alle Entitäten)
+Die Spalte **Ressource** führt zur Ressource selbst: **PCOR-MII** — der `Questionnaire` ist in diesem IG definiert, der Link geht auf die Artefaktseite mit `linkId`s und Downloads; **MII PRO** — der `Questionnaire` kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` 2027.0.0-ballot.2 mit, PCOR-MII baut ihn nicht nach; **offen** — für diese Zeile des Erhebungsplans existiert noch kein Artefakt. Die Spalte **Doku** verweist auf die PCOR-MII-Seite des Instruments. Prioritäten und Frequenzen des Erhebungsplans stehen im Blatt **Domain Overview** des Item Level Dictionary und im `display` der Manifest-Einträge.
 
-Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:
-
-* [Demographie](Demographie.md) (DEM) und [MHI](MHI.md) — Soziodemographie und medizinische Vorgeschichte; das MHI enthält im Szenario AN Zusatzitems zu **Gewichtsverlauf** und **AN-Subtyp** (siehe [MHI](MHI.md))
-* [PROMIS](PROMIS.md) — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS
-* [WHODAS 2.0 (12-Item)](WHODAS-12.md) — Funktionsfähigkeit und Beeinträchtigung
-* [PHQ-15](PHQ-15.md), PHQ-8 (Standard; PHQ-9 siehe [PHQ-Übersicht](PHQ.md)), [GAD-7](GAD-7.md) / GAD-2 / PHQ-4
-* EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen
-* [WAI](WAI.md) — Arbeitsfähigkeit (metadata-only)
-
-Auch in AN ist der **PHQ-8 der Standard** — wie in allen Use Cases. Der vollständige PHQ-9 (mit dem Suizidalitäts-Item `phq-phq2i`) darf nur eingesetzt werden, wenn auf die Erhebung **unmittelbar ein Arztkontakt vor Ort folgt** — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.md)). Das Suizidalitäts-Item ist als **PHQ-SI** eigenständig ausgewiesen. Außerdem gemeinsam mit PSS: [OPD-SFK](OPD-SFK.md) — von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung.
-
-### AN-spezifische Instrumente
-
-Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim ACE die ersten fünf Fragen), und **keiner** von ihnen trägt einen Score. Der ERQ-6 galt bis Release 0.3.0 als Ausnahme — er war fälschlich als die offizielle Kurzform ERQ-S ausgewiesen; die Korrektur steht auf der [ERQ-6-Seite](ERQ-6.md).
+**Generischer Kern — in PSS, AN und NTx identisch**
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
-| **ERQ-6** | DCH | 6 | Emotionsregulation — sechs ERQ-Items, kein Score | [Seite](ERQ-6.md) |
-| **EDE-Q6** | DCH | 6 | Essstörungspathologie inkl. Regelblutung | [Seite](EDE-Q6.md) |
-| **ANSOCQ-2** | TCH | 2 | Veränderungsmotivation (Stages of Change) | [Seite](ANSOCQ-2.md) |
-| **SSUK-2** | EFA | 2 | Soziale Unterstützung / belastende Interaktion | [Seite](SSUK-2.md) |
-| **ACE** | EFA | 5 | Belastende Kindheitserfahrungen | [Seite](ACE.md) |
-| **UKHD-EDP** | DCH | 11 | Essstörungspathologie — vermutlich EDI-2-Zuschnitt | [Seite](UKHD-EDP.md)— metadata-only |
+| Demographie (DEM) | DEM | 23¹ | **PCOR-MII**→[`DEM`](Questionnaire-DEM.md) | [Demographie](Demographie.md) |
+| Medical History (MHI) —**mit AN-Zusatzitems**zu Gewichtsverlauf und AN-Subtyp | MHI | 48¹ | **PCOR-MII**→[`MHI`](Questionnaire-MHI.md) | [MHI](MHI.md) |
+| PROMIS Scale v1.2 — Global Health (Global01, Global02) | GHS | 2 | **PCOR-MII**→[`PROMISGH`](Questionnaire-PROMISGH.md)— 2-Item-Zuschnitt,`derivedFrom`der 10-Item-Skala des Moduls | [PROMIS](PROMIS.md) |
+| PROMIS-16 Profile v2.1 — Standortvariante | GHS | 16 | **MII PRO**→[PROMIS-16](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html) | [PROMIS-16](PROMIS-16.md) |
+| PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans) — Standortvariante | GHS | 29 + 4 | **MII PRO**→ PROMIS-29 und Cognitive Function SF 4a | [PROMIS-29](PROMIS-29.md),[Cognitive Function](PROMIS-Cognitive-Function.md) |
+| PROMIS NRS — Pain Intensity 1a | GHS | 3 | **offen**als Einzelinstrument; das Item steckt im PROMIS-29 (`promis-global07`) | [PROMIS-29](PROMIS-29.md) |
+| WHODAS 2.0, 12-Item | GHS | 14 | **MII PRO**→[WHODAS 2.0](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html) | [WHODAS 2.0](WHODAS-12.md) |
+| PHQ-8 —**Standard**in allen Use Cases; vollständiger PHQ-9 nur bei unmittelbarem Arztkontakt vor Ort | GHS | 8 (9) | **MII PRO**→[PHQ-9](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-9.html)(PHQ-8 = Teilmenge) | [PHQ-9](PHQ-9.md),[PHQ-Übersicht](PHQ.md) |
+| PHQ-SI — Suizidalität, stationär | MHA | 1 | **MII PRO**— Item`phq-phq2i`des PHQ-9, kein eigener Bogen | [PHQ-9](PHQ-9.md) |
+| PHQ-15 | GHS | 13 | **MII PRO**→[PHQ-15](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-15.html) | [PHQ-15](PHQ-15.md) |
+| GAD-7 (auch GAD-2 / PHQ-4 als Teilmengen) | GHS | 7 | **MII PRO**→[GAD-7](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-gad-7.html) | [GAD-7](GAD-7.md) |
+| EURONET-SOMA 1 + 2 | GHS | 2 | **MII PRO**→[EURONET-SOMA](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euronet-soma.html) | [EURONET-SOMA](EURONET-SOMA.md) |
+| EQ-5D-5L — nur Outcome, jährlich | GHS | 6 | **MII PRO**→[EQ-5D-5L](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html), Variante collectable | — |
+| WAI / Work Ability Score | GHS | 3 | **PCOR-MII**→[`WAI`](Questionnaire-WAI.md)—**metadata-only**, keine Itemtexte | [WAI](WAI.md) |
+| OPD-SFK — Persönlichkeitsfunktion, Prio C; von einzelnen Standorten erhoben, keine Empfehlung der Use-Case-Leitung | MHA | 12 | **PCOR-MII**→[`OPDSFK`](Questionnaire-OPDSFK.md) | [OPD-SFK](OPD-SFK.md) |
 
-Dazu die **[UKHD-Zusatzitems](UKHD-Zusatzitems.md)** — Itemgruppen, die kein publiziertes Instrument abbilden und vom Standort Heidelberg für die Erhebung zusammengestellt sind. Sechs davon sind als **je ein eigenes Questionnaire** modelliert, eines je Dictionary-Gruppe:
+¹ Bei DEM und MHI sind das die Blatt-Items des PCOR-MII-Questionnaire, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen, im MHI kommen die beiden PCOR-MII-eigenen Hilfsitems zur Einheitenauswahl hinzu. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.
 
-| | | | | |
-| :--- | :--- | :--- | :--- | :--- |
-| **UKHD-PT** | TCH | 2 | Vorbehandlung: Psychotherapie, Arztbesuche | [Questionnaire](Questionnaire-UKHDPT.md) |
-| **UKHD-ANB** | DCH | 2 (+2) | Essstörungsanamnese: Dauer, niedrigster BMI | [Questionnaire](Questionnaire-UKHDANB.md) |
-| **UKHD-CT** | TCH | 1 | Aktueller Behandlungsstatus | [Questionnaire](Questionnaire-UKHDCT.md) |
-| **UKHD-LE** | EFA | 4 | Belastende Lebensereignisse | [Questionnaire](Questionnaire-UKHDLE.md) |
-| **UKHD-ND** | DCH | 3 | Neue Diagnosen seit letzter Befragung | [Questionnaire](Questionnaire-UKHDND.md) |
-| **UKHD-D** | DCH | 2 | Diagnosen bei Aufnahme | [Questionnaire](Questionnaire-UKHDD.md) |
+PROMIS-16 und PROMIS-29 + Cognitive Function sind **Standortvarianten** (entweder/oder); beide stehen im Manifest, damit Empfänger Antworten beider Standorttypen auflösen können (Lesart der „8 Domänen“ bestätigt durch die Use-Case-Leitung, 2026-10-13). Auch in AN ist der **PHQ-8 der Standard**; der vollständige PHQ-9 mit dem Suizidalitäts-Item `phq-phq2i` darf nur eingesetzt werden, wenn auf die Erhebung unmittelbar ein Arztkontakt vor Ort folgt — kein Einsatz im Monitoring (siehe [PHQ-Übersicht](PHQ.md)).
 
-Gemeinsame Entscheidungen, Antwortskalen und offene Punkte: [UKHD-Zusatzitems](UKHD-Zusatzitems.md). Die siebte Gruppe `UKHD-CTT` (6 Zeitangaben zu Kindheitsbelastungen) steht im [ACE](ACE.md): Das Dictionary nennt ihren Bezug auf `ace1` bis `ace3` ausdrücklich, und `enableWhen` kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.
+**AN-spezifische Instrumente**
 
-**Für diese 20 Items liegt keine dokumentierte Freigabe vor, und die Herkunft ihres Wortlauts ist ungeklärt** — auch für die sechs, die im ACE stehen. Das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett des Dictionary, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf [UKHD-Zusatzitems](UKHD-Zusatzitems.md)).
+Alle fünf sind **projektspezifische Zuschnitte** publizierter Instrumente (beim ACE die ersten fünf Fragen), vorläufig in PCOR-MII gepflegt ([ADR-003](Designentscheidungen.md)), und **keiner** von ihnen trägt einen Score. Der ERQ-6 galt bis Release 0.3.0 als Ausnahme — er war fälschlich als die offizielle Kurzform ERQ-S ausgewiesen; die Korrektur steht auf der [ERQ-6-Seite](ERQ-6.md).
 
-**Eine** Gruppe ist **ausdrücklich ausgenommen**: `UKHD-BI` (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt). `UKHD-EDP` (Essstörungspathologie, 11 Items) ist dagegen als [eigener Bogen](UKHD-EDP.md) modelliert — **metadata-only**, weil es vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage ist und ohnehin keine Freigabe des Standorts vorliegt. Damit sind alle UKHD-Gruppen der Entität AN abgedeckt, zwei davon ohne Wortlaut.
+| | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ERQ-6 | DCH | 6 | Emotionsregulation — sechs ERQ-Items | **PCOR-MII**→[`ERQ6`](Questionnaire-ERQ6.md) | [ERQ-6](ERQ-6.md) | [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) |
+| EDE-Q6 | DCH | 6 | Essstörungspathologie inkl. Regelblutung | **PCOR-MII**→[`EDEQ6`](Questionnaire-EDEQ6.md) | [EDE-Q6](EDE-Q6.md) | [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md) |
+| ANSOCQ-2 | TCH | 2 | Veränderungsmotivation (Stages of Change) | **PCOR-MII**→[`ANSOCQ2`](Questionnaire-ANSOCQ2.md) | [ANSOCQ-2](ANSOCQ-2.md) | [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) |
+| SSUK-2 | EFA | 2 | Soziale Unterstützung / belastende Interaktion | **PCOR-MII**→[`SSUK2`](Questionnaire-SSUK2.md) | [SSUK-2](SSUK-2.md) | [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) |
+| ACE + Zeitangaben | EFA | 5 + 6 | Belastende Kindheitserfahrungen; die sechs`UKHD-CTT`-Zeitangaben per`enableWhen`an`ace1`–`ace3`gebunden (PCOR-MII-Komposit) | **PCOR-MII**→[`ACE`](Questionnaire-ACE.md) | [ACE](ACE.md) | [ACEResponse](QuestionnaireResponse-ACEResponse.md) |
+| UKHD-EDP | DCH | 11 | Essstörungspathologie — vermutlich EDI-2-Zuschnitt | **PCOR-MII**→[`UKHDEDP`](Questionnaire-UKHDEDP.md)—**metadata-only** | [UKHD-EDP](UKHD-EDP.md) | [UKHDEDPMonitoringResponse](QuestionnaireResponse-UKHDEDPMonitoringResponse.md) |
+
+**UKHD-Zusatzbögen** — Itemgruppen, die kein publiziertes Instrument abbilden und vom Standort Heidelberg für die Erhebung zusammengestellt sind, sämtlich Priorität A. Sechs sind als **je ein eigenes Questionnaire** modelliert, eines je Dictionary-Gruppe ([UKHD-Zusatzitems](UKHD-Zusatzitems.md)); `UKHD-CTT` steht im ACE (siehe oben), `UKHD-BI` ist bewusst nicht modelliert.
+
+| | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| UKHD-PT | TCH | 2 | Vorbehandlung: Psychotherapie, Arztbesuche | [`UKHDPT`](Questionnaire-UKHDPT.md) | [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.md) |
+| UKHD-ANB | DCH | 2 (+2) | Essstörungsanamnese: Dauer, niedrigster BMI | [`UKHDANB`](Questionnaire-UKHDANB.md) | [UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.md) |
+| UKHD-CT | TCH | 1 | Aktueller Behandlungsstatus | [`UKHDCT`](Questionnaire-UKHDCT.md) | [UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.md) |
+| UKHD-LE | EFA | 4 | Belastende Lebensereignisse | [`UKHDLE`](Questionnaire-UKHDLE.md) | [UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.md) |
+| UKHD-ND | DCH | 3 | Neue Diagnosen seit letzter Befragung | [`UKHDND`](Questionnaire-UKHDND.md) | [UKHDNDMonitoringResponse](QuestionnaireResponse-UKHDNDMonitoringResponse.md)— zum Initial-Termin nicht erhoben |
+| UKHD-D | DCH | 2 | Diagnosen bei Aufnahme | [`UKHDD`](Questionnaire-UKHDD.md) | [UKHDDResponse](QuestionnaireResponse-UKHDDResponse.md) |
+| `UKHD-BI` | — | 3 | Körperbild — visuelle Bildskala; die Erhebung läuft noch nicht damit, die Bildvorlage fehlt im Dictionary | **offen**— bewusst nicht modelliert | — |
+
+Für diese Gruppen liegt keine dokumentierte Freigabe vor, und die Herkunft ihres Wortlauts ist ungeklärt — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett des Dictionary, keine Autorenschaftsangabe. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung; Einzelheiten unter [Rechtelage und offene Punkte](Rechtelage.md#standortgruppen).
+
+**Scores**
+
+| | | |
+| :--- | :--- | :--- |
+| PROPr — PROMIS-Preference Utility | **PCOR-MII**→[`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.md)— vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.md#propr) |
+| PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO**— acht`ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.md) |
+| PROMIS-Domänen-T-Scores (PROMIS-16) | **offen**— upstream Roadmap 2027; die acht Codes des PROMIS-29 gelten**nicht**für PROMIS-16 | [PROMIS-16](PROMIS-16.md) |
+| Physical / Mental Health Summary (PHS, PCS, MHS, MCS) | **offen**— im Plan Prio A, kein Artefakt | **Domain Overview**des Item Level Dictionary |
+| EQ-5D-5L Index | **MII PRO**— Index-Score und CQL upstream | — |
+| OPD-SFK Globalwert | **PCOR-MII**— berechnetes Item`opd-sfk-globalwert`im Bogen | [OPD-SFK](OPD-SFK.md) |
+
+Die fünf AN-Zuschnitte und die UKHD-Bögen tragen keinen Score (siehe unten).
 
 ### Die Zuschnitte folgen einer dokumentierten Auswahlregel
 
@@ -63,40 +86,19 @@ Das ist wichtiger, als es aussieht: Die Zuschnitte sind damit **nicht willkürli
 
 Der [ACE](ACE.md) trägt in derselben Spalte eine andere Angabe — **„die ersten 5 Fragen“** —, ist also keine Trennschärfe-Auswahl, sondern der vordere Block des Instruments (Misshandlung und Vernachlässigung ohne die Haushalts-Dysfunktions-Fragen).
 
-Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes Item je Skala bildet die Skala nicht ab.** Deshalb trägt **keiner** dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in [ADR-003](Designentscheidungen.md).
+Für die Auswertung folgt daraus durchgehend dasselbe: **Ein trennschärfstes Item je Skala bildet die Skala nicht ab.** Deshalb trägt **keiner** dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in [ADR-003](Designentscheidungen.md). Die Antwortcodes tragen vorsorglich `itemWeight`, damit eine spätere Auswertung möglich bleibt, sobald eine Regel fachlich abgestimmt ist ([offener Punkt](Rechtelage.md#an-scoring)).
 
-### Ein zusammenhängender Beispieldatensatz
+### Beispieldatensatz
 
-Für die fünf AN-Instrumente und die [UKHD-Zusatzitems](UKHD-Zusatzitems.md) liegen ausgefüllte Beispielantworten vor — und zwar **nicht** als unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei **derselben Beispiel-Patientin**, die schon [DEM](Demographie.md) und [MHI](MHI.md) nutzen (`pcor-mii-exa-patient`): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.
+Die AN-Beispielantworten gehören zu **einer** Patientin ([pcor-mii-exa-patient-an](Patient-pcor-mii-exa-patient-an.md)) und zwei Terminen: dem Initial-/Screening-Termin 18.06.2026 ([Bundle](Bundle-pcor-mii-exa-bundle-an-initial.md), 13 Entries) und dem Monitoring-Termin 30.07.2026 ([Bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.md), 10 Entries) — leicht gebessert, nicht remittiert, mit der ersten UKHD-ND-Antwort, einer bewussten Teilantwort zu UKHD-PT und der Antwort auf den metadata-only-Bogen UKHD-EDP. Was jede Antwort belegt, warum UKHD-ND zum Initial-Termin fehlt und wie die Werte gewählt sind, steht auf [Beispiele](Beispiele.md).
 
-| | |
-| :--- | :--- |
-| [ERQ6Response](QuestionnaireResponse-ERQ6Response.md) | niedrige Neubewertung bei hoher Unterdrückung — das für AN beschriebene Muster |
-| [EDEQ6Response](QuestionnaireResponse-EDEQ6Response.md) | residuelle Pathologie; belegt die über`enableWhen`abhängige Frage`edeq30` |
-| [ANSOCQ2Response](QuestionnaireResponse-ANSOCQ2Response.md) | mittlere Veränderungsmotivation;`language`=`de-CH`, weil die validierte Schweizer Fassung vorgelegt wurde |
-| [SSUK2Response](QuestionnaireResponse-SSUK2Response.md) | gegenläufige Items: hoch bei der unterstützenden, niedrig bei der belastenden Interaktion |
-| [ACEResponse](QuestionnaireResponse-ACEResponse.md) | zwei bejahte Items in der emotionalen Dimension; von den drei Zeitangabe-Gruppen ist**nur die erste**belegt, weil nur`ace1`bejaht ist — die beiden anderen sind per`enableWhen`nicht freigeschaltet |
-| [UKHDPTResponse](QuestionnaireResponse-UKHDPTResponse.md),[UKHDANBResponse](QuestionnaireResponse-UKHDANBResponse.md),[UKHDCTResponse](QuestionnaireResponse-UKHDCTResponse.md),[UKHDLEResponse](QuestionnaireResponse-UKHDLEResponse.md),[UKHDDResponse](QuestionnaireResponse-UKHDDResponse.md) | ein**Initial-/Screening-Termin**über fünf UKHD-Zusatzbögen; für[UKHD-ND](Questionnaire-UKHDND.md)existiert zu diesem Termin bewusst**keine**Antwort — die erste ND-Antwort gehört zum Monitoring-Termin |
+### Nicht in AN erhoben
 
-**Seit dem 30.07.2026 gibt es einen zweiten Termin:** Das [Monitoring-Bundle](Bundle-pcor-mii-exa-bundle-an-monitoring.md) bündelt neun Verlaufsantworten derselben Patientin, sechs Wochen nach dem Initial-Termin — leicht gebessert, nicht remittiert. Darin die **erste [UKHD-ND-Antwort](QuestionnaireResponse-UKHDNDMonitoringResponse.md)** (die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben), eine bewusste **Teilantwort** zu UKHD-PT (nur `bdkm16` — `bdkm15` ist ein Initial-Item) und die erste Antwort zum metadata-only-Bogen [UKHD-EDP](QuestionnaireResponse-UKHDEDPMonitoringResponse.md). Beide Termine als Bundles: [Initial](Bundle-pcor-mii-exa-bundle-an-initial.md) · [Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.md).
+Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Gesamtübersicht daneben stehen: **PSS-only** sind [PHQ-D Panik-Block](PHQ-Panik.md), [PC-PTSD](PC-PTSD.md), [SCOFF](SCOFF.md), [ISR-Z](ISR-Z.md), [SSD-12](SSD-12.md), [Whiteley-7](WI-7.md), [EXPECT](EXPECT.md), [IPQ-S](IPQ-S.md), [GSLTPAQ](GSLTPAQ.md) und die UKE-Versorgungsitems. **NTx-only** sind [BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung](NTx.md).
 
-Die UKHD-Antworten tragen dabei eine Aussage, die keine der anderen macht: Die `TIMING`-Spalte des Item Level Dictionary ist in den Questionnaires bewusst nicht modelliert — sichtbar wird sie im **Ressourcenzuschnitt der Antworten**: fünf Antworten für sechs Bögen, weil [UKHD-ND](Questionnaire-UKHDND.md) zum Initial-Termin nicht erhoben wird (Begründung auf [UKHD-Zusatzitems](UKHD-Zusatzitems.md)).
+### Rechtelage und Status
 
-**Score-Observations gibt es im AN-Block nicht.** Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe [ERQ-6](ERQ-6.md)).
+Die fünf AN-Instrumente sind laut DIZ-Implementierungsliste frei publizierbar; für [EDE-Q6](EDE-Q6.md) (verlegte deutsche Fassung) und die deutsche Fassung des [ACE](ACE.md) (ACE-D) ist die Zustimmung der Rechteinhaber:innen dennoch einzuholen. Die UKHD-Gruppen haben keine dokumentierte Freigabe, [UKHD-EDP](UKHD-EDP.md) ist metadata-only. Alle AN-eigenen Ressourcen sind **vorläufig in PCOR-MII** gepflegt, bis sie offiziell abgestimmt sind und Teile ins MII-PRO-Modul aufgenommen werden können ([ADR-003](Designentscheidungen.md)). Die vollständige Lage je Instrument, die offenen Fragen und wer sie beantworten muss: [Rechtelage und offene Punkte](Rechtelage.md).
 
-Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.
-
-Alle acht Instanzen sind mit dem FHIR-Validator geprüft: **0 errors** (Details unter [Validierung](Validierung.md)).
-
-### Status: vorläufig in PCOR-MII gepflegt
-
-Die fünf AN-Instrumente sind als **PCOR-MII-eigene Ressourcen** modelliert — ausdrücklich vorläufig, für Erprobung und Testbetrieb. Sobald sie offiziell abgestimmt sind, können Teile ins **MII-PRO-Modul** aufgenommen werden; PCOR-MII würde sie dann referenzieren statt selbst pflegen. Hintergrund und Modellierungsregeln (keine Vollinstrument-Codes an Zuschnitte, kein Score ohne validierte Grundlage, Dictionary-Treue) in [ADR-003](Designentscheidungen.md).
-
-### Rechtelage
-
-Alle fünf AN-Instrumente sind laut DIZ-Implementierungsliste **frei publizierbar** — vollständige Questionnaires mit Itemtexten und Antwortoptionen sind möglich. Die Rechte an den Instrumenten und Item-Formulierungen verbleiben bei den jeweiligen Autor:innen (Details im `copyright`-Element der Questionnaires); die Originalpublikationen sind noch nicht gegen das Dictionary verifiziert (siehe [offene Punkte](Designentscheidungen.md)).
-
-**Für die [UKHD-Zusatzitems](UKHD-Zusatzitems.md) gilt das nicht, und zwar grundsätzlich anders:** Die DIZ-Implementierungsliste führt ausschließlich **publizierte** Instrumente und kennt die standortbezogenen Itemgruppen von UKHD, UKE und MHH gar nicht. Für diese 20 Items ist damit weder eine Erlaubnis noch eine Einschränkung dokumentiert — und weil das `UKHD`-Präfix nur die Zusammenstellung etikettiert, ist vor der Freigabefrage eine **Herkunftsfrage** zu klären: Woher stammt der Wortlaut je Gruppe? Dass er dennoch aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; alle sechs Ressourcen tragen `status = draft` und `experimental = true`, und bei einer Einschränkung wird **je Gruppe** auf metadata-only umgestellt (Muster [WAI](WAI.md)).
-
-Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
+Quellen dieser Seite: Blatt `Item Level Dictionary AN` und `Domain Overview` des Item Level Dictionary (`MASTER_3EntitiesOverview.xlsx`, nicht Teil dieses Repositories), DIZ-Implementierungsliste PCOR-MII; die Zuordnung PCOR-MII/MII PRO entspricht dem Manifest [use-case-an](Library-use-case-an.md). Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

@@ -1,4 +1,4 @@
-# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.3.0
+# WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only) (Experimental) 
 
@@ -23,7 +23,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -33,7 +33,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "WAI",
   "title" : "WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)",
   "status" : "draft",
@@ -56,7 +56,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
       "display" : "Germany"
     }]
   }],
-  "copyright" : "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5) — die Publikationsrechte am WAI sind ungeklärt (DIZ-Implementierungsliste PCOR-MII: 'wahrscheinlich nicht für die Veröffentlichung'). Rechteinhaber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi et al. 1998). Die vollständige, wortgleiche Originalversion des WAI/Work Ability Score darf ausschließlich über die berechtigte Bezugsquelle (FIOH bzw. deren lizenzierte Vertriebspartner) bezogen und genutzt werden.",
+  "copyright" : "METADATA-ONLY: Diese Instanz bildet ausschließlich Struktur, linkIds, Wertebereiche und technische Metadaten des Work Ability Index (WAI) / Work Ability Score (3-Item-Kurzfassung) ab. Item-Texte und Antwortstufen-Bezeichnungen sind NICHT der Originalwortlaut, sondern neutrale, selbst formulierte Kurzbeschreibungen bzw. neutrale Codes (Stufe 1-5). Urheber des Originalinstruments ist das Finnish Institute of Occupational Health (FIOH; Tuomi K, Ilmarinen J, Jahkola A, Katajarinne L, Tulkki A. Work Ability Index. 2nd revised ed. Helsinki: FIOH, 1998). Nach den Nutzungsbedingungen des FIOH ist der WAI öffentlich verfügbar und ohne Genehmigung für Forschung und eigenen Betrieb nutzbar; er darf nicht als solcher verkauft werden, die Autor:innen sind zu nennen. Die Weitergabe des deutschen Wortlauts (WAI-Netzwerk Deutschland / BAuA) ist noch nicht geklärt; der Vermerk der DIZ-Implementierungsliste PCOR-MII ('wahrscheinlich nicht für die Veröffentlichung geeignet') nennt keine Quelle. Bis zur Klärung bleibt diese Instanz metadata-only; die wortgleiche Fassung steht auf dem zugangsbeschränkten Form Server bereit (ADR-012).",
   "code" : [{
     "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
     "code" : "wai",

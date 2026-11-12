@@ -1,4 +1,4 @@
-# Bereitstellung - PCOR-MII Implementation Guide v0.3.0
+# Bereitstellung - PCOR-MII Implementation Guide v0.9.0
 
 ## Bereitstellung
 
@@ -9,9 +9,9 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | | |
 | :--- | :--- |
 | Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`,`MII PR PRO Questionnaire`(aus dem MII PRO-Modul) |
-| Questionnaire-Definitionen | **20 PCOR-MII-eigene Bögen**(DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, die sechs AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, Beispiel-Questionnaire) — vollständige Tabelle:[Fragebogen-Bibliothek](Fragebogen-Bibliothek.md); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
+| Questionnaire-Definitionen | **26 PCOR-MII-eigene Bögen**(DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D Panik-Block, PROMIS-GH, die fünf AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, BAASIS, ABQ, MTSOSD-R59, MHI-NTx, NTx-Verlaufsbefragung) — vollständige Tabelle:[Fragebogen-Bibliothek](Fragebogen-Bibliothek.md); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
 | Terminologie | lokale CodeSystems/ValueSets je Antwortskala,[`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.md),[`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.md),[`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.md) |
-| Beispiele | zwei Beispielpatienten,**drei Termin-Bundles**und >30 validierte`QuestionnaireResponse`s (siehe[Validierung](Validierung.md)) |
+| Beispiele | drei Beispielpatient:innen,**vier Termin-Bundles**und 46 validierte`QuestionnaireResponse`s (siehe[Beispiele](Beispiele.md)) |
 | Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.md) |
 
 ### Wege, das zu bekommen
@@ -22,7 +22,7 @@ Vorgebauter HAPI FHIR Server mit MII PRO + PCOR-MII pre-loaded. Best für: Bundl
 
 ```
 flowchart LR
-    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
+    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2027.0.0-ballot.2"| HAPI
     REPO[("PCOR-MII Repo")] -->|"als Package"| HAPI
     HAPI_BASE["hapiproject/hapi:v8.12.0"] --> HAPI["PCOR-MII Container<br/>localhost:8097"]
     HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementierer"]
@@ -47,8 +47,8 @@ Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker
 Das MII PRO-Modul liegt als FHIR-NPM-Package auf Simplifier. Best für: Integration in SUSHI/IG Publisher/FHIR Validator-Builds.
 
 ```
-fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
-# entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/
+fhir install de.medizininformatikinitiative.kerndatensatz.pros 2027.0.0-ballot.2
+# entpackt nach ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2/
 
 ```
 
@@ -56,12 +56,12 @@ Beispiel `sushi-config.yaml`:
 
 ```
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
-  hl7.fhir.uv.sdc: 3.0.0
+  de.medizininformatikinitiative.kerndatensatz.pros: 2027.0.0-ballot.2
+  hl7.fhir.uv.sdc: 4.0.0
 
 ```
 
-PCOR-MII selbst ist (Stand 2026-10) **nicht** als Package veröffentlicht — wer nur die PCOR-MII-Definitionen braucht, nimmt Weg 1 oder 3.
+PCOR-MII selbst liegt in **keinem Package-Register**; das Package jeder Veröffentlichung gibt es als `package.tgz` auf dem IG (`https://bih-cei.github.io/PCOR-MII/package.tgz`) (entpacken nach `~/.fhir/packages/pcor-mii#<version>/package/`). Das MII-PRO-Modul erscheint nach jedem Release zuerst als `package.tgz` seiner [formalen Publikation](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz) und erst danach im Register — 2027.0.0-ballot.2 ist dort noch nicht angekommen; die CI dieses IG installiert es deshalb aus der Publikation.
 
 #### 3. Direkter Repo-Zugriff (für Scripting, Doku-Tools)
 
@@ -93,7 +93,7 @@ ValueSets kommen im `compose`-Format. Für PROMIS reicht das, weil die Konzepte 
 
 Auf Standard-HAPI: `PUT Questionnaire/promis-29` mit neuer `Questionnaire.version` **überschreibt** den existierenden Eintrag. Eine ältere QR mit `…|2026.3.0`-Referenz ist danach nicht mehr sauber resolvbar — pro `id` koexistiert nur eine Version.
 
-Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2026.7.0) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2026.7.0`).
+Für den PCOR-MII Pilot ist das egal: eine PRO-Version (2027.0.0-ballot.2) durchgehend. Bei späterer Migration: Versions-Suffix in der `id` (z.B. `promis-29-v2026-4-1`) oder HAPI mit Multi-Version-Mode. In QR-Referenzen die Version immer mitführen (`…|2027.0.0-ballot.2`).
 
 ### Pilot-Datenfluss "50 First Patients"
 

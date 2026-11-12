@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Kommende Änderungen (2027 / SDC 4.0.0) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Kommende Änderungen (2027 / SDC 4.0.0) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"19"}
-    h3,h4,h5,h6{--heading-prefix:"19"}</style>
+    <style type="text/css">h2{--heading-prefix:"21"}
+    h3,h4,h5,h6{--heading-prefix:"21"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,7 +285,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Designentscheidungen.html">&lt; prev</a> | 
+            <a href="Rechtelage.html">&lt; prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Kommende Änderungen (2027 / SDC 4.0.0)</h2>
   
 
@@ -326,61 +332,65 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#what-the-ballot-changes--and-what-that-means-for-pcor-mii" id="markdown-toc-what-the-ballot-changes--and-what-that-means-for-pcor-mii">What the ballot changes — and what that means for PCOR-MII</a></li>
-  <li><a href="#what-pcor-mii-itself-changes-at-migration" id="markdown-toc-what-pcor-mii-itself-changes-at-migration">What PCOR-MII itself changes at migration</a></li>
+  <li><a href="#what-the-switch-changed" id="markdown-toc-what-the-switch-changed">What the switch changed</a></li>
+  <li><a href="#what-remains-open-until-the-final-2027-release" id="markdown-toc-what-remains-open-until-the-final-2027-release">What remains open until the final 2027 release</a></li>
   <li><a href="#what-is-explicitly-not-coming" id="markdown-toc-what-is-explicitly-not-coming">What is explicitly <em>not</em> coming</a></li>
 </ul>
 
 </div>
-<p>This page announces <strong>what changes with the move to the MII PRO module 2027</strong> — so implementers do not learn about it only in the migration release. The basis is the published ballot <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> <strong>2027.0.0-ballot.1</strong> (as of 2026-10; compared against the current dependency <strong>2026.7.0</strong>). Everything here may still change before the final 2027 release — that is what a ballot is for.</p>
+<p>This page accompanies <strong>PCOR-MII's move to the MII PRO module 2027</strong>. With release 0.9.0 the switch is done: PCOR-MII inherits from <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> <strong>2027.0.0-ballot.2</strong> (SDC 4.0.0, ISiK 6.0.0) instead of 2026.7.0. The page records what that settled and what remains open until the <strong>final 2027 release</strong> — a ballot may still change until then, that is what it is for.</p>
 
 <blockquote>
-  <p><strong>None of this is in effect yet.</strong> PCOR-MII still inherits from 2026.7.0 with SDC 3.0.0; all examples and the <a href="Bereitstellung.html">validation container</a> are pinned to it. The switch will be its own release, marked <code class="language-plaintext highlighter-rouge">breaking</code>.</p>
+  <p><strong>As of 0.9.0:</strong> dependency, every pin, the <a href="Bereitstellung.html">validation container</a> and the validator commands on <a href="Validierung.html">Validation</a> are on 2027.0.0-ballot.2; answer weights are called <code class="language-plaintext highlighter-rouge">itemWeight</code>. The step to the final 2027 release is a pure version change, provided the ballot holds.</p>
 </blockquote>
 
-<h3 id="what-the-ballot-changes--and-what-that-means-for-pcor-mii">What the ballot changes — and what that means for PCOR-MII</h3>
+<h3 id="what-the-switch-changed">What the switch changed</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Upstream change (2027 ballot)</th>
-      <th>Consequence for PCOR-MII</th>
+      <th>Upstream change (2027)</th>
+      <th>Implementation in PCOR-MII (0.9.0)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>SDC 3.0.0 → 4.0.0</strong></td>
-      <td>Our questionnaires reference <code class="language-plaintext highlighter-rouge">sdc-questionnaire</code> unversioned — resolution follows the dependency. SDC 4.0.0 adds new <strong>invariants</strong>: <code class="language-plaintext highlighter-rouge">sdc-base-1</code>/<code class="language-plaintext highlighter-rouge">sdc-base-2</code> (every <code class="language-plaintext highlighter-rouge">answerOption.valueCoding</code> needs <code class="language-plaintext highlighter-rouge">code</code> or <code class="language-plaintext highlighter-rouge">display</code>, and <code class="language-plaintext highlighter-rouge">code</code> requires <code class="language-plaintext highlighter-rouge">system</code>), <code class="language-plaintext highlighter-rouge">sdc-behave-2</code> (<code class="language-plaintext highlighter-rouge">enableWhen</code> and <code class="language-plaintext highlighter-rouge">enableWhenExpression</code> are mutually exclusive), <code class="language-plaintext highlighter-rouge">sdc-rend-1</code> (<code class="language-plaintext highlighter-rouge">page</code> control at root level only). Our questionnaires already satisfy these — we bind answers via <code class="language-plaintext highlighter-rouge">answerValueSet</code>, not <code class="language-plaintext highlighter-rouge">answerOption</code> — but the migration PR validates everything through.</td>
+      <td><strong>SDC 3.0.0 → 4.0.0</strong> — new invariants <code class="language-plaintext highlighter-rouge">sdc-base-1</code>/<code class="language-plaintext highlighter-rouge">sdc-base-2</code> (every <code class="language-plaintext highlighter-rouge">answerOption.valueCoding</code> needs <code class="language-plaintext highlighter-rouge">code</code> or <code class="language-plaintext highlighter-rouge">display</code>, and <code class="language-plaintext highlighter-rouge">code</code> requires <code class="language-plaintext highlighter-rouge">system</code>), <code class="language-plaintext highlighter-rouge">sdc-behave-2</code> (<code class="language-plaintext highlighter-rouge">enableWhen</code> and <code class="language-plaintext highlighter-rouge">enableWhenExpression</code> are mutually exclusive), <code class="language-plaintext highlighter-rouge">sdc-rend-1</code> (<code class="language-plaintext highlighter-rouge">page</code> control at root level only)</td>
+      <td>Satisfied. The inline <code class="language-plaintext highlighter-rouge">answerOption</code>s (SNOMED yes/no per <a href="Designentscheidungen.html">ADR-013</a>) carry <code class="language-plaintext highlighter-rouge">system</code> and <code class="language-plaintext highlighter-rouge">code</code>; all other answers bind via <code class="language-plaintext highlighter-rouge">answerValueSet</code>. Full validation with the IG Publisher against SDC 4.0.0 without new errors.</td>
     </tr>
     <tr>
-      <td><strong><code class="language-plaintext highlighter-rouge">itemWeight</code> instead of <code class="language-plaintext highlighter-rouge">ordinalValue</code></strong> — in the ballot the answer weights hang on the <code class="language-plaintext highlighter-rouge">answerOption</code> codings as <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/StructureDefinition/itemWeight</code> (R5 backport); 17 upstream files already use it</td>
-      <td><strong>The largest migration task.</strong> PCOR-MII today carries <code class="language-plaintext highlighter-rouge">ordinalValue</code> as a <code class="language-plaintext highlighter-rouge">^property</code> in the answer CodeSystems; on migration the weights move to <code class="language-plaintext highlighter-rouge">itemWeight</code>. Same direction as our ballot submission <strong>HDB-972</strong> — the switch deliberately waits for the final 2027 release rather than maintaining two conventions in parallel. Affects all questionnaires with weighted answer scales (incl. DEM, MHI, EDE-Q6, OPD-SFK, UKHD-PT).</td>
+      <td><strong><code class="language-plaintext highlighter-rouge">itemWeight</code> instead of <code class="language-plaintext highlighter-rouge">ordinalValue</code></strong> — weights as an extension on <code class="language-plaintext highlighter-rouge">answerOption</code> (foreign terminology) or as the concept property <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/concept-properties#itemWeight</code> on our own CodeSystems; the module writes them only through the RuleSets <code class="language-plaintext highlighter-rouge">WeightedOption</code>, <code class="language-plaintext highlighter-rouge">WeightedConcept</code>, <code class="language-plaintext highlighter-rouge">ItemWeightProperty</code></td>
+      <td>Done: 15 answer CodeSystems, 72 concepts, weights and codes unchanged; the score expressions of OPD-SFK and ABQ use <code class="language-plaintext highlighter-rouge">.weight().sum()</code>. Same direction as our ballot submission <strong>HDB-972</strong>. Which scales carry weights at all (only ordinal ones — see <a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>) is unchanged.</td>
+    </tr>
+    <tr>
+      <td><strong>PROMIS Scale v1.2 – Global Health</strong> new in the module (<code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-global-health</code>, 10 items, status <code class="language-plaintext highlighter-rouge">draft</code>)</td>
+      <td><a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> is declared via <code class="language-plaintext highlighter-rouge">derivedFrom</code> as a 2-item subset of it; <code class="language-plaintext highlighter-rouge">linkId</code> alignment and whether the local questionnaire survives are open (see <a href="PROMIS.html">PROMIS</a>).</td>
+    </tr>
+    <tr>
+      <td><strong>PROMIS-29 cleaned up</strong> (HDB-1007/-1008/-1009): weights, T-score tables and LOINC codes of the scores corrected, the <code class="language-plaintext highlighter-rouge">-de</code> and <code class="language-plaintext highlighter-rouge">-minimal</code> variants retired (still resolvable as empty shells)</td>
+      <td>No change to PCOR-MII artefacts; the manifests pin <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-29|2027.0.0-ballot.2</code>. The <a href="PROMIS-29.html">PROMIS-29</a> page is updated.</td>
+    </tr>
+    <tr>
+      <td><strong>QR profile</strong>: <code class="language-plaintext highlighter-rouge">translation</code> extension also on <code class="language-plaintext highlighter-rouge">item.text</code> and <code class="language-plaintext highlighter-rouge">item.answer.valueCoding.display</code>; the <code class="language-plaintext highlighter-rouge">ordinalValue</code> slice on the answer that the first ballot still carried is gone in ballot.2</td>
+      <td>Responses <strong>may</strong> carry multilingual item texts; our examples deliberately do not. The ballot comment on the <code class="language-plaintext highlighter-rouge">ordinalValue</code> slice is no longer needed.</td>
     </tr>
     <tr>
       <td><strong>EORTC QLQ-C30 variants A/B dropped</strong> (<code class="language-plaintext highlighter-rouge">eortc-qlq-c30-variant-a</code>/<code class="language-plaintext highlighter-rouge">-b</code>)</td>
       <td>None — PCOR-MII does not use the variants.</td>
     </tr>
     <tr>
-      <td><strong>New LOINC supplement</strong> <code class="language-plaintext highlighter-rouge">mii-cs-pro-loinc-supplement</code></td>
-      <td>Check whether our LOINC references (ACE items, PHQ answer codes) should switch to it.</td>
-    </tr>
-    <tr>
-      <td><strong>QR profile extended</strong>: <code class="language-plaintext highlighter-rouge">translation</code> extension now also on <code class="language-plaintext highlighter-rouge">item.text</code> and <code class="language-plaintext highlighter-rouge">item.answer.valueCoding.display</code> of the <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>; an <code class="language-plaintext highlighter-rouge">ordinalValue</code> slice on <code class="language-plaintext highlighter-rouge">item.answer.extension</code></td>
-      <td>Responses <strong>may</strong> carry multilingual item texts in future; for our examples this stays optional (they deliberately carry no item texts). The <code class="language-plaintext highlighter-rouge">ordinalValue</code> slice on the answer bears watching — it is in tension with the <code class="language-plaintext highlighter-rouge">itemWeight</code> switch and is a candidate for a ballot comment.</td>
-    </tr>
-    <tr>
-      <td><strong>New package dependencies</strong>: <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.crmi 2.0.0</code>, <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4 5.2.0</code>, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4 1.6.0</code>, <code class="language-plaintext highlighter-rouge">de.gematik.isik 6.0.0</code>, <code class="language-plaintext highlighter-rouge">hl7.terminology.r4 7.3.0</code>, <code class="language-plaintext highlighter-rouge">xver-r5.r4 0.1.0</code></td>
-      <td>Build and container changes (<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, <code class="language-plaintext highlighter-rouge">docker/</code>): more packages in the preload, longer cold builds. <code class="language-plaintext highlighter-rouge">$package</code> (<a href="Bereitstellung.html">Deployment</a>, path 4) benefits from CRMI 2.0.0.</td>
+      <td><strong>Package dependencies</strong>: <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4 5.2.0</code>, <code class="language-plaintext highlighter-rouge">de.basisprofil.r4 1.6.0</code>, <code class="language-plaintext highlighter-rouge">de.gematik.isik 6.0.0</code>, <code class="language-plaintext highlighter-rouge">hl7.terminology.r4 7.3.0</code>, <code class="language-plaintext highlighter-rouge">xver-r5.r4 0.1.0</code>, <code class="language-plaintext highlighter-rouge">crmi 2.0.0</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> pins SDC 4.0.0 and ISiK 6.0.0 to match the module, the rest arrives transitively; the container preloads correspondingly more packages.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="what-pcor-mii-itself-changes-at-migration">What PCOR-MII itself changes at migration</h3>
+<h3 id="what-remains-open-until-the-final-2027-release">What remains open until the final 2027 release</h3>
 
 <ol>
-  <li><strong>Dependency and pins:</strong> <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> to the final 2027 release, all <code class="language-plaintext highlighter-rouge">|2026.7.0</code> pins in the example responses, the <a href="Bereitstellung.html">validation container</a> (Dockerfile, compose, <code class="language-plaintext highlighter-rouge">application.yaml</code>) and the validator commands on <a href="Validierung.html">Validation</a>.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">ordinalValue</code> → <code class="language-plaintext highlighter-rouge">itemWeight</code></strong> in our own answer CodeSystems — with unchanged weights; the decisions about <em>which</em> scales carry weights at all (only ordinal ones — see <a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>) remain.</li>
-  <li><strong>Full validation</strong> of all 20 questionnaires, &gt;30 responses and three bundles against SDC 4.0.0.</li>
+  <li><strong>Version change</strong> <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.2</code> → final: <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, every <code class="language-plaintext highlighter-rouge">|2027.0.0-ballot.2</code> pin (manifests, example responses, bundles), container (<code class="language-plaintext highlighter-rouge">docker/</code>) and validator commands — the same pass as for the switch, without structural change.</li>
+  <li><strong>LOINC supplement</strong> <code class="language-plaintext highlighter-rouge">mii-cs-pro-loinc-supplement</code>: check whether our LOINC references (ACE items, PHQ answer codes) should switch to it.</li>
+  <li><strong>PROMIS-GH</strong>: align the <code class="language-plaintext highlighter-rouge">linkId</code>s with the upstream IDs per <a href="Designentscheidungen.html">ADR-008</a>, or drop the local questionnaire in favour of the module definition — depends on the data collection plan (2 or 10 items).</li>
   <li><strong>Upstream alignment of the AN long forms:</strong> with the 2027 cycle the planned PR of the AN long forms against the PRO module is to be re-evaluated (instrument and score catalogue entries, literature references).</li>
 </ol>
 
@@ -388,11 +398,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>No switch to FHIR R5.</strong> The module stays on R4; <code class="language-plaintext highlighter-rouge">itemWeight</code> and <code class="language-plaintext highlighter-rouge">artifact-version</code> are R5 backports as extensions.</li>
-  <li><strong>No change to <code class="language-plaintext highlighter-rouge">linkId</code>s or wordings</strong> of the PCOR-MII questionnaires through the migration — existing responses remain valid because the <code class="language-plaintext highlighter-rouge">questionnaire</code> references are versioned.</li>
+  <li><strong>No change to <code class="language-plaintext highlighter-rouge">linkId</code>s or wordings</strong> of the PCOR-MII questionnaires through the switch — existing responses remain valid because the <code class="language-plaintext highlighter-rouge">questionnaire</code> references are versioned. (The one exception is listed above as an open point: PROMIS-GH.)</li>
   <li><strong>The PHQ-SADS recall question</strong> (shared items, 4 vs. 2 weeks) is on the PRO module's 2027 roadmap and will be solved there, not here.</li>
 </ul>
 
-<p>Changes to the ballot are tracked on this page; what has been implemented moves to the <a href="Release-Notes.html">release notes</a>.</p>
+<p>Changes to the ballot are tracked on this page; what has been implemented is in the <a href="Release-Notes.html">release notes</a>.</p>
 
 
 
@@ -420,7 +430,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Designentscheidungen.html">&lt; prev</a>
+                <a href="Rechtelage.html">&lt; prev</a>
 
               </td>
               <td style="text-align:center">
@@ -442,10 +452,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

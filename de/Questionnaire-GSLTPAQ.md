@@ -1,4 +1,4 @@
-# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.3.0
+# GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -33,7 +33,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "GSLTPAQ",
   "title" : "GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire",
   "status" : "draft",
@@ -76,8 +76,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "{count}/wk",
-        "display" : "-mal pro Woche"
+        "code" : "{count}/wk"
       }
     }],
     "linkId" : "GSLTPAQ_01_w",
@@ -97,8 +96,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "min",
-        "display" : "Minuten"
+        "code" : "min"
       }
     }],
     "linkId" : "GSLTPAQ_01_m",
@@ -118,8 +116,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "{count}/wk",
-        "display" : "-mal pro Woche"
+        "code" : "{count}/wk"
       }
     }],
     "linkId" : "GSLTPAQ_02_w",
@@ -139,8 +136,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "min",
-        "display" : "Minuten"
+        "code" : "min"
       }
     }],
     "linkId" : "GSLTPAQ_02_m",
@@ -160,8 +156,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "{count}/wk",
-        "display" : "-mal pro Woche"
+        "code" : "{count}/wk"
       }
     }],
     "linkId" : "GSLTPAQ_03_w",
@@ -181,8 +176,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
       "valueCoding" : {
         "system" : "http://unitsofmeasure.org",
-        "code" : "min",
-        "display" : "Minuten"
+        "code" : "min"
       }
     }],
     "linkId" : "GSLTPAQ_03_m",

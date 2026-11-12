@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Rechtelage und offene Punkte - PCOR-MII Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<!-- T-CABS BIH Corporate Design Colors -->
+<!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
+<!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
+<!--
+   BIH-BLAU Abstufungen:
+   100% #003754  90% #1a4b65  80% #335f77  70% #4d7388
+   60% #668899   50% #809daa  40% #99b1bb  30% #b3c5cc
+   20% #ccd9dd   10% #e6ecee
+
+   BIH-KORALL Abstufungen:
+   100% #ea5451  90% #ec6562  80% #ee7674  70% #f08785
+   60% #f29897   50% #f5aaa8  40% #f7bbba  30% #f9cccb
+   20% #fbdddc   10% #fdeeee
+-->
+<style>
+:root {
+  --ig-status-text-color: #4d7388;       /*  1. IG title and status text - BLAU 70% */
+  --navbar-bg-color: #335f77;            /*  2. Header container - BLAU 80% */
+  --footer-bg-color: #335f77;            /*  3. Footer background - BLAU 80% */
+  --footer-container-bg-color: #335f77;  /*  4. Footer container - BLAU 80% */
+  --stripe-bg-color: #f5aaa8;            /*  5. Header strip - KORALL 50% */
+
+  --btn-hover-color: #f29897;            /*  6. Menu button hover - KORALL 60% */
+  --btn-active-color: #f08785;           /*  7. Menu button active - KORALL 70% */
+  --btn-text-color: #ffffff;             /*  8. Menu button text */
+  --btn-gradient-start-color: #4d7388;   /*  9. Menu gradient start - BLAU 70% */
+  --btn-gradient-end-color: #335f77;     /* 10. Menu gradient end - BLAU 80% */
+  --btn-gradient-start-color-alpha: #ff4d7388; /* 11. Menu gradient start (alpha) */
+  --btn-gradient-end-color-alpha: #ff335f77;   /* 12. Menu gradient end (alpha) */
+  --link-color: #4d7388;                 /* 13. Hyperlink - BLAU 70% */
+  --link-hover-color: #f08785;           /* 14. Hyperlink hover - KORALL 70% */
+
+  --publish-box-bg-color: #fdeeee;       /* 15. Publish box background - KORALL 10% */
+  --publish-box-border: 1px solid #f7bbba; /* 16. Publish box border - KORALL 40% */
+  --toc-box-bg-color: #e6ecee;           /* 17. TOC box background - BLAU 10% */
+  --toc-box-border: 1px solid #b3c5cc;   /* 18. TOC box border - BLAU 30% */
+  --stu-note-background-color: #fdeeee;  /* 19. STU note background - KORALL 10% */
+  --stu-note-border-left-color: #f5aaa8; /* 20. STU note border - KORALL 50% */
+
+  --ig-header-color: #f5f8fa;            /* 21. Header sides */
+  --ig-header-container-color: #ffffff;  /* 22. Header container center */
+  --footer-nav-bg-color: #f5f8fa;        /* 23. Footer navigation background */
+
+  --footer-text-color: #ffffff;          /* 24. Footer text */
+  --footer-hyperlink-text-color: #b3d8e8;/* 25. Footer hyperlinks */
+  --footer-highlight-text-color: #f5aaa8;/* 26. Footer highlight - KORALL 50% */
+
+  --breadcrumb-bg-color: #f5f8fa;        /* 27. Breadcrumb background */
+  --breadcrumb-text-color: #4d7388;      /* 28. Breadcrumb text - BLAU 70% */
+
+  --dragon-background-color: #fdeeee;    /* 29. Dragon background - KORALL 10% */
+  --dragon-text-color: #4d7388;          /* 30. Dragon text - BLAU 70% */
+}
+
+/* ─── T-CABS Header: Charité-Logo zwischen BIH und Sprach-Switcher ─── */
+/* fhir2.base.template kennt nur #project-nav und #family-nav.         */
+/* #charite-nav muss hier mit gleichen Regeln wie #family-nav ergänzt   */
+/* werden, sonst rutscht das Logo aus dem Header.                       */
+#charite-nav {
+  line-height: 50px;
+  float: var(--ig-right);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+  color: #808080;
+}
+#charite-logo {
+  float: var(--ig-right);
+  margin-left: 6px;
+}
+
+/* ─── T-CABS Navbar/Footer: kräftiges BIH-BLAU 100% statt 80% ─── */
+/* Original-IG nutzt hartkodiertes #003754 mit !important, weil    */
+/* die Variable --navbar-bg-color (#335f77) zu hell wirkt.         */
+nav.navbar.navbar-inverse {
+  background-color: #003754 !important;
+}
+#segment-footer {
+  background-color: #003754 !important;
+}
+#segment-footer > .container {
+  background-color: #003754 !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #ea5451 !important;   /* KORALL 100% Hover */
+}
+
+/* ─── "Diesen Fragebogen testen" / NLM Forms Library ausblenden ─── */
+/* Der Block kommt aus fhir2.base.template (layout-questionnaire.html:   */
+/* Anker name="test" -> <h3> -> Div mit dem NLM-Forms-Library-Link) und  */
+/* ist nicht per IG-Parameter abschaltbar. Das Projekt-template/ wird bei */
+/* jedem Build aus dem Package neu ausgepackt, daher hier portabel per    */
+/* Geschwister-Selektor über den stabilen name="test"-Anker ausgeblendet. */
+a[name="test"],
+a[name="test"] + h3,
+a[name="test"] + h3 + div {
+  display: none !important;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"20"}
+    h3,h4,h5,h6{--heading-prefix:"20"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- PCOR-MII Header Logos: Charité + BIH (kein Projektlogo) -->
+<div id="charite-nav">
+    <a id="charite-logo" data-no-external="true" href="https://www.charite.de/">
+        <img alt="Charité" height="50" src="Logo_Charite.png"/>
+    </a>
+</div>
+<div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - draft
+
+
+
+  <img alt="Germany flag" src="../assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Instrumente
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Instrumente.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="PSS.html">PSS</a>
+      </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="NTx.html">NTx</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
+  </li>
+  <li>
+    <a href="Implementation.html">Anwendung</a>
+  </li>
+  <li>
+    <a href="Validierung.html">Validierung</a>
+  </li>
+  <li>
+    <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
+  </li>
+  <li>
+    <a href="Release-Notes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="Kommende-Aenderungen.html">Kommende Änderungen</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/Rechtelage.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Rechtelage und offene Punkte</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="Designentscheidungen.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="Kommende-Aenderungen.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Rechtelage und offene Punkte</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#how-the-rights-situation-determines-the-modelling" id="markdown-toc-how-the-rights-situation-determines-the-modelling">How the rights situation determines the modelling</a></li>
+  <li><a href="#published-is-not-the-same-as-commercially-published" id="markdown-toc-published-is-not-the-same-as-commercially-published">Published is not the same as commercially published</a></li>
+  <li><a href="#status-per-instrument" id="markdown-toc-status-per-instrument">Status per instrument</a></li>
+  <li><a href="#open-rights-questions" id="markdown-toc-open-rights-questions">Open rights questions</a></li>
+  <li><a href="#further-open-points" id="markdown-toc-further-open-points">Further open points</a></li>
+</ul>
+
+</div>
+<p>This page collects <strong>for all instruments together</strong> what is known about their rights situation, how they are modelled as a consequence, and which questions are still open — including the clinical points that cannot be solved in FHIR but in the Item Level Dictionary, with a site, or with the use-case lead. The use-case pages <a href="PSS.html">PSS</a>, <a href="AN.html">AN</a> and <a href="NTx.html">NTx</a> point here instead of repeating the situation per questionnaire; the <a href="Designentscheidungen.html">design decisions</a> (German) contain only what has been decided.</p>
+
+<p>Answered questions disappear from this page: they become an ADR, a paragraph on the instrument page, or an entry in the <a href="Release-Notes.html">release notes</a>.</p>
+
+<h3 id="how-the-rights-situation-determines-the-modelling">How the rights situation determines the modelling</h3>
+
+<p>The rights situation determines <em>how</em> an instrument is modelled — not how important it is:</p>
+
+<ul>
+  <li><strong>free</strong> — complete questionnaire with item texts, answer options and scoring.</li>
+  <li><strong>Usage agreement</strong> (PROMIS via CPCOR, WHODAS via WHO, EQ-5D-5L via EuroQol) — complete, but under the respective agreement; conditions in the <code class="language-plaintext highlighter-rouge">copyright</code> element.</li>
+  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to <a href="WAI.html">WAI</a>, <a href="UKHD-EDP.html">UKHD-EDP</a> and <a href="NTx-Instrumente.html">BAASIS, ABQ and MTSOSD-R59</a>. For the three licensed NTx questionnaires a <strong>private collectable variant</strong> is added per <a href="Designentscheidungen.html">ADR-014</a>, delivered to licensed centres only.</li>
+  <li><strong>clearance open</strong> — the wording is included, but <strong>no documented permission is on record</strong>. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing about the site-specific item groups. Applies to the <a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>, the MHH questionnaires <a href="NTx-Instrumente.html">MHI-NTx and NTx follow-up</a> and the 34 site items already published in the <a href="MHI.html">MHI</a>. If a restriction emerges, metadata-only per group is the intended remedy.</li>
+</ul>
+
+<p>The source of the rights information is the <strong>DIZ implementation list PCOR-MII</strong> (as of 24 July 2026). Its licence column visibly records <em>availability for research</em>, not whether the wording may be passed on in a specification; for every instrument with a published German version the entry has therefore been checked independently. That is a working rule of this project, not legal advice.</p>
+
+<p><a name="publiziert-verlegt"></a></p>
+
+<h3 id="published-is-not-the-same-as-commercially-published">Published is not the same as commercially published</h3>
+
+<p>Several of the open rights points hinge on the same distinction, which does not occur in the DIZ implementation list:</p>
+
+<p><strong>Published</strong> means: the instrument has been reported on — typically in a journal article describing construction, psychometrics or validation. The article is citable and often freely accessible. Whether the <em>questionnaire itself</em> may be reused is a different question.</p>
+
+<p><strong>Commercially published</strong> ("verlegt") means: the instrument is a <strong>publisher's product</strong> — manual, questionnaire and scoring sheet are distributed as a work. Here the wording is not a by-product of a publication but the goods themselves, with rights reservations that explicitly cover reuse of the wording.</p>
+
+<p>In practice: <strong>freely accessible is not freely reusable.</strong> A publisher offering a PDF for download is a service, not a licence. Conversely an instrument may formally be published "only" in a journal and still be freely usable when the authors provide the questionnaire themselves.</p>
+
+<h3 id="status-per-instrument">Status per instrument</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Rights situation</th>
+      <th>Modelling in PCOR-MII</th>
+      <th>Open</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHQ-9/-8, PHQ-15, GAD-7, EURONET-SOMA, SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, WHODAS 2.0, PROMIS-16/-29/Cognitive Function, EQ-5D-5L</td>
+      <td>governed in the <strong>MII PRO module</strong> (free or usage agreement CPCOR, WHO, EuroQol)</td>
+      <td>referenced, not rebuilt (<a href="Designentscheidungen.html">ADR-002</a>)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><a href="PROMIS.html">PROMIS-GH</a> (Global01/02)</td>
+      <td>CPCOR agreement</td>
+      <td>2-item subset, <code class="language-plaintext highlighter-rouge">derivedFrom</code> the module definition</td>
+      <td><code class="language-plaintext highlighter-rouge">linkId</code>s and continued existence — <a href="#promis-gh">below</a></td>
+    </tr>
+    <tr>
+      <td><a href="Demographie.html">DEM</a></td>
+      <td>OECD items: non-commercial use and translation permitted ✅ · four PaRIS third-party instruments (NHIS, Commonwealth Fund, MED-HIMS, WHO Model Disability Survey): check open · GI-PS (2 items): consent required</td>
+      <td>complete, <code class="language-plaintext highlighter-rouge">copyright</code> with provenance breakdown and OECD disclaimer</td>
+      <td><a href="#dem-mhi">DEM/MHI provenance</a></td>
+    </tr>
+    <tr>
+      <td><a href="MHI.html">MHI</a></td>
+      <td>GI-PS (9 items): consent required · 34 site items (UKHD-W, UKHD-AN, UKHD-MEDI, UKE-MEDI): no documented clearance, trivial factual questions</td>
+      <td>complete</td>
+      <td><a href="#dem-mhi">DEM/MHI provenance</a>, <a href="#standortgruppen">site groups</a></td>
+    </tr>
+    <tr>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+      <td>published, rights with authors/publisher — free <strong>after consultation</strong></td>
+      <td>complete with sum score</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><a href="WAI.html">WAI</a></td>
+      <td>FIOH: use without permission, do not sell, cite; German version of the German WAI network open</td>
+      <td><strong>metadata-only</strong> until clarified</td>
+      <td><a href="#wai">WAI</a></td>
+    </tr>
+    <tr>
+      <td><a href="GSLTPAQ.html">GSLTPAQ</a>, <a href="EXPECT.html">EXPECT</a>, <a href="IPQ-S.html">IPQ-S</a>, <a href="PHQ-Panik.html">PHQ-D panic block</a></td>
+      <td>free; EXPECT is not a standardised scale</td>
+      <td>complete</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><a href="ERQ-6.html">ERQ-6</a></td>
+      <td>published <strong>and</strong> freely provided by the authors (Stanford Psychophysiology Laboratory)</td>
+      <td>complete, no score</td>
+      <td><a href="#an-scoring">AN scoring</a></td>
+    </tr>
+    <tr>
+      <td><a href="ANSOCQ-2.html">ANSOCQ-2</a></td>
+      <td>published; German version by the validation authors (Switzerland)</td>
+      <td>complete, <code class="language-plaintext highlighter-rouge">en</code> primary with <code class="language-plaintext highlighter-rouge">de-CH</code>, no score</td>
+      <td><a href="#an-scoring">AN scoring</a></td>
+    </tr>
+    <tr>
+      <td><a href="SSUK-2.html">SSUK-2</a></td>
+      <td>published (adaptation of the ISSS)</td>
+      <td>complete, no score</td>
+      <td><a href="#an-scoring">AN scoring</a></td>
+    </tr>
+    <tr>
+      <td><a href="EDE-Q6.html">EDE-Q6</a></td>
+      <td><strong>commercially published</strong> (dgvt-Verlag, © Anja Hilbert, all rights reserved) — DIZ list says "free"</td>
+      <td>complete per <a href="Designentscheidungen.html">ADR-006</a>, <code class="language-plaintext highlighter-rouge">copyright</code> states the reservation</td>
+      <td><a href="#ede-q6">EDE-Q6</a></td>
+    </tr>
+    <tr>
+      <td><a href="ACE.html">ACE</a></td>
+      <td>English original published (Felitti 1998, public-health standard) · <strong>German version ACE-D</strong> © Schäfer, Wingenfeld &amp; Spitzer 2009, full questionnaire only from the author</td>
+      <td>complete, composite with <code class="language-plaintext highlighter-rouge">UKHD-CTT</code></td>
+      <td><a href="#ace-d">ACE-D</a>, <a href="#standortgruppen">site groups</a></td>
+    </tr>
+    <tr>
+      <td><a href="UKHD-Zusatzitems.html">UKHD supplementary items</a> (6 questionnaires) and <code class="language-plaintext highlighter-rouge">UKHD-CTT</code></td>
+      <td><strong>not listed</strong> in the DIZ list; origin of the wording per group unresolved</td>
+      <td>complete, <code class="language-plaintext highlighter-rouge">status = draft</code>, <code class="language-plaintext highlighter-rouge">experimental = true</code>, <code class="language-plaintext highlighter-rouge">copyright</code> with reservation — deliberate project decision for piloting</td>
+      <td><a href="#standortgruppen">site groups</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UKHD-BI</code></td>
+      <td>as UKHD supplementary items</td>
+      <td>not modelled: visual picture scale without picture template</td>
+      <td><a href="#standortgruppen">site groups</a></td>
+    </tr>
+    <tr>
+      <td><a href="UKHD-EDP.html">UKHD-EDP</a></td>
+      <td>probably an EDI-2 subset (Hogrefe test); neither "EDI" nor "UKHD-EDP" in the DIZ list — <strong>unassessed</strong></td>
+      <td><strong>metadata-only</strong></td>
+      <td><a href="#ukhd-edp">UKHD-EDP</a></td>
+    </tr>
+    <tr>
+      <td><a href="NTx-Instrumente.html#baasis">BAASIS</a></td>
+      <td>© University of Basel; research without pharmaceutical involvement free of charge, permission per project, <strong>items and answer options not publishable</strong>, data sharing with the validation project (Term IV)</td>
+      <td><strong>metadata-only</strong> + private collectable variant (<a href="Designentscheidungen.html">ADR-014</a>)</td>
+      <td><a href="#ntx">NTx</a></td>
+    </tr>
+    <tr>
+      <td><a href="NTx-Instrumente.html#abq">ABQ</a></td>
+      <td>Müller, Kohlmann &amp; Wilke 2015; licence agreement per centre, items not publishable</td>
+      <td><strong>metadata-only</strong> + private variant</td>
+      <td><a href="#ntx">NTx</a></td>
+    </tr>
+    <tr>
+      <td><a href="NTx-Instrumente.html#mtsosd-r59">MTSOSD-R59</a></td>
+      <td>© KU Leuven; German version (MAPI) from the first authors, items not publishable</td>
+      <td><strong>metadata-only</strong> + private variant</td>
+      <td><a href="#ntx">NTx</a></td>
+    </tr>
+    <tr>
+      <td><a href="NTx-Instrumente.html">MHI-NTx, NTx follow-up</a> (MHH)</td>
+      <td>site items, not listed in the DIZ list; trivial factual questions</td>
+      <td>complete, reservation in <code class="language-plaintext highlighter-rouge">copyright</code></td>
+      <td><a href="#standortgruppen">site groups</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UKE-HCU/HCU2/PSE/TR/DOT</code> (PSS)</td>
+      <td>site items, not listed in the DIZ list</td>
+      <td>not modelled</td>
+      <td><a href="#standortgruppen">site groups</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Sources of the licensed instruments</strong> — also machine-readable in the <code class="language-plaintext highlighter-rouge">copyright</code> element of the resources; only the PCOR-MII FHIR content itself is under the repository licence (CC-BY-4.0):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Rights holder</th>
+      <th>How to obtain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BAASIS</td>
+      <td>University of Basel</td>
+      <td>permission: <a href="https://baasis.nursing.unibas.ch/how-to-obtain">https://baasis.nursing.unibas.ch/how-to-obtain</a></td>
+    </tr>
+    <tr>
+      <td>ABQ</td>
+      <td>Müller S, Kohlmann T, Wilke T (2015)</td>
+      <td>licence agreement per centre; route to be clarified</td>
+    </tr>
+    <tr>
+      <td>MTSOSD-R59</td>
+      <td>KU Leuven</td>
+      <td>contact: joke.willems@kuleuven.be</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="open-rights-questions">Open rights questions</h3>
+
+<p><a name="wai"></a></p>
+
+<h4 id="wai--reassess-publication-rights">WAI — reassess publication rights</h4>
+<p><strong>Status:</strong> open, added 2026-11-05 · <strong>Answer from:</strong> German WAI network (wai@uni-wuppertal.de)</p>
+
+<p>The <a href="WAI.html">WAI</a> is metadata-only (the pattern for ADR-012) because the DIZ implementation list notes "probably not suitable for publication". The note names no source. The terms of use of the originator, the Finnish Institute of Occupational Health (<a href="https://www.ttl.fi/en/themes/well-being-at-work-and-work-ability/tyokyky/using-the-work-ability-index-wai">ttl.fi</a>, accessed 2026-11-05), say the opposite: <em>"The method is publicly available. You do not need permission from the Finnish Institute of Occupational Health to use the Work Ability Index."</em> Use for research and one's own organisation is free, own questionnaires and translations are allowed. Conditions: cite the authors (Tuomi et al. 1998), do not sell the instrument as such, and give modified versions a name of their own; FIOH does not distribute the questionnaire itself.</p>
+
+<p>One question remains: the German wording in the dictionary is the questionnaire of the <strong>German WAI network</strong> (INQA, University of Wuppertal, with the BAuA). According to the widely circulated questionnaire PDF, individual use is free and only use in companies requires consent; whether the translation may be passed on in a specification is not documented. The WAI is published and released by its originator, not <a href="#publiziert-verlegt">commercially published</a>.</p>
+
+<p><strong>Next steps:</strong> (1) ask the German WAI network whether the German wording of the three items may be published in the IG. (2) Independently, the verbatim questionnaire can be provided on the questionnaire server right away — that is use, not publication, and covered by the FIOH terms. (3) On a positive answer switch to the full version with citation and FIOH attribution in <code class="language-plaintext highlighter-rouge">copyright</code>; the short form stays named "Work Ability Score", as FIOH requires for modified versions. (4) Correct the DIZ list.</p>
+
+<p><a name="standortgruppen"></a></p>
+
+<h4 id="site-specific-item-groups-ukhd-uke-mhh--clearance-missing">Site-specific item groups (UKHD, UKE, MHH) — clearance missing</h4>
+<p><strong>Status:</strong> open, added 2026-09-30, refined 2026-10-01 and 2026-11-05 · <strong>Answer from:</strong> the Heidelberg, Hamburg and Hannover sites</p>
+
+<p>The DIZ implementation list covers <strong>published instruments</strong> only. The site-specific item groups — Heidelberg (<code class="language-plaintext highlighter-rouge">UKHD-*</code>), Hamburg (<code class="language-plaintext highlighter-rouge">UKE-*</code>), Hannover (<code class="language-plaintext highlighter-rouge">MHH-*</code>) — do <strong>not occur</strong> there at all. For them neither a permission nor a restriction is documented: it is not a legal question the list could answer but a <strong>governance decision of the sites</strong>.</p>
+
+<p>The dictionary contains 97 such variables. <strong>34 of them PCOR-MII already publishes with full wording</strong>, all in the <a href="MHI.html">MHI</a>: <code class="language-plaintext highlighter-rouge">UKHD-W</code> (4), <code class="language-plaintext highlighter-rouge">UKHD-AN</code> (1), <code class="language-plaintext highlighter-rouge">UKHD-MEDI</code> (2), <code class="language-plaintext highlighter-rouge">UKE-MEDI</code> (27).</p>
+
+<p><strong>Proposal: do not withhold wholesale, but distinguish two kinds.</strong> <em>Trivial factual questions</em> — body weight, AN subtype, medication list. "How much do you currently weigh in kg?" is not a protectable creation, and without the wording the DIZ cannot implement the items uniformly. These 34 remain published; the same holds for the MHH items in <a href="NTx-Instrumente.html">MHI-NTx and the NTx follow-up</a>. <em>Designed item batteries</em> — <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6, timing of childhood trauma), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3, body image), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4, life events), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-CT</code> (1), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3), <code class="language-plaintext highlighter-rouge">UKHD_D</code> (2). Here there is authorship from Heidelberg.</p>
+
+<p>Seven of these groups are modelled — six as <strong>one Questionnaire each</strong> (<a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>, one questionnaire per dictionary group per the site-group amendment in ADR-011) and <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> inside the <a href="ACE.html">ACE</a>, which thereby becomes a PCOR-MII composite. That is a <strong>deliberate project decision for piloting and not a clearance</strong>. The rights question itself has been refined: the <code class="language-plaintext highlighter-rouge">UKHD</code> prefix is a <strong>compilation label</strong> of the dictionary, not a statement of authorship — the manual of the master spreadsheet defines the <code class="language-plaintext highlighter-rouge">INSTRUMENT</code> column as the sites' choice of collection tool. Before the clearance question therefore comes a <strong>provenance question</strong>: where does the wording of each group come from — own phrasing, in-house documentation forms or a published instrument? The variable names give hints: most are descriptive study-database names (<code class="language-plaintext highlighter-rouge">weight_discharge</code>, <code class="language-plaintext highlighter-rouge">life_event1_screening</code>), where the risk is small. Three groups carry foreign, opaque abbreviation schemes, the signature of an external source: <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">bdkm16</code> (<a href="Questionnaire-UKHDPT.html">UKHD-PT</a>), <code class="language-plaintext highlighter-rouge">erwEV24</code>–<code class="language-plaintext highlighter-rouge">erwEV26</code> (<code class="language-plaintext highlighter-rouge">UKHD-BI</code>) and <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">edp11</code> (<a href="UKHD-EDP.html">UKHD-EDP</a>, see its own point). All resources carry <code class="language-plaintext highlighter-rouge">status = draft</code>, <code class="language-plaintext highlighter-rouge">experimental = true</code> and a <code class="language-plaintext highlighter-rouge">copyright</code> stating the reservation. If the feedback brings a restriction, the switch to metadata-only is made <strong>per group</strong> (pattern <a href="WAI.html">WAI</a>); the example responses would be unaffected because they contain no item texts.</p>
+
+<p><code class="language-plaintext highlighter-rouge">UKHD-BI</code> is deliberately not modelled, and not for rights reasons: data collection does not yet use the visual picture scale, and the dictionary lists as answer option only a reference to a picture tab — without the picture template the item cannot be modelled, because the anchors of a visual scale are the object of measurement here, not labelling.</p>
+
+<p>For <strong>UKE</strong> nothing is modelled (<code class="language-plaintext highlighter-rouge">UKE-HCU/HCU2/PSE/TR/DOT</code>, healthcare utilisation in PSS). For <strong>MHH</strong> the three screening items are modelled as <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> and the 18 monitoring items as the <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx follow-up questionnaire</a> with full wording from the dictionary; <strong>open for MHH</strong> are the clearance of the wording, the group label for <code class="language-plaintext highlighter-rouge">MHH_PTH1</code>/<code class="language-plaintext highlighter-rouge">MHH_PTH2</code> in the dictionary, and whether the groups are collected quarterly as one questionnaire or separately.</p>
+
+<p><strong>To clarify:</strong> confirmation by UKHD, UKE and MHH for both kinds — retroactively for the published factual items and prospectively for the batteries. Until then the status quo is an assumption, not a clearance.</p>
+
+<p><a name="ukhd-edp"></a></p>
+
+<h4 id="ukhd-edp--probably-an-edi-2-subset-rights-unassessed">UKHD-EDP — probably an EDI-2 subset, rights unassessed</h4>
+<p><strong>Status:</strong> open, added 2026-09-30; modelled as metadata-only 2026-10-01 · <strong>Answer from:</strong> UKHD (identification), then Hogrefe</p>
+
+<p>The collection plan lists 17 items for the domain <em>Eating Disorder Psychopathology</em> under the entry "EDEQ/EDP (UKHD)". These are <strong>two instruments, not one</strong>: the 6 items of the <a href="EDE-Q6.html">EDE-Q6</a> and 11 items with the variable IDs <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">edp11</code>. They cannot be merged — the EDE-Q asks "on how many of the last 28 days" on a frequency scale 0–6, the <code class="language-plaintext highlighter-rouge">edp</code> items ask timelessly for agreement ("1 = never true").</p>
+
+<p><strong>The UKHD prefix is misleading.</strong> The 11 items each represent one construct — drive for thinness, bulimia, body dissatisfaction, ineffectiveness, perfectionism, interpersonal distrust, interoceptive awareness, maturity fears, asceticism, impulse regulation, social insecurity — and those are <strong>the eleven subscales of the EDI-2</strong> (<em>Eating Disorder Inventory-2</em>, Garner 1991; German version Paul &amp; Thiel, Hogrefe 2005), one item per scale, i.e. the same subset pattern as EDE-Q6, ANSOCQ-2 and SSUK-2. A further indication: the answer format is <strong>six-point</strong>, as in the EDI-2; the other instruments of the AN battery use four, five or seven points. It is therefore very probably <strong>not</strong> an in-house development of the site but a subset of a commercially published test — published goods like the BDI-II, which the MII PRO module keeps as "data + scoring only, not displayable" for exactly that reason. The DIZ list has neither a row "EDI" nor "UKHD-EDP"; the rights situation is thus not "free" but <strong>not assessed at all</strong>.</p>
+
+<p><strong>Implemented as metadata-only</strong>, because that is right under both readings: if it is the EDI-2, the publisher's reservation forbids the wording; if it is a site original, clearance is missing. The displays of the eleven variables in the CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> are neutralised as well.</p>
+
+<p><strong>To clarify, in this order:</strong> (1) confirm the identification as an EDI-2 subset against the German original questionnaire — <code class="language-plaintext highlighter-rouge">edp8</code> and <code class="language-plaintext highlighter-rouge">edp5</code> are characteristic. (2) On confirmation, update the DIZ list and clarify the rights with Hogrefe. (3) Only then assign <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> or EDI-2 <code class="language-plaintext highlighter-rouge">linkId</code>s (<a href="Designentscheidungen.html">ADR-008</a>).</p>
+
+<p><a name="ace-d"></a></p>
+
+<h4 id="ace-d--the-german-version-is-not-freely-publishable">ACE-D — the German version is not freely publishable</h4>
+<p><strong>Status:</strong> open, added 2026-09-30 — <strong>retroactively affects five published items</strong> · <strong>Answer from:</strong> Prof. Dr. Ingo Schäfer (University of Hamburg)</p>
+
+<p>The DIZ implementation list lists the ACE as "freely available". That is true of the <strong>English original</strong> (Felitti et al. 1998, Kaiser Permanente / CDC), but the <strong>German version ACE-D</strong> is something else. Evidenced by the authors' own usage practice: the <em>Deutsches Ärzteblatt</em> prints, in a population-representative ACE study (Witt et al., Dtsch Arztebl Int 2019;116:635–42, <a href="https://doi.org/10.3238/arztebl.2019.0635">doi:10.3238/arztebl.2019.0635</a>), explicitly only <strong>two sample questions</strong> of ten in the supplement, with the note: "Copyright and citation: Ingo Schäfer, Katja Wingenfeld and Carsten Spitzer (2009) ACE-D … <strong>The complete questionnaire can be obtained from Prof. Dr. Ingo Schäfer.</strong>" That is the pattern "available on request", not "freely publishable" — the same pattern as with the <a href="OPD-SFK.html">OPD-SFK</a>, where the consultation has already been conducted successfully.</p>
+
+<p><strong>Consequences:</strong> (1) PCOR-MII already publishes the five German ACE items with full wording; the consultation is to be sought, following the OPD-SFK pattern. (2) An ACE-10 with German wording cannot be modelled from public sources; without consent only an English-primary version or metadata-only would be possible. (3) Positive side finding: the printed sample question on physical abuse is verbatim our <code class="language-plaintext highlighter-rouge">ace2</code> — thus confirmed against a peer-reviewed source.</p>
+
+<p><a name="ede-q6"></a></p>
+
+<h4 id="ede-q6--clarify-the-rights-of-the-german-translation">EDE-Q6 — clarify the rights of the German translation</h4>
+<p><strong>Status:</strong> open, added 2026-09-29 · <strong>Answer from:</strong> Prof. Anja Hilbert (Leipzig University Medical Center)</p>
+
+<p>The DIZ implementation list lists the instrument as "freely available", whereas the source publication explicitly reserves all rights. The wording used in PCOR-MII comes — verbatim, all six items and the answer scale — from <strong>Hilbert A, Tuschen-Caffier B,</strong> <em>Eating Disorder Examination-Questionnaire. Deutschsprachige Übersetzung</em>, 2nd ed., Tübingen: dgvt-Verlag 2016: "All rights reserved. […] This applies in particular to reproductions, translations, microfilming and <strong>storage and processing in electronic systems</strong>." (© 2016 Anja Hilbert). The last clause describes exactly what a FHIR <code class="language-plaintext highlighter-rouge">Questionnaire</code> does; that dgvt-Verlag offers the PDF for free download changes nothing.</p>
+
+<p>EDE-Q6 is thus the third case of this kind, next to GI-PS and the already settled OPD-SFK. Same route: obtain the rights holder's consent, otherwise metadata-only per the <a href="WAI.html">WAI</a> pattern. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> states the reservation until then; the licence column of the <a href="Instrumente.html">instrument overview</a> says "confirmation sought" (<a href="Designentscheidungen.html">ADR-006</a>). Side finding: the DIZ list cites the <em>Diagnostica</em> publication of 2007 as the translation paper — that is the psychometric evaluation, not the translation; for wording questions the dgvt edition is authoritative.</p>
+
+<p><a name="dem-mhi"></a></p>
+
+<h4 id="provenance-rights-of-the-demmhi-items">Provenance rights of the DEM/MHI items</h4>
+<p><strong>Status:</strong> OECD share settled ✅ (2026-09-24) · four PaRIS third-party instruments and GI-PS open · <strong>Answer from:</strong> rights holders of the GI-PS; check of the third-party instruments by the project</p>
+
+<p><strong>OECD (5 items in DEM) — settled.</strong> The items come from the <strong>OECD PaRIS Patient Questionnaire</strong>; the <code class="language-plaintext highlighter-rouge">linkId</code>s in DEM are the PaRIS variable names (<code class="language-plaintext highlighter-rouge">Q_OECDLIT5a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLIT7a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLITii</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2a</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2b</code>), the prefix stands for <em>OECD Measuring Financial <strong>Lit</strong>eracy</em>. The OECD Terms and Conditions permit non-commercial use <strong>and translation without explicit permission</strong>, provided the OECD is named as originator, the original is linked and the prescribed translation disclaimer is included; unlike PISA, PaRIS has no special conditions. The restriction in the DIZ list ("not published, for internal use only") describes the status of the translation, not the rights situation of the instrument. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> of <a href="Demographie.html">DEM</a> carries the provenance breakdown, the OECD attribution and the disclaimer. The German wording is the <strong>Swiss PaRIS version</strong> (Unisanté, Lausanne; recognisable by Helvetisms such as "einschliesslich" and "Ich weiss es nicht"), i.e. an official TRAPD translation, adopted unchanged per <a href="Designentscheidungen.html">ADR-005</a>.</p>
+
+<p><strong>Four PaRIS third-party instruments — check open.</strong> The PaRIS-PQ is itself a compilation, and the OECD explicitly excludes third-party content from its permission: <em>"The User is responsible for verifying whether this is the case and, if so, securing the appropriate permissions."</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DEM <code class="language-plaintext highlighter-rouge">linkId</code>s</th>
+      <th>PaRIS source instrument</th>
+      <th>Rights situation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Q_MONMED</code></td>
+      <td>National Health Interview Survey (NHIS)</td>
+      <td>US government work — usually free, check open</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Q_MON</code>, <code class="language-plaintext highlighter-rouge">MONMEAL</code>, <code class="language-plaintext highlighter-rouge">MONRENT</code>, <code class="language-plaintext highlighter-rouge">MONBILLS</code></td>
+      <td>Commonwealth Fund International Health Policy Surveys 2016/2017</td>
+      <td>private foundation — the least clear case</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">MEDHIMS6</code>, <code class="language-plaintext highlighter-rouge">MEDHIMS7</code></td>
+      <td>MED-HIMS (European Union 2019)</td>
+      <td>EU publication — usually free, check open</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">WHODIS</code>, <code class="language-plaintext highlighter-rouge">WHODIS1</code>, <code class="language-plaintext highlighter-rouge">WHODIS2</code></td>
+      <td>WHO/World Bank Model Disability Survey (WHO 2017) — <strong>not</strong> the WHODAS 2.0</td>
+      <td>WHO publication — usually free, check open</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It also remains sensible to compare the official German PaRIS translation (cApStAn, TRAPD, 16 languages) with the wording used — then the disclaimer reservation would fall away.</p>
+
+<p><strong>GI-PS (2 items in DEM, 9 items in MHI) — a genuine distribution restriction.</strong> Quote from the DIZ list: "The ownership, copyright, distribution and publication rights … remain with the respective test authors, i.e. the gi-ps or parts of it may not be modified, translated or passed on to third parties without the consent of the rights holders." (development paper: <a href="https://doi.org/10.13109/zptm.2023.69.1.56">10.13109/zptm.2023.69.1.56</a>). Unlike the OECD there is no general permission: <strong>consent of the rights holders</strong> is required, otherwise the affected items are to be switched to metadata-only. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> of DEM and MHI states the reservation. The licence table on <a href="Instrumente.html">Instruments</a> does not yet list OECD and GI-PS.</p>
+
+<p><a name="ntx"></a></p>
+
+<h4 id="baasis-abq-mtsosd-r59--licensees-sources-versions">BAASIS, ABQ, MTSOSD-R59 — licensees, sources, versions</h4>
+<p><strong>Status:</strong> open, added 2026-11-05 · <strong>Answer from:</strong> NTx use-case lead, MHH, University of Basel, KU Leuven</p>
+
+<p>The three instruments are metadata-only with a private collectable variant (<a href="Designentscheidungen.html">ADR-014</a>); the rights are in the table above. Open:</p>
+
+<ul>
+  <li><strong>Licensee:</strong> the University of Basel grants the BAASIS permission <strong>per project</strong> through its online form, the DIZ list speaks of a licence agreement <strong>per centre</strong>. This determines how the licence gate on the questionnaire server is cut (role per site or per project).</li>
+  <li><strong>Data sharing:</strong> using the BAASIS obliges to share the data with the ongoing validation project of the University of Basel (Term IV). The use-case lead should know that before the licence request. Publications must cite Denhaerynck et al. 2023, Haupenthal et al. 2025 and the website.</li>
+  <li><strong>BAASIS 2_a:</strong> the dictionary gives a rate scale for sub-question 2_a (from once to almost daily), the official explanation gives the same count categories for all three sub-questions. Whether the rate scale matches the licensed German questionnaire (version 2021) or is a local deviation is to be checked with MHH. Until then both scales are modelled separately.</li>
+  <li><strong>ABQ:</strong> route to the licence agreement to be clarified. The <strong>polarity</strong> of the weights 1–4 is not verified against the original instrument — the dictionary lists the agreement level with value 1 as first option; whether the level order reflects barrier strength in the expected direction is to be checked before productive use. For <code class="language-plaintext highlighter-rouge">ABQ_01</code> the dictionary names only BAASIS1A as trigger, for all other items BAASIS1A/2/3/4 — presumably an inconsistency.</li>
+  <li><strong>MTSOSD-R59:</strong> whether MHH uses the German version linguistically validated by the MAPI Research Institute is to be confirmed. And the <strong>collection scope</strong> is open: according to the dictionary the complete questionnaire was collected, the <em>Domain Overview</em> sheet lists only the domains tremor and diarrhoea for monitoring (priority A, quarterly, telemonitoring weekly), the <em>Comments and Questions</em> sheet asks "complete side effects? Or separate?". The questionnaire is the basis in both cases; a telemonitoring subset of symptoms 16 and 30 would be derived as its own resource via <code class="language-plaintext highlighter-rouge">derivedFrom</code> (<a href="Designentscheidungen.html">ADR-008</a>).</li>
+  <li><strong>PHQ-15 in NTx:</strong> the Domain Overview lists PHQ-15 for PSS only, the NTx dictionary sheet includes it; the NTx manifests therefore do not pin it. Decision of the use-case lead.</li>
+</ul>
+
+<h3 id="further-open-points">Further open points</h3>
+
+<p><a name="promis-gh"></a></p>
+
+<h4 id="promis-gh--linkids-and-continued-existence-of-the-2-item-questionnaire">PROMIS-GH — <code class="language-plaintext highlighter-rouge">linkId</code>s and continued existence of the 2-item questionnaire</h4>
+<p><strong>Status:</strong> open, added 2026-11-11 · <strong>Decision:</strong> maintainer and use-case lead</p>
+
+<p>Since 2027.0.0-ballot.2 the MII PRO module carries the complete PROMIS Scale v1.2 – Global Health (<code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-global-health</code>, 10 items, status <code class="language-plaintext highlighter-rouge">draft</code>; German translation there so far only for Global01, Global02 and Global07). <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> is declared via <code class="language-plaintext highlighter-rouge">derivedFrom</code> as its 2-item subset. Two questions: (1) the <code class="language-plaintext highlighter-rouge">linkId</code>s here are the dictionary variables <code class="language-plaintext highlighter-rouge">Global01</code>/<code class="language-plaintext highlighter-rouge">Global02</code>, upstream the same items are <code class="language-plaintext highlighter-rouge">promis-global01</code>/<code class="language-plaintext highlighter-rouge">promis-global02</code> — <a href="Designentscheidungen.html">ADR-008</a> would argue for the upstream IDs, which would be a breaking change for existing responses. (2) If the local questionnaire is dropped in favour of the module definition, the sites collect ten items instead of two — that is decided by the collection plan, not by the technology.</p>
+
+<p><a name="an-scoring"></a></p>
+
+<h4 id="an-instruments--scoring-visual-scales-dictionary-erratum">AN instruments — scoring, visual scales, dictionary erratum</h4>
+<p><strong>Status:</strong> open (as of 2026-09-29; source verification of all five instruments completed) · <strong>Decision:</strong> AN use-case lead</p>
+
+<ul>
+  <li><strong>Scoring:</strong> all five are subsets ("most discriminating item per scale" or "first 5 questions") for which no validated scoring rule exists. Deliberately no score item — until an evaluation rule is agreed; the answer codes carry <code class="language-plaintext highlighter-rouge">itemWeight</code> as a precaution. The former ERQ score has been withdrawn because the questionnaire is not the ERQ-S (see <a href="ERQ-6.html">ERQ-6</a>).</li>
+  <li><strong>Visual scales:</strong> the answer scales of ERQ-6 (1–7) and EDE-Q item 27 (0–6) exist in the dictionary only as graphics (tabs "ERQ" / "EDE-Q27"); the anchors were taken from the graphics and are to be checked against the original questionnaires.</li>
+  <li><strong>EDE-Q6 — erratum in the dictionary:</strong> the condition for <code class="language-plaintext highlighter-rouge">edeq30</code> reads "If edeq31 = 1"; no variable <code class="language-plaintext highlighter-rouge">edeq31</code> exists in the AN sheet. Implemented as <code class="language-plaintext highlighter-rouge">enableWhen</code> on <code class="language-plaintext highlighter-rouge">edeq29</code> (the yes/no question directly before) — to be corrected in the dictionary.</li>
+</ul>
+
+<p><a name="ukhd-dictionary"></a></p>
+
+<h4 id="ukhd-supplementary-items--open-points-on-the-dictionary">UKHD supplementary items — open points on the dictionary</h4>
+<p><strong>Status:</strong> open, added 2026-10-01 · <strong>Decision:</strong> UKHD and dictionary maintenance</p>
+
+<p>While modelling the <a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>, issues surfaced that cannot be solved in FHIR; they are also recorded as <code class="language-plaintext highlighter-rouge">designNote</code> on the respective item.</p>
+
+<ol>
+  <li><strong>Origin of the wording per group unresolved</strong> — see <a href="#standortgruppen">site groups</a>; specifically to be asked for <code class="language-plaintext highlighter-rouge">bdkm</code>, <code class="language-plaintext highlighter-rouge">erwEV</code> and <code class="language-plaintext highlighter-rouge">edp</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">bdkm15</code> and <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> overlap.</strong> Both ask about current psychotherapeutic treatment — in two questionnaires, with two answer scales. They differ in time reference (<code class="language-plaintext highlighter-rouge">bdkm15</code> only at admission and with history, <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> at every visit and with setting), but at admission partly deliver the same information.</li>
+  <li><strong>The variable name <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> is misleading.</strong> Level 4 of the answer scale explicitly captures inpatient or day-clinic treatment; the item asks about treatment status overall. The name stays as <code class="language-plaintext highlighter-rouge">linkId</code> and <code class="language-plaintext highlighter-rouge">item.code</code> but must not be read as a statement of meaning.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">comorbid1</code> — formally unclean, deliberately left (decided 2026-10-01).</strong> The question is literally a yes/no question, the dictionary provides a text field; the text field for further diagnoses is what is meant. <code class="language-plaintext highlighter-rouge">type = text</code> models the collection correctly, the wording stays unchanged per <a href="Designentscheidungen.html">ADR-010</a>.</li>
+  <li><strong>Inconsistent variable names in <code class="language-plaintext highlighter-rouge">UKHD-LE</code>.</strong> <code class="language-plaintext highlighter-rouge">life_event1_screening</code>/<code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> versus <code class="language-plaintext highlighter-rouge">lifev_discharge</code>/<code class="language-plaintext highlighter-rouge">lifev_text</code> — two prefixes for one group, and no <code class="language-plaintext highlighter-rouge">life_event2</code> exists; the example list of <code class="language-plaintext highlighter-rouge">life_event1_screening</code> apparently lacks the head of the phrase "break-up of a partnership".</li>
+  <li><strong>The group ID <code class="language-plaintext highlighter-rouge">UKHD_D</code> carries an underscore</strong>, all others a hyphen. Resource id and catalogue code follow the house convention (<code class="language-plaintext highlighter-rouge">UKHD-D</code>/<code class="language-plaintext highlighter-rouge">ukhd-d</code>), the dictionary spelling is preserved in the property <code class="language-plaintext highlighter-rouge">instrument</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">bdkm16</code> asks about physician visits but sits under <em>Past Treatment</em>.</strong> In content the item belongs rather to healthcare utilisation (cf. <code class="language-plaintext highlighter-rouge">UKE-HCU</code> in PSS).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">UKHD-D</code> overlaps with the <a href="MHI.html">MHI</a>.</strong> There <code class="language-plaintext highlighter-rouge">CPCOR-DIAG</code> and <code class="language-plaintext highlighter-rouge">GIPS13</code> collect as codes what is collected here as free text. Which representation is authoritative for the analysis is to be settled clinically.</li>
+  <li><strong>Highly sensitive content:</strong> <a href="Questionnaire-UKHDLE.html">UKHD-LE</a> (loss experiences, abuse) and the group <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> inside the <a href="ACE.html">ACE</a> (childhood adversity) need, like the PHQ-SI, a governance of the evaluation.</li>
+</ol>
+
+<p><a name="phq-sads"></a></p>
+
+<h4 id="phq-sads--different-recall-for-shared-items">PHQ-SADS — different recall for shared items</h4>
+<p><strong>Status:</strong> open, <strong>MII PRO module roadmap 2027</strong> (as of 2026-09-02) · <strong>Decision:</strong> MII PRO module</p>
+
+<p>The PHQ-SADS is the joint evaluation of PHQ-15, GAD-7 and PHQ-9. In the shared PHQ-D namespace these are 31 items but only <strong>29 distinct <code class="language-plaintext highlighter-rouge">linkId</code>s</strong>: <code class="language-plaintext highlighter-rouge">phq-phq2c</code> (sleep problems) and <code class="language-plaintext highlighter-rouge">phq-phq2d</code> (tiredness) belong to PHQ-15 <strong>and</strong> PHQ-9. PHQ-15 has a 4-week recall, PHQ-9 and GAD-7 a 2-week recall; the shared item is answered once but enters two scores with different time references. This cannot be solved at item level and must be reflected in the score interpretation. Responsible is the MII PRO module, where the PHQ questionnaires, the namespace and the score <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s are maintained; PCOR-MII documents the conflict in the "PHQ-SADS" section of the <a href="PHQ.html">PHQ overview</a> and adopts the solution once it is taken upstream.</p>
+
+<h4 id="rows-of-the-collection-plan-not-yet-modelled">Rows of the collection plan not yet modelled</h4>
+
+<p>PROMIS NRS Pain Intensity 1a as a stand-alone instrument (the item is inside PROMIS-29), the summary scores PHS/PCS/MHS/MCS (priority A, no artefact), the PROMIS-16 domain T-scores (upstream roadmap 2027), the UKE healthcare-utilisation items in PSS and <code class="language-plaintext highlighter-rouge">UKHD-BI</code> in AN. Details in the tables of the use-case pages.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="Designentscheidungen.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="Kommende-Aenderungen.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

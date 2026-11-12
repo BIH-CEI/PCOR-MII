@@ -1,4 +1,4 @@
-# Use-Case-Manifest AN — Anorexia nervosa - PCOR-MII Implementation Guide v0.3.0
+# Use-Case-Manifest AN — Anorexia nervosa - PCOR-MII Implementation Guide v0.9.0
 
 ## Library: Use-Case-Manifest AN — Anorexia nervosa (Experimental) 
 
@@ -11,7 +11,7 @@
 * Metadata: Title
   * ?: Use-Case-Manifest AN — Anorexia nervosa
 * Metadata: Version
-  * ?: 0.3.0
+  * ?: 0.9.0
 * Metadata: Status
   * ?: Draft
 * Metadata: Experimental
@@ -25,7 +25,7 @@
 * Metadata: Steward Contact
   * ?: BIH-CEI
 * Metadata: Description
-  * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.
+  * ?: Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.
 * Metadata: Type
   * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.5.0/CodeSystem-library-type.html)#asset-collection
 * Metadata:  Parameters
@@ -33,53 +33,55 @@
   * ?: None
 * Metadata:  Citations and References
 * Metadata: Component
-  * ?: **Description**: DEM — Demographie-Sammelbogen**Resource**:[DEM — Demographics & Medical History](Questionnaire-DEM.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0
+  * ?: **Description**: DEM — Demographie-Sammelbogen**Resource**:[DEM — Demographics & Medical History](Questionnaire-DEM.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0
 * Metadata: Component
-  * ?: **Description**: MHI — Medical History [inkl. AN-Gruppe gewicht-an]**Resource**:[MHI — Medical History](Questionnaire-MHI.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0
+  * ?: **Description**: MHI — Medical History [inkl. AN-Gruppe gewicht-an]**Resource**:[MHI — Medical History](Questionnaire-MHI.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0
 * Metadata: Component
-  * ?: **Description**: ERQ-6 — Emotionsregulation [Prio A]**Resource**:[ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt](Questionnaire-ERQ6.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0
+  * ?: **Description**: ERQ-6 — Emotionsregulation [Prio A]**Resource**:[ERQ-6 — Emotion Regulation Questionnaire, 6-Item-Zuschnitt](Questionnaire-ERQ6.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0
 * Metadata: Component
-  * ?: **Description**: EDE-Q6 — Essstörungspathologie [Prio A]**Resource**:[EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)](Questionnaire-EDEQ6.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0
+  * ?: **Description**: EDE-Q6 — Essstörungspathologie [Prio A]**Resource**:[EDE-Q6 — Essstörungspathologie (6-Item-Zuschnitt des EDE-Q)](Questionnaire-EDEQ6.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0
 * Metadata: Component
-  * ?: **Description**: ANSOCQ-2 — Veränderungsmotivation [Prio A; Monitoring-Kurzform]**Resource**:[ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)](Questionnaire-ANSOCQ2.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0
+  * ?: **Description**: ANSOCQ-2 — Veränderungsmotivation [Prio A; Monitoring-Kurzform]**Resource**:[ANSOCQ-2 — Veränderungsmotivation (2-Item-Zuschnitt des ANSOCQ)](Questionnaire-ANSOCQ2.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0
 * Metadata: Component
-  * ?: **Description**: SSUK-2 — Soziale Unterstützung [Prio A]**Resource**:[SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)](Questionnaire-SSUK2.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0
+  * ?: **Description**: SSUK-2 — Soziale Unterstützung [Prio A]**Resource**:[SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt)](Questionnaire-SSUK2.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0
 * Metadata: Component
-  * ?: **Description**: ACE + Zeitangaben — PCOR-MII-Komposit [Prio A; nur Initial]**Resource**:[ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)](Questionnaire-ACE.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0
+  * ?: **Description**: ACE + Zeitangaben — PCOR-MII-Komposit [Prio A; nur Initial]**Resource**:[ACE + Zeitangaben — Belastende Kindheitserfahrungen (PCOR-MII-Komposit)](Questionnaire-ACE.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-PT — Vorbehandlung [Freigabe offen]**Resource**:[UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDPT.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0
+  * ?: **Description**: UKHD-PT — Vorbehandlung [Freigabe offen]**Resource**:[UKHD-PT — Vorbehandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDPT.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-ANB — Essstörungsanamnese [Freigabe offen; nur Initial]**Resource**:[UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)](Questionnaire-UKHDANB.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0
+  * ?: **Description**: UKHD-ANB — Essstörungsanamnese [Freigabe offen; nur Initial]**Resource**:[UKHD-ANB — Essstörungsanamnese (UKHD-Zusatzitems AN)](Questionnaire-UKHDANB.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-CT — Aktuelle Behandlung [Freigabe offen]**Resource**:[UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDCT.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0
+  * ?: **Description**: UKHD-CT — Aktuelle Behandlung [Freigabe offen]**Resource**:[UKHD-CT — Aktuelle Behandlung (UKHD-Zusatzitems AN)](Questionnaire-UKHDCT.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-LE — Lebensereignisse [Freigabe offen]**Resource**:[UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)](Questionnaire-UKHDLE.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0
+  * ?: **Description**: UKHD-LE — Lebensereignisse [Freigabe offen]**Resource**:[UKHD-LE — Belastende Lebensereignisse (UKHD-Zusatzitems AN)](Questionnaire-UKHDLE.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-ND — Neue Diagnosen [Freigabe offen; nicht beim Initial-Termin]**Resource**:[UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)](Questionnaire-UKHDND.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0
+  * ?: **Description**: UKHD-ND — Neue Diagnosen [Freigabe offen; nicht beim Initial-Termin]**Resource**:[UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)](Questionnaire-UKHDND.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-D — Diagnosen bei Aufnahme [Freigabe offen; nur Initial]**Resource**:[UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)](Questionnaire-UKHDD.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0
+  * ?: **Description**: UKHD-D — Diagnosen bei Aufnahme [Freigabe offen; nur Initial]**Resource**:[UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)](Questionnaire-UKHDD.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.9.0
 * Metadata: Component
-  * ?: **Description**: UKHD-EDP — Essstörungspathologie [metadata-only]**Resource**:[UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)](Questionnaire-UKHDEDP.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0
+  * ?: **Description**: UKHD-EDP — Essstörungspathologie [metadata-only]**Resource**:[UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)](Questionnaire-UKHDEDP.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.9.0
 * Metadata: Component
-  * ?: **Description**: OPD-SFK — Strukturfragebogen Kurzform**Resource**:[OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion](Questionnaire-OPDSFK.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0
+  * ?: **Description**: OPD-SFK — Strukturfragebogen Kurzform**Resource**:[OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion](Questionnaire-OPDSFK.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0
 * Metadata: Component
-  * ?: **Description**: WAI — Work Ability Score [metadata-only]**Resource**:[WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)](Questionnaire-WAI.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0
+  * ?: **Description**: WAI — Work Ability Score [metadata-only]**Resource**:[WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)](Questionnaire-WAI.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0
 * Metadata: Component
-  * ?: **Description**: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]**Resource**:[PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)](Questionnaire-PROMISGH.md)version: 0.3.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0
+  * ?: **Description**: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]**Resource**:[PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)](Questionnaire-PROMISGH.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0
 * Metadata: Component
-  * ?: **Description**: PHQ-9 — inkl. PHQ-SI**Resource**:[MII QST PRO PHQ-9](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0
+  * ?: **Description**: PHQ-9 — inkl. PHQ-SI**Resource**:[MII QST PRO PHQ-9](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-phq-9.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: GAD-7**Resource**:[MII QST PRO GAD-7](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0
+  * ?: **Description**: GAD-7**Resource**:[MII QST PRO GAD-7](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-gad-7.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: PROMIS-16 — Standortvariante kurz**Resource**:[MII QST PRO PROMIS-16 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0
+  * ?: **Description**: PROMIS-16 — Standortvariante kurz**Resource**:[MII QST PRO PROMIS-16 (Adults)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-16.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel**Resource**:[MII QST PRO PROMIS-29 (Adults)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0
+  * ?: **Description**: PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel**Resource**:[MII QST PRO PROMIS-29 (Adults)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-29.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0
+  * ?: **Description**: PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel**Resource**:[MII QST PRO PROMIS Cognitive Function SF 4a](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: WHODAS 2.0 12-Item**Resource**:[MII QST PRO WHODAS 2.0 12-Item](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0
+  * ?: **Description**: WHODAS 2.0 12-Item**Resource**:[MII QST PRO WHODAS 2.0 12-Item](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-whodas-whodas12.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2027.0.0-ballot.2
 * Metadata: Component
-  * ?: **Description**: EURONET-SOMA**Resource**:[MII QST PRO EURONET-SOMA](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma)version: 2026.7.0**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0
+  * ?: **Description**: EURONET-SOMA**Resource**:[MII QST PRO EURONET-SOMA](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euronet-soma.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2027.0.0-ballot.2
+* Metadata: Component
+  * ?: **Description**: EQ-5D-5L — Erhebungsvariante „collectable“ [Outcome, Prio A, jährlich; Index-Score upstream]**Resource**:[MII QST PRO EQ-5D-5L Collectable](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html)version: 2027.0.0-ballot.2**Canonical URL**:https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euroqol-eq5d5l-collectable|2027.0.0-ballot.2
 * Metadata: Generated using version 0.5.6 of the sample-content-ig Liquid templates
 
 
@@ -94,7 +96,7 @@
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestlibrary|2.0.0"]
   },
   "url" : "https://bih-cei.github.io/PCOR-MII/Library/use-case-an",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UseCaseAN",
   "title" : "Use-Case-Manifest AN — Anorexia nervosa",
   "status" : "draft",
@@ -114,7 +116,7 @@
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
+  "description" : "Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`.",
   "useContext" : [{
     "code" : {
       "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
@@ -138,97 +140,97 @@
   "relatedArtifact" : [{
     "type" : "composed-of",
     "display" : "DEM — Demographie-Sammelbogen",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "MHI — Medical History [inkl. AN-Gruppe gewicht-an]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "ERQ-6 — Emotionsregulation [Prio A]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "EDE-Q6 — Essstörungspathologie [Prio A]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "ANSOCQ-2 — Veränderungsmotivation [Prio A; Monitoring-Kurzform]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "SSUK-2 — Soziale Unterstützung [Prio A]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "ACE + Zeitangaben — PCOR-MII-Komposit [Prio A; nur Initial]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-PT — Vorbehandlung [Freigabe offen]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-ANB — Essstörungsanamnese [Freigabe offen; nur Initial]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-CT — Aktuelle Behandlung [Freigabe offen]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-LE — Lebensereignisse [Freigabe offen]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-ND — Neue Diagnosen [Freigabe offen; nicht beim Initial-Termin]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-D — Diagnosen bei Aufnahme [Freigabe offen; nur Initial]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "UKHD-EDP — Essstörungspathologie [metadata-only]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "OPD-SFK — Strukturfragebogen Kurzform",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "WAI — Work Ability Score [metadata-only]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0"
+    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0"
   },
   {
     "type" : "composed-of",
     "display" : "PHQ-9 — inkl. PHQ-SI",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2027.0.0-ballot.2"
   },
   {
     "type" : "composed-of",
     "display" : "GAD-7",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2027.0.0-ballot.2"
   },
   {
     "extension" : [{
@@ -245,7 +247,7 @@
     }],
     "type" : "composed-of",
     "display" : "PROMIS-16 — Standortvariante kurz",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2"
   },
   {
     "extension" : [{
@@ -262,7 +264,7 @@
     }],
     "type" : "composed-of",
     "display" : "PROMIS-29 — sieben Domänen als SF 4a plus Schmerzintensität; Standortvariante mittel",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2027.0.0-ballot.2"
   },
   {
     "extension" : [{
@@ -279,17 +281,22 @@
     }],
     "type" : "composed-of",
     "display" : "PROMIS Cognitive Function SF 4a — achte Domäne; mit PROMIS-29 die PROMIS-33-Abdeckung; Standortvariante mittel",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2027.0.0-ballot.2"
   },
   {
     "type" : "composed-of",
     "display" : "WHODAS 2.0 12-Item",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2027.0.0-ballot.2"
   },
   {
     "type" : "composed-of",
     "display" : "EURONET-SOMA",
-    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0"
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2027.0.0-ballot.2"
+  },
+  {
+    "type" : "composed-of",
+    "display" : "EQ-5D-5L — Erhebungsvariante „collectable“ [Outcome, Prio A, jährlich; Index-Score upstream]",
+    "resource" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euroqol-eq5d5l-collectable|2027.0.0-ballot.2"
   }]
 }
 

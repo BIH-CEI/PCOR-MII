@@ -1,4 +1,4 @@
-# UKHD-EDP Antwortstufen (neutralisiert) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-EDP Antwortstufen (neutralisiert) - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: UKHD-EDP Antwortstufen (neutralisiert) (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "ukhd-edp-stufe-6-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-edp-stufe-6-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdEdpStufe6VS",
   "title" : "UKHD-EDP Antwortstufen (neutralisiert)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

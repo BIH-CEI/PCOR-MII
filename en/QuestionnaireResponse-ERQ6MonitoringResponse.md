@@ -1,4 +1,4 @@
-# ERQ-6 — Beispielantwort (Monitoring) - PCOR-MII Implementation Guide v0.3.0
+# ERQ-6 — Beispielantwort (Monitoring) - PCOR-MII Implementation Guide v0.9.0
 
 ## Example QuestionnaireResponse: ERQ-6 — Beispielantwort (Monitoring)
 
@@ -10,7 +10,7 @@
 
 Language: de-DE
 
-Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response)
+Profile: [MII PR PRO QuestionnaireResponse](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-questionnaire-response.html)
 
 * [LinkID](https://hl7.org/fhir/R4/formats.html#table): ERQ6MonitoringResponse
   * [Text](https://hl7.org/fhir/R4/formats.html#table): 
@@ -54,7 +54,7 @@ Profile: [MII PR PRO QuestionnaireResponse](https://simplifier.net/resolve?scope
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"]
   },
   "language" : "de-DE",
-  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0",
+  "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0",
   "status" : "completed",
   "subject" : {
     "reference" : "Patient/pcor-mii-exa-patient-an"

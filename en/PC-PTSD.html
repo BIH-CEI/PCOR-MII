@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PC-PTSD (PTBS-Screening) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PC-PTSD (PTBS-Screening) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -283,7 +289,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="AN.html">next &gt;</a>
+          | <a href="PHQ-Panik.html">next &gt;</a>
 
           </span>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PC-PTSD (PTBS-Screening)</h2>
   
 
@@ -339,7 +345,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
-<p>PCOR-MII <strong>referenziert</strong> den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau (<a href="Designentscheidungen.html">ADR-002</a>). Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2026.7.0) mit; enthalten <strong>seit 2026.6.0</strong>.</p>
+<p>PCOR-MII <strong>referenziert</strong> den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau (<a href="Designentscheidungen.html">ADR-002</a>). Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2027.0.0-ballot.2) mit; enthalten <strong>seit 2026.6.0</strong>.</p>
 
 <p>Erhoben <strong>nur im Szenario <a href="PSS.html">PSS</a></strong>, Kategorie MHA, Priorität <strong>B</strong>.</p>
 
@@ -371,7 +377,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Entwicklung: Prins A, Ouimette P, Kimerling R, et al.; validiert in Freedy JR, et al. <em>Assessing psychological trauma and PTSD.</em> J Anxiety Disord 2007. <a href="https://doi.org/10.1016/j.janxdis.2007.02.010">doi:10.1016/j.janxdis.2007.02.010</a></li>
   <li>Deutsche Fassung: Schäfer I, Schulze C. <em>Deutsche Version des „Primary Care Posttraumatic Stress Disorder Screening Questionnaire".</em> Universität Hamburg, 2010</li>
-  <li>Raw-Package: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0">MII PRO Package 2026.7.0 (Simplifier)</a></li>
+  <li>Raw-Package: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz">MII PRO 2027.0.0-ballot.2 (package.tgz)</a></li>
 </ul>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
@@ -410,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="AN.html">next ></a>
+                <a href="PHQ-Panik.html">next ></a>
 
               </td>
             </tr>
@@ -424,10 +430,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

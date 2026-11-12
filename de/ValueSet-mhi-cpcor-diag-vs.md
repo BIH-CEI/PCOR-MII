@@ -1,4 +1,4 @@
-# MHI Diagnosegruppe (CPCOR) - PCOR-MII Implementation Guide v0.3.0
+# MHI Diagnosegruppe (CPCOR) - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: MHI Diagnosegruppe (CPCOR) (Experimentell) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "mhi-cpcor-diag-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-cpcor-diag-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "MhiCpcorDiagVS",
   "title" : "MHI Diagnosegruppe (CPCOR)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

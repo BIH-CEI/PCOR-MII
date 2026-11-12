@@ -1,4 +1,4 @@
-# ISR-Z (Zwang) - PCOR-MII Implementation Guide v0.3.0
+# ISR-Z (Zwang) - PCOR-MII Implementation Guide v0.9.0
 
 ## ISR-Z (Zwang)
 
@@ -6,7 +6,7 @@ Der **ISR-Z** ist die **Zwangsskala** des **ICD-10-Symptom-Ratings** (ISR) — d
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben **nur im Szenario [PSS](PSS.md)**, Kategorie MHA, mit Priorität **C** („nice to have") — die niedrigste Stufe im Erhebungsplan. Vom ISR wird **ausschließlich die Zusatzskala Zwang** verwendet, nicht das Gesamtinstrument. Das ist keine Kürzung im Sinne der AN-Zuschnitte, sondern die Übernahme einer eigenständigen ISR-Skala.
 
@@ -34,7 +34,7 @@ ICD-10-Symptom-Rating (ISR) © Tritt, von Heymann, Zaudig, Zacharias, Söllner &
 ### Quellen
 
 * Entwicklung: Tritt K, von Heymann F, Zaudig M, et al. **Entwicklung des Fragebogens „ICD-10-Symptom-Rating" (ISR).** Z Psychosom Med Psychother 2008;54(4):409–418. [doi:10.13109/zptm.2008.54.4.409](https://doi.org/10.13109/zptm.2008.54.4.409)
-* Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+* Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

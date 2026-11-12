@@ -1,4 +1,4 @@
-# ANSOCQ Item 3 — Körperteile (Codes) - PCOR-MII Implementation Guide v0.3.0
+# ANSOCQ Item 3 — Körperteile (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: ANSOCQ Item 3 — Körperteile (Codes) (Experimentell) 
 
@@ -19,12 +19,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ansocq-koerperteile",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "AnsocqKoerperteileCS",
   "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+  "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,8 +45,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "content" : "complete",
   "count" : 5,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
     "description" : "Stadium der Veränderungsbereitschaft (1-5).",
     "type" : "decimal"
   }],
@@ -62,7 +62,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich wäre auf keinen Fall bereit, an diesen Körperteilen zuzunehmen"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -78,7 +78,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Manchmal denke ich, dass ich unter Umständen bereit wäre, an diesen Körperteilen zuzunehmen"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   },
@@ -94,7 +94,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich habe mich entschieden, dass ich bereit bin, an diesen Körperteilen zuzunehmen"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 3
     }]
   },
@@ -110,7 +110,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich versuche im Moment, an diesen Körperteilen zuzunehmen"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 4
     }]
   },
@@ -126,7 +126,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "Ich arbeite daran, das Gewicht zu halten, das ich an diesen Körperteilen zugenommen habe."
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 5
     }]
   }]

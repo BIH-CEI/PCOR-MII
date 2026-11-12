@@ -1,4 +1,4 @@
-# UKHD-EDP Antwortstufen (neutralisiert, 6-stufig) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-EDP Antwortstufen (neutralisiert, 6-stufig) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: UKHD-EDP Antwortstufen (neutralisiert, 6-stufig) (Experimental) 
 
@@ -19,12 +19,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "ukhd-edp-stufe-6",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdEdpStufe6CS",
   "title" : "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
+  "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `itemWeight` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,8 +45,8 @@ This Code system is referenced in the definition of the following value sets:
   "content" : "complete",
   "count" : 6,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
     "description" : "Stufe der Zustimmungsskala (1-6).",
     "type" : "decimal"
   }],
@@ -54,7 +54,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "1",
     "display" : "Stufe 1 (geringste Zustimmung)",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -62,7 +62,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "2",
     "display" : "Stufe 2",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   },
@@ -70,7 +70,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "3",
     "display" : "Stufe 3",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 3
     }]
   },
@@ -78,7 +78,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "4",
     "display" : "Stufe 4",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 4
     }]
   },
@@ -86,7 +86,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "5",
     "display" : "Stufe 5",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 5
     }]
   },
@@ -94,7 +94,7 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "6",
     "display" : "Stufe 6 (höchste Zustimmung)",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 6
     }]
   }]

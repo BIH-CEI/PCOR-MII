@@ -1,4 +1,4 @@
-# Bereitstellung - PCOR-MII Implementation Guide v0.3.0
+# Bereitstellung - PCOR-MII Implementation Guide v0.9.0
 
 ## Bereitstellung
 
@@ -11,9 +11,9 @@ This page describes **how implementers can consume the PCOR-MII data definitions
 | | |
 | :--- | :--- |
 | Profiles (structural constraints) | `MII PR PRO QuestionnaireResponse`,`MII PR PRO Questionnaire`(from the MII PRO module) |
-| Questionnaire definitions | PROMIS-29, PROMIS-16, PROMIS Cognitive Function SF 4a, DEM, PCOR example (PCOR-MII plus the MII PRO module) |
+| Questionnaire definitions | **26 PCOR-MII questionnaires**(DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D panic block, PROMIS-GH, the five AN instruments, the six UKHD questionnaires, UKHD-EDP, BAASIS, ABQ, MTSOSD-R59, MHI-NTx, NTx follow-up) — full table:[Questionnaire library](Fragebogen-Bibliothek.md); the PRO instruments of the MII PRO module are referenced |
 | ValueSets | frequency, intensity and physical-function response scales plus the local PCOR-MII ValueSets |
-| Examples | validated`QuestionnaireResponse`s (see[Validation](Validierung.md)) |
+| Examples | three example patients,**four visit bundles**and 46 validated`QuestionnaireResponse`s (see[Examples](Beispiele.md)) |
 
 ### Ways to get it
 
@@ -23,7 +23,7 @@ A prebuilt HAPI FHIR server with MII PRO and PCOR-MII preloaded. Best for checki
 
 ```
 flowchart LR
-    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2026.7.0"| HAPI
+    SIMPLIFIER[("Simplifier")] -->|"mii-pro@2027.0.0-ballot.2"| HAPI
     REPO[("PCOR-MII repo")] -->|"as a package"| HAPI
     HAPI_BASE["hapiproject/hapi:v8.12.0"] --> HAPI["PCOR-MII container<br/>localhost:8097"]
     HAPI -->|"$validate, GET Questionnaire?…"| CLIENT["Implementer"]
@@ -48,8 +48,8 @@ Details: [docker/README.md](https://github.com/BIH-CEI/PCOR-MII/tree/main/docker
 The MII PRO module is published as a FHIR NPM package on Simplifier. Best for integration into SUSHI, IG Publisher and FHIR validator builds.
 
 ```
-fhir install de.medizininformatikinitiative.kerndatensatz.pros 2026.7.0
-# unpacks into ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0/
+fhir install de.medizininformatikinitiative.kerndatensatz.pros 2027.0.0-ballot.2
+# unpacks into ~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2/
 
 ```
 
@@ -57,8 +57,8 @@ Example `sushi-config.yaml`:
 
 ```
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.pros: 2026.7.0
-  hl7.fhir.uv.sdc: 3.0.0
+  de.medizininformatikinitiative.kerndatensatz.pros: 2027.0.0-ballot.2
+  hl7.fhir.uv.sdc: 4.0.0
 
 ```
 
@@ -94,7 +94,7 @@ ValueSets come in `compose` form. For PROMIS that is sufficient because the conc
 
 On a stock HAPI server, `PUT Questionnaire/promis-29` with a new `Questionnaire.version` **overwrites** the existing entry. An older response referencing `…|2026.3.0` can then no longer be resolved cleanly — only one version coexists per `id`.
 
-For the PCOR-MII pilot this does not matter: one PRO version (2026.7.0) throughout. For a later migration, either put a version suffix in the `id` (for example `promis-29-v2026-4-1`) or run HAPI in multi-version mode. In responses, always carry the version in the reference (`…|2026.7.0`).
+For the PCOR-MII pilot this does not matter: one PRO version (2027.0.0-ballot.2) throughout. For a later migration, either put a version suffix in the `id` (for example `promis-29-v2026-4-1`) or run HAPI in multi-version mode. In responses, always carry the version in the reference (`…|2027.0.0-ballot.2`).
 
 This is also why every PCOR-MII response pins its questionnaire version: `QuestionnaireResponse.questionnaire` is the only place where the wording actually shown to the respondent is recorded.
 

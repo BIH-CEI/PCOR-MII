@@ -1,4 +1,4 @@
-# Startseite - PCOR-MII Implementation Guide v0.3.0
+# Startseite - PCOR-MII Implementation Guide v0.9.0
 
 ## Startseite
 
@@ -30,10 +30,13 @@ This IG provides uniform, interoperable questionnaires with which patient-report
 
 Reachable from the menu bar:
 
-1. **Questionnaires**— the defined questionnaires and how they are built
-1. **Implementation**— how the questionnaires are completed and evaluated
-1. **Release Notes**— versioning and change history
-1. **Artifacts**— the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems)
+1. **Instruments**— the overall view and one page per use case ([PSS](PSS.md),[AN](AN.md),[NTx](NTx.md)) with the battery as a table, with the instrument pages beneath
+1. **Questionnaires**— the tabular entry to every questionnaire with docs, resource, example response and score, plus the use-case manifests
+1. **Examples**— three example patients, four visit bundles and every example response
+1. **Implementation**,**Validation**,**Deployment**— from questionnaire to response, checking, and how to obtain the definitions
+1. **Design decisions**— the ADRs;**Rights & open points**— the rights situation of every instrument and everything still awaiting an answer
+1. **Release Notes**and**Upcoming changes**— change history and the state relative to the MII PRO module 2027
+1. **Artifacts**— the machine-readable FHIR resources (Questionnaires, ValueSets, CodeSystems, Libraries, examples)
 
 ### A note on language
 

@@ -1,4 +1,4 @@
-# UKHD-AN Ereignis einmalig oder wiederholt (Codes) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-AN Ereignis einmalig oder wiederholt (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: UKHD-AN Ereignis einmalig oder wiederholt (Codes) (Experimentell) 
 
@@ -19,12 +19,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ukhd-an-ereignishaeufigkeit",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdAnEreignishaeufigkeitCS",
   "title" : "UKHD-AN Ereignis einmalig oder wiederholt (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
+  "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `itemWeight` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,8 +45,8 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "content" : "complete",
   "count" : 2,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
     "description" : "Numerischer Ordinalwert (1-2, Dictionary-Codes).",
     "type" : "decimal"
   }],
@@ -54,7 +54,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "1",
     "display" : "um ein einmaliges",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -62,7 +62,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "2",
     "display" : "um ein mehrfaches Ereignis",
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   }]

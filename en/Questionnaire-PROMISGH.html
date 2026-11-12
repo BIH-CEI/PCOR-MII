@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROMIS-GH — PROMIS Global Health (2-Item-ShortForm) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PROMIS-GH — PROMIS Global Health (2-Item-ShortForm) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.15"}
-    h3,h4,h5,h6{--heading-prefix:"21.15"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.22"}
+    h3,h4,h5,h6{--heading-prefix:"23.22"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -218,12 +218,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -236,6 +239,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -280,7 +286,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Questionnaire-PcorExampleQuestionnaire.json.html">&lt; prev</a> | 
+            <a href="Questionnaire-PHQPANIK.json.html">&lt; prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -300,7 +306,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -348,7 +354,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
@@ -396,7 +402,7 @@ a[name="test"] + h3 + div {
   </table>
 
 <div data-fhir="generated">
-<p>Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).</p>
+<p>Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist seit MII-PRO-Modul 2027.0.0-ballot.2 als mii-qst-pro-promis-global-health enthalten; dieser Questionnaire ist per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen (linkIds nach Item Level Dictionary: Global01/Global02, upstream promis-global01/promis-global02). Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).</p>
 
 </div>
 
@@ -423,13 +429,13 @@ a[name="test"] + h3 + div {
       <div id="tbl-tree">
         <div id="tbl-tree-inner">
           <div data-fhir="generated"><p class="res-header-id"></p><a name="PROMISGH"> </a><a name="hcPROMISGH"> </a>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire">MII PR PRO Questionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-questionnaire.html">MII PR PRO Questionnaire</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=PROMISGH" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="qt-PROMISGH-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> PROMISGH</td>
-<td style="" class="hierarchy xhtCellBorder1">Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS&reg; Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).</td>
+<td style="" class="hierarchy xhtCellBorder1">Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS&reg; Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist seit MII-PRO-Modul 2027.0.0-ballot.2 als mii-qst-pro-promis-global-health enthalten; dieser Questionnaire ist per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen (linkIds nach Item Level Dictionary: Global01/Global02, upstream promis-global01/promis-global02). Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis).</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
 <td style="" class="hierarchy xhtCellBorder1">Questionnaire</td>
-<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH#0.3.0</td></tr>
+<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH#0.9.0</td></tr>
 <tr fhir="generated-heirarchy" id="qt-PROMISGH-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.Global01" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">PROMISGH / </span>Global01</td>
 <td style="" class="hierarchy xhtCellBorder1">Wie würden Sie Ihren Gesundheitszustand insgesamt beschreiben?</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -449,7 +455,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-sample">
         <div id="tbl-sample-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire">MII PR PRO Questionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-questionnaire.html">MII PR PRO Questionnaire</a></p></div>
 <div><div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: Global01">Wie würden Sie Ihren Gesundheitszustand insgesamt beschreiben?</span><select size="1" name="Global01" aria-label="Wie würden Sie Ihren Gesundheitszustand insgesamt beschreiben?"><option value="LA9206-9" selected="false">Ausgezeichnet</option><option value="LA13913-1" selected="false">Sehr gut</option><option value="LA8967-7" selected="false">Gut</option><option value="LA8968-5" selected="false">Einigermaßen</option><option value="LA8969-3" selected="false">Schlecht</option></select></p></div><div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Global01</li><li style="font-size: 10px">Answers: <a href="ValueSet-promis-global-skala-5-vs.html">PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)</a></li></ul></div></div>
 <div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: Global02">Wie würden Sie Ihre Lebensqualität insgesamt beschreiben?</span><select size="1" name="Global02" aria-label="Wie würden Sie Ihre Lebensqualität insgesamt beschreiben?"><option value="LA9206-9" selected="false">Ausgezeichnet</option><option value="LA13913-1" selected="false">Sehr gut</option><option value="LA8967-7" selected="false">Gut</option><option value="LA8968-5" selected="false">Einigermaßen</option><option value="LA8969-3" selected="false">Schlecht</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: Global02</li><li style="font-size: 10px">Answers: <a href="ValueSet-promis-global-skala-5-vs.html">PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)</a></li></ul></div></div></div></div>
@@ -461,7 +467,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-logic">
         <div id="tbl-logic-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire">MII PR PRO Questionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profile: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-questionnaire.html">MII PR PRO Questionnaire</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qlogic=PROMISGH" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="ql-PROMISGH-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> Global01</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="ValueSet-promis-global-skala-5-vs.html">PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)</a></td></tr>
@@ -478,7 +484,7 @@ a[name="test"] + h3 + div {
   <a name="test"> </a>
   <h3>Test this Questionnaire</h3>
   <div data-fhir="generated"><p>Try this questionnaire out:</p>
-<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH&amp;pID=pcor-mii&amp;pVersion=0.3.0">NLM Forms Library</a></li></ul></div>
+<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH&amp;pID=pcor-mii&amp;pVersion=0.9.0">NLM Forms Library</a></li></ul></div>
 
   <a name="responses"> </a>
   <h3>Responses for this Questionnaire</h3>
@@ -520,7 +526,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Questionnaire-PcorExampleQuestionnaire.json.html">&lt; prev</a>
+                <a href="Questionnaire-PHQPANIK.json.html">&lt; prev</a>
 
               </td>
               <td style="text-align:center">
@@ -542,10 +548,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

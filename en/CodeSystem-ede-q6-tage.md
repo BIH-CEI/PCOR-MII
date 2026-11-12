@@ -1,4 +1,4 @@
-# EDE-Q6 Häufigkeit in 28 Tagen (Codes) - PCOR-MII Implementation Guide v0.3.0
+# EDE-Q6 Häufigkeit in 28 Tagen (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: EDE-Q6 Häufigkeit in 28 Tagen (Codes) (Experimental) 
 
@@ -19,12 +19,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "ede-q6-tage",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "EdeQ6TageCS",
   "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+  "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). itemWeight-Property je Konzept für SDC-Scoring via .weight(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -45,9 +45,9 @@ This Code system is referenced in the definition of the following value sets:
   "content" : "complete",
   "count" : 7,
   "property" : [{
-    "code" : "ordinalValue",
-    "uri" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
-    "description" : "Numerischer Ordinalwert (0-6) für SDC-Scoring über .ordinal().",
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
+    "description" : "Numerischer Ordinalwert (0-6) für SDC-Scoring über .weight().",
     "type" : "decimal"
   }],
   "concept" : [{
@@ -58,7 +58,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "kein Tag"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 0
     }]
   },
@@ -70,7 +70,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "1–5 Tage"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 1
     }]
   },
@@ -82,7 +82,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "6–12 Tage"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 2
     }]
   },
@@ -94,7 +94,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "13–15 Tage"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 3
     }]
   },
@@ -106,7 +106,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "16–22 Tage"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 4
     }]
   },
@@ -118,7 +118,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "23–27 Tage"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 5
     }]
   },
@@ -130,7 +130,7 @@ This Code system is referenced in the definition of the following value sets:
       "value" : "jeden Tag"
     }],
     "property" : [{
-      "code" : "ordinalValue",
+      "code" : "itemWeight",
       "valueDecimal" : 6
     }]
   }]

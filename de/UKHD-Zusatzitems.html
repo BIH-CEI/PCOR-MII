@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>UKHD-Zusatzitems (sechs Bögen) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>UKHD-Zusatzitems (sechs Bögen) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.2.7"}
-    h3,h4,h5,h6{--heading-prefix:"2.2.7"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2.6"}
+    h3,h4,h5,h6{--heading-prefix:"2.2.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>UKHD-Zusatzitems (sechs Bögen)</h2>
   
 
@@ -327,7 +333,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#die-sechs-questionnaires" id="markdown-toc-die-sechs-questionnaires">Die sechs Questionnaires</a></li>
   <li><a href="#warum-ein-questionnaire-je-gruppe" id="markdown-toc-warum-ein-questionnaire-je-gruppe">Warum ein Questionnaire je Gruppe</a></li>
   <li><a href="#gemeinsame-entscheidungen-aller-sechs-bögen" id="markdown-toc-gemeinsame-entscheidungen-aller-sechs-bögen">Gemeinsame Entscheidungen aller sechs Bögen</a></li>
-  <li><a href="#antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist" id="markdown-toc-antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">ordinalValue</code> nur, wo die Skala ordinal ist</a></li>
+  <li><a href="#antwortskalen--itemweight-nur-wo-die-skala-ordinal-ist" id="markdown-toc-antwortskalen--itemweight-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">itemWeight</code> nur, wo die Skala ordinal ist</a></li>
   <li><a href="#timing-wird-nicht-modelliert--und-ist-trotzdem-sichtbar" id="markdown-toc-timing-wird-nicht-modelliert--und-ist-trotzdem-sichtbar"><code class="language-plaintext highlighter-rouge">TIMING</code> wird nicht modelliert — und ist trotzdem sichtbar</a></li>
   <li><a href="#rechtelage--eine-herkunftsfrage-keine-bloße-freigabefrage" id="markdown-toc-rechtelage--eine-herkunftsfrage-keine-bloße-freigabefrage">Rechtelage — eine Herkunftsfrage, keine bloße Freigabefrage</a></li>
   <li><a href="#offene-punkte-zum-dictionary" id="markdown-toc-offene-punkte-zum-dictionary">Offene Punkte zum Dictionary</a></li>
@@ -432,15 +438,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Kein Score, keine Instrument-Codes:</strong> Es gibt kein Instrument, das gescort werden könnte. LOINC 2.83 und SNOMED CT 2026-05-01 liefern für die tragenden Konzepte null Treffer (Recherche via fhir-terminology MCP, 2026-10-01); <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> trägt je Bogen den lokalen Katalogcode aus <a href="CodeSystem-pcor-questionnaire-catalogue.html">pcor-questionnaire-catalogue</a>.</p>
 
-<p><strong>Ja/Nein</strong> über das projektweite <a href="ValueSet-dem-ja-nein.html">DemJaNeinVS</a> (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem <code class="language-plaintext highlighter-rouge">ukhd-an-*</code>-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.</p>
+<p><strong>Ja/Nein</strong> als SNOMED CT <code class="language-plaintext highlighter-rouge">373066001</code>/<code class="language-plaintext highlighter-rouge">373067005</code> inline nach <a href="Designentscheidungen.html">ADR-013</a> (Dictionary-Kodierung 1 = ja / 0 = nein, dokumentarisch). Die übrigen Skalen sind eigene CodeSystems mit dem <code class="language-plaintext highlighter-rouge">ukhd-an-*</code>-Präfix in Id und Canonical — es benennt Standort und Entität, nicht eine Ressource.</p>
 
-<h3 id="antwortskalen--ordinalvalue-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">ordinalValue</code> nur, wo die Skala ordinal ist</h3>
+<h3 id="antwortskalen--itemweight-nur-wo-die-skala-ordinal-ist">Antwortskalen — <code class="language-plaintext highlighter-rouge">itemWeight</code> nur, wo die Skala ordinal ist</h3>
 
 <table>
   <thead>
     <tr>
       <th>Skala (Bogen)</th>
-      <th><code class="language-plaintext highlighter-rouge">ordinalValue</code></th>
+      <th><code class="language-plaintext highlighter-rouge">itemWeight</code></th>
       <th>Begründung</th>
     </tr>
   </thead>
@@ -468,7 +474,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><strong>Zur Falle bei <code class="language-plaintext highlighter-rouge">bdkm16</code>:</strong> Der <code class="language-plaintext highlighter-rouge">ordinalValue</code> trägt die Dictionary-Codes 1–4 und damit Rangplätze, <strong>nicht</strong> Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.</p>
+<p><strong>Zur Falle bei <code class="language-plaintext highlighter-rouge">bdkm16</code>:</strong> Der <code class="language-plaintext highlighter-rouge">itemWeight</code> trägt die Dictionary-Codes 1–4 und damit Rangplätze, <strong>nicht</strong> Besuchszahlen — „gar nicht" ist 1, nicht 0. Eine zählbasierte Auswertung braucht die Abbildung 1→0, 2→1, 3→2, 4→3+.</p>
 
 <p><a name="timing"></a></p>
 
@@ -492,23 +498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="offene-punkte-zum-dictionary">Offene Punkte zum Dictionary</h3>
 
-<p>Beim Modellieren sind Auffälligkeiten aufgefallen, die <strong>nicht in FHIR zu lösen</strong> sind, sondern im Item Level Dictionary oder mit dem Standort. Sie stehen zusätzlich als <code class="language-plaintext highlighter-rouge">designNote</code> am jeweiligen Item.</p>
-
-<p><strong>1. Herkunft des Wortlauts je Gruppe ungeklärt</strong> — siehe <a href="#rechtelage">Rechtelage</a>; konkret nachzufragen für <code class="language-plaintext highlighter-rouge">bdkm</code>, <code class="language-plaintext highlighter-rouge">erwEV</code> und <code class="language-plaintext highlighter-rouge">edp</code>.</p>
-
-<p><strong>2. <code class="language-plaintext highlighter-rouge">bdkm15</code> und <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> überschneiden sich.</strong> Beide fragen nach aktueller psychotherapeutischer Behandlung — in zwei Bögen, mit zwei verschiedenen Antwortskalen. Sie unterscheiden sich im Zeitbezug (<code class="language-plaintext highlighter-rouge">bdkm15</code> nur zur Aufnahme und mit Vorgeschichte, <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> zu jedem Termin und mit Setting), liefern zur Aufnahme aber teilweise dieselbe Information. Im Dictionary zu prüfen, ob das beabsichtigt ist.</p>
-
-<p><strong>3. Der Variablenname <code class="language-plaintext highlighter-rouge">treatment_outpatient</code> ist irreführend.</strong> Stufe 4 der Antwortskala erfasst ausdrücklich <strong>stationäre oder teilstationäre</strong> Behandlung; das Item fragt den Behandlungsstatus insgesamt ab. Der Name bleibt als <code class="language-plaintext highlighter-rouge">linkId</code> und <code class="language-plaintext highlighter-rouge">item.code</code> stehen, weil er die Dictionary-Variable ist — aber er darf nicht als Bedeutungsangabe gelesen werden.</p>
-
-<p><strong>4. <code class="language-plaintext highlighter-rouge">comorbid1</code> — formal unsauber, bewusst so belassen (entschieden 01.10.2026).</strong> Die Frage ist wörtlich eine Ja/Nein-Frage, das Dictionary sieht ein <strong>Textfeld</strong> vor. Gemeint ist das Textfeld: Dort sollen die weiteren <strong>Diagnosen</strong> stehen, nicht ein „ja". <code class="language-plaintext highlighter-rouge">type = text</code> bildet die Erhebung korrekt ab; der Wortlaut bleibt nach <a href="Designentscheidungen.html">ADR-010</a> unverändert. Praktische Folge: <strong>Das Feld enthält Diagnosetext, keine Ja/Nein-Angabe.</strong></p>
-
-<p><strong>5. Uneinheitliche Variablennamen in <code class="language-plaintext highlighter-rouge">UKHD-LE</code>.</strong> <code class="language-plaintext highlighter-rouge">life_event1_screening</code>/<code class="language-plaintext highlighter-rouge">life_event1_monitoring</code> gegen <code class="language-plaintext highlighter-rouge">lifev_discharge</code>/<code class="language-plaintext highlighter-rouge">lifev_text</code> — zwei Präfixe für eine Gruppe, und ein <code class="language-plaintext highlighter-rouge">life_event2</code> existiert nicht. Außerdem nennt die Beispielliste von <code class="language-plaintext highlighter-rouge">life_event1_screening</code> bloß „Partnerschaften", wo die beiden anderen „Auflösung einer Partnerschaften" sagen; dort fehlt offenbar der Kopf der Wendung.</p>
-
-<p><strong>6. Die Gruppen-ID <code class="language-plaintext highlighter-rouge">UKHD_D</code> trägt einen Unterstrich</strong>, während alle anderen Gruppen einen Bindestrich führen. Im Dictionary zu vereinheitlichen; Ressourcen-Id und Katalogcode folgen der Hauskonvention (<code class="language-plaintext highlighter-rouge">UKHD-D</code>/<code class="language-plaintext highlighter-rouge">ukhd-d</code>), die Dictionary-Schreibweise bleibt in der Property <code class="language-plaintext highlighter-rouge">instrument</code> erhalten.</p>
-
-<p><strong>7. <code class="language-plaintext highlighter-rouge">bdkm16</code> fragt nach Arztbesuchen, steht aber in <em>Past Treatment</em>.</strong> Inhaltlich gehört das Item eher zur Versorgungsinanspruchnahme (vgl. <code class="language-plaintext highlighter-rouge">UKE-HCU</code> in PSS).</p>
-
-<p><strong>8. <code class="language-plaintext highlighter-rouge">UKHD-D</code> überschneidet sich mit dem <a href="MHI.html">MHI</a>.</strong> Dort erheben <code class="language-plaintext highlighter-rouge">CPCOR-DIAG</code> (Diagnosegruppe zur Selbstzuordnung) und <code class="language-plaintext highlighter-rouge">GIPS13</code> (Liste chronischer Erkrankungen) <strong>kodiert</strong>, was hier als <strong>Freitext</strong> erhoben wird. Welche Darstellung für die Auswertung maßgeblich ist, ist fachlich zu klären.</p>
+<p>Beim Modellieren sind Auffälligkeiten aufgefallen, die nicht in FHIR zu lösen sind, sondern im Item Level Dictionary oder mit dem Standort (Überschneidungen <code class="language-plaintext highlighter-rouge">bdkm15</code>/<code class="language-plaintext highlighter-rouge">treatment_outpatient</code> und <code class="language-plaintext highlighter-rouge">UKHD-D</code>/MHI, irreführende Variablennamen, uneinheitliche Präfixe in <code class="language-plaintext highlighter-rouge">UKHD-LE</code>, Unterstrich in <code class="language-plaintext highlighter-rouge">UKHD_D</code>, Einordnung von <code class="language-plaintext highlighter-rouge">bdkm16</code>). Sie stehen als <code class="language-plaintext highlighter-rouge">designNote</code> am jeweiligen Item und gesammelt auf <a href="Rechtelage.html#ukhd-dictionary">Rechtelage und offene Punkte</a>.</p>
 
 <h3 id="hinweis-zur-erhebung">Hinweis zur Erhebung</h3>
 
@@ -564,10 +554,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

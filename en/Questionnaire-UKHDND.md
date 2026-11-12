@@ -1,4 +1,4 @@
-# UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN) (Experimental) 
 
@@ -23,7 +23,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "Dictionary-Gruppe `UKHD-ND`, DOMAIN *New Diagnosis*, Kategorie DCH. Dieselbe Zeitfenster-Konstruktion wie `UKHD-LE`, aber mit **zwei** statt drei Ja/Nein-Items: Ein Aufnahme-Item fehlt, und das ist konsistent — bei Aufnahme gibt es definitionsgemäß keine „weiteren“ Diagnosen seit der letzten Befragung, und die Aufnahmediagnosen erhebt stattdessen `UKHD_D`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+    "valueMarkdown" : "Dictionary-Gruppe `UKHD-ND`, DOMAIN *New Diagnosis*, Kategorie DCH. Dieselbe Zeitfenster-Konstruktion wie `UKHD-LE`, aber mit **zwei** statt drei Ja/Nein-Items: Ein Aufnahme-Item fehlt, und das ist konsistent — bei Aufnahme gibt es definitionsgemäß keine „weiteren“ Diagnosen seit der letzten Befragung, und die Aufnahmediagnosen erhebt stattdessen `UKHD_D`. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UKHDND",
   "title" : "UKHD-ND — Neue Diagnosen (UKHD-Zusatzitems AN)",
   "status" : "draft",
@@ -74,7 +74,20 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }],
     "text" : "Gab es seit der letzten Befragung weitere medizinische / psychische Diagnosen?",
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "linkId" : "new_diagnosis_discharge",
@@ -84,7 +97,20 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     }],
     "text" : "Gab es seit Ihrer Aufnahme weitere medizinische / psychische Diagnosen?",
     "type" : "choice",
-    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
   },
   {
     "extension" : [{
@@ -102,18 +128,16 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
       "question" : "new_diagnosis_monitoring",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     },
     {
       "question" : "new_diagnosis_discharge",
       "operator" : "=",
       "answerCoding" : {
-        "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-        "code" : "ja",
-        "display" : "Ja"
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
       }
     }],
     "enableBehavior" : "any"

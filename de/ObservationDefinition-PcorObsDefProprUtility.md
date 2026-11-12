@@ -1,4 +1,4 @@
-# PROPr — PROMIS-Preference Utility Score - PCOR-MII Implementation Guide v0.3.0
+# PROPr — PROMIS-Preference Utility Score - PCOR-MII Implementation Guide v0.9.0
 
 ## ObservationDefinition: PROPr — PROMIS-Preference Utility Score 
 
@@ -8,9 +8,9 @@
 
 -------
 
-Profil: [MII PR PRO Score Blueprint / Template](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint)
+Profil: [MII PR PRO Score Blueprint / Template](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-score-blueprint.html)
 
-**ArtifactVersion**: 0.3.0
+**ArtifactVersion**: 0.9.0
 
 **category**: Survey
 
@@ -47,7 +47,7 @@ Profil: [MII PR PRO Score Blueprint / Template](https://simplifier.net/resolve?s
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-version",
-    "valueString" : "0.3.0"
+    "valueString" : "0.9.0"
   }],
   "category" : [{
     "coding" : [{

@@ -1,4 +1,4 @@
-# MHI — Medical History - PCOR-MII Implementation Guide v0.3.0
+# MHI — Medical History - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: MHI — Medical History (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -33,7 +33,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "MHI",
   "title" : "MHI — Medical History",
   "status" : "draft",
@@ -48,7 +48,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument.",
+  "description" : "Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument. Die NTx-spezifische Transplantationsanamnese ist ein eigener Ergänzungsbogen (MHI-NTx).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -188,7 +188,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }],
       "text" : "Rauchen Sie (einschließlich E-Zigaretten)?",
       "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS57b",
@@ -207,9 +220,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "GIPS57a",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-zigaretten-band-vs"
@@ -227,7 +239,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }],
       "text" : "Trinken Sie Alkohol?",
       "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS56b1",
@@ -241,12 +266,24 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "GIPS56a",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS56b2",
@@ -260,12 +297,24 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "GIPS56a",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS56b3",
@@ -279,12 +328,24 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "GIPS56a",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS56b4",
@@ -298,12 +359,24 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "GIPS56a",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "GIPS58",
@@ -318,7 +391,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }],
       "text" : "Nutzen Sie hin und wieder eine der folgenden Substanzen: Cannabis, Ecstasy, Kokain, Amphetamine, Anabolika, Crystal?",
       "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     }]
   },
   {
@@ -333,7 +419,20 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
       }],
       "text" : "Nehmen Sie aktuell Medikamente (einschließlich der Pille) ein?",
       "type" : "choice",
-      "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-ja-nein"
+      "answerOption" : [{
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001",
+          "display" : "Yes"
+        }
+      },
+      {
+        "valueCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "373067005",
+          "display" : "No"
+        }
+      }]
     },
     {
       "linkId" : "medication_text",
@@ -347,9 +446,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }]
     },
@@ -365,9 +463,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }]
     },
@@ -379,9 +476,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "item" : [{
@@ -439,9 +535,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "item" : [{
@@ -499,9 +594,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "item" : [{
@@ -559,9 +653,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "item" : [{
@@ -619,9 +712,8 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
         "question" : "medication1",
         "operator" : "=",
         "answerCoding" : {
-          "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-          "code" : "ja",
-          "display" : "Ja"
+          "system" : "http://snomed.info/sct",
+          "code" : "373066001"
         }
       }],
       "item" : [{

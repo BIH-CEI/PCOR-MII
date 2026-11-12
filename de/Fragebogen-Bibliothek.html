@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Fragebogen-Bibliothek - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Fragebogen-Bibliothek - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,11 +285,11 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="UKHD-EDP.html">&lt; zurück</a> | 
+            <a href="NTx-Instrumente.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
-          | <a href="Demographie.html">weiter &gt;</a>
+          | <a href="Beispiele.html">weiter &gt;</a>
 
           </span>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Fragebogen-Bibliothek</h2>
   
 
@@ -333,7 +339,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Diese Seite ist der <strong>tabellarische Einstieg zu allen Fragebögen</strong> — nach dem Muster der <a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek?version=current">PRO-Bibliothek des MII-PRO-Moduls</a>. Je Instrument: die Dokumentationsseite, die <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Definition (PCOR-MII-Artefakt oder MII-PRO-Bibliothek), die Beispielantwort und — wo vorhanden — das Score-Artefakt.</p>
+<p>Diese Seite ist der <strong>tabellarische Einstieg zu allen Fragebögen</strong> — nach dem Muster der <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/pro-library.html">PRO-Bibliothek des MII-PRO-Moduls</a>. Je Instrument: die Dokumentationsseite, die <code class="language-plaintext highlighter-rouge">Questionnaire</code>-Definition (PCOR-MII-Artefakt oder MII-PRO-Bibliothek), die Beispielantwort und — wo vorhanden — das Score-Artefakt.</p>
 
 <p>Die fachliche Auswahl und Rechtelage steht auf <a href="Instrumente.html">Instrumente</a>; die Use-Case-Sichten folgen <a href="#use-cases">unten</a>.</p>
 
@@ -381,7 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="PROMIS.html">Seite</a></td>
-      <td><a href="Questionnaire-PROMISGH.html">PROMISGH</a> (Übergang, bis 10-Item-Skala upstream)</td>
+      <td><a href="Questionnaire-PROMISGH.html">PROMISGH</a> (2-Item-Zuschnitt, <code class="language-plaintext highlighter-rouge">derivedFrom</code> der 10-Item-Skala des Moduls)</td>
       <td>—</td>
       <td>—</td>
     </tr>
@@ -391,7 +397,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="PROMIS-16.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html">✓</a></td>
       <td><a href="ObservationDefinition-PcorObsDefProprUtility.html">PROPr-ObsDef</a></td>
     </tr>
@@ -411,7 +417,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="WHODAS-12.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WHODAS-2.0?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -421,7 +427,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="PHQ.html">Übersicht</a>, <a href="PHQ-9.html">PHQ-9</a>, <a href="PHQ-15.html">PHQ-15</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PHQ-9?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-9.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -431,9 +437,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="GAD-7.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/GAD-7?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-gad-7.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html">✓</a></td>
       <td>—</td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L (Outcome, jährlich)</td>
+      <td style="text-align: center">•</td>
+      <td style="text-align: center">•</td>
+      <td style="text-align: center">•</td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">MII PRO, Variante collectable</a></td>
+      <td>—</td>
+      <td>MII PRO: Index, Profil, VAS</td>
     </tr>
     <tr>
       <td>EURONET-SOMA</td>
@@ -441,7 +457,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td><a href="EURONET-SOMA.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/EURONET-SOMA?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euronet-soma.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -471,7 +487,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td><a href="SSD-12.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/SSD-12?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-ssd-12.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -481,7 +497,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td><a href="WI-7.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/WI-7?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-wi-7.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -491,7 +507,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td><a href="SCOFF.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/SCOFF?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-scoff.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -501,7 +517,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td><a href="ISR-Z.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/ISR-Z?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-isr-z.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -511,7 +527,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td><a href="PC-PTSD.html">Seite</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PC-PTSD?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-pc-ptsd.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html">✓</a></td>
       <td>—</td>
     </tr>
@@ -523,6 +539,66 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="EXPECT.html">Seite</a></td>
       <td><a href="Questionnaire-EXPECT.html">EXPECT</a></td>
       <td><a href="QuestionnaireResponse-EXPECTResponse.html">✓</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>PHQ-D Panik-Block</td>
+      <td style="text-align: center">•</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td><a href="PHQ-Panik.html">Seite</a></td>
+      <td><a href="Questionnaire-PHQPANIK.html">PHQPANIK</a></td>
+      <td><a href="QuestionnaireResponse-PHQPANIKResponse.html">✓</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>BAASIS</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><a href="NTx-Instrumente.html">Seite</a></td>
+      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> (metadata-only)</td>
+      <td><a href="QuestionnaireResponse-BAASISResponse.html">Beispiel</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>ABQ</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><a href="NTx-Instrumente.html">Seite</a></td>
+      <td><a href="Questionnaire-ABQ.html">ABQ</a> (metadata-only)</td>
+      <td><a href="QuestionnaireResponse-ABQResponse.html">Beispiel</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>MTSOSD-R59</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><a href="NTx-Instrumente.html">Seite</a></td>
+      <td><a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a> (metadata-only)</td>
+      <td><a href="QuestionnaireResponse-MTSOSDR59Response.html">Beispiel</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>MHI-NTx — Transplantationsanamnese</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">Seite</a></td>
+      <td><a href="Questionnaire-MHINTX.html">MHINTX</a></td>
+      <td><a href="QuestionnaireResponse-MHINTXResponse.html">Beispiel</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>NTx-Verlaufsbefragung (MHH)</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">Seite</a></td>
+      <td><a href="Questionnaire-NTXVERLAUF.html">NTXVERLAUF</a></td>
+      <td><a href="QuestionnaireResponse-NTXVERLAUFResponse.html">Beispiel</a></td>
       <td>—</td>
     </tr>
     <tr>
@@ -672,46 +748,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispielpatienten-und-bundles">Beispielpatienten und Bundles</h3>
 
-<p>Zwei synthetische Beispielpatienten tragen zusammenhängende <strong>Use-Case-Datensätze</strong>; je Erhebungstermin bündelt ein <code class="language-plaintext highlighter-rouge">Bundle</code> (type <code class="language-plaintext highlighter-rouge">collection</code>) den Patient mit allen Antworten des Termins:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Bundle</th>
-      <th>Patient</th>
-      <th>Termin</th>
-      <th>Inhalt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-an-initial.html">AN — Initial</a></td>
-      <td><a href="Patient-pcor-mii-exa-patient-an.html">Patientin AN</a></td>
-      <td>18.06.2026</td>
-      <td>DEM, MHI und die zehn AN-Antworten des Screening-Termins</td>
-    </tr>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">AN — Monitoring</a></td>
-      <td><a href="Patient-pcor-mii-exa-patient-an.html">Patientin AN</a></td>
-      <td>30.07.2026</td>
-      <td>neun Verlaufsantworten — darunter die <strong>erste UKHD-ND-Antwort</strong> und die metadata-only-Antwort zu UKHD-EDP</td>
-    </tr>
-    <tr>
-      <td><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">PSS — Screening</a></td>
-      <td><a href="Patient-pcor-mii-exa-patient-pss.html">Patient PSS</a></td>
-      <td>25.06.2026</td>
-      <td>die vollständige PSS-Batterie: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI plus zwölf Antworten auf MII-PRO-Questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Die Bundles werden mit <code class="language-plaintext highlighter-rouge">scripts/build-example-bundles.py</code> aus den Einzelantworten erzeugt und eingecheckt; die Termin-Zuordnung ist dort explizit gepflegt. Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Logik wird am Terminvergleich sichtbar: Was zu einem Termin nicht erhoben wird, <strong>fehlt</strong> in dessen Bundle, statt leer dazustehen.</p>
+<p>Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 46 Beispielantworten sind auf der Seite <a href="Beispiele.html">Beispiele</a> beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.</p>
 
 <p><a name="use-cases"></a></p>
 
 <h3 id="use-case-pss--persistierende-somatische-symptome">Use Case PSS — Persistierende somatische Symptome</h3>
 
-<p>Fachliche Beschreibung: <a href="PSS.html">PSS</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pinnt alle 21 Bögen versioniert (<code class="language-plaintext highlighter-rouge">asset-collection</code>; Rückwärtssuche per <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).</p>
+<p>Fachliche Beschreibung: <a href="PSS.html">PSS</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-pss.html">Library/use-case-pss</a> pinnt alle 23 Bögen versioniert (<code class="language-plaintext highlighter-rouge">asset-collection</code>; Rückwärtssuche per <code class="language-plaintext highlighter-rouge">Library?composed-of=&lt;canonical&gt;</code>). PROMIS-16 und PROMIS-29 + Cognitive Function sind darin als Standortvarianten markiert (s. Pilot-Abschnitt unten).</p>
 
 <table>
   <thead>
@@ -732,7 +775,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>PROMIS-16, PROMIS-29 + Cognitive Function (SF 4a), Global Health</td>
       <td><a href="PROMIS.html">PROMIS</a></td>
-      <td><a href="https://simplifier.net/guide/modul-pro-v2026/MIIIGModulPRO/PRO-Bibliothek/PROMIS/PROMIS-16.page.md?version=current">MII PRO</a></td>
+      <td><a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">MII PRO</a></td>
       <td><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html">✓</a></td>
     </tr>
     <tr>
@@ -748,9 +791,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>—</td>
     </tr>
     <tr>
-      <td>OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI</td>
-      <td><a href="OPD-SFK.html">OPD-SFK</a>, <a href="EXPECT.html">EXPECT</a>, <a href="IPQ-S.html">IPQ-S</a>, <a href="GSLTPAQ.html">GSLTPAQ</a>, <a href="WAI.html">WAI</a></td>
-      <td><a href="Questionnaire-OPDSFK.html">OPDSFK</a>, <a href="Questionnaire-EXPECT.html">EXPECT</a>, <a href="Questionnaire-IPQS.html">IPQS</a>, <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ</a>, <a href="Questionnaire-WAI.html">WAI</a></td>
+      <td>OPD-SFK, EXPECT, IPQ-S, GSLTPAQ, WAI, PHQ-D Panik-Block</td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a>, <a href="EXPECT.html">EXPECT</a>, <a href="IPQ-S.html">IPQ-S</a>, <a href="GSLTPAQ.html">GSLTPAQ</a>, <a href="WAI.html">WAI</a>, <a href="PHQ-Panik.html">PHQ-D Panik-Block</a></td>
+      <td><a href="Questionnaire-OPDSFK.html">OPDSFK</a>, <a href="Questionnaire-EXPECT.html">EXPECT</a>, <a href="Questionnaire-IPQS.html">IPQS</a>, <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ</a>, <a href="Questionnaire-WAI.html">WAI</a>, <a href="Questionnaire-PHQPANIK.html">PHQPANIK</a></td>
       <td>—</td>
     </tr>
   </tbody>
@@ -758,7 +801,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-an--anorexia-nervosa">Use Case AN — Anorexia nervosa</h3>
 
-<p>Fachliche Beschreibung: <a href="AN.html">AN</a>; vollständige Nachschlagetabelle mit Rechtestatus: <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pinnt alle 24 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden <strong>einen</strong> zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).</p>
+<p>Fachliche Beschreibung und Instrumententabelle: <a href="AN.html">AN</a>. <strong>Maschinenlesbar:</strong> <a href="Library-use-case-an.html">Library/use-case-an</a> pinnt alle 25 Bögen versioniert; PROMIS-16 und PROMIS-29 + Cognitive Function als Standortvarianten markiert. Die AN-Beispielantworten bilden <strong>einen</strong> zusammenhängenden Erhebungstermin ab (18.06.2026, dieselbe Patientin).</p>
 
 <table>
   <thead>
@@ -805,11 +848,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-ntx--nierentransplantation">Use Case NTx — Nierentransplantation</h3>
 
-<p>Zurückgestellt — kein Manifest (die Codes <code class="language-plaintext highlighter-rouge">ntxr</code>/<code class="language-plaintext highlighter-rouge">ntxd</code> führt <a href="CodeSystem-pcor-use-case.html">pcor-use-case</a> bereits; das Domain Overview trennt Empfänger und Spender). Noch keine Artefakte: BAASIS, MTSOSD-R59 und ABQ sind rechtlich nicht publizierbar und als metadata-only <strong>vorgesehen</strong> (s. <a href="Instrumente.html">Instrumente</a>). Die entitätsübergreifenden Bögen (DEM, MHI, PROMIS, PHQ-8, …) gelten auch hier.</p>
+<p>Fachliche Beschreibung: <a href="NTx.html">NTx</a>. Das Domain Overview trennt <strong>Empfänger (NTXr)</strong> und <strong>Spender (NTXd)</strong> mit eigenen Prioritätsprofilen; seit 2026-11-05 gibt es für beide ein Manifest.</p>
+
+<p><strong>Maschinenlesbar:</strong> <a href="Library-use-case-ntxr.html">Library/use-case-ntxr</a> pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs <a href="NTx-Instrumente.html">BAASIS, ABQ und MTSOSD-R59</a>, die Transplantationsanamnese <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> und die <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a>. <a href="Library-use-case-ntxd.html">Library/use-case-ntxd</a> enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Doku</th>
+      <th><code class="language-plaintext highlighter-rouge">Questionnaire</code></th>
+      <th>Beispielantwort</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BAASIS, ABQ, MTSOSD-R59 (metadata-only)</td>
+      <td><a href="NTx-Instrumente.html">NTx-Instrumente</a></td>
+      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> · <a href="Questionnaire-ABQ.html">ABQ</a> · <a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a></td>
+      <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASIS</a> · <a href="QuestionnaireResponse-ABQResponse.html">ABQ</a> · <a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSD-R59</a></td>
+    </tr>
+    <tr>
+      <td>MHI-NTx — Transplantationsanamnese</td>
+      <td><a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">NTx-Instrumente</a></td>
+      <td><a href="Questionnaire-MHINTX.html">MHINTX</a></td>
+      <td><a href="QuestionnaireResponse-MHINTXResponse.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>NTx-Verlaufsbefragung (MHH)</td>
+      <td><a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Instrumente</a></td>
+      <td><a href="Questionnaire-NTXVERLAUF.html">NTXVERLAUF</a></td>
+      <td><a href="QuestionnaireResponse-NTXVERLAUFResponse.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>DEM, MHI, WAI, PROMIS, WHODAS, PHQ-8, GAD-7, EURONET-SOMA, EQ-5D-5L</td>
+      <td>s. Gesamttabelle</td>
+      <td>s. Gesamttabelle</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="pilot-50-first-patients--gemeinsamer-kern-aller-use-cases">Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases</h3>
 
-<p>Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: <a href="Bereitstellung.html#pilot">Bereitstellung</a>). <strong>Maschinenlesbar:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pinnt die <strong>Schnittmenge</strong> der Use Cases versioniert — genau die 11 Bögen, die in den Spalten PSS, AN <strong>und</strong> NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI, PROMIS-GH sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7 und EURONET-SOMA. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. <strong>Standortvarianten:</strong> PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code> markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit <code class="language-plaintext highlighter-rouge">selectionBehavior = exactly-one</code>; die ist nicht Teil dieser Version.</p>
+<p>Der Pilot ist kein klinischer Use Case, sondern das Programm des ersten Datenaustauschs (Ablauf: <a href="Bereitstellung.html#pilot">Bereitstellung</a>). <strong>Maschinenlesbar:</strong> <a href="Library-pilot-50fp.html">Library/pilot-50fp</a> pinnt die <strong>Schnittmenge</strong> der Use Cases versioniert — genau die 12 Bögen, die in den Spalten PSS, AN <strong>und</strong> NTx der Gesamttabelle markiert sind und für die ein Artefakt existiert: DEM, MHI, WAI, PROMIS-GH sowie PROMIS-16, PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans), WHODAS 2.0, PHQ-9, GAD-7, EURONET-SOMA und EQ-5D-5L. Nicht enthalten: OPD-SFK (nicht in NTx), PHQ-15 (nur PSS). Die Zusammenstellung ist eine Ableitungsregel aus der Tabelle, keine eigene Auswahl — wer sie ändern will, ändert die Tabelle. Konsumenten, die eine vollständige Batterie brauchen, laden das Manifest des jeweiligen Use Case. <strong>Standortvarianten:</strong> PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Alternativen, zwischen denen ein Standort wählt. Beide stehen in jedem Manifest, weil Empfänger Antworten beider Standorttypen auflösen müssen; die Variante ist je Eintrag über die CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code> markiert als Text, bewusst ohne eigenes CodeSystem. Ein Entweder-oder erzwingen kann erst eine PlanDefinition mit <code class="language-plaintext highlighter-rouge">selectionBehavior = exactly-one</code>; die ist nicht Teil dieser Version.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; maschinenlesbare Gesamtliste unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -839,7 +921,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="UKHD-EDP.html">&lt; zurück</a>
+                <a href="NTx-Instrumente.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -847,7 +929,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Demographie.html">weiter ></a>
+                <a href="Beispiele.html">weiter ></a>
 
               </td>
             </tr>
@@ -861,10 +943,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

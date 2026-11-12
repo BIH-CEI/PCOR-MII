@@ -1,4 +1,4 @@
-# UKHD-EDP — Essstörungspathologie (11 Items, metadata-only) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-EDP — Essstörungspathologie (11 Items, metadata-only) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: UKHD-EDP — Essstörungspathologie (11 Items, metadata-only) (Experimentell) 
 
@@ -23,7 +23,7 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ Es sind derzeit keine QuestionnaireResponse-Instanzen für diesen Fragebogen in 
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Itemzahl, Antwortformat und Wertebereiche sind abgebildet; Item-Texte sind neutrale Beschreibungen des erfragten Konstrukts, Antwortstufen neutral benannt. (2) **Zwei unabhängige Gründe dafür** — der Block ist vermutlich ein EDI-2-Zuschnitt (Hogrefe-Testverfahren), und für die Standort-Itemgruppen liegt ohnehin keine dokumentierte Freigabe vor. Metadata-only ist unter beiden Lesarten richtig; die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen. (3) **Die Identifikation ist nicht bestätigt** — sie stützt sich auf Inhalt und auf das sechsstufige Antwortformat (das EDI-2 nutzt sechs Stufen), nicht auf einen Wortlautabgleich. Der Abgleich gegen den deutschen EDI-2-Bogen ist der erste zu prüfende Schritt. (4) **Kein Score:** Ein Item je Subskala bildet die Subskala nicht ab (ADR-003 Punkt 3); `ordinalValue` 1–6 ist gesetzt, damit eine spätere Auswertung möglich bleibt. (5) **Kein `Questionnaire.code`** und **keine Instrumenten-`linkId`s**: Beides wäre eine Behauptung über die Instrumentenidentität, solange sie nicht bestätigt ist. Bestätigt sie sich, sind die `linkId`s nach ADR-008 Regel 1 auf die EDI-2-Itemnummern umzustellen. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+    "valueMarkdown" : "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Itemzahl, Antwortformat und Wertebereiche sind abgebildet; Item-Texte sind neutrale Beschreibungen des erfragten Konstrukts, Antwortstufen neutral benannt. (2) **Zwei unabhängige Gründe dafür** — der Block ist vermutlich ein EDI-2-Zuschnitt (Hogrefe-Testverfahren), und für die Standort-Itemgruppen liegt ohnehin keine dokumentierte Freigabe vor. Metadata-only ist unter beiden Lesarten richtig; die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen. (3) **Die Identifikation ist nicht bestätigt** — sie stützt sich auf Inhalt und auf das sechsstufige Antwortformat (das EDI-2 nutzt sechs Stufen), nicht auf einen Wortlautabgleich. Der Abgleich gegen den deutschen EDI-2-Bogen ist der erste zu prüfende Schritt. (4) **Kein Score:** Ein Item je Subskala bildet die Subskala nicht ab (ADR-003 Punkt 3); `itemWeight` 1–6 ist gesetzt, damit eine spätere Auswertung möglich bleibt. (5) **Kein `Questionnaire.code`** und **keine Instrumenten-`linkId`s**: Beides wäre eine Behauptung über die Instrumentenidentität, solange sie nicht bestätigt ist. Bestätigt sie sich, sind die `linkId`s nach ADR-008 Regel 1 auf die EDI-2-Itemnummern umzustellen. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UKHDEDP",
   "title" : "UKHD-EDP — Essstörungspathologie (11 Items, metadata-only)",
   "status" : "draft",

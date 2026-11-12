@@ -1,4 +1,4 @@
-# UKHD-AN Ereignis einmalig oder wiederholt - PCOR-MII Implementation Guide v0.3.0
+# UKHD-AN Ereignis einmalig oder wiederholt - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: UKHD-AN Ereignis einmalig oder wiederholt (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "ukhd-an-ereignishaeufigkeit-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/ukhd-an-ereignishaeufigkeit-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdAnEreignishaeufigkeitVS",
   "title" : "UKHD-AN Ereignis einmalig oder wiederholt",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

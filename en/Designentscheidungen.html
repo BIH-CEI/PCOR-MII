@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Designentscheidungen - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Designentscheidungen - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"18"}
-    h3,h4,h5,h6{--heading-prefix:"18"}</style>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -283,7 +289,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Kommende-Aenderungen.html">next &gt;</a>
+          | <a href="Rechtelage.html">next &gt;</a>
 
           </span>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Designentscheidungen</h2>
   
 
@@ -324,432 +330,132 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#offen--wartet-auf-rückmeldung" id="markdown-toc-offen--wartet-auf-rückmeldung">Offen — wartet auf Rückmeldung</a></li>
-  <li><a href="#entschieden" id="markdown-toc-entschieden">Entschieden</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<p>Kurzes Entscheidungslog für den PCOR-MII IG — Architektur-Entscheidungen (ADRs) und offene Punkte. Neueste Einträge oben. Diese Seite ist die einzige gepflegte Fassung; die frühere Datei <code class="language-plaintext highlighter-rouge">docs/decisions.md</code> im Repository verweist nur noch hierher.</p>
-
-<h3 id="offen--wartet-auf-rückmeldung">Offen — wartet auf Rückmeldung</h3>
-
-<h4 id="-begriffsklärung-publiziert-vs-verlegt">📎 Begriffsklärung: publiziert vs. verlegt</h4>
-
-<p>Mehrere der offenen Rechtepunkte hängen an derselben Unterscheidung, die in der DIZ-Implementierungsliste nicht vorkommt:</p>
-
-<p><strong>Publiziert</strong> heißt: Über das Instrument wurde berichtet — typischerweise in einem Fachartikel, der Konstruktion, Psychometrie oder Validierung beschreibt. Der Artikel ist zitierbar und oft frei zugänglich. Ob der <em>Fragebogen selbst</em> nachgenutzt werden darf, sagt das noch nicht.</p>
-
-<p><strong>Verlegt</strong> heißt: Das Instrument ist ein <strong>Produkt eines Verlags</strong> — Manual, Fragebogen und Auswertungsbogen werden als Werk vertrieben. Hier ist der Wortlaut nicht Beiwerk einer Publikation, sondern die Ware selbst. Entsprechend stehen dort Rechtevorbehalte, die eine Weiterverwendung des Wortlauts ausdrücklich erfassen.</p>
-
-<p>Praktisch folgt daraus: <strong>Frei zugänglich ist nicht frei nachnutzbar.</strong> Dass ein Verlag eine PDF zum Download anbietet, ist Service, keine Lizenz. Umgekehrt kann ein Instrument formal „nur" in einer Zeitschrift publiziert sein und trotzdem frei nutzbar, wenn die Autor:innen den Bogen selbst bereitstellen.</p>
-
-<p>Auf die PCOR-MII-Instrumente angewandt:</p>
+<p>Entscheidungslog für den PCOR-MII IG — die Architektur-Entscheidungen (ADRs), neueste zuerst. Diese Seite enthält nur <strong>Entschiedenes</strong>; was noch auf Rückmeldung wartet, steht gesammelt auf <a href="Rechtelage.html">Rechtelage und offene Punkte</a>, und was umgesetzt ist, in den <a href="Release-Notes.html">Release Notes</a>. Die frühere Datei <code class="language-plaintext highlighter-rouge">docs/decisions.md</code> im Repository verweist nur noch hierher.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Instrument</th>
-      <th>Status</th>
-      <th>Folge</th>
+      <th>ADR</th>
+      <th>Entscheidung</th>
+      <th>Datum</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="ERQ-6.html">ERQ-6</a></td>
-      <td>publiziert <strong>und</strong> von den Autor:innen selbst frei bereitgestellt (Stanford Psychophysiology Laboratory)</td>
-      <td>nutzbar</td>
+      <td>ADR-014</td>
+      <td>Lizenzierte Bögen als Variantenpaar: öffentliche Definition, private erfassbare Variante</td>
+      <td>2026-11-10</td>
     </tr>
     <tr>
-      <td><a href="ACE.html">ACE</a> — englisches Original</td>
-      <td>publiziert, Public-Health-Standard (Felitti 1998, Kaiser/CDC)</td>
-      <td>nutzbar</td>
+      <td>ADR-013</td>
+      <td>Ja/Nein nach der Best-Practice-Empfehlung des TC Terminologien</td>
+      <td>2026-11-05</td>
     </tr>
     <tr>
-      <td><a href="ACE.html">ACE</a> — <strong>deutsche Fassung ACE-D</strong></td>
-      <td>© Schäfer, Wingenfeld &amp; Spitzer 2009; <strong>Gesamtbogen nur über den Autor beziehbar</strong></td>
-      <td>Zustimmung nötig — siehe offener Punkt</td>
+      <td>ADR-012</td>
+      <td>Use-Case-spezifische Instrumente bleiben in PCOR-MII, auch wenn sie frei wären</td>
+      <td>2026-11-05</td>
     </tr>
     <tr>
-      <td><a href="ANSOCQ-2.html">ANSOCQ-2</a></td>
-      <td>publiziert; deutsche Fassung von den Validierungs-Autor:innen</td>
-      <td>nutzbar</td>
+      <td>ADR-011</td>
+      <td>Erhebungseinheit und Instrumenteneinheit trennen; die Zuordnung läuft über <code class="language-plaintext highlighter-rouge">item.code</code></td>
+      <td>2026-09-30</td>
     </tr>
     <tr>
-      <td><a href="EDE-Q6.html">EDE-Q6</a></td>
-      <td><strong>verlegt</strong> (dgvt-Verlag, © Anja Hilbert, alle Rechte vorbehalten)</td>
-      <td>Zustimmung nötig</td>
+      <td>ADR-010</td>
+      <td>Sprachliche Anpassung einer deutschen Fassung: nur als zusätzliche Ebene, nie am übernommenen Wortlaut</td>
+      <td>2026-09-30</td>
     </tr>
     <tr>
-      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
-      <td>publiziert, Rechte bei Autor:innen/Verlag</td>
-      <td>frei <strong>nach erfolgter Rücksprache</strong></td>
+      <td>ADR-009</td>
+      <td>Fremdübersetzungen: Herkunft über <code class="language-plaintext highlighter-rouge">derivedFrom</code>, aber nur auf auflösbare Questionnaires</td>
+      <td>2026-09-30</td>
     </tr>
     <tr>
-      <td>GI-PS</td>
-      <td>Download mit ausdrücklichem Nutzungsvorbehalt</td>
-      <td>Zustimmung nötig</td>
+      <td>ADR-008</td>
+      <td>Short Forms: Original-<code class="language-plaintext highlighter-rouge">linkId</code>s, Wortlaut aus der autorisierten Langform-Quelle, Langform mitmodellieren</td>
+      <td>2026-09-30</td>
     </tr>
     <tr>
-      <td><a href="WAI.html">WAI</a></td>
-      <td>nicht veröffentlichbar</td>
-      <td>metadata-only</td>
+      <td>ADR-007</td>
+      <td>Zwei unabhängige Übersetzungen werden zwei Questionnaires, nicht zwei Sprachen und nicht zwei Versionen</td>
+      <td>2026-09-30</td>
     </tr>
     <tr>
-      <td><strong>Standort-Itemgruppen</strong> (UKHD, UKE, MHH)</td>
-      <td><strong>in der DIZ-Liste gar nicht geführt</strong> — keine Freigabe dokumentiert</td>
-      <td>siehe offener Punkt unten; für sieben UKHD-Gruppen inzwischen modelliert als <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> — bewusste Projektentscheidung, keine Freigabe</td>
+      <td>ADR-006</td>
+      <td>EDE-Q6: Wortlaut aufnehmen, gestützt auf die freie Bereitstellung des Verlags</td>
+      <td>2026-09-29</td>
     </tr>
     <tr>
-      <td><a href="PROMIS.html">PROMIS</a>, <a href="WHODAS-12.html">WHODAS</a></td>
-      <td>eigenes Lizenzregime</td>
-      <td>Nutzungsvereinbarung</td>
+      <td>ADR-005</td>
+      <td>Übernommenen Wortlaut unverändert lassen; Sprachen über Designations trennen</td>
+      <td>2026-09-25</td>
+    </tr>
+    <tr>
+      <td>ADR-004</td>
+      <td>Score-<code class="language-plaintext highlighter-rouge">Observation</code>s nur über das MII-PRO-Modul</td>
+      <td>2026-09-23</td>
+    </tr>
+    <tr>
+      <td>ADR-003</td>
+      <td>AN-Instrumente vorerst als PCOR-MII-eigene Ressourcen</td>
+      <td>2026-09-23</td>
+    </tr>
+    <tr>
+      <td>ADR-002</td>
+      <td>Questionnaires vom MII-PRO-Modul erben statt selbst generieren</td>
+      <td>2026-06-04</td>
+    </tr>
+    <tr>
+      <td>ADR-001</td>
+      <td>Repo-Setup analog T-CABS</td>
+      <td>2026-06-04</td>
     </tr>
   </tbody>
 </table>
 
-<p>Die DIZ-Liste erfasst mit „frei verfügbar" offenkundig die <em>Beschaffbarkeit für die Forschung</em>, nicht die Frage, ob der Wortlaut in einer Spezifikation weitergegeben werden darf. Bei jedem Instrument, dessen deutsche Fassung aus einem Verlagsprodukt stammt, ist die Angabe daher eigenständig zu prüfen. (Das ist eine Arbeitsregel für dieses Projekt, keine Rechtsauskunft.)</p>
+<h3 id="die-entscheidungen">Die Entscheidungen</h3>
 
-<h4 id="-standortspezifische-itemgruppen-ukhd-uke-mhh--freigabe-fehlt">❓ Standortspezifische Itemgruppen (UKHD, UKE, MHH) — Freigabe fehlt</h4>
-<p><strong>Status:</strong> offen, neu aufgenommen 2026-09-30</p>
+<h4 id="-adr-014--lizenzierte-bögen-als-variantenpaar-öffentliche-definition-private-erfassbare-variante">✅ ADR-014 — Lizenzierte Bögen als Variantenpaar: öffentliche Definition, private erfassbare Variante</h4>
+<p><strong>Entschieden 2026-11-10 (Maintainer).</strong> Anlass: MTSOSD-R59, BAASIS und ABQ sollen auf dem Fragebogen-Server mit Originalwortlaut erfassbar sein, obwohl ADR-012 die Veröffentlichung der Items ausschließt. Die erste Idee, zwei Kopien unter einer Canonical zu führen (öffentlich ohne, auf dem Server mit Wortlaut), wurde verworfen: Gleiche Canonical bei verschiedenem Inhalt bricht den Versionspin, und ein Validator kann nicht mehr sagen, gegen welche Fassung eine Antwort geprüft wurde.</p>
 
-<p>Die DIZ-Implementierungsliste führt ausschließlich <strong>publizierte Instrumente</strong>. Die standortspezifischen Itemgruppen — Heidelberg (<code class="language-plaintext highlighter-rouge">UKHD-*</code>), Hamburg (<code class="language-plaintext highlighter-rouge">UKE-*</code>), Hannover (<code class="language-plaintext highlighter-rouge">MHH-*</code>) — kommen dort <strong>gar nicht vor</strong>. Für sie ist damit weder eine Erlaubnis noch eine Einschränkung dokumentiert: Es ist keine Rechtsfrage, die sich aus der Liste beantworten ließe, sondern eine <strong>Governance-Entscheidung der Standorte</strong>.</p>
-
-<p>Das Dictionary enthält 97 solche Variablen. <strong>34 davon veröffentlicht PCOR-MII bereits mit vollem Wortlaut</strong>, alle im <a href="MHI.html">MHI</a>:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Gruppe</th>
-      <th>Items</th>
-      <th><code class="language-plaintext highlighter-rouge">linkId</code>s</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">UKHD-W</code></td>
-      <td>4</td>
-      <td><code class="language-plaintext highlighter-rouge">weight_outpatient_1</code>, <code class="language-plaintext highlighter-rouge">weight_outpatient_2</code>, <code class="language-plaintext highlighter-rouge">weight_inpatient</code>, <code class="language-plaintext highlighter-rouge">weight_discharge</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">UKHD-AN</code></td>
-      <td>1</td>
-      <td><code class="language-plaintext highlighter-rouge">AN_subtyp</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">UKHD-MEDI</code></td>
-      <td>2</td>
-      <td><code class="language-plaintext highlighter-rouge">medication1</code>, <code class="language-plaintext highlighter-rouge">medication_text</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">UKE-MEDI</code></td>
-      <td>27</td>
-      <td><code class="language-plaintext highlighter-rouge">MEDI_01</code>, <code class="language-plaintext highlighter-rouge">medi_02_*_01</code> … <code class="language-plaintext highlighter-rouge">medi_02_*_05</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Vorschlag: nicht pauschal zurückhalten, sondern zwei Sorten unterscheiden.</strong></p>
-
-<p><em>Triviale Faktenfragen</em> — Körpergewicht, AN-Subtyp, Medikamentenliste. „Wie viel wiegen Sie aktuell in kg?" ist keine schutzfähige Schöpfung, und ohne den Wortlaut können die DIZ die Items nicht einheitlich implementieren. Diese 34 bleiben publiziert.</p>
-
-<p><em>Entworfene Item-Batterien</em> — <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6, Zeitangaben zu Kindheitstraumata), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (3, Körperbild), <code class="language-plaintext highlighter-rouge">UKHD-LE</code> (4, Lebensereignisse), <code class="language-plaintext highlighter-rouge">UKHD-ANB</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-PT</code> (2), <code class="language-plaintext highlighter-rouge">UKHD-CT</code> (1), <code class="language-plaintext highlighter-rouge">UKHD-ND</code> (3), <code class="language-plaintext highlighter-rouge">UKHD_D</code> (2). Hier steckt Autorenschaft aus Heidelberg.</p>
-
-<p><strong>Stand geändert, Rechtefrage präzisiert (2026-10-01):</strong> Sieben dieser Gruppen sind inzwischen modelliert — sechs als <strong>je ein eigenes Questionnaire</strong> (<a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>, ein Bogen je Dictionary-Gruppe nach der Standortgruppen-Ergänzung in ADR-011) und <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6 Items) im <a href="ACE.html">ACE</a>, der dadurch ein PCOR-MII-Komposit ist. Das ist eine <strong>bewusste Projektentscheidung zur Erprobung und keine Freigabe</strong>. Präzisiert ist die Rechtefrage selbst: Das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix ist ein <strong>Zusammenstellungs-Etikett</strong> des Dictionary, keine Autorenschaftsangabe — die Handanweisung des Master-Excel definiert die <code class="language-plaintext highlighter-rouge">INSTRUMENT</code>-Spalte als Auswahl des Erhebungswerkzeugs durch die Standorte. Vor der Freigabefrage steht darum eine <strong>Herkunftsfrage</strong>: Woher stammt der Wortlaut je Gruppe — eigene Formulierung, klinikinterne Dokumentationsbögen oder ein publiziertes Instrument? Konkret nachzufragen für die fremden Variablenschemata <code class="language-plaintext highlighter-rouge">bdkm</code> (<a href="Questionnaire-UKHDPT.html">UKHD-PT</a>), <code class="language-plaintext highlighter-rouge">erwEV</code> (<code class="language-plaintext highlighter-rouge">UKHD-BI</code>) und <code class="language-plaintext highlighter-rouge">edp</code> (<a href="UKHD-EDP.html">UKHD-EDP</a>). Alle Ressourcen tragen <code class="language-plaintext highlighter-rouge">status = draft</code> und <code class="language-plaintext highlighter-rouge">experimental = true</code>, und <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> weist den Vorbehalt aus. Ergibt die Rückmeldung eine Einschränkung, wird <strong>je Gruppe</strong> auf metadata-only umgestellt (Muster <a href="WAI.html">WAI</a>) — die Beispielantworten blieben davon unberührt, weil sie keine Itemtexte enthalten. <strong><code class="language-plaintext highlighter-rouge">UKHD-BI</code> ist bewusst nicht dabei</strong>, und nicht aus Rechtegründen: Die Erhebung läuft noch nicht mit der visuellen Bildskala, und das Dictionary führt als Antwortoption nur einen Verweis auf einen Bilder-Reiter — ohne die Bildvorlage ist das Item nicht modellierbar, weil die Anker einer visuellen Skala hier der Messgegenstand sind und nicht Beschriftung.</p>
-
-<p>Für <strong>UKE</strong> und <strong>MHH</strong> ist nichts modelliert; dort bleibt es beim Stand oben.</p>
-
-<p><code class="language-plaintext highlighter-rouge">UKHD-EDP</code> gehört <strong>nicht</strong> in diese Liste, obwohl es das UKHD-Präfix trägt — siehe den eigenen Punkt unten.</p>
-
-<p><strong>Zu klären:</strong> Bestätigung durch UKHD (und analog UKE und MHH) für beide Gruppen — rückwirkend für die 34 publizierten Items und vorausschauend für die Batterien. Bis dahin ist der Status quo eine Annahme, keine Freigabe.</p>
-
-<p>Relevant wird das unmittelbar bei der Essstörungspathologie: Der Erhebungsplan (Blatt <em>Domain Overview</em> des Item Level Dictionary) sieht dort 17 Items vor, von denen 11 aus <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> stammen. Der <a href="EDE-Q6.html">EDE-Q6</a> deckt die übrigen 6 ab.</p>
-
-<h4 id="-ukhd-edp--vermutlich-ein-edi-2-zuschnitt-rechtlich-unbewertet">❓ UKHD-EDP — vermutlich ein EDI-2-Zuschnitt, rechtlich unbewertet</h4>
-<p><strong>Status:</strong> offen, neu aufgenommen 2026-09-30 — <strong>vor einer Modellierung zu klären</strong></p>
-
-<p>Der Erhebungsplan führt für die Domäne <em>Eating Disorder Psychopathology</em> 17 Items unter dem Eintrag „EDEQ/EDP (UKHD)". Das sind <strong>zwei Instrumente, nicht eines</strong>: die 6 Items des <a href="EDE-Q6.html">EDE-Q6</a> und 11 Items mit den Variablen-IDs <code class="language-plaintext highlighter-rouge">edp1</code>–<code class="language-plaintext highlighter-rouge">edp11</code>. Verschmelzen lassen sie sich nicht — der EDE-Q fragt „an wie vielen der letzten 28 Tage" auf einer Häufigkeitsskala 0–6, die <code class="language-plaintext highlighter-rouge">edp</code>-Items fragen zeitlos nach Zustimmung („1 = Trifft nie zu").</p>
-
-<p><strong>Das UKHD-Präfix ist irreführend.</strong> Die 11 Items bilden je ein Konstrukt ab, und die Liste ist unverkennbar:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Konstrukt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp1</code></td>
-      <td>Schlankheitsstreben</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp2</code></td>
-      <td>Bulimie</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp3</code></td>
-      <td>Unzufriedenheit mit dem Körper</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp4</code></td>
-      <td>Ineffektivität</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp5</code></td>
-      <td>Perfektionismus</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp6</code></td>
-      <td>Misstrauen (invers formuliert)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp7</code></td>
-      <td>interozeptive Wahrnehmung</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp8</code></td>
-      <td>Angst vor dem Erwachsenwerden (invers)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp9</code></td>
-      <td>Askese</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp10</code></td>
-      <td>Impulsregulation</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">edp11</code></td>
-      <td>soziale Unsicherheit (invers)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Das sind <strong>die elf Subskalen des EDI-2</strong> (<em>Eating Disorder Inventory-2</em>, Garner 1991; deutsche Fassung Paul &amp; Thiel, Hogrefe 2005) — je ein Item pro Skala, also dasselbe Zuschnittmuster wie bei <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a> und <a href="SSUK-2.html">SSUK-2</a>. Es handelt sich damit sehr wahrscheinlich <strong>nicht</strong> um eine Eigenentwicklung des Standorts, sondern um einen Zuschnitt eines verlegten Testverfahrens.</p>
-
-<p><strong>Warum das die Rechtelage verschlechtert statt sie zu entspannen:</strong> Das EDI-2 ist in der deutschen Fassung ein <strong>Hogrefe-Testverfahren</strong> — verlegte Ware wie das BDI-II, das im MII-PRO-Modul genau deshalb als „commercial (Pearson) — data + scoring only, not displayable" geführt wird. Die DIZ-Implementierungsliste enthält <strong>weder eine Zeile „EDI" noch „UKHD-EDP"</strong>; die Rechtelage ist also nicht „frei", sondern <strong>gar nicht bewertet</strong>.</p>
-
-<p><strong>Zu klären, in dieser Reihenfolge:</strong></p>
-
-<ol>
-  <li>Die Identifikation als EDI-2-Zuschnitt gegen den deutschen Originalbogen bestätigen — die Zuordnung oben stützt sich auf Inhalt und Antwortformat, nicht auf einen Wortlautabgleich. Charakteristisch sind <code class="language-plaintext highlighter-rouge">edp8</code> („froh, dass ich kein Kind mehr bin") und <code class="language-plaintext highlighter-rouge">edp5</code> („verabscheue es, nicht der/die Beste zu sein").</li>
-  <li>Bei Bestätigung: Eintrag in der DIZ-Liste nachziehen und die Rechtelage bei Hogrefe klären.</li>
-  <li>Erst danach modellieren — voraussichtlich <strong>metadata-only</strong>, analog BDI-II und <a href="WAI.html">WAI</a>.</li>
-</ol>
-
-<p><strong>Umgesetzt am 01.10.2026 — als metadata-only.</strong> <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> ist jetzt als <a href="UKHD-EDP.html">eigener Bogen</a> modelliert, nach dem Muster des <a href="WAI.html">WAI</a>: Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Antwortformat und Wertebereiche vollständig, Item-Texte und Antwortstufen <strong>neutralisiert</strong>. Auch die Displays der elf Variablen im CodeSystem <a href="CodeSystem-pcor-item-dictionary.html">pcor-item-dictionary</a> sind neutralisiert — sonst hätte das Dictionary veröffentlicht, was der Questionnaire zurückhält.</p>
-
-<p>Der Grund, das jetzt zu entscheiden statt auf die Bestätigung zu warten: <strong>Metadata-only ist unter beiden Lesarten richtig.</strong> Ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt damit nicht an der offenen Frage — die Bestätigung bleibt trotzdem der erste Schritt, bevor <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> oder EDI-2-<code class="language-plaintext highlighter-rouge">linkId</code>s vergeben werden.</p>
-
-<p>Ein zusätzliches Indiz hat sich beim Modellieren ergeben: Das Antwortformat ist <strong>sechsstufig</strong>, und das EDI-2 nutzt genau sechs Stufen — die übrigen Instrumente der AN-Batterie nutzen vier, fünf oder sieben.</p>
-
-<h4 id="-ace-d--deutsche-fassung-ist-nicht-frei-publizierbar">❓ ACE-D — deutsche Fassung ist nicht frei publizierbar</h4>
-<p><strong>Status:</strong> offen, neu aufgenommen 2026-09-30 — <strong>betrifft rückwirkend fünf publizierte Items</strong></p>
-
-<p>Die DIZ-Implementierungsliste führt den ACE als „Frei verfügbar". Das trifft auf das <strong>englische Original</strong> zu (Felitti et al. 1998, Kaiser Permanente / CDC — ein Public-Health-Instrument in breiter freier Verwendung), aber die <strong>deutsche Fassung ACE-D</strong> ist etwas anderes.</p>
-
-<p>Belegt durch die Nutzungspraxis der Autor:innen selbst: Das <em>Deutsche Ärzteblatt</em> druckt in einer bevölkerungsrepräsentativen ACE-Studie (Witt, Sachser, Plener, Brähler &amp; Fegert, Dtsch Arztebl Int 2019;116:635–42, <a href="https://doi.org/10.3238/arztebl.2019.0635">doi:10.3238/arztebl.2019.0635</a>) im Zusatzmaterial ausdrücklich nur <strong>zwei Beispielfragen</strong> von zehn ab — mit dem Hinweis:</p>
-
-<blockquote>
-  <p>„Copyright und Zitierweise: Ingo Schäfer, Katja Wingenfeld und Carsten Spitzer (2009) ACE-D; Deutsche Version des „Adverse Childhood Experiences Questionnaire" (ACE). Universität Hamburg. <strong>Der Gesamtfragebogen kann über Prof. Dr. Ingo Schäfer bezogen werden.</strong>"</p>
-</blockquote>
-
-<p>Ein peer-reviewtes Journal beschränkt sich also bewusst auf zwei Items und verweist für den Rest auf den Rechteinhaber. Das ist das Muster „auf Anfrage beziehbar", nicht „frei publizierbar" — dasselbe Muster wie beim <a href="OPD-SFK.html">OPD-SFK</a>, wo die Rücksprache mit den Autor:innen bereits erfolgreich geführt wurde.</p>
-
-<p><strong>Was daraus folgt:</strong></p>
-
-<ol>
-  <li><strong>Rückwirkend:</strong> PCOR-MII publiziert die fünf deutschen ACE-Items bereits mit vollem Wortlaut (siehe <a href="ACE.html">ACE</a>). Das ruht damit auf einer DIZ-Angabe, die für die deutsche Fassung nicht belastbar ist. Die Rücksprache mit <strong>Prof. Dr. Ingo Schäfer (Universität Hamburg)</strong> ist einzuholen — nach dem Muster OPD-SFK.</li>
-  <li><strong>Für die Langform:</strong> Ein ACE-10 mit deutschem Wortlaut kann nicht aus öffentlich zugänglichen Quellen modelliert werden. Der Gesamtbogen ist über den Autor zu beziehen; ohne Zustimmung wäre nur eine englisch-primäre Fassung (Felitti et al.) oder metadata-only möglich.</li>
-  <li><strong>Positiver Nebenbefund:</strong> Die abgedruckte Beispielfrage zur körperlichen Misshandlung ist wortgleich unser <code class="language-plaintext highlighter-rouge">ace2</code>. Dieses Item ist damit gegen eine <strong>peer-reviewte</strong> Quelle bestätigt, nicht mehr nur gegen ein Exemplar von einer Drittseite.</li>
-</ol>
-
-<h4 id="-ede-q6--rechte-der-deutschen-übersetzung-klären">❓ EDE-Q6 — Rechte der deutschen Übersetzung klären</h4>
-<p><strong>Status:</strong> offen, <strong>vor dem nächsten Release zu klären</strong> (Stand 2026-09-29)</p>
-
-<p>Beim Wortlautabgleich des <a href="EDE-Q6.html">EDE-Q6</a> ist ein Widerspruch aufgefallen: Die DIZ-Implementierungsliste führt das Instrument als <strong>„frei verfügbar"</strong>, die Quellpublikation stellt dagegen ausdrücklich alle Rechte vor.</p>
-
-<p>Der in PCOR-MII verwendete Wortlaut stammt — wortgleich, alle sechs Items und die Antwortskala — aus <strong>Hilbert A, Tuschen-Caffier B,</strong> <em>Eating Disorder Examination-Questionnaire. Deutschsprachige Übersetzung</em>, 2. Auflage, Tübingen: dgvt-Verlag 2016. Dort heißt es:</p>
-
-<blockquote>
-  <p>„Alle Rechte vorbehalten. […] Jede Verwertung außerhalb der engen Grenzen des Urheberrechts ist ohne Zustimmung der Copyrightinhaberin unzulässig und strafbar. Dies gilt insbesondere für Vervielfältigungen, Übersetzungen, Mikroverfilmungen sowie die <strong>Einspeicherung und Verarbeitung in elektronischen Systemen</strong>." (© 2016 Anja Hilbert)</p>
-</blockquote>
-
-<p>Die letzte Klausel beschreibt genau das, was ein FHIR-<code class="language-plaintext highlighter-rouge">Questionnaire</code> tut. Dass der dgvt-Verlag das PDF frei zum Download anbietet, ändert daran nichts — frei <em>zugänglich</em> ist nicht frei <em>nachnutzbar</em>.</p>
-
-<p><strong>Damit ist EDE-Q6 der dritte Fall dieser Art</strong> neben <a href="Demographie.html">GI-PS</a> und dem bereits geklärten <a href="OPD-SFK.html">OPD-SFK</a>. Derselbe Weg bietet sich an: Zustimmung der Rechteinhaberin einholen (Prof. Anja Hilbert, Universitätsmedizin Leipzig), andernfalls metadata-only nach <a href="WAI.html">WAI</a>-Muster. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> weist den Vorbehalt bis dahin aus, und die Lizenzspalte der <a href="Instrumente.html">Instrumentenübersicht</a> ist von „frei" auf „Rechte offen" korrigiert.</p>
-
-<p><strong>Nebenbefund:</strong> Die DIZ-Liste nennt als Übersetzungspaper die <em>Diagnostica</em>-Publikation von 2007 — das ist die psychometrische Evaluation, nicht die Übersetzung selbst. Für Wortlautfragen ist die dgvt-Ausgabe maßgeblich.</p>
-
-<h4 id="-herkunftsrechte-der-dem-mhi-items">❓ Herkunftsrechte der DEM-/MHI-Items</h4>
-<p><strong>Status:</strong> OECD-Anteil geklärt ✅ · vier PaRIS-Drittinstrumente und GI-PS offen — <strong>vor dem nächsten Release zu klären</strong> (Stand 2026-09-24)</p>
-
-<p>Die DIZ-Implementierungsliste PCOR-MII (Stand 24.07.2026) führt zwei Item-Quellen mit einschränkenden Angaben, die in <a href="Demographie.html">Demographie</a> und <a href="MHI.html">MHI</a> <strong>im Wortlaut</strong> publiziert sind. Die beiden Fälle liegen unterschiedlich:</p>
-
-<p><strong>OECD (5 Items in DEM) — geklärt: Nutzung und Übersetzung sind zulässig.</strong> ✅
-Die Items stammen aus dem <strong>OECD PaRIS Patient Questionnaire</strong> (PaRIS-PQ); die <code class="language-plaintext highlighter-rouge">linkId</code>s in DEM sind unverändert die PaRIS-Variablennamen (<code class="language-plaintext highlighter-rouge">Q_OECDLIT5a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLIT7a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLITii</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2a</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2b</code>). Der <strong>englische Originalbogen ist von der OECD öffentlich publiziert</strong> (<a href="https://www.oecd.org/content/dam/oecd/en/about/programmes/patient-reported-indicator-surveys/PaRIS%20patient%20questionnaire.pdf">PaRIS-PQ, Version for scripting online survey, 2024</a>, © OECD 2024, Nutzung nach den <a href="https://www.oecd.org/termsandconditions">OECD Terms and Conditions</a>); das Entwicklungspaper ist Valderas et al., <em>BMJ Qual Saf</em> 2024 (<a href="https://doi.org/10.1136/bmjqs-2024-017301">10.1136/bmjqs-2024-017301</a>). Die Einschränkung der DIZ-Liste bezieht sich ausweislich der Nachbarspalte <strong>auf die deutsche Fassung</strong>: Spalte „Übersetzungspaper DOI" trägt den Eintrag <em>„nicht veröffentlicht for internal use only"</em>, der in die Lizenzspalte übernommen wurde — die Angabe beschreibt also den Status der Übersetzung, nicht die Rechtelage des Instruments.</p>
-
-<p><strong>Prüfung der OECD Terms and Conditions (Stand 2026-09-24):</strong> Für nicht-kommerzielle Zwecke (ausdrücklich „private study, research, charitable and educational purposes") erlaubt die OECD Nutzung <strong>und Übersetzung ohne ausdrückliche Genehmigung</strong>, sofern die OECD als Urheberin genannt wird, auf das Original verlinkt wird und der vorgegebene Übersetzungs-Disclaimer aufgenommen wird („This translation was not created by the OECD …"). Untersagt sind lediglich das Einstellen vollständiger PDF-Kopien sowie jede behauptete Verbindung zur OECD. Dass die OECD Fragebogen-Items als nachnutzbaren Inhalt versteht, zeigt der PISA-Abschnitt derselben Bedingungen, der „questionnaires, individual questions, sample tasks" ausdrücklich unter eine Creative-Commons-Lizenz stellt; für PaRIS gelten keine abweichenden Sonderbedingungen.</p>
-
-<p><strong>Läuft PaRIS unter den allgemeinen OECD-Bedingungen?</strong> Ja — und das steht nicht nur im Umkehrschluss fest: Die Copyright-Seite des PaRIS-PQ verweist selbst ausdrücklich dorthin („© OECD 2024 The use of this work, whether digital or print, is governed by the Terms and Conditions to be found at oecd.org/termsandconditions"). Anders als PISA, das in Abschnitt (d) der Bedingungen eine eigene CC-Lizenz zugewiesen bekommt, hat PaRIS <strong>keine Sonderbedingungen</strong>.</p>
-
-<p><strong>Aber: Die Rechtefrage ist je Itemblock zu beantworten, nicht pauschal.</strong> Der PaRIS-PQ ist selbst eine <strong>Zusammenstellung</strong> und weist in einer Quellentabelle je Itemblock ein Ursprungsinstrument mit eigener Rechtelage aus (u. a. PROMIS®, WHO-5, P3CEQ „© University of Plymouth, All rights reserved"). Die OECD schließt solche Drittinhalte ausdrücklich von ihrer Nutzungserlaubnis aus: <em>„Some content in the Material may be owned by third parties. The User is responsible for verifying whether this is the case and, if so, securing the appropriate permissions."</em> Für die in DEM übernommenen Blöcke ergibt der Abgleich mit der PaRIS-Quellentabelle:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>DEM-<code class="language-plaintext highlighter-rouge">linkId</code>s</th>
-      <th>PaRIS-Quellinstrument</th>
-      <th>Rechtelage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">Q_OECDLIT5a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLIT7a</code>, <code class="language-plaintext highlighter-rouge">Q_OECDLITii</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2a</code>, <code class="language-plaintext highlighter-rouge">OECDLIT2b</code></td>
-      <td>OECD INFE (2011), <em>Measuring Financial Literacy: Core Questionnaire</em></td>
-      <td><strong>OECD-eigenes Material</strong> → Nutzung und Übersetzung nicht-kommerziell erlaubt ✅</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">Q_MONMED</code></td>
-      <td>National Health Interview Survey (NHIS)</td>
-      <td>Drittinstrument — Prüfung offen</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">Q_MON</code>, <code class="language-plaintext highlighter-rouge">MONMEAL</code>, <code class="language-plaintext highlighter-rouge">MONRENT</code>, <code class="language-plaintext highlighter-rouge">MONBILLS</code></td>
-      <td>Commonwealth Fund International Health Policy Surveys 2016/2017</td>
-      <td>Drittinstrument — Prüfung offen</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">MEDHIMS6</code>, <code class="language-plaintext highlighter-rouge">MEDHIMS7</code></td>
-      <td>MED-HIMS (Europäische Union 2019)</td>
-      <td>Drittinstrument — Prüfung offen</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">WHODIS</code>, <code class="language-plaintext highlighter-rouge">WHODIS1</code>, <code class="language-plaintext highlighter-rouge">WHODIS2</code></td>
-      <td>WHO/World Bank Model Disability Survey (WHO 2017)</td>
-      <td>Drittinstrument — Prüfung offen</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Damit ist auch das Präfix <code class="language-plaintext highlighter-rouge">OECDLIT</code> erklärt: es steht für <em>OECD Measuring Financial <strong>Lit</strong>eracy</em>, nicht allgemein für „OECD". Ebenso ist <code class="language-plaintext highlighter-rouge">WHODIS</code> <strong>nicht</strong> der WHODAS 2.0 (der steckt separat im Guide, siehe <a href="WHODAS-12.html">WHODAS 2.0</a>): Die Quellenspalte nennt die Model Disability Survey, das PaRIS-Folgeitem heißt <code class="language-plaintext highlighter-rouge">WHOWB11</code> („WHO/World Bank"), und inhaltlich geht es um die Verfügbarkeit von Unterstützung, nicht um Funktionsfähigkeitsdomänen.</p>
-
-<p><strong>Methodischer Hinweis zu Schreibvarianten.</strong> Bei der Herkunftsbestimmung über die Orthografie ist zwischen zwei Dingen zu trennen, die leicht verwechselt werden:</p>
+<p><strong>Regel.</strong> Lizenzierte Bögen folgen dem Variantenmodell des MII-PRO-Moduls (<code class="language-plaintext highlighter-rouge">derivedFrom</code> plus Capabilities-Extension <code class="language-plaintext highlighter-rouge">mii-ex-pro-questionnaire-capabilities</code>), verteilt auf zwei Projekte:</p>
 
 <ul>
-  <li><strong>Helvetismen</strong> — die Schweiz hat das ß vollständig abgeschafft. „weiss", „einschliesslich", „Gesäss" sind daher Schweizer Schreibungen.</li>
-  <li><strong>Alte vs. neue Rechtschreibung</strong> — die Reform 1996 ersetzte ß nur nach <strong>kurzem</strong> Vokal durch ss („daß" → „dass"). Nach langem Vokal oder Diphthong bleibt das ß auch heute. „weiß", „einschließlich" und „Gesäß" sind davon also <em>nicht</em> betroffen.</li>
+  <li><strong>Öffentliche Definition in PCOR-MII</strong> (z. B. <code class="language-plaintext highlighter-rouge">…/Questionnaire/MTSOSDR59</code>): Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, <code class="language-plaintext highlighter-rouge">item.code</code>, Antwortformate mit <code class="language-plaintext highlighter-rouge">itemWeight</code>, <code class="language-plaintext highlighter-rouge">enableWhen</code> und <code class="language-plaintext highlighter-rouge">required</code>. Bedingungen bleiben hier, weil sie Austauschsemantik sind: Ein Empfänger muss wissen, warum ein Belastungsitem fehlt. Keine Display-Items, neutrale Texte, Capabilities durchgehend <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li><strong>Private erfassbare Variante</strong> <code class="language-plaintext highlighter-rouge">…/PCOR-MII-collectable/Questionnaire/&lt;Id&gt;-collectable</code> im getrennten Projekt <em>PCOR-MII-collectable</em> (eigener Canonical-Namensraum, eigenes Package, Dependency auf <code class="language-plaintext highlighter-rouge">pcor-mii</code>). <code class="language-plaintext highlighter-rouge">derivedFrom</code> zeigt auf die öffentliche Definition. Die Antwort-Items sind <strong>identisch</strong> (<code class="language-plaintext highlighter-rouge">linkId</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">code</code>, Antwortcodes, <code class="language-plaintext highlighter-rouge">enableWhen</code>); hinzu kommen Wortlaut, Antwortlabels, Display-Items (Instruktion, Beispiel, Recall) und Capabilities <code class="language-plaintext highlighter-rouge">displayable</code> + <code class="language-plaintext highlighter-rouge">collectable</code>. Antwortlabels entstehen über ValueSets, die die öffentlichen Konzepte <code class="language-plaintext highlighter-rouge">stufe-0…4</code> mit Display-Override einschließen; es gibt keine zweiten CodeSystems. Rechteinhaber im <code class="language-plaintext highlighter-rouge">copyright</code>, Quelle als <code class="language-plaintext highlighter-rouge">artifact-relatedArtifact</code> (R4 hat kein <code class="language-plaintext highlighter-rouge">Questionnaire.relatedArtifact</code>). Als Haken für eine spätere Lizenzschranke trägt die Variante <code class="language-plaintext highlighter-rouge">meta.tag</code> <code class="language-plaintext highlighter-rouge">pcor-verteilung#lizenzpflichtig</code> und <code class="language-plaintext highlighter-rouge">meta.security</code> <code class="language-plaintext highlighter-rouge">v3-Confidentiality#R</code>; der Server wertet beides heute nicht aus.</li>
+  <li><strong>Verteilung.</strong> Das private Package erreicht nur den Fragebogen-Server (Loader aus einem gemounteten Verzeichnis) und von dort nur lizenzierte Standorte. Nie gh-pages, nie Registry, nie das öffentliche Server-Repo oder -Image.</li>
+  <li><strong>Austauschregel.</strong> Eine <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> referenziert beim Export die <strong>öffentliche Definition</strong> (mit Versionspin), nicht die Variante, und führt <code class="language-plaintext highlighter-rouge">item.text</code> leer oder neutral. Damit ist jede Antwort gegen das öffentliche Package validierbar und trägt keinen geschützten Wortlaut.</li>
+  <li><strong>Prüfregel.</strong> Vor jedem Release ein Strukturvergleich der Antwort-Items beider Fassungen; Abweichungen außer <code class="language-plaintext highlighter-rouge">text</code> und Display-Items sind ein Fehler.</li>
 </ul>
 
-<p>Die Schweiz-Befunde zu <a href="Demographie.html">DEM</a> und <a href="ANSOCQ-2.html">ANSOCQ-2</a> stützen sich ausschließlich auf die erste Kategorie und sind damit belastbar. Umgekehrt taugt die Getrennt-/Zusammenschreibung (etwa „nahe stehen" vs. „nahestehen", von 1996 bis 2006 getrennt vorgeschrieben) <strong>nicht</strong> als Herkunftsindiz — sie datiert einen Text allenfalls grob, siehe <a href="SSUK-2.html">SSUK-2</a>.</p>
+<p><strong>Geltung.</strong> MTSOSD-R59 (umgesetzt), BAASIS und ABQ (vorgesehen), WAI bis zur Klärung des deutschen Wortlauts. Bögen mit freiem Wortlaut bleiben eine Ressource. Präzisiert ADR-012: „nie in einem Package" heißt nie in einem <em>veröffentlichten</em> Package.</p>
 
-<p><strong>Herkunft des deutschen Wortlauts: die Schweizer PaRIS-Fassung.</strong> Deutschland hat an der PaRIS-Erhebung <strong>nicht</strong> teilgenommen — es gibt also kein deutsches PaRIS-Team. Die Schweiz war dabei (nationale Leitung: Unisanté, Lausanne; Januar 2024, 119 Praxen, 4 178 Fragebögen), und der deutschsprachige PaRIS-Bogen entstand für diese Erhebung. Dass er die Vorlage für DEM war, zeigt der Text selbst: „einschliesslich" in <code class="language-plaintext highlighter-rouge">WHODIS1</code>, sechsmal „Ich weiss es nicht" (MHI schreibt an vier Stellen „Ich weiß es nicht"; DEM ist der einzige Fragebogen mit Schweizer Schreibung) sowie die CHF-Einkommensbänder des Layoutblatts, die im Kopfkommentar von DEM selbst vermerkt und für PCOR-MII durch EUR-Bänder ersetzt wurden. Rechtlich ist das günstig — der Wortlaut ist damit keine Behelfsübersetzung, sondern eine offizielle TRAPD-Übersetzung. Zugleich ein Qualitätsbefund: Für einen deutschen IG sind die <strong>Helvetismen zu bereinigen</strong> und die Schreibweise zwischen DEM und MHI zu vereinheitlichen (reine Textkorrektur; die Codes heißen ohnehin <code class="language-plaintext highlighter-rouge">weiss-nicht</code> und bleiben unberührt).</p>
+<p><strong>Offen.</strong> Lizenzschranke je Standort im Proxy des Fragebogen-Servers (Regel über <code class="language-plaintext highlighter-rouge">meta.tag</code> oder den Canonical-Namensraum der Variante); Build-Skript für das private Package; Seiten Bereitstellung und Validierung nachziehen.</p>
 
-<p><strong>Konsequenz — umgesetzt:</strong> Für die OECD-Items ist weder English-only noch metadata-only erforderlich; die deutschen Formulierungen können bleiben. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> von <a href="Demographie.html">DEM</a> trägt jetzt die vollständige Herkunftsaufschlüsselung, die OECD-Nennung mit Link auf den Originalbogen und den vorgeschriebenen Übersetzungs-Disclaimer (zuvor hatte DEM gar kein <code class="language-plaintext highlighter-rouge">copyright</code>-Element). <strong>Neu offen:</strong> die vier Drittinstrument-Blöcke oben. Erste Einschätzung ohne abschließende Prüfung: NHIS ist ein US-Regierungswerk, MED-HIMS eine EU-Publikation und die Model Disability Survey eine WHO-Publikation — alle drei üblicherweise großzügig nachnutzbar; der Commonwealth Fund als private Stiftung ist der unklarste Fall. Unabhängig davon bleibt sinnvoll, die offizielle deutsche PaRIS-Übersetzung (cApStAn, TRAPD-Verfahren, 16 Sprachen inkl. Deutsch) gegen die verwendeten Formulierungen zu halten — dann entfiele der Disclaimer-Vorbehalt.</p>
+<h4 id="-adr-013--janein-nach-der-best-practice-empfehlung-des-tc-terminologien">✅ ADR-013 — Ja/Nein nach der Best-Practice-Empfehlung des TC Terminologien</h4>
+<p><strong>Entschieden 2026-11-05 (Maintainer).</strong> Anlass: der erste neue Anamnese-Bogen für NTx.</p>
 
-<p><strong>GI-PS (2 Items in DEM, 9 Items in MHI) — echte Weitergabebeschränkung.</strong>
-Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlichungsrechte … verbleiben bei den jeweiligen Testautorinnen oder -autoren, d. h. das gi-ps oder dessen Teile dürfen ohne Zustimmung der Rechteinhaber nicht modifiziert, übersetzt oder an Dritte weitergegeben werden." Das ist der Nutzungsvorbehalt des Instruments selbst (Entwicklungspaper: <a href="https://doi.org/10.13109/zptm.2023.69.1.56">10.13109/zptm.2023.69.1.56</a>, deutschsprachiges Original). Anders als bei der OECD gibt es hier keine allgemeine Erlaubnis für nicht-kommerzielle Nachnutzung: Eine <strong>Zustimmung der Rechteinhaber</strong> ist erforderlich; andernfalls sind die betroffenen Items auf <strong>metadata-only</strong> umzustellen (Muster: <a href="WAI.html">WAI</a> — Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s und Wertebereiche ohne Originalwortlaut). Beim <a href="OPD-SFK.html">OPD-SFK</a> ist eine solche Rücksprache bereits erfolgreich geführt worden; derselbe Weg bietet sich hier an. <code class="language-plaintext highlighter-rouge">Questionnaire.copyright</code> von <a href="Demographie.html">DEM</a> und <a href="MHI.html">MHI</a> weist den Vorbehalt bis dahin ausdrücklich aus.</p>
+<p><strong>Geltung.</strong> Alle Bögen. Zuerst NTx-Verlaufsbefragung und BAASIS, seit 2026-11-10 auch die sieben Bestandsbögen (siehe erledigter Punkt oben).</p>
 
-<p>Beide Angaben sind seit der Juni-Fassung der Liste unverändert. Die Lizenz-Tier-Übersicht auf der Seite <a href="Instrumente.html">Instrumente</a> führt OECD und GI-PS bisher nicht auf und wäre entsprechend zu ergänzen.</p>
+<p><strong>Regel.</strong> Generische Ja/Nein-Antworten werden als SNOMED CT <code class="language-plaintext highlighter-rouge">373066001</code> (Yes) und <code class="language-plaintext highlighter-rouge">373067005</code> (No) kodiert, inline als <code class="language-plaintext highlighter-rouge">answerOption</code> über das RuleSet <code class="language-plaintext highlighter-rouge">JaNeinSnomed</code> (<code class="language-plaintext highlighter-rouge">input/fsh/rulesets/antwortskalen.fsh</code>), ohne hartkodierte deutsche Übersetzung, weil SNOMED CT die Designations selbst führt. Das ist die Empfehlung des Leitfadens <em>Best Practice bei der Implementierung und Spezifizierung mit HL7</em> (TC Terminologien, HL7 Deutschland / Interop Council), und das MII-PRO-Modul setzt sie seit 2026.6.0 so um (SCOFF, PC-PTSD, WI-7, SSD-12). Ein eigenes CodeSystem für Ja/Nein ist eine Doppelung standardisierter Terminologie.</p>
 
-<p>Nicht betroffen: Die AN-Instrumente sind in der Liste sämtlich als „frei verfügbar" geführt (siehe ADR-003); die NTx-Instrumente BAASIS, MTSOSD-R59 und ABQ — bei denen die Juli-Fassung die Auflage „Eine Veröffentlichung der konkreten Items einschließlich Antwortmöglichkeiten ist nicht erlaubt" ausdrücklich ergänzt hat — sind bereits als metadata-only vorgesehen.</p>
+<p><strong>Bestand.</strong> Die sieben Bestandsbögen mit dem lokalen <code class="language-plaintext highlighter-rouge">dem-ja-nein</code> (CodeSystem <code class="language-plaintext highlighter-rouge">dem-antwort</code>) sind am 2026-11-10 für Release 0.9.0 migriert; das CodeSystem ist entfernt. „Nicht zutreffend“ und „Möchte ich nicht sagen“ sind als Level-0- bzw. Level-1-Konzepte derselben Empfehlung kodiert (<code class="language-plaintext highlighter-rouge">385432009</code>, <code class="language-plaintext highlighter-rouge">LA31066-6</code>), nicht als Projektcodes.</p>
 
-<h4 id="-an-instrumente--wortlaut-quellenverifikation-und-scoring">❓ AN-Instrumente — Wortlaut-/Quellenverifikation und Scoring</h4>
-<p><strong>Status:</strong> offen (Stand 2026-09-23)</p>
+<h4 id="-adr-012--use-case-spezifische-instrumente-bleiben-in-pcor-mii-auch-wenn-sie-frei-wären">✅ ADR-012 — Use-Case-spezifische Instrumente bleiben in PCOR-MII, auch wenn sie frei wären</h4>
+<p><strong>Entschieden 2026-11-05 (Maintainer des MII-PRO-Moduls).</strong> Anlass: Für den PHQ-D-Panik-Block und die drei NTx-Instrumente BAASIS, ABQ und MTSOSD-R59 lagen Entwürfe für das MII-PRO-Modul vor.</p>
 
-<p>Die fünf AN-spezifischen Instrumente (<a href="ERQ-6.html">ERQ-6</a>, <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a>, <a href="SSUK-2.html">SSUK-2</a>, <a href="ACE.html">ACE</a>) sind vorbereitet (siehe ADR-003), tragen aber dokumentierte offene Punkte:</p>
+<p><strong>Regel.</strong> Ins MII-PRO-Modul gehört, was modulweit nachgenutzt wird — ein vollständiges, publiziertes Instrument, das andere Use Cases unverändert übernehmen können (PROMIS Global Health als 10-Item-Skala ist dafür der Fall und wurde dort aufgenommen). Was nur <strong>ein</strong> Use Case erhebt, bleibt in dessen Schicht, unabhängig von der Rechtelage:</p>
 
 <ul>
-  <li><strong>Quellenverifikation — weitgehend abgeschlossen (Stand 2026-09-29).</strong> Für drei der fünf Instrumente ist der Wortlaut gegen die maßgebliche Quelle geprüft: <a href="ERQ-6.html">ERQ-6</a> gegen den ERQ-Originalbogen (Wortlaut wortgleich — die <em>Identifikation</em> als ERQ-S war allerdings falsch, siehe Eintrag unten), <a href="EDE-Q6.html">EDE-Q6</a> gegen die dgvt-Ausgabe (alle sechs Items und die Antwortskala) und <a href="ACE.html">ACE</a> gegen den ACE-D (alle fünf Items). Alle drei: wortgleich. Bei <a href="SSUK-2.html">SSUK-2</a> ist die <strong>Itemnummerierung</strong> inzwischen ebenfalls verifiziert: Müller, Mehnert &amp; Koch (<em>Z Med Psychol</em> 2004) listen in Tabelle 2 die Items der Langfassung mit Nummern — Item 14 ist „Sie aufmuntert oder tröstet", Item 10 „die Auswirkung Ihrer Erkrankung herunterspielt". Die frühere Festlegung ist damit durch die Primärquelle ersetzt. Bei <a href="ANSOCQ-2.html">ANSOCQ-2</a> ist die <strong>Auswahllogik und die Nummerierung</strong> inzwischen ebenfalls belegt: Pauli et al. (<em>J Eat Disord</em> 2017, Open Access) nennen in ihrer Faktorenanalyse ausdrücklich „item 3" als hochladend auf Faktor 1 („weight gain and control") und „item 14" auf Faktor 2 („attitudes and feelings"). Damit ist auch hier die DIZ-Angabe „ein Item je Skala" wörtlich bestätigt — wobei die „Skalen" die Faktoren der deutschen Validierung sind, nicht Subskalen des Originals. <strong>ANSOCQ-2 ebenfalls abgeschlossen (2026-09-29):</strong> Der englische Originalbogen ist bei Rieger et al. 2002 (<a href="https://doi.org/10.1002/eat.10056">doi:10.1002/eat.10056</a>, Charité-Volltextzugang) im Wortlaut abgedruckt. Beide Items samt ihrer fünf Feststellungen stimmen mit der deutschen Fassung überein; die Nummern 3 und 14 gelten in beiden Sprachen. Damit ist auch die zwischenzeitlich vermutete Zählungsdifferenz erledigt: Es gibt zwei Fassungen — Rieger 2000 mit 23 Items, Rieger 2002 mit <strong>20</strong> —, und die deutsche Übersetzung folgt der 20-Item-Revision. <a href="ANSOCQ-2.html">ANSOCQ-2</a> ist daraufhin auf Englisch als Primärsprache mit <code class="language-plaintext highlighter-rouge">de-CH</code>-Übersetzung umgestellt (ADR-005).</li>
+  <li><strong>PHQ-D Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">PHQPANIK</code>): frei, aber nur in PSS erhoben und im Modul ohne Artefakt. Damit eine spätere Übernahme ohne Migration auskommt, tragen die Items die <code class="language-plaintext highlighter-rouge">linkId</code>s des PHQ-D-Namespace (<code class="language-plaintext highlighter-rouge">phq-phq3a</code>–<code class="language-plaintext highlighter-rouge">phq-phq3d</code>) statt der Dictionary-Variablen — die einzige bewusste Ausnahme von der Regel „<code class="language-plaintext highlighter-rouge">linkId</code> = Dictionary-Variable" für PCOR-MII-eigene Bögen; die Dictionary-Variable steht in <code class="language-plaintext highlighter-rouge">item.code</code> (ADR-011).</li>
+  <li><strong>BAASIS, ABQ, MTSOSD-R59</strong> (NTx): metadata-only nach dem Muster von <a href="WAI.html">WAI</a> und <a href="UKHD-EDP.html">UKHD-EDP</a> — Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Antwortformate mit <code class="language-plaintext highlighter-rouge">itemWeight</code>, Bedingungen und Bezugsweg, kein Originalwortlaut. Die wortgleichen Vollversionen werden ausschließlich über den zugriffsbeschränkten Form Server verteilt (Lizenz je Zentrum), nie in einem veröffentlichten Package — wie, regelt ADR-014.</li>
 </ul>
 
-<p><strong>Damit sind alle fünf AN-Instrumente quellenverifiziert.</strong></p>
-
-<p><strong>Methodische Lehre aus dieser Runde:</strong> Bei SSUK-2 und ANSOCQ-2 hatte die Recherche zunächst bei der einen in der DIZ-Liste genannten Publikation gehalten und „nicht beschaffbar" ergeben. Beide Fragen ließen sich dann über <strong>andere Arbeiten derselben Forschungslinie</strong> klären, die frei zugänglich waren. Die in der DIZ-Liste genannte Quelle ist ein Einstieg, nicht die Grenze der Recherche.</p>
-<ul>
-  <li>
-    <p><strong>Quellenlage geklärt (2026-09-29).</strong> Die DIZ-Implementierungsliste nennt je Instrument ein Entwicklungs- und ein Übersetzungspaper; alle DOIs wurden aufgelöst. Ergebnis:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Instrument</th>
-          <th>Original</th>
-          <th>Deutsche Fassung</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>EDE-Q6</strong></td>
-          <td>EDE-Q (Fairburn &amp; Beglin 1994), abgeleitet aus der EDE (Fairburn, Cooper &amp; O'Connor 1993)</td>
-          <td>Hilbert, Tuschen-Caffier, Karwautz et al., <em>Diagnostica</em> 2007</td>
-        </tr>
-        <tr>
-          <td><strong>ANSOCQ-2</strong></td>
-          <td>ANSOCQ (Rieger et al. 2000)</td>
-          <td>Pauli et al., <em>J Eat Disord</em> 2017</td>
-        </tr>
-        <tr>
-          <td><strong>SSUK-2</strong></td>
-          <td><strong>Illness-specific Social Support Scale</strong> (Revenson et al., <em>Soc Sci Med</em> 1991)</td>
-          <td>Ramm &amp; Hasenbring, <em>Z Med Psychol</em> 2003</td>
-        </tr>
-        <tr>
-          <td><strong>ACE</strong></td>
-          <td>Felitti et al., <em>Am J Prev Med</em> 1998</td>
-          <td>Wingenfeld et al., <em>PPmP</em> 2010</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Zwei Korrekturen ergaben sich dabei: Die <strong>SSUK ist kein deutsches Originalinstrument</strong>, sondern die deutsche Adaptation der englischen ISSS — die Annahme in ADR-005 war falsch. <strong>Eine englische Primärsprache folgt daraus aber nicht</strong> (geprüft 2026-09-29): Der Abgleich gegen die ISSS-8-Kurzversion zeigt, dass <code class="language-plaintext highlighter-rouge">ssuk10</code> dort keine Entsprechung hat und <code class="language-plaintext highlighter-rouge">ssuk14</code> nicht wörtlich übereinstimmt. <strong>Deutsch bleibt primär</strong> — Einzelheiten auf der <a href="SSUK-2.html">SSUK-2-Seite</a>. Ein Abgleich gegen das englische Original (Revenson et al. 1991, über den Charité-Zugang bei Elsevier verfügbar) wurde bewusst nicht weiterverfolgt: Die Arbeit ist eine empirische Studie, keine Instrumenten-Entwicklungsarbeit, und selbst bei einem Fund bliebe die Zuordnung Ermessenssache — Ramm &amp; Hasenbring nennen ihre Arbeit im Titel eine <em>Adaptation</em>. Maßgeblich ist der Wortlaut, der tatsächlich erhoben wird. Nebenbei erklärt der Originaltitel <em>„Social support as a double-edged sword"</em> die Konstruktion des Instruments — positive und problematische Unterstützung als zwei gegenläufige Dimensionen — und stützt damit die Entscheidung, die beiden Items nicht zu summieren.</p>
-
-    <p>Beim <strong>ANSOCQ-2</strong> ist die Angabe der DIZ-Liste ungenau: Der dort als Entwicklungspaper genannte DOI führt zu Prochaska &amp; DiClemente (1982), also zum zugrundeliegenden Stadienmodell, nicht zum Instrument. Für eine Item-Verifikation ist Rieger et al. (2000) heranzuziehen. Ähnlich beim <strong>EDE-Q6</strong>, wo das Interview (EDE) statt des Fragebogens (EDE-Q) zitiert ist.</p>
-
-    <p><strong>Keine weitere verborgene Kurzform.</strong> Anders als beim ERQ verweist keines der vier auf eine offizielle Short-Form-Publikation — es sind echte projektspezifische Zuschnitte. Damit bleibt es bei ihnen bei der Regel aus ADR-003: kein Score ohne validierte Vorschrift.</p>
-  </li>
-  <li>
-    <p><strong>ERQ-6 — Identifikation als ERQ-S war FALSCH, korrigiert am 2026-10-01 ❌.</strong> Hier stand bis dahin, der als „ERQ-6“ geführte Bogen <em>sei</em> die offizielle Kurzform <strong>ERQ-S</strong>, belegt durch zwei unabhängige Quellen, und trage deshalb eine validierte Scoring-Vorschrift. Beides ist unzutreffend.</p>
-
-    <p><strong>Tabelle 1 bei Preece et al. 2023</strong> gibt die Zuordnung an: Der ERQ-S besteht aus den <strong>ERQ-Items 2, 6, 7, 8, 9 und 10</strong> — Cognitive Reappraisal 7, 8, 10 und Expressive Suppression 2, 6, 9. PCOR-MII führt die <strong>ERQ-Items 1, 2, 3, 6, 8 und 9</strong>. Vier Items überschneiden sich, die Unterdrückungs-Items sind sogar identisch — die Neubewertungs-Items aber nicht.</p>
-
-    <p><strong>Keiner der beiden vermeintlichen Belege trug.</strong> Die DIZ-Implementierungsliste nennt in der ERQ-Zeile zwar die ERQ-S-Publikation als Entwicklungspaper, aber die im Dictionary erhobenen Items sind andere — die Liste beschreibt also eine Absicht, nicht den Bestand. Und der angebliche <em>Item-Abgleich gegen den Originalbogen</em> war keiner: Die ERQ-S-Scoring-Angabe nennt <em>„sum items 1, 3, and 5“</em> in <strong>ERQ-S-Zählung</strong>; diese Nummern wurden als ERQ-Nummern gelesen und über eine angenommene Zuordnung übersetzt, statt gegen Tabelle 1 geprüft zu werden. Zwei teilweise überlappende Nummernsysteme sind genau die Konstellation, in der ein Abgleich plausibel aussieht und trotzdem falsch ist.</p>
-
-    <p><strong>Folge:</strong> Die beiden <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s, die beiden Beispiel-<code class="language-plaintext highlighter-rouge">Observation</code>s, die Katalogcodes und die FHIRPath-<code class="language-plaintext highlighter-rouge">variable</code>s sind zurückgezogen. Der Bogen selbst bleibt <strong>unverändert</strong> — Wortlaut und <code class="language-plaintext highlighter-rouge">linkId</code>s sind dictionary-treu und korrekt. Einzelheiten auf der <a href="ERQ-6.html">ERQ-6-Seite</a>.</p>
-  </li>
-  <li><strong>Scoring:</strong> Alle fünf sind Zuschnitte („trennschärfstes Item je Skala" bzw. „erste 5 Fragen"), für die keine validierte Scoring-Vorschrift vorliegt. Bewusst kein Score-Item — bis eine Auswertungsregel fachlich abgestimmt ist (Antwortcodes tragen vorsorglich <code class="language-plaintext highlighter-rouge">ordinalValue</code>).</li>
-  <li><strong>ANSOCQ-2 — Einfachauswahl: entschieden ✅ (2026-09-29).</strong> Die deutsche Validierung (Pauli et al., <em>J Eat Disord</em> 2017) beschreibt <em>„participants can choose between five answers"</em>, und der dort genannte Gesamtscore-Bereich 20–100 bei 20 Items geht nur bei genau einer Antwort je Item auf. Umgesetzt ist Einfachauswahl; der Zusatz „oder mehrere Feststellungen" bleibt als übernommener Wortlaut im Instruktionstext. <strong>Nebenbefund:</strong> Der deutsche ANSOCQ-Wortlaut stammt aus der <strong>Schweizer</strong> Fassung (Übersetzung Zürich, Schweizer Validierungsstichprobe; sichtbar an „Gesäss") — <code class="language-plaintext highlighter-rouge">language</code> ist auf <code class="language-plaintext highlighter-rouge">de-CH</code> gesetzt. Damit ist ANSOCQ-2 nach DEM der zweite Bogen mit Schweizer Herkunft.</li>
-  <li><strong>EDE-Q6 — Erratum im Dictionary:</strong> Die Bedingung für <code class="language-plaintext highlighter-rouge">edeq30</code> lautet dort „If edeq31 = 1"; eine Variable <code class="language-plaintext highlighter-rouge">edeq31</code> existiert im AN-Blatt nicht. Umgesetzt als <code class="language-plaintext highlighter-rouge">enableWhen</code> auf <code class="language-plaintext highlighter-rouge">edeq29</code> (die Ja/Nein-Frage direkt davor) — im Dictionary zu korrigieren.</li>
-  <li><strong>Visuelle Skalen:</strong> Die Antwortskalen von ERQ-6 (1–7) und EDE-Q-Item 27 (0–6) liegen im Dictionary nur als Grafik vor (Reiter „ERQ" / „EDE-Q27"); die Anker wurden aus den Grafiken übernommen und sind gegen die Originalbögen zu prüfen.</li>
-</ul>
-
-<h4 id="-phq-sads--unterschiedlicher-recall-bei-geteilten-items">❓ PHQ-SADS — unterschiedlicher Recall bei geteilten Items</h4>
-<p><strong>Status:</strong> offen, <strong>Roadmap 2027</strong> (Stand 2026-09-02)</p>
-
-<p>Der PHQ-SADS ist die gemeinsame Auswertung von PHQ-15, GAD-7 und PHQ-9. Im geteilten PHQ-D-Namespace sind das 31 Items, aber nur <strong>29 verschiedene <code class="language-plaintext highlighter-rouge">linkId</code>s</strong>: <code class="language-plaintext highlighter-rouge">phq-phq2c</code> (Schlafstörungen) und <code class="language-plaintext highlighter-rouge">phq-phq2d</code> (Müdigkeit) gehören zu PHQ-15 <strong>und</strong> PHQ-9.</p>
-
-<p><strong>Problem:</strong> PHQ-15 hat einen <strong>4-Wochen-Recall</strong>, PHQ-9 und GAD-7 einen <strong>2-Wochen-Recall</strong>. Das geteilte Item wird einmal beantwortet, fließt aber in zwei Scores mit unterschiedlichem Zeitbezug ein. Welchen Recall man dem Item auch gibt — eine der beiden Skalen erhält einen Wert unter einem Zeitfenster, für das sie nicht validiert ist.</p>
-
-<p><strong>Konsequenz:</strong> Das ist auf Item-Ebene nicht lösbar; es muss sich in der <strong>Score-Interpretation</strong> niederschlagen.</p>
-
-<p><strong>Zuständigkeit: MII-PRO-Modul</strong>, nicht PCOR-MII. Dort werden die PHQ-Questionnaires, der geteilte <code class="language-plaintext highlighter-rouge">linkId</code>-Namespace und die Score-<code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s gepflegt — dort gehört auch die Regel hin, wie ein geteiltes Item unter zwei Recall-Zeiträumen zu werten ist. PCOR-MII dokumentiert den Konflikt nur und übernimmt die Lösung, sobald sie upstream getroffen ist. Offen bleibt dort zudem, ob PHQ-SADS und PHQ-4 als abgeleitete Subset-Questionnaires (<code class="language-plaintext highlighter-rouge">derivedFrom</code>) ausgeprägt werden oder nur über <code class="language-plaintext highlighter-rouge">linkId</code>s ausgewertet. Beschrieben im Abschnitt „PHQ-SADS" der <a href="PHQ.html">PHQ-Übersicht</a>.</p>
-
-<h4 id="-welche-questionnaires-werden-übernommen">❓ Welche Questionnaires werden übernommen?</h4>
-<p><strong>Status:</strong> teilweise erledigt (Stand 2026-09-23; ursprünglich 2026-06-04)</p>
-
-<p>Ursprünglicher Punkt: Es werden nur wenige Fragebögen aus dem MII-PRO-Modul benötigt; je Fragebogen ist zu klären, ob <strong>1:1 referenziert</strong> oder <strong>mit Anpassung (<code class="language-plaintext highlighter-rouge">derivedFrom</code>)</strong> übernommen wird. Zwischenstand:</p>
-
-<ol>
-  <li>✅ MII-PRO-Dependency aktiv (inzwischen <code class="language-plaintext highlighter-rouge">2026.7.0</code>).</li>
-  <li>✅ Referenzierte Instrumente dokumentiert (PHQ-Familie, WHODAS, PROMIS u. a. — siehe <a href="Instrumente.html">Instrumente</a>); PCOR-MII-eigene Instrumente modelliert (DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S sowie die AN-Instrumente aus ADR-003).</li>
-  <li>⬜ Platzhalter <code class="language-plaintext highlighter-rouge">PcorExampleQuestionnaire</code> entfernen.</li>
-  <li>⬜ Offene Referenzseiten (EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12, WI-7) anlegen.</li>
-</ol>
-
-<h3 id="entschieden">Entschieden</h3>
+<p><strong>Folge für das Modul-Repo:</strong> Die dort vorbereiteten Fassungen wurden nicht veröffentlicht; die Beads <code class="language-plaintext highlighter-rouge">py5.17</code> und <code class="language-plaintext highlighter-rouge">py5.18</code> sind auf PCOR-MII umgehängt.</p>
 
 <h4 id="-adr-011--erhebungseinheit-und-instrumenteneinheit-trennen-die-zuordnung-läuft-über-itemcode">✅ ADR-011 — Erhebungseinheit und Instrumenteneinheit trennen; die Zuordnung läuft über <code class="language-plaintext highlighter-rouge">item.code</code></h4>
 <p><strong>Entschieden 2026-09-30.</strong> Anlass: die Folge aus ADR-008. Wenn jeder Zuschnitt eine eigene Ressource mit Original-<code class="language-plaintext highlighter-rouge">linkId</code>s wird, entstehen viele sehr kurze Instrumente — während die Daten in <strong>einem</strong> Bogen erhoben wurden, der kein FHIR kennt.</p>
@@ -798,7 +504,10 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
   <li><strong>Eigene Ressource</strong> bekommt ein Instrument, das <strong>publiziert und mehritemig</strong> ist und eine eigene Nummerierung oder Skalenstruktur mitbringt — auch dann, wenn PCOR-MII nur einen Zuschnitt davon erhebt.</li>
   <li><strong>In einen Sammelbogen</strong> gehören <strong>Einzelitems und unnummerierte Abschnitte</strong> ohne eigene Instrumentenidentität: die OECD-, GI-PS- und CPCOR-Einzelfragen in <a href="Demographie.html">Demographie</a>, die Anamnese-Items in <a href="MHI.html">MHI</a>.</li>
   <li>Der Sammelbogen ist <strong>keine Notlösung</strong>, sondern die richtige Ressource für Material, das ohne den Bogen keine Identität hat. Eine 1-Item-Ressource für <code class="language-plaintext highlighter-rouge">OECD-NAT</code> wäre kein Gewinn an Präzision, sondern Rauschen.</li>
-  <li><strong>Ergänzt am 01.10.2026 — Standort-Itemgruppen:</strong> Für Itemgruppen, die ein Standort zusammengestellt hat und die kein publiziertes Instrument abbilden, ist die <strong>Dictionary-Gruppe</strong> die Ressourceneinheit — ein Questionnaire je Gruppe, auch wenn sie nur ein oder zwei Items hat. Begründung: Die Gruppe ist die Einheit, in der Herkunft und Rechte geklärt werden (und je Gruppe auf metadata-only umgestellt würde), die Gruppen bilden untereinander <strong>kein</strong> gemeinsames Instrument, und ihr Zusammenstellungs-Etikett (<code class="language-plaintext highlighter-rouge">UKHD-…</code>) darf nicht als Instrumentenidentität gelesen werden. Die Anti-Fragmentierungs-Grenze oben gilt unverändert für Einzelitems <em>innerhalb</em> von DEM und MHI — dort stiftet der Bogen die Identität; bei den Standortgruppen stiftet sie die Gruppe.</li>
+  <li>
+    <p><strong>Ergänzt am 01.10.2026 — Standort-Itemgruppen:</strong> Für Itemgruppen, die ein Standort zusammengestellt hat und die kein publiziertes Instrument abbilden, ist die <strong>Dictionary-Gruppe</strong> die Ressourceneinheit — ein Questionnaire je Gruppe, auch wenn sie nur ein oder zwei Items hat. Begründung: Die Gruppe ist die Einheit, in der Herkunft und Rechte geklärt werden (und je Gruppe auf metadata-only umgestellt würde), die Gruppen bilden untereinander <strong>kein</strong> gemeinsames Instrument, und ihr Zusammenstellungs-Etikett (<code class="language-plaintext highlighter-rouge">UKHD-…</code>) darf nicht als Instrumentenidentität gelesen werden. Die Anti-Fragmentierungs-Grenze oben gilt unverändert für Einzelitems <em>innerhalb</em> von DEM und MHI — dort stiftet der Bogen die Identität; bei den Standortgruppen stiftet sie die Gruppe.</p>
+  </li>
+  <li><strong>Ergänzt am 05.11.2026 — Anamnese-Bögen eines Standorts:</strong> Die Standortgruppen-Regel gilt für Zuschnitte mit je eigener Herkunft. Stellt ein Standort dagegen einen zusammenhängenden <strong>Anamnese- oder Verlaufsbogen</strong> zusammen, dessen Gruppen dieselbe Herkunft und Rechtelage teilen, ist die <strong>Erhebungseinheit</strong> die Ressource, wie beim MHI. Erster Fall: die MHH-Items für NTx — die drei Screening-Items als Ergänzungsbogen <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> zum MHI — <strong>nicht</strong> als Gruppe im MHI, weil der MHI allen Use Cases gemeinsam ist und keinen Entitätsschalter hat; die Zusammenstellung je Use Case leisten die Manifeste —, die 18 quartalsweisen Items als <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a>, jeweils mit den Dictionary-Gruppen als Gruppen-Items und <code class="language-plaintext highlighter-rouge">item.code</code> je Variable.</li>
 </ul>
 
 <p><strong>Entscheidung 2 — die Zuordnung läuft über <code class="language-plaintext highlighter-rouge">Questionnaire.item.code</code>, nicht über <code class="language-plaintext highlighter-rouge">linkId</code>s und nicht über eine ConceptMap.</strong></p>
@@ -1247,7 +956,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 <ol>
   <li><strong>Pflege vorerst in PCOR-MII</strong> (analog EXPECT/IPQ-S) — ausdrücklich <strong>vorläufig, zum Testen</strong>. Sobald die Instrumente offiziell abgestimmt sind, können Teile ins <strong>MII-PRO-Modul</strong> aufgenommen werden; PCOR-MII würde sie dann referenzieren statt selbst pflegen (Muster SCOFF/SSD-12/WI-7 seit MII PRO 2026.6.0). Bei einer Übernahme ändern sich die kanonischen URLs — dann ist eine Migrations-ConceptMap bzw. ein Seitenhinweis vorzusehen (Vorbild: <code class="language-plaintext highlighter-rouge">mii-cm-pro-gad-7-linkids</code>).</li>
   <li><strong>Keine Instrument-Codes des Vollinstruments an Zuschnitte:</strong> SNOMED CT kennt Konzepte für ANSOCQ (<code class="language-plaintext highlighter-rouge">443321009</code>) und EDE-Q (<code class="language-plaintext highlighter-rouge">446825002</code>), LOINC ein Panel für ACE (<code class="language-plaintext highlighter-rouge">82813-7</code>) — alle bezeichnen das jeweilige Vollinstrument. Ein 2-, 5- oder 6-Item-Zuschnitt ist nicht das validierte Instrument; diese Codes werden daher <strong>nicht</strong> vergeben und sind nur in den FSH-Kommentaren dokumentiert. <strong>Präzisiert am 01.10.2026:</strong> <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> bleibt deshalb nicht leer, sondern trägt einen <strong>lokalen Katalogcode</strong> aus <a href="CodeSystem-pcor-questionnaire-catalogue.html"><code class="language-plaintext highlighter-rouge">pcor-questionnaire-catalogue</code></a>, der ausdrücklich den <em>Zuschnitt</em> bezeichnet und nicht das Vollinstrument — <code class="language-plaintext highlighter-rouge">ansocq-2</code> ist der Zweiitem-Zuschnitt, nicht das ANSOCQ. Das Verbot betrifft die Vollinstrument-Codes, nicht die Kodierung überhaupt.</li>
-  <li><strong>Kein Score ohne validierte Grundlage:</strong> Für keinen der Zuschnitte existiert eine publizierte Scoring-Vorschrift; SSUK-2 ist zudem gegenläufig gepolt (Begründungsmuster wie EXPECT). Antwortcodes tragen <code class="language-plaintext highlighter-rouge">ordinalValue</code>, damit eine spätere Auswertung möglich bleibt.</li>
+  <li><strong>Kein Score ohne validierte Grundlage:</strong> Für keinen der Zuschnitte existiert eine publizierte Scoring-Vorschrift; SSUK-2 ist zudem gegenläufig gepolt (Begründungsmuster wie EXPECT). Antwortcodes tragen <code class="language-plaintext highlighter-rouge">itemWeight</code>, damit eine spätere Auswertung möglich bleibt.</li>
   <li><strong>Wortlaut und Kodierung aus dem Dictionary:</strong> Antwortcodes = numerische Dictionary-Codes; Ja/Nein-Items nutzen das projektweite <code class="language-plaintext highlighter-rouge">DemJaNeinVS</code>. Visuelle Skalen werden nach dem EXPECT-Muster als <code class="language-plaintext highlighter-rouge">integer</code> + Slider mit Anker-<code class="language-plaintext highlighter-rouge">display</code>-Item umgesetzt.</li>
   <li><strong>Entscheidungen in der Ressource selbst:</strong> Jedes AN-Questionnaire trägt seine Designentscheidungen zusätzlich maschinenlesbar in der <a href="http://hl7.org/fhir/StructureDefinition/designNote"><code class="language-plaintext highlighter-rouge">designNote</code>-Extension</a> (<code class="language-plaintext highlighter-rouge">valueMarkdown</code>) — bogenweite Entscheidungen auf Questionnaire-Ebene, punktuelle direkt am <code class="language-plaintext highlighter-rouge">item</code> (z. B. das <code class="language-plaintext highlighter-rouge">edeq30</code>-Erratum). So reisen die Begründungen mit, wenn eine Ressource ins MII-PRO-Modul übernommen wird; diese Seite bleibt das ausführliche Log.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">linkId</code>-Regel:</strong> Hat der Bogen eine offizielle Fragebogen-Nummerierung — insbesondere als destillierte Short Form oder aus einer Item-Bank konsolidierte Version —, werden die <strong>Original-ItemIDs als <code class="language-plaintext highlighter-rouge">linkId</code></strong> verwendet (so bereits bei EDE-Q6 <code class="language-plaintext highlighter-rouge">edeq1/7/12/27/29/30</code>, ANSOCQ-2 <code class="language-plaintext highlighter-rouge">ansocq3/14</code>, SSUK-2 <code class="language-plaintext highlighter-rouge">ssuk14/10</code>, ACE <code class="language-plaintext highlighter-rouge">ace1–ace5</code>). Handelt es sich nur um <strong>Einzelfragen oder Abschnitte</strong> aus PROMs ohne eigene Nummerierung, dürfen sie als PCOR-MII-eigene Ressourcen mit Dictionary-IDs abgebildet werden. Für die spätere Aufnahme ins MII-PRO-Modul ist die Original-Nummerierung Voraussetzung eines stabilen, geteilten <code class="language-plaintext highlighter-rouge">linkId</code>-Namespace. <strong>Erweitert durch ADR-008</strong> (oben): Dort stehen die beiden Hälften, die hier fehlten — woher der <em>Wortlaut</em> eines Zuschnitts kommt (aus der autorisierten Quelle der <strong>Langform</strong>, nicht aus der Kurzform-Publikation) und dass die Langform mitmodelliert wird, soweit beschaffbar. Die Granularitätsfrage — wann ein eigener Questionnaire und wann ein Sammelbogen — regelt <strong>ADR-011</strong>.</li>
@@ -1313,7 +1022,7 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Kommende-Aenderungen.html">next ></a>
+                <a href="Rechtelage.html">next ></a>
 
               </td>
             </tr>
@@ -1327,10 +1036,10 @@ Zitat aus der Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlich
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

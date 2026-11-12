@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>UKHD-EDP (Essstörungspathologie, metadata-only) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>UKHD-EDP (Essstörungspathologie, metadata-only) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.2.8"}
-    h3,h4,h5,h6{--heading-prefix:"2.2.8"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.2.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -283,7 +289,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Fragebogen-Bibliothek.html">next &gt;</a>
+          | <a href="NTx.html">next &gt;</a>
 
           </span>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>UKHD-EDP (Essstörungspathologie, metadata-only)</h2>
   
 
@@ -410,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Das EDI-2 ist in der deutschen Fassung ein <strong>Hogrefe-Testverfahren</strong>, also verlegte Ware wie das BDI-II. Für das BDI-II zieht das MII-PRO-Modul genau diese Konsequenz: <em>„commercial (Pearson) — data + scoring only, not displayable."</em></p>
 
-<p><strong>Zweitens: auch ohne das fehlt jede dokumentierte Freigabe.</strong> Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente; weder „EDI" noch <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> kommen dort vor. Für entworfene Item-Batterien der Standorte gilt nach dem <a href="Designentscheidungen.html">offenen Punkt</a>: ohne Freigabe kein Wortlaut.</p>
+<p><strong>Zweitens: auch ohne das fehlt jede dokumentierte Freigabe.</strong> Die DIZ-Implementierungsliste führt ausschließlich publizierte Instrumente; weder „EDI" noch <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> kommen dort vor. Für entworfene Item-Batterien der Standorte gilt nach dem <a href="Rechtelage.html#standortgruppen">offenen Punkt</a>: ohne Freigabe kein Wortlaut.</p>
 
 <p><strong>Das ist der eigentliche Grund, jetzt zu entscheiden statt zu warten.</strong> Metadata-only ist unter <em>beiden</em> Lesarten richtig — ist es das EDI-2, verbietet der Verlagsvorbehalt den Wortlaut; ist es ein Standort-Original, fehlt die Freigabe. Die Entscheidung hängt nicht daran, die Identifikation vorher aufzulösen.</p>
 
@@ -427,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><strong>Fragebogen:</strong> <a href="Questionnaire-UKHDEDP.html">Questionnaire-UKHDEDP</a></li>
-  <li><strong>CodeSystem:</strong> <a href="CodeSystem-ukhd-edp-stufe-6.html">ukhd-edp-stufe-6</a> — sechs Stufen, <strong>neutral benannt</strong>, mit <code class="language-plaintext highlighter-rouge">ordinalValue</code> 1–6</li>
+  <li><strong>CodeSystem:</strong> <a href="CodeSystem-ukhd-edp-stufe-6.html">ukhd-edp-stufe-6</a> — sechs Stufen, <strong>neutral benannt</strong>, mit <code class="language-plaintext highlighter-rouge">itemWeight</code> 1–6</li>
   <li><strong>ValueSet:</strong> <a href="ValueSet-ukhd-edp-stufe-6-vs.html">ukhd-edp-stufe-6-vs</a></li>
 </ul>
 
@@ -510,7 +516,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="kein-score">Kein Score</h3>
 
-<p>Das EDI-2 wertet über Subskalen aus, die aus mehreren Items bestehen. <strong>Ein Item je Subskala bildet die Subskala nicht ab</strong> — dieselbe Logik wie bei <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a> und <a href="SSUK-2.html">SSUK-2</a>, festgehalten in <a href="Designentscheidungen.html">ADR-003</a> Punkt 3. Die Antwortcodes tragen <code class="language-plaintext highlighter-rouge">ordinalValue</code> 1–6, damit eine spätere Auswertung möglich bleibt.</p>
+<p>Das EDI-2 wertet über Subskalen aus, die aus mehreren Items bestehen. <strong>Ein Item je Subskala bildet die Subskala nicht ab</strong> — dieselbe Logik wie bei <a href="EDE-Q6.html">EDE-Q6</a>, <a href="ANSOCQ-2.html">ANSOCQ-2</a> und <a href="SSUK-2.html">SSUK-2</a>, festgehalten in <a href="Designentscheidungen.html">ADR-003</a> Punkt 3. Die Antwortcodes tragen <code class="language-plaintext highlighter-rouge">itemWeight</code> 1–6, damit eine spätere Auswertung möglich bleibt.</p>
 
 <h3 id="einordnung-im-erhebungsplan">Einordnung im Erhebungsplan</h3>
 
@@ -552,7 +558,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="Fragebogen-Bibliothek.html">next ></a>
+                <a href="NTx.html">next ></a>
 
               </td>
             </tr>
@@ -566,10 +572,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

@@ -12,43 +12,63 @@
     "ValueSet-promis-global-skala-5-vs.html" : "PROMIS Global Health Antwortskala 5-stufig (Ausgezeichnet–Schlecht)"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "AbqSkala4CS",
+    "title" : "ABQ Antwortskala 4-stufig (Codes)",
+    "description" : "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. itemWeight-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung.",
+    "uses" : {
+    },
+    "ValueSet-abq-skala-4-vs.html" : "ABQ Antwortskala 4-stufig"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-gedanken",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "AnsocqGedankenCS",
     "title" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)",
-    "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept.",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. itemWeight-Property je Konzept.",
     "uses" : {
     },
     "ValueSet-ansocq-gedanken-vs.html" : "ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ansocq-koerperteile",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "AnsocqKoerperteileCS",
     "title" : "ANSOCQ Item 3 — Körperteile (Codes)",
-    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+    "description" : "Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ansocq-koerperteile-vs.html" : "ANSOCQ Item 3 — Körperteile"
   },
   {
-    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-    "version" : "0.3.0",
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-5",
+    "version" : "0.9.0",
     "status" : "draft",
-    "name" : "DemAntwortCS",
-    "title" : "DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)",
-    "description" : "Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No).",
+    "name" : "BaasisHaeufigkeit5CS",
+    "title" : "BAASIS Häufigkeit 5-stufig (Codes)",
+    "description" : "Neutral benannte 5-stufige Anzahl-Skala der BAASIS-Teilfragen 1A_a und 1B_a (Stufe 1 bis Stufe 5; offiziell fünf Kategorien von einmal bis mehr als viermal). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. itemWeight-Property je Konzept (1-5) ermöglicht eine spätere Auswertung. Teilfrage 2_a nutzt die eigene Skala BaasisHaeufigkeitZeit5CS.",
     "uses" : {
     },
-    "ValueSet-dem-ja-nein-ka-vs.html" : "DEM Ja/Nein/Keine Angabe",
-    "ValueSet-dem-ja-nein-nz-vs.html" : "DEM Ja/Nein/Nicht zutreffend",
-    "ValueSet-dem-ja-nein.html" : "DEM Ja/Nein"
+    "ValueSet-baasis-haeufigkeit-5-vs.html" : "BAASIS Häufigkeit 5-stufig"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-zeit-5",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "BaasisHaeufigkeitZeit5CS",
+    "title" : "BAASIS Häufigkeit Zeitabweichung 5-stufig (Codes)",
+    "description" : "Neutral benannte 5-stufige Häufigkeitsskala der BAASIS-Teilfrage 2_a (Stufe 1 bis Stufe 5). Laut Item Level Dictionary ist diese Skala nicht die Anzahl-Skala der Teilfragen 1A_a/1B_a, sondern eine Raten-Skala (von einmalig bis fast täglich); deshalb ein eigenes CodeSystem, damit die Stufen nicht als dieselbe Skala ausgewertet werden. Die offizielle BAASIS-Erläuterung nennt für alle drei Teilfragen dieselben fünf Anzahl-Kategorien — die Abweichung ist gegen den lizenzierten deutschen Bogen (Version 2021) zu prüfen. METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. itemWeight-Property je Konzept (1-5).",
+    "uses" : {
+    },
+    "ValueSet-baasis-haeufigkeit-zeit-5-vs.html" : "BAASIS Häufigkeit Zeitabweichung 5-stufig"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-beziehungsstatus",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemBeziehungsstatusCS",
     "title" : "DEM Beziehungsstatus (Codes)",
@@ -59,7 +79,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-einkommen",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemEinkommenCS",
     "title" : "DEM Haushaltseinkommen (Bänder)",
@@ -70,7 +90,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-erwerbsstatus",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemErwerbsstatusCS",
     "title" : "DEM Erwerbsstatus (OECD)",
@@ -81,7 +101,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-geschlecht",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemGeschlechtCS",
     "title" : "DEM Geschlecht (Selbstbeschreibung)",
@@ -92,7 +112,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-haeufigkeit-5",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemHaeufigkeit5CS",
     "title" : "DEM Häufigkeit (5-stufig) (Codes)",
@@ -103,7 +123,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-isced-de",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemIscedCS",
     "title" : "DEM Bildungsabschluss (ISCED-2011/KMK)",
@@ -114,7 +134,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemLeichtigkeit6CS",
     "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
@@ -125,7 +145,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-rentenstatus",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemRentenstatusCS",
     "title" : "DEM Rentenstatus (Codes)",
@@ -136,7 +156,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-urbanizitaet",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemUrbanizitaetCS",
     "title" : "DEM Urbanizität (Codes)",
@@ -147,7 +167,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-zigaretten-band",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "DemZigarettenBandCS",
     "title" : "DEM Zigaretten pro Tag (Bänder)",
@@ -158,18 +178,29 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ede-q6-tage",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "EdeQ6TageCS",
     "title" : "EDE-Q6 Häufigkeit in 28 Tagen (Codes)",
-    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+    "description" : "7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). itemWeight-Property je Konzept für SDC-Scoring via .weight(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ede-q6-tage-vs.html" : "EDE-Q6 Häufigkeit in 28 Tagen"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhh-nierenersatz",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhhNierenersatzCS",
+    "title" : "NTx-Verlaufsbefragung Nierenersatztherapie vor Transplantation (Codes)",
+    "description" : "Zuletzt vor der Transplantation durchgeführte Form der Nierenersatztherapie (`MHH_DIAL2`). Nominal, Dictionary-Codes 1–4; Option 4 = präemptive Transplantation ohne vorherige Dialyse.",
+    "uses" : {
+    },
+    "ValueSet-mhh-nierenersatz-vs.html" : "NTx-Verlaufsbefragung Nierenersatztherapie vor Transplantation"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-an-subtyp",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiAnSubtypCS",
     "title" : "MHI Anorexia-nervosa-Subtyp (Codes)",
@@ -180,7 +211,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-chronisch",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiChronischCS",
     "title" : "MHI Chronische Erkrankungen (GIPS13) (Codes)",
@@ -191,7 +222,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-cpcor-diag",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiCpcorDiagCS",
     "title" : "MHI Diagnosegruppe (CPCOR) (Codes)",
@@ -202,7 +233,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-einnahmezeit",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiEinnahmezeitCS",
     "title" : "MHI Einnahmezeitpunkt Medikament (Codes)",
@@ -213,7 +244,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewicht-angabe",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGewichtAngabeCS",
     "title" : "MHI Gewichtsangabe (Codes)",
@@ -224,7 +255,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-gewichtsmethode",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGewichtsmethodeCS",
     "title" : "MHI Gewichtsmessung Methode (Codes)",
@@ -235,7 +266,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-groesse-angabe",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "MhiGroesseAngabeCS",
     "title" : "MHI Größenangabe (Codes)",
@@ -245,63 +276,96 @@
     "ValueSet-mhi-groesse-angabe-vs.html" : "MHI Größenangabe"
   },
   {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendeart",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhiNtxSpendeartCS",
+    "title" : "MHI-NTx Spendeart (Codes)",
+    "description" : "Art der erhaltenen Nierenspende (`MHH_DON`): Lebendspende oder Verstorbenenspende. Nominal, Dictionary-Codes 1–2.",
+    "uses" : {
+    },
+    "ValueSet-mhi-ntx-spendeart-vs.html" : "MHI-NTx Spendeart"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MhiNtxSpendernierenCS",
+    "title" : "MHI-NTx Anzahl Spendernieren (Codes)",
+    "description" : "Die wievielte Spenderniere aktuell (`MHH_PRIOR_TX`): eine, zwei, drei, mehr als drei. Ordinal; `itemWeight` = Dictionary-Code = Anzahl bis drei, Stufe 4 offen nach oben.",
+    "uses" : {
+    },
+    "ValueSet-mhi-ntx-spendernieren-vs.html" : "MHI-NTx Anzahl Spendernieren"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-auftreten-5",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MtsosdR59Auftreten5CS",
+    "title" : "MTSOSD-R59 Auftreten 5-stufig (Codes)",
+    "description" : "Neutral benannte 5-stufige Auftretensskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Stufe 0 = Symptom nicht aufgetreten. itemWeight-Property je Konzept (0-4) ermöglicht eine spätere Auswertung.",
+    "uses" : {
+    },
+    "ValueSet-mtsosd-r59-auftreten-5-vs.html" : "MTSOSD-R59 Auftreten 5-stufig"
+  },
+  {
+    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+    "version" : "0.9.0",
+    "status" : "draft",
+    "name" : "MtsosdR59Belastung5CS",
+    "title" : "MTSOSD-R59 Belastung 5-stufig (Codes)",
+    "description" : "Neutral benannte 5-stufige Belastungsskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Quelle: Blatt Visual Scale MTSOSD-R59 des Item Level Dictionary — eine Linie mit den Stufen 0-4 und zwei verbalen Ankern, entsprechend der Originalskala (Dobbels et al. 2008). METADATA-ONLY: Die Ankertexte dürfen nicht veröffentlicht werden. Stufe 0 = keine Belastung. itemWeight-Property je Konzept (0-4).",
+    "uses" : {
+    },
+    "ValueSet-mtsosd-r59-belastung-5-vs.html" : "MTSOSD-R59 Belastung 5-stufig"
+  },
+  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/opd-sfk-antwort",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "OpdSfkAntwortCS",
     "title" : "OPD-SFK Antwortskala (Codes)",
-    "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal().",
+    "description" : "5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). itemWeight-Property je Konzept für SDC-Summenscoring via .weight().",
     "uses" : {
     },
     "ValueSet-opd-sfk-antwort-vs.html" : "OPD-SFK Antwortskala"
   },
   {
-    "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health",
-    "version" : "0.3.0",
-    "status" : "draft",
-    "name" : "PcorExampleGeneralHealthCS",
-    "title" : "PCOR Example General Health Self-Assessment",
-    "description" : "Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire.",
-    "uses" : {
-    },
-    "ValueSet-pcor-example-general-health.html" : "PCOR Example General Health Self-Assessment"
-  },
-  {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ssuk-antwort",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "SsukAntwortCS",
     "title" : "SSUK Antwortskala (Codes)",
-    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
+    "description" : "5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein.",
     "uses" : {
     },
     "ValueSet-ssuk-antwort-vs.html" : "SSUK Antwortskala"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-arztbesuche",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnArztbesucheCS",
     "title" : "UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)",
-    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0).",
+    "description" : "Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `itemWeight`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0).",
     "uses" : {
     },
     "ValueSet-ukhd-an-arztbesuche-vs.html" : "UKHD-AN Arztbesuche in den letzten 4 Wochen"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnBehandlungsstatusCS",
     "title" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
-    "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
+    "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `itemWeight`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
     "uses" : {
     },
     "ValueSet-ukhd-an-behandlungsstatus-vs.html" : "UKHD-AN Aktueller Behandlungsstatus"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-bmi-angabe",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnBmiAngabeCS",
     "title" : "UKHD-AN Niedrigster BMI — Angabe-Status (Codes)",
@@ -312,7 +376,7 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-dauer-angabe",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnDauerAngabeCS",
     "title" : "UKHD-AN Dauer der Essstoerung — Einheit/Angabe-Status (Codes)",
@@ -323,55 +387,55 @@
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereignishaeufigkeit",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnEreignishaeufigkeitCS",
     "title" : "UKHD-AN Ereignis einmalig oder wiederholt (Codes)",
-    "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
+    "description" : "Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `itemWeight` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary.",
     "uses" : {
     },
     "ValueSet-ukhd-an-ereignishaeufigkeit-vs.html" : "UKHD-AN Ereignis einmalig oder wiederholt"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-ereigniszeitpunkt",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnEreigniszeitpunktCS",
     "title" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)",
-    "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort.",
+    "description" : "Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `itemWeight`; Stufe 3 ist eine erhobene Nicht-Antwort.",
     "uses" : {
     },
     "ValueSet-ukhd-an-ereigniszeitpunkt-vs.html" : "UKHD-AN Ereignis vor oder nach Beginn der Essstoerung"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-psychotherapie",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdAnPsychotherapieCS",
     "title" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell (Codes)",
-    "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `ordinalValue`.",
+    "description" : "Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `itemWeight`.",
     "uses" : {
     },
     "ValueSet-ukhd-an-psychotherapie-vs.html" : "UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-edp-stufe-6",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "UkhdEdpStufe6CS",
     "title" : "UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)",
-    "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
+    "description" : "Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `itemWeight` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt.",
     "uses" : {
     },
     "ValueSet-ukhd-edp-stufe-6-vs.html" : "UKHD-EDP Antwortstufen (neutralisiert)"
   },
   {
     "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/wai-skala-5",
-    "version" : "0.3.0",
+    "version" : "0.9.0",
     "status" : "draft",
     "name" : "WaiSkala5CS",
     "title" : "WAI Antwortskala 5-stufig (Codes)",
-    "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring.",
+    "description" : "Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. itemWeight-Property je Konzept ermöglicht Scoring.",
     "uses" : {
     },
     "ValueSet-wai-skala-5-vs.html" : "WAI Antwortskala 5-stufig"

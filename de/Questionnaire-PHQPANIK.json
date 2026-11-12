@@ -1,0 +1,203 @@
+{
+  "resourceType" : "Questionnaire",
+  "id" : "PHQPANIK",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Questionnaire PHQPANIK</b></p><a name=\"PHQPANIK\"> </a><a name=\"hcPHQPANIK\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-questionnaire.html\">MII PR PRO Questionnaire</a></p></div><b>Structure</b><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"xhtTableBorder1\"><tr class=\"xhtRowBorder2\"><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The linkID for the item\">LinkID</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Text for the item\">Text</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the item can appear in the instance\">Cardinality</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The type of the item\">Type</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Additional information about the item\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck1.png)\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_q_root.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"QuestionnaireRoot\" class=\"hierarchy\"/> PHQPANIK</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des Patient Health Questionnaire (PHQ, Block 3a–3d; Spitzer, Kroenke &amp; Williams 1999), deutsche Fassung PHQ-D (Löwe et al. 2002), 4-Wochen-Recall. Englisch primär, Deutsch als `translation`. linkIds im PHQ-D-Block-Namespace (`phq-phq3a`–`phq-phq3d`), Dictionary-Variablen `phq3a`–`phq3d` in `item.code`. Sprungregel des Formulars als `enableWhen` (3b–3d nur bei 3a = ja). Kein Score-Item: Der PHQ-Algorithmus für das Paniksyndrom braucht zusätzlich die hier nicht erhobene Symptomliste 4a–4k. In PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt dafür führt (ADR-012).</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Questionnaire</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK#0.9.0</td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"item.phq-panik-intro\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-display.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"display\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">PHQPANIK / </span>phq-panik-intro</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Questions about anxiety.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-display\">display</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"item.phq-phq3a\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">PHQPANIK / </span>phq-phq3a</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">a. In the last 4 weeks, have you had an anxiety attack — suddenly feeling fear or panic?</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Optionen: <a href=\"#opt-item.phq-phq3a\">2 options</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"item.phq-phq3b\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">PHQPANIK / </span>phq-phq3b</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">b. Has this ever happened before?</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Enable When: <span><a href=\"#item.phq-phq3a\">phq-phq3a</a> = Yes (SNOMED CT#373066001)</span><br/>Optionen: <a href=\"#opt-item.phq-phq3b\">2 options</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"item.phq-phq3c\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">PHQPANIK / </span>phq-phq3c</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">c. Do some of these attacks come suddenly out of the blue — that is, in situations where you don't expect to be nervous or uncomfortable?</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Enable When: <span><a href=\"#item.phq-phq3a\">phq-phq3a</a> = Yes (SNOMED CT#373066001)</span><br/>Optionen: <a href=\"#opt-item.phq-phq3c\">2 options</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck00.png)\" id=\"item.phq-phq3d\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">PHQPANIK / </span>phq-phq3d</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">d. Do these attacks bother you a lot or are you worried about having another attack?</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Enable When: <span><a href=\"#item.phq-phq3a\">phq-phq3a</a> = Yes (SNOMED CT#373066001)</span><br/>Optionen: <a href=\"#opt-item.phq-phq3d\">2 options</a></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table><hr/><p><b>Options Sets</b></p><a name=\"opt-item.phq-phq3a\"> </a><p><b>Answer options for phq-phq3a </b></p><ul><li style=\"font-size: 11px\">http://snomed.info/sct#373066001 (&quot;Yes&quot;)</li><li style=\"font-size: 11px\">http://snomed.info/sct#373067005 (&quot;No&quot;)</li></ul><a name=\"opt-item.phq-phq3b\"> </a><p><b>Answer options for phq-phq3b </b></p><ul><li style=\"font-size: 11px\">http://snomed.info/sct#373066001 (&quot;Yes&quot;)</li><li style=\"font-size: 11px\">http://snomed.info/sct#373067005 (&quot;No&quot;)</li></ul><a name=\"opt-item.phq-phq3c\"> </a><p><b>Answer options for phq-phq3c </b></p><ul><li style=\"font-size: 11px\">http://snomed.info/sct#373066001 (&quot;Yes&quot;)</li><li style=\"font-size: 11px\">http://snomed.info/sct#373067005 (&quot;No&quot;)</li></ul><a name=\"opt-item.phq-phq3d\"> </a><p><b>Answer options for phq-phq3d </b></p><ul><li style=\"font-size: 11px\">http://snomed.info/sct#373066001 (&quot;Yes&quot;)</li><li style=\"font-size: 11px\">http://snomed.info/sct#373067005 (&quot;No&quot;)</li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "displayable",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "collectable",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "calculatable",
+      "valueBoolean" : false
+    },
+    {
+      "url" : "extractable",
+      "valueBoolean" : false
+    },
+    {
+      "url" : "domainAligned",
+      "valueBoolean" : false
+    }],
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-ex-pro-questionnaire-capabilities"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
+    "valueMarkdown" : "**Designentscheidungen (ADR-012):** (1) **In PCOR-MII gepflegt, nicht im MII-PRO-Modul** — der Block wird nur in PSS erhoben, das Modul führt kein Artefakt; eine Modul-Fassung wurde bewusst hierher verschoben. Nimmt das Modul den Block später auf, ersetzt die Upstream-Referenz diese Instanz. (2) **linkIds im PHQ-D-Block-Namespace** (`phq-phq3a`–`phq-phq3d`) statt der Dictionary-Variablen: Der Block gehört zur PHQ-Familie, deren Items im Modul diesen Namespace tragen ([PHQ](PHQ.html)); so ist bei einer Übernahme keine linkId-Migration nötig. Die Dictionary-Variable steht in `item.code` gegen [`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.html) (ADR-011). (3) **Englisch primär** (ADR-005): Wortlaut des Brief PHQ (Pfizer), deutsche Fassung PHQ-D als `translation`. (4) **Sprungregel als `enableWhen`**: 3b–3d nur bei 3a = ja — so das Originalformular; das Dictionary nennt keine Bedingung. (5) **Kein Score:** Der PHQ definiert für den Block keinen Summenwert, sondern den Algorithmus *Paniksyndrom = 3a–3d alle ja UND ≥ 4 von 4a–4k ja*; ohne die Symptomliste ist nur die Screening-Stufe ableitbar, und Auswertung ist nach ADR-004 nicht Gegenstand dieses IG. (6) **Keine LOINC-/SNOMED-Codes** bekannt; nur der lokale Katalogcode `phq-panik`. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+  }],
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK",
+  "version" : "0.9.0",
+  "name" : "PHQPANIK",
+  "title" : "PHQ-D Panik-Block — Angst-/Panikattacken (PHQ 3a–3d)",
+  "status" : "draft",
+  "experimental" : true,
+  "subjectType" : ["Patient"],
+  "date" : "2026-11-05",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des Patient Health Questionnaire (PHQ, Block 3a–3d; Spitzer, Kroenke & Williams 1999), deutsche Fassung PHQ-D (Löwe et al. 2002), 4-Wochen-Recall. Englisch primär, Deutsch als `translation`. linkIds im PHQ-D-Block-Namespace (`phq-phq3a`–`phq-phq3d`), Dictionary-Variablen `phq3a`–`phq3d` in `item.code`. Sprungregel des Formulars als `enableWhen` (3b–3d nur bei 3a = ja). Kein Score-Item: Der PHQ-Algorithmus für das Paniksyndrom braucht zusätzlich die hier nicht erhobene Symptomliste 4a–4k. In PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt dafür führt (ADR-012).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "Patient Health Questionnaire (PHQ) © Pfizer Inc., entwickelt von Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke und Kolleg:innen (Spitzer et al., JAMA 1999, doi:10.1001/jama.282.18.1737). Frei verfügbar — keine Genehmigung für Reproduktion, Übersetzung, Darstellung oder Nutzung erforderlich (phqscreeners.com). Deutsche Fassung: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002). Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei. Nur der PCOR-MII-eigene FHIR-Inhalt (Struktur, linkIds, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "phq-panik",
+    "display" : "PHQ-D Panik-Block"
+  }],
+  "item" : [{
+    "linkId" : "phq-panik-intro",
+    "text" : "Fragen zum Thema \"Angst\"",
+    "type" : "display"
+  },
+  {
+    "linkId" : "phq-phq3a",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "phq3a"
+    }],
+    "prefix" : "a",
+    "text" : "Hatten Sie in den letzten 4 Wochen eine Angstattacke (plötzliches Gefühl der Furcht oder Panik?)",
+    "type" : "choice",
+    "required" : true,
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
+  },
+  {
+    "linkId" : "phq-phq3b",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "phq3b"
+    }],
+    "prefix" : "b",
+    "text" : "Ist dies bereits früher einmal vorgekommen?",
+    "type" : "choice",
+    "enableWhen" : [{
+      "question" : "phq-phq3a",
+      "operator" : "=",
+      "answerCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
+      }
+    }],
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
+  },
+  {
+    "linkId" : "phq-phq3c",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "phq3c"
+    }],
+    "prefix" : "c",
+    "text" : "Treten manche dieser Anfälle völlig unerwartet auf - d.h. in Situationen, in denen Sie nicht damit rechnen, dass Sie angespannt oder beunruhigt reagieren?",
+    "type" : "choice",
+    "enableWhen" : [{
+      "question" : "phq-phq3a",
+      "operator" : "=",
+      "answerCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
+      }
+    }],
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
+  },
+  {
+    "linkId" : "phq-phq3d",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "phq3d"
+    }],
+    "prefix" : "d",
+    "text" : "Empfinden Sie diese Anfälle als stark beeinträchtigend, und/oder haben Sie Angst vor erneuten Anfällen?",
+    "type" : "choice",
+    "enableWhen" : [{
+      "question" : "phq-phq3a",
+      "operator" : "=",
+      "answerCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001"
+      }
+    }],
+    "answerOption" : [{
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373066001",
+        "display" : "Yes"
+      }
+    },
+    {
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "373067005",
+        "display" : "No"
+      }
+    }]
+  }]
+}

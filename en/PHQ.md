@@ -1,4 +1,4 @@
-# PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.3.0
+# PHQ (Patient Health Questionnaire) - PCOR-MII Implementation Guide v0.9.0
 
 ## PHQ (Patient Health Questionnaire)
 
@@ -10,7 +10,7 @@ Wer nur ein einzelnes Instrument umsetzt, muss sich mit dem gemeinsamen Namespac
 
 ### PHQ-Instrumente in PCOR-MII
 
-PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2026.7.0.
+PCOR-MII referenziert die im MII PRO-Modul gepflegten Questionnaires — kein eigener Nachbau. Stand des referenzierten Pakets: `de.medizininformatikinitiative.kerndatensatz.pros` 2027.0.0-ballot.2.
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -52,6 +52,19 @@ Der **GAD-7** nutzt seit 2026.7.0 den Angst-Block des PHQ-D (`phq-phq5a`–`phq-
 
 Darüber hinaus: Der **PHQ-8** besteht vollständig aus PHQ-9-Items (`phq-phq2a…h`, siehe oben), und der **PHQ-4** setzt sich aus PHQ-2 (`phq-phq2a`, `phq-phq2b`) und GAD-2 (`phq-phq5a`, `phq-phq5b`) zusammen — alle vier Items existieren im Namespace, ohne dass es einen eigenen PHQ-4-Questionnaire gibt.
 
+### PHQ-D Panik-Block
+
+Block 3 des PHQ-D — die vier Ja/Nein-Screeningfragen zu **Angst- und Panikattacken** (4-Wochen-Recall) — hat im MII-PRO-Modul kein Artefakt. PCOR-MII pflegt ihn deshalb selbst als [`PHQPANIK`](PHQ-Panik.md) (ADR-012), **mit `linkId`s im PHQ-D-Namespace**, damit eine spätere Übernahme ins Modul ohne Migration auskommt:
+
+| | | |
+| :--- | :--- | :--- |
+| `phq-phq3a` | `phq3a` | Angstattacke in den letzten 4 Wochen |
+| `phq-phq3b` | `phq3b` | Früheres Auftreten |
+| `phq-phq3c` | `phq3c` | Anfälle völlig unerwartet |
+| `phq-phq3d` | `phq3d` | Beeinträchtigung bzw. Angst vor erneuten Anfällen |
+
+Die Symptomliste 4a–4k des vollständigen PHQ-Panikmoduls (`phq-phq4a`–`phq-phq4k`) wird in PCOR-MII nicht erhoben; die Namen sind dafür reserviert.
+
 ### PHQ-SADS
 
 Der **PHQ-SADS** (**Somatic, Anxiety and Depressive Symptoms**, Kroenke et al. 2010) ist kein eigener Fragebogen, sondern die gemeinsame Auswertung der drei Skalen **PHQ-15**, **GAD-7** und **PHQ-9** mit ihren jeweiligen Summenscores — es gibt bewusst keinen Gesamtscore über alle drei.
@@ -76,7 +89,7 @@ Werden mehrere PHQ-Instrumente derselben Person verarbeitet und die Questionnair
 
 Mit 2026.5.0 wurden die PHQ-9-Item-`linkId`s vom alten, instrumentspezifischen Schema (`phq-phq9-q01…q10`) auf den geteilten PHQ-D-Block-Namespace (`phq-phq2a…i` sowie `phq-phq9-difficulty`) umgestellt. Standorte, die PHQ-9-Antworten vor 2026.5.0 erfasst haben, halten `QuestionnaireResponse`s mit den alten `linkId`s vor, die nicht mehr zur aktuellen Questionnaire-Definition passen.
 
-Das MII PRO-Modul liefert dafür die ConceptMap [`mii-cm-pro-phq-9-linkid-migration`](https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-phq-9-linkid-migration). Angewendet auf bestehende PHQ-9-`QuestionnaireResponse`s bringt sie deren `item.linkId` wieder mit dem aktuellen Questionnaire in Einklang:
+Das MII PRO-Modul liefert dafür die ConceptMap `mii-cm-pro-phq-9-linkid-migration`. Angewendet auf bestehende PHQ-9-`QuestionnaireResponse`s bringt sie deren `item.linkId` wieder mit dem aktuellen Questionnaire in Einklang:
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -95,7 +108,7 @@ Alle Zuordnungen sind 1:1 und `equal` — es ändert sich ausschließlich die `l
 
 ### linkId-Migration GAD-7 (instrumentspezifisch → PHQ-D-Namespace)
 
-Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) erfasst wurden, liefert das MII PRO-Modul die ConceptMap [`mii-cm-pro-gad-7-linkids`](https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids):
+Der GAD-7 kommt mit 2026.7.0 direkt im PHQ-D-Namespace ins Modul. Für Alt-Daten, die mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) erfasst wurden, liefert das MII PRO-Modul die ConceptMap `mii-cm-pro-gad-7-linkids`:
 
 | | | |
 | :--- | :--- | :--- |
@@ -111,7 +124,7 @@ Auch hier sind alle Zuordnungen 1:1; es ändert sich ausschließlich die `linkId
 
 ### Quellen
 
-* Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+* Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 * Lizenz: PHQ / PHQ-D © Pfizer Inc. — frei verfügbar (public domain), keine Genehmigung für Reproduktion/Übersetzung/Nutzung erforderlich.
 * Offizielle deutsche Quelle: PHQ-D (Löwe, Spitzer, Zipfel & Herzog 2002)
 * PHQ-SADS: Kroenke K, Spitzer RL, Williams JBW, Löwe B. **The Patient Health Questionnaire Somatic, Anxiety, and Depressive Symptom Scales: a systematic review**. Gen Hosp Psychiatry. 2010;32(4):345–359. [doi:10.1016/j.genhosppsych.2010.03.006](https://doi.org/10.1016/j.genhosppsych.2010.03.006)

@@ -1,0 +1,81 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mtsosd-r59-belastung-5",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mtsosd-r59-belastung-5</b></p><a name=\"mtsosd-r59-belastung-5\"> </a><a name=\"hcmtsosd-r59-belastung-5\"> </a><p><b>Eigenschaften</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Beschreibung</b></td></tr><tr><td>itemWeight</td><td>itemWeight</td><td>http://hl7.org/fhir/concept-properties#itemWeight</td><td>decimal</td><td>Numerischer Ordinalwert (0-4); 0 = keine Belastung, 4 = stärkste Belastung.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>itemWeight</b></td></tr><tr><td style=\"white-space:nowrap\">stufe-0<a name=\"mtsosd-r59-belastung-5-stufe-0\"> </a></td><td>Stufe 0</td><td>0</td></tr><tr><td style=\"white-space:nowrap\">stufe-1<a name=\"mtsosd-r59-belastung-5-stufe-1\"> </a></td><td>Stufe 1</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">stufe-2<a name=\"mtsosd-r59-belastung-5-stufe-2\"> </a></td><td>Stufe 2</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">stufe-3<a name=\"mtsosd-r59-belastung-5-stufe-3\"> </a></td><td>Stufe 3</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">stufe-4<a name=\"mtsosd-r59-belastung-5-stufe-4\"> </a></td><td>Stufe 4</td><td>4</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mtsosd-r59-belastung-5",
+  "version" : "0.9.0",
+  "name" : "MtsosdR59Belastung5CS",
+  "title" : "MTSOSD-R59 Belastung 5-stufig (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-12T18:28:00+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Neutral benannte 5-stufige Belastungsskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Quelle: Blatt Visual Scale MTSOSD-R59 des Item Level Dictionary — eine Linie mit den Stufen 0-4 und zwei verbalen Ankern, entsprechend der Originalskala (Dobbels et al. 2008). METADATA-ONLY: Die Ankertexte dürfen nicht veröffentlicht werden. Stufe 0 = keine Belastung. itemWeight-Property je Konzept (0-4).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "property" : [{
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
+    "description" : "Numerischer Ordinalwert (0-4); 0 = keine Belastung, 4 = stärkste Belastung.",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "stufe-0",
+    "display" : "Stufe 0",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 0
+    }]
+  },
+  {
+    "code" : "stufe-1",
+    "display" : "Stufe 1",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 1
+    }]
+  },
+  {
+    "code" : "stufe-2",
+    "display" : "Stufe 2",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "stufe-3",
+    "display" : "Stufe 3",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 3
+    }]
+  },
+  {
+    "code" : "stufe-4",
+    "display" : "Stufe 4",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 4
+    }]
+  }]
+}

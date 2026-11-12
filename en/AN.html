@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -279,11 +285,11 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="PC-PTSD.html">&lt; prev</a> | 
+            <a href="PHQ-Panik.html">&lt; prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="AN-Instrumentenliste.html">next &gt;</a>
+          | <a href="ERQ-6.html">next &gt;</a>
 
           </span>
 
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>AN (Anorexia Nervosa)</h2>
   
 
@@ -326,236 +332,371 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#generischer-kern-alle-entitäten" id="markdown-toc-generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</a></li>
-  <li><a href="#an-spezifische-instrumente" id="markdown-toc-an-spezifische-instrumente">AN-spezifische Instrumente</a></li>
-  <li><a href="#die-zuschnitte-folgen-einer-dokumentierten-auswahlregel" id="markdown-toc-die-zuschnitte-folgen-einer-dokumentierten-auswahlregel">Die Zuschnitte folgen einer dokumentierten Auswahlregel</a></li>
-  <li><a href="#ein-zusammenhängender-beispieldatensatz" id="markdown-toc-ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</a></li>
-  <li><a href="#status-vorläufig-in-pcor-mii-gepflegt" id="markdown-toc-status-vorläufig-in-pcor-mii-gepflegt">Status: vorläufig in PCOR-MII gepflegt</a></li>
-  <li><a href="#rechtelage" id="markdown-toc-rechtelage">Rechtelage</a></li>
+  <li><a href="#the-an-battery" id="markdown-toc-the-an-battery">The AN battery</a></li>
+  <li><a href="#the-subsets-follow-a-documented-selection-rule" id="markdown-toc-the-subsets-follow-a-documented-selection-rule">The subsets follow a documented selection rule</a></li>
+  <li><a href="#example-data-set" id="markdown-toc-example-data-set">Example data set</a></li>
+  <li><a href="#not-collected-in-an" id="markdown-toc-not-collected-in-an">Not collected in AN</a></li>
+  <li><a href="#rights-and-status" id="markdown-toc-rights-and-status">Rights and status</a></li>
 </ul>
 
 </div>
-<p><strong>AN</strong> (<em>Anorexia Nervosa</em>) ist die essstörungsbezogene Entität in PCOR-MII — neben <a href="PSS.html">PSS</a> (Persistent Somatic Syndrome) und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und AN-spezifischen Instrumenten zu Essstörungspathologie, Emotionsregulation, Veränderungsmotivation, sozialem Umfeld und Kindheitsbelastungen.</p>
+<p><strong>AN</strong> (<em>Anorexia Nervosa</em>) is the eating-disorder entity in PCOR-MII — alongside <a href="PSS.html">PSS</a> (Persistent Somatic Syndrome) and <a href="NTx.html">NTx</a> (kidney transplantation). The battery consists of generic instruments (identical across all three entities) and AN-specific instruments on eating-disorder psychopathology, emotion regulation, motivation to change, social environment and adverse childhood experiences.</p>
 
-<p>Die entitätsübergreifende Sicht steht unter <a href="Instrumente.html">Instrumente</a>; diese Seite beschreibt die AN-Batterie.</p>
+<p>The cross-entity view is on <a href="Instrumente.html">Instruments</a>; this page describes the AN battery and says, for every questionnaire, where its FHIR resource lives. <strong>Machine-readable</strong>, the same compilation is <a href="Library-use-case-an.html">Library/use-case-an</a>, which pins all 25 questionnaires with versions. Rights and status of all instruments are collected on <a href="Rechtelage.html">Rights and open points</a>.</p>
 
-<p><strong>Wer nur wissen will, wo welcher Fragebogen liegt</strong>, ist auf der <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a> schneller: eine Tabelle, jede Zeile ein Instrument, jeder Link direkt auf die Ressource — im PCOR-MII-IG oder im MII-PRO-IG.</p>
+<h3 id="the-an-battery">The AN battery</h3>
 
-<h3 id="generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</h3>
+<p>The <strong>Resource</strong> column links to the resource itself: <strong>PCOR-MII</strong> — the <code class="language-plaintext highlighter-rouge">Questionnaire</code> is defined in this IG, the link goes to the artefact page with <code class="language-plaintext highlighter-rouge">linkId</code>s and downloads; <strong>MII PRO</strong> — the <code class="language-plaintext highlighter-rouge">Questionnaire</code> arrives through the package dependency <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2027.0.0-ballot.2, PCOR-MII does not rebuild it; <strong>open</strong> — no artefact exists yet for this row of the data collection plan. The <strong>Docs</strong> column points to the instrument's PCOR-MII page. Priorities and frequencies of the plan are in the <em>Domain Overview</em> sheet of the Item Level Dictionary and in the <code class="language-plaintext highlighter-rouge">display</code> of the manifest entries.</p>
 
-<p>Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:</p>
-
-<ul>
-  <li><a href="Demographie.html">Demographie</a> (DEM) und <a href="MHI.html">MHI</a> — Soziodemographie und medizinische Vorgeschichte; das MHI enthält im Szenario AN Zusatzitems zu <strong>Gewichtsverlauf</strong> und <strong>AN-Subtyp</strong> (siehe <a href="MHI.html">MHI</a>)</li>
-  <li><a href="PROMIS.html">PROMIS</a> — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS</li>
-  <li><a href="WHODAS-12.html">WHODAS 2.0 (12-Item)</a> — Funktionsfähigkeit und Beeinträchtigung</li>
-  <li><a href="PHQ-15.html">PHQ-15</a>, PHQ-8 (Standard; PHQ-9 siehe <a href="PHQ.html">PHQ-Übersicht</a>), <a href="GAD-7.html">GAD-7</a> / GAD-2 / PHQ-4</li>
-  <li>EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen</li>
-  <li><a href="WAI.html">WAI</a> — Arbeitsfähigkeit (metadata-only)</li>
-</ul>
-
-<p>Auch in AN ist der <strong>PHQ-8 der Standard</strong> — wie in allen Use Cases. Der vollständige PHQ-9 (mit dem Suizidalitäts-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code>) darf nur eingesetzt werden, wenn auf die Erhebung <strong>unmittelbar ein Arztkontakt vor Ort folgt</strong> — kein Einsatz im Monitoring (siehe <a href="PHQ.html">PHQ-Übersicht</a>). Das Suizidalitäts-Item ist als <strong>PHQ-SI</strong> eigenständig ausgewiesen. Außerdem gemeinsam mit PSS: <a href="OPD-SFK.html">OPD-SFK</a> — von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung.</p>
-
-<h3 id="an-spezifische-instrumente">AN-spezifische Instrumente</h3>
-
-<p>Alle fünf sind <strong>projektspezifische Zuschnitte</strong> publizierter Instrumente (beim ACE die ersten fünf Fragen), und <strong>keiner</strong> von ihnen trägt einen Score. Der ERQ-6 galt bis Release 0.3.0 als Ausnahme — er war fälschlich als die offizielle Kurzform ERQ-S ausgewiesen; die Korrektur steht auf der <a href="ERQ-6.html">ERQ-6-Seite</a>.</p>
+<p><strong>Generic core — identical in PSS, AN and NTx</strong></p>
 
 <table>
   <thead>
     <tr>
       <th>Instrument</th>
-      <th>Kat.</th>
+      <th>Cat.</th>
       <th style="text-align: right">Items</th>
-      <th>Erfasst</th>
-      <th>Status</th>
+      <th>Resource</th>
+      <th>Docs</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>ERQ-6</strong></td>
-      <td>DCH</td>
-      <td style="text-align: right">6</td>
-      <td>Emotionsregulation — sechs ERQ-Items, kein Score</td>
-      <td><a href="ERQ-6.html">Seite</a></td>
+      <td>Demographics (DEM)</td>
+      <td>DEM</td>
+      <td style="text-align: right">23¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-DEM.html"><code class="language-plaintext highlighter-rouge">DEM</code></a></td>
+      <td><a href="Demographie.html">Demographics</a></td>
     </tr>
     <tr>
-      <td><strong>EDE-Q6</strong></td>
-      <td>DCH</td>
-      <td style="text-align: right">6</td>
-      <td>Essstörungspathologie inkl. Regelblutung</td>
-      <td><a href="EDE-Q6.html">Seite</a></td>
+      <td>Medical History (MHI) — <strong>with AN supplementary items</strong> on weight history and AN subtype</td>
+      <td>MHI</td>
+      <td style="text-align: right">48¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-MHI.html"><code class="language-plaintext highlighter-rouge">MHI</code></a></td>
+      <td><a href="MHI.html">MHI</a></td>
     </tr>
     <tr>
-      <td><strong>ANSOCQ-2</strong></td>
+      <td>PROMIS Scale v1.2 — Global Health (Global01, Global02)</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> — 2-item subset, <code class="language-plaintext highlighter-rouge">derivedFrom</code> the module's 10-item scale</td>
+      <td><a href="PROMIS.html">PROMIS</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-16 Profile v2.1 — site variant</td>
+      <td>GHS</td>
+      <td style="text-align: right">16</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">PROMIS-16</a></td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-29 + Cognitive Function SF 4a (the plan's "8 domains") — site variant</td>
+      <td>GHS</td>
+      <td style="text-align: right">29 + 4</td>
+      <td><strong>MII PRO</strong> → PROMIS-29 and Cognitive Function SF 4a</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a>, <a href="PROMIS-Cognitive-Function.html">Cognitive Function</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS NRS — Pain Intensity 1a</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>open</strong> as a stand-alone instrument; the item is inside PROMIS-29 (<code class="language-plaintext highlighter-rouge">promis-global07</code>)</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
+    </tr>
+    <tr>
+      <td>WHODAS 2.0, 12-item</td>
+      <td>GHS</td>
+      <td style="text-align: right">14</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">WHODAS 2.0</a></td>
+      <td><a href="WHODAS-12.html">WHODAS 2.0</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-8 — <strong>default</strong> in all use cases; full PHQ-9 only with an immediate on-site physician contact</td>
+      <td>GHS</td>
+      <td style="text-align: right">8 (9)</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-9.html">PHQ-9</a> (PHQ-8 = subset)</td>
+      <td><a href="PHQ-9.html">PHQ-9</a>, <a href="PHQ.html">PHQ overview</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-SI — suicidality, inpatient</td>
+      <td>MHA</td>
+      <td style="text-align: right">1</td>
+      <td><strong>MII PRO</strong> — item <code class="language-plaintext highlighter-rouge">phq-phq2i</code> of the PHQ-9, no questionnaire of its own</td>
+      <td><a href="PHQ-9.html">PHQ-9</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-15</td>
+      <td>GHS</td>
+      <td style="text-align: right">13</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-15.html">PHQ-15</a></td>
+      <td><a href="PHQ-15.html">PHQ-15</a></td>
+    </tr>
+    <tr>
+      <td>GAD-7 (also GAD-2 / PHQ-4 as subsets)</td>
+      <td>GHS</td>
+      <td style="text-align: right">7</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-gad-7.html">GAD-7</a></td>
+      <td><a href="GAD-7.html">GAD-7</a></td>
+    </tr>
+    <tr>
+      <td>EURONET-SOMA 1 + 2</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euronet-soma.html">EURONET-SOMA</a></td>
+      <td><a href="EURONET-SOMA.html">EURONET-SOMA</a></td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L — outcome only, yearly</td>
+      <td>GHS</td>
+      <td style="text-align: right">6</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">EQ-5D-5L</a>, collectable variant</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>WAI / Work Ability Score</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-WAI.html"><code class="language-plaintext highlighter-rouge">WAI</code></a> — <strong>metadata-only</strong>, no item texts</td>
+      <td><a href="WAI.html">WAI</a></td>
+    </tr>
+    <tr>
+      <td>OPD-SFK — personality functioning, priority C; collected by individual sites, no recommendation of the use-case lead</td>
+      <td>MHA</td>
+      <td style="text-align: right">12</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-OPDSFK.html"><code class="language-plaintext highlighter-rouge">OPDSFK</code></a></td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>¹ For DEM and MHI this is the number of leaf items of the PCOR-MII questionnaire, not a dictionary instrument count: both bundle single items from several sources (OECD, GI-PS, CPCOR) into one questionnaire each, and the MHI adds the two PCOR-MII helper items for unit selection. For all other rows the number is the item count according to the Item Level Dictionary.</p>
+
+<p>PROMIS-16 and PROMIS-29 + Cognitive Function are <strong>site variants</strong> (either/or); both are in the manifest so that receivers can resolve responses of both site types (reading of the "8 domains" confirmed by the use-case lead, 2026-10-13). In AN too, the <strong>PHQ-8 is the default</strong>; the full PHQ-9 with the suicidality item <code class="language-plaintext highlighter-rouge">phq-phq2i</code> may only be used when the assessment is immediately followed by an on-site physician contact — never in remote monitoring (see <a href="PHQ.html">PHQ overview</a>).</p>
+
+<p><strong>AN-specific instruments</strong></p>
+
+<p>All five are <strong>project-specific subsets</strong> of published instruments (for the ACE the first five questions), provisionally maintained in PCOR-MII (<a href="Designentscheidungen.html">ADR-003</a>), and <strong>none</strong> of them carries a score. Until release 0.3.0 the ERQ-6 counted as the exception — it was wrongly identified as the official short form ERQ-S; the correction is on the <a href="ERQ-6.html">ERQ-6 page</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Cat.</th>
+      <th style="text-align: right">Items</th>
+      <th>Captures</th>
+      <th>Resource</th>
+      <th>Docs</th>
+      <th>Example response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ERQ-6</td>
+      <td>DCH</td>
+      <td style="text-align: right">6</td>
+      <td>Emotion regulation — six ERQ items</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ERQ6.html"><code class="language-plaintext highlighter-rouge">ERQ6</code></a></td>
+      <td><a href="ERQ-6.html">ERQ-6</a></td>
+      <td><a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a></td>
+    </tr>
+    <tr>
+      <td>EDE-Q6</td>
+      <td>DCH</td>
+      <td style="text-align: right">6</td>
+      <td>Eating-disorder psychopathology incl. menstruation</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-EDEQ6.html"><code class="language-plaintext highlighter-rouge">EDEQ6</code></a></td>
+      <td><a href="EDE-Q6.html">EDE-Q6</a></td>
+      <td><a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a></td>
+    </tr>
+    <tr>
+      <td>ANSOCQ-2</td>
       <td>TCH</td>
       <td style="text-align: right">2</td>
-      <td>Veränderungsmotivation (Stages of Change)</td>
-      <td><a href="ANSOCQ-2.html">Seite</a></td>
+      <td>Motivation to change (stages of change)</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ANSOCQ2.html"><code class="language-plaintext highlighter-rouge">ANSOCQ2</code></a></td>
+      <td><a href="ANSOCQ-2.html">ANSOCQ-2</a></td>
+      <td><a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a></td>
     </tr>
     <tr>
-      <td><strong>SSUK-2</strong></td>
+      <td>SSUK-2</td>
       <td>EFA</td>
       <td style="text-align: right">2</td>
-      <td>Soziale Unterstützung / belastende Interaktion</td>
-      <td><a href="SSUK-2.html">Seite</a></td>
+      <td>Social support / problematic interaction</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-SSUK2.html"><code class="language-plaintext highlighter-rouge">SSUK2</code></a></td>
+      <td><a href="SSUK-2.html">SSUK-2</a></td>
+      <td><a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a></td>
     </tr>
     <tr>
-      <td><strong>ACE</strong></td>
+      <td>ACE + timing items</td>
       <td>EFA</td>
-      <td style="text-align: right">5</td>
-      <td>Belastende Kindheitserfahrungen</td>
-      <td><a href="ACE.html">Seite</a></td>
+      <td style="text-align: right">5 + 6</td>
+      <td>Adverse childhood experiences; the six <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> timing items bound to <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code> via <code class="language-plaintext highlighter-rouge">enableWhen</code> (PCOR-MII composite)</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ACE.html"><code class="language-plaintext highlighter-rouge">ACE</code></a></td>
+      <td><a href="ACE.html">ACE</a></td>
+      <td><a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a></td>
     </tr>
     <tr>
-      <td><strong>UKHD-EDP</strong></td>
+      <td>UKHD-EDP</td>
       <td>DCH</td>
       <td style="text-align: right">11</td>
-      <td>Essstörungspathologie — vermutlich EDI-2-Zuschnitt</td>
-      <td><a href="UKHD-EDP.html">Seite</a> — metadata-only</td>
+      <td>Eating-disorder psychopathology — probably an EDI-2 subset</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDEDP.html"><code class="language-plaintext highlighter-rouge">UKHDEDP</code></a> — <strong>metadata-only</strong></td>
+      <td><a href="UKHD-EDP.html">UKHD-EDP</a></td>
+      <td><a href="QuestionnaireResponse-UKHDEDPMonitoringResponse.html">UKHDEDPMonitoringResponse</a></td>
     </tr>
   </tbody>
 </table>
 
-<p>Dazu die <strong><a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a></strong> — Itemgruppen, die kein publiziertes Instrument abbilden und vom Standort Heidelberg für die Erhebung zusammengestellt sind. Sechs davon sind als <strong>je ein eigenes Questionnaire</strong> modelliert, eines je Dictionary-Gruppe:</p>
+<p><strong>UKHD supplementary questionnaires</strong> — item groups that do not correspond to any published instrument and were compiled by the Heidelberg site for data collection, all priority A. Six are modelled as <strong>one Questionnaire each</strong>, one per dictionary group (<a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>); <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> is inside the ACE (see above), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> is deliberately not modelled.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Bogen</th>
-      <th>Kat.</th>
+      <th>Questionnaire</th>
+      <th>Cat.</th>
       <th style="text-align: right">Items</th>
-      <th>Erfasst</th>
-      <th>Status</th>
+      <th>Captures</th>
+      <th>Resource</th>
+      <th>Example response</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>UKHD-PT</strong></td>
+      <td>UKHD-PT</td>
       <td>TCH</td>
       <td style="text-align: right">2</td>
-      <td>Vorbehandlung: Psychotherapie, Arztbesuche</td>
-      <td><a href="Questionnaire-UKHDPT.html">Questionnaire</a></td>
+      <td>Prior treatment: psychotherapy, physician visits</td>
+      <td><a href="Questionnaire-UKHDPT.html"><code class="language-plaintext highlighter-rouge">UKHDPT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a></td>
     </tr>
     <tr>
-      <td><strong>UKHD-ANB</strong></td>
+      <td>UKHD-ANB</td>
       <td>DCH</td>
       <td style="text-align: right">2 (+2)</td>
-      <td>Essstörungsanamnese: Dauer, niedrigster BMI</td>
-      <td><a href="Questionnaire-UKHDANB.html">Questionnaire</a></td>
+      <td>Eating-disorder history: duration, lowest BMI</td>
+      <td><a href="Questionnaire-UKHDANB.html"><code class="language-plaintext highlighter-rouge">UKHDANB</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a></td>
     </tr>
     <tr>
-      <td><strong>UKHD-CT</strong></td>
+      <td>UKHD-CT</td>
       <td>TCH</td>
       <td style="text-align: right">1</td>
-      <td>Aktueller Behandlungsstatus</td>
-      <td><a href="Questionnaire-UKHDCT.html">Questionnaire</a></td>
+      <td>Current treatment status</td>
+      <td><a href="Questionnaire-UKHDCT.html"><code class="language-plaintext highlighter-rouge">UKHDCT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a></td>
     </tr>
     <tr>
-      <td><strong>UKHD-LE</strong></td>
+      <td>UKHD-LE</td>
       <td>EFA</td>
       <td style="text-align: right">4</td>
-      <td>Belastende Lebensereignisse</td>
-      <td><a href="Questionnaire-UKHDLE.html">Questionnaire</a></td>
+      <td>Stressful life events</td>
+      <td><a href="Questionnaire-UKHDLE.html"><code class="language-plaintext highlighter-rouge">UKHDLE</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a></td>
     </tr>
     <tr>
-      <td><strong>UKHD-ND</strong></td>
+      <td>UKHD-ND</td>
       <td>DCH</td>
       <td style="text-align: right">3</td>
-      <td>Neue Diagnosen seit letzter Befragung</td>
-      <td><a href="Questionnaire-UKHDND.html">Questionnaire</a></td>
+      <td>New diagnoses since the last assessment</td>
+      <td><a href="Questionnaire-UKHDND.html"><code class="language-plaintext highlighter-rouge">UKHDND</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">UKHDNDMonitoringResponse</a> — not collected at the initial visit</td>
     </tr>
     <tr>
-      <td><strong>UKHD-D</strong></td>
+      <td>UKHD-D</td>
       <td>DCH</td>
       <td style="text-align: right">2</td>
-      <td>Diagnosen bei Aufnahme</td>
-      <td><a href="Questionnaire-UKHDD.html">Questionnaire</a></td>
+      <td>Diagnoses at admission</td>
+      <td><a href="Questionnaire-UKHDD.html"><code class="language-plaintext highlighter-rouge">UKHDD</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UKHD-BI</code></td>
+      <td>—</td>
+      <td style="text-align: right">3</td>
+      <td>Body image — visual picture scale; data collection does not use it yet, the picture template is missing in the dictionary</td>
+      <td><strong>open</strong> — deliberately not modelled</td>
+      <td>—</td>
     </tr>
   </tbody>
 </table>
 
-<p>Gemeinsame Entscheidungen, Antwortskalen und offene Punkte: <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>. Die siebte Gruppe <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> (6 Zeitangaben zu Kindheitsbelastungen) steht im <a href="ACE.html">ACE</a>: Das Dictionary nennt ihren Bezug auf <code class="language-plaintext highlighter-rouge">ace1</code> bis <code class="language-plaintext highlighter-rouge">ace3</code> ausdrücklich, und <code class="language-plaintext highlighter-rouge">enableWhen</code> kann diesen Bezug nur innerhalb desselben Questionnaire ausdrücken. Der ACE ist dadurch ein PCOR-MII-Komposit.</p>
+<p>For these groups no documented clearance exists, and the origin of their wording is unresolved — the <code class="language-plaintext highlighter-rouge">UKHD</code> prefix is a compilation label of the dictionary, not a statement of authorship. Modelling them is a deliberate project decision for piloting; details under <a href="Rechtelage.html#standortgruppen">Rights and open points</a>.</p>
 
-<p><strong>Für diese 20 Items liegt keine dokumentierte Freigabe vor, und die Herkunft ihres Wortlauts ist ungeklärt</strong> — auch für die sechs, die im ACE stehen. Das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix ist ein Zusammenstellungs-Etikett des Dictionary, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Die Modellierung ist eine bewusste Projektentscheidung zur Erprobung (Einzelheiten auf <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>).</p>
-
-<p><strong>Eine</strong> Gruppe ist <strong>ausdrücklich ausgenommen</strong>: <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — eine visuelle Bildskala, mit der die Erhebung noch nicht läuft und deren Bildvorlage im Dictionary fehlt). <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items) ist dagegen als <a href="UKHD-EDP.html">eigener Bogen</a> modelliert — <strong>metadata-only</strong>, weil es vermutlich ein EDI-2-Zuschnitt mit ungeklärter Hogrefe-Rechtelage ist und ohnehin keine Freigabe des Standorts vorliegt. Damit sind alle UKHD-Gruppen der Entität AN abgedeckt, zwei davon ohne Wortlaut.</p>
-
-<h3 id="die-zuschnitte-folgen-einer-dokumentierten-auswahlregel">Die Zuschnitte folgen einer dokumentierten Auswahlregel</h3>
-
-<p>Vier der fünf AN-Instrumente sind Zuschnitte, und die DIZ-Implementierungsliste nennt in ihrer Spalte <em>„verkürzte Version?“</em> die Regel dahinter — bei ERQ-6, EDE-Q6, ANSOCQ-2 und SSUK-2 gleichlautend:</p>
-
-<blockquote>
-  <p>„nicht vollständig verwendet, sondern nur das Item mit der höchsten Trennschärfe pro Skala“</p>
-</blockquote>
-
-<p>Das ist wichtiger, als es aussieht: Die Zuschnitte sind damit <strong>nicht willkürlich gekürzt</strong>, sondern nach einem angegebenen psychometrischen Kriterium gebildet — je Skala oder Faktor das trennschärfste Item. Für drei der vier ist diese Regel in PCOR-MII gegen die publizierte Struktur des Originalinstruments nachgeprüft: beim <a href="EDE-Q6.html">EDE-Q6</a> gegen die vier EDE-Q-Subskalen, beim <a href="ANSOCQ-2.html">ANSOCQ-2</a> gegen die zwei Faktoren der deutschen Validierung, beim <a href="SSUK-2.html">SSUK-2</a> gegen die zwei gegenläufigen SSUK-Dimensionen. Sie trifft jeweils zu.</p>
-
-<p><strong>Eine Ausnahme, die man kennen muss:</strong> Beim <a href="ERQ-6.html">ERQ-6</a> passt die Formulierung <em>„das Item … pro Skala“</em> im Singular nicht — dort sind es <strong>drei</strong> Items je Subskala des Vollinstruments. Bis Release 0.3.0 stand hier, der Bogen sei die publizierte Kurzform ERQ-S und trage deshalb als einziger ein validiertes Scoring. <strong>Das war falsch</strong> — der ERQ-S besteht aus anderen ERQ-Items; der Score ist zurückgezogen.</p>
-
-<p>Der <a href="ACE.html">ACE</a> trägt in derselben Spalte eine andere Angabe — <em>„die ersten 5 Fragen“</em> —, ist also keine Trennschärfe-Auswahl, sondern der vordere Block des Instruments (Misshandlung und Vernachlässigung ohne die Haushalts-Dysfunktions-Fragen).</p>
-
-<p>Für die Auswertung folgt daraus durchgehend dasselbe: <strong>Ein trennschärfstes Item je Skala bildet die Skala nicht ab.</strong> Deshalb trägt <strong>keiner</strong> dieser Zuschnitte einen Score — Einzelheiten auf den jeweiligen Instrumentenseiten und in <a href="Designentscheidungen.html">ADR-003</a>.</p>
-
-<h3 id="ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</h3>
-
-<p>Für die fünf AN-Instrumente und die <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> liegen ausgefüllte Beispielantworten vor — und zwar <strong>nicht</strong> als unverbundene Testdaten, sondern als ein Erhebungstermin (18.06.2026) bei <strong>derselben Beispiel-Patientin</strong>, die schon <a href="Demographie.html">DEM</a> und <a href="MHI.html">MHI</a> nutzen (<code class="language-plaintext highlighter-rouge">pcor-mii-exa-patient</code>): Anorexia nervosa restriktiver Typ seit 2020, in Behandlung, Gewicht teilrestituiert. Der Datensatz lässt sich damit als Ganzes lesen.</p>
+<p><strong>Scores</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th>Beispielantwort</th>
-      <th>Zeigt</th>
+      <th>Score</th>
+      <th>Resource</th>
+      <th>Docs</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a></td>
-      <td>niedrige Neubewertung bei hoher Unterdrückung — das für AN beschriebene Muster</td>
+      <td>PROPr — PROMIS Preference utility</td>
+      <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefProprUtility.html"><code class="language-plaintext highlighter-rouge">PcorObsDefProprUtility</code></a> — provisional, responsibility upstream</td>
+      <td><a href="PROMIS-16.html#propr">PROMIS-16</a></td>
     </tr>
     <tr>
-      <td><a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a></td>
-      <td>residuelle Pathologie; belegt die über <code class="language-plaintext highlighter-rouge">enableWhen</code> abhängige Frage <code class="language-plaintext highlighter-rouge">edeq30</code></td>
+      <td>PROMIS domain T-scores (PROMIS-29)</td>
+      <td><strong>MII PRO</strong> — eight <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s in the package</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
     </tr>
     <tr>
-      <td><a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a></td>
-      <td>mittlere Veränderungsmotivation; <code class="language-plaintext highlighter-rouge">language</code> = <code class="language-plaintext highlighter-rouge">de-CH</code>, weil die validierte Schweizer Fassung vorgelegt wurde</td>
+      <td>PROMIS domain T-scores (PROMIS-16)</td>
+      <td><strong>open</strong> — upstream roadmap 2027; the eight PROMIS-29 codes do <strong>not</strong> apply to PROMIS-16</td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
     </tr>
     <tr>
-      <td><a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a></td>
-      <td>gegenläufige Items: hoch bei der unterstützenden, niedrig bei der belastenden Interaktion</td>
+      <td>Physical / Mental Health Summary (PHS, PCS, MHS, MCS)</td>
+      <td><strong>open</strong> — priority A in the plan, no artefact</td>
+      <td><em>Domain Overview</em> of the Item Level Dictionary</td>
     </tr>
     <tr>
-      <td><a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a></td>
-      <td>zwei bejahte Items in der emotionalen Dimension; von den drei Zeitangabe-Gruppen ist <strong>nur die erste</strong> belegt, weil nur <code class="language-plaintext highlighter-rouge">ace1</code> bejaht ist — die beiden anderen sind per <code class="language-plaintext highlighter-rouge">enableWhen</code> nicht freigeschaltet</td>
+      <td>EQ-5D-5L index</td>
+      <td><strong>MII PRO</strong> — index score and CQL upstream</td>
+      <td>—</td>
     </tr>
     <tr>
-      <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a>, <a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a>, <a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a>, <a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a>, <a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
-      <td>ein <strong>Initial-/Screening-Termin</strong> über fünf UKHD-Zusatzbögen; für <a href="Questionnaire-UKHDND.html">UKHD-ND</a> existiert zu diesem Termin bewusst <strong>keine</strong> Antwort — die erste ND-Antwort gehört zum Monitoring-Termin</td>
+      <td>OPD-SFK global score</td>
+      <td><strong>PCOR-MII</strong> — calculated item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> in the questionnaire</td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
     </tr>
   </tbody>
 </table>
 
-<p><strong>Seit dem 30.07.2026 gibt es einen zweiten Termin:</strong> Das <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">Monitoring-Bundle</a> bündelt neun Verlaufsantworten derselben Patientin, sechs Wochen nach dem Initial-Termin — leicht gebessert, nicht remittiert. Darin die <strong>erste <a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">UKHD-ND-Antwort</a></strong> (die Gruppe wird nur zwischen Aufnahme und Entlassung erhoben), eine bewusste <strong>Teilantwort</strong> zu UKHD-PT (nur <code class="language-plaintext highlighter-rouge">bdkm16</code> — <code class="language-plaintext highlighter-rouge">bdkm15</code> ist ein Initial-Item) und die erste Antwort zum metadata-only-Bogen <a href="QuestionnaireResponse-UKHDEDPMonitoringResponse.html">UKHD-EDP</a>. Beide Termine als Bundles: <a href="Bundle-pcor-mii-exa-bundle-an-initial.html">Initial</a> · <a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">Monitoring</a>.</p>
+<p>The five AN subsets and the UKHD questionnaires carry no score (see below).</p>
 
-<p>Die UKHD-Antworten tragen dabei eine Aussage, die keine der anderen macht: Die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Item Level Dictionary ist in den Questionnaires bewusst nicht modelliert — sichtbar wird sie im <strong>Ressourcenzuschnitt der Antworten</strong>: fünf Antworten für sechs Bögen, weil <a href="Questionnaire-UKHDND.html">UKHD-ND</a> zum Initial-Termin nicht erhoben wird (Begründung auf <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>).</p>
+<h3 id="the-subsets-follow-a-documented-selection-rule">The subsets follow a documented selection rule</h3>
 
-<p><strong>Score-Observations gibt es im AN-Block nicht.</strong> Bis Release 0.3.0 lagen hier zwei zum ERQ bei; sie sind am 01.10.2026 zurückgezogen worden, weil der Bogen nicht der ERQ-S ist und damit keine validierte Scoring-Vorschrift hat (siehe <a href="ERQ-6.html">ERQ-6</a>).</p>
+<p>Four of the five AN instruments are subsets, and the DIZ implementation list names the rule behind them in its column <em>"shortened version?"</em> — identically for ERQ-6, EDE-Q6, ANSOCQ-2 and SSUK-2:</p>
 
-<p>Die Antwortwerte sind bewusst gewählt, nicht zufällig: Ein durchgängig mittleres Profil hätte beim ERQ-6 beide Itemgruppen auf denselben Wert gelegt und beim SSUK-2 die Gegenläufigkeit der Items verdeckt. Die Begründung steht je Beispiel im Kopfkommentar der FSH-Datei.</p>
+<blockquote>
+  <p>"not used in full, but only the item with the highest discriminatory power per scale"</p>
+</blockquote>
 
-<p>Alle acht Instanzen sind mit dem FHIR-Validator geprüft: <strong>0 errors</strong> (Details unter <a href="Validierung.html">Validierung</a>).</p>
+<p>That matters more than it looks: the subsets are <strong>not arbitrarily shortened</strong> but built on a stated psychometric criterion — the most discriminating item per scale or factor. For three of the four, PCOR-MII has checked this rule against the published structure of the original instrument: for <a href="EDE-Q6.html">EDE-Q6</a> against the four EDE-Q subscales, for <a href="ANSOCQ-2.html">ANSOCQ-2</a> against the two factors of the German validation, for <a href="SSUK-2.html">SSUK-2</a> against the two opposing SSUK dimensions. It holds in each case.</p>
 
-<h3 id="status-vorläufig-in-pcor-mii-gepflegt">Status: vorläufig in PCOR-MII gepflegt</h3>
+<p><strong>One exception to know about:</strong> for the <a href="ERQ-6.html">ERQ-6</a> the singular wording <em>"the item … per scale"</em> does not fit — there it is <strong>three</strong> items per subscale of the full instrument. Until release 0.3.0 this page said the questionnaire was the published short form ERQ-S and therefore the only one with a validated scoring. <strong>That was wrong</strong> — the ERQ-S consists of different ERQ items; the score has been withdrawn.</p>
 
-<p>Die fünf AN-Instrumente sind als <strong>PCOR-MII-eigene Ressourcen</strong> modelliert — ausdrücklich vorläufig, für Erprobung und Testbetrieb. Sobald sie offiziell abgestimmt sind, können Teile ins <strong>MII-PRO-Modul</strong> aufgenommen werden; PCOR-MII würde sie dann referenzieren statt selbst pflegen. Hintergrund und Modellierungsregeln (keine Vollinstrument-Codes an Zuschnitte, kein Score ohne validierte Grundlage, Dictionary-Treue) in <a href="Designentscheidungen.html">ADR-003</a>.</p>
+<p>The <a href="ACE.html">ACE</a> carries a different entry in the same column — <em>"the first 5 questions"</em> — so it is not a discrimination-based selection but the front block of the instrument (abuse and neglect without the household-dysfunction questions).</p>
 
-<h3 id="rechtelage">Rechtelage</h3>
+<p>For the analysis the consequence is the same throughout: <strong>one most discriminating item per scale does not represent the scale.</strong> That is why <strong>none</strong> of these subsets carries a score — details on the respective instrument pages and in <a href="Designentscheidungen.html">ADR-003</a>. The answer codes carry <code class="language-plaintext highlighter-rouge">itemWeight</code> as a precaution so that an evaluation remains possible once a rule is agreed (<a href="Rechtelage.html#an-scoring">open point</a>).</p>
 
-<p>Alle fünf AN-Instrumente sind laut DIZ-Implementierungsliste <strong>frei publizierbar</strong> — vollständige Questionnaires mit Itemtexten und Antwortoptionen sind möglich. Die Rechte an den Instrumenten und Item-Formulierungen verbleiben bei den jeweiligen Autor:innen (Details im <code class="language-plaintext highlighter-rouge">copyright</code>-Element der Questionnaires); die Originalpublikationen sind noch nicht gegen das Dictionary verifiziert (siehe <a href="Designentscheidungen.html">offene Punkte</a>).</p>
+<h3 id="example-data-set">Example data set</h3>
 
-<p><strong>Für die <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> gilt das nicht, und zwar grundsätzlich anders:</strong> Die DIZ-Implementierungsliste führt ausschließlich <strong>publizierte</strong> Instrumente und kennt die standortbezogenen Itemgruppen von UKHD, UKE und MHH gar nicht. Für diese 20 Items ist damit weder eine Erlaubnis noch eine Einschränkung dokumentiert — und weil das <code class="language-plaintext highlighter-rouge">UKHD</code>-Präfix nur die Zusammenstellung etikettiert, ist vor der Freigabefrage eine <strong>Herkunftsfrage</strong> zu klären: Woher stammt der Wortlaut je Gruppe? Dass er dennoch aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; alle sechs Ressourcen tragen <code class="language-plaintext highlighter-rouge">status = draft</code> und <code class="language-plaintext highlighter-rouge">experimental = true</code>, und bei einer Einschränkung wird <strong>je Gruppe</strong> auf metadata-only umgestellt (Muster <a href="WAI.html">WAI</a>).</p>
+<p>The AN example responses belong to <strong>one</strong> patient (<a href="Patient-pcor-mii-exa-patient-an.html">pcor-mii-exa-patient-an</a>) and two visits: the initial/screening visit of 18 June 2026 (<a href="Bundle-pcor-mii-exa-bundle-an-initial.html">bundle</a>, 13 entries) and the monitoring visit of 30 July 2026 (<a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">bundle</a>, 10 entries) — slightly improved, not remitted, with the first UKHD-ND response, a deliberate partial response to UKHD-PT and the response to the metadata-only questionnaire UKHD-EDP. What each response demonstrates, why UKHD-ND is absent at the initial visit and how the values were chosen is on <a href="Beispiele.html">Examples</a>.</p>
 
-<p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
+<h3 id="not-collected-in-an">Not collected in AN</h3>
+
+<p>For delimitation, because these instruments exist in PCOR-MII and sit next to the AN ones in the overall table: <strong>PSS-only</strong> are <a href="PHQ-Panik.html">PHQ-D panic block</a>, <a href="PC-PTSD.html">PC-PTSD</a>, <a href="SCOFF.html">SCOFF</a>, <a href="ISR-Z.html">ISR-Z</a>, <a href="SSD-12.html">SSD-12</a>, <a href="WI-7.html">Whiteley-7</a>, <a href="EXPECT.html">EXPECT</a>, <a href="IPQ-S.html">IPQ-S</a>, <a href="GSLTPAQ.html">GSLTPAQ</a> and the UKE healthcare-utilisation items. <strong>NTx-only</strong> are <a href="NTx.html">BAASIS, ABQ, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire</a>.</p>
+
+<h3 id="rights-and-status">Rights and status</h3>
+
+<p>According to the DIZ implementation list the five AN instruments are freely publishable; for <a href="EDE-Q6.html">EDE-Q6</a> (published German version) and the German version of the <a href="ACE.html">ACE</a> (ACE-D) the rights holders' consent is nevertheless to be obtained. The UKHD groups have no documented clearance, <a href="UKHD-EDP.html">UKHD-EDP</a> is metadata-only. All AN-specific resources are <strong>provisionally maintained in PCOR-MII</strong> until they are officially agreed and parts can be adopted into the MII PRO module (<a href="Designentscheidungen.html">ADR-003</a>). The full situation per instrument, the open questions and who has to answer them: <a href="Rechtelage.html">Rights and open points</a>.</p>
+
+<p>Sources of this page: sheets <code class="language-plaintext highlighter-rouge">Item Level Dictionary AN</code> and <code class="language-plaintext highlighter-rouge">Domain Overview</code> of the Item Level Dictionary (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, not part of this repository), DIZ implementation list PCOR-MII; the PCOR-MII/MII PRO assignment matches the manifest <a href="Library-use-case-an.html">use-case-an</a>. Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; all artefacts under <a href="artifacts.html">Artifacts</a>.</p>
 
 
 
@@ -583,7 +724,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="PC-PTSD.html">&lt; prev</a>
+                <a href="PHQ-Panik.html">&lt; prev</a>
 
               </td>
               <td style="text-align:center">
@@ -591,7 +732,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="AN-Instrumentenliste.html">next ></a>
+                <a href="ERQ-6.html">next ></a>
 
               </td>
             </tr>
@@ -605,10 +746,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

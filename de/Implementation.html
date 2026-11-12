@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Anwendung - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Anwendung - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"15"}
-    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Anwendung</h2>
   
 
@@ -339,7 +345,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Das Erfassungs-System kann <strong>außerhalb FHIR</strong> liegen (REDCap, LimeSurvey, hauseigene ePRO-Apps, Papier mit Eingabemaske) <strong>oder direkt in FHIR</strong> erfolgen (z.B. via LHC-Forms oder einer SDC-fähigen Renderer-Applikation gegen einen PCOR-MII Container). <strong>FHIR ist primär die Ablage- und Austausch-Form</strong> — die strukturierte, versionierte und validierbare Darstellung der erfassten Daten zwischen Sites, Konsortien und Forschungs-Empfängern.</p>
 
-<p>In beiden Fällen entstehen <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s + ggf. <code class="language-plaintext highlighter-rouge">Observation</code>s konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>. Validierung und Austausch sehen deshalb gleich aus — siehe <a href="Validierung.html">Validierung</a> und <a href="Bereitstellung.html">Bereitstellung</a>.</p>
+<p>In beiden Fällen entstehen <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>s + ggf. <code class="language-plaintext highlighter-rouge">Observation</code>s konform zum <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a>. Validierung und Austausch sehen deshalb gleich aus — siehe <a href="Validierung.html">Validierung</a> und <a href="Bereitstellung.html">Bereitstellung</a>.</p>
 
 <h3 id="vom-questionnaire-zur-antwort">Vom Questionnaire zur Antwort</h3>
 
@@ -370,28 +376,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </span><span class="s2">"https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PcorExampleQuestionnaire|0.1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de-DE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK|0.9.0"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pcor-mii-exa-patient-an"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"authored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-16T10:00:00+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pcor-mii-exa-patient-pss"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"authored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-25T12:05:00+02:00"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-    </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-      </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pro.general-health"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-example-general-health"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"good"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Good"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}]</span><span class="w">
+    </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phq-phq3a"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"373066001"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phq-phq3b"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"373066001"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="w"> </span><span class="p">}</span><span class="w">
     </span><span class="p">}]</span><span class="w">
   </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Vollständige, validierte Beispiele: zwei synthetische <strong>Beispielpatienten</strong> (AN und PSS) mit drei <strong>Termin-Bundles</strong> und über dreißig Einzelantworten — Übersicht in der <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>, Validierungsstatus auf <a href="Validierung.html">Validierung</a>. Für PROMIS-29 wird das Upstream-Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-pro-promis-29-response</code> aus dem MII PRO-Modul verwendet (siehe <a href="PROMIS-29.html">PROMIS-29-Seite</a>).</p>
+<p>Der Auszug stammt aus der Beispielantwort <a href="QuestionnaireResponse-PHQPANIKResponse.html">PHQPANIKResponse</a> (PHQ-D Panik-Block, Ja/Nein als SNOMED CT nach ADR-013). Vollständige, validierte Beispiele: drei synthetische <strong>Beispielpatienten</strong> (AN, PSS und NTx) mit vier <strong>Termin-Bundles</strong> und über vierzig Einzelantworten — Übersicht in der <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>, Validierungsstatus auf <a href="Validierung.html">Validierung</a>. Für PROMIS-29 wird das Upstream-Beispiel <code class="language-plaintext highlighter-rouge">mii-exa-pro-promis-29-response</code> aus dem MII PRO-Modul verwendet (siehe <a href="PROMIS-29.html">PROMIS-29-Seite</a>).</p>
 
 <h3 id="validierung">Validierung</h3>
 
@@ -399,8 +403,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fhir validate &lt;qr.json&gt; <span class="se">\</span>
   <span class="nt">-version</span> 4.0.1 <span class="se">\</span>
-  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2026.7.0 <span class="se">\</span>
-  <span class="nt">-ig</span> hl7.fhir.uv.sdc#3.0.0 <span class="se">\</span>
+  <span class="nt">-ig</span> de.medizininformatikinitiative.kerndatensatz.pros#2027.0.0-ballot.2 <span class="se">\</span>
+  <span class="nt">-ig</span> hl7.fhir.uv.sdc#4.0.0 <span class="se">\</span>
   <span class="nt">-profile</span> https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response
 </code></pre></div></div>
 
@@ -460,10 +464,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

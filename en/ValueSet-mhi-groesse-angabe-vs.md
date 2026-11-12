@@ -1,4 +1,4 @@
-# MHI Größenangabe - PCOR-MII Implementation Guide v0.3.0
+# MHI Größenangabe - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: MHI Größenangabe (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "mhi-groesse-angabe-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-groesse-angabe-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "MhiGroesseAngabeVS",
   "title" : "MHI Größenangabe",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

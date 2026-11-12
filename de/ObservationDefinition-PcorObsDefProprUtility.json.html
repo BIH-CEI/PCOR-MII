@@ -10,7 +10,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROPr — PROMIS-Preference Utility Score - JSON Representation - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PROPr — PROMIS-Preference Utility Score - JSON Representation - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -150,8 +150,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.100"}
-    h3,h4,h5,h6{--heading-prefix:"21.100"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.117"}
+    h3,h4,h5,h6{--heading-prefix:"23.117"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -171,7 +171,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -221,12 +221,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -239,6 +242,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -287,7 +293,7 @@ a[name="test"] + h3 + div {
 
             <a href="#bottom">Ende</a>
 
-          | <a href="QuestionnaireResponse-ACEResponse.html">weiter &gt;</a>
+          | <a href="QuestionnaireResponse-ABQResponse.html">weiter &gt;</a>
 
           </span>
 
@@ -303,7 +309,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -361,18 +367,18 @@ a[name="test"] + h3 + div {
   "<a href="http://hl7.org/fhir/R4/resource.html#ObservationDefinition.id">id</a>" : "PcorObsDefProprUtility",
   "<a href="http://hl7.org/fhir/R4/resource.html#ObservationDefinition.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"
+      <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-score-blueprint.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint"
     ]
   },
   "<a href="http://hl7.org/fhir/R4/resource.html#ObservationDefinition.language">language</a>" : "de",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#ObservationDefinition.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ObservationDefinition PcorObsDefProprUtility&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;PcorObsDefProprUtility\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcPcorObsDefProprUtility\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-score-blueprint\&quot;&gt;MII PR PRO Score Blueprint / Template&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;ArtifactVersion&lt;/b&gt;: 0.3.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue promis-propr-utility}\&quot;&gt;PROMIS-Preference (PROPr) Utility Score&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;permittedDataType&lt;/b&gt;: Quantity&lt;/p&gt;&lt;p&gt;&lt;b&gt;multipleResultsAllowed&lt;/b&gt;: false&lt;/p&gt;&lt;h3&gt;QuantitativeDetails&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Unit&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;DecimalPrecision&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://unitsofmeasure.org 1}\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;QualifiedIntervals&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Category&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Range&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;absolute range&lt;/td&gt;&lt;td&gt;-0.022-1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ObservationDefinition PcorObsDefProprUtility&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;PcorObsDefProprUtility\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcPcorObsDefProprUtility\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/StructureDefinition-mii-pr-pro-score-blueprint.html\&quot;&gt;MII PR PRO Score Blueprint / Template&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;ArtifactVersion&lt;/b&gt;: 0.9.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-score-catalogue promis-propr-utility}\&quot;&gt;PROMIS-Preference (PROPr) Utility Score&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;permittedDataType&lt;/b&gt;: Quantity&lt;/p&gt;&lt;p&gt;&lt;b&gt;multipleResultsAllowed&lt;/b&gt;: false&lt;/p&gt;&lt;h3&gt;QuantitativeDetails&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Unit&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;DecimalPrecision&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://unitsofmeasure.org 1}\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;QualifiedIntervals&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Category&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Range&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;absolute range&lt;/td&gt;&lt;td&gt;-0.022-1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/domainresource.html#ObservationDefinition.extension">extension</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/artifact-version",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "0.3.0"
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "0.9.0"
     }
   ],
   "<a href="http://hl7.org/fhir/R4/observationdefinition.html#ObservationDefinition.category">category</a>" : [
@@ -475,7 +481,7 @@ a[name="test"] + h3 + div {
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="QuestionnaireResponse-ACEResponse.html">weiter ></a>
+                <a href="QuestionnaireResponse-ABQResponse.html">weiter ></a>
 
               </td>
             </tr>
@@ -489,10 +495,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

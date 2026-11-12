@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PSS (Persistent Somatic Syndrome) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PSS (Persistent Somatic Syndrome) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PSS (Persistent Somatic Syndrome)</h2>
   
 
@@ -324,35 +330,164 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#generischer-kern-alle-entitäten" id="markdown-toc-generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</a></li>
-  <li><a href="#pss-spezifische-instrumente" id="markdown-toc-pss-spezifische-instrumente">PSS-spezifische Instrumente</a></li>
+  <li><a href="#die-pss-batterie" id="markdown-toc-die-pss-batterie">Die PSS-Batterie</a></li>
   <li><a href="#phq-familie-in-pss" id="markdown-toc-phq-familie-in-pss">PHQ-Familie in PSS</a></li>
   <li><a href="#was-pss-von-an-und-ntx-unterscheidet" id="markdown-toc-was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</a></li>
-  <li><a href="#rechtelage" id="markdown-toc-rechtelage">Rechtelage</a></li>
-  <li><a href="#ein-zusammenhängender-beispieldatensatz" id="markdown-toc-ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</a></li>
+  <li><a href="#beispieldatensatz" id="markdown-toc-beispieldatensatz">Beispieldatensatz</a></li>
+  <li><a href="#rechtelage-und-status" id="markdown-toc-rechtelage-und-status">Rechtelage und Status</a></li>
 </ul>
 
 </div>
-<p><strong>PSS</strong> (<em>Persistent Somatic Syndrome</em>) ist die psychosomatische Entität in PCOR-MII — neben <a href="AN.html">Anorexia Nervosa (AN)</a> und Nierentransplantation (NTx). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.</p>
+<p><strong>PSS</strong> (<em>Persistent Somatic Syndrome</em>) ist die psychosomatische Entität in PCOR-MII — neben <a href="AN.html">AN</a> (Anorexia Nervosa) und <a href="NTx.html">NTx</a> (Nierentransplantation). Erhoben wird eine Batterie aus generischen Instrumenten (identisch über alle drei Entitäten) und PSS-spezifischen Instrumenten zu somatischer Belastung, Gesundheitsangst, psychischer Komorbidität und Versorgungsinanspruchnahme.</p>
 
-<p>Die entitätsübergreifende Sicht steht unter <a href="Instrumente.html">Instrumente</a>; diese Seite beschreibt die PSS-Batterie.</p>
+<p>Die entitätsübergreifende Sicht steht unter <a href="Instrumente.html">Instrumente</a>; diese Seite beschreibt die PSS-Batterie und sagt zu jedem Bogen, wo seine FHIR-Ressource liegt. <strong>Maschinenlesbar</strong> ist dieselbe Zusammenstellung als <a href="Library-use-case-pss.html">Library/use-case-pss</a>, die alle 23 Bögen versioniert pinnt. Rechtelage und Status aller Instrumente stehen gesammelt auf <a href="Rechtelage.html">Rechtelage und offene Punkte</a>.</p>
 
-<h3 id="generischer-kern-alle-entitäten">Generischer Kern (alle Entitäten)</h3>
+<h3 id="die-pss-batterie">Die PSS-Batterie</h3>
 
-<p>Diese Instrumente sind in PSS, AN und NTx identisch zu erheben:</p>
+<p>Die Spalte <strong>Ressource</strong> führt zur Ressource selbst: <strong>PCOR-MII</strong> — der <code class="language-plaintext highlighter-rouge">Questionnaire</code> ist in diesem IG definiert; <strong>MII PRO</strong> — der <code class="language-plaintext highlighter-rouge">Questionnaire</code> kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2027.0.0-ballot.2 mit, PCOR-MII baut ihn nicht nach; <strong>offen</strong> — für diese Zeile des Erhebungsplans existiert noch kein Artefakt. Die Spalte <strong>Beispielantwort</strong> zeigt die Antwort des PSS-Beispielpatienten zum Screening-Termin 25.06.2026 (siehe unten). Prioritäten und Frequenzen stehen im Blatt <em>Domain Overview</em> des Item Level Dictionary und im <code class="language-plaintext highlighter-rouge">display</code> der Manifest-Einträge.</p>
 
-<ul>
-  <li><a href="Demographie.html">Demographie</a> (DEM) und <a href="MHI.html">MHI</a> — Soziodemographie und medizinische Vorgeschichte</li>
-  <li><a href="PROMIS.html">PROMIS</a> — Global Health (2 Items), Short Forms 4a, Pain Intensity NRS</li>
-  <li><a href="WHODAS-12.html">WHODAS 2.0 (12-Item)</a> — Funktionsfähigkeit und Beeinträchtigung</li>
-  <li><a href="PHQ-15.html">PHQ-15</a>, PHQ-8 (siehe <a href="PHQ.html">PHQ-Übersicht</a>), <a href="GAD-7.html">GAD-7</a> / GAD-2 / PHQ-4</li>
-  <li>EURONET-SOMA 1 und 2 — je ein Item zu somatischen Symptomen</li>
-  <li><a href="WAI.html">WAI</a> — Arbeitsfähigkeit (metadata-only)</li>
-</ul>
+<p><strong>Generischer Kern — in PSS, AN und NTx identisch</strong></p>
 
-<p>Der <strong>GAD-7</strong> ist seit MII PRO 2026.7.0 enthalten und wird wie die übrigen PHQ-Instrumente referenziert, nicht nachgebaut — siehe <a href="GAD-7.html">GAD-7</a>.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Kat.</th>
+      <th style="text-align: right">Items</th>
+      <th>Ressource</th>
+      <th>Doku</th>
+      <th>Beispielantwort</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Demographie (DEM)</td>
+      <td>DEM</td>
+      <td style="text-align: right">23¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-DEM.html"><code class="language-plaintext highlighter-rouge">DEM</code></a></td>
+      <td><a href="Demographie.html">Demographie</a></td>
+      <td><a href="QuestionnaireResponse-DEMPSSResponse.html">DEMPSSResponse</a></td>
+    </tr>
+    <tr>
+      <td>Medical History (MHI)</td>
+      <td>MHI</td>
+      <td style="text-align: right">48¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-MHI.html"><code class="language-plaintext highlighter-rouge">MHI</code></a></td>
+      <td><a href="MHI.html">MHI</a></td>
+      <td><a href="QuestionnaireResponse-MHIPSSResponse.html">MHIPSSResponse</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS Scale v1.2 — Global Health (Global01, Global02)</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> — 2-Item-Zuschnitt, <code class="language-plaintext highlighter-rouge">derivedFrom</code> der 10-Item-Skala des Moduls</td>
+      <td><a href="PROMIS.html">PROMIS</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>PROMIS-16 Profile v2.1 — Standortvariante</td>
+      <td>GHS</td>
+      <td style="text-align: right">16</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">PROMIS-16</a></td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-promis-16-response.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-29 + Cognitive Function SF 4a (die „8 Domänen“ des Erhebungsplans) — Standortvariante</td>
+      <td>GHS</td>
+      <td style="text-align: right">29 + 4</td>
+      <td><strong>MII PRO</strong> → PROMIS-29 und Cognitive Function SF 4a</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a>, <a href="PROMIS-Cognitive-Function.html">Cognitive Function</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html">Cognitive Function</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS NRS — Pain Intensity 1a</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>offen</strong> als Einzelinstrument; das Item steckt im PROMIS-29 (<code class="language-plaintext highlighter-rouge">promis-global07</code>)</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>WHODAS 2.0, 12-Item</td>
+      <td>GHS</td>
+      <td style="text-align: right">14</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">WHODAS 2.0</a></td>
+      <td><a href="WHODAS-12.html">WHODAS 2.0</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-whodas-12-response.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-8 — <strong>Standard</strong> in allen Use Cases; vollständiger PHQ-9 nur bei unmittelbarem Arztkontakt vor Ort</td>
+      <td>GHS</td>
+      <td style="text-align: right">8 (9)</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-9.html">PHQ-9</a> (PHQ-8 = Teilmenge)</td>
+      <td><a href="PHQ-9.html">PHQ-9</a>, <a href="PHQ.html">PHQ-Übersicht</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-phq-9-response.html">Beispiel</a> (vollständiger PHQ-9, Vor-Ort-Termin)</td>
+    </tr>
+    <tr>
+      <td>PHQ-SI — Suizidalität, stationär</td>
+      <td>MHA</td>
+      <td style="text-align: right">1</td>
+      <td><strong>MII PRO</strong> — Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code> des PHQ-9, kein eigener Bogen</td>
+      <td><a href="PHQ-9.html">PHQ-9</a></td>
+      <td>im PHQ-9-Beispiel</td>
+    </tr>
+    <tr>
+      <td>PHQ-15</td>
+      <td>GHS</td>
+      <td style="text-align: right">13</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-15.html">PHQ-15</a></td>
+      <td><a href="PHQ-15.html">PHQ-15</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-phq-15-response.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>GAD-7 (auch GAD-2 / PHQ-4 als Teilmengen)</td>
+      <td>GHS</td>
+      <td style="text-align: right">7</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-gad-7.html">GAD-7</a></td>
+      <td><a href="GAD-7.html">GAD-7</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-gad-7-response.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>EURONET-SOMA 1 + 2</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euronet-soma.html">EURONET-SOMA</a></td>
+      <td><a href="EURONET-SOMA.html">EURONET-SOMA</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-euronet-soma-response.html">Beispiel</a></td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L — nur Outcome, jährlich</td>
+      <td>GHS</td>
+      <td style="text-align: right">6</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">EQ-5D-5L</a>, Variante collectable</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>WAI / Work Ability Score</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-WAI.html"><code class="language-plaintext highlighter-rouge">WAI</code></a> — <strong>metadata-only</strong>, keine Itemtexte</td>
+      <td><a href="WAI.html">WAI</a></td>
+      <td><a href="QuestionnaireResponse-WAIResponse.html">WAIResponse</a></td>
+    </tr>
+    <tr>
+      <td>OPD-SFK — Persönlichkeitsfunktion; von einzelnen Standorten erhoben, keine Empfehlung der Use-Case-Leitung</td>
+      <td>MHA</td>
+      <td style="text-align: right">12</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-OPDSFK.html"><code class="language-plaintext highlighter-rouge">OPDSFK</code></a></td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+      <td><a href="QuestionnaireResponse-OPDSFKResponse.html">OPDSFKResponse</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="pss-spezifische-instrumente">PSS-spezifische Instrumente</h3>
+<p>¹ Bei DEM und MHI sind das die Blatt-Items des PCOR-MII-Questionnaire, nicht eine Dictionary-Instrumentenzahl: Beide bündeln Einzelitems mehrerer Quellen (OECD, GI-PS, CPCOR) zu je einem Bogen. Bei allen übrigen Zeilen ist die Zahl die Item-Anzahl laut Item Level Dictionary.</p>
+
+<p>PROMIS-16 und PROMIS-29 + Cognitive Function sind <strong>Standortvarianten</strong> (entweder/oder); beide stehen im Manifest, damit Empfänger Antworten beider Standorttypen auflösen können.</p>
+
+<p><strong>PSS-spezifische Instrumente</strong></p>
 
 <table>
   <thead>
@@ -361,91 +496,148 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <th>Kat.</th>
       <th style="text-align: right">Items</th>
       <th>Erfasst</th>
-      <th>Status</th>
+      <th>Ressource</th>
+      <th>Doku</th>
+      <th>Beispielantwort</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>SSD-12</strong></td>
+      <td>SSD-12</td>
       <td>DCH</td>
       <td style="text-align: right">12</td>
       <td>B-Kriterien der somatischen Belastungsstörung</td>
-      <td><a href="SSD-12.html">Seite</a></td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-ssd-12.html">SSD-12</a></td>
+      <td><a href="SSD-12.html">SSD-12</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-ssd-12-response.html">Beispiel</a></td>
     </tr>
     <tr>
-      <td><strong>WI-7</strong></td>
+      <td>WI-7</td>
       <td>DCH</td>
       <td style="text-align: right">7</td>
       <td>Gesundheitsangst (Whiteley-Index)</td>
-      <td><a href="WI-7.html">Seite</a></td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-wi-7.html">Whiteley-7</a></td>
+      <td><a href="WI-7.html">WI-7</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-wi-7-response.html">Beispiel</a></td>
     </tr>
     <tr>
-      <td><strong>SCOFF</strong></td>
+      <td>SCOFF</td>
       <td>MHA</td>
       <td style="text-align: right">5</td>
       <td>Essstörungs-Screening</td>
-      <td><a href="SCOFF.html">Seite</a></td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-scoff.html">SCOFF</a></td>
+      <td><a href="SCOFF.html">SCOFF</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-scoff-response.html">Beispiel</a></td>
     </tr>
     <tr>
-      <td><strong>ISR-Z</strong></td>
+      <td>ISR-Z</td>
       <td>MHA</td>
       <td style="text-align: right">3</td>
-      <td>ICD-10-Symptom-Rating, Zusatzskala</td>
-      <td><a href="ISR-Z.html">Seite</a></td>
+      <td>ICD-10-Symptom-Rating, Zusatzskala Zwang</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-isr-z.html">ISR-Z</a></td>
+      <td><a href="ISR-Z.html">ISR-Z</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-isr-z-response.html">Beispiel</a></td>
     </tr>
     <tr>
-      <td><strong>PC-PTSD</strong></td>
+      <td>PC-PTSD</td>
       <td>MHA</td>
       <td style="text-align: right">4</td>
-      <td>Posttraumatische Belastungsstörung, Primärversorgungs-Screen</td>
-      <td><a href="PC-PTSD.html">Seite</a></td>
+      <td>PTBS-Screening, Primärversorgung</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-pc-ptsd.html">PC-PTSD</a></td>
+      <td><a href="PC-PTSD.html">PC-PTSD</a></td>
+      <td><a href="QuestionnaireResponse-pcor-mii-exa-pss-pc-ptsd-response.html">Beispiel</a></td>
     </tr>
     <tr>
-      <td><strong>PHQ-D Panik-Block</strong></td>
+      <td>PHQ-D Panik-Block</td>
       <td>MHA</td>
       <td style="text-align: right">4</td>
       <td>Angst-/Panikattacken (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>, ja/nein)</td>
-      <td>offen — kein Upstream-Artefakt</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-PHQPANIK.html"><code class="language-plaintext highlighter-rouge">PHQPANIK</code></a> — in PCOR-MII gepflegt (<a href="Designentscheidungen.html">ADR-012</a>)</td>
+      <td><a href="PHQ-Panik.html">PHQ-D Panik-Block</a></td>
+      <td><a href="QuestionnaireResponse-PHQPANIKResponse.html">PHQPANIKResponse</a></td>
     </tr>
     <tr>
-      <td><strong>PHQ-SI</strong></td>
-      <td>MHA</td>
-      <td style="text-align: right">1</td>
-      <td>Suizidalität — das PHQ-9-Item <code class="language-plaintext highlighter-rouge">phq-phq2i</code></td>
-      <td>über <a href="PHQ-9.html">PHQ-9</a> abgedeckt</td>
-    </tr>
-    <tr>
-      <td><strong>OPD-SFK</strong></td>
-      <td>MHA</td>
-      <td style="text-align: right">12</td>
-      <td>Strukturelle Persönlichkeitsfunktion</td>
-      <td><a href="OPD-SFK.html">Seite</a></td>
-    </tr>
-    <tr>
-      <td><strong>GSLTPAQ</strong></td>
+      <td>GSLTPAQ</td>
       <td>TCH</td>
       <td style="text-align: right">6</td>
       <td>Körperliche Freizeitaktivität</td>
-      <td><a href="GSLTPAQ.html">Seite</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-GSLTPAQ.html"><code class="language-plaintext highlighter-rouge">GSLTPAQ</code></a></td>
+      <td><a href="GSLTPAQ.html">GSLTPAQ</a></td>
+      <td><a href="QuestionnaireResponse-GSLTPAQResponse.html">GSLTPAQResponse</a></td>
     </tr>
     <tr>
-      <td><strong>EXPECT</strong></td>
+      <td>EXPECT</td>
       <td>DCH</td>
       <td style="text-align: right">3</td>
       <td>Verlaufserwartung (drei NRS-Items, kein standardisierter Fragebogen)</td>
-      <td><a href="EXPECT.html">Seite</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-EXPECT.html"><code class="language-plaintext highlighter-rouge">EXPECT</code></a></td>
+      <td><a href="EXPECT.html">EXPECT</a></td>
+      <td><a href="QuestionnaireResponse-EXPECTResponse.html">EXPECTResponse</a></td>
     </tr>
     <tr>
-      <td><strong>IPQ-S</strong></td>
+      <td>IPQ-S</td>
       <td>DCH</td>
       <td style="text-align: right">1</td>
       <td>Subjektive Ursachenzuschreibung — offene Frage angelehnt an den B-IPQ</td>
-      <td><a href="IPQ-S.html">Seite</a></td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-IPQS.html"><code class="language-plaintext highlighter-rouge">IPQS</code></a></td>
+      <td><a href="IPQ-S.html">IPQ-S</a></td>
+      <td><a href="QuestionnaireResponse-IPQSResponse.html">IPQSResponse</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UKE-HCU</code>, <code class="language-plaintext highlighter-rouge">UKE-HCU2</code>, <code class="language-plaintext highlighter-rouge">UKE-PSE</code>, <code class="language-plaintext highlighter-rouge">UKE-TR</code>, <code class="language-plaintext highlighter-rouge">UKE-DOT</code></td>
+      <td>TCH</td>
+      <td style="text-align: right">—</td>
+      <td>Versorgungsinanspruchnahme — standortspezifische Itemgruppen des UKE, kein publiziertes Instrument</td>
+      <td><strong>offen</strong> — noch nicht modelliert</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
   </tbody>
 </table>
 
-<p>Dazu die standortspezifischen Item-Gruppen zur Versorgungsinanspruchnahme (<code class="language-plaintext highlighter-rouge">UKE-HCU</code>, <code class="language-plaintext highlighter-rouge">UKE-HCU2</code>, <code class="language-plaintext highlighter-rouge">UKE-PSE</code>, <code class="language-plaintext highlighter-rouge">UKE-TR</code>, <code class="language-plaintext highlighter-rouge">UKE-DOT</code>, Kategorie TCH), die kein publiziertes Instrument abbilden und direkt aus dem Item Level Dictionary stammen.</p>
+<p><strong>Scores</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Ressource</th>
+      <th>Doku</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHQ-9/-8, PHQ-15, GAD-7 Summenscores, SSD-12, WI-7</td>
+      <td><strong>MII PRO</strong> — <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s und Score-Items im Paket</td>
+      <td><a href="PHQ.html">PHQ-Übersicht</a>, <a href="SSD-12.html">SSD-12</a>, <a href="WI-7.html">WI-7</a></td>
+    </tr>
+    <tr>
+      <td>PROPr — PROMIS-Preference Utility</td>
+      <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefProprUtility.html"><code class="language-plaintext highlighter-rouge">PcorObsDefProprUtility</code></a> — vorläufig, Zuständigkeit upstream</td>
+      <td><a href="PROMIS-16.html#propr">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-Domänen-T-Scores (PROMIS-29)</td>
+      <td><strong>MII PRO</strong> — acht <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s im Paket</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-Domänen-T-Scores (PROMIS-16)</td>
+      <td><strong>offen</strong> — upstream Roadmap 2027</td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>OPD-SFK Globalwert und drei explorative Subskalen</td>
+      <td><strong>PCOR-MII</strong> — berechnete Items <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-selbstwahrnehmung</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-beziehungsmodell</code>, <code class="language-plaintext highlighter-rouge">opd-sfk-kontaktgestaltung</code> im Bogen</td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L Index</td>
+      <td><strong>MII PRO</strong> — Index-Score und CQL upstream</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="phq-familie-in-pss">PHQ-Familie in PSS</h3>
 
@@ -475,33 +667,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Wer beide erhebt, erhebt faktisch den vollständigen PHQ-9 — zulässig nur im Setting mit unmittelbar folgendem Arztkontakt vor Ort. Die Trennung im Dictionary ist eine Auswertungs- und Governance-Entscheidung (Suizidalität nie ohne Management-Plan bzw. Alert), keine inhaltliche Abweichung. Siehe <a href="PHQ.html">PHQ-Übersicht</a>.</p>
 
-<p>Der <strong>PHQ-D-Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul <strong>kein Artefakt</strong> — weder Questionnaire noch <code class="language-plaintext highlighter-rouge">linkId</code>s im Namespace. Bedarf wäre dort anzumelden.</p>
+<p>Der <strong>PHQ-D-Panik-Block</strong> (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>) ist etwas anderes als PHQ-4: vier Ja/Nein-Items zu Angst-/Panikattacken mit 4-Wochen-Recall aus Block 3 des PHQ-D. Dafür gibt es im MII-PRO-Modul <strong>kein Artefakt</strong>; PCOR-MII pflegt den Block deshalb selbst als <a href="PHQ-Panik.html"><code class="language-plaintext highlighter-rouge">PHQPANIK</code></a> (ADR-012) — mit <code class="language-plaintext highlighter-rouge">linkId</code>s im PHQ-D-Namespace (<code class="language-plaintext highlighter-rouge">phq-phq3a</code>–<code class="language-plaintext highlighter-rouge">phq-phq3d</code>), damit eine spätere Übernahme ins Modul ohne Migration auskommt.</p>
 
 <h3 id="was-pss-von-an-und-ntx-unterscheidet">Was PSS von AN und NTx unterscheidet</h3>
 
 <ul>
-  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems.</li>
+  <li><strong>Nur in PSS</strong>: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. PHQ-15 führt das Domain Overview nur für PSS (das Dictionary-Blatt NTx aber auch — siehe <a href="NTx.html">NTx</a>).</li>
   <li><strong>PSS und AN gemeinsam</strong>: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.</li>
-  <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Items zu Körperbild, Essstörungspathologie und Umfeld — siehe <a href="AN.html">AN</a>.</li>
-  <li><strong>Nur in NTx</strong>: BAASIS, MTSOSD-R59, ABQ (alle metadata-only) sowie die MHH-Verlaufsparameter.</li>
+  <li><strong>Nur in AN</strong>: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Zusatzbögen — siehe <a href="AN.html">AN</a>.</li>
+  <li><strong>Nur in NTx</strong>: BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung — siehe <a href="NTx.html">NTx</a>.</li>
 </ul>
 
-<h3 id="rechtelage">Rechtelage</h3>
+<h3 id="beispieldatensatz">Beispieldatensatz</h3>
 
-<p>Die PSS-Batterie ist ganz überwiegend <strong>frei publizierbar</strong> — vollständige Questionnaires mit Itemtexten, Antwortoptionen und Scoring sind möglich. Zwei Ausnahmen:</p>
+<p>Der PSS-Beispielpatient (<a href="Patient-pcor-mii-exa-patient-pss.html">pcor-mii-exa-patient-pss</a>) hat einen Screening-Termin 25.06.2026, gebündelt als <a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">Bundle</a> mit der vollständigen Batterie: acht PCOR-MII-Bögen als FHIR-Shorthand-Instanzen und zwölf Antworten auf MII-PRO-Questionnaires. Profil, Werte und was jede Antwort belegt: <a href="Beispiele.html">Beispiele</a>.</p>
 
-<ul>
-  <li><strong>WAI</strong> — laut DIZ-Implementierungsliste „wahrscheinlich nicht für die Veröffentlichung geeignet"; deshalb <a href="WAI.html">metadata-only</a> ohne Originalwortlaut.</li>
-  <li><strong>OPD-SFK</strong> — frei nach erfolgter Rücksprache mit den Autor:innen; die Rechte an Instrument und Formulierungen verbleiben bei Autor:innen bzw. Verlag (siehe <a href="OPD-SFK.html">OPD-SFK</a>).</li>
-</ul>
+<h3 id="rechtelage-und-status">Rechtelage und Status</h3>
 
-<p>PROMIS und WHODAS 2.0 unterliegen ihren jeweiligen Nutzungsvereinbarungen (CPCOR bzw. WHO).</p>
-
-<h3 id="ein-zusammenhängender-beispieldatensatz">Ein zusammenhängender Beispieldatensatz</h3>
-
-<p>Für PSS gibt es seit dem 01.10.2026 einen <strong>synthetischen Beispielpatienten</strong> (<a href="Patient-pcor-mii-exa-patient-pss.html">pcor-mii-exa-patient-pss</a>): 48 Jahre, persistierende somatische Symptome seit etwa zwei Jahren (Erschöpfung, Rücken- und Magen-Darm-Beschwerden), mittelgradige somatische Belastung (PHQ-15 = 12, SSD-12 = 22), leichte depressive (PHQ-8 = 9) und ängstliche (GAD-7 = 7) Symptomatik, mäßig reduzierte Arbeitsfähigkeit (WAI 6/10).</p>
-
-<p>Der Screening-Termin 25.06.2026 ist als <strong><a href="Bundle-pcor-mii-exa-bundle-pss-screening.html">Bundle</a></strong> gebündelt und umfasst die <strong>vollständige Batterie</strong> — die PCOR-MII-eigenen Bögen (DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI) als FHIR-Shorthand-Instanzen und zwölf Antworten auf <strong>MII-PRO-Questionnaires</strong> (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function) als Beispiele unter <code class="language-plaintext highlighter-rouge">input/examples/</code>, referenziert gegen die Upstream-Canonicals mit Versionspin <code class="language-plaintext highlighter-rouge">|2026.7.0</code>. Dass hier der vollständige PHQ-9 beantwortet ist, ist konsistent mit der Einsatzregel: Der Screening-Termin ist ein Vor-Ort-Termin mit unmittelbarem Arztkontakt. Die Werte sind aufeinander abgestimmt, nicht gewürfelt — Einzelheiten im Kopf von <code class="language-plaintext highlighter-rouge">PSS-Responses.fsh</code>. Alle Antworten einzeln: <a href="Fragebogen-Bibliothek.html">Fragebogen-Bibliothek</a>.</p>
+<p>Die PSS-Batterie ist ganz überwiegend frei publizierbar; die MII-PRO-Instrumente sind dort lizenzrechtlich geregelt. Ausnahmen in PCOR-MII: <a href="WAI.html">WAI</a> bleibt metadata-only, bis das WAI-Netzwerk Deutschland den deutschen Wortlaut freigibt; <a href="OPD-SFK.html">OPD-SFK</a> ist frei nach erfolgter Rücksprache mit den Autor:innen; in <a href="Demographie.html">DEM</a> und <a href="MHI.html">MHI</a> sind die GI-PS-Items und vier PaRIS-Drittinstrumente offen. PROMIS und WHODAS 2.0 unterliegen ihren Nutzungsvereinbarungen (CPCOR bzw. WHO). Die vollständige Lage je Instrument und die offenen Fragen: <a href="Rechtelage.html">Rechtelage und offene Punkte</a>.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -553,10 +736,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

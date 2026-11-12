@@ -1,4 +1,4 @@
-# UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN) - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN) (Experimental) 
 
@@ -23,7 +23,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -34,10 +34,10 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/designNote",
-    "valueMarkdown" : "Dictionary-Gruppe `UKHD_D` — **mit Unterstrich**, während alle sechs anderen Gruppen einen Bindestrich tragen (`UKHD-PT`, `UKHD-ANB`, …). Im Dictionary zu vereinheitlichen; die `linkId` des Gruppen-Items folgt der Hauskonvention. DOMAIN *Diagnosis*, Kategorie DCH, beide Items `TIMING` i. **Überschneidung mit [MHI](MHI.html):** Dort erheben `CPCOR-DIAG` (Diagnosegruppe zur Selbstzuordnung) und `GIPS13` (Liste chronischer Erkrankungen) kodiert, was hier als Freitext erhoben wird. Welche der beiden Darstellungen für die Auswertung maßgeblich ist, ist fachlich zu klären. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein über `DemJaNeinVS`) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
+    "valueMarkdown" : "Dictionary-Gruppe `UKHD_D` — **mit Unterstrich**, während alle sechs anderen Gruppen einen Bindestrich tragen (`UKHD-PT`, `UKHD-ANB`, …). Im Dictionary zu vereinheitlichen; die `linkId` des Gruppen-Items folgt der Hauskonvention. DOMAIN *Diagnosis*, Kategorie DCH, beide Items `TIMING` i. **Überschneidung mit [MHI](MHI.html):** Dort erheben `CPCOR-DIAG` (Diagnosegruppe zur Selbstzuordnung) und `GIPS13` (Liste chronischer Erkrankungen) kodiert, was hier als Freitext erhoben wird. Welche der beiden Darstellungen für die Auswertung maßgeblich ist, ist fachlich zu klären. **Rechtelage und Herkunft:** siehe `copyright` — das `UKHD`-Präfix ist ein Zusammenstellungs-Etikett, keine Autorenschaftsangabe; die Frage an den Standort ist eine Herkunftsfrage. Gemeinsame Entscheidungen aller sechs UKHD-Zusatzbögen (Sprache `de` ohne Übersetzungsebene, `TIMING` nicht als FHIR-Struktur, Wortlauttreue nach ADR-010, `linkId` = Dictionary-Variablen-ID nach ADR-008, kein Score, Ja/Nein als SNOMED CT nach ADR-013) stehen auf der Seite [UKHD-Zusatzitems](UKHD-Zusatzitems.html)."
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UKHDD",
   "title" : "UKHD-D — Diagnosen bei Aufnahme (UKHD-Zusatzitems AN)",
   "status" : "draft",

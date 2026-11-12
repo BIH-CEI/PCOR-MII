@@ -7,11 +7,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="pcor-mii"> </a><a name="hcpcor-mii"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide pcor-mii</b></p><a name="en-pcor-mii"> </a><a name="en-hcpcor-mii"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>PCOR_MII</h2><p>The official URL for this implementation guide is: </p><pre>https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii</pre></div></div>
   </text>
   <url value="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/>
-  <version value="0.3.0"/>
+  <version value="0.9.0"/>
   <name value="PCOR_MII"/>
   <title value="PCOR-MII Implementation Guide"/>
   <status value="draft"/>
-  <date value="2026-11-06T09:31:42+00:00"/>
+  <date value="2026-11-12T18:28:00+00:00"/>
   <publisher value="BIH-CEI"/>
   <contact>
     <name value="BIH-CEI"/>
@@ -49,17 +49,17 @@
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_pros">
     <uri value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ImplementationGuide/mii-ig-pro"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.pros"/>
-    <version value="2026.7.0"/>
+    <version value="2027.0.0-ballot.2"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
     <packageId value="hl7.fhir.uv.sdc"/>
-    <version value="3.0.0"/>
+    <version value="4.0.0"/>
   </dependsOn>
   <dependsOn id="de_gematik_isik">
     <uri value="http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik"/>
     <packageId value="de.gematik.isik"/>
-    <version value="5.1.1"/>
+    <version value="6.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_crmi">
     <uri value="http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi"/>
@@ -328,6 +328,50 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/abq-skala-4-vs"/>
+      </reference>
+      <name value="ABQ Antwortskala 4-stufig"/>
+      <description value="Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. Metadata-only, siehe AbqSkala4CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/abq-skala-4"/>
+      </reference>
+      <name value="ABQ Antwortskala 4-stufig (Codes)"/>
+      <description value="Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. itemWeight-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ABQ"/>
+      </reference>
+      <name value="ABQ — Adherence Barriers Questionnaire (NTx, metadata-only)"/>
+      <description value="Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary (Kategorie TCH). **Metadata-only:** Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht. Summenscore 16-64 über `itemWeight`; die Polung ist nicht gegen das Original verifiziert. Wird nur bei Hinweis auf Nonadhärenz im BAASIS erhoben."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/ABQResponse"/>
+      </reference>
+      <name value="ABQ — Beispielantwort"/>
+      <description value="Beispielantwort zum ABQ (metadata-only) für den NTx-Termin, ausgelöst durch das Implementierungsproblem im BAASIS: überwiegend niedrige Barrieren, drei Items auf Stufe 3; Summe 26 (Bereich 16–64) im berechneten Item `abq-summe`. **Belegt das metadata-only-Muster:** nur `linkId`s und Codes, kein Wortlaut."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -367,7 +411,7 @@
         <reference value="CodeSystem/ansocq-gedanken"/>
       </reference>
       <name value="ANSOCQ Item 14 — Gedanken an Nahrung und Gewicht (Codes)"/>
-      <description value="Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. ordinalValue-Property je Konzept."/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 14 (Zeit mit Gedanken an Nahrung und Gewicht), Stadien 1-5. itemWeight-Property je Konzept."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -389,7 +433,7 @@
         <reference value="CodeSystem/ansocq-koerperteile"/>
       </reference>
       <name value="ANSOCQ Item 3 — Körperteile (Codes)"/>
-      <description value="Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <description value="Fünf Feststellungen des ANSOCQ-Items 3 (Körperteile bei Gewichtszunahme), Stadien 1-5. itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -427,6 +471,83 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/baasis-haeufigkeit-5-vs"/>
+      </reference>
+      <name value="BAASIS Häufigkeit 5-stufig"/>
+      <description value="Neutral benannte 5-stufige Anzahl-Skala der BAASIS-Teilfragen 1A_a und 1B_a (Stufe 1 bis Stufe 5). Metadata-only, siehe BaasisHaeufigkeit5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/baasis-haeufigkeit-5"/>
+      </reference>
+      <name value="BAASIS Häufigkeit 5-stufig (Codes)"/>
+      <description value="Neutral benannte 5-stufige Anzahl-Skala der BAASIS-Teilfragen 1A_a und 1B_a (Stufe 1 bis Stufe 5; offiziell fünf Kategorien von einmal bis mehr als viermal). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. itemWeight-Property je Konzept (1-5) ermöglicht eine spätere Auswertung. Teilfrage 2_a nutzt die eigene Skala BaasisHaeufigkeitZeit5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/baasis-haeufigkeit-zeit-5-vs"/>
+      </reference>
+      <name value="BAASIS Häufigkeit Zeitabweichung 5-stufig"/>
+      <description value="Neutral benannte 5-stufige Häufigkeitsskala der BAASIS-Teilfrage 2_a (Stufe 1 bis Stufe 5). Metadata-only, siehe BaasisHaeufigkeitZeit5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/baasis-haeufigkeit-zeit-5"/>
+      </reference>
+      <name value="BAASIS Häufigkeit Zeitabweichung 5-stufig (Codes)"/>
+      <description value="Neutral benannte 5-stufige Häufigkeitsskala der BAASIS-Teilfrage 2_a (Stufe 1 bis Stufe 5). Laut Item Level Dictionary ist diese Skala nicht die Anzahl-Skala der Teilfragen 1A_a/1B_a, sondern eine Raten-Skala (von einmalig bis fast täglich); deshalb ein eigenes CodeSystem, damit die Stufen nicht als dieselbe Skala ausgewertet werden. Die offizielle BAASIS-Erläuterung nennt für alle drei Teilfragen dieselben fünf Anzahl-Kategorien — die Abweichung ist gegen den lizenzierten deutschen Bogen (Version 2021) zu prüfen. METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. itemWeight-Property je Konzept (1-5)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/BAASIS"/>
+      </reference>
+      <name value="BAASIS — Adhärenz gegenüber immunsuppressiver Medikation (NTx, metadata-only)"/>
+      <description value="Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen aus dem NTx-Dictionary (Kategorie TCH), Fassung Written self-report der Version 2021 mit den drei Phasen der ABC-Taxonomie: Implementierung (1A, 1B, 2, 3), Persistenz (4), Initiierung (5, 5_a). **Metadata-only:** Struktur, `linkId`s, Typen und Bedingungen sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht (Rechteinhaber Universität Basel). Kein Gesamtscore; die drei Phasen werden getrennt bewertet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/BAASISResponse"/>
+      </reference>
+      <name value="BAASIS — Beispielantwort"/>
+      <description value="Beispielantwort zum BAASIS (metadata-only) für den NTx-Termin: Implementierungsproblem — in den letzten vier Wochen Einnahmen vergessen (1A ja, Häufigkeit Stufe 2) und daraus aufeinanderfolgende Dosen ausgelassen (1B ja, Stufe 1); kein Einnahmezeitpunkt-Problem (2), keine Dosisänderung (3), kein Absetzen (4); neu verordnete Medikation ja und begonnen (5, 5_a). Ja/Nein als SNOMED CT (ADR-013). **Belegt das metadata-only-Muster:** nur `linkId`s und Codes, kein Wortlaut; nur Items mit erfüllter `enableWhen`-Bedingung sind beantwortet."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/pcor-mii-exa-patient-ntx"/>
+      </reference>
+      <name value="Beispiel-Patient NTx"/>
+      <description value="Synthetischer Beispiel-Patient des Use Case NTx (Empfänger; Lebendspende am 14.11.2024, erste Spenderniere, vor Transplantation Hämodialyse in der Dialysepraxis; unter Immunsuppression mit Tremor und Durchfall als belastendsten Nebenwirkungen, gelegentlich vergessene Einnahmen): subject der NTx-Beispielantworten. Ein Erhebungstermin 06.10.2026 — siehe Bundle pcor-mii-exa-bundle-ntx-erstbefragung."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -446,17 +567,6 @@
       <name value="Beispiel-Patientin AN"/>
       <description value="Synthetische Beispiel-Patientin des Use Case AN (Anorexia nervosa, restriktiver Typ, erste Anzeichen um 2018): subject aller AN-, DEM- und MHI-Beispielantworten. Zwei Erhebungstermine: Initial-/Screening-Termin 18.06.2026 und Monitoring-Termin 30.07.2026 — siehe die beiden Bundles pcor-mii-exa-bundle-an-initial und -an-monitoring."/>
       <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/dem-antwort"/>
-      </reference>
-      <name value="DEM Antwortoptionen (Ja/Nein/Nicht zutreffend/Keine Angabe)"/>
-      <description value="Gemeinsames CodeSystem für die Ja/Nein-Items des DEM. Frage-spezifische Subsets über ValueSets (DemJaNeinVS / DemJaNeinNzVS / DemJaNeinKaVS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -588,39 +698,6 @@
       </reference>
       <name value="DEM Häufigkeit (5-stufig) (Codes)"/>
       <description value="5-stufige Häufigkeitsskala für finanzielle Sorgen (MONMEAL/MONRENT/MONBILLS). Quelle: Commonwealth Fund 2017."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/dem-ja-nein"/>
-      </reference>
-      <name value="DEM Ja/Nein"/>
-      <description value="Ja/Nein (Subset von DemAntwortCS). SNOMED-Mapping: ja=373066001 (Yes), nein=373067005 (No)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/dem-ja-nein-ka-vs"/>
-      </reference>
-      <name value="DEM Ja/Nein/Keine Angabe"/>
-      <description value="Ja/Nein/Möchte ich nicht sagen (Q_GENDERID) – Subset von DemAntwortCS."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/dem-ja-nein-nz-vs"/>
-      </reference>
-      <name value="DEM Ja/Nein/Nicht zutreffend"/>
-      <description value="Ja/Nein/Nicht zutreffend (Q_MONMED) – Subset von DemAntwortCS."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -763,7 +840,7 @@
         <reference value="CodeSystem/ede-q6-tage"/>
       </reference>
       <name value="EDE-Q6 Häufigkeit in 28 Tagen (Codes)"/>
-      <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). ordinalValue-Property je Konzept für SDC-Scoring via .ordinal(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <description value="7-stufige Häufigkeitsskala der EDE-Q-Items über die letzten 28 Tage (0 = kein Tag ... 6 = jeden Tag). itemWeight-Property je Konzept für SDC-Scoring via .weight(). Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -917,7 +994,7 @@
         <reference value="Library/pilot-50fp"/>
       </reference>
       <name value="Manifest Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases"/>
-      <description value="Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.3.0, MII-PRO-Bögen |2026.7.0). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx) und PHQ-15 (nur PSS). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+      <description value="Maschinenlesbare Instrumentenliste des Pilotprogramms „50 First Patients“: die Schnittmenge der Bögen, die laut Erhebungsplan (Domain Overview) in allen Use Cases — PSS, AN und NTx — erhoben werden, mit versionierter Canonical (PCOR-MII-eigene Bögen |0.9.0, MII-PRO-Bögen |2027.0.0-ballot.2). Ableitung aus den Use-Case-Spalten der Seite Fragebogen-Bibliothek; nicht enthalten: OPD-SFK (nicht in NTx) und PHQ-15 (nur PSS); EQ-5D-5L (Outcome, alle Use Cases) ist enthalten. PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. Der Pilot ist kein klinischer Use Case; wer eine vollständige Batterie braucht, nutzt das Manifest des jeweiligen Use Case. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1104,7 +1181,183 @@
         <reference value="Questionnaire/MHI"/>
       </reference>
       <name value="MHI — Medical History"/>
-      <description value="Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument."/>
+      <description value="Medizinische Vorgeschichte (Kategorie MHI im PCOR-Item-Dictionary): Anthropometrie, Diagnosen/chronische Erkrankungen, Lifestyle (Rauchen/Alkohol/Substanzen), aktuelle Medikation und (AN-spezifisch) Gewichtsverlauf. SDC-Basis; kein PRO-Instrument. Die NTx-spezifische Transplantationsanamnese ist ein eigener Ergänzungsbogen (MHI-NTx)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-ntx-spendernieren-vs"/>
+      </reference>
+      <name value="MHI-NTx Anzahl Spendernieren"/>
+      <description value="Die wievielte Spenderniere aktuell (`MHH_PRIOR_TX`), `itemWeight` 1–4."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-ntx-spendernieren"/>
+      </reference>
+      <name value="MHI-NTx Anzahl Spendernieren (Codes)"/>
+      <description value="Die wievielte Spenderniere aktuell (`MHH_PRIOR_TX`): eine, zwei, drei, mehr als drei. Ordinal; `itemWeight` = Dictionary-Code = Anzahl bis drei, Stufe 4 offen nach oben."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhi-ntx-spendeart-vs"/>
+      </reference>
+      <name value="MHI-NTx Spendeart"/>
+      <description value="Art der erhaltenen Nierenspende (`MHH_DON`)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhi-ntx-spendeart"/>
+      </reference>
+      <name value="MHI-NTx Spendeart (Codes)"/>
+      <description value="Art der erhaltenen Nierenspende (`MHH_DON`): Lebendspende oder Verstorbenenspende. Nominal, Dictionary-Codes 1–2."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/MHINTXResponse"/>
+      </reference>
+      <name value="MHI-NTx — Beispielantwort"/>
+      <description value="Beispielantwort zur Transplantationsanamnese für den NTx-Termin: Lebendspende, Transplantation am 14.11.2024, erste Spenderniere."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/MHINTX"/>
+      </reference>
+      <name value="MHI-NTx — Transplantationsanamnese (Ergänzung zum MHI, Nierentransplantation)"/>
+      <description value="Ergänzung zur Medical History für Empfänger einer Nierentransplantation: Spendeart, Datum der letzten Transplantation und wievielte Spenderniere (Dictionary-Gruppen `MHH-DON`, `MHH-Tx-DATE`, `MHH-PRIOR-TX`, Kategorie TCH; Screening, Prio A). Eigener Bogen statt Gruppe im MHI, weil der MHI allen Use Cases gemeinsam ist und die Zusammenstellung je Use Case über die Manifeste läuft. Kein PRO-Instrument, kein Score."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mtsosd-r59-auftreten-5-vs"/>
+      </reference>
+      <name value="MTSOSD-R59 Auftreten 5-stufig"/>
+      <description value="Neutral benannte 5-stufige Auftretensskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Metadata-only, siehe MtsosdR59Auftreten5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mtsosd-r59-auftreten-5"/>
+      </reference>
+      <name value="MTSOSD-R59 Auftreten 5-stufig (Codes)"/>
+      <description value="Neutral benannte 5-stufige Auftretensskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Stufe 0 = Symptom nicht aufgetreten. itemWeight-Property je Konzept (0-4) ermöglicht eine spätere Auswertung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mtsosd-r59-belastung-5-vs"/>
+      </reference>
+      <name value="MTSOSD-R59 Belastung 5-stufig"/>
+      <description value="Neutral benannte 5-stufige Belastungsskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Metadata-only, siehe MtsosdR59Belastung5CS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mtsosd-r59-belastung-5"/>
+      </reference>
+      <name value="MTSOSD-R59 Belastung 5-stufig (Codes)"/>
+      <description value="Neutral benannte 5-stufige Belastungsskala des MTSOSD-R59 (Stufe 0 bis Stufe 4). Quelle: Blatt Visual Scale MTSOSD-R59 des Item Level Dictionary — eine Linie mit den Stufen 0-4 und zwei verbalen Ankern, entsprechend der Originalskala (Dobbels et al. 2008). METADATA-ONLY: Die Ankertexte dürfen nicht veröffentlicht werden. Stufe 0 = keine Belastung. itemWeight-Property je Konzept (0-4)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/MTSOSDR59Response"/>
+      </reference>
+      <name value="MTSOSD-R59 — Beispielantwort"/>
+      <description value="Beispielantwort zum MTSOSD-R59 (metadata-only) für den NTx-Termin: 11 der 59 Symptome aufgetreten, darunter Tremor (Nr. 16, Auftreten Stufe 3, Belastung Stufe 3) und Durchfall (Nr. 30, Stufe 2/2) als die beiden Monitoring-Domänen des Erhebungsplans; Symptom 27 in der männlichen Variante; keine Freitext-Symptome. Belastungsitems nur dort, wo das Auftreten ungleich Stufe 0 ist (`enableWhen`). Kein Score: die Auswertung ist kohortenrelativ (Ridit), siehe [NTx-Instrumente](NTx-Instrumente.html). **Belegt das metadata-only-Muster:** nur `linkId`s und Codes, kein Wortlaut."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/MTSOSDR59"/>
+      </reference>
+      <name value="MTSOSD-R59 — Symptomlast, 59 Symptome und 3 Freitext (NTx, metadata-only)"/>
+      <description value="Symptomfragebogen mit 59 Symptomen und 3 Freitext-Symptomen aus dem NTx-Dictionary (Kategorie MSE). **Metadata-only:** Struktur, `linkId`s, Typen, Wertebereiche und Bedingungen sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht (Rechteinhaber KU Leuven). Je Symptom Auftreten (5 Stufen) und Belastung (5 Stufen, Skala 0-4 laut Blatt Visual Scale MTSOSD-R59). Kein Score."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mhh-nierenersatz-vs"/>
+      </reference>
+      <name value="NTx-Verlaufsbefragung Nierenersatztherapie vor Transplantation"/>
+      <description value="Zuletzt vor der Transplantation durchgeführte Form der Nierenersatztherapie (`MHH_DIAL2`)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/mhh-nierenersatz"/>
+      </reference>
+      <name value="NTx-Verlaufsbefragung Nierenersatztherapie vor Transplantation (Codes)"/>
+      <description value="Zuletzt vor der Transplantation durchgeführte Form der Nierenersatztherapie (`MHH_DIAL2`). Nominal, Dictionary-Codes 1–4; Option 4 = präemptive Transplantation ohne vorherige Dialyse."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/NTXVERLAUFResponse"/>
+      </reference>
+      <name value="NTx-Verlaufsbefragung — Beispielantwort"/>
+      <description value="Beispielantwort zur quartalsweisen Verlaufsbefragung (MHH) für den NTx-Termin: Hämodialyse in der Dialysepraxis vor Transplantation, kein Post-Transplantations-Diabetes, keine Tumoren, ein Harnwegsinfekt und eine sonstige Infektion im Quartal, Blutdruck 132/84 mmHg, Medikationsänderung ja, Nebenschilddrüse unauffällig. Ja/Nein als SNOMED CT (ADR-013)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/NTXVERLAUF"/>
+      </reference>
+      <name value="NTx-Verlaufsbefragung — Verlaufsanamnese nach Nierentransplantation (MHH)"/>
+      <description value="Quartalsweise Verlaufsbefragung des Standorts Hannover (MHH) für den Use Case Nierentransplantation, 18 patient-reported Variablen aus dem NTx-Dictionary (Kategorie DCH): Dialyse, Post-Tx-Diabetes, Tumoren, Harnwegsinfekte, Infektionen, Blutdruck, ASS-Einnahme und Hyperparathyreoidismus. Ein Sammelbogen nach dem Muster des MHI; die drei Screening-Items der MHH (Spendeart, Transplantationsdatum, Anzahl Spendernieren) liegen im Ergänzungsbogen MHI-NTx. Kein PRO-Instrument, kein Score."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1126,7 +1379,7 @@
         <reference value="CodeSystem/opd-sfk-antwort"/>
       </reference>
       <name value="OPD-SFK Antwortskala (Codes)"/>
-      <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). ordinalValue-Property je Konzept für SDC-Summenscoring via .ordinal()."/>
+      <description value="5-stufige Antwortskala des OPD-SFK (0 = trifft gar nicht zu ... 4 = trifft völlig zu). itemWeight-Property je Konzept für SDC-Summenscoring via .weight()."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1160,39 +1413,6 @@
       </reference>
       <name value="OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern)"/>
       <description value="Bildet die Variablen-IDs des PCOR-MII Item Level Dictionary (OPDSFK01–OPDSFK12, zugleich die linkIds des Questionnaire OPDSFK bis Version 0.3.0) auf die linkIds des OPD-SFK-Questionnaire ab, die den Itemnummern der OPD-SF-Langform entsprechen (Ehrenthal et al. 2015, Tabelle 2)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Questionnaire"/>
-      </extension>
-      <reference>
-        <reference value="Questionnaire/PcorExampleQuestionnaire"/>
-      </reference>
-      <name value="PCOR Beispiel-Fragebogen"/>
-      <description value="Beispielhafter PCOR-Fragebogen zur Erfassung patientenberichteter Angaben. Dient als Vorlage für eigene Questionnaires; ist konform zum PRO-Q-Profil aus dem MII PRO-Modul 2026.6.0."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pcor-example-general-health"/>
-      </reference>
-      <name value="PCOR Example General Health Self-Assessment"/>
-      <description value="ValueSet, das alle 5 Stufen der Selbsteinschätzung der allgemeinen Gesundheit aus dem Beispiel-Questionnaire abdeckt."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/pcor-example-general-health"/>
-      </reference>
-      <name value="PCOR Example General Health Self-Assessment"/>
-      <description value="Lokales CodeSystem mit der 5-stufigen Selbsteinschätzung der allgemeinen Gesundheit. Dient ausschließlich dem Beispiel-Questionnaire."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1236,7 +1456,7 @@
         <reference value="CodeSystem/pcor-use-case"/>
       </reference>
       <name value="PCOR-MII Use Cases"/>
-      <description value="Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je aktivem Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt — für NTXr/NTXd bewusst noch nicht (zurückgestellt, Instrumente nicht publizierbar bzw. nicht modelliert). Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden."/>
+      <description value="Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt Domain Overview des Item Level Dictionary) sowie das Programm Pilot „50 First Patients“. NTx ist dort ausdrücklich in Empfänger (NTXr) und Spender (NTXd) mit eigenen Prioritätsprofilen getrennt. Je Use Case existiert ein Manifest (`Library`, type `asset-collection`), das die benötigten Questionnaire-Definitionen versioniert pinnt; NTXr und NTXd seit 2026-11-05. Der Pilot ist kein klinischer Use Case; sein Manifest ist die Schnittmenge der Bögen, die in allen Use Cases erhoben werden."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1264,20 +1484,20 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="Bundle/pcor-mii-exa-bundle-pss-screening"/>
+        <reference value="Bundle/pcor-mii-exa-bundle-ntx-erstbefragung"/>
       </reference>
-      <name value="pcor-mii-exa-bundle-pss-screening"/>
+      <name value="pcor-mii-exa-bundle-ntx-erstbefragung"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="QuestionnaireResponse"/>
+        <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="QuestionnaireResponse/pcor-mii-exa-example-response"/>
+        <reference value="Bundle/pcor-mii-exa-bundle-pss-screening"/>
       </reference>
-      <name value="pcor-mii-exa-example-response"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/StructureDefinition/mii-pr-pro-questionnaire-response"/>
+      <name value="pcor-mii-exa-bundle-pss-screening"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1401,6 +1621,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/PHQPANIK"/>
+      </reference>
+      <name value="PHQ-D Panik-Block — Angst-/Panikattacken (PHQ 3a–3d)"/>
+      <description value="Die vier Ja/Nein-Screeningfragen zu Angst- und Panikattacken des Patient Health Questionnaire (PHQ, Block 3a–3d; Spitzer, Kroenke &amp; Williams 1999), deutsche Fassung PHQ-D (Löwe et al. 2002), 4-Wochen-Recall. Englisch primär, Deutsch als `translation`. linkIds im PHQ-D-Block-Namespace (`phq-phq3a`–`phq-phq3d`), Dictionary-Variablen `phq3a`–`phq3d` in `item.code`. Sprungregel des Formulars als `enableWhen` (3b–3d nur bei 3a = ja). Kein Score-Item: Der PHQ-Algorithmus für das Paniksyndrom braucht zusätzlich die hier nicht erhobene Symptomliste 4a–4k. In PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt dafür führt (ADR-012)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/PHQPANIKResponse"/>
+      </reference>
+      <name value="PHQ-D Panik-Block — Beispielantwort"/>
+      <description value="Beispielantwort zu den vier Panik-Screeningitems für den PSS-Screening-Termin: wiederkehrende, situationsgebundene Angstattacken mit Belastung (3a ja, 3b ja, 3c nein, 3d ja); nach dem PHQ-Algorithmus nicht Screening-positiv."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1418,7 +1660,7 @@
         <reference value="Questionnaire/PROMISGH"/>
       </reference>
       <name value="PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)"/>
-      <description value="Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist im MII-PRO-Modul noch nicht abgebildet und soll dort ergänzt werden; anschließend wird dieser lokale Questionnaire durch die Upstream-Referenz ersetzt. Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."/>
+      <description value="Die beiden in PCOR-MII erhobenen Einzelitems der PROMIS® Scale v1.2 – Global Health: Global01 (Gesundheitszustand insgesamt, LOINC 61577-3) und Global02 (Lebensqualität insgesamt, LOINC 61578-1), je 5-stufig (5 = Ausgezeichnet … 1 = Schlecht, LOINC-Answerlist LL4280-5). 2-ITEM-SHORTFORM: 2 von 10 Items der Originalskala — der vollständige Fragebogen (LOINC-Panel 85524-7) ist seit MII-PRO-Modul 2027.0.0-ballot.2 als mii-qst-pro-promis-global-health enthalten; dieser Questionnaire ist per derivedFrom als 2-Item-Zuschnitt davon ausgewiesen (linkIds nach Item Level Dictionary: Global01/Global02, upstream promis-global01/promis-global02). Global07 (Schmerzintensität) ist bewusst nicht enthalten — es wird über den referenzierten PROMIS-29 abgedeckt. Profil: MII PR PRO Questionnaire (SDC-Basis)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1451,7 +1693,7 @@
         <reference value="CodeSystem/ssuk-antwort"/>
       </reference>
       <name value="SSUK Antwortskala (Codes)"/>
-      <description value="5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). ordinalValue-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
+      <description value="5-stufige Häufigkeitsskala der SSUK (0 = nie ... 4 = immer). itemWeight-Property je Konzept. Jedes Item trägt in `item.code` seine PCOR-MII-Dictionary-Variable — das ist der PCOR-MII-Code des Items. Hier stimmt sie mit der Itemnummer überein."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1506,7 +1748,7 @@
         <reference value="CodeSystem/ukhd-an-behandlungsstatus"/>
       </reference>
       <name value="UKHD-AN Aktueller Behandlungsstatus (Codes)"/>
-      <description value="Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4)."/>
+      <description value="Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `itemWeight`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1517,7 +1759,7 @@
         <reference value="ValueSet/ukhd-an-arztbesuche-vs"/>
       </reference>
       <name value="UKHD-AN Arztbesuche in den letzten 4 Wochen"/>
-      <description value="Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `ordinalValue` 1–4."/>
+      <description value="Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`), `itemWeight` 1–4."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1528,7 +1770,7 @@
         <reference value="CodeSystem/ukhd-an-arztbesuche"/>
       </reference>
       <name value="UKHD-AN Arztbesuche in den letzten 4 Wochen (Codes)"/>
-      <description value="Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `ordinalValue`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0)."/>
+      <description value="Vierstufige Häufigkeitsskala der Arztbesuche in den letzten vier Wochen (`bdkm16`). `itemWeight`-Property je Konzept — die Werte sind die Dictionary-Codes 1–4 und damit Rangplätze, **nicht** Besuchszahlen (`gar nicht` = 1, nicht 0)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1572,7 +1814,7 @@
         <reference value="CodeSystem/ukhd-an-ereignishaeufigkeit"/>
       </reference>
       <name value="UKHD-AN Ereignis einmalig oder wiederholt (Codes)"/>
-      <description value="Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `ordinalValue` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary."/>
+      <description value="Einmaliges oder wiederholtes Ereignis (`traumaspecific1`, `traumaspecific3`, `traumaspecific5`), `itemWeight` 1–2. Die Displays sind Satzfragmente, die den Itemtext fortsetzen — so im Item Level Dictionary."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1594,7 +1836,7 @@
         <reference value="CodeSystem/ukhd-an-ereigniszeitpunkt"/>
       </reference>
       <name value="UKHD-AN Ereignis vor oder nach Beginn der Essstoerung (Codes)"/>
-      <description value="Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `ordinalValue`; Stufe 3 ist eine erhobene Nicht-Antwort."/>
+      <description value="Zeitliche Lage des Ereignisses relativ zu den ersten Anzeichen der Essstörung (`traumaspecific2`, `traumaspecific4`, `traumaspecific6`). Nominal — bewusst ohne `itemWeight`; Stufe 3 ist eine erhobene Nicht-Antwort."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1638,7 +1880,7 @@
         <reference value="CodeSystem/ukhd-an-psychotherapie"/>
       </reference>
       <name value="UKHD-AN Psychotherapeutische Behandlung, frueher/aktuell (Codes)"/>
-      <description value="Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `ordinalValue`."/>
+      <description value="Drei Zeitbezüge der psychotherapeutischen Behandlung (`bdkm15`): noch nie, früher, zurzeit. Nominale Skala — bewusst ohne `itemWeight`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1737,7 +1979,7 @@
         <reference value="CodeSystem/ukhd-edp-stufe-6"/>
       </reference>
       <name value="UKHD-EDP Antwortstufen (neutralisiert, 6-stufig)"/>
-      <description value="Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `ordinalValue` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt."/>
+      <description value="Sechsstufige Zustimmungsskala des UKHD-EDP, **neutral benannt**. Die Originalbezeichnungen der Antwortstufen sind bewusst nicht abgebildet (metadata-only, siehe Questionnaire). `itemWeight` 1–6 bildet die Stufenfolge ab, damit eine spätere Auswertung möglich bleibt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1858,7 +2100,29 @@
         <reference value="Library/use-case-an"/>
       </reference>
       <name value="Use-Case-Manifest AN — Anorexia nervosa"/>
-      <description value="Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case AN: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek und Seite AN — Instrumentenliste ausgewertet. Nicht enthalten: `UKHD-BI` (nicht modelliert — Bildvorlage fehlt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/use-case-ntxd"/>
+      </reference>
+      <name value="Use-Case-Manifest NTXd — Nierentransplantation, Spender"/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case NTXd (Lebendspender einer Niere): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXd). Spender erheben laut Plan ausschließlich die generische Batterie: Screening mit denselben Prioritäten wie Empfänger, kein spezifisches Instrument, kein Monitoring, Outcome jährlich ohne eigene Prioritätsangabe. Das Manifest ist damit identisch mit dem Pilot-Kern plus WAI mit Prio A. PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/use-case-ntxr"/>
+      </reference>
+      <name value="Use-Case-Manifest NTXr — Nierentransplantation, Empfänger"/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS, ABQ und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1869,7 +2133,7 @@
         <reference value="Library/use-case-pss"/>
       </reference>
       <name value="Use-Case-Manifest PSS — Persistierende somatische Symptome"/>
-      <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
+      <description value="Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Der PHQ-D-Panik-Block ist als PCOR-MII-eigener Bogen `PHQPANIK` enthalten (ADR-012). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt `PROMISGH` enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind **Standortvarianten** (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension `crmi-intendedUsageContext`."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1891,7 +2155,7 @@
         <reference value="CodeSystem/wai-skala-5"/>
       </reference>
       <name value="WAI Antwortskala 5-stufig (Codes)"/>
-      <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. ordinalValue-Property je Konzept ermöglicht Scoring."/>
+      <description value="Neutral benannte 5-stufige Antwortskala für WAI02a/WAI02b (Selbsteinschätzung der Arbeitsfähigkeit bzgl. körperlicher/psychischer Arbeitsanforderungen). METADATA-ONLY: Konzeptbezeichnungen sind bewusst neutral (Stufe 1-5) statt der Original-Itembezeichnungen, da die Publikationsrechte am WAI ungeklärt sind. Stufe 5 = bester Wert, Stufe 1 = schlechtester Wert. itemWeight-Property je Konzept ermöglicht Scoring."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1985,6 +2249,14 @@
             <title value="PC-PTSD (PTBS-Screening)"/>
             <generation value="markdown"/>
           </page>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="PHQ-Panik.html"/>
+            </extension>
+            <nameUrl value="PHQ-Panik.html"/>
+            <title value="PHQ-D Panik-Block (Angst-/Panikattacken)"/>
+            <generation value="markdown"/>
+          </page>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1993,14 +2265,6 @@
           <nameUrl value="AN.html"/>
           <title value="AN (Anorexia Nervosa)"/>
           <generation value="markdown"/>
-          <page>
-            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-              <valueUrl value="AN-Instrumentenliste.html"/>
-            </extension>
-            <nameUrl value="AN-Instrumentenliste.html"/>
-            <title value="AN — Instrumentenliste mit Links"/>
-            <generation value="markdown"/>
-          </page>
           <page>
             <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
               <valueUrl value="ERQ-6.html"/>
@@ -2058,6 +2322,22 @@
             <generation value="markdown"/>
           </page>
         </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="NTx.html"/>
+          </extension>
+          <nameUrl value="NTx.html"/>
+          <title value="NTx (Nierentransplantation)"/>
+          <generation value="markdown"/>
+          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+              <valueUrl value="NTx-Instrumente.html"/>
+            </extension>
+            <nameUrl value="NTx-Instrumente.html"/>
+            <title value="NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -2065,6 +2345,14 @@
         </extension>
         <nameUrl value="Fragebogen-Bibliothek.html"/>
         <title value="Fragebogen-Bibliothek"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Beispiele.html"/>
+        </extension>
+        <nameUrl value="Beispiele.html"/>
+        <title value="Beispiele — Patient:innen, Bundles, Antworten"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -2241,6 +2529,14 @@
         </extension>
         <nameUrl value="Designentscheidungen.html"/>
         <title value="Designentscheidungen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Rechtelage.html"/>
+        </extension>
+        <nameUrl value="Rechtelage.html"/>
+        <title value="Rechtelage und offene Punkte"/>
         <generation value="markdown"/>
       </page>
       <page>

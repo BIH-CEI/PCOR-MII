@@ -1,4 +1,4 @@
-# Whiteley-7 (Gesundheitsangst) - PCOR-MII Implementation Guide v0.3.0
+# Whiteley-7 (Gesundheitsangst) - PCOR-MII Implementation Guide v0.9.0
 
 ## Whiteley-7 (Gesundheitsangst)
 
@@ -8,7 +8,7 @@ Der **Whiteley-7** (WI-7) erfasst **Gesundheitsangst** über sieben Ja/Nein-Frag
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten **seit 2026.6.0**.
+PCOR-MII **referenziert** den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau ([ADR-002](Designentscheidungen.md)). Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten **seit 2026.6.0**.
 
 Erhoben **nur im Szenario [PSS](PSS.md)**, Kategorie DCH — **vollständig**, ohne Zuschnitt. Das ist der Normalfall bei den PSS-spezifischen Instrumenten und der Unterschied zur AN-Batterie, wo vier von fünf Instrumenten gekürzt erhoben werden (siehe [AN](AN.md)).
 
@@ -45,7 +45,7 @@ Whiteley-7 — Fink, Ewald, Jensen, Sørensen, Engberg, Holm & Munk-Jørgensen 1
 * Ursprung: Pilowsky I. **Dimensions of hypochondriasis.** Br J Psychiatry 1967;113:89–93
 * WI-7: Fink P, Ewald H, Jensen J, et al. **Screening for somatization and hypochondriasis in primary care and neurological in-patients.** J Psychosom Res 1999;46(3):261–273. [doi:10.1016/S0022-3999(98)00092-0](https://doi.org/10.1016/S0022-3999(98)00092-0)
 * Deutsche Fassung: Rief W, Hiller W, Geissner E, Fichter MM. **Hypochondrie: Erfassung und erste klinische Ergebnisse.** Z Klin Psychol 1994;23(1):34–42
-* Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+* Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 
 Hinweise zum Lebenszyklus von `Questionnaire` zu `QuestionnaireResponse` siehe [Anwendung](Implementation.md); alle Artefakte unter [Artefakte](artifacts.md).
 

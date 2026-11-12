@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>SSUK-2 — Soziale Unterstützung bei Krankheit (2-Item-Zuschnitt) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.16"}
-    h3,h4,h5,h6{--heading-prefix:"21.16"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.23"}
+    h3,h4,h5,h6{--heading-prefix:"23.23"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -218,12 +218,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -236,6 +239,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -300,7 +306,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -348,7 +354,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -423,13 +429,13 @@ a[name="test"] + h3 + div {
       <div id="tbl-tree">
         <div id="tbl-tree-inner">
           <div data-fhir="generated"><p class="res-header-id"></p><a name="SSUK2"> </a><a name="hcSSUK2"> </a>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=SSUK2" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="qt-SSUK2-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> SSUK2</td>
 <td style="" class="hierarchy xhtCellBorder1">Zwei Items aus den Skalen zur Sozialen Unterstützung bei Krankheit (SSUK): je ein Item zur positiven Unterstützung (aufmuntern/trösten) und zur belastenden Interaktion (Auswirkung der Erkrankung herunterspielen), 5-stufige Häufigkeitsskala (0 = nie ... 4 = immer). Kein Score — die beiden Items sind gegenläufig gepolt und einzeln auszuwerten. Quelle: PCOR-MII Item Level Dictionary (Entität AN).</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
 <td style="" class="hierarchy xhtCellBorder1">Questionnaire</td>
-<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2#0.3.0</td></tr>
+<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2#0.9.0</td></tr>
 <tr fhir="generated-heirarchy" id="qt-SSUK2-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck01.png)" id="item.ssuk-stamm" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SSUK2 / </span>ssuk-stamm</td>
 <td style="" class="hierarchy xhtCellBorder1">Unter den Menschen, die Ihnen nahe stehen, gibt es jemanden, der/die..</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -454,7 +460,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-sample">
         <div id="tbl-sample-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div>
 <div><div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><b><span title="linkId: ssuk-stamm">Unter den Menschen, die Ihnen nahe stehen, gibt es jemanden, der/die..</span></b></p></div><div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ssuk-stamm</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 890px; border-top: 1px #eeeeee solid; margin-left: 10px"><div style="display: inline-block; width: 490px"><p><span title="linkId: ssuk14">Sie aufmuntert oder tröstet</span><select size="1" name="ssuk14" aria-label="Sie aufmuntert oder tröstet"><option value="0" selected="false">nie</option><option value="1" selected="false">selten</option><option value="2" selected="false">manchmal</option><option value="3" selected="false">oft</option><option value="4" selected="false">immer</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: ssuk14</li><li style="font-size: 10px">Answers: <a href="ValueSet-ssuk-antwort-vs.html">SSUK Antwortskala</a></li></ul></div></div>
@@ -468,7 +474,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-logic">
         <div id="tbl-logic-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html">SDCBaseQuestionnaire</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaire.html">SDC Base Questionnaire</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qlogic=SSUK2" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="ql-SSUK2-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> ssuk-stamm</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
@@ -487,7 +493,7 @@ a[name="test"] + h3 + div {
   <a name="test"> </a>
   <h3>Diesen Fragebogen testen</h3>
   <div data-fhir="generated"><p>Try this questionnaire out:</p>
-<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2&amp;pID=pcor-mii&amp;pVersion=0.3.0">NLM Forms Library</a></li></ul></div>
+<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2&amp;pID=pcor-mii&amp;pVersion=0.9.0">NLM Forms Library</a></li></ul></div>
 
   <a name="responses"> </a>
   <h3>Antworten zu diesem Fragebogen</h3>
@@ -551,10 +557,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

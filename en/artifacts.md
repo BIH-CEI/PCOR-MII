@@ -1,4 +1,4 @@
-# Artifacts Summary - PCOR-MII Implementation Guide v0.3.0
+# Artifacts Summary - PCOR-MII Implementation Guide v0.9.0
 
 ## Artifacts Summary
 

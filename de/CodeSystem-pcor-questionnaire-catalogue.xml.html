@@ -10,7 +10,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PCOR-MII Questionnaire-Katalog - XML Representation - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PCOR-MII Questionnaire-Katalog - XML Representation - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -150,8 +150,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.85"}
-    h3,h4,h5,h6{--heading-prefix:"21.85"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.102"}
+    h3,h4,h5,h6{--heading-prefix:"23.102"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -171,7 +171,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -221,12 +221,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -239,6 +242,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -303,7 +309,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -380,11 +386,11 @@ a[name="test"] + h3 + div {
   &lt;<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;de&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xml:lang=&quot;de&quot; lang=&quot;de&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem pcor-questionnaire-catalogue&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;pcor-questionnaire-catalogue&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcpcor-questionnaire-catalogue&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;dem&lt;a name=&quot;pcor-questionnaire-catalogue-dem&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PCOR-MII Demographie (DEM)&lt;/td&gt;&lt;td&gt;Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mhi&lt;a name=&quot;pcor-questionnaire-catalogue-mhi&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PCOR-MII Medical History (MHI)&lt;/td&gt;&lt;td&gt;Sammelbogen, mit AN-spezifischen Zusatzitems&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;opd-sfk&lt;a name=&quot;pcor-questionnaire-catalogue-opd-sfk&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;OPD-SFK&lt;/td&gt;&lt;td&gt;Strukturfragebogen, 12 Items&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;wai&lt;a name=&quot;pcor-questionnaire-catalogue-wai&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WAI / Work Ability Score&lt;/td&gt;&lt;td&gt;3-Item-Kurzfassung (metadata-only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;gsltpaq&lt;a name=&quot;pcor-questionnaire-catalogue-gsltpaq&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;GSLTPAQ&lt;/td&gt;&lt;td&gt;Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;promis-gh&lt;a name=&quot;pcor-questionnaire-catalogue-promis-gh&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-GH&lt;/td&gt;&lt;td&gt;PROMIS Global Health, 2-Item-Zuschnitt (Global01, Global02) — Übergangslösung bis zur Aufnahme der 10-Item-Skala ins MII-PRO-Modul&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;expect&lt;a name=&quot;pcor-questionnaire-catalogue-expect&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EXPECT&lt;/td&gt;&lt;td&gt;Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ipq-s&lt;a name=&quot;pcor-questionnaire-catalogue-ipq-s&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPQ-S&lt;/td&gt;&lt;td&gt;Die offene Ursachenfrage des B-IPQ, Einzelitem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;erq-6&lt;a name=&quot;pcor-questionnaire-catalogue-erq-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ERQ-6&lt;/td&gt;&lt;td&gt;6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ede-q6&lt;a name=&quot;pcor-questionnaire-catalogue-ede-q6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EDE-Q6&lt;/td&gt;&lt;td&gt;6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ansocq-2&lt;a name=&quot;pcor-questionnaire-catalogue-ansocq-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ANSOCQ-2&lt;/td&gt;&lt;td&gt;2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ssuk-2&lt;a name=&quot;pcor-questionnaire-catalogue-ssuk-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SSUK-2&lt;/td&gt;&lt;td&gt;2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ace&lt;a name=&quot;pcor-questionnaire-catalogue-ace&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ACE + Zeitangaben&lt;/td&gt;&lt;td&gt;Die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-pt&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-pt&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-PT&lt;/td&gt;&lt;td&gt;Vorbehandlung, 2 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-anb&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-anb&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-ANB&lt;/td&gt;&lt;td&gt;Essstörungsanamnese, 2 zusammengesetzte Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-ct&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-ct&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-CT&lt;/td&gt;&lt;td&gt;Aktuelle Behandlung, 1 Item (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-le&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-le&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-LE&lt;/td&gt;&lt;td&gt;Belastende Lebensereignisse, 4 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-nd&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-nd&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-ND&lt;/td&gt;&lt;td&gt;Neue Diagnosen, 3 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-d&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-d&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-D&lt;/td&gt;&lt;td&gt;Diagnosen bei Aufnahme, 2 Items (UKHD-Zusatzitems AN; Dictionary-Schreibweise UKHD_D)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-edp&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-edp&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-EDP&lt;/td&gt;&lt;td&gt;11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xml:lang=&quot;de&quot; lang=&quot;de&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem pcor-questionnaire-catalogue&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;pcor-questionnaire-catalogue&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcpcor-questionnaire-catalogue&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;dem&lt;a name=&quot;pcor-questionnaire-catalogue-dem&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PCOR-MII Demographie (DEM)&lt;/td&gt;&lt;td&gt;Sammelbogen aus OECD-, GI-PS- und CPCOR-Einzelitems&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mhi&lt;a name=&quot;pcor-questionnaire-catalogue-mhi&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PCOR-MII Medical History (MHI)&lt;/td&gt;&lt;td&gt;Sammelbogen, mit AN-spezifischen Zusatzitems&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;opd-sfk&lt;a name=&quot;pcor-questionnaire-catalogue-opd-sfk&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;OPD-SFK&lt;/td&gt;&lt;td&gt;Strukturfragebogen, 12 Items&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;wai&lt;a name=&quot;pcor-questionnaire-catalogue-wai&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;WAI / Work Ability Score&lt;/td&gt;&lt;td&gt;3-Item-Kurzfassung (metadata-only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;gsltpaq&lt;a name=&quot;pcor-questionnaire-catalogue-gsltpaq&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;GSLTPAQ&lt;/td&gt;&lt;td&gt;Godin-Shephard Leisure-Time Physical Activity Questionnaire, deutsche Übersetzung aus SOMACROSS 2.0 (UKE)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;promis-gh&lt;a name=&quot;pcor-questionnaire-catalogue-promis-gh&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-GH&lt;/td&gt;&lt;td&gt;PROMIS Global Health, 2-Item-Zuschnitt (Global01, Global02) — Übergangslösung bis zur Aufnahme der 10-Item-Skala ins MII-PRO-Modul&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;expect&lt;a name=&quot;pcor-questionnaire-catalogue-expect&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EXPECT&lt;/td&gt;&lt;td&gt;Drei NRS-Einzelitems zur Verlaufserwartung, kein standardisierter Fragebogen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ipq-s&lt;a name=&quot;pcor-questionnaire-catalogue-ipq-s&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IPQ-S&lt;/td&gt;&lt;td&gt;Die offene Ursachenfrage des B-IPQ, Einzelitem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;phq-panik&lt;a name=&quot;pcor-questionnaire-catalogue-phq-panik&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PHQ-D Panik-Block&lt;/td&gt;&lt;td&gt;Die vier Ja/Nein-Screeningitems 3a–3d des PHQ zu Angst-/Panikattacken (PHQ-D-Block 3); in PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt führt (ADR-012)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;erq-6&lt;a name=&quot;pcor-questionnaire-catalogue-erq-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ERQ-6&lt;/td&gt;&lt;td&gt;6-Item-Zuschnitt des Emotion Regulation Questionnaire (ERQ-Items 1, 2, 3, 6, 8, 9); nicht der ERQ-S&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ede-q6&lt;a name=&quot;pcor-questionnaire-catalogue-ede-q6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;EDE-Q6&lt;/td&gt;&lt;td&gt;6-Item-Zuschnitt des Eating Disorder Examination-Questionnaire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ansocq-2&lt;a name=&quot;pcor-questionnaire-catalogue-ansocq-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ANSOCQ-2&lt;/td&gt;&lt;td&gt;2-Item-Zuschnitt des Anorexia Nervosa Stages of Change Questionnaire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ssuk-2&lt;a name=&quot;pcor-questionnaire-catalogue-ssuk-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SSUK-2&lt;/td&gt;&lt;td&gt;2-Item-Zuschnitt der Skalen zur Sozialen Unterstützung bei Krankheit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ace&lt;a name=&quot;pcor-questionnaire-catalogue-ace&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ACE + Zeitangaben&lt;/td&gt;&lt;td&gt;Die ersten fünf Fragen des Adverse Childhood Experiences Questionnaire plus die sechs UKHD-Items zur zeitlichen Einordnung (PCOR-MII-Komposit)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-pt&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-pt&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-PT&lt;/td&gt;&lt;td&gt;Vorbehandlung, 2 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-anb&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-anb&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-ANB&lt;/td&gt;&lt;td&gt;Essstörungsanamnese, 2 zusammengesetzte Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-ct&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-ct&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-CT&lt;/td&gt;&lt;td&gt;Aktuelle Behandlung, 1 Item (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-le&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-le&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-LE&lt;/td&gt;&lt;td&gt;Belastende Lebensereignisse, 4 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-nd&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-nd&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-ND&lt;/td&gt;&lt;td&gt;Neue Diagnosen, 3 Items (UKHD-Zusatzitems AN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-d&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-d&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-D&lt;/td&gt;&lt;td&gt;Diagnosen bei Aufnahme, 2 Items (UKHD-Zusatzitems AN; Dictionary-Schreibweise UKHD_D)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ukhd-edp&lt;a name=&quot;pcor-questionnaire-catalogue-ukhd-edp&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UKHD-EDP&lt;/td&gt;&lt;td&gt;11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;baasis&lt;a name=&quot;pcor-questionnaire-catalogue-baasis&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BAASIS&lt;/td&gt;&lt;td&gt;Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;abq&lt;a name=&quot;pcor-questionnaire-catalogue-abq&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ABQ&lt;/td&gt;&lt;td&gt;Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann &amp;amp; Wilke 2015)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mtsosd-r59&lt;a name=&quot;pcor-questionnaire-catalogue-mtsosd-r59&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MTSOSD-R59&lt;/td&gt;&lt;td&gt;Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ntx-verlauf&lt;a name=&quot;pcor-questionnaire-catalogue-ntx-verlauf&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;NTx-Verlaufsbefragung (MHH)&lt;/td&gt;&lt;td&gt;Quartalsweise Verlaufsanamnese nach Nierentransplantation des Standorts Hannover, 18 patient-reported Variablen der Dictionary-Gruppen MHH-DIAL, MHH-PTx-DIAB, MHH-T, MHH-UTI, MHH-Infection, MHH-BP, MHH-Medi und MHH_PTH (Sammelbogen nach MHI-Muster, kein PRO-Instrument); die drei Screening-Items MHH-DON/Tx-DATE/PRIOR-TX liegen im Ergänzungsbogen MHI-NTx&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mhi-ntx&lt;a name=&quot;pcor-questionnaire-catalogue-mhi-ntx&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MHI-NTx — Transplantationsanamnese&lt;/td&gt;&lt;td&gt;Ergänzung zum MHI für Empfänger einer Nierentransplantation: Spendeart, Transplantationsdatum, wievielte Spenderniere (Dictionary-Gruppen MHH-DON, MHH-Tx-DATE, MHH-PRIOR-TX; Screening, kein PRO-Instrument)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.3.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.9.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PcorQuestionnaireCatalogueCS&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOR-MII Questionnaire-Katalog&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
@@ -409,7 +415,7 @@ a[name="test"] + h3 + div {
   &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;20&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;26&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;dem&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOR-MII Demographie (DEM)&quot;/&gt;
@@ -452,6 +458,12 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ipq-s&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;IPQ-S&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Die offene Ursachenfrage des B-IPQ, Einzelitem&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phq-panik&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PHQ-D Panik-Block&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Die vier Ja/Nein-Screeningitems 3a–3d des PHQ zu Angst-/Panikattacken (PHQ-D-Block 3); in PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt führt (ADR-012)&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;erq-6&quot;/&gt;
@@ -522,6 +534,36 @@ a[name="test"] + h3 + div {
     &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;baasis&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BAASIS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;abq&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ABQ&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann &amp;amp; Wilke 2015)&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mtsosd-r59&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MTSOSD-R59&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ntx-verlauf&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NTx-Verlaufsbefragung (MHH)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Quartalsweise Verlaufsanamnese nach Nierentransplantation des Standorts Hannover, 18 patient-reported Variablen der Dictionary-Gruppen MHH-DIAL, MHH-PTx-DIAB, MHH-T, MHH-UTI, MHH-Infection, MHH-BP, MHH-Medi und MHH_PTH (Sammelbogen nach MHI-Muster, kein PRO-Instrument); die drei Screening-Items MHH-DON/Tx-DATE/PRIOR-TX liegen im Ergänzungsbogen MHI-NTx&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mhi-ntx&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MHI-NTx — Transplantationsanamnese&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ergänzung zum MHI für Empfänger einer Nierentransplantation: Spendeart, Transplantationsdatum, wievielte Spenderniere (Dictionary-Gruppen MHH-DON, MHH-Tx-DATE, MHH-PRIOR-TX; Screening, kein PRO-Instrument)&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
 &lt;/<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">CodeSystem</a>&gt;</code></pre>
 
 
@@ -575,10 +617,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

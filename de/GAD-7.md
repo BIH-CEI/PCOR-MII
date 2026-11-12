@@ -1,4 +1,4 @@
-# GAD-7 - PCOR-MII Implementation Guide v0.3.0
+# GAD-7 - PCOR-MII Implementation Guide v0.9.0
 
 ## GAD-7
 
@@ -6,7 +6,7 @@ Der **GAD-7** (**Generalized Anxiety Disorder Scale-7**, Spitzer et al. 2006) er
 
 ### Verwendung in PCOR-MII
 
-PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2026.7.0) mit; enthalten ist er **ab 2026.7.0**. Der Score wird als `Observation` abgelegt (LOINC `70274-6`, Summenscore 0–21).
+PCOR-MII referenziert den im MII PRO-Modul gepflegten Questionnaire — kein eigener Nachbau. Er kommt über die Paket-Abhängigkeit `de.medizininformatikinitiative.kerndatensatz.pros` (2027.0.0-ballot.2) mit; enthalten ist er **ab 2026.7.0**. Der Score wird als `Observation` abgelegt (LOINC `70274-6`, Summenscore 0–21).
 
 Erhoben wird der GAD-7 in **allen drei Entitäten** (PSS, AN, NTx) — siehe [Instrumente](Instrumente.md).
 
@@ -30,7 +30,7 @@ Der GAD-7 nutzt **keine instrumentspezifischen `linkId`s**, sondern die des PHQ-
 * Die beiden **GAD-2**-Items (und damit die GAD-Hälfte des **PHQ-4**) sind `phq-phq5a` und `phq-phq5b` — dieselben Items, dieselben `linkId`s.
 * Wer GAD-7 und weitere PHQ-Instrumente derselben Person gemeinsam verarbeitet, muss die geteilten `linkId`s berücksichtigen; siehe [PHQ-Übersicht](PHQ.md).
 
-Für Alt-Daten mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) liefert das MII PRO-Modul die ConceptMap [`mii-cm-pro-gad-7-linkids`](https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ConceptMap/mii-cm-pro-gad-7-linkids); die Zuordnung ist 1:1 (`gad7-q0n` → `phq-phq5a…g`).
+Für Alt-Daten mit instrumentspezifischen `linkId`s (`gad7-q01`–`gad7-q07`) liefert das MII PRO-Modul die ConceptMap `mii-cm-pro-gad-7-linkids`; die Zuordnung ist 1:1 (`gad7-q0n` → `phq-phq5a…g`).
 
 ### Lizenz
 
@@ -44,5 +44,5 @@ Das MII PRO-Modul liefert ein vollständiges QR-Beispiel mit (`mii-exa-pro-gad-7
 
 * Entwicklung: Spitzer RL, Kroenke K, Williams JBW, Löwe B. **A brief measure for assessing generalized anxiety disorder: the GAD-7**. Arch Intern Med. 2006;166(10):1092–1097. [doi:10.1001/archinte.166.10.1092](https://doi.org/10.1001/archinte.166.10.1092)
 * Deutsche Validierung: Löwe B et al. **Validation and standardization of the Generalized Anxiety Disorder Screener (GAD-7) in the general population**. Med Care. 2008;46(3):266–274. [doi:10.1097/MLR.0b013e318160d093](https://doi.org/10.1097/MLR.0b013e318160d093)
-* Raw-Package: [MII PRO Package 2026.7.0 (Simplifier)](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0)
+* Raw-Package: [MII PRO 2027.0.0-ballot.2 (package.tgz)](https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz)
 

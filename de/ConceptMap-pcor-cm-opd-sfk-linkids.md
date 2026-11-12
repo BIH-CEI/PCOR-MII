@@ -1,4 +1,4 @@
-# OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern) - PCOR-MII Implementation Guide v0.3.0
+# OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern) - PCOR-MII Implementation Guide v0.9.0
 
 ## ConceptMap: OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern) (Experimentell) 
 
@@ -11,7 +11,7 @@
   "resourceType" : "ConceptMap",
   "id" : "pcor-cm-opd-sfk-linkids",
   "url" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-opd-sfk-linkids",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "PcorCmOpdSfkLinkIds",
   "title" : "OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern)",
   "status" : "draft",

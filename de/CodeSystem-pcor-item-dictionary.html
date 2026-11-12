@@ -8,7 +8,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PCOR-MII Item Level Dictionary — Variablen-IDs - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -148,8 +148,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.84"}
-    h3,h4,h5,h6{--heading-prefix:"21.84"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.101"}
+    h3,h4,h5,h6{--heading-prefix:"23.101"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -169,7 +169,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -219,12 +219,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -237,6 +240,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -281,7 +287,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="CodeSystem-pcor-example-general-health.json.html">&lt; zurück</a> | 
+            <a href="CodeSystem-opd-sfk-antwort.json.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -301,7 +307,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-codesystem -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -351,7 +357,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -1136,6 +1142,26 @@ a[name="test"] + h3 + div {
 <td>UKHD_D</td>
 <td>DCH</td>
 <td>AN</td></tr>
+<tr><td style="white-space:nowrap">phq3a<a name="pcor-item-dictionary-phq3a"> </a></td>
+<td>phq3a — Hatten Sie in den letzten 4 Wochen eine Angstattacke (plötzliches Gefühl der …</td>
+<td>PHQ-D</td>
+<td>MHA</td>
+<td>PSS</td></tr>
+<tr><td style="white-space:nowrap">phq3b<a name="pcor-item-dictionary-phq3b"> </a></td>
+<td>phq3b — Ist dies bereits früher einmal vorgekommen?</td>
+<td>PHQ-D</td>
+<td>MHA</td>
+<td>PSS</td></tr>
+<tr><td style="white-space:nowrap">phq3c<a name="pcor-item-dictionary-phq3c"> </a></td>
+<td>phq3c — Treten manche dieser Anfälle völlig unerwartet auf - d.h. in Situationen, in …</td>
+<td>PHQ-D</td>
+<td>MHA</td>
+<td>PSS</td></tr>
+<tr><td style="white-space:nowrap">phq3d<a name="pcor-item-dictionary-phq3d"> </a></td>
+<td>phq3d — Empfinden Sie diese Anfälle als stark beeinträchtigend, und/oder haben Sie …</td>
+<td>PHQ-D</td>
+<td>MHA</td>
+<td>PSS</td></tr>
 <tr><td style="white-space:nowrap">WAI01<a name="pcor-item-dictionary-WAI01"> </a></td>
 <td>WAI01 — Wenn Sie Ihre beste, je erreichte Arbeitsfähigkeit mit 10 Punkten …</td>
 <td>WAI</td>
@@ -1150,7 +1176,867 @@ a[name="test"] + h3 + div {
 <td>WAI02b — Wie schätzen Sie Ihre derzeitige Arbeitsfähigkeit in Bezug auf die …</td>
 <td>WAI</td>
 <td>GHS</td>
-<td>AN, NTx, PSS</td></tr></table></div>
+<td>AN, NTx, PSS</td></tr>
+<tr><td style="white-space:nowrap">BAASIS1A<a name="pcor-item-dictionary-BAASIS1A"> </a></td>
+<td>BAASIS1A — Einnahme — Dosis ausgelassen, 4 Wochen — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS1A_a<a name="pcor-item-dictionary-BAASIS1A_a"> </a></td>
+<td>BAASIS1A_a — Einnahme — Häufigkeit des Auslassens — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS1B<a name="pcor-item-dictionary-BAASIS1B"> </a></td>
+<td>BAASIS1B — Einnahme — mehrere Dosen in Folge ausgelassen — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS1B_a<a name="pcor-item-dictionary-BAASIS1B_a"> </a></td>
+<td>BAASIS1B_a — Einnahme — Häufigkeit des mehrfachen Auslassens — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS2<a name="pcor-item-dictionary-BAASIS2"> </a></td>
+<td>BAASIS2 — Timing — Einnahmezeitpunkt um mehr als 2 h verfehlt — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS2_a<a name="pcor-item-dictionary-BAASIS2_a"> </a></td>
+<td>BAASIS2_a — Timing — Häufigkeit der Zeitabweichung — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS3<a name="pcor-item-dictionary-BAASIS3"> </a></td>
+<td>BAASIS3 — Dosis — eigenmächtig geändert, 4 Wochen — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS4<a name="pcor-item-dictionary-BAASIS4"> </a></td>
+<td>BAASIS4 — Persistenz — eigenmächtig abgesetzt, 1 Jahr — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS5<a name="pcor-item-dictionary-BAASIS5"> </a></td>
+<td>BAASIS5 — Initiierung — Neuverordnung im letzten Jahr — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">BAASIS5_a<a name="pcor-item-dictionary-BAASIS5_a"> </a></td>
+<td>BAASIS5_a — Initiierung — Neuverordnung eingelöst und begonnen — metadata-only, Wortlaut nicht publizierbar</td>
+<td>BAASIS</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_01<a name="pcor-item-dictionary-ABQ_01"> </a></td>
+<td>ABQ_01 — Adhärenzbarriere Item 01 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_02<a name="pcor-item-dictionary-ABQ_02"> </a></td>
+<td>ABQ_02 — Adhärenzbarriere Item 02 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_03<a name="pcor-item-dictionary-ABQ_03"> </a></td>
+<td>ABQ_03 — Adhärenzbarriere Item 03 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_04<a name="pcor-item-dictionary-ABQ_04"> </a></td>
+<td>ABQ_04 — Adhärenzbarriere Item 04 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_05<a name="pcor-item-dictionary-ABQ_05"> </a></td>
+<td>ABQ_05 — Adhärenzbarriere Item 05 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_06<a name="pcor-item-dictionary-ABQ_06"> </a></td>
+<td>ABQ_06 — Adhärenzbarriere Item 06 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_07<a name="pcor-item-dictionary-ABQ_07"> </a></td>
+<td>ABQ_07 — Adhärenzbarriere Item 07 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_08<a name="pcor-item-dictionary-ABQ_08"> </a></td>
+<td>ABQ_08 — Adhärenzbarriere Item 08 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_09<a name="pcor-item-dictionary-ABQ_09"> </a></td>
+<td>ABQ_09 — Adhärenzbarriere Item 09 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_10<a name="pcor-item-dictionary-ABQ_10"> </a></td>
+<td>ABQ_10 — Adhärenzbarriere Item 10 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_11<a name="pcor-item-dictionary-ABQ_11"> </a></td>
+<td>ABQ_11 — Adhärenzbarriere Item 11 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_12<a name="pcor-item-dictionary-ABQ_12"> </a></td>
+<td>ABQ_12 — Adhärenzbarriere Item 12 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_13<a name="pcor-item-dictionary-ABQ_13"> </a></td>
+<td>ABQ_13 — Adhärenzbarriere Item 13 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_14<a name="pcor-item-dictionary-ABQ_14"> </a></td>
+<td>ABQ_14 — Adhärenzbarriere Item 14 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_15<a name="pcor-item-dictionary-ABQ_15"> </a></td>
+<td>ABQ_15 — Adhärenzbarriere Item 15 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">ABQ_16<a name="pcor-item-dictionary-ABQ_16"> </a></td>
+<td>ABQ_16 — Adhärenzbarriere Item 16 (4 Stufen) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>ABQ</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_01<a name="pcor-item-dictionary-MTSOSDR59_01"> </a></td>
+<td>MTSOSDR59_01 — Auftreten Symptom 01 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_01a<a name="pcor-item-dictionary-MTSOSDR59_01a"> </a></td>
+<td>MTSOSDR59_01a — Belastung Symptom 01 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_02<a name="pcor-item-dictionary-MTSOSDR59_02"> </a></td>
+<td>MTSOSDR59_02 — Auftreten Symptom 02 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_02a<a name="pcor-item-dictionary-MTSOSDR59_02a"> </a></td>
+<td>MTSOSDR59_02a — Belastung Symptom 02 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_03<a name="pcor-item-dictionary-MTSOSDR59_03"> </a></td>
+<td>MTSOSDR59_03 — Auftreten Symptom 03 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_03a<a name="pcor-item-dictionary-MTSOSDR59_03a"> </a></td>
+<td>MTSOSDR59_03a — Belastung Symptom 03 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_04<a name="pcor-item-dictionary-MTSOSDR59_04"> </a></td>
+<td>MTSOSDR59_04 — Auftreten Symptom 04 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_04a<a name="pcor-item-dictionary-MTSOSDR59_04a"> </a></td>
+<td>MTSOSDR59_04a — Belastung Symptom 04 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_05<a name="pcor-item-dictionary-MTSOSDR59_05"> </a></td>
+<td>MTSOSDR59_05 — Auftreten Symptom 05 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_05a<a name="pcor-item-dictionary-MTSOSDR59_05a"> </a></td>
+<td>MTSOSDR59_05a — Belastung Symptom 05 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_06<a name="pcor-item-dictionary-MTSOSDR59_06"> </a></td>
+<td>MTSOSDR59_06 — Auftreten Symptom 06 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_06a<a name="pcor-item-dictionary-MTSOSDR59_06a"> </a></td>
+<td>MTSOSDR59_06a — Belastung Symptom 06 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_07<a name="pcor-item-dictionary-MTSOSDR59_07"> </a></td>
+<td>MTSOSDR59_07 — Auftreten Symptom 07 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_07a<a name="pcor-item-dictionary-MTSOSDR59_07a"> </a></td>
+<td>MTSOSDR59_07a — Belastung Symptom 07 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_08<a name="pcor-item-dictionary-MTSOSDR59_08"> </a></td>
+<td>MTSOSDR59_08 — Auftreten Symptom 08 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_08a<a name="pcor-item-dictionary-MTSOSDR59_08a"> </a></td>
+<td>MTSOSDR59_08a — Belastung Symptom 08 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_09<a name="pcor-item-dictionary-MTSOSDR59_09"> </a></td>
+<td>MTSOSDR59_09 — Auftreten Symptom 09 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_09a<a name="pcor-item-dictionary-MTSOSDR59_09a"> </a></td>
+<td>MTSOSDR59_09a — Belastung Symptom 09 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_10<a name="pcor-item-dictionary-MTSOSDR59_10"> </a></td>
+<td>MTSOSDR59_10 — Auftreten Symptom 10 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_10a<a name="pcor-item-dictionary-MTSOSDR59_10a"> </a></td>
+<td>MTSOSDR59_10a — Belastung Symptom 10 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_11<a name="pcor-item-dictionary-MTSOSDR59_11"> </a></td>
+<td>MTSOSDR59_11 — Auftreten Symptom 11 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_11a<a name="pcor-item-dictionary-MTSOSDR59_11a"> </a></td>
+<td>MTSOSDR59_11a — Belastung Symptom 11 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_12<a name="pcor-item-dictionary-MTSOSDR59_12"> </a></td>
+<td>MTSOSDR59_12 — Auftreten Symptom 12 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_12a<a name="pcor-item-dictionary-MTSOSDR59_12a"> </a></td>
+<td>MTSOSDR59_12a — Belastung Symptom 12 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_13<a name="pcor-item-dictionary-MTSOSDR59_13"> </a></td>
+<td>MTSOSDR59_13 — Auftreten Symptom 13 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_13a<a name="pcor-item-dictionary-MTSOSDR59_13a"> </a></td>
+<td>MTSOSDR59_13a — Belastung Symptom 13 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_14<a name="pcor-item-dictionary-MTSOSDR59_14"> </a></td>
+<td>MTSOSDR59_14 — Auftreten Symptom 14 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_14a<a name="pcor-item-dictionary-MTSOSDR59_14a"> </a></td>
+<td>MTSOSDR59_14a — Belastung Symptom 14 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_15<a name="pcor-item-dictionary-MTSOSDR59_15"> </a></td>
+<td>MTSOSDR59_15 — Auftreten Symptom 15 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_15a<a name="pcor-item-dictionary-MTSOSDR59_15a"> </a></td>
+<td>MTSOSDR59_15a — Belastung Symptom 15 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_16<a name="pcor-item-dictionary-MTSOSDR59_16"> </a></td>
+<td>MTSOSDR59_16 — Auftreten Symptom 16 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_16a<a name="pcor-item-dictionary-MTSOSDR59_16a"> </a></td>
+<td>MTSOSDR59_16a — Belastung Symptom 16 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_17<a name="pcor-item-dictionary-MTSOSDR59_17"> </a></td>
+<td>MTSOSDR59_17 — Auftreten Symptom 17 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_17a<a name="pcor-item-dictionary-MTSOSDR59_17a"> </a></td>
+<td>MTSOSDR59_17a — Belastung Symptom 17 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_18<a name="pcor-item-dictionary-MTSOSDR59_18"> </a></td>
+<td>MTSOSDR59_18 — Auftreten Symptom 18 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_18a<a name="pcor-item-dictionary-MTSOSDR59_18a"> </a></td>
+<td>MTSOSDR59_18a — Belastung Symptom 18 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_19<a name="pcor-item-dictionary-MTSOSDR59_19"> </a></td>
+<td>MTSOSDR59_19 — Auftreten Symptom 19 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_19a<a name="pcor-item-dictionary-MTSOSDR59_19a"> </a></td>
+<td>MTSOSDR59_19a — Belastung Symptom 19 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_20<a name="pcor-item-dictionary-MTSOSDR59_20"> </a></td>
+<td>MTSOSDR59_20 — Auftreten Symptom 20 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_20a<a name="pcor-item-dictionary-MTSOSDR59_20a"> </a></td>
+<td>MTSOSDR59_20a — Belastung Symptom 20 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_21<a name="pcor-item-dictionary-MTSOSDR59_21"> </a></td>
+<td>MTSOSDR59_21 — Auftreten Symptom 21 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_21a<a name="pcor-item-dictionary-MTSOSDR59_21a"> </a></td>
+<td>MTSOSDR59_21a — Belastung Symptom 21 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_22<a name="pcor-item-dictionary-MTSOSDR59_22"> </a></td>
+<td>MTSOSDR59_22 — Auftreten Symptom 22 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_22a<a name="pcor-item-dictionary-MTSOSDR59_22a"> </a></td>
+<td>MTSOSDR59_22a — Belastung Symptom 22 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_23<a name="pcor-item-dictionary-MTSOSDR59_23"> </a></td>
+<td>MTSOSDR59_23 — Auftreten Symptom 23 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_23a<a name="pcor-item-dictionary-MTSOSDR59_23a"> </a></td>
+<td>MTSOSDR59_23a — Belastung Symptom 23 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_24<a name="pcor-item-dictionary-MTSOSDR59_24"> </a></td>
+<td>MTSOSDR59_24 — Auftreten Symptom 24 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_24a<a name="pcor-item-dictionary-MTSOSDR59_24a"> </a></td>
+<td>MTSOSDR59_24a — Belastung Symptom 24 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_25<a name="pcor-item-dictionary-MTSOSDR59_25"> </a></td>
+<td>MTSOSDR59_25 — Auftreten Symptom 25 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_25a<a name="pcor-item-dictionary-MTSOSDR59_25a"> </a></td>
+<td>MTSOSDR59_25a — Belastung Symptom 25 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_26<a name="pcor-item-dictionary-MTSOSDR59_26"> </a></td>
+<td>MTSOSDR59_26 — Auftreten Symptom 26 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_26a<a name="pcor-item-dictionary-MTSOSDR59_26a"> </a></td>
+<td>MTSOSDR59_26a — Belastung Symptom 26 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_27_male<a name="pcor-item-dictionary-MTSOSDR59_27_male"> </a></td>
+<td>MTSOSDR59_27_male — Auftreten Symptom 27 (männlich) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_27a_male<a name="pcor-item-dictionary-MTSOSDR59_27a_male"> </a></td>
+<td>MTSOSDR59_27a_male — Belastung Symptom 27 (männlich) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_27_female<a name="pcor-item-dictionary-MTSOSDR59_27_female"> </a></td>
+<td>MTSOSDR59_27_female — Auftreten Symptom 27 (weiblich) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_27a_female<a name="pcor-item-dictionary-MTSOSDR59_27a_female"> </a></td>
+<td>MTSOSDR59_27a_female — Belastung Symptom 27 (weiblich) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_28<a name="pcor-item-dictionary-MTSOSDR59_28"> </a></td>
+<td>MTSOSDR59_28 — Auftreten Symptom 28 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_28a<a name="pcor-item-dictionary-MTSOSDR59_28a"> </a></td>
+<td>MTSOSDR59_28a — Belastung Symptom 28 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_29<a name="pcor-item-dictionary-MTSOSDR59_29"> </a></td>
+<td>MTSOSDR59_29 — Auftreten Symptom 29 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_29a<a name="pcor-item-dictionary-MTSOSDR59_29a"> </a></td>
+<td>MTSOSDR59_29a — Belastung Symptom 29 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_30<a name="pcor-item-dictionary-MTSOSDR59_30"> </a></td>
+<td>MTSOSDR59_30 — Auftreten Symptom 30 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_30a<a name="pcor-item-dictionary-MTSOSDR59_30a"> </a></td>
+<td>MTSOSDR59_30a — Belastung Symptom 30 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_31<a name="pcor-item-dictionary-MTSOSDR59_31"> </a></td>
+<td>MTSOSDR59_31 — Auftreten Symptom 31 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_31a<a name="pcor-item-dictionary-MTSOSDR59_31a"> </a></td>
+<td>MTSOSDR59_31a — Belastung Symptom 31 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_32<a name="pcor-item-dictionary-MTSOSDR59_32"> </a></td>
+<td>MTSOSDR59_32 — Auftreten Symptom 32 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_32a<a name="pcor-item-dictionary-MTSOSDR59_32a"> </a></td>
+<td>MTSOSDR59_32a — Belastung Symptom 32 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_33<a name="pcor-item-dictionary-MTSOSDR59_33"> </a></td>
+<td>MTSOSDR59_33 — Auftreten Symptom 33 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_33a<a name="pcor-item-dictionary-MTSOSDR59_33a"> </a></td>
+<td>MTSOSDR59_33a — Belastung Symptom 33 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_34<a name="pcor-item-dictionary-MTSOSDR59_34"> </a></td>
+<td>MTSOSDR59_34 — Auftreten Symptom 34 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_34a<a name="pcor-item-dictionary-MTSOSDR59_34a"> </a></td>
+<td>MTSOSDR59_34a — Belastung Symptom 34 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_35<a name="pcor-item-dictionary-MTSOSDR59_35"> </a></td>
+<td>MTSOSDR59_35 — Auftreten Symptom 35 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_35a<a name="pcor-item-dictionary-MTSOSDR59_35a"> </a></td>
+<td>MTSOSDR59_35a — Belastung Symptom 35 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_36<a name="pcor-item-dictionary-MTSOSDR59_36"> </a></td>
+<td>MTSOSDR59_36 — Auftreten Symptom 36 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_36a<a name="pcor-item-dictionary-MTSOSDR59_36a"> </a></td>
+<td>MTSOSDR59_36a — Belastung Symptom 36 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_37<a name="pcor-item-dictionary-MTSOSDR59_37"> </a></td>
+<td>MTSOSDR59_37 — Auftreten Symptom 37 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_37a<a name="pcor-item-dictionary-MTSOSDR59_37a"> </a></td>
+<td>MTSOSDR59_37a — Belastung Symptom 37 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_38<a name="pcor-item-dictionary-MTSOSDR59_38"> </a></td>
+<td>MTSOSDR59_38 — Auftreten Symptom 38 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_38a<a name="pcor-item-dictionary-MTSOSDR59_38a"> </a></td>
+<td>MTSOSDR59_38a — Belastung Symptom 38 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_39<a name="pcor-item-dictionary-MTSOSDR59_39"> </a></td>
+<td>MTSOSDR59_39 — Auftreten Symptom 39 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_39a<a name="pcor-item-dictionary-MTSOSDR59_39a"> </a></td>
+<td>MTSOSDR59_39a — Belastung Symptom 39 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_40<a name="pcor-item-dictionary-MTSOSDR59_40"> </a></td>
+<td>MTSOSDR59_40 — Auftreten Symptom 40 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_40a<a name="pcor-item-dictionary-MTSOSDR59_40a"> </a></td>
+<td>MTSOSDR59_40a — Belastung Symptom 40 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_41<a name="pcor-item-dictionary-MTSOSDR59_41"> </a></td>
+<td>MTSOSDR59_41 — Auftreten Symptom 41 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_41a<a name="pcor-item-dictionary-MTSOSDR59_41a"> </a></td>
+<td>MTSOSDR59_41a — Belastung Symptom 41 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_42<a name="pcor-item-dictionary-MTSOSDR59_42"> </a></td>
+<td>MTSOSDR59_42 — Auftreten Symptom 42 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_42a<a name="pcor-item-dictionary-MTSOSDR59_42a"> </a></td>
+<td>MTSOSDR59_42a — Belastung Symptom 42 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_43<a name="pcor-item-dictionary-MTSOSDR59_43"> </a></td>
+<td>MTSOSDR59_43 — Auftreten Symptom 43 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_43a<a name="pcor-item-dictionary-MTSOSDR59_43a"> </a></td>
+<td>MTSOSDR59_43a — Belastung Symptom 43 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_44<a name="pcor-item-dictionary-MTSOSDR59_44"> </a></td>
+<td>MTSOSDR59_44 — Auftreten Symptom 44 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_44a<a name="pcor-item-dictionary-MTSOSDR59_44a"> </a></td>
+<td>MTSOSDR59_44a — Belastung Symptom 44 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_45<a name="pcor-item-dictionary-MTSOSDR59_45"> </a></td>
+<td>MTSOSDR59_45 — Auftreten Symptom 45 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_45a<a name="pcor-item-dictionary-MTSOSDR59_45a"> </a></td>
+<td>MTSOSDR59_45a — Belastung Symptom 45 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_46<a name="pcor-item-dictionary-MTSOSDR59_46"> </a></td>
+<td>MTSOSDR59_46 — Auftreten Symptom 46 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_46a<a name="pcor-item-dictionary-MTSOSDR59_46a"> </a></td>
+<td>MTSOSDR59_46a — Belastung Symptom 46 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_47<a name="pcor-item-dictionary-MTSOSDR59_47"> </a></td>
+<td>MTSOSDR59_47 — Auftreten Symptom 47 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_47a<a name="pcor-item-dictionary-MTSOSDR59_47a"> </a></td>
+<td>MTSOSDR59_47a — Belastung Symptom 47 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_48<a name="pcor-item-dictionary-MTSOSDR59_48"> </a></td>
+<td>MTSOSDR59_48 — Auftreten Symptom 48 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_48a<a name="pcor-item-dictionary-MTSOSDR59_48a"> </a></td>
+<td>MTSOSDR59_48a — Belastung Symptom 48 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_49<a name="pcor-item-dictionary-MTSOSDR59_49"> </a></td>
+<td>MTSOSDR59_49 — Auftreten Symptom 49 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_49a<a name="pcor-item-dictionary-MTSOSDR59_49a"> </a></td>
+<td>MTSOSDR59_49a — Belastung Symptom 49 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_50<a name="pcor-item-dictionary-MTSOSDR59_50"> </a></td>
+<td>MTSOSDR59_50 — Auftreten Symptom 50 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_50a<a name="pcor-item-dictionary-MTSOSDR59_50a"> </a></td>
+<td>MTSOSDR59_50a — Belastung Symptom 50 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_51<a name="pcor-item-dictionary-MTSOSDR59_51"> </a></td>
+<td>MTSOSDR59_51 — Auftreten Symptom 51 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_51a<a name="pcor-item-dictionary-MTSOSDR59_51a"> </a></td>
+<td>MTSOSDR59_51a — Belastung Symptom 51 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_52<a name="pcor-item-dictionary-MTSOSDR59_52"> </a></td>
+<td>MTSOSDR59_52 — Auftreten Symptom 52 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_52a<a name="pcor-item-dictionary-MTSOSDR59_52a"> </a></td>
+<td>MTSOSDR59_52a — Belastung Symptom 52 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_53<a name="pcor-item-dictionary-MTSOSDR59_53"> </a></td>
+<td>MTSOSDR59_53 — Auftreten Symptom 53 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_53a<a name="pcor-item-dictionary-MTSOSDR59_53a"> </a></td>
+<td>MTSOSDR59_53a — Belastung Symptom 53 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_54<a name="pcor-item-dictionary-MTSOSDR59_54"> </a></td>
+<td>MTSOSDR59_54 — Auftreten Symptom 54 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_54a<a name="pcor-item-dictionary-MTSOSDR59_54a"> </a></td>
+<td>MTSOSDR59_54a — Belastung Symptom 54 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_55<a name="pcor-item-dictionary-MTSOSDR59_55"> </a></td>
+<td>MTSOSDR59_55 — Auftreten Symptom 55 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_55a<a name="pcor-item-dictionary-MTSOSDR59_55a"> </a></td>
+<td>MTSOSDR59_55a — Belastung Symptom 55 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_56<a name="pcor-item-dictionary-MTSOSDR59_56"> </a></td>
+<td>MTSOSDR59_56 — Auftreten Symptom 56 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_56a<a name="pcor-item-dictionary-MTSOSDR59_56a"> </a></td>
+<td>MTSOSDR59_56a — Belastung Symptom 56 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_57<a name="pcor-item-dictionary-MTSOSDR59_57"> </a></td>
+<td>MTSOSDR59_57 — Auftreten Symptom 57 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_57a<a name="pcor-item-dictionary-MTSOSDR59_57a"> </a></td>
+<td>MTSOSDR59_57a — Belastung Symptom 57 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_58<a name="pcor-item-dictionary-MTSOSDR59_58"> </a></td>
+<td>MTSOSDR59_58 — Auftreten Symptom 58 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_58a<a name="pcor-item-dictionary-MTSOSDR59_58a"> </a></td>
+<td>MTSOSDR59_58a — Belastung Symptom 58 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_59<a name="pcor-item-dictionary-MTSOSDR59_59"> </a></td>
+<td>MTSOSDR59_59 — Auftreten Symptom 59 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_59a<a name="pcor-item-dictionary-MTSOSDR59_59a"> </a></td>
+<td>MTSOSDR59_59a — Belastung Symptom 59 — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_60<a name="pcor-item-dictionary-MTSOSDR59_60"> </a></td>
+<td>MTSOSDR59_60 — Auftreten Symptom 60 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_60a<a name="pcor-item-dictionary-MTSOSDR59_60a"> </a></td>
+<td>MTSOSDR59_60a — Belastung Symptom 60 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_61<a name="pcor-item-dictionary-MTSOSDR59_61"> </a></td>
+<td>MTSOSDR59_61 — Auftreten Symptom 61 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_61a<a name="pcor-item-dictionary-MTSOSDR59_61a"> </a></td>
+<td>MTSOSDR59_61a — Belastung Symptom 61 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_62<a name="pcor-item-dictionary-MTSOSDR59_62"> </a></td>
+<td>MTSOSDR59_62 — Auftreten Symptom 62 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MTSOSDR59_62a<a name="pcor-item-dictionary-MTSOSDR59_62a"> </a></td>
+<td>MTSOSDR59_62a — Belastung Symptom 62 (Freitext) — metadata-only, Wortlaut nicht publizierbar</td>
+<td>MTSOSD-R59</td>
+<td>MSE</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_DON<a name="pcor-item-dictionary-MHH_DON"> </a></td>
+<td>MHH_DON — Spendeart (Lebend-/Verstorbenenspende)</td>
+<td>MHH-DON</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_TX_DATE<a name="pcor-item-dictionary-MHH_TX_DATE"> </a></td>
+<td>MHH_TX_DATE — Datum der letzten Nierentransplantation</td>
+<td>MHH-Tx-DATE</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_PRIOR_TX<a name="pcor-item-dictionary-MHH_PRIOR_TX"> </a></td>
+<td>MHH_PRIOR_TX — wievielte Spenderniere aktuell</td>
+<td>MHH-PRIOR-TX</td>
+<td>TCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_DIAL1<a name="pcor-item-dictionary-MHH_DIAL1"> </a></td>
+<td>MHH_DIAL1 — wieder an der Dialyse (seit mindestens 4 Wochen)</td>
+<td>MHH-DIAL</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_DIAL2<a name="pcor-item-dictionary-MHH_DIAL2"> </a></td>
+<td>MHH_DIAL2 — Form der Nierenersatztherapie zuletzt vor Transplantation</td>
+<td>MHH-DIAL</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_PTX_DIAB<a name="pcor-item-dictionary-MHH_PTX_DIAB"> </a></td>
+<td>MHH_PTX_DIAB — Diabetes mellitus nach Transplantation festgestellt</td>
+<td>MHH-PTx-DIAB</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_T01<a name="pcor-item-dictionary-MHH_T01"> </a></td>
+<td>MHH_T01 — Hauttumor nach Transplantation festgestellt</td>
+<td>MHH-T</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_T02<a name="pcor-item-dictionary-MHH_T02"> </a></td>
+<td>MHH_T02 — Hauttumor seit letzter Vorstellung in der Transplantationsambulanz</td>
+<td>MHH-T</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_T03<a name="pcor-item-dictionary-MHH_T03"> </a></td>
+<td>MHH_T03 — andere Tumore nach Transplantation festgestellt</td>
+<td>MHH-T</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_UTI01<a name="pcor-item-dictionary-MHH_UTI01"> </a></td>
+<td>MHH_UTI01 — Harnwegsinfektion seit letztem Kontakt in der Transplantationsambulanz</td>
+<td>MHH-UTI</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_UTI02<a name="pcor-item-dictionary-MHH_UTI02"> </a></td>
+<td>MHH_UTI02 — mindestens zwei Harnwegsinfektionen in den letzten 6 Monaten</td>
+<td>MHH-UTI</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_UTI03<a name="pcor-item-dictionary-MHH_UTI03"> </a></td>
+<td>MHH_UTI03 — Antibiotika-Prophylaxe gegen chronische Harnwegsinfekte</td>
+<td>MHH-UTI</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_UTI04<a name="pcor-item-dictionary-MHH_UTI04"> </a></td>
+<td>MHH_UTI04 — Impfung gegen Harnwegsinfekte seit Transplantation</td>
+<td>MHH-UTI</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_Infekt1<a name="pcor-item-dictionary-MHH_Infekt1"> </a></td>
+<td>MHH_Infekt1 — Infektion mit Antibiotikagabe in den letzten 3 Monaten</td>
+<td>MHH-Infection</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_Infekt2<a name="pcor-item-dictionary-MHH_Infekt2"> </a></td>
+<td>MHH_Infekt2 — mehr als 3-mal Antibiotika pro Jahr wegen Infekt</td>
+<td>MHH-Infection</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_Infekt3<a name="pcor-item-dictionary-MHH_Infekt3"> </a></td>
+<td>MHH_Infekt3 — Intensivbehandlung wegen Infektionskomplikation seit Transplantation</td>
+<td>MHH-Infection</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_BP<a name="pcor-item-dictionary-MHH_BP"> </a></td>
+<td>MHH_BP — letzter Blutdruck (systolisch/diastolisch)</td>
+<td>MHH-BP</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_Medi<a name="pcor-item-dictionary-MHH_Medi"> </a></td>
+<td>MHH_Medi — aktuelle Einnahme von Aspirin (ASS)</td>
+<td>MHH-Medi</td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_PTH1<a name="pcor-item-dictionary-MHH_PTH1"> </a></td>
+<td>MHH_PTH1 — Operation an der Nebenschilddrüse</td>
+<td></td>
+<td>DCH</td>
+<td>NTx</td></tr>
+<tr><td style="white-space:nowrap">MHH_PTH2<a name="pcor-item-dictionary-MHH_PTH2"> </a></td>
+<td>MHH_PTH2 — Einnahme von Cinacalcet</td>
+<td></td>
+<td>DCH</td>
+<td>NTx</td></tr></table></div>
 
   <hr/>
   <p>
@@ -1188,7 +2074,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="CodeSystem-pcor-example-general-health.json.html">&lt; zurück</a>
+                <a href="CodeSystem-opd-sfk-antwort.json.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -1210,10 +2096,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

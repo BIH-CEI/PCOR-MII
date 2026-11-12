@@ -1,4 +1,4 @@
-# DEM Leichtigkeit Unterstützung (6-stufig) (Codes) - PCOR-MII Implementation Guide v0.3.0
+# DEM Leichtigkeit Unterstützung (6-stufig) (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: DEM Leichtigkeit Unterstützung (6-stufig) (Codes) (Experimental) 
 
@@ -19,12 +19,12 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "dem-leichtigkeit-6",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-leichtigkeit-6",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "DemLeichtigkeit6CS",
   "title" : "DEM Leichtigkeit Unterstützung (6-stufig) (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

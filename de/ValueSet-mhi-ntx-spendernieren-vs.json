@@ -1,0 +1,64 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mhi-ntx-spendernieren-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mhi-ntx-spendernieren-vs</b></p><a name=\"mhi-ntx-spendernieren-vs\"> </a><a name=\"hcmhi-ntx-spendernieren-vs\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-mhi-ntx-spendernieren.html\">codesystem MHI-NTx Anzahl Spendernieren (Codes) v0.9.0 (CodeSystem)</a></p><p>This value set expansion contains 4 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"mhi-ntx-spendernieren-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren-1\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-ntx-spendernieren.html#mhi-ntx-spendernieren-1\">1</a></td><td>eine</td></tr><tr><td><a name=\"mhi-ntx-spendernieren-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren-2\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-ntx-spendernieren.html#mhi-ntx-spendernieren-2\">2</a></td><td>zwei</td></tr><tr><td><a name=\"mhi-ntx-spendernieren-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren-3\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-ntx-spendernieren.html#mhi-ntx-spendernieren-3\">3</a></td><td>drei</td></tr><tr><td><a name=\"mhi-ntx-spendernieren-vs-https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren-4\"> </a><code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mhi-ntx-spendernieren.html#mhi-ntx-spendernieren-4\">4</a></td><td>mehr als 3</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/mhi-ntx-spendernieren-vs",
+  "version" : "0.9.0",
+  "name" : "MhiNtxSpendernierenVS",
+  "title" : "MHI-NTx Anzahl Spendernieren",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-12T18:28:00+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Die wievielte Spenderniere aktuell (`MHH_PRIOR_TX`), `itemWeight` 1–4.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren"
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-11-05T00:00:00Z",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren|0.9.0"
+    }],
+    "contains" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+      "code" : "1",
+      "display" : "eine"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+      "code" : "2",
+      "display" : "zwei"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+      "code" : "3",
+      "display" : "drei"
+    },
+    {
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendernieren",
+      "code" : "4",
+      "display" : "mehr als 3"
+    }]
+  }
+}

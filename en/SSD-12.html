@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>SSD-12 (B-Kriterien somatische Belastungsstörung) - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>SSD-12 (B-Kriterien somatische Belastungsstörung) - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>SSD-12 (B-Kriterien somatische Belastungsstörung)</h2>
   
 
@@ -339,7 +345,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
-<p>PCOR-MII <strong>referenziert</strong> den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau (<a href="Designentscheidungen.html">ADR-002</a>). Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2026.7.0) mit; enthalten <strong>seit 2026.6.0</strong>.</p>
+<p>PCOR-MII <strong>referenziert</strong> den im MII-PRO-Modul gepflegten Questionnaire — kein eigener Nachbau (<a href="Designentscheidungen.html">ADR-002</a>). Er kommt über die Paket-Abhängigkeit <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> (2027.0.0-ballot.2) mit; enthalten <strong>seit 2026.6.0</strong>.</p>
 
 <p>Erhoben <strong>nur im Szenario <a href="PSS.html">PSS</a></strong>, Kategorie DCH — <strong>vollständig</strong>. Die Abgrenzung zum <a href="PHQ-15.html">PHQ-15</a> ist der eigentliche Punkt des Instruments: Der PHQ-15 zählt die Symptomlast, der SSD-12 die Belastung dadurch. Beide werden in PSS erhoben, weil erst zusammen die DSM-5-Kriterien A und B abgebildet sind.</p>
 
@@ -353,7 +359,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Items</strong>: 12 (<code class="language-plaintext highlighter-rouge">ssd12-q01</code>–<code class="language-plaintext highlighter-rouge">ssd12-q12</code>) plus Instruktions-<code class="language-plaintext highlighter-rouge">display</code> und das berechnete <code class="language-plaintext highlighter-rouge">ssd12-score-total</code></li>
   <li><strong>Primärsprache</strong>: <strong>Deutsch</strong> (<code class="language-plaintext highlighter-rouge">language = de</code>) — der SSD-12 wurde auf Deutsch entwickelt (Toussaint, Löwe et al., UKE Hamburg); hier ist Deutsch also das Original und nicht eine Übersetzung</li>
   <li><strong>Recall</strong>: letzte <strong>7 Tage</strong></li>
-  <li><strong>Antwortskala</strong>: fünfstufig über <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0"><code class="language-plaintext highlighter-rouge">mii-vs-pro-ssd-12-answers</code></a> — 0 = nie · 1 = selten · 2 = manchmal · 3 = oft · 4 = sehr oft</li>
+  <li><strong>Antwortskala</strong>: fünfstufig über <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/ValueSet-mii-vs-pro-ssd-12-answers.html"><code class="language-plaintext highlighter-rouge">mii-vs-pro-ssd-12-answers</code></a> — 0 = nie · 1 = selten · 2 = manchmal · 3 = oft · 4 = sehr oft</li>
   <li><strong>Capabilities</strong>: displayable, collectable, calculatable, extractable, domainAligned</li>
 </ul>
 
@@ -369,7 +375,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Entwicklung: Toussaint A, Murray AM, Voigt K, et al. <em>Development and Validation of the Somatic Symptom Disorder-B Criteria Scale (SSD-12).</em> Psychosom Med 2016;78(1):5–12. <a href="https://doi.org/10.1097/PSY.0000000000000240">doi:10.1097/PSY.0000000000000240</a></li>
-  <li>Raw-Package: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.7.0">MII PRO Package 2026.7.0 (Simplifier)</a></li>
+  <li>Raw-Package: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/package.tgz">MII PRO 2027.0.0-ballot.2 (package.tgz)</a></li>
 </ul>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
@@ -422,10 +428,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

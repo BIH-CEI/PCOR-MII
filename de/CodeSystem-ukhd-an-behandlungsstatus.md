@@ -1,4 +1,4 @@
-# UKHD-AN Aktueller Behandlungsstatus (Codes) - PCOR-MII Implementation Guide v0.3.0
+# UKHD-AN Aktueller Behandlungsstatus (Codes) - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: UKHD-AN Aktueller Behandlungsstatus (Codes) (Experimentell) 
 
@@ -19,12 +19,12 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "resourceType" : "CodeSystem",
   "id" : "ukhd-an-behandlungsstatus",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/ukhd-an-behandlungsstatus",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "UkhdAnBehandlungsstatusCS",
   "title" : "UKHD-AN Aktueller Behandlungsstatus (Codes)",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -33,7 +33,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `ordinalValue`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
+  "description" : "Vier Stufen des aktuellen psychotherapeutischen Behandlungsstatus (`treatment_outpatient`). Bewusst ohne `itemWeight`: Die Skala mischt Behandlungsstatus (Stufen 1/2) und Setting (Stufen 3/4).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

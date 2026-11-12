@@ -1,4 +1,4 @@
-# Beispiel-Patientin AN - PCOR-MII Implementation Guide v0.3.0
+# Beispiel-Patientin AN - PCOR-MII Implementation Guide v0.9.0
 
 ## Example Patient: Beispiel-Patientin AN
 

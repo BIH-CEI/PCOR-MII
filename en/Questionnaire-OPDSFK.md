@@ -1,4 +1,4 @@
-# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.3.0
+# OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.9.0
 
 ## Questionnaire: OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion (Experimental) 
 
@@ -23,7 +23,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
   "meta" : {
     "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition"]
   },
-  "language" : "de",
+  "language" : "de-DE",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
     "valueCoding" : {
@@ -37,7 +37,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "valueExpression" : {
       "name" : "opdSfkSumme",
       "language" : "text/fhirpath",
-      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.ordinal().sum()"
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.weight().sum()"
     }
   },
   {
@@ -45,7 +45,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "valueExpression" : {
       "name" : "opdSfkSelbstwahrnehmung",
       "language" : "text/fhirpath",
-      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.ordinal().sum()"
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.weight().sum()"
     }
   },
   {
@@ -53,7 +53,7 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "valueExpression" : {
       "name" : "opdSfkBeziehungsmodell",
       "language" : "text/fhirpath",
-      "expression" : "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.ordinal().sum()"
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.weight().sum()"
     }
   },
   {
@@ -61,11 +61,11 @@ There are currently no QuestionnaireResponse instances for this Questionnaire de
     "valueExpression" : {
       "name" : "opdSfkKontaktgestaltung",
       "language" : "text/fhirpath",
-      "expression" : "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.ordinal().sum()"
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.weight().sum()"
     }
   }],
   "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "OPDSFK",
   "title" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
   "status" : "draft",

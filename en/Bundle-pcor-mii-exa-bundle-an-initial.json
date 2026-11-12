@@ -29,7 +29,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0",
       "_questionnaire" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/display",
@@ -73,9 +73,9 @@
           "linkId" : "Q_GENDERID",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -103,9 +103,9 @@
           "linkId" : "Q_MONMED",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "nein",
-              "display" : "Nein"
+              "system" : "http://snomed.info/sct",
+              "code" : "373067005",
+              "display" : "No"
             }
           }]
         },
@@ -146,9 +146,9 @@
           "linkId" : "MEDHIMS6",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -156,9 +156,9 @@
           "linkId" : "MEDHIMS7",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -240,9 +240,9 @@
           "linkId" : "CPCOR_REQ",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         }]
@@ -261,7 +261,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0",
       "_questionnaire" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/display",
@@ -343,9 +343,9 @@
           "linkId" : "GIPS57a",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -363,9 +363,9 @@
           "linkId" : "GIPS56a",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -373,9 +373,9 @@
           "linkId" : "GIPS56b1",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -383,9 +383,9 @@
           "linkId" : "GIPS56b2",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "nein",
-              "display" : "Nein"
+              "system" : "http://snomed.info/sct",
+              "code" : "373067005",
+              "display" : "No"
             }
           }]
         },
@@ -393,9 +393,9 @@
           "linkId" : "GIPS56b3",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "nein",
-              "display" : "Nein"
+              "system" : "http://snomed.info/sct",
+              "code" : "373067005",
+              "display" : "No"
             }
           }]
         },
@@ -403,9 +403,9 @@
           "linkId" : "GIPS56b4",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "nein",
-              "display" : "Nein"
+              "system" : "http://snomed.info/sct",
+              "code" : "373067005",
+              "display" : "No"
             }
           }]
         },
@@ -413,9 +413,9 @@
           "linkId" : "GIPS58",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "nein",
-              "display" : "Nein"
+              "system" : "http://snomed.info/sct",
+              "code" : "373067005",
+              "display" : "No"
             }
           }]
         }]
@@ -426,9 +426,9 @@
           "linkId" : "medication1",
           "answer" : [{
             "valueCoding" : {
-              "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-              "code" : "ja",
-              "display" : "Ja"
+              "system" : "http://snomed.info/sct",
+              "code" : "373066001",
+              "display" : "Yes"
             }
           }]
         },
@@ -574,7 +574,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -630,7 +630,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -676,9 +676,9 @@
         "linkId" : "edeq29",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "ja",
-            "display" : "Ja"
+            "system" : "http://snomed.info/sct",
+            "code" : "373066001",
+            "display" : "Yes"
           }
         }]
       },
@@ -702,7 +702,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -742,7 +742,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -785,7 +785,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ACE|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -795,9 +795,9 @@
         "linkId" : "ace1",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "ja",
-            "display" : "Ja"
+            "system" : "http://snomed.info/sct",
+            "code" : "373066001",
+            "display" : "Yes"
           }
         }]
       },
@@ -805,9 +805,9 @@
         "linkId" : "ace2",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "nein",
-            "display" : "Nein"
+            "system" : "http://snomed.info/sct",
+            "code" : "373067005",
+            "display" : "No"
           }
         }]
       },
@@ -815,9 +815,9 @@
         "linkId" : "ace3",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "nein",
-            "display" : "Nein"
+            "system" : "http://snomed.info/sct",
+            "code" : "373067005",
+            "display" : "No"
           }
         }]
       },
@@ -825,9 +825,9 @@
         "linkId" : "ace4",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "ja",
-            "display" : "Ja"
+            "system" : "http://snomed.info/sct",
+            "code" : "373066001",
+            "display" : "Yes"
           }
         }]
       },
@@ -835,9 +835,9 @@
         "linkId" : "ace5",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "nein",
-            "display" : "Nein"
+            "system" : "http://snomed.info/sct",
+            "code" : "373067005",
+            "display" : "No"
           }
         }]
       },
@@ -878,7 +878,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -918,7 +918,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDANB|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -970,7 +970,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -1000,7 +1000,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"
@@ -1010,9 +1010,9 @@
         "linkId" : "life_event1_screening",
         "answer" : [{
           "valueCoding" : {
-            "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort",
-            "code" : "ja",
-            "display" : "Ja"
+            "system" : "http://snomed.info/sct",
+            "code" : "373066001",
+            "display" : "Yes"
           }
         }]
       },
@@ -1036,7 +1036,7 @@
       "text" : {
         "status" : "generated"
       },
-      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.3.0",
+      "questionnaire" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDD|0.9.0",
       "status" : "completed",
       "subject" : {
         "reference" : "Patient/pcor-mii-exa-patient-an"

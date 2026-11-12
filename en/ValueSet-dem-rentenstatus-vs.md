@@ -1,4 +1,4 @@
-# DEM Rentenstatus - PCOR-MII Implementation Guide v0.3.0
+# DEM Rentenstatus - PCOR-MII Implementation Guide v0.9.0
 
 ## ValueSet: DEM Rentenstatus (Experimental) 
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "dem-rentenstatus-vs",
   "url" : "https://bih-cei.github.io/PCOR-MII/ValueSet/dem-rentenstatus-vs",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "DemRentenstatusVS",
   "title" : "DEM Rentenstatus",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-06T09:31:42+00:00",
+  "date" : "2026-11-12T18:28:00+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",

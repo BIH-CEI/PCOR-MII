@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="baasis-haeufigkeit-zeit-5"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem baasis-haeufigkeit-zeit-5</b></p><a name="baasis-haeufigkeit-zeit-5"> </a><a name="hcbaasis-haeufigkeit-zeit-5"> </a><p><b>Eigenschaften</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Beschreibung</b></td></tr><tr><td>itemWeight</td><td>itemWeight</td><td>http://hl7.org/fhir/concept-properties#itemWeight</td><td>decimal</td><td>Numerischer Ordinalwert (1-5); Stufe n = n-te Antwortoption in aufsteigender Häufigkeit.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-zeit-5</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>itemWeight</b></td></tr><tr><td style="white-space:nowrap">stufe-1<a name="baasis-haeufigkeit-zeit-5-stufe-1"> </a></td><td>Stufe 1</td><td>1</td></tr><tr><td style="white-space:nowrap">stufe-2<a name="baasis-haeufigkeit-zeit-5-stufe-2"> </a></td><td>Stufe 2</td><td>2</td></tr><tr><td style="white-space:nowrap">stufe-3<a name="baasis-haeufigkeit-zeit-5-stufe-3"> </a></td><td>Stufe 3</td><td>3</td></tr><tr><td style="white-space:nowrap">stufe-4<a name="baasis-haeufigkeit-zeit-5-stufe-4"> </a></td><td>Stufe 4</td><td>4</td></tr><tr><td style="white-space:nowrap">stufe-5<a name="baasis-haeufigkeit-zeit-5-stufe-5"> </a></td><td>Stufe 5</td><td>5</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem baasis-haeufigkeit-zeit-5</b></p><a name="en-baasis-haeufigkeit-zeit-5"> </a><a name="en-hcbaasis-haeufigkeit-zeit-5"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>itemWeight</td><td>itemWeight</td><td>http://hl7.org/fhir/concept-properties#itemWeight</td><td>decimal</td><td>Numerischer Ordinalwert (1-5); Stufe n = n-te Antwortoption in aufsteigender Häufigkeit.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-zeit-5</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>itemWeight</b></td></tr><tr><td style="white-space:nowrap">stufe-1<a name="en-baasis-haeufigkeit-zeit-5-stufe-1"> </a></td><td>Stufe 1</td><td>1</td></tr><tr><td style="white-space:nowrap">stufe-2<a name="en-baasis-haeufigkeit-zeit-5-stufe-2"> </a></td><td>Stufe 2</td><td>2</td></tr><tr><td style="white-space:nowrap">stufe-3<a name="en-baasis-haeufigkeit-zeit-5-stufe-3"> </a></td><td>Stufe 3</td><td>3</td></tr><tr><td style="white-space:nowrap">stufe-4<a name="en-baasis-haeufigkeit-zeit-5-stufe-4"> </a></td><td>Stufe 4</td><td>4</td></tr><tr><td style="white-space:nowrap">stufe-5<a name="en-baasis-haeufigkeit-zeit-5-stufe-5"> </a></td><td>Stufe 5</td><td>5</td></tr></table></div></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/baasis-haeufigkeit-zeit-5"/>
+  <version value="0.9.0"/>
+  <name value="BaasisHaeufigkeitZeit5CS"/>
+  <title value="BAASIS Häufigkeit Zeitabweichung 5-stufig (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-11-12T18:28:00+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Neutral benannte 5-stufige Häufigkeitsskala der BAASIS-Teilfrage 2_a (Stufe 1 bis Stufe 5). Laut Item Level Dictionary ist diese Skala nicht die Anzahl-Skala der Teilfragen 1A_a/1B_a, sondern eine Raten-Skala (von einmalig bis fast täglich); deshalb ein eigenes CodeSystem, damit die Stufen nicht als dieselbe Skala ausgewertet werden. Die offizielle BAASIS-Erläuterung nennt für alle drei Teilfragen dieselben fünf Anzahl-Kategorien — die Abweichung ist gegen den lizenzierten deutschen Bogen (Version 2021) zu prüfen. METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. itemWeight-Property je Konzept (1-5)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <property>
+    <code value="itemWeight"/>
+    <uri value="http://hl7.org/fhir/concept-properties#itemWeight"/>
+    <description value="Numerischer Ordinalwert (1-5); Stufe n = n-te Antwortoption in aufsteigender Häufigkeit."/>
+    <type value="decimal"/>
+  </property>
+  <concept>
+    <code value="stufe-1"/>
+    <display value="Stufe 1"/>
+    <property>
+      <code value="itemWeight"/>
+      <valueDecimal value="1"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-2"/>
+    <display value="Stufe 2"/>
+    <property>
+      <code value="itemWeight"/>
+      <valueDecimal value="2"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-3"/>
+    <display value="Stufe 3"/>
+    <property>
+      <code value="itemWeight"/>
+      <valueDecimal value="3"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-4"/>
+    <display value="Stufe 4"/>
+    <property>
+      <code value="itemWeight"/>
+      <valueDecimal value="4"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="stufe-5"/>
+    <display value="Stufe 5"/>
+    <property>
+      <code value="itemWeight"/>
+      <valueDecimal value="5"/>
+    </property>
+  </concept>
+</CodeSystem>

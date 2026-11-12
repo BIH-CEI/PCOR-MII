@@ -1,4 +1,4 @@
-# PCOR-MII Questionnaire-Katalog - PCOR-MII Implementation Guide v0.3.0
+# PCOR-MII Questionnaire-Katalog - PCOR-MII Implementation Guide v0.9.0
 
 ## CodeSystem: PCOR-MII Questionnaire-Katalog (Experimental) 
 
@@ -19,7 +19,7 @@ This Code system is referenced in the definition of the following value sets:
   "resourceType" : "CodeSystem",
   "id" : "pcor-questionnaire-catalogue",
   "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
-  "version" : "0.3.0",
+  "version" : "0.9.0",
   "name" : "PcorQuestionnaireCatalogueCS",
   "title" : "PCOR-MII Questionnaire-Katalog",
   "status" : "draft",
@@ -43,7 +43,7 @@ This Code system is referenced in the definition of the following value sets:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 20,
+  "count" : 26,
   "concept" : [{
     "code" : "dem",
     "display" : "PCOR-MII Demographie (DEM)",
@@ -83,6 +83,11 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "ipq-s",
     "display" : "IPQ-S",
     "definition" : "Die offene Ursachenfrage des B-IPQ, Einzelitem"
+  },
+  {
+    "code" : "phq-panik",
+    "display" : "PHQ-D Panik-Block",
+    "definition" : "Die vier Ja/Nein-Screeningitems 3a–3d des PHQ zu Angst-/Panikattacken (PHQ-D-Block 3); in PCOR-MII gepflegt, weil das MII-PRO-Modul kein Artefakt führt (ADR-012)"
   },
   {
     "code" : "erq-6",
@@ -143,6 +148,31 @@ This Code system is referenced in the definition of the following value sets:
     "code" : "ukhd-edp",
     "display" : "UKHD-EDP",
     "definition" : "11 Items zur Essstörungspathologie, vermutlich EDI-2-Zuschnitt (metadata-only)"
+  },
+  {
+    "code" : "baasis",
+    "display" : "BAASIS",
+    "definition" : "Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)"
+  },
+  {
+    "code" : "abq",
+    "display" : "ABQ",
+    "definition" : "Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann & Wilke 2015)"
+  },
+  {
+    "code" : "mtsosd-r59",
+    "display" : "MTSOSD-R59",
+    "definition" : "Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)"
+  },
+  {
+    "code" : "ntx-verlauf",
+    "display" : "NTx-Verlaufsbefragung (MHH)",
+    "definition" : "Quartalsweise Verlaufsanamnese nach Nierentransplantation des Standorts Hannover, 18 patient-reported Variablen der Dictionary-Gruppen MHH-DIAL, MHH-PTx-DIAB, MHH-T, MHH-UTI, MHH-Infection, MHH-BP, MHH-Medi und MHH_PTH (Sammelbogen nach MHI-Muster, kein PRO-Instrument); die drei Screening-Items MHH-DON/Tx-DATE/PRIOR-TX liegen im Ergänzungsbogen MHI-NTx"
+  },
+  {
+    "code" : "mhi-ntx",
+    "display" : "MHI-NTx — Transplantationsanamnese",
+    "definition" : "Ergänzung zum MHI für Empfänger einer Nierentransplantation: Spendeart, Transplantationsdatum, wievielte Spenderniere (Dictionary-Gruppen MHH-DON, MHH-Tx-DATE, MHH-PRIOR-TX; Screening, kein PRO-Instrument)"
   }]
 }
 

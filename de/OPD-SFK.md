@@ -1,4 +1,4 @@
-# OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.3.0
+# OPD-SFK (Strukturfragebogen, 12 Items) - PCOR-MII Implementation Guide v0.9.0
 
 ## OPD-SFK (Strukturfragebogen, 12 Items)
 
@@ -14,7 +14,7 @@ Erhoben wird der OPD-SFK in PSS und AN **von einzelnen Standorten**; eine direkt
 
 * **Fragebogen:** [Questionnaire-OPDSFK](Questionnaire-OPDSFK.md) — vollständige Definition inkl. Items und Antwortoptionen.
 * **linkId-Abbildung:** [ConceptMap pcor-cm-opd-sfk-linkids](ConceptMap-pcor-cm-opd-sfk-linkids.md) — Dictionary-Variablen-IDs `OPDSFK01`–`OPDSFK12` (zugleich die `linkId`s bis Version 0.3.0) auf die `linkId`s mit OPD-SF-Itemnummern.
-* **Antwortskala:** [ValueSet opd-sfk-antwort-vs](ValueSet-opd-sfk-antwort-vs.md) · [CodeSystem opd-sfk-antwort](CodeSystem-opd-sfk-antwort.md) — fünf Konzepte mit `ordinalValue` 0–4 für das Summenscoring.
+* **Antwortskala:** [ValueSet opd-sfk-antwort-vs](ValueSet-opd-sfk-antwort-vs.md) · [CodeSystem opd-sfk-antwort](CodeSystem-opd-sfk-antwort.md) — fünf Konzepte mit `itemWeight` 0–4 für das Summenscoring.
 
 ### Canonical
 
@@ -24,8 +24,8 @@ Erhoben wird der OPD-SFK in PSS und AN **von einzelnen Standorten**; eine direkt
 
 * **Items**: 12, `linkId` = Itemnummer der 95-Item-**Langform OPD-SF** (`opdsf3` … `opdsf90`, siehe Tabelle unten; linkId-Regel ADR-003/ADR-008), `prefix` = OPD-SFK-Nummer 1–12 in Formularreihenfolge, `item.code` = Dictionary-Variable `OPDSFK01`–`OPDSFK12` (ADR-011). Zusätzlich ein vorangestelltes `display`-Item mit dem für alle Items geltenden Instruktionstext
 * **Sprache**: Deutsch (Fragebogensprache); keine englischen Designations, da keine belegte offizielle englische Übersetzung der Kurzskala vorliegt
-* **Antwortmodellierung**: `answerValueSet` auf das lokale `opd-sfk-antwort-vs` mit `ordinalValue`-Gewichten (Muster: `mii-cs-pro-whodas-12` im MII-PRO-Modul)
-* **Scoring**: Globalwert als **Summenwert über alle 12 Items** (0–48), umgesetzt als readOnly-Item `opd-sfk-globalwert` mit SDC-`calculatedExpression` über `.ordinal().sum()`; dazu die drei **explorativen Subskalen** (je 4 Items, 0–16) als readOnly-Items `opd-sfk-selbstwahrnehmung`, `opd-sfk-beziehungsmodell`, `opd-sfk-kontaktgestaltung`
+* **Antwortmodellierung**: `answerValueSet` auf das lokale `opd-sfk-antwort-vs` mit `itemWeight`-Gewichten (Muster: `mii-cs-pro-whodas-12` im MII-PRO-Modul)
+* **Scoring**: Globalwert als **Summenwert über alle 12 Items** (0–48), umgesetzt als readOnly-Item `opd-sfk-globalwert` mit SDC-`calculatedExpression` über `.weight().sum()`; dazu die drei **explorativen Subskalen** (je 4 Items, 0–16) als readOnly-Items `opd-sfk-selbstwahrnehmung`, `opd-sfk-beziehungsmodell`, `opd-sfk-kontaktgestaltung`
 
 ### Items und Subskalen
 

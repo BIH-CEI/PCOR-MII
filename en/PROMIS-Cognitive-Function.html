@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>PROMIS Cognitive Function SF 4a - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>PROMIS Cognitive Function SF 4a - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -146,8 +146,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6.3"}
-    h3,h4,h5,h6{--heading-prefix:"6.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"7.3"}
+    h3,h4,h5,h6{--heading-prefix:"7.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>PROMIS Cognitive Function SF 4a</h2>
   
 
@@ -350,8 +356,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="quellen">Quellen</h3>
 
 <ul>
-  <li>Raw-Resource: <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1/files/3538188">PROMIS Cognitive Function SF 4a Questionnaire (Simplifier Package)</a> (eine dedizierte IG-Doku-Seite gibt es im MII PRO IG noch nicht)</li>
-  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1">PROMIS-Lizenzierung</a></li>
+  <li>Raw-Resource: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html">PROMIS Cognitive Function SF 4a Questionnaire (MII PRO 2027.0.0-ballot.2)</a> (eine dedizierte IG-Doku-Seite gibt es im MII PRO IG noch nicht)</li>
+  <li>Lizenz &amp; Copyright (4-Schichten-Modell PHO / CPCOR / LOINC / MII): <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/promis.html">PROMIS-Lizenzierung</a></li>
 </ul>
 
 <h3 id="eigenschaften">Eigenschaften</h3>
@@ -372,7 +378,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispiel-questionnaireresponse">Beispiel-QuestionnaireResponse</h3>
 
-<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum <a href="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.pros/2026.4.1"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
+<p><a href="QuestionnaireResponse-pcor-mii-exa-promis-cognitive-function-response.html"><strong><code class="language-plaintext highlighter-rouge">pcor-mii-exa-promis-cognitive-function-response</code></strong></a> — vollständige Antwort eines hypothetischen Patienten über alle 4 Items, konform zum <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/StructureDefinition-mii-pr-pro-questionnaire-response.html"><code class="language-plaintext highlighter-rouge">MII PR PRO QuestionnaireResponse</code>-Profil</a> (<code class="language-plaintext highlighter-rouge">meta.profile</code>: <code class="language-plaintext highlighter-rouge">mii-pr-pro-questionnaire-response|2026.4.1</code>).</p>
 
 <p>Im <strong>50-First-Patients Pilot-Datenaustausch</strong> ist dieses Instrument zusammen mit PROMIS-29 Teil der PROMIS-33-Abdeckung — siehe <a href="PROMIS-33.html">PROMIS-33</a>.</p>
 
@@ -380,7 +386,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <!-- BEGIN AUTO-TRANSLATION-TABLE -->
 
-<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-cognitive-function-sf4a</code> v2026.7.0 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
+<p><em>Auto-generiert aus <code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-cognitive-function-sf4a</code> v2027.0.0-ballot.2 (de.medizininformatikinitiative.kerndatensatz.pros).</em></p>
 
 <p>Wo Translation-Extensions auf den <code class="language-plaintext highlighter-rouge">text</code>-Feldern fehlen, wird die Sprache der Quelle über eine Heuristik bestimmt — leere EN-Spalten weisen auf upstream noch ausstehende EN/DE-Architektur-Migration hin.</p>
 
@@ -484,10 +490,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

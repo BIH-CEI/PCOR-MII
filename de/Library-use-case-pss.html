@@ -8,7 +8,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Use-Case-Manifest PSS — Persistierende somatische Symptome - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Use-Case-Manifest PSS — Persistierende somatische Symptome - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -148,8 +148,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.3"}
-    h3,h4,h5,h6{--heading-prefix:"21.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.5"}
+    h3,h4,h5,h6{--heading-prefix:"23.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -169,7 +169,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -219,12 +219,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -237,6 +240,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -281,7 +287,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Library-use-case-an.json.html">&lt; zurück</a> | 
+            <a href="Library-use-case-ntxr.json.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -301,7 +307,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-canonical -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -352,7 +358,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Library/use-case-pss<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Library/use-case-pss"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Library/use-case-pss|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Library/use-case-pss|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -405,8 +411,8 @@ a[name="test"] + h3 + div {
   <tbody>
     <tr>
       <td>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit</td>
-      <td>0.3.0, MII-PRO-Bögen mit</td>
-      <td>2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code class="language-plaintext highlighter-rouge">PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code>.</td>
+      <td>0.9.0, MII-PRO-Bögen mit</td>
+      <td>2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Der PHQ-D-Panik-Block ist als PCOR-MII-eigener Bogen <code class="language-plaintext highlighter-rouge">PHQPANIK</code> enthalten (ADR-012). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code class="language-plaintext highlighter-rouge">PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code class="language-plaintext highlighter-rouge">crmi-intendedUsageContext</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +466,7 @@ a[name="test"] + h3 + div {
 
 
 
-<td class="content-container">0.3.0</td>
+<td class="content-container">0.9.0</td>
 
 
 </tr>
@@ -600,7 +606,7 @@ a[name="test"] + h3 + div {
 
 
 
-<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.3.0, MII-PRO-Bögen mit |2026.7.0. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Nicht enthalten: der PHQ-D-Panik-Block (kein Upstream-Artefakt). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code>PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
+<td class="content-container"><div><p>Maschinenlesbare Instrumentenliste des Use Case PSS: alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview) wie auf Seite Fragebogen-Bibliothek ausgewertet. Der PHQ-D-Panik-Block ist als PCOR-MII-eigener Bogen <code>PHQPANIK</code> enthalten (ADR-012). PROMIS Global Health ist als lokaler 2-Item-Zuschnitt <code>PROMISGH</code> enthalten (Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind <strong>Standortvarianten</strong> (entweder/oder) — beide sind enthalten, damit Empfänger Antworten beider Standorttypen auflösen können; die Variante steht je Eintrag als Text in der CRMI-Extension <code>crmi-intendedUsageContext</code>.</p>
 </div></td>
 
 
@@ -703,9 +709,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-DEM.html">DEM — Demographics &amp; Medical History</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-DEM.html">DEM — Demographics &amp; Medical History</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/DEM|0.9.0</tt>
     
     
     
@@ -735,9 +741,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-MHI.html">MHI — Medical History</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-MHI.html">MHI — Medical History</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/MHI|0.9.0</tt>
     
     
     
@@ -767,9 +773,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-OPDSFK.html">OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-OPDSFK.html">OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0</tt>
     
     
     
@@ -799,9 +805,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-WAI.html">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-WAI.html">WAI — Work Ability Index / Work Ability Score (3-Item-Kurzfassung, Metadata-only)</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0</tt>
     
     
     
@@ -831,9 +837,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-GSLTPAQ.html">GSLTPAQ — Godin-Shephard Leisure-Time Physical Activity Questionnaire</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/GSLTPAQ|0.9.0</tt>
     
     
     
@@ -863,9 +869,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-EXPECT.html">EXPECT — Erwartung an den Verlauf der Körperbeschwerden</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-EXPECT.html">EXPECT — Erwartung an den Verlauf der Körperbeschwerden</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/EXPECT|0.9.0</tt>
     
     
     
@@ -895,9 +901,41 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-IPQS.html">IPQ-S — Subjektive Ursachen der Körperbeschwerden (offene Frage)</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/IPQS|0.9.0</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: PHQ-D Panik-Block — Angst-/Panikattacken 3a–3d [in PCOR-MII gepflegt; kein Upstream-Artefakt]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="Questionnaire-PHQPANIK.html">PHQ-D Panik-Block — Angst-/Panikattacken (PHQ 3a–3d)</a> version: 0.9.0
+    <br/>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PHQPANIK|0.9.0</tt>
     
     
     
@@ -927,9 +965,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="Questionnaire-PROMISGH.html">PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)</a> version: 0.3.0
+    <em>Resource</em>: <a href="Questionnaire-PROMISGH.html">PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)</a> version: 0.9.0
     <br/>
-    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.3.0</tt>
+    <em>Canonical URL</em>: <tt>https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0</tt>
     
     
     
@@ -959,9 +997,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16">MII QST PRO PROMIS-16 (Adults)</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-16.html">MII QST PRO PROMIS-16 (Adults)</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2</tt>
     
     
     
@@ -991,9 +1029,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29">MII QST PRO PROMIS-29 (Adults)</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-29.html">MII QST PRO PROMIS-29 (Adults)</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-29|2027.0.0-ballot.2</tt>
     
     
     
@@ -1023,9 +1061,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-promis-cognitive-function-sf4a.html">MII QST PRO PROMIS Cognitive Function SF 4a</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-cognitive-function-sf4a|2027.0.0-ballot.2</tt>
     
     
     
@@ -1055,9 +1093,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12">MII QST PRO WHODAS 2.0 12-Item</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-whodas-whodas12.html">MII QST PRO WHODAS 2.0 12-Item</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-whodas-whodas12|2027.0.0-ballot.2</tt>
     
     
     
@@ -1087,9 +1125,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9">MII QST PRO PHQ-9</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-phq-9.html">MII QST PRO PHQ-9</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-9|2027.0.0-ballot.2</tt>
     
     
     
@@ -1119,9 +1157,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15">MII QST PRO PHQ-15</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-phq-15.html">MII QST PRO PHQ-15</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-phq-15|2027.0.0-ballot.2</tt>
     
     
     
@@ -1151,9 +1189,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7">MII QST PRO GAD-7</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-gad-7.html">MII QST PRO GAD-7</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-gad-7|2027.0.0-ballot.2</tt>
     
     
     
@@ -1183,9 +1221,41 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma">MII QST PRO EURONET-SOMA</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euronet-soma.html">MII QST PRO EURONET-SOMA</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euronet-soma|2027.0.0-ballot.2</tt>
+    
+    
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+  
+
+<th scope="row" class="row-header">Component</th>
+
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: EQ-5D-5L — Erhebungsvariante „collectable“ [Outcome, Prio A, jährlich; Index-Score upstream]
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">MII QST PRO EQ-5D-5L Collectable</a> version: 2027.0.0-ballot.2
+    <br/>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-euroqol-eq5d5l-collectable|2027.0.0-ballot.2</tt>
     
     
     
@@ -1215,9 +1285,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12">MII QST PRO SSD-12</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-ssd-12.html">MII QST PRO SSD-12</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-ssd-12|2027.0.0-ballot.2</tt>
     
     
     
@@ -1247,9 +1317,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7">MII QST PRO WI-7</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-wi-7.html">MII QST PRO WI-7</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-wi-7|2027.0.0-ballot.2</tt>
     
     
     
@@ -1279,9 +1349,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff">MII QST PRO SCOFF</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-scoff.html">MII QST PRO SCOFF</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-scoff|2027.0.0-ballot.2</tt>
     
     
     
@@ -1311,9 +1381,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z">MII QST PRO ISR-Z</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-isr-z.html">MII QST PRO ISR-Z</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-isr-z|2027.0.0-ballot.2</tt>
     
     
     
@@ -1343,9 +1413,9 @@ a[name="test"] + h3 + div {
     
     
     
-    <em>Resource</em>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd">MII QST PRO PC-PTSD</a> version: 2026.7.0
+    <em>Resource</em>: <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/2027.0.0-ballot.2/Questionnaire-mii-qst-pro-pc-ptsd.html">MII QST PRO PC-PTSD</a> version: 2027.0.0-ballot.2
     <br/>
-    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2026.7.0</tt>
+    <em>Canonical URL</em>: <tt>https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-pc-ptsd|2027.0.0-ballot.2</tt>
     
     
     
@@ -1393,7 +1463,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Library-use-case-an.json.html">&lt; zurück</a>
+                <a href="Library-use-case-ntxr.json.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -1415,10 +1485,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

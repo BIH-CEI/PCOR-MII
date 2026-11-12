@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Instrumentenübersicht - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Instrumentenübersicht - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Instrumentenübersicht</h2>
   
 
@@ -352,11 +358,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><strong>AN</strong></td>
-      <td>Anorexia Nervosa — siehe <a href="AN.html">AN</a>, Nachschlagetabelle: <a href="AN-Instrumentenliste.html">Instrumentenliste</a></td>
+      <td>Anorexia Nervosa — siehe <a href="AN.html">AN</a></td>
     </tr>
     <tr>
       <td><strong>NTx</strong></td>
-      <td>Nierentransplantation</td>
+      <td>Nierentransplantation — siehe <a href="NTx.html">NTx</a>; Empfänger (NTXr) und Spender (NTXd) mit eigenen Manifesten</td>
     </tr>
   </tbody>
 </table>
@@ -436,7 +442,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">•</td>
       <td style="text-align: center">•</td>
       <td>CPCOR-Vereinbarung</td>
-      <td><a href="PROMIS.html">PROMIS</a> (Subset offen)</td>
+      <td><a href="PROMIS.html">PROMIS</a> — <code class="language-plaintext highlighter-rouge">PROMISGH</code>, 2-Item-Zuschnitt (<code class="language-plaintext highlighter-rouge">derivedFrom</code> der 10-Item-Skala des Moduls)</td>
     </tr>
     <tr>
       <td>PROMIS-16</td>
@@ -502,6 +508,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="PHQ.html">PHQ-Übersicht</a>, <a href="PHQ-9.html">PHQ-9</a></td>
     </tr>
     <tr>
+      <td>EQ-5D-5L (6)</td>
+      <td>GHS</td>
+      <td style="text-align: center">•</td>
+      <td style="text-align: center">•</td>
+      <td style="text-align: center">•</td>
+      <td>EuroQol-Registrierung, nicht-kommerziell gebührenfrei</td>
+      <td>MII PRO, Variante collectable — nur Outcome, seit 2026-11-05 in allen Manifesten</td>
+    </tr>
+    <tr>
       <td>EURONET-SOMA 1 + 2 (je 1)</td>
       <td>GHS</td>
       <td style="text-align: center">•</td>
@@ -535,7 +550,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
       <td>frei</td>
-      <td>offen — kein Upstream-Artefakt (<code class="language-plaintext highlighter-rouge">phq3a</code>–<code class="language-plaintext highlighter-rouge">phq3d</code>)</td>
+      <td><a href="PHQ-Panik.html">PHQ-D Panik-Block</a> — in PCOR-MII gepflegt (ADR-012)</td>
     </tr>
     <tr>
       <td>PC-PTSD (4)</td>
@@ -679,7 +694,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td>© Uni Basel, Items nicht publizierbar</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td><a href="NTx-Instrumente.html">NTx-Instrumente</a> — metadata-only</td>
     </tr>
     <tr>
       <td>MTSOSD-R59 (126)</td>
@@ -688,7 +703,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td>© KU Leuven, Items nicht publizierbar</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td><a href="NTx-Instrumente.html">NTx-Instrumente</a> — metadata-only</td>
     </tr>
     <tr>
       <td>ABQ (16)</td>
@@ -697,14 +712,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">—</td>
       <td style="text-align: center">•</td>
       <td>Nutzung ohne Pharma-Beteiligung</td>
-      <td>offen — metadata-only vorgesehen</td>
+      <td><a href="NTx-Instrumente.html">NTx-Instrumente</a> — metadata-only</td>
     </tr>
   </tbody>
 </table>
 
 <p>Dazu kommen <strong>standortspezifische Item-Gruppen</strong>, die kein publiziertes Instrument abbilden und direkt aus dem Dictionary stammen — etwa <code class="language-plaintext highlighter-rouge">UKE-HCU/PSE/TR/DOT</code> (Versorgungsinanspruchnahme, PSS), die <code class="language-plaintext highlighter-rouge">UKHD-*</code>-Gruppen (AN) und <code class="language-plaintext highlighter-rouge">MHH-DIAL/UTI/T/BP</code> (Verlaufsparameter, NTx). Sie stehen in der Tabelle oben nicht, weil die Tabelle Instrumente auflistet und diese Gruppen keine sind.</p>
 
-<p>Für AN sind sieben dieser Gruppen inzwischen modelliert — als <strong>ein</strong> Sammelbogen, nicht als sieben Ressourcen (<a href="Designentscheidungen.html">ADR-011</a>):</p>
+<p>Für AN und NTx sind diese Gruppen inzwischen modelliert — für AN sechs als je ein eigenes Questionnaire plus <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> im ACE, für NTx als ein Sammelbogen (<a href="Designentscheidungen.html">ADR-011</a>):</p>
 
 <table>
   <thead>
@@ -728,30 +743,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><strong>Freigabe offen</strong> — in der DIZ-Liste nicht geführt; Herkunft des Wortlauts ungeklärt</td>
       <td><a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a></td>
     </tr>
+    <tr>
+      <td>NTx-Verlaufsbefragung (1 Bogen, 18 Items) — <code class="language-plaintext highlighter-rouge">MHH-DIAL</code>, <code class="language-plaintext highlighter-rouge">MHH-PTx-DIAB</code>, <code class="language-plaintext highlighter-rouge">MHH-T</code>, <code class="language-plaintext highlighter-rouge">MHH-UTI</code>, <code class="language-plaintext highlighter-rouge">MHH-Infection</code>, <code class="language-plaintext highlighter-rouge">MHH-BP</code>, <code class="language-plaintext highlighter-rouge">MHH-Medi</code> + 2 Items ohne Label; die Screening-Items <code class="language-plaintext highlighter-rouge">MHH-DON</code>, <code class="language-plaintext highlighter-rouge">MHH-Tx-DATE</code>, <code class="language-plaintext highlighter-rouge">MHH-PRIOR-TX</code> im Ergänzungsbogen <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a></td>
+      <td>DCH, TCH</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">—</td>
+      <td style="text-align: center">•</td>
+      <td><strong>Freigabe offen</strong> — in der DIZ-Liste nicht geführt</td>
+      <td><a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a> — Sammelbogen nach MHI-Muster</td>
+    </tr>
   </tbody>
 </table>
 
-<p><strong>Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.</strong> Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste <strong>gar nicht vor</strong> — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> und den offenen Punkt in den <a href="Designentscheidungen.html">Designentscheidungen</a>).</p>
+<p><strong>Die Lizenzangabe ist hier eine andere Art von Angabe als in der Tabelle oben.</strong> Dort steht, was die DIZ-Implementierungsliste über ein publiziertes Instrument sagt. Die Standort-Itemgruppen kommen in der Liste <strong>gar nicht vor</strong> — für sie ist also weder eine Erlaubnis noch eine Einschränkung dokumentiert. Dass der Wortlaut von UKHD-AN aufgenommen ist, ist eine bewusste Projektentscheidung zur Erprobung; die Bestätigung des Standorts ist einzuholen (siehe <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> und <a href="Rechtelage.html#standortgruppen">Rechtelage und offene Punkte</a>).</p>
 
-<p>Nicht modelliert bleiben für AN <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary) und <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> (Essstörungspathologie, 11 Items — vermutlich EDI-2-Zuschnitt, Hogrefe-Rechtelage unbewertet). Für PSS und NTx sind die Standortgruppen insgesamt noch nicht modelliert.</p>
+<p>Nicht modelliert bleibt für AN <code class="language-plaintext highlighter-rouge">UKHD-BI</code> (Körperbild, 3 Items — visuelle Bildskala, Erhebung läuft noch nicht damit, Bildvorlage fehlt im Dictionary); <code class="language-plaintext highlighter-rouge">UKHD-EDP</code> ist als eigener Bogen metadata-only modelliert. Für NTx sind die acht quartalsweisen MHH-Gruppen als <strong>ein</strong> Verlaufsbogen modelliert (siehe Tabelle), die drei MHH-Screening-Items als Ergänzungsbogen MHI-NTx; für PSS sind die Standortgruppen noch nicht modelliert.</p>
 
 <h3 id="woher-kommt-welche-ressource">Woher kommt welche Ressource?</h3>
 
 <ul>
-  <li><strong>MII-PRO-Modul</strong> (<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code>, aktuell 2026.7.0): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.</li>
-  <li><strong>PCOR-MII selbst</strong>: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT und IPQ-S sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe <a href="Designentscheidungen.html">ADR-003</a>).</li>
+  <li><strong>MII-PRO-Modul</strong> (<code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code>, aktuell 2027.0.0-ballot.2): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.</li>
+  <li><strong>PCOR-MII selbst</strong>: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S und den PHQ-D-Panik-Block, die NTx-Stubs BAASIS, ABQ und MTSOSD-R59 (metadata-only, ADR-012) sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe <a href="Designentscheidungen.html">ADR-003</a>).</li>
 </ul>
 
 <h3 id="lizenz-tiers">Lizenz-Tiers</h3>
 
-<p>Die Rechtelage bestimmt, wie ein Instrument modelliert wird — nicht, wie wichtig es ist:</p>
-
-<ul>
-  <li><strong>frei</strong> — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.</li>
-  <li><strong>Nutzungsvereinbarung</strong> (PROMIS via CPCOR, WHODAS via WHO) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im <code class="language-plaintext highlighter-rouge">copyright</code>-Element.</li>
-  <li><strong>metadata-only</strong> — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft <a href="WAI.html">WAI</a> und <a href="UKHD-EDP.html">UKHD-EDP</a> (beide umgesetzt) sowie BAASIS, MTSOSD-R59 und ABQ auf NTx-Seite.</li>
-  <li><strong>Freigabe offen</strong> — der Wortlaut ist aufgenommen, aber <strong>keine dokumentierte Erlaubnis liegt vor</strong>. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a> sowie die bereits in <a href="MHI.html">MHI</a> publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel.</li>
-</ul>
+<p>Die Rechtelage bestimmt, wie ein Instrument modelliert wird (frei · Nutzungsvereinbarung · metadata-only · Freigabe offen). Die Tiers, der Status je Instrument, die Bezugswege lizenzierter Bögen und alle offenen Rechtefragen stehen gesammelt auf <a href="Rechtelage.html">Rechtelage und offene Punkte</a>.</p>
 
 <p>Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -803,10 +820,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Startseite - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>Startseite - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -167,7 +167,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -217,12 +217,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -235,6 +238,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -305,7 +311,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Startseite</h2>
   
 
@@ -318,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/ImplementationGuide/pcor-mii|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -343,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             Stand: 
-2026-11-06
+2026-11-12
 
           
         
@@ -411,10 +417,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Über die Menüleiste erreichbar:</p>
 
 <ol>
-  <li><strong>Fragebögen</strong> – Überblick über die definierten Questionnaires und ihren Aufbau</li>
-  <li><strong>Anwendung</strong> – detaillierte Beschreibung, wie die Fragebögen ausgefüllt und ausgewertet werden</li>
-  <li><strong>Release Notes</strong> – Versionierung und Änderungshistorie</li>
-  <li><strong>Artefakte</strong> – maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme)</li>
+  <li><strong>Instrumente</strong> – Gesamtübersicht und je Use Case eine Seite (<a href="PSS.html">PSS</a>, <a href="AN.html">AN</a>, <a href="NTx.html">NTx</a>) mit der Batterie als Tabelle, darunter die Instrumentenseiten</li>
+  <li><strong>Fragebögen</strong> – tabellarischer Einstieg zu allen Questionnaires mit Doku, Ressource, Beispielantwort und Score, dazu die Use-Case-Manifeste</li>
+  <li><strong>Beispiele</strong> – drei Beispielpatient:innen, vier Termin-Bundles und alle Beispielantworten</li>
+  <li><strong>Anwendung</strong>, <strong>Validierung</strong>, <strong>Bereitstellung</strong> – vom Questionnaire zur Antwort, Prüfung und Bezug der Definitionen</li>
+  <li><strong>Designentscheidungen</strong> – die ADRs; <strong>Rechtelage &amp; offene Punkte</strong> – Rechtelage aller Instrumente und alles, was noch auf Rückmeldung wartet</li>
+  <li><strong>Release Notes</strong> und <strong>Kommende Änderungen</strong> – Änderungshistorie und der Stand gegenüber dem MII-PRO-Modul 2027</li>
+  <li><strong>Artefakte</strong> – maschinenlesbare FHIR-Ressourcen (Questionnaires, ValueSets, CodeSysteme, Libraries, Beispiele)</li>
 </ol>
 
 <h3 id="kontakt">Kontakt</h3>
@@ -473,10 +482,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

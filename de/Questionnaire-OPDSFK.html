@@ -7,7 +7,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -147,8 +147,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.13"}
-    h3,h4,h5,h6{--heading-prefix:"21.13"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.20"}
+    h3,h4,h5,h6{--heading-prefix:"23.20"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -168,7 +168,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -218,12 +218,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -236,6 +239,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -280,7 +286,7 @@ a[name="test"] + h3 + div {
 
           <span style="float: var(--ig-right);">
 
-            <a href="Questionnaire-MHI.json.html">&lt; zurück</a> | 
+            <a href="Questionnaire-NTXVERLAUF.json.html">&lt; zurück</a> | 
 
             <a href="#bottom">Ende</a>
 
@@ -300,7 +306,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -348,7 +354,7 @@ a[name="test"] + h3 + div {
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.3.0"/></span>
+      <span class="copy-text">0.9.0<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK|0.9.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Aktivieren Sie dies, um Änderungen seit der letzten offiziellen Veröffentlichung zu sehen">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Textänderungen hervorheben?</label>
@@ -423,14 +429,14 @@ a[name="test"] + h3 + div {
       <div id="tbl-tree">
         <div id="tbl-tree-inner">
           <div data-fhir="generated"><p class="res-header-id"></p><a name="OPDSFK"> </a><a name="hcOPDSFK"> </a>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=OPDSFK" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Other attributes of the item">Flags</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="qt-OPDSFK-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> OPDSFK</td>
 <td style="" class="hierarchy xhtCellBorder1">OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`.</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
 <td style="" class="hierarchy xhtCellBorder1">Questionnaire</td>
 <td style="" class="hierarchy xhtCellBorder1"></td>
-<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK#0.3.0</td></tr>
+<td style="" class="hierarchy xhtCellBorder1">https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK#0.9.0</td></tr>
 <tr fhir="generated-heirarchy" id="qt-OPDSFK-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.opd-sfk-intro" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="display" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">OPDSFK / </span>opd-sfk-intro</td>
 <td style="" class="hierarchy xhtCellBorder1">Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist.</td>
 <td style="" class="hierarchy xhtCellBorder1">0..1</td>
@@ -542,7 +548,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-sample">
         <div id="tbl-sample-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
 <div><div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p><span title="linkId: opd-sfk-intro">Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist.</span></p></div><div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: opd-sfk-intro</li><li style="font-size: 10px">Answers: </li></ul></div></div>
 <div style="width: 900px; border-top: 1px #eeeeee solid"><div style="display: inline-block; width: 500px"><p>1: <span title="linkId: opdsf3">Ich erlebe mich manchmal wie eine fremde Person.</span><select size="1" name="opdsf3" aria-label="Ich erlebe mich manchmal wie eine fremde Person."><option value="trifft-gar-nicht-zu" selected="false">Trifft gar nicht zu</option><option value="trifft-eher-nicht-zu" selected="false">Trifft eher nicht zu</option><option value="teils-teils" selected="false">Teils/teils</option><option value="trifft-eher-zu" selected="false">Trifft eher zu</option><option value="trifft-voellig-zu" selected="false">Trifft völlig zu</option></select></p></div>
 <div style="border: 1px #ccccff solid; padding: 2px; display: inline-block; background-color: #fefce7; width: 380px"><ul><li style="font-size: 10px">linkId: opdsf3</li><li style="font-size: 10px">Answers: <a href="ValueSet-opd-sfk-antwort-vs.html">OPD-SFK Antwortskala</a></li></ul></div></div>
@@ -584,7 +590,7 @@ a[name="test"] + h3 + div {
       <div id="tbl-logic">
         <div id="tbl-logic-inner">
           <div data-fhir="generated"><p class="res-header-id"></p>
-<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2026.7.0&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
+<div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de-DE</p><p style="margin-bottom: 0px">Profil: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition">ISiKFormularDefinition</a></p></div>
 <table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qlogic=OPDSFK" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
 <tr fhir="generated-heirarchy" id="ql-OPDSFK-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck0.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="" style="background-color: white; background-color: inherit" title="display" class="hierarchy"/> opd-sfk-intro</td>
 <td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
@@ -631,7 +637,7 @@ a[name="test"] + h3 + div {
   <a name="test"> </a>
   <h3>Diesen Fragebogen testen</h3>
   <div data-fhir="generated"><p>Try this questionnaire out:</p>
-<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK&amp;pID=pcor-mii&amp;pVersion=0.3.0">NLM Forms Library</a></li></ul></div>
+<ul><li><a href="http://hl7.me/lhcformviewer/?lfv=latest&amp;s=default&amp;qCanonical=https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK&amp;pID=pcor-mii&amp;pVersion=0.9.0">NLM Forms Library</a></li></ul></div>
 
   <a name="responses"> </a>
   <h3>Antworten zu diesem Fragebogen</h3>
@@ -673,7 +679,7 @@ a[name="test"] + h3 + div {
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 
-                <a href="Questionnaire-MHI.json.html">&lt; zurück</a>
+                <a href="Questionnaire-NTXVERLAUF.json.html">&lt; zurück</a>
 
               </td>
               <td style="text-align:center">
@@ -695,10 +701,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

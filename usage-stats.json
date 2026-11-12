@@ -1,6 +1,6 @@
 {
   "package": "pcor-mii",
-  "version": "0.3.0",
+  "version": "0.9.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [],
@@ -36,9 +36,11 @@
       "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-unit": [
-      "Questionnaire.item"
+      "Questionnaire.item",
+      "Questionnaire.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
+      "Questionnaire.item.item.answerOption.valueCoding.display",
       "Questionnaire.item.item.item.text",
       "Questionnaire.item.item.text",
       "Questionnaire.item.text"

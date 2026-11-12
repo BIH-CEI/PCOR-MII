@@ -10,7 +10,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern) - JSON Representation - PCOR-MII Implementation Guide v0.3.0</title>
+    <title>OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern) - JSON Representation - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -150,8 +150,8 @@ a[name="test"] + h3 + div {
 	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"21.99"}
-    h3,h4,h5,h6{--heading-prefix:"21.99"}</style>
+    <style type="text/css">h2{--heading-prefix:"23.116"}
+    h3,h4,h5,h6{--heading-prefix:"23.116"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -171,7 +171,7 @@ a[name="test"] + h3 + div {
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - draft
+            <span style="display:inline-block;">0.9.0 - draft
 
 
 
@@ -221,12 +221,15 @@ a[name="test"] + h3 + div {
         <a href="AN.html">AN</a>
       </li>
       <li>
-        <a href="AN-Instrumentenliste.html">AN — Instrumentenliste</a>
+        <a href="NTx.html">NTx</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
   </li>
   <li>
     <a href="Implementation.html">Anwendung</a>
@@ -239,6 +242,9 @@ a[name="test"] + h3 + div {
   </li>
   <li>
     <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
   </li>
   <li>
     <a href="Release-Notes.html">Release Notes</a>
@@ -303,7 +309,7 @@ a[name="test"] + h3 + div {
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -383,7 +389,7 @@ a[name="test"] + h3 + div {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xml:lang=\&quot;de\&quot; lang=\&quot;de\&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;German&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap pcor-cm-opd-sfk-linkids&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcor-cm-opd-sfk-linkids\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcor-cm-opd-sfk-linkids\&quot;&gt; &lt;/a&gt;&lt;p&gt;This mapping does not specify any particular context of use.&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;code&gt;https://bih-cei.github.io/PCOR-MII/linkid/item-level-dictionary/OPD-SFK&lt;/code&gt; to &lt;code&gt;https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/OPDSFK&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK01 (Dictionary OPDSFK01 — Ich erlebe mich manchmal wie eine fremde Person.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf3 (OPD-SFK-Item 1 = OPD-SF-Item 3 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK02 (Dictionary OPDSFK02 — Wenn ich viel über mich nachdenke, gerate ich eher in Ver …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf27 (OPD-SFK-Item 2 = OPD-SF-Item 27 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK03 (Dictionary OPDSFK03 — Wenn man andere zu nahe an sich heran lässt, kann das gef …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf32 (OPD-SFK-Item 3 = OPD-SF-Item 32 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK04 (Dictionary OPDSFK04 — Ich kann mich anderen oft schwer verständlich machen.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf81 (OPD-SFK-Item 4 = OPD-SF-Item 81 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK05 (Dictionary OPDSFK05 — In mir herrscht oft ein solches Gefühlschaos, dass ich es …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf41 (OPD-SFK-Item 5 = OPD-SF-Item 41 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK06 (Dictionary OPDSFK06 — Ich schätze manchmal falsch ein, wie mein Verhalten auf a …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf49 (OPD-SFK-Item 6 = OPD-SF-Item 49 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK07 (Dictionary OPDSFK07 — Wenn andere viel über mich wissen, fühle ich mich oft irg …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf50 (OPD-SFK-Item 7 = OPD-SF-Item 50 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK08 (Dictionary OPDSFK08 — Meine Gefühle sind manchmal so intensiv, dass ich Angst b …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf73 (OPD-SFK-Item 8 = OPD-SF-Item 73 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK09 (Dictionary OPDSFK09 — Ich bin schon sehr verletzt worden, weil ich mich in eine …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf78 (OPD-SFK-Item 9 = OPD-SF-Item 78 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK10 (Dictionary OPDSFK10 — Es fällt mir schwer, zu anderen Kontakt aufzunehmen.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf79 (OPD-SFK-Item 10 = OPD-SF-Item 79 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK11 (Dictionary OPDSFK11 — Ich habe kein gutes Selbstbewusstsein.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf40 (OPD-SFK-Item 11 = OPD-SF-Item 40 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK12 (Dictionary OPDSFK12 — Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf90 (OPD-SFK-Item 12 = OPD-SF-Item 90 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;code&gt;https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/OPDSFK/0.3.0&lt;/code&gt; to &lt;code&gt;https://bih-cei.github.io/PCOR-MII/linkid/Questionnaire/OPDSFK&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK01 (Dictionary OPDSFK01 — Ich erlebe mich manchmal wie eine fremde Person.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf3 (OPD-SFK-Item 1 = OPD-SF-Item 3 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK02 (Dictionary OPDSFK02 — Wenn ich viel über mich nachdenke, gerate ich eher in Ver …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf27 (OPD-SFK-Item 2 = OPD-SF-Item 27 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK03 (Dictionary OPDSFK03 — Wenn man andere zu nahe an sich heran lässt, kann das gef …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf32 (OPD-SFK-Item 3 = OPD-SF-Item 32 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK04 (Dictionary OPDSFK04 — Ich kann mich anderen oft schwer verständlich machen.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf81 (OPD-SFK-Item 4 = OPD-SF-Item 81 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK05 (Dictionary OPDSFK05 — In mir herrscht oft ein solches Gefühlschaos, dass ich es …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf41 (OPD-SFK-Item 5 = OPD-SF-Item 41 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK06 (Dictionary OPDSFK06 — Ich schätze manchmal falsch ein, wie mein Verhalten auf a …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf49 (OPD-SFK-Item 6 = OPD-SF-Item 49 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK07 (Dictionary OPDSFK07 — Wenn andere viel über mich wissen, fühle ich mich oft irg …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf50 (OPD-SFK-Item 7 = OPD-SF-Item 50 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK08 (Dictionary OPDSFK08 — Meine Gefühle sind manchmal so intensiv, dass ich Angst b …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf73 (OPD-SFK-Item 8 = OPD-SF-Item 73 (Selbstwahrnehmung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK09 (Dictionary OPDSFK09 — Ich bin schon sehr verletzt worden, weil ich mich in eine …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf78 (OPD-SFK-Item 9 = OPD-SF-Item 78 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK10 (Dictionary OPDSFK10 — Es fällt mir schwer, zu anderen Kontakt aufzunehmen.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf79 (OPD-SFK-Item 10 = OPD-SF-Item 79 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK11 (Dictionary OPDSFK11 — Ich habe kein gutes Selbstbewusstsein.)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf40 (OPD-SFK-Item 11 = OPD-SF-Item 40 (Kontaktgestaltung))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OPDSFK12 (Dictionary OPDSFK12 — Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, …)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equal\&quot; title=\&quot;equal\&quot;&gt;is equal to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;opdsf90 (OPD-SFK-Item 12 = OPD-SF-Item 90 (Beziehungsmodell))&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "https://bih-cei.github.io/PCOR-MII/ConceptMap/pcor-cm-opd-sfk-linkids",
-  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "0.3.0",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "0.9.0",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "PcorCmOpdSfkLinkIds",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a>" : "OPD-SFK: Dictionary-Variablen-IDs (linkIds bis 0.3.0) → FHIR-linkIds (OPD-SF-Itemnummern)",
   "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "draft",
@@ -745,10 +751,10 @@ a[name="test"] + h3 + div {
 
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
-          Package pcor-mii#0.3.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-06 09:31:00 +0000">
-    2026-11-06
+  <span title="2026-11-12 18:28:00 +0000">
+    2026-11-12
   </span>
 
           <br/>

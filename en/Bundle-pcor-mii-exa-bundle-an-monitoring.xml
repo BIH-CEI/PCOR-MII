@@ -31,7 +31,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ERQ6|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -88,7 +88,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/EDEQ6|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -134,9 +134,9 @@
           <linkId value="edeq29"/>
           <answer>
             <valueCoding>
-              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
-              <code value="ja"/>
-              <display value="Ja"/>
+              <system value="http://snomed.info/sct"/>
+              <code value="373066001"/>
+              <display value="Yes"/>
             </valueCoding>
           </answer>
         </item>
@@ -161,7 +161,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/ANSOCQ2|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -202,7 +202,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/SSUK2|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -246,7 +246,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDPT|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -277,7 +277,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDCT|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -308,7 +308,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDLE|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -318,9 +318,9 @@
           <linkId value="life_event1_monitoring"/>
           <answer>
             <valueCoding>
-              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
-              <code value="nein"/>
-              <display value="Nein"/>
+              <system value="http://snomed.info/sct"/>
+              <code value="373067005"/>
+              <display value="No"/>
             </valueCoding>
           </answer>
         </item>
@@ -339,7 +339,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDND|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
@@ -349,9 +349,9 @@
           <linkId value="new_diagnosis_monitoring"/>
           <answer>
             <valueCoding>
-              <system value="https://bih-cei.github.io/PCOR-MII/CodeSystem/dem-antwort"/>
-              <code value="ja"/>
-              <display value="Ja"/>
+              <system value="http://snomed.info/sct"/>
+              <code value="373066001"/>
+              <display value="Yes"/>
             </valueCoding>
           </answer>
         </item>
@@ -376,7 +376,7 @@
         <text>
           <status value="generated"/>
         </text>
-        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.3.0"/>
+        <questionnaire value="https://bih-cei.github.io/PCOR-MII/Questionnaire/UKHDEDP|0.9.0"/>
         <status value="completed"/>
         <subject>
           <reference value="Patient/pcor-mii-exa-patient-an"/>
