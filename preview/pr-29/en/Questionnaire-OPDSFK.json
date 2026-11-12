@@ -1,0 +1,275 @@
+{
+  "resourceType" : "Questionnaire",
+  "id" : "OPDSFK",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Questionnaire OPDSFK</b></p><a name=\"en-OPDSFK\"> </a><a name=\"en-hcOPDSFK\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: de-DE</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.pros@2027.0.0-ballot.2&amp;canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKFormularDefinition\">ISiKFormularDefinition</a></p></div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"xhtTableBorder1\"><tr class=\"xhtRowBorder2\"><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The linkID for the item\">LinkID</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Text for the item\">Text</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the item can appear in the instance\">Cardinality</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The type of the item\">Type</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Other attributes of the item\">Flags</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Additional information about the item\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck1.png)\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_q_root.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"QuestionnaireRoot\" class=\"hierarchy\"/> OPDSFK</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Questionnaire</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK#0.9.0</td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opd-sfk-intro\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-display.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"display\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opd-sfk-intro</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-display\">display</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf3\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf3</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">1. Ich erlebe mich manchmal wie eine fremde Person.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf27\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf27</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">2. Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf32\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf32</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">3. Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf81\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf81</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">4. Ich kann mich anderen oft schwer verständlich machen.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf41\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf41</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">5. In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf49\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf49</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">6. Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf50\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf50</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">7. Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf73\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf73</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">8. Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf78\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf78</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">9. Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf79\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf79</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">10. Es fällt mir schwer, zu anderen Kontakt aufzunehmen.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf40\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf40</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">11. Ich habe kein gutes Selbstbewusstsein.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opdsf90\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-coding.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"coding\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opdsf90</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">12. Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben.</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-choice\">choice</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/><td style=\"\" class=\"hierarchy xhtCellBorder1\">Value Set: <a href=\"ValueSet-opd-sfk-antwort-vs.html\">OPD-SFK Antwortskala</a></td></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opd-sfk-globalwert\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-decimal.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"decimal\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opd-sfk-globalwert</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">OPD-SFK Globalwert (Summenwert, 0-48)</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-decimal\">decimal</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/questionnaire-definitions.html#Questionnaire.item.readOnly\" title=\"Is Read Only\"><img src=\"icon-qi-readonly.png\" alt=\"\"/></a><img src=\"icon-qi-readonly.png\" alt=\"\"/></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opd-sfk-selbstwahrnehmung\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-decimal.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"decimal\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opd-sfk-selbstwahrnehmung</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">OPD-SFK Subskala Selbstwahrnehmung (Summenwert, 0-16; explorativ)</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-decimal\">decimal</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/questionnaire-definitions.html#Questionnaire.item.readOnly\" title=\"Is Read Only\"><img src=\"icon-qi-readonly.png\" alt=\"\"/></a><img src=\"icon-qi-readonly.png\" alt=\"\"/></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowEven\"><td style=\"background-image: url(tbl_bck10.png)\" id=\"en-item.opd-sfk-beziehungsmodell\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-decimal.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"decimal\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opd-sfk-beziehungsmodell</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">OPD-SFK Subskala Beziehungsmodell (Summenwert, 0-16; explorativ)</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-decimal\">decimal</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/questionnaire-definitions.html#Questionnaire.item.readOnly\" title=\"Is Read Only\"><img src=\"icon-qi-readonly.png\" alt=\"\"/></a><img src=\"icon-qi-readonly.png\" alt=\"\"/></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr class=\"xhtRowBorder1 xhtRowOdd\"><td style=\"background-image: url(tbl_bck00.png)\" id=\"en-item.opd-sfk-kontaktgestaltung\" class=\"hierarchy xhtCellBorder1 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-decimal.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"decimal\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">OPDSFK / </span>opd-sfk-kontaktgestaltung</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">OPD-SFK Subskala Kontaktgestaltung (Summenwert, 0-16; explorativ)</td><td style=\"\" class=\"hierarchy xhtCellBorder1\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/codesystem-item-type.html#item-type-decimal\">decimal</a></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"><a href=\"https://hl7.org/fhir/R4/questionnaire-definitions.html#Questionnaire.item.readOnly\" title=\"Is Read Only\"><img src=\"icon-qi-readonly.png\" alt=\"\"/></a><img src=\"icon-qi-readonly.png\" alt=\"\"/></td><td style=\"\" class=\"hierarchy xhtCellBorder1\"/></tr>\r\n<tr><td colspan=\"6\" class=\"hierarchy\"><br/><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkSumme",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.weight().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkSelbstwahrnehmung",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.weight().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkBeziehungsmodell",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.weight().sum()"
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/variable",
+    "valueExpression" : {
+      "name" : "opdSfkKontaktgestaltung",
+      "language" : "text/fhirpath",
+      "expression" : "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.weight().sum()"
+    }
+  }],
+  "url" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/OPDSFK",
+  "version" : "0.9.0",
+  "name" : "OPDSFK",
+  "title" : "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion",
+  "status" : "draft",
+  "experimental" : true,
+  "subjectType" : ["Patient"],
+  "date" : "2026-09-01",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "copyright" : "Quelle: Ehrenthal JC, Dinger U, Schauenburg H, Horsch L, Dahlbender RW, Gierk B. Entwicklung einer Zwölf-Item-Version des OPD-Strukturfragebogens (OPD-SFK). Z Psychosom Med Psychother 2015; 61(3):262-274. doi:10.13109/zptm.2015.61.3.262. Verlagsrechte: © 2015 Vandenhoeck & Ruprecht GmbH & Co. KG, Göttingen. Der Artikel ist beim Verlag als Open Access verfügbar; eine explizite Creative-Commons-Lizenz ist dort nicht ausgewiesen. Nutzungsstatus laut DIZ-Implementierungsliste PCOR-MII: frei verfügbar, nach erfolgter Rücksprache mit den Autor:innen. Die Rechte an Instrument und Item-Formulierungen verbleiben bei den Autor:innen bzw. beim Verlag; Nachnutzende müssen die Nutzungsbedingungen für den eigenen Anwendungsfall eigenständig prüfen. Nur der PCOR-MII-eigene FHIR-Inhalt (Profile, Codes, Kodierung) unterliegt der Repository-Lizenz (CC-BY-4.0).",
+  "code" : [{
+    "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-questionnaire-catalogue",
+    "code" : "opd-sfk",
+    "display" : "OPD-SFK"
+  }],
+  "item" : [{
+    "linkId" : "opd-sfk-intro",
+    "text" : "Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist.",
+    "type" : "display"
+  },
+  {
+    "linkId" : "opdsf3",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK01"
+    }],
+    "prefix" : "1",
+    "text" : "Ich erlebe mich manchmal wie eine fremde Person.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf27",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK02"
+    }],
+    "prefix" : "2",
+    "text" : "Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf32",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK03"
+    }],
+    "prefix" : "3",
+    "text" : "Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf81",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK04"
+    }],
+    "prefix" : "4",
+    "text" : "Ich kann mich anderen oft schwer verständlich machen.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf41",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK05"
+    }],
+    "prefix" : "5",
+    "text" : "In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf49",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK06"
+    }],
+    "prefix" : "6",
+    "text" : "Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf50",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK07"
+    }],
+    "prefix" : "7",
+    "text" : "Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf73",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK08"
+    }],
+    "prefix" : "8",
+    "text" : "Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf78",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK09"
+    }],
+    "prefix" : "9",
+    "text" : "Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf79",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK10"
+    }],
+    "prefix" : "10",
+    "text" : "Es fällt mir schwer, zu anderen Kontakt aufzunehmen.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf40",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK11"
+    }],
+    "prefix" : "11",
+    "text" : "Ich habe kein gutes Selbstbewusstsein.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "linkId" : "opdsf90",
+    "code" : [{
+      "system" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/pcor-item-dictionary",
+      "code" : "OPDSFK12"
+    }],
+    "prefix" : "12",
+    "text" : "Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben.",
+    "type" : "choice",
+    "answerValueSet" : "https://bih-cei.github.io/PCOR-MII/ValueSet/opd-sfk-antwort-vs"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkGlobalwert",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkSumme"
+      }
+    }],
+    "linkId" : "opd-sfk-globalwert",
+    "text" : "OPD-SFK Globalwert (Summenwert, 0-48)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkSelbstwahrnehmungScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkSelbstwahrnehmung"
+      }
+    }],
+    "linkId" : "opd-sfk-selbstwahrnehmung",
+    "text" : "OPD-SFK Subskala Selbstwahrnehmung (Summenwert, 0-16; explorativ)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkBeziehungsmodellScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkBeziehungsmodell"
+      }
+    }],
+    "linkId" : "opd-sfk-beziehungsmodell",
+    "text" : "OPD-SFK Subskala Beziehungsmodell (Summenwert, 0-16; explorativ)",
+    "type" : "decimal",
+    "readOnly" : true
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+      "valueExpression" : {
+        "name" : "opdSfkKontaktgestaltungScore",
+        "language" : "text/fhirpath",
+        "expression" : "%opdSfkKontaktgestaltung"
+      }
+    }],
+    "linkId" : "opd-sfk-kontaktgestaltung",
+    "text" : "OPD-SFK Subskala Kontaktgestaltung (Summenwert, 0-16; explorativ)",
+    "type" : "decimal",
+    "readOnly" : true
+  }]
+}

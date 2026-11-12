@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mhi-ntx-spendeart"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mhi-ntx-spendeart</b></p><a name="en-mhi-ntx-spendeart"> </a><a name="en-hcmhi-ntx-spendeart"> </a><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendeart</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="en-mhi-ntx-spendeart-1"> </a></td><td>Lebendspende</td></tr><tr><td style="white-space:nowrap">2<a name="en-mhi-ntx-spendeart-2"> </a></td><td>Verstorbenenspende</td></tr></table></div>
+  </text>
+  <url value="https://bih-cei.github.io/PCOR-MII/CodeSystem/mhi-ntx-spendeart"/>
+  <version value="0.9.0"/>
+  <name value="MhiNtxSpendeartCS"/>
+  <title value="MHI-NTx Spendeart (Codes)"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-11-12T18:10:53+00:00"/>
+  <publisher value="BIH-CEI"/>
+  <contact>
+    <name value="BIH-CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.bihealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Art der erhaltenen Nierenspende (`MHH_DON`): Lebendspende oder Verstorbenenspende. Nominal, Dictionary-Codes 1–2."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="1"/>
+    <display value="Lebendspende"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Verstorbenenspende"/>
+  </concept>
+</CodeSystem>

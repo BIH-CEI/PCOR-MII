@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>AN (Anorexia Nervosa) - PCOR-MII Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<!-- T-CABS BIH Corporate Design Colors -->
+<!-- Basis: BIH-BLAU #003754, BIH-KORALL #ea5451 -->
+<!-- Farbabstufungen nach BIH-Markenportal (Tints mit Weiß) -->
+<!--
+   BIH-BLAU Abstufungen:
+   100% #003754  90% #1a4b65  80% #335f77  70% #4d7388
+   60% #668899   50% #809daa  40% #99b1bb  30% #b3c5cc
+   20% #ccd9dd   10% #e6ecee
+
+   BIH-KORALL Abstufungen:
+   100% #ea5451  90% #ec6562  80% #ee7674  70% #f08785
+   60% #f29897   50% #f5aaa8  40% #f7bbba  30% #f9cccb
+   20% #fbdddc   10% #fdeeee
+-->
+<style>
+:root {
+  --ig-status-text-color: #4d7388;       /*  1. IG title and status text - BLAU 70% */
+  --navbar-bg-color: #335f77;            /*  2. Header container - BLAU 80% */
+  --footer-bg-color: #335f77;            /*  3. Footer background - BLAU 80% */
+  --footer-container-bg-color: #335f77;  /*  4. Footer container - BLAU 80% */
+  --stripe-bg-color: #f5aaa8;            /*  5. Header strip - KORALL 50% */
+
+  --btn-hover-color: #f29897;            /*  6. Menu button hover - KORALL 60% */
+  --btn-active-color: #f08785;           /*  7. Menu button active - KORALL 70% */
+  --btn-text-color: #ffffff;             /*  8. Menu button text */
+  --btn-gradient-start-color: #4d7388;   /*  9. Menu gradient start - BLAU 70% */
+  --btn-gradient-end-color: #335f77;     /* 10. Menu gradient end - BLAU 80% */
+  --btn-gradient-start-color-alpha: #ff4d7388; /* 11. Menu gradient start (alpha) */
+  --btn-gradient-end-color-alpha: #ff335f77;   /* 12. Menu gradient end (alpha) */
+  --link-color: #4d7388;                 /* 13. Hyperlink - BLAU 70% */
+  --link-hover-color: #f08785;           /* 14. Hyperlink hover - KORALL 70% */
+
+  --publish-box-bg-color: #fdeeee;       /* 15. Publish box background - KORALL 10% */
+  --publish-box-border: 1px solid #f7bbba; /* 16. Publish box border - KORALL 40% */
+  --toc-box-bg-color: #e6ecee;           /* 17. TOC box background - BLAU 10% */
+  --toc-box-border: 1px solid #b3c5cc;   /* 18. TOC box border - BLAU 30% */
+  --stu-note-background-color: #fdeeee;  /* 19. STU note background - KORALL 10% */
+  --stu-note-border-left-color: #f5aaa8; /* 20. STU note border - KORALL 50% */
+
+  --ig-header-color: #f5f8fa;            /* 21. Header sides */
+  --ig-header-container-color: #ffffff;  /* 22. Header container center */
+  --footer-nav-bg-color: #f5f8fa;        /* 23. Footer navigation background */
+
+  --footer-text-color: #ffffff;          /* 24. Footer text */
+  --footer-hyperlink-text-color: #b3d8e8;/* 25. Footer hyperlinks */
+  --footer-highlight-text-color: #f5aaa8;/* 26. Footer highlight - KORALL 50% */
+
+  --breadcrumb-bg-color: #f5f8fa;        /* 27. Breadcrumb background */
+  --breadcrumb-text-color: #4d7388;      /* 28. Breadcrumb text - BLAU 70% */
+
+  --dragon-background-color: #fdeeee;    /* 29. Dragon background - KORALL 10% */
+  --dragon-text-color: #4d7388;          /* 30. Dragon text - BLAU 70% */
+}
+
+/* ─── T-CABS Header: Charité-Logo zwischen BIH und Sprach-Switcher ─── */
+/* fhir2.base.template kennt nur #project-nav und #family-nav.         */
+/* #charite-nav muss hier mit gleichen Regeln wie #family-nav ergänzt   */
+/* werden, sonst rutscht das Logo aus dem Header.                       */
+#charite-nav {
+  line-height: 50px;
+  float: var(--ig-right);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-right: 20px;
+  color: #808080;
+}
+#charite-logo {
+  float: var(--ig-right);
+  margin-left: 6px;
+}
+
+/* ─── T-CABS Navbar/Footer: kräftiges BIH-BLAU 100% statt 80% ─── */
+/* Original-IG nutzt hartkodiertes #003754 mit !important, weil    */
+/* die Variable --navbar-bg-color (#335f77) zu hell wirkt.         */
+nav.navbar.navbar-inverse {
+  background-color: #003754 !important;
+}
+#segment-footer {
+  background-color: #003754 !important;
+}
+#segment-footer > .container {
+  background-color: #003754 !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #ea5451 !important;   /* KORALL 100% Hover */
+}
+
+/* ─── "Diesen Fragebogen testen" / NLM Forms Library ausblenden ─── */
+/* Der Block kommt aus fhir2.base.template (layout-questionnaire.html:   */
+/* Anker name="test" -> <h3> -> Div mit dem NLM-Forms-Library-Link) und  */
+/* ist nicht per IG-Parameter abschaltbar. Das Projekt-template/ wird bei */
+/* jedem Build aus dem Package neu ausgepackt, daher hier portabel per    */
+/* Geschwister-Selektor über den stabilen name="test"-Anker ausgeblendet. */
+a[name="test"],
+a[name="test"] + h3,
+a[name="test"] + h3 + div {
+  display: none !important;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- PCOR-MII Header Logos: Charité + BIH (kein Projektlogo) -->
+<div id="charite-nav">
+    <a id="charite-logo" data-no-external="true" href="https://www.charite.de/">
+        <img alt="Charité" height="50" src="Logo_Charite.png"/>
+    </a>
+</div>
+<div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PCOR-MII Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - draft
+
+
+
+  <img alt="Germany flag" src="../assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Startseite</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Instrumente
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Instrumente.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="PSS.html">PSS</a>
+      </li>
+      <li>
+        <a href="AN.html">AN</a>
+      </li>
+      <li>
+        <a href="NTx.html">NTx</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="Fragebogen-Bibliothek.html">Fragebögen</a>
+  </li>
+  <li>
+    <a href="Beispiele.html">Beispiele</a>
+  </li>
+  <li>
+    <a href="Implementation.html">Anwendung</a>
+  </li>
+  <li>
+    <a href="Validierung.html">Validierung</a>
+  </li>
+  <li>
+    <a href="Bereitstellung.html">Bereitstellung</a>
+  </li>
+  <li>
+    <a href="Designentscheidungen.html">Designentscheidungen</a>
+  </li>
+  <li>
+    <a href="Rechtelage.html">Rechtelage &amp; offene Punkte</a>
+  </li>
+  <li>
+    <a href="Release-Notes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="Kommende-Aenderungen.html">Kommende Änderungen</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag English" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/AN.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='Instrumente.html'><b>Instrumentenübersicht</b></a></li><li><b>AN (Anorexia Nervosa)</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="PHQ-Panik.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="ERQ-6.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>AN (Anorexia Nervosa)</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;font-size:smaller;"><em>Translated page. Original language: German.</em></p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#the-an-battery" id="markdown-toc-the-an-battery">The AN battery</a></li>
+  <li><a href="#the-subsets-follow-a-documented-selection-rule" id="markdown-toc-the-subsets-follow-a-documented-selection-rule">The subsets follow a documented selection rule</a></li>
+  <li><a href="#example-data-set" id="markdown-toc-example-data-set">Example data set</a></li>
+  <li><a href="#not-collected-in-an" id="markdown-toc-not-collected-in-an">Not collected in AN</a></li>
+  <li><a href="#rights-and-status" id="markdown-toc-rights-and-status">Rights and status</a></li>
+</ul>
+
+</div>
+<p><strong>AN</strong> (<em>Anorexia Nervosa</em>) is the eating-disorder entity in PCOR-MII — alongside <a href="PSS.html">PSS</a> (Persistent Somatic Syndrome) and <a href="NTx.html">NTx</a> (kidney transplantation). The battery consists of generic instruments (identical across all three entities) and AN-specific instruments on eating-disorder psychopathology, emotion regulation, motivation to change, social environment and adverse childhood experiences.</p>
+
+<p>The cross-entity view is on <a href="Instrumente.html">Instruments</a>; this page describes the AN battery and says, for every questionnaire, where its FHIR resource lives. <strong>Machine-readable</strong>, the same compilation is <a href="Library-use-case-an.html">Library/use-case-an</a>, which pins all 25 questionnaires with versions. Rights and status of all instruments are collected on <a href="Rechtelage.html">Rights and open points</a>.</p>
+
+<h3 id="the-an-battery">The AN battery</h3>
+
+<p>The <strong>Resource</strong> column links to the resource itself: <strong>PCOR-MII</strong> — the <code class="language-plaintext highlighter-rouge">Questionnaire</code> is defined in this IG, the link goes to the artefact page with <code class="language-plaintext highlighter-rouge">linkId</code>s and downloads; <strong>MII PRO</strong> — the <code class="language-plaintext highlighter-rouge">Questionnaire</code> arrives through the package dependency <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.pros</code> 2027.0.0-ballot.2, PCOR-MII does not rebuild it; <strong>open</strong> — no artefact exists yet for this row of the data collection plan. The <strong>Docs</strong> column points to the instrument's PCOR-MII page. Priorities and frequencies of the plan are in the <em>Domain Overview</em> sheet of the Item Level Dictionary and in the <code class="language-plaintext highlighter-rouge">display</code> of the manifest entries.</p>
+
+<p><strong>Generic core — identical in PSS, AN and NTx</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Cat.</th>
+      <th style="text-align: right">Items</th>
+      <th>Resource</th>
+      <th>Docs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Demographics (DEM)</td>
+      <td>DEM</td>
+      <td style="text-align: right">23¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-DEM.html"><code class="language-plaintext highlighter-rouge">DEM</code></a></td>
+      <td><a href="Demographie.html">Demographics</a></td>
+    </tr>
+    <tr>
+      <td>Medical History (MHI) — <strong>with AN supplementary items</strong> on weight history and AN subtype</td>
+      <td>MHI</td>
+      <td style="text-align: right">48¹</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-MHI.html"><code class="language-plaintext highlighter-rouge">MHI</code></a></td>
+      <td><a href="MHI.html">MHI</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS Scale v1.2 — Global Health (Global01, Global02)</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-PROMISGH.html"><code class="language-plaintext highlighter-rouge">PROMISGH</code></a> — 2-item subset, <code class="language-plaintext highlighter-rouge">derivedFrom</code> the module's 10-item scale</td>
+      <td><a href="PROMIS.html">PROMIS</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-16 Profile v2.1 — site variant</td>
+      <td>GHS</td>
+      <td style="text-align: right">16</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-promis-16.html">PROMIS-16</a></td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS-29 + Cognitive Function SF 4a (the plan's "8 domains") — site variant</td>
+      <td>GHS</td>
+      <td style="text-align: right">29 + 4</td>
+      <td><strong>MII PRO</strong> → PROMIS-29 and Cognitive Function SF 4a</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a>, <a href="PROMIS-Cognitive-Function.html">Cognitive Function</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS NRS — Pain Intensity 1a</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>open</strong> as a stand-alone instrument; the item is inside PROMIS-29 (<code class="language-plaintext highlighter-rouge">promis-global07</code>)</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
+    </tr>
+    <tr>
+      <td>WHODAS 2.0, 12-item</td>
+      <td>GHS</td>
+      <td style="text-align: right">14</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-whodas-whodas12.html">WHODAS 2.0</a></td>
+      <td><a href="WHODAS-12.html">WHODAS 2.0</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-8 — <strong>default</strong> in all use cases; full PHQ-9 only with an immediate on-site physician contact</td>
+      <td>GHS</td>
+      <td style="text-align: right">8 (9)</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-9.html">PHQ-9</a> (PHQ-8 = subset)</td>
+      <td><a href="PHQ-9.html">PHQ-9</a>, <a href="PHQ.html">PHQ overview</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-SI — suicidality, inpatient</td>
+      <td>MHA</td>
+      <td style="text-align: right">1</td>
+      <td><strong>MII PRO</strong> — item <code class="language-plaintext highlighter-rouge">phq-phq2i</code> of the PHQ-9, no questionnaire of its own</td>
+      <td><a href="PHQ-9.html">PHQ-9</a></td>
+    </tr>
+    <tr>
+      <td>PHQ-15</td>
+      <td>GHS</td>
+      <td style="text-align: right">13</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-phq-15.html">PHQ-15</a></td>
+      <td><a href="PHQ-15.html">PHQ-15</a></td>
+    </tr>
+    <tr>
+      <td>GAD-7 (also GAD-2 / PHQ-4 as subsets)</td>
+      <td>GHS</td>
+      <td style="text-align: right">7</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-gad-7.html">GAD-7</a></td>
+      <td><a href="GAD-7.html">GAD-7</a></td>
+    </tr>
+    <tr>
+      <td>EURONET-SOMA 1 + 2</td>
+      <td>GHS</td>
+      <td style="text-align: right">2</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euronet-soma.html">EURONET-SOMA</a></td>
+      <td><a href="EURONET-SOMA.html">EURONET-SOMA</a></td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L — outcome only, yearly</td>
+      <td>GHS</td>
+      <td style="text-align: right">6</td>
+      <td><strong>MII PRO</strong> → <a href="https://medizininformatik-initiative.github.io/kerndatensatzmodul-proms/Questionnaire-mii-qst-pro-euroqol-eq5d5l-collectable.html">EQ-5D-5L</a>, collectable variant</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>WAI / Work Ability Score</td>
+      <td>GHS</td>
+      <td style="text-align: right">3</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-WAI.html"><code class="language-plaintext highlighter-rouge">WAI</code></a> — <strong>metadata-only</strong>, no item texts</td>
+      <td><a href="WAI.html">WAI</a></td>
+    </tr>
+    <tr>
+      <td>OPD-SFK — personality functioning, priority C; collected by individual sites, no recommendation of the use-case lead</td>
+      <td>MHA</td>
+      <td style="text-align: right">12</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-OPDSFK.html"><code class="language-plaintext highlighter-rouge">OPDSFK</code></a></td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>¹ For DEM and MHI this is the number of leaf items of the PCOR-MII questionnaire, not a dictionary instrument count: both bundle single items from several sources (OECD, GI-PS, CPCOR) into one questionnaire each, and the MHI adds the two PCOR-MII helper items for unit selection. For all other rows the number is the item count according to the Item Level Dictionary.</p>
+
+<p>PROMIS-16 and PROMIS-29 + Cognitive Function are <strong>site variants</strong> (either/or); both are in the manifest so that receivers can resolve responses of both site types (reading of the "8 domains" confirmed by the use-case lead, 2026-10-13). In AN too, the <strong>PHQ-8 is the default</strong>; the full PHQ-9 with the suicidality item <code class="language-plaintext highlighter-rouge">phq-phq2i</code> may only be used when the assessment is immediately followed by an on-site physician contact — never in remote monitoring (see <a href="PHQ.html">PHQ overview</a>).</p>
+
+<p><strong>AN-specific instruments</strong></p>
+
+<p>All five are <strong>project-specific subsets</strong> of published instruments (for the ACE the first five questions), provisionally maintained in PCOR-MII (<a href="Designentscheidungen.html">ADR-003</a>), and <strong>none</strong> of them carries a score. Until release 0.3.0 the ERQ-6 counted as the exception — it was wrongly identified as the official short form ERQ-S; the correction is on the <a href="ERQ-6.html">ERQ-6 page</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Cat.</th>
+      <th style="text-align: right">Items</th>
+      <th>Captures</th>
+      <th>Resource</th>
+      <th>Docs</th>
+      <th>Example response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ERQ-6</td>
+      <td>DCH</td>
+      <td style="text-align: right">6</td>
+      <td>Emotion regulation — six ERQ items</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ERQ6.html"><code class="language-plaintext highlighter-rouge">ERQ6</code></a></td>
+      <td><a href="ERQ-6.html">ERQ-6</a></td>
+      <td><a href="QuestionnaireResponse-ERQ6Response.html">ERQ6Response</a></td>
+    </tr>
+    <tr>
+      <td>EDE-Q6</td>
+      <td>DCH</td>
+      <td style="text-align: right">6</td>
+      <td>Eating-disorder psychopathology incl. menstruation</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-EDEQ6.html"><code class="language-plaintext highlighter-rouge">EDEQ6</code></a></td>
+      <td><a href="EDE-Q6.html">EDE-Q6</a></td>
+      <td><a href="QuestionnaireResponse-EDEQ6Response.html">EDEQ6Response</a></td>
+    </tr>
+    <tr>
+      <td>ANSOCQ-2</td>
+      <td>TCH</td>
+      <td style="text-align: right">2</td>
+      <td>Motivation to change (stages of change)</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ANSOCQ2.html"><code class="language-plaintext highlighter-rouge">ANSOCQ2</code></a></td>
+      <td><a href="ANSOCQ-2.html">ANSOCQ-2</a></td>
+      <td><a href="QuestionnaireResponse-ANSOCQ2Response.html">ANSOCQ2Response</a></td>
+    </tr>
+    <tr>
+      <td>SSUK-2</td>
+      <td>EFA</td>
+      <td style="text-align: right">2</td>
+      <td>Social support / problematic interaction</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-SSUK2.html"><code class="language-plaintext highlighter-rouge">SSUK2</code></a></td>
+      <td><a href="SSUK-2.html">SSUK-2</a></td>
+      <td><a href="QuestionnaireResponse-SSUK2Response.html">SSUK2Response</a></td>
+    </tr>
+    <tr>
+      <td>ACE + timing items</td>
+      <td>EFA</td>
+      <td style="text-align: right">5 + 6</td>
+      <td>Adverse childhood experiences; the six <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> timing items bound to <code class="language-plaintext highlighter-rouge">ace1</code>–<code class="language-plaintext highlighter-rouge">ace3</code> via <code class="language-plaintext highlighter-rouge">enableWhen</code> (PCOR-MII composite)</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ACE.html"><code class="language-plaintext highlighter-rouge">ACE</code></a></td>
+      <td><a href="ACE.html">ACE</a></td>
+      <td><a href="QuestionnaireResponse-ACEResponse.html">ACEResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-EDP</td>
+      <td>DCH</td>
+      <td style="text-align: right">11</td>
+      <td>Eating-disorder psychopathology — probably an EDI-2 subset</td>
+      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-UKHDEDP.html"><code class="language-plaintext highlighter-rouge">UKHDEDP</code></a> — <strong>metadata-only</strong></td>
+      <td><a href="UKHD-EDP.html">UKHD-EDP</a></td>
+      <td><a href="QuestionnaireResponse-UKHDEDPMonitoringResponse.html">UKHDEDPMonitoringResponse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>UKHD supplementary questionnaires</strong> — item groups that do not correspond to any published instrument and were compiled by the Heidelberg site for data collection, all priority A. Six are modelled as <strong>one Questionnaire each</strong>, one per dictionary group (<a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>); <code class="language-plaintext highlighter-rouge">UKHD-CTT</code> is inside the ACE (see above), <code class="language-plaintext highlighter-rouge">UKHD-BI</code> is deliberately not modelled.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Questionnaire</th>
+      <th>Cat.</th>
+      <th style="text-align: right">Items</th>
+      <th>Captures</th>
+      <th>Resource</th>
+      <th>Example response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UKHD-PT</td>
+      <td>TCH</td>
+      <td style="text-align: right">2</td>
+      <td>Prior treatment: psychotherapy, physician visits</td>
+      <td><a href="Questionnaire-UKHDPT.html"><code class="language-plaintext highlighter-rouge">UKHDPT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDPTResponse.html">UKHDPTResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-ANB</td>
+      <td>DCH</td>
+      <td style="text-align: right">2 (+2)</td>
+      <td>Eating-disorder history: duration, lowest BMI</td>
+      <td><a href="Questionnaire-UKHDANB.html"><code class="language-plaintext highlighter-rouge">UKHDANB</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDANBResponse.html">UKHDANBResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-CT</td>
+      <td>TCH</td>
+      <td style="text-align: right">1</td>
+      <td>Current treatment status</td>
+      <td><a href="Questionnaire-UKHDCT.html"><code class="language-plaintext highlighter-rouge">UKHDCT</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDCTResponse.html">UKHDCTResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-LE</td>
+      <td>EFA</td>
+      <td style="text-align: right">4</td>
+      <td>Stressful life events</td>
+      <td><a href="Questionnaire-UKHDLE.html"><code class="language-plaintext highlighter-rouge">UKHDLE</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDLEResponse.html">UKHDLEResponse</a></td>
+    </tr>
+    <tr>
+      <td>UKHD-ND</td>
+      <td>DCH</td>
+      <td style="text-align: right">3</td>
+      <td>New diagnoses since the last assessment</td>
+      <td><a href="Questionnaire-UKHDND.html"><code class="language-plaintext highlighter-rouge">UKHDND</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDNDMonitoringResponse.html">UKHDNDMonitoringResponse</a> — not collected at the initial visit</td>
+    </tr>
+    <tr>
+      <td>UKHD-D</td>
+      <td>DCH</td>
+      <td style="text-align: right">2</td>
+      <td>Diagnoses at admission</td>
+      <td><a href="Questionnaire-UKHDD.html"><code class="language-plaintext highlighter-rouge">UKHDD</code></a></td>
+      <td><a href="QuestionnaireResponse-UKHDDResponse.html">UKHDDResponse</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">UKHD-BI</code></td>
+      <td>—</td>
+      <td style="text-align: right">3</td>
+      <td>Body image — visual picture scale; data collection does not use it yet, the picture template is missing in the dictionary</td>
+      <td><strong>open</strong> — deliberately not modelled</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For these groups no documented clearance exists, and the origin of their wording is unresolved — the <code class="language-plaintext highlighter-rouge">UKHD</code> prefix is a compilation label of the dictionary, not a statement of authorship. Modelling them is a deliberate project decision for piloting; details under <a href="Rechtelage.html#standortgruppen">Rights and open points</a>.</p>
+
+<p><strong>Scores</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Resource</th>
+      <th>Docs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PROPr — PROMIS Preference utility</td>
+      <td><strong>PCOR-MII</strong> → <a href="ObservationDefinition-PcorObsDefProprUtility.html"><code class="language-plaintext highlighter-rouge">PcorObsDefProprUtility</code></a> — provisional, responsibility upstream</td>
+      <td><a href="PROMIS-16.html#propr">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS domain T-scores (PROMIS-29)</td>
+      <td><strong>MII PRO</strong> — eight <code class="language-plaintext highlighter-rouge">ObservationDefinition</code>s in the package</td>
+      <td><a href="PROMIS-29.html">PROMIS-29</a></td>
+    </tr>
+    <tr>
+      <td>PROMIS domain T-scores (PROMIS-16)</td>
+      <td><strong>open</strong> — upstream roadmap 2027; the eight PROMIS-29 codes do <strong>not</strong> apply to PROMIS-16</td>
+      <td><a href="PROMIS-16.html">PROMIS-16</a></td>
+    </tr>
+    <tr>
+      <td>Physical / Mental Health Summary (PHS, PCS, MHS, MCS)</td>
+      <td><strong>open</strong> — priority A in the plan, no artefact</td>
+      <td><em>Domain Overview</em> of the Item Level Dictionary</td>
+    </tr>
+    <tr>
+      <td>EQ-5D-5L index</td>
+      <td><strong>MII PRO</strong> — index score and CQL upstream</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>OPD-SFK global score</td>
+      <td><strong>PCOR-MII</strong> — calculated item <code class="language-plaintext highlighter-rouge">opd-sfk-globalwert</code> in the questionnaire</td>
+      <td><a href="OPD-SFK.html">OPD-SFK</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The five AN subsets and the UKHD questionnaires carry no score (see below).</p>
+
+<h3 id="the-subsets-follow-a-documented-selection-rule">The subsets follow a documented selection rule</h3>
+
+<p>Four of the five AN instruments are subsets, and the DIZ implementation list names the rule behind them in its column <em>"shortened version?"</em> — identically for ERQ-6, EDE-Q6, ANSOCQ-2 and SSUK-2:</p>
+
+<blockquote>
+  <p>"not used in full, but only the item with the highest discriminatory power per scale"</p>
+</blockquote>
+
+<p>That matters more than it looks: the subsets are <strong>not arbitrarily shortened</strong> but built on a stated psychometric criterion — the most discriminating item per scale or factor. For three of the four, PCOR-MII has checked this rule against the published structure of the original instrument: for <a href="EDE-Q6.html">EDE-Q6</a> against the four EDE-Q subscales, for <a href="ANSOCQ-2.html">ANSOCQ-2</a> against the two factors of the German validation, for <a href="SSUK-2.html">SSUK-2</a> against the two opposing SSUK dimensions. It holds in each case.</p>
+
+<p><strong>One exception to know about:</strong> for the <a href="ERQ-6.html">ERQ-6</a> the singular wording <em>"the item … per scale"</em> does not fit — there it is <strong>three</strong> items per subscale of the full instrument. Until release 0.3.0 this page said the questionnaire was the published short form ERQ-S and therefore the only one with a validated scoring. <strong>That was wrong</strong> — the ERQ-S consists of different ERQ items; the score has been withdrawn.</p>
+
+<p>The <a href="ACE.html">ACE</a> carries a different entry in the same column — <em>"the first 5 questions"</em> — so it is not a discrimination-based selection but the front block of the instrument (abuse and neglect without the household-dysfunction questions).</p>
+
+<p>For the analysis the consequence is the same throughout: <strong>one most discriminating item per scale does not represent the scale.</strong> That is why <strong>none</strong> of these subsets carries a score — details on the respective instrument pages and in <a href="Designentscheidungen.html">ADR-003</a>. The answer codes carry <code class="language-plaintext highlighter-rouge">itemWeight</code> as a precaution so that an evaluation remains possible once a rule is agreed (<a href="Rechtelage.html#an-scoring">open point</a>).</p>
+
+<h3 id="example-data-set">Example data set</h3>
+
+<p>The AN example responses belong to <strong>one</strong> patient (<a href="Patient-pcor-mii-exa-patient-an.html">pcor-mii-exa-patient-an</a>) and two visits: the initial/screening visit of 18 June 2026 (<a href="Bundle-pcor-mii-exa-bundle-an-initial.html">bundle</a>, 13 entries) and the monitoring visit of 30 July 2026 (<a href="Bundle-pcor-mii-exa-bundle-an-monitoring.html">bundle</a>, 10 entries) — slightly improved, not remitted, with the first UKHD-ND response, a deliberate partial response to UKHD-PT and the response to the metadata-only questionnaire UKHD-EDP. What each response demonstrates, why UKHD-ND is absent at the initial visit and how the values were chosen is on <a href="Beispiele.html">Examples</a>.</p>
+
+<h3 id="not-collected-in-an">Not collected in AN</h3>
+
+<p>For delimitation, because these instruments exist in PCOR-MII and sit next to the AN ones in the overall table: <strong>PSS-only</strong> are <a href="PHQ-Panik.html">PHQ-D panic block</a>, <a href="PC-PTSD.html">PC-PTSD</a>, <a href="SCOFF.html">SCOFF</a>, <a href="ISR-Z.html">ISR-Z</a>, <a href="SSD-12.html">SSD-12</a>, <a href="WI-7.html">Whiteley-7</a>, <a href="EXPECT.html">EXPECT</a>, <a href="IPQ-S.html">IPQ-S</a>, <a href="GSLTPAQ.html">GSLTPAQ</a> and the UKE healthcare-utilisation items. <strong>NTx-only</strong> are <a href="NTx.html">BAASIS, ABQ, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire</a>.</p>
+
+<h3 id="rights-and-status">Rights and status</h3>
+
+<p>According to the DIZ implementation list the five AN instruments are freely publishable; for <a href="EDE-Q6.html">EDE-Q6</a> (published German version) and the German version of the <a href="ACE.html">ACE</a> (ACE-D) the rights holders' consent is nevertheless to be obtained. The UKHD groups have no documented clearance, <a href="UKHD-EDP.html">UKHD-EDP</a> is metadata-only. All AN-specific resources are <strong>provisionally maintained in PCOR-MII</strong> until they are officially agreed and parts can be adopted into the MII PRO module (<a href="Designentscheidungen.html">ADR-003</a>). The full situation per instrument, the open questions and who has to answer them: <a href="Rechtelage.html">Rights and open points</a>.</p>
+
+<p>Sources of this page: sheets <code class="language-plaintext highlighter-rouge">Item Level Dictionary AN</code> and <code class="language-plaintext highlighter-rouge">Domain Overview</code> of the Item Level Dictionary (<code class="language-plaintext highlighter-rouge">MASTER_3EntitiesOverview.xlsx</code>, not part of this repository), DIZ implementation list PCOR-MII; the PCOR-MII/MII PRO assignment matches the manifest <a href="Library-use-case-an.html">use-case-an</a>. Notes on the lifecycle from <code class="language-plaintext highlighter-rouge">Questionnaire</code> to <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> are under <a href="Implementation.html">Implementation</a>; all artefacts under <a href="artifacts.html">Artifacts</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="PHQ-Panik.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="ERQ-6.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
+          Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-11-12 18:10:00 +0000">
+    2026-11-12
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

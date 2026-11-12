@@ -1,0 +1,73 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "abq-skala-4",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem abq-skala-4</b></p><a name=\"en-abq-skala-4\"> </a><a name=\"en-hcabq-skala-4\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>itemWeight</td><td>itemWeight</td><td>http://hl7.org/fhir/concept-properties#itemWeight</td><td>decimal</td><td>Numerischer Ordinalwert (1-4); Polung nicht gegen das Originalinstrument verifiziert.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>itemWeight</b></td></tr><tr><td style=\"white-space:nowrap\">stufe-1<a name=\"en-abq-skala-4-stufe-1\"> </a></td><td>Stufe 1</td><td>1</td></tr><tr><td style=\"white-space:nowrap\">stufe-2<a name=\"en-abq-skala-4-stufe-2\"> </a></td><td>Stufe 2</td><td>2</td></tr><tr><td style=\"white-space:nowrap\">stufe-3<a name=\"en-abq-skala-4-stufe-3\"> </a></td><td>Stufe 3</td><td>3</td></tr><tr><td style=\"white-space:nowrap\">stufe-4<a name=\"en-abq-skala-4-stufe-4\"> </a></td><td>Stufe 4</td><td>4</td></tr></table></div>"
+  },
+  "url" : "https://bih-cei.github.io/PCOR-MII/CodeSystem/abq-skala-4",
+  "version" : "0.9.0",
+  "name" : "AbqSkala4CS",
+  "title" : "ABQ Antwortskala 4-stufig (Codes)",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-12T18:10:53+00:00",
+  "publisher" : "BIH-CEI",
+  "contact" : [{
+    "name" : "BIH-CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.bihealth.org/"
+    }]
+  }],
+  "description" : "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. itemWeight-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "property" : [{
+    "code" : "itemWeight",
+    "uri" : "http://hl7.org/fhir/concept-properties#itemWeight",
+    "description" : "Numerischer Ordinalwert (1-4); Polung nicht gegen das Originalinstrument verifiziert.",
+    "type" : "decimal"
+  }],
+  "concept" : [{
+    "code" : "stufe-1",
+    "display" : "Stufe 1",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 1
+    }]
+  },
+  {
+    "code" : "stufe-2",
+    "display" : "Stufe 2",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "stufe-3",
+    "display" : "Stufe 3",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 3
+    }]
+  },
+  {
+    "code" : "stufe-4",
+    "display" : "Stufe 4",
+    "property" : [{
+      "code" : "itemWeight",
+      "valueDecimal" : 4
+    }]
+  }]
+}
