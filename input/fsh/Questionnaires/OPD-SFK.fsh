@@ -29,14 +29,20 @@
 //   Ebenso ist er durch die Bildung von Summen- anstelle von Mittelwerten leichter
 //   auszuwerten als die Vollversion des OPD-SF." -> Range 0-48 (12 Items x 0-4).
 //   Globalwert-Item unten als SDC calculatedExpression (Summe via .weight()) umgesetzt.
+//   Subskalen (explorativ, Summenwert 0-16) nach Abbildung 1 (S. 268, Faktorstruktur,
+//   am 2026-11-05 aus dem Original-PDF abgelesen):
+//     Selbstwahrnehmung  = OPD-SFK-Items 1, 2, 5, 8   (opdsf3, opdsf27, opdsf41, opdsf73)
+//     Beziehungsmodell   = OPD-SFK-Items 3, 7, 9, 12  (opdsf32, opdsf50, opdsf78, opdsf90)
+//     Kontaktgestaltung  = OPD-SFK-Items 4, 6, 10, 11 (opdsf81, opdsf49, opdsf79, opdsf40)
 //
-//   Subskalen NICHT implementiert (Auftrag): die inhaltliche Zusammensetzung der
-//   drei Subskalen wird im Fließtext beschrieben (S. 402-411: Selbstwahrnehmung /
-//   Beziehungsmodell / Kontaktgestaltung), eine explizite Item-Nummer-zu-Subskala-
-//   Zuordnungstabelle liegt im Text jedoch nicht vor; die zugehörige Faktorladungs-
-//   Abbildung (Abbildung 1, S. 269 im PDF) ist eine Grafik und war aus dem PDF nicht
-//   zuverlässig als Text extrahierbar. Offener Punkt, falls Subskalen später doch
-//   gebraucht werden: Zuordnung anhand von Abbildung 1 im Original-PDF verifizieren.
+// LINKIDS = OPD-SF-ITEMNUMMERN (linkId-Regel, ADR-003/ADR-008): Tabelle 2 der
+//   Publikation nennt zu jedem OPD-SFK-Item die Nummer in der 95-Item-Langform OPD-SF.
+//   Die linkIds tragen diese Langform-Nummer (opdsf3 ... opdsf90), damit dasselbe Item
+//   in Kurz- und Langform denselben linkId hat (Itembank-Prinzip). prefix = OPD-SFK-
+//   Nummer 1-12 (Formularreihenfolge). Zuordnung OPD-SFK -> OPD-SF:
+//     1->3, 2->27, 3->32, 4->81, 5->41, 6->49, 7->50, 8->73, 9->78, 10->79, 11->40, 12->90
+//   Bis 0.3.0 waren die linkIds die Dictionary-IDs OPDSFK01-12; Migration und
+//   Dictionary-Abbildung: ConceptMap pcor-cm-opd-sfk-linkids.
 // ─────────────────────────────────────────────────────────────────────────────
 
 CodeSystem: OpdSfkAntwortCS
@@ -98,7 +104,7 @@ Instance: OPDSFK
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "OPD-SFK — OPD-Strukturfragebogen, 12-Item-Kurzversion"
-Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung) sind laut Autor:innen nur explorativ und hier nicht implementiert. Rechtehinweise siehe `copyright`."
+Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Skala (trifft gar nicht zu ... trifft völlig zu). Screeninginstrument für strukturelle Persönlichkeitsfunktion (Ehrenthal et al. 2015). Globalwert = Summe über alle 12 Items (0-48); die drei Subskalen (Selbstwahrnehmung, Beziehungsmodell, Kontaktgestaltung; je 4 Items, 0-16) sind laut Autor:innen nur explorativ und als zusätzliche berechnete Items umgesetzt. linkIds = OPD-SF-Itemnummern der Langform. Rechtehinweise siehe `copyright`."
 // Kein PRO-Instrument -> nicht das MII-PRO-Profil, sondern ISiKFormularDefinition.
 // Das SDC-Profil wird NICHT mehr deklariert; SDC bleibt als Dependency erhalten,
 // die verwendeten SDC-Extensions sind davon unberührt.
@@ -120,7 +126,25 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
 * extension[=].valueExpression.name = "opdSfkSumme"
 * extension[=].valueExpression.language = #text/fhirpath
-* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^OPDSFK(0[1-9]|1[0-2])$')).answer.value.weight().sum()"
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|32|81|41|49|50|73|78|79|40|90)$')).answer.value.weight().sum()"
+
+// FHIR variable: Subskala Selbstwahrnehmung = Summe der OPD-SFK-Items 1, 2, 5, 8 (Abbildung 1, S. 268), 0-16.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* extension[=].valueExpression.name = "opdSfkSelbstwahrnehmung"
+* extension[=].valueExpression.language = #text/fhirpath
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(3|27|41|73)$')).answer.value.weight().sum()"
+
+// FHIR variable: Subskala Beziehungsmodell = Summe der OPD-SFK-Items 3, 7, 9, 12 (Abbildung 1, S. 268), 0-16.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* extension[=].valueExpression.name = "opdSfkBeziehungsmodell"
+* extension[=].valueExpression.language = #text/fhirpath
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(32|50|78|90)$')).answer.value.weight().sum()"
+
+// FHIR variable: Subskala Kontaktgestaltung = Summe der OPD-SFK-Items 4, 6, 10, 11 (Abbildung 1, S. 268), 0-16.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* extension[=].valueExpression.name = "opdSfkKontaktgestaltung"
+* extension[=].valueExpression.language = #text/fhirpath
+* extension[=].valueExpression.expression = "%resource.item.where(linkId.matches('^opdsf(81|49|79|40)$')).answer.value.weight().sum()"
 
 // ── Instruktionstext (gilt für alle 12 Items) ─────────────────────────────────
 * item[+]
@@ -128,75 +152,89 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
   * text = "Auf der folgenden Seite finden Sie eine Reihe von Aussagen, mit denen verschiedene Eigenschaften von Personen beschrieben werden. Bitte geben Sie an, wie sehr diese Aussagen auf Sie zutreffen. Kreuzen Sie bitte diejenige Antwort an, die im Allgemeinen auf Sie am besten zutrifft. Dabei gibt es keine richtigen oder falschen Antworten, weil jeder Mensch im Erleben anders ist."
   * type = #display
 
-// ── 12 Items (linkId = PCOR-Variablen-ID OPDSFK01-12) ─────────────────────────
+// ── 12 Items (linkId = OPD-SF-Itemnummer der Langform, prefix = OPD-SFK-Nr. 1-12) ──
+// item.code = PCOR-Variablen-ID (Dictionary), siehe ADR-011; Mapping Dictionary -> linkId:
+// Mappings/OPD-SFK-LinkIds.fsh
 * item[+]
-  * linkId = "OPDSFK01"
+  * linkId = "opdsf3"
+  * prefix = "1"
   * code[+] = PcorItemDictionaryCS#OPDSFK01
   * text = "Ich erlebe mich manchmal wie eine fremde Person."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK02"
+  * linkId = "opdsf27"
+  * prefix = "2"
   * code[+] = PcorItemDictionaryCS#OPDSFK02
   * text = "Wenn ich viel über mich nachdenke, gerate ich eher in Verwirrung."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK03"
+  * linkId = "opdsf32"
+  * prefix = "3"
   * code[+] = PcorItemDictionaryCS#OPDSFK03
   * text = "Wenn man andere zu nahe an sich heran lässt, kann das gefährlich werden."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK04"
+  * linkId = "opdsf81"
+  * prefix = "4"
   * code[+] = PcorItemDictionaryCS#OPDSFK04
   * text = "Ich kann mich anderen oft schwer verständlich machen."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK05"
+  * linkId = "opdsf41"
+  * prefix = "5"
   * code[+] = PcorItemDictionaryCS#OPDSFK05
   * text = "In mir herrscht oft ein solches Gefühlschaos, dass ich es gar nicht beschreiben könnte."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK06"
+  * linkId = "opdsf49"
+  * prefix = "6"
   * code[+] = PcorItemDictionaryCS#OPDSFK06
   * text = "Ich schätze manchmal falsch ein, wie mein Verhalten auf andere wirkt."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK07"
+  * linkId = "opdsf50"
+  * prefix = "7"
   * code[+] = PcorItemDictionaryCS#OPDSFK07
   * text = "Wenn andere viel über mich wissen, fühle ich mich oft irgendwie kontrolliert oder beobachtet."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK08"
+  * linkId = "opdsf73"
+  * prefix = "8"
   * code[+] = PcorItemDictionaryCS#OPDSFK08
   * text = "Meine Gefühle sind manchmal so intensiv, dass ich Angst bekomme."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK09"
+  * linkId = "opdsf78"
+  * prefix = "9"
   * code[+] = PcorItemDictionaryCS#OPDSFK09
   * text = "Ich bin schon sehr verletzt worden, weil ich mich in einem Menschen getäuscht hatte."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK10"
+  * linkId = "opdsf79"
+  * prefix = "10"
   * code[+] = PcorItemDictionaryCS#OPDSFK10
   * text = "Es fällt mir schwer, zu anderen Kontakt aufzunehmen."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK11"
+  * linkId = "opdsf40"
+  * prefix = "11"
   * code[+] = PcorItemDictionaryCS#OPDSFK11
   * text = "Ich habe kein gutes Selbstbewusstsein."
   * type = #choice
   * answerValueSet = Canonical(OpdSfkAntwortVS)
 * item[+]
-  * linkId = "OPDSFK12"
+  * linkId = "opdsf90"
+  * prefix = "12"
   * code[+] = PcorItemDictionaryCS#OPDSFK12
   * text = "Meine Erfahrung ist: Wenn man Menschen zu sehr vertraut, kann man böse Überraschungen erleben."
   * type = #choice
@@ -212,3 +250,32 @@ Description: "OPD-Strukturfragebogen Kurzform (OPD-SFK): 12 Items, 5-stufige Ska
   * extension[=].valueExpression.name = "opdSfkGlobalwert"
   * extension[=].valueExpression.language = #text/fhirpath
   * extension[=].valueExpression.expression = "%opdSfkSumme"
+
+// ── Subskalen (explorativ, je 4 Items, Summenwert 0-16; Zuordnung: Abbildung 1) ──
+* item[+]
+  * linkId = "opd-sfk-selbstwahrnehmung"
+  * text = "OPD-SFK Subskala Selbstwahrnehmung (Summenwert, 0-16; explorativ)"
+  * type = #decimal
+  * readOnly = true
+  * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+  * extension[=].valueExpression.name = "opdSfkSelbstwahrnehmungScore"
+  * extension[=].valueExpression.language = #text/fhirpath
+  * extension[=].valueExpression.expression = "%opdSfkSelbstwahrnehmung"
+* item[+]
+  * linkId = "opd-sfk-beziehungsmodell"
+  * text = "OPD-SFK Subskala Beziehungsmodell (Summenwert, 0-16; explorativ)"
+  * type = #decimal
+  * readOnly = true
+  * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+  * extension[=].valueExpression.name = "opdSfkBeziehungsmodellScore"
+  * extension[=].valueExpression.language = #text/fhirpath
+  * extension[=].valueExpression.expression = "%opdSfkBeziehungsmodell"
+* item[+]
+  * linkId = "opd-sfk-kontaktgestaltung"
+  * text = "OPD-SFK Subskala Kontaktgestaltung (Summenwert, 0-16; explorativ)"
+  * type = #decimal
+  * readOnly = true
+  * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+  * extension[=].valueExpression.name = "opdSfkKontaktgestaltungScore"
+  * extension[=].valueExpression.language = #text/fhirpath
+  * extension[=].valueExpression.expression = "%opdSfkKontaktgestaltung"

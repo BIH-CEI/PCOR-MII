@@ -53,7 +53,7 @@ PROMIS-16 und PROMIS-29 + Cognitive Function sind **Standortvarianten** (entwede
 | PROPr — PROMIS-Preference Utility | **PCOR-MII** → [`PcorObsDefProprUtility`](ObservationDefinition-PcorObsDefProprUtility.html) — vorläufig, Zuständigkeit upstream | [PROMIS-16](PROMIS-16.html#propr) |
 | PROMIS-Domänen-T-Scores (PROMIS-29) | **MII PRO** — acht `ObservationDefinition`s im Paket | [PROMIS-29](PROMIS-29.html) |
 | PROMIS-Domänen-T-Scores (PROMIS-16) | **offen** — upstream Roadmap 2027 | [PROMIS-16](PROMIS-16.html) |
-| OPD-SFK Globalwert | **PCOR-MII** — berechnetes Item `opd-sfk-globalwert` im Bogen | [OPD-SFK](OPD-SFK.html) |
+| OPD-SFK Globalwert und drei explorative Subskalen | **PCOR-MII** — berechnete Items `opd-sfk-globalwert`, `opd-sfk-selbstwahrnehmung`, `opd-sfk-beziehungsmodell`, `opd-sfk-kontaktgestaltung` im Bogen | [OPD-SFK](OPD-SFK.html) |
 | EQ-5D-5L Index | **MII PRO** — Index-Score und CQL upstream | — |
 
 ### PHQ-Familie in PSS

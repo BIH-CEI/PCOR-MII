@@ -66,7 +66,7 @@ The **Shows** column names what the response demonstrates beyond mere validity. 
 |---|---|---|
 | [DEMPSSResponse](QuestionnaireResponse-DEMPSSResponse.html) | [DEM](Questionnaire-DEM.html) | demographics of the PSS patient |
 | [MHIPSSResponse](QuestionnaireResponse-MHIPSSResponse.html) | [MHI](Questionnaire-MHI.html) | medical history **without** the AN group; diagnosis, anthropometry and medication of the PSS history |
-| [OPDSFKResponse](QuestionnaireResponse-OPDSFKResponse.html) | [OPDSFK](Questionnaire-OPDSFK.html) | twelve items and the calculated global score (sum 26 of 48; until 0.9.0 this wrongly held a mean) |
+| [OPDSFKResponse](QuestionnaireResponse-OPDSFKResponse.html) | [OPDSFK](Questionnaire-OPDSFK.html) | twelve items, the calculated global score (sum 26 of 48; until 0.9.0 this wrongly held a mean) and the three exploratory subscales (11, 8, 7) |
 | [GSLTPAQResponse](QuestionnaireResponse-GSLTPAQResponse.html) | [GSLTPAQ](Questionnaire-GSLTPAQ.html) | leisure-time activity |
 | [EXPECTResponse](QuestionnaireResponse-EXPECTResponse.html) | [EXPECT](Questionnaire-EXPECT.html) | three NRS values on the expected course |
 | [IPQSResponse](QuestionnaireResponse-IPQSResponse.html) | [IPQS](Questionnaire-IPQS.html) | open causal question as free text |

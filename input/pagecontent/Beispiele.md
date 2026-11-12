@@ -66,7 +66,7 @@ Die Spalte **Zeigt** nennt, was die Antwort über die bloße Gültigkeit hinaus 
 |---|---|---|
 | [DEMPSSResponse](QuestionnaireResponse-DEMPSSResponse.html) | [DEM](Questionnaire-DEM.html) | Soziodemographie des PSS-Patienten |
 | [MHIPSSResponse](QuestionnaireResponse-MHIPSSResponse.html) | [MHI](Questionnaire-MHI.html) | Vorgeschichte **ohne** die AN-Gruppe; Diagnose, Anthropometrie und Medikation der PSS-Geschichte |
-| [OPDSFKResponse](QuestionnaireResponse-OPDSFKResponse.html) | [OPDSFK](Questionnaire-OPDSFK.html) | zwölf Items und der berechnete Globalwert (Summe 26 von 48; bis 0.9.0 stand hier fälschlich ein Mittelwert) |
+| [OPDSFKResponse](QuestionnaireResponse-OPDSFKResponse.html) | [OPDSFK](Questionnaire-OPDSFK.html) | zwölf Items, der berechnete Globalwert (Summe 26 von 48; bis 0.9.0 stand hier fälschlich ein Mittelwert) und die drei explorativen Subskalen (11, 8, 7) |
 | [GSLTPAQResponse](QuestionnaireResponse-GSLTPAQResponse.html) | [GSLTPAQ](Questionnaire-GSLTPAQ.html) | Freizeitaktivität |
 | [EXPECTResponse](QuestionnaireResponse-EXPECTResponse.html) | [EXPECT](Questionnaire-EXPECT.html) | drei NRS-Werte zur Verlaufserwartung |
 | [IPQSResponse](QuestionnaireResponse-IPQSResponse.html) | [IPQS](Questionnaire-IPQS.html) | offene Ursachenfrage als Freitext |
