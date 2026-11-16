@@ -28,7 +28,6 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 | EXPECT | • | — | — | [Seite](EXPECT.html) | [EXPECT](Questionnaire-EXPECT.html) | [✓](QuestionnaireResponse-EXPECTResponse.html) | — |
 | PHQ-D Panik-Block | • | — | — | [Seite](PHQ-Panik.html) | [PHQPANIK](Questionnaire-PHQPANIK.html) | [✓](QuestionnaireResponse-PHQPANIKResponse.html) | — |
 | BAASIS | — | — | • | [Seite](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) (metadata-only) | [Beispiel](QuestionnaireResponse-BAASISResponse.html) | — |
-| ABQ | — | — | • | [Seite](NTx-Instrumente.html) | [ABQ](Questionnaire-ABQ.html) (metadata-only) | [Beispiel](QuestionnaireResponse-ABQResponse.html) | — |
 | MTSOSD-R59 | — | — | • | [Seite](NTx-Instrumente.html) | [MTSOSDR59](Questionnaire-MTSOSDR59.html) (metadata-only) | [Beispiel](QuestionnaireResponse-MTSOSDR59Response.html) | — |
 | MHI-NTx — Transplantationsanamnese | — | — | • | [Seite](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | [MHINTX](Questionnaire-MHINTX.html) | [Beispiel](QuestionnaireResponse-MHINTXResponse.html) | — |
 | NTx-Verlaufsbefragung (MHH) | — | — | • | [Seite](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.html) | [Beispiel](QuestionnaireResponse-NTXVERLAUFResponse.html) | — |
@@ -51,7 +50,7 @@ Sortierung: erst die projektübergreifenden Sammelbögen, dann nach Use-Case-Bre
 
 ### Beispielpatienten und Bundles
 
-Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 46 Beispielantworten sind auf der Seite [Beispiele](Beispiele.html) beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.
+Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 45 Beispielantworten sind auf der Seite [Beispiele](Beispiele.html) beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.
 
 <a name="use-cases"></a>
 
@@ -83,11 +82,11 @@ Fachliche Beschreibung und Instrumententabelle: [AN](AN.html). **Maschinenlesbar
 
 Fachliche Beschreibung: [NTx](NTx.html). Das Domain Overview trennt **Empfänger (NTXr)** und **Spender (NTXd)** mit eigenen Prioritätsprofilen; seit 2026-11-05 gibt es für beide ein Manifest.
 
-**Maschinenlesbar:** [Library/use-case-ntxr](Library-use-case-ntxr.html) pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs [BAASIS, ABQ und MTSOSD-R59](NTx-Instrumente.html), die Transplantationsanamnese [MHI-NTx](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) und die [NTx-Verlaufsbefragung](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh). [Library/use-case-ntxd](Library-use-case-ntxd.html) enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.
+**Maschinenlesbar:** [Library/use-case-ntxr](Library-use-case-ntxr.html) pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs [BAASIS und MTSOSD-R59](NTx-Instrumente.html), die Transplantationsanamnese [MHI-NTx](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) und die [NTx-Verlaufsbefragung](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh). [Library/use-case-ntxd](Library-use-case-ntxd.html) enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.
 
 | Instrument | Doku | `Questionnaire` | Beispielantwort |
 |---|---|---|---|
-| BAASIS, ABQ, MTSOSD-R59 (metadata-only) | [NTx-Instrumente](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) · [ABQ](Questionnaire-ABQ.html) · [MTSOSDR59](Questionnaire-MTSOSDR59.html) | [BAASIS](QuestionnaireResponse-BAASISResponse.html) · [ABQ](QuestionnaireResponse-ABQResponse.html) · [MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.html) |
+| BAASIS, MTSOSD-R59 (metadata-only) | [NTx-Instrumente](NTx-Instrumente.html) | [BAASIS](Questionnaire-BAASIS.html) · [MTSOSDR59](Questionnaire-MTSOSDR59.html) | [BAASIS](QuestionnaireResponse-BAASISResponse.html) · [MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.html) |
 | MHI-NTx — Transplantationsanamnese | [NTx-Instrumente](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | [MHINTX](Questionnaire-MHINTX.html) | [Beispiel](QuestionnaireResponse-MHINTXResponse.html) |
 | NTx-Verlaufsbefragung (MHH) | [NTx-Instrumente](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.html) | [Beispiel](QuestionnaireResponse-NTXVERLAUFResponse.html) |
 | DEM, MHI, WAI, PROMIS, WHODAS, PHQ-8, GAD-7, EURONET-SOMA, EQ-5D-5L | s. Gesamttabelle | s. Gesamttabelle | — |

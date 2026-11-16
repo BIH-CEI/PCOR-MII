@@ -64,7 +64,7 @@ BUNDLES = {
         "timestamp": "2026-10-06T10:30:00+02:00",
         "patient": "pcor-mii-exa-patient-ntx",
         "fsh": ["MHINTXResponse", "NTXVERLAUFResponse", "BAASISResponse",
-                "ABQResponse", "MTSOSDR59Response"],
+                "MTSOSDR59Response"],
         "json": [],
     },
 }

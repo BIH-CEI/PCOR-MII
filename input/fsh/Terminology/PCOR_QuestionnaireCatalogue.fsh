@@ -80,7 +80,6 @@ Description: "Ein Code je PCOR-MII-eigenem Questionnaire, für `Questionnaire.co
 
 // ── NTx-spezifisch, in PCOR-MII gepflegt (alle metadata-only, ADR-012) ───────
 * #baasis "BAASIS" "Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)"
-* #abq "ABQ" "Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann & Wilke 2015)"
 * #mtsosd-r59 "MTSOSD-R59" "Modified Transplant Symptom Occurrence and Symptom Distress Scale, 59 Symptome plus 3 Freitextsymptome, je Auftreten und Belastung (metadata-only, © KU Leuven)"
 
 // ── NTx-Standortitems (MHH), in PCOR-MII gepflegt ────────────────────────────

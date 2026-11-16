@@ -25,12 +25,13 @@
 //   maschinell auswertet.
 //
 // VIER USE-CASE-MANIFESTE (seit 2026-11-05): NTXr und NTXd waren bis dahin zurueckgestellt
-//   ("Instrumente nicht publizierbar und nicht modelliert"). Beides ist erledigt: BAASIS,
-//   ABQ und MTSOSD-R59 als metadata-only-Stubs (ADR-012), die MHH-Standortitems als
+//   ("Instrumente nicht publizierbar und nicht modelliert"). Beides ist erledigt: BAASIS
+//   und MTSOSD-R59 als metadata-only-Stubs (ADR-012), die MHH-Standortitems als
 //   MHI-NTx und NTx-Verlaufsbefragung. NTXd (Spender) hat laut Domain Overview KEINE
 //   spezifischen Instrumente und kein Monitoring — sein Manifest ist die generische
 //   Batterie; NTXr (Empfaenger) ergaenzt WAI (dort Prio A statt B), die drei Stubs, MHI-NTx
-//   und die Verlaufsbefragung. PHQ-15 ist in NTx NICHT gepinnt: Das Domain Overview fuehrt
+//   und die Verlaufsbefragung. Der ABQ wurde am 2026-11-16 wieder entfernt (Lizenz:
+//   seine Daten duerfen nicht ins DIZ). PHQ-15 ist in NTx NICHT gepinnt: Das Domain Overview fuehrt
 //   es nur fuer PSS, das Dictionary-Blatt NTx dagegen mit — Widerspruch, bei der
 //   Use-Case-Leitung offen. EQ-5D-5L (Outcome, Prio A, jaehrlich, alle Use Cases) ist seit
 //   2026-11-05 in allen Manifesten; gepinnt wird die Modul-Variante "collectable"
@@ -68,7 +69,7 @@ Description: "Die vier klinischen Use Cases des PCOR-MII-Erhebungsplans (Blatt D
 * ^content = #complete
 * #pss "PSS — Persistierende somatische Symptome"
 * #an "AN — Anorexia nervosa"
-* #ntxr "NTXr — Nierentransplantation, Empfänger" "Generische Batterie plus BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A."
+* #ntxr "NTXr — Nierentransplantation, Empfänger" "Generische Batterie plus BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A."
 * #ntxd "NTXd — Nierentransplantation, Spender" "Nur die generische Batterie: laut Domain Overview keine spezifischen Instrumente und kein Monitoring."
 * #pilot-50fp "Pilot „50 First Patients“ — gemeinsamer Kern aller Use Cases" "Kein klinischer Use Case, sondern das Pilotprogramm des Datenaustauschs. Das Manifest enthält genau die Bögen, die in PSS, AN und NTx erhoben werden (Schnittmenge des Erhebungsplans)."
 
@@ -188,7 +189,7 @@ Instance: use-case-ntxr
 InstanceOf: Library
 Usage: #definition
 Title: "Use-Case-Manifest NTXr — Nierentransplantation, Empfänger"
-Description: "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS, ABQ und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen."
+Description: "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen."
 * insert InstanceVersion
 * url = "https://bih-cei.github.io/PCOR-MII/Library/use-case-ntxr"
 * name = "UseCaseNTXr"
@@ -201,7 +202,6 @@ Description: "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger e
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/WAI|0.9.0, WAI — Work Ability Score [metadata-only; in NTx Prio A])
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0, PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul])
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/BAASIS|0.9.0, BAASIS — Adhärenz Immunsuppression [metadata-only; Monitoring quartalsweise\, Prio A])
-* insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ|0.9.0, ABQ — Adhärenzbarrieren [metadata-only; nur bei BAASIS-Nonadhärenz\, Prio A])
 * insert Komponiert(https://bih-cei.github.io/PCOR-MII/Questionnaire/MTSOSDR59|0.9.0, MTSOSD-R59 — Symptomlast Immunsuppression [metadata-only; Monitoring quartalsweise\, Umfang offen])
 // ── MII-PRO-Bögen (Paketabhängigkeit 2027.0.0-ballot.2) ──────────────────────────────
 * insert KomponiertVariante(https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/Questionnaire/mii-qst-pro-promis-16|2027.0.0-ballot.2, PROMIS-16 — Standortvariante kurz, Standortvariante kurz: PROMIS-16)

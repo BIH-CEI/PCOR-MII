@@ -37,8 +37,9 @@
 //   Implementierungsproblem = "ja" bei 1A, 1B, 2 oder 3. Nicht-Persistenz = "ja" bei 4.
 //   Nicht-Initiierung = "ja" bei 5 und "nein" bei 5_a (Anteil nur unter Neuverordneten).
 //   Nur dokumentiert, NICHT als Ausdruck ausgeliefert (calculatable = false).
-//   PCOR-MII-Auslöser für den ABQ laut Dictionary: "ja" bei 1A, 2, 3 oder 4 — das ist
-//   Implementierungs- ODER Persistenzproblem (1B setzt 1A = ja voraus), siehe ABQ.fsh.
+//   Das Dictionary nutzte "ja" bei 1A, 2, 3 oder 4 (Implementierungs- ODER Persistenz-
+//   problem, 1B setzt 1A = ja voraus) als Auslöser für den ABQ; der ABQ ist seit
+//   2026-11-16 nicht mehr im IG (Lizenz: Daten dürfen nicht ins DIZ).
 //
 // LIZENZ (Website, Terms of Use): Erlaubnis je Projekt über das Formular; keine Gebühr
 //   genannt; wortgleiche Veröffentlichung von Items oder Skala untersagt; Publikationen
@@ -204,7 +205,7 @@ Description: "Basel Assessment of Adherence to Immunosuppressive Medications Sca
 * extension[=].extension[=].valueBoolean = false
 // Designentscheidungen maschinenlesbar
 * extension[+].url = $designNote
-* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Typen und Bedingungen sind abgebildet; Item-Texte sind neutrale Labels, Antwortstufen neutral benannt (Rechteinhaber Universität Basel, Veröffentlichung der Items nicht erlaubt, jedes Zentrum braucht eine eigene Lizenzvereinbarung). (2) **Kein Gesamtscore:** Die offizielle Auswertung bewertet die drei Phasen der ABC-Taxonomie getrennt — Implementierungsproblem bei „ja“ in 1A, 1B, 2 oder 3, Nicht-Persistenz bei „ja“ in 4, Nicht-Initiierung bei „ja“ in 5 und „nein“ in 5_a; nur dokumentiert, nicht als Ausdruck ausgeliefert. Der PCOR-MII-Auslöser für den ABQ („ja“ in 1A, 2, 3 oder 4) entspricht Implementierungs- oder Persistenzproblem. (3) **Bedingungen:** 1A_a bei 1A = ja, 1B bei 1A = ja, 1B_a bei 1B = ja, 2_a bei 2 = ja, 5_a bei 5 = ja; Items 1A–3 blicken 4 Wochen zurück, 4 und 5 ein Jahr. (4) **Item 5 ist seit der Version 2020 offizieller Bestandteil** (Initiierung), kein PCOR-MII-Zusatz. (5) **Zwei Häufigkeitsskalen:** 1A_a/1B_a zählen Ereignisse, 2_a ist laut Dictionary eine Raten-Skala und hat deshalb ein eigenes ValueSet; die offizielle Erläuterung nennt für alle drei dieselben Anzahl-Kategorien, die Abweichung ist gegen den lizenzierten deutschen Bogen zu prüfen. (6) **Keine Instrumenten-Codes:** Recherche in LOINC 2.83 und SNOMED CT (2026-11-05) ohne Treffer; LOINC 71799-1 ist ein generisches Adhärenz-Konzept, kein BAASIS-Panel. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
+* extension[=].valueMarkdown = "**Designentscheidungen:** (1) **Metadata-only** nach dem Muster des [WAI](WAI.html): Struktur, `linkId`s, Typen und Bedingungen sind abgebildet; Item-Texte sind neutrale Labels, Antwortstufen neutral benannt (Rechteinhaber Universität Basel, Veröffentlichung der Items nicht erlaubt, jedes Zentrum braucht eine eigene Lizenzvereinbarung). (2) **Kein Gesamtscore:** Die offizielle Auswertung bewertet die drei Phasen der ABC-Taxonomie getrennt — Implementierungsproblem bei „ja“ in 1A, 1B, 2 oder 3, Nicht-Persistenz bei „ja“ in 4, Nicht-Initiierung bei „ja“ in 5 und „nein“ in 5_a; nur dokumentiert, nicht als Ausdruck ausgeliefert. (3) **Bedingungen:** 1A_a bei 1A = ja, 1B bei 1A = ja, 1B_a bei 1B = ja, 2_a bei 2 = ja, 5_a bei 5 = ja; Items 1A–3 blicken 4 Wochen zurück, 4 und 5 ein Jahr. (4) **Item 5 ist seit der Version 2020 offizieller Bestandteil** (Initiierung), kein PCOR-MII-Zusatz. (5) **Zwei Häufigkeitsskalen:** 1A_a/1B_a zählen Ereignisse, 2_a ist laut Dictionary eine Raten-Skala und hat deshalb ein eigenes ValueSet; die offizielle Erläuterung nennt für alle drei dieselben Anzahl-Kategorien, die Abweichung ist gegen den lizenzierten deutschen Bogen zu prüfen. (6) **Keine Instrumenten-Codes:** Recherche in LOINC 2.83 und SNOMED CT (2026-11-05) ohne Treffer; LOINC 71799-1 ist ein generisches Adhärenz-Konzept, kein BAASIS-Panel. Details: <https://bih-cei.github.io/PCOR-MII/Designentscheidungen.html>"
 
 * item[+]
   * linkId = "BAASIS1A"
