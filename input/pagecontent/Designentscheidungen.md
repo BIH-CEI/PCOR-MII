@@ -31,7 +31,7 @@ Entscheidungslog für den PCOR-MII IG — die Architektur-Entscheidungen (ADRs),
 - **Austauschregel.** Eine `QuestionnaireResponse` referenziert beim Export die **öffentliche Definition** (mit Versionspin), nicht die Variante, und führt `item.text` leer oder neutral. Damit ist jede Antwort gegen das öffentliche Package validierbar und trägt keinen geschützten Wortlaut.
 - **Prüfregel.** Vor jedem Release ein Strukturvergleich der Antwort-Items beider Fassungen; Abweichungen außer `text` und Display-Items sind ein Fehler.
 
-**Geltung.** MTSOSD-R59 (umgesetzt), BAASIS und ABQ (vorgesehen), WAI bis zur Klärung des deutschen Wortlauts. Bögen mit freiem Wortlaut bleiben eine Ressource. Präzisiert ADR-012: „nie in einem Package" heißt nie in einem *veröffentlichten* Package.
+**Geltung.** MTSOSD-R59 (umgesetzt), BAASIS (vorgesehen; der ABQ ist seit 2026-11-16 nicht mehr im IG, siehe [Rechtelage](Rechtelage.html#ntx)), WAI bis zur Klärung des deutschen Wortlauts. Bögen mit freiem Wortlaut bleiben eine Ressource. Präzisiert ADR-012: „nie in einem Package" heißt nie in einem *veröffentlichten* Package.
 
 **Offen.** Lizenzschranke je Standort im Proxy des Fragebogen-Servers (Regel über `meta.tag` oder den Canonical-Namensraum der Variante); Build-Skript für das private Package; Seiten Bereitstellung und Validierung nachziehen.
 

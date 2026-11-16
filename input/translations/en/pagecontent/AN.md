@@ -90,7 +90,7 @@ The AN example responses belong to **one** patient ([pcor-mii-exa-patient-an](Pa
 
 ### Not collected in AN
 
-For delimitation, because these instruments exist in PCOR-MII and sit next to the AN ones in the overall table: **PSS-only** are [PHQ-D panic block](PHQ-Panik.html), [PC-PTSD](PC-PTSD.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [SSD-12](SSD-12.html), [Whiteley-7](WI-7.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html) and the UKE healthcare-utilisation items. **NTx-only** are [BAASIS, ABQ, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire](NTx.html).
+For delimitation, because these instruments exist in PCOR-MII and sit next to the AN ones in the overall table: **PSS-only** are [PHQ-D panic block](PHQ-Panik.html), [PC-PTSD](PC-PTSD.html), [SCOFF](SCOFF.html), [ISR-Z](ISR-Z.html), [SSD-12](SSD-12.html), [Whiteley-7](WI-7.html), [EXPECT](EXPECT.html), [IPQ-S](IPQ-S.html), [GSLTPAQ](GSLTPAQ.html) and the UKE healthcare-utilisation items. **NTx-only** are [BAASIS, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire](NTx.html).
 
 ### Rights and status
 

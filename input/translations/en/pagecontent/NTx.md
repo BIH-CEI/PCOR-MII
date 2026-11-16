@@ -35,16 +35,16 @@ Not in NTx: OPD-SFK (PSS and AN only) and PHQ-SI. PROMIS-16 and PROMIS-29 + Cogn
 | MHI-NTx — transplant history (`MHH-DON`, `MHH-Tx-DATE`, `MHH-PRIOR-TX`) | TCH | 3 | Screening, priority A | **PCOR-MII** → [`MHINTX`](Questionnaire-MHINTX.html) — supplement to the MHI | [NTx instruments](NTx-Instrumente.html#mhi-ntx-transplantationsanamnese) | [MHINTXResponse](QuestionnaireResponse-MHINTXResponse.html) |
 | NTx follow-up questionnaire (MHH) — eight `MHH-*` groups as one questionnaire | DCH, TCH | 18 | Quarterly monitoring, priority A/B | **PCOR-MII** → [`NTXVERLAUF`](Questionnaire-NTXVERLAUF.html) | [NTx instruments](NTx-Instrumente.html#ntx-verlaufsbefragung-mhh) | [NTXVERLAUFResponse](QuestionnaireResponse-NTXVERLAUFResponse.html) |
 | BAASIS — adherence to immunosuppression | TCH | 10 | Quarterly monitoring, priority A | **PCOR-MII** → [`BAASIS`](Questionnaire-BAASIS.html) — **metadata-only** | [NTx instruments](NTx-Instrumente.html#baasis) | [BAASISResponse](QuestionnaireResponse-BAASISResponse.html) |
-| ABQ — adherence barriers | TCH | 16 | Only on indication of non-adherence in the BAASIS, priority A | **PCOR-MII** → [`ABQ`](Questionnaire-ABQ.html) — **metadata-only**, sum score 16–64 | [NTx instruments](NTx-Instrumente.html#abq) | [ABQResponse](QuestionnaireResponse-ABQResponse.html) |
 | MTSOSD-R59 — symptom burden of immunosuppression | MSE | 126 | Quarterly monitoring; scope open (full questionnaire or tremor/diarrhoea only) | **PCOR-MII** → [`MTSOSDR59`](Questionnaire-MTSOSDR59.html) — **metadata-only**, no score (cohort-relative ridit analysis) | [NTx instruments](NTx-Instrumente.html#mtsosd-r59) | [MTSOSDR59Response](QuestionnaireResponse-MTSOSDR59Response.html) |
 
-BAASIS and ABQ are linked: the ABQ is collected only when the BAASIS indicates non-adherence — a condition between two questionnaires that is not modelled as `enableWhen` but drives the calling process. The three licensed instruments are set up as **variant pairs** per [ADR-014](Designentscheidungen.html): the public definition here carries structure, `linkId`s, answer formats and conditions without the original wording; the collectable variant with wording lives outside the IG and is delivered to licensed centres only.
+The two licensed instruments BAASIS and MTSOSD-R59 are set up as **variant pairs** per [ADR-014](Designentscheidungen.html): the public definition here carries structure, `linkId`s, answer formats and conditions without the original wording; the collectable variant with wording lives outside the IG and is delivered to licensed centres only.
+
+> **ABQ removed (2026-11-16):** The *Adherence Barriers Questionnaire* (Müller, Kohlmann & Wilke 2015) was included up to 0.9.0 as a metadata-only stub with a sum score. For licensing reasons its data must not be transmitted to the DIZ; the questionnaire, its answer scale, the dictionary codes `ABQ_01`–`ABQ_16`, the example response and the entry in the NTx manifest have therefore been removed. The BAASIS trigger condition (non-adherence) is void within the IG. See [Legal situation](Rechtelage.html#ntx).
 
 **Scores**
 
 | Score | Resource | Docs |
 |---|---|---|
-| ABQ sum score 16–64 | **PCOR-MII** — calculated item `abq-summe` in the questionnaire | [NTx instruments](NTx-Instrumente.html#abq) |
 | BAASIS — three phases (implementation, persistence, initiation) | documented only, no expression | [NTx instruments](NTx-Instrumente.html#baasis) |
 | MTSOSD-R59 — ridit analysis | deliberately no artefact: cohort-dependent, belongs to the analysis | [NTx instruments](NTx-Instrumente.html#mtsosd-r59) |
 | PROPr, PROMIS T-scores, EQ-5D-5L index | as in [PSS](PSS.html) and [AN](AN.html) | — |
@@ -53,19 +53,19 @@ BAASIS and ABQ are linked: the ABQ is collected only when the BAASIS indicates n
 
 | | NTXr — recipients | NTXd — donors |
 |---|---|---|
-| Manifest | [use-case-ntxr](Library-use-case-ntxr.html), 17 questionnaires | [use-case-ntxd](Library-use-case-ntxd.html), 12 questionnaires |
+| Manifest | [use-case-ntxr](Library-use-case-ntxr.html), 16 questionnaires | [use-case-ntxd](Library-use-case-ntxd.html), 12 questionnaires |
 | Generic battery | yes | yes |
-| MHI-NTx, follow-up questionnaire, BAASIS, ABQ, MTSOSD-R59 | yes | no |
+| MHI-NTx, follow-up questionnaire, BAASIS, MTSOSD-R59 | yes | no |
 | Monitoring | quarterly (follow-up questionnaire, BAASIS, MTSOSD-R59) | no monitoring according to the plan |
 
 The MHI has no entity switch; which questionnaires a use case collects is determined by its manifest. The recipient manifest therefore pins MHI **and** MHI-NTx, the donor manifest only the MHI ([ADR-011](Designentscheidungen.html)).
 
 ### Example data set
 
-The NTx example patient ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)) is the recipient of a living-donor kidney; the [bundle NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) (6 October 2026) combines screening and the first quarterly monitoring, with the three metadata-only responses to BAASIS, ABQ and MTSOSD-R59. Profile, values and what each response demonstrates: [Examples](Beispiele.html).
+The NTx example patient ([pcor-mii-exa-patient-ntx](Patient-pcor-mii-exa-patient-ntx.html)) is the recipient of a living-donor kidney; the [bundle NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html) (6 October 2026) combines screening and the first quarterly monitoring, with the two metadata-only responses to BAASIS and MTSOSD-R59. Profile, values and what each response demonstrates: [Examples](Beispiele.html).
 
 ### Rights and status
 
-BAASIS (© University of Basel), MTSOSD-R59 (© KU Leuven) and ABQ are free for research use, but their items and answer options must not be published; every centre needs its own licence agreement, for the BAASIS with data sharing to the validation project of the University of Basel. The MHH site items (MHI-NTx, follow-up questionnaire) have no documented clearance. Sources, licence conditions and the open questions (licensee per project or per centre, rate scale BAASIS 2_a, ABQ polarity, MTSOSD scope, MAPI version): [Rights and open points](Rechtelage.html#ntx).
+BAASIS (© University of Basel) and MTSOSD-R59 (© KU Leuven) are free for research use, but their items and answer options must not be published; every centre needs its own licence agreement, for the BAASIS with data sharing to the validation project of the University of Basel. The MHH site items (MHI-NTx, follow-up questionnaire) have no documented clearance. Sources, licence conditions and the open questions (licensee per project or per centre, rate scale BAASIS 2_a, MTSOSD scope, MAPI version): [Rights and open points](Rechtelage.html#ntx).
 
 Sources of this page: sheets `Item Level Dictionary NTx` and `Domain Overview` of the Item Level Dictionary (not part of this repository), DIZ implementation list PCOR-MII; the assignment matches the manifests [use-case-ntxr](Library-use-case-ntxr.html) and [use-case-ntxd](Library-use-case-ntxd.html). Notes on the lifecycle from `Questionnaire` to `QuestionnaireResponse` are under [Implementation](Implementation.html); all artefacts under [Artifacts](artifacts.html).

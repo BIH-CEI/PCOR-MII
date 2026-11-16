@@ -4,10 +4,10 @@
 // Ein synthetischer Empfänger einer Nierentransplantation (Lebendspende
 // 14.11.2024, erste Spenderniere, vorher Hämodialyse in der Praxis) mit einem
 // Erhebungstermin, an dem Screening (MHI-NTx) und das erste quartalsweise
-// Monitoring (NTx-Verlaufsbefragung, BAASIS, ABQ, MTSOSD-R59) zusammenfallen.
+// Monitoring (NTx-Verlaufsbefragung, BAASIS, MTSOSD-R59) zusammenfallen.
 // Bundle: pcor-mii-exa-bundle-ntx-erstbefragung (scripts/build-example-bundles.py).
 //
-// Die Antworten zu BAASIS, ABQ und MTSOSD-R59 belegen das metadata-only-Muster
+// Die Antworten zu BAASIS und MTSOSD-R59 belegen das metadata-only-Muster
 // (ADR-012/ADR-014): nur linkIds und Codes, kein Wortlaut. Nur Items mit
 // erfüllter enableWhen-Bedingung sind beantwortet (Belastung nur bei Auftreten
 // ungleich Stufe 0; keine Freitext-Symptome 60–62).
@@ -170,69 +170,6 @@ Description: "Beispielantwort zum BAASIS (metadata-only) für den NTx-Termin: Im
 * item[+]
   * linkId = "BAASIS5_a"
   * answer.valueCoding = $SCT#373066001 "Yes"
-
-Instance: ABQResponse
-InstanceOf: QuestionnaireResponse
-Usage: #example
-Title: "ABQ — Beispielantwort"
-Description: "Beispielantwort zum ABQ (metadata-only) für den NTx-Termin, ausgelöst durch das Implementierungsproblem im BAASIS: überwiegend niedrige Barrieren, drei Items auf Stufe 3; Summe 26 (Bereich 16–64) im berechneten Item `abq-summe`. **Belegt das metadata-only-Muster:** nur `linkId`s und Codes, kein Wortlaut."
-* meta.profile = $mii-pro-questionnaire-response
-* language = #de-DE
-* insert QuestionnaireRef(https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ)
-* status = #completed
-* subject = Reference(pcor-mii-exa-patient-ntx)
-* authored = "2026-10-06T10:00:00+02:00"
-* item[+]
-  * linkId = "ABQ_01"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "ABQ_02"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_03"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_04"
-  * answer.valueCoding = AbqSkala4CS#stufe-3 "Stufe 3"
-* item[+]
-  * linkId = "ABQ_05"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "ABQ_06"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_07"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_08"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "ABQ_09"
-  * answer.valueCoding = AbqSkala4CS#stufe-3 "Stufe 3"
-* item[+]
-  * linkId = "ABQ_10"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_11"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_12"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "ABQ_13"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "ABQ_14"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_15"
-  * answer.valueCoding = AbqSkala4CS#stufe-1 "Stufe 1"
-* item[+]
-  * linkId = "ABQ_16"
-  * answer.valueCoding = AbqSkala4CS#stufe-2 "Stufe 2"
-* item[+]
-  * linkId = "abq-summe"
-  * answer.valueDecimal = 26
 
 Instance: MTSOSDR59Response
 InstanceOf: QuestionnaireResponse
