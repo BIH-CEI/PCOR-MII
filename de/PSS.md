@@ -78,7 +78,7 @@ Der **PHQ-D-Panik-Block** (`phq3a`–`phq3d`) ist etwas anderes als PHQ-4: vier 
 * **Nur in PSS**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, der PHQ-D-Panik-Block, EXPECT, IPQ-S, GSLTPAQ sowie die UKE-Versorgungsitems. PHQ-15 führt das Domain Overview nur für PSS (das Dictionary-Blatt NTx aber auch — siehe [NTx](NTx.md)).
 * **PSS und AN gemeinsam**: OPD-SFK (von einzelnen Standorten erhoben, keine direkte Empfehlung der Use-Case-Leitung) und PHQ-SI.
 * **Nur in AN**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE sowie die UKHD-Zusatzbögen — siehe [AN](AN.md).
-* **Nur in NTx**: BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung — siehe [NTx](NTx.md).
+* **Nur in NTx**: BAASIS, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung — siehe [NTx](NTx.md).
 
 ### Beispieldatensatz
 

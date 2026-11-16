@@ -554,16 +554,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>—</td>
     </tr>
     <tr>
-      <td>ABQ</td>
-      <td style="text-align: center">—</td>
-      <td style="text-align: center">—</td>
-      <td style="text-align: center">•</td>
-      <td><a href="NTx-Instrumente.html">Page</a></td>
-      <td><a href="Questionnaire-ABQ.html">ABQ</a> (metadata-only)</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
       <td>MTSOSD-R59</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
@@ -720,7 +710,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="example-patients-and-bundles">Example patients and bundles</h3>
 
-<p>Three synthetic example patients (AN, PSS, NTx), four visit bundles and 46 example responses are described on the <a href="Beispiele.html">Examples</a> page — with profile, visit, bundle contents and what each response demonstrates. The tables above list the example response per questionnaire.</p>
+<p>Three synthetic example patients (AN, PSS, NTx), four visit bundles and 45 example responses are described on the <a href="Beispiele.html">Examples</a> page — with profile, visit, bundle contents and what each response demonstrates. The tables above list the example response per questionnaire.</p>
 
 <p><a name="use-cases"></a></p>
 
@@ -820,7 +810,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="use-case-ntx--kidney-transplantation">Use case NTx — kidney transplantation</h3>
 
-<p>Clinical description: <a href="NTx.html">NTx</a>. The Domain Overview separates <strong>recipients (NTXr)</strong> and <strong>donors (NTXd)</strong>; both have a manifest since 2026-11-05. <strong>Machine-readable:</strong> <a href="Library-use-case-ntxr.html">Library/use-case-ntxr</a> pins the generic battery plus WAI (priority A in NTx), the metadata-only stubs <a href="NTx-Instrumente.html">BAASIS, ABQ and MTSOSD-R59</a>, the transplant history <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> and the <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx follow-up questionnaire</a>; <a href="Library-use-case-ntxd.html">Library/use-case-ntxd</a> contains only the generic battery. PHQ-15 is not pinned: the Domain Overview lists it for PSS only, the NTx dictionary sheet does include it — to be settled by the use-case lead.</p>
+<p>Clinical description: <a href="NTx.html">NTx</a>. The Domain Overview separates <strong>recipients (NTXr)</strong> and <strong>donors (NTXd)</strong>; both have a manifest since 2026-11-05. <strong>Machine-readable:</strong> <a href="Library-use-case-ntxr.html">Library/use-case-ntxr</a> pins the generic battery plus WAI (priority A in NTx), the metadata-only stubs <a href="NTx-Instrumente.html">BAASIS and MTSOSD-R59</a>, the transplant history <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> and the <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx follow-up questionnaire</a>; <a href="Library-use-case-ntxd.html">Library/use-case-ntxd</a> contains only the generic battery. PHQ-15 is not pinned: the Domain Overview lists it for PSS only, the NTx dictionary sheet does include it — to be settled by the use-case lead.</p>
 
 <table>
   <thead>
@@ -833,10 +823,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>BAASIS, ABQ, MTSOSD-R59 (metadata-only)</td>
+      <td>BAASIS, MTSOSD-R59 (metadata-only)</td>
       <td><a href="NTx-Instrumente.html">NTx instruments</a></td>
-      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> · <a href="Questionnaire-ABQ.html">ABQ</a> · <a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a></td>
-      <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASIS</a> · <a href="QuestionnaireResponse-ABQResponse.html">ABQ</a> · <a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSD-R59</a></td>
+      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> · <a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a></td>
+      <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASIS</a> · <a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSD-R59</a></td>
     </tr>
     <tr>
       <td>MHI-NTx — transplant history</td>
@@ -915,8 +905,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

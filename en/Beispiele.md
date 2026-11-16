@@ -4,7 +4,7 @@
 
 **Translated page. Original language: German.**
 
-This page collects **every example of the IG in one place**: three synthetic example patients, four visit bundles and 46 example responses. The use-case pages [PSS](PSS.md), [AN](AN.md) and [NTx](NTx.md) point here; their tables name, per questionnaire, the example response that exercises it.
+This page collects **every example of the IG in one place**: three synthetic example patients, four visit bundles and 45 example responses. The use-case pages [PSS](PSS.md), [AN](AN.md) and [NTx](NTx.md) point here; their tables name, per questionnaire, the example response that exercises it.
 
 The examples are not unconnected test data but **coherent data sets**: every response belongs to one person and one assessment visit, and the answer values are coordinated, not rolled. What is not collected at a visit is **absent** from its bundle rather than present but empty — that is how the `TIMING` column of the Item Level Dictionary becomes visible, which is deliberately not modelled in the questionnaires.
 
@@ -27,7 +27,7 @@ One `Bundle` of type `collection` per assessment visit, with the patient resourc
 | [AN — initial](Bundle-pcor-mii-exa-bundle-an-initial.md) | AN | 2026-06-18 | 13 | DEM, MHI, the five AN instruments and five UKHD questionnaires; UKHD-ND is deliberately absent because none of its items is collected at the initial visit |
 | [AN — monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.md) | AN | 2026-07-30 | 10 | nine follow-up responses six weeks later, slightly improved, not remitted: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, UKHD-PT (only`bdkm16`), UKHD-CT, UKHD-LE, the**first UKHD-ND response**and the metadata-only response to UKHD-EDP. ACE, UKHD-ANB, UKHD-D and`bdkm15`are initial items and are not repeated |
 | [PSS — screening](Bundle-pcor-mii-exa-bundle-pss-screening.md) | PSS | 2026-06-25 | 21 | the complete PSS battery: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI and PHQ-D panic block as PCOR-MII questionnaires plus twelve responses to MII PRO questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function). The full PHQ-9 is answered because the screening visit is an on-site visit with an immediate physician contact |
-| [NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.md) | NTx | 2026-10-06 | 6 | MHI-NTx (screening), NTx follow-up questionnaire and the three**metadata-only responses**to BAASIS, ABQ and MTSOSD-R59 (only`linkId`s and codes, no wording) |
+| [NTx — initial assessment](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.md) | NTx | 2026-10-06 | 5 | MHI-NTx (screening), NTx follow-up questionnaire and the two**metadata-only responses**to BAASIS and MTSOSD-R59 (only`linkId`s and codes, no wording) |
 
 The responses to MII PRO questionnaires are JSON files under `input/examples/` and reference the upstream canonicals with the version pin `|2027.0.0-ballot.2`; the responses to PCOR-MII questionnaires are FHIR Shorthand instances with the pin `|0.9.0`. Both forms sit side by side in the bundle.
 
@@ -97,11 +97,10 @@ The **Shows** column names what the response demonstrates beyond mere validity. 
 | :--- | :--- | :--- |
 | [MHINTXResponse](QuestionnaireResponse-MHINTXResponse.md) | [MHINTX](Questionnaire-MHINTX.md) | transplant history: living donation, date, first graft — ISiKFormularDaten like the MHI |
 | [NTXVERLAUFResponse](QuestionnaireResponse-NTXVERLAUFResponse.md) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.md) | first quarterly monitoring: dialysis history, blood pressure with UCUM units, yes/no as SNOMED CT |
-| [BAASISResponse](QuestionnaireResponse-BAASISResponse.md) | [BAASIS](Questionnaire-BAASIS.md) | occasionally missed doses; only items with a satisfied`enableWhen`condition are answered — and thereby the trigger for the ABQ |
-| [ABQResponse](QuestionnaireResponse-ABQResponse.md) | [ABQ](Questionnaire-ABQ.md) | 16 level values, sum 26 in the calculated item |
+| [BAASISResponse](QuestionnaireResponse-BAASISResponse.md) | [BAASIS](Questionnaire-BAASIS.md) | occasionally missed doses; only items with a satisfied`enableWhen`condition are answered |
 | [MTSOSDR59Response](QuestionnaireResponse-MTSOSDR59Response.md) | [MTSOSDR59](Questionnaire-MTSOSDR59.md) | eleven symptoms present, distress only there; tremor and diarrhoea most distressing; no free-text symptoms |
 
-The responses to BAASIS, ABQ and MTSOSD-R59 carry only `linkId`s and codes, no wording — exactly as responses to licensed questionnaires arrive in exchange ([ADR-014](Designentscheidungen.md)).
+The responses to BAASIS and MTSOSD-R59 carry only `linkId`s and codes, no wording — exactly as responses to licensed questionnaires arrive in exchange ([ADR-014](Designentscheidungen.md)).
 
 ### Validation status
 

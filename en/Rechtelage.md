@@ -14,7 +14,7 @@ The rights situation determines **how** an instrument is modelled — not how im
 
 * **free** — complete questionnaire with item texts, answer options and scoring.
 * **Usage agreement** (PROMIS via CPCOR, WHODAS via WHO, EQ-5D-5L via EuroQol) — complete, but under the respective agreement; conditions in the `copyright` element.
-* **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.md), [UKHD-EDP](UKHD-EDP.md) and [BAASIS, ABQ and MTSOSD-R59](NTx-Instrumente.md). For the three licensed NTx questionnaires a **private collectable variant** is added per [ADR-014](Designentscheidungen.md), delivered to licensed centres only.
+* **metadata-only** — no verbatim items or answers in the published package. Structure, `linkId`s, value ranges, score definition and how to obtain the instrument only. Applies to [WAI](WAI.md), [UKHD-EDP](UKHD-EDP.md) and [BAASIS and MTSOSD-R59](NTx-Instrumente.md). For the two licensed NTx questionnaires a **private collectable variant** is added per [ADR-014](Designentscheidungen.md), delivered to licensed centres only.
 * **clearance open** — the wording is included, but **no documented permission is on record**. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing about the site-specific item groups. Applies to the [UKHD supplementary items](UKHD-Zusatzitems.md), the MHH questionnaires [MHI-NTx and NTx follow-up](NTx-Instrumente.md) and the 34 site items already published in the [MHI](MHI.md). If a restriction emerges, metadata-only per group is the intended remedy.
 
 The source of the rights information is the **DIZ implementation list PCOR-MII** (as of 24 July 2026). Its licence column visibly records **availability for research**, not whether the wording may be passed on in a specification; for every instrument with a published German version the entry has therefore been checked independently. That is a working rule of this project, not legal advice.
@@ -49,7 +49,7 @@ In practice: **freely accessible is not freely reusable.** A publisher offering 
 | `UKHD-BI` | as UKHD supplementary items | not modelled: visual picture scale without picture template | [site groups](#standortgruppen) |
 | [UKHD-EDP](UKHD-EDP.md) | probably an EDI-2 subset (Hogrefe test); neither "EDI" nor "UKHD-EDP" in the DIZ list —**unassessed** | **metadata-only** | [UKHD-EDP](#ukhd-edp) |
 | [BAASIS](NTx-Instrumente.md#baasis) | © University of Basel; research without pharmaceutical involvement free of charge, permission per project,**items and answer options not publishable**, data sharing with the validation project (Term IV) | **metadata-only**+ private collectable variant ([ADR-014](Designentscheidungen.md)) | [NTx](#ntx) |
-| [ABQ](NTx-Instrumente.md#abq) | Müller, Kohlmann & Wilke 2015; licence agreement per centre, items not publishable | **metadata-only**+ private variant | [NTx](#ntx) |
+| ABQ | Müller, Kohlmann & Wilke 2015; licence agreement per centre,**data must not be transmitted to the DIZ** | **removed**(2026-11-16; metadata-only until then) | [NTx](#ntx) |
 | [MTSOSD-R59](NTx-Instrumente.md#mtsosd-r59) | © KU Leuven; German version (MAPI) from the first authors, items not publishable | **metadata-only**+ private variant | [NTx](#ntx) |
 | [MHI-NTx, NTx follow-up](NTx-Instrumente.md)(MHH) | site items, not listed in the DIZ list; trivial factual questions | complete, reservation in`copyright` | [site groups](#standortgruppen) |
 | `UKE-HCU/HCU2/PSE/TR/DOT`(PSS) | site items, not listed in the DIZ list | not modelled | [site groups](#standortgruppen) |
@@ -59,7 +59,6 @@ In practice: **freely accessible is not freely reusable.** A publisher offering 
 | | | |
 | :--- | :--- | :--- |
 | BAASIS | University of Basel | permission:[https://baasis.nursing.unibas.ch/how-to-obtain](https://baasis.nursing.unibas.ch/how-to-obtain) |
-| ABQ | Müller S, Kohlmann T, Wilke T (2015) | licence agreement per centre; route to be clarified |
 | MTSOSD-R59 | KU Leuven | contact: joke.willems@kuleuven.be |
 
 ### Open rights questions
@@ -139,16 +138,16 @@ It also remains sensible to compare the official German PaRIS translation (cApSt
 
 **GI-PS (2 items in DEM, 9 items in MHI) — a genuine distribution restriction.** Quote from the DIZ list: "The ownership, copyright, distribution and publication rights … remain with the respective test authors, i.e. the gi-ps or parts of it may not be modified, translated or passed on to third parties without the consent of the rights holders." (development paper: [10.13109/zptm.2023.69.1.56](https://doi.org/10.13109/zptm.2023.69.1.56)). Unlike the OECD there is no general permission: **consent of the rights holders** is required, otherwise the affected items are to be switched to metadata-only. `Questionnaire.copyright` of DEM and MHI states the reservation. The licence table on [Instruments](Instrumente.md) does not yet list OECD and GI-PS.
 
-#### BAASIS, ABQ, MTSOSD-R59 — licensees, sources, versions
+#### BAASIS, MTSOSD-R59 — licensees, sources, versions
 
 **Status:** open, added 2026-11-05 · **Answer from:** NTx use-case lead, MHH, University of Basel, KU Leuven
 
-The three instruments are metadata-only with a private collectable variant ([ADR-014](Designentscheidungen.md)); the rights are in the table above. Open:
+The two instruments are metadata-only with a private collectable variant ([ADR-014](Designentscheidungen.md)); the rights are in the table above. Open:
 
 * **Licensee:** the University of Basel grants the BAASIS permission **per project** through its online form, the DIZ list speaks of a licence agreement **per centre**. This determines how the licence gate on the questionnaire server is cut (role per site or per project).
 * **Data sharing:** using the BAASIS obliges to share the data with the ongoing validation project of the University of Basel (Term IV). The use-case lead should know that before the licence request. Publications must cite Denhaerynck et al. 2023, Haupenthal et al. 2025 and the website.
 * **BAASIS 2_a:** the dictionary gives a rate scale for sub-question 2_a (from once to almost daily), the official explanation gives the same count categories for all three sub-questions. Whether the rate scale matches the licensed German questionnaire (version 2021) or is a local deviation is to be checked with MHH. Until then both scales are modelled separately.
-* **ABQ:** route to the licence agreement to be clarified. The **polarity** of the weights 1–4 is not verified against the original instrument — the dictionary lists the agreement level with value 1 as first option; whether the level order reflects barrier strength in the expected direction is to be checked before productive use. For `ABQ_01` the dictionary names only BAASIS1A as trigger, for all other items BAASIS1A/2/3/4 — presumably an inconsistency.
+* **ABQ:** **resolved 2026-11-16** — removed from the IG because, for licensing reasons, data from the Adherence Barriers Questionnaire must not be transmitted to the DIZ. Source route, weight polarity and the dictionary inconsistency at `ABQ_01` are thereby moot. Removed: Questionnaire `ABQ`, CodeSystem/ValueSet `abq-skala-4`, catalogue code `abq`, dictionary codes `ABQ_01`–`ABQ_16`, `ABQResponse` (also in the NTx bundle) and the entry in the manifest `use-case-ntxr`.
 * **MTSOSD-R59:** whether MHH uses the German version linguistically validated by the MAPI Research Institute is to be confirmed. And the **collection scope** is open: according to the dictionary the complete questionnaire was collected, the **Domain Overview** sheet lists only the domains tremor and diarrhoea for monitoring (priority A, quarterly, telemonitoring weekly), the **Comments and Questions** sheet asks "complete side effects? Or separate?". The questionnaire is the basis in both cases; a telemonitoring subset of symptoms 16 and 30 would be derived as its own resource via `derivedFrom` ([ADR-008](Designentscheidungen.md)).
 * **PHQ-15 in NTx:** the Domain Overview lists PHQ-15 for PSS only, the NTx dictionary sheet includes it; the NTx manifests therefore do not pin it. Decision of the use-case lead.
 

@@ -337,7 +337,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Diese Seite führt <strong>alle Beispiele des IG an einer Stelle</strong>: drei synthetische Beispielpatient:innen, vier Termin-Bundles und 46 Beispielantworten. Die Use-Case-Seiten <a href="PSS.html">PSS</a>, <a href="AN.html">AN</a> und <a href="NTx.html">NTx</a> verweisen hierher; die Tabellen dort nennen je Bogen die Beispielantwort, die ihn belegt.</p>
+<p>Diese Seite führt <strong>alle Beispiele des IG an einer Stelle</strong>: drei synthetische Beispielpatient:innen, vier Termin-Bundles und 45 Beispielantworten. Die Use-Case-Seiten <a href="PSS.html">PSS</a>, <a href="AN.html">AN</a> und <a href="NTx.html">NTx</a> verweisen hierher; die Tabellen dort nennen je Bogen die Beispielantwort, die ihn belegt.</p>
 
 <p>Die Beispiele sind keine unverbundenen Testdaten, sondern <strong>zusammenhängende Datensätze</strong>: Jede Antwort gehört zu einer Person und einem Erhebungstermin, und die Antwortwerte sind aufeinander abgestimmt, nicht gewürfelt. Was zu einem Termin nicht erhoben wird, <strong>fehlt</strong> in dessen Bundle, statt leer dazustehen — so wird die <code class="language-plaintext highlighter-rouge">TIMING</code>-Spalte des Item Level Dictionary sichtbar, die in den Questionnaires bewusst nicht modelliert ist.</p>
 
@@ -416,8 +416,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html">NTx — Erstbefragung</a></td>
       <td>NTx</td>
       <td>06.10.2026</td>
-      <td style="text-align: right">6</td>
-      <td>MHI-NTx (Screening), NTx-Verlaufsbefragung und die drei <strong>metadata-only-Antworten</strong> zu BAASIS, ABQ und MTSOSD-R59 (nur <code class="language-plaintext highlighter-rouge">linkId</code>s und Codes, kein Wortlaut)</td>
+      <td style="text-align: right">5</td>
+      <td>MHI-NTx (Screening), NTx-Verlaufsbefragung und die beiden <strong>metadata-only-Antworten</strong> zu BAASIS und MTSOSD-R59 (nur <code class="language-plaintext highlighter-rouge">linkId</code>s und Codes, kein Wortlaut)</td>
     </tr>
   </tbody>
 </table>
@@ -699,12 +699,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASISResponse</a></td>
       <td><a href="Questionnaire-BAASIS.html">BAASIS</a></td>
-      <td>gelegentlich vergessene Einnahmen; nur Items mit erfüllter <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bedingung beantwortet — und damit der Auslöser für den ABQ</td>
-    </tr>
-    <tr>
-      <td><a href="QuestionnaireResponse-ABQResponse.html">ABQResponse</a></td>
-      <td><a href="Questionnaire-ABQ.html">ABQ</a></td>
-      <td>16 Stufenwerte, Summe 26 im berechneten Item</td>
+      <td>gelegentlich vergessene Einnahmen; nur Items mit erfüllter <code class="language-plaintext highlighter-rouge">enableWhen</code>-Bedingung beantwortet</td>
     </tr>
     <tr>
       <td><a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSDR59Response</a></td>
@@ -714,7 +709,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Die Antworten zu BAASIS, ABQ und MTSOSD-R59 tragen nur <code class="language-plaintext highlighter-rouge">linkId</code>s und Codes, keinen Wortlaut — genau so, wie Antworten auf lizenzierte Bögen im Austausch ankommen (<a href="Designentscheidungen.html">ADR-014</a>).</p>
+<p>Die Antworten zu BAASIS und MTSOSD-R59 tragen nur <code class="language-plaintext highlighter-rouge">linkId</code>s und Codes, keinen Wortlaut — genau so, wie Antworten auf lizenzierte Bögen im Austausch ankommen (<a href="Designentscheidungen.html">ADR-014</a>).</p>
 
 <h3 id="validierungsstand">Validierungsstand</h3>
 
@@ -772,8 +767,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

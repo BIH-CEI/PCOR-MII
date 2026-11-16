@@ -349,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>frei</strong> — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.</li>
   <li><strong>Nutzungsvereinbarung</strong> (PROMIS via CPCOR, WHODAS via WHO, EQ-5D-5L via EuroQol) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im <code class="language-plaintext highlighter-rouge">copyright</code>-Element.</li>
-  <li><strong>metadata-only</strong> — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft <a href="WAI.html">WAI</a>, <a href="UKHD-EDP.html">UKHD-EDP</a> sowie <a href="NTx-Instrumente.html">BAASIS, ABQ und MTSOSD-R59</a>. Für die drei lizenzierten NTx-Bögen kommt nach <a href="Designentscheidungen.html">ADR-014</a> eine <strong>private erfassbare Variante</strong> hinzu, die nur an lizenzierte Zentren ausgeliefert wird.</li>
+  <li><strong>metadata-only</strong> — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft <a href="WAI.html">WAI</a>, <a href="UKHD-EDP.html">UKHD-EDP</a> sowie <a href="NTx-Instrumente.html">BAASIS und MTSOSD-R59</a>. Für die beiden lizenzierten NTx-Bögen kommt nach <a href="Designentscheidungen.html">ADR-014</a> eine <strong>private erfassbare Variante</strong> hinzu, die nur an lizenzierte Zentren ausgeliefert wird.</li>
   <li><strong>Freigabe offen</strong> — der Wortlaut ist aufgenommen, aber <strong>keine dokumentierte Erlaubnis liegt vor</strong>. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft die <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>, die MHH-Bögen <a href="NTx-Instrumente.html">MHI-NTx und NTx-Verlaufsbefragung</a> sowie die bereits im <a href="MHI.html">MHI</a> publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel, je Gruppe.</li>
 </ul>
 
@@ -476,9 +476,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="#ntx">NTx</a></td>
     </tr>
     <tr>
-      <td><a href="NTx-Instrumente.html#abq">ABQ</a></td>
-      <td>Müller, Kohlmann &amp; Wilke 2015; Lizenzvereinbarung je Zentrum, Items nicht publizierbar</td>
-      <td><strong>metadata-only</strong> + private Variante</td>
+      <td>ABQ</td>
+      <td>Müller, Kohlmann &amp; Wilke 2015; Lizenzvereinbarung je Zentrum, <strong>Daten dürfen nicht an die DIZ übermittelt werden</strong></td>
+      <td><strong>entfernt</strong> (2026-11-16; bis dahin metadata-only)</td>
       <td><a href="#ntx">NTx</a></td>
     </tr>
     <tr>
@@ -517,11 +517,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>BAASIS</td>
       <td>Universität Basel</td>
       <td>Nutzungserlaubnis: <a href="https://baasis.nursing.unibas.ch/how-to-obtain">https://baasis.nursing.unibas.ch/how-to-obtain</a></td>
-    </tr>
-    <tr>
-      <td>ABQ</td>
-      <td>Müller S, Kohlmann T, Wilke T (2015)</td>
-      <td>Lizenzvereinbarung je Zentrum; Bezugsweg zu klären</td>
     </tr>
     <tr>
       <td>MTSOSD-R59</td>
@@ -673,16 +668,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><a name="ntx"></a></p>
 
-<h4 id="baasis-abq-mtsosd-r59--lizenznehmer-bezugswege-fassungen">BAASIS, ABQ, MTSOSD-R59 — Lizenznehmer, Bezugswege, Fassungen</h4>
+<h4 id="baasis-mtsosd-r59--lizenznehmer-bezugswege-fassungen">BAASIS, MTSOSD-R59 — Lizenznehmer, Bezugswege, Fassungen</h4>
 <p><strong>Status:</strong> offen, aufgenommen 2026-11-05 · <strong>Antwort von:</strong> Use-Case-Leitung NTx, MHH, Universität Basel, KU Leuven</p>
 
-<p>Die drei Instrumente sind metadata-only mit privater erfassbarer Variante (<a href="Designentscheidungen.html">ADR-014</a>); die Rechte stehen oben in der Tabelle. Offen ist Folgendes:</p>
+<p>Die beiden Instrumente sind metadata-only mit privater erfassbarer Variante (<a href="Designentscheidungen.html">ADR-014</a>); die Rechte stehen oben in der Tabelle. Offen ist Folgendes:</p>
 
 <ul>
   <li><strong>Lizenznehmer:</strong> Die Uni Basel erteilt die BAASIS-Erlaubnis <strong>je Projekt</strong> über ihr Online-Formular, die DIZ-Liste spricht von einer Lizenzvereinbarung <strong>je Zentrum</strong>. Davon hängt ab, wie die Lizenzschranke auf dem Fragebogen-Server zu schneiden ist (Rolle je Standort oder je Projekt).</li>
   <li><strong>Datenweitergabe:</strong> Die BAASIS-Nutzung verpflichtet zur Weitergabe der Daten an das laufende Validierungsprojekt der Uni Basel (Term IV). Das sollte die Use-Case-Leitung vor der Lizenzanfrage kennen. Publikationen müssen Denhaerynck et al. 2023, Haupenthal et al. 2025 und die Website zitieren.</li>
   <li><strong>BAASIS 2_a:</strong> Das Dictionary gibt für die Teilfrage 2_a eine Raten-Skala an (von einmalig bis fast täglich), die offizielle Erläuterung für alle drei Teilfragen dieselben Anzahl-Kategorien. Ob die Raten-Skala dem lizenzierten deutschen Bogen (Version 2021) entspricht oder eine lokale Abweichung ist, ist mit MHH zu prüfen. Bis dahin sind beide Skalen getrennt modelliert.</li>
-  <li><strong>ABQ:</strong> Bezugsweg der Lizenzvereinbarung zu klären. Die <strong>Polung</strong> der Gewichte 1–4 ist nicht gegen das Originalinstrument verifiziert — das Dictionary führt die Zustimmungsstufe mit dem Wert 1 als erste Option; ob die Stufenfolge die Barrierenstärke in der erwarteten Richtung abbildet, ist vor produktiver Nutzung zu prüfen. Für <code class="language-plaintext highlighter-rouge">ABQ_01</code> nennt das Dictionary als Auslöser nur BAASIS1A, für alle anderen Items BAASIS1A/2/3/4 — vermutlich eine Inkonsistenz.</li>
+  <li><strong>ABQ:</strong> <strong>erledigt 2026-11-16</strong> — aus dem IG entfernt, weil die Daten des Adherence Barriers Questionnaire aus Lizenzgründen nicht an die DIZ übermittelt werden dürfen. Bezugsweg, Polung der Gewichte und die Dictionary-Inkonsistenz bei <code class="language-plaintext highlighter-rouge">ABQ_01</code> sind damit gegenstandslos. Entfernt wurden Questionnaire <code class="language-plaintext highlighter-rouge">ABQ</code>, CodeSystem/ValueSet <code class="language-plaintext highlighter-rouge">abq-skala-4</code>, Katalogcode <code class="language-plaintext highlighter-rouge">abq</code>, Dictionary-Codes <code class="language-plaintext highlighter-rouge">ABQ_01</code>–<code class="language-plaintext highlighter-rouge">ABQ_16</code>, <code class="language-plaintext highlighter-rouge">ABQResponse</code> (auch im NTx-Bundle) und der Eintrag im Manifest <code class="language-plaintext highlighter-rouge">use-case-ntxr</code>.</li>
   <li><strong>MTSOSD-R59:</strong> Ob MHH die vom MAPI Research Institute linguistisch validierte deutsche Fassung einsetzt, ist zu bestätigen. Und der <strong>Erhebungsumfang</strong> ist offen: Laut Dictionary wurde der komplette Bogen erhoben, das Blatt <em>Domain Overview</em> führt im Monitoring nur die Domänen Tremor und Diarrhoe (Prio A, quartalsweise, Telemonitoring wöchentlich), das Blatt <em>Comments and Questions</em> fragt „komplette Nebenwirkungen? Oder trennen?“. Der Questionnaire ist in beiden Fällen die Basis; ein Telemonitoring-Zuschnitt aus den Symptomen 16 und 30 würde als eigene Ressource per <code class="language-plaintext highlighter-rouge">derivedFrom</code> abgeleitet (<a href="Designentscheidungen.html">ADR-008</a>).</li>
   <li><strong>PHQ-15 in NTx:</strong> Das Domain Overview führt PHQ-15 nur für PSS, das Dictionary-Blatt NTx aber mit; die NTx-Manifeste pinnen es deshalb nicht. Entscheidung der Use-Case-Leitung.</li>
 </ul>
@@ -787,8 +782,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

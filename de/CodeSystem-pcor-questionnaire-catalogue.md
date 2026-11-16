@@ -43,7 +43,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   }],
   "caseSensitive" : true,
   "content" : "complete",
-  "count" : 26,
+  "count" : 25,
   "concept" : [{
     "code" : "dem",
     "display" : "PCOR-MII Demographie (DEM)",
@@ -153,11 +153,6 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
     "code" : "baasis",
     "display" : "BAASIS",
     "definition" : "Basel Assessment of Adherence to Immunosuppressive Medications Scale, 10 Variablen (metadata-only, © Universität Basel)"
-  },
-  {
-    "code" : "abq",
-    "display" : "ABQ",
-    "definition" : "Adherence Barriers Questionnaire, 16 Items (metadata-only; Müller, Kohlmann & Wilke 2015)"
   },
   {
     "code" : "mtsosd-r59",

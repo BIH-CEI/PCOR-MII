@@ -94,7 +94,7 @@ Die AN-Beispielantworten gehören zu **einer** Patientin ([pcor-mii-exa-patient-
 
 ### Nicht in AN erhoben
 
-Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Gesamtübersicht daneben stehen: **PSS-only** sind [PHQ-D Panik-Block](PHQ-Panik.md), [PC-PTSD](PC-PTSD.md), [SCOFF](SCOFF.md), [ISR-Z](ISR-Z.md), [SSD-12](SSD-12.md), [Whiteley-7](WI-7.md), [EXPECT](EXPECT.md), [IPQ-S](IPQ-S.md), [GSLTPAQ](GSLTPAQ.md) und die UKE-Versorgungsitems. **NTx-only** sind [BAASIS, ABQ, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung](NTx.md).
+Zur Abgrenzung, weil diese Instrumente in PCOR-MII vorhanden sind und in der Gesamtübersicht daneben stehen: **PSS-only** sind [PHQ-D Panik-Block](PHQ-Panik.md), [PC-PTSD](PC-PTSD.md), [SCOFF](SCOFF.md), [ISR-Z](ISR-Z.md), [SSD-12](SSD-12.md), [Whiteley-7](WI-7.md), [EXPECT](EXPECT.md), [IPQ-S](IPQ-S.md), [GSLTPAQ](GSLTPAQ.md) und die UKE-Versorgungsitems. **NTx-only** sind [BAASIS, MTSOSD-R59, MHI-NTx und die NTx-Verlaufsbefragung](NTx.md).
 
 ### Rechtelage und Status
 

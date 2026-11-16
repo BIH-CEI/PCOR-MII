@@ -9,7 +9,7 @@ Diese Seite beschreibt, **wie Implementierer die PCOR-MII Datendefinitionen kons
 | | |
 | :--- | :--- |
 | Profile (Struktur-Constraints) | `MII PR PRO QuestionnaireResponse`,`MII PR PRO Questionnaire`(aus dem MII PRO-Modul) |
-| Questionnaire-Definitionen | **26 PCOR-MII-eigene Bögen**(DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D Panik-Block, PROMIS-GH, die fünf AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, BAASIS, ABQ, MTSOSD-R59, MHI-NTx, NTx-Verlaufsbefragung) — vollständige Tabelle:[Fragebogen-Bibliothek](Fragebogen-Bibliothek.md); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
+| Questionnaire-Definitionen | **25 PCOR-MII-eigene Bögen**(DEM, MHI, OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S, PHQ-D Panik-Block, PROMIS-GH, die fünf AN-Instrumente, die sechs UKHD-Zusatzbögen, UKHD-EDP, BAASIS, MTSOSD-R59, MHI-NTx, NTx-Verlaufsbefragung) — vollständige Tabelle:[Fragebogen-Bibliothek](Fragebogen-Bibliothek.md); die Upstream-Bögen (PHQ, GAD-7, PROMIS, …) kommen aus dem MII-PRO-Paket |
 | Terminologie | lokale CodeSystems/ValueSets je Antwortskala,[`pcor-item-dictionary`](CodeSystem-pcor-item-dictionary.md),[`pcor-questionnaire-catalogue`](CodeSystem-pcor-questionnaire-catalogue.md),[`pcor-score-catalogue`](CodeSystem-pcor-score-catalogue.md) |
 | Beispiele | drei Beispielpatient:innen,**vier Termin-Bundles**und 46 validierte`QuestionnaireResponse`s (siehe[Beispiele](Beispiele.md)) |
 | Scores | [PROPr-ObservationDefinition](ObservationDefinition-PcorObsDefProprUtility.md) |

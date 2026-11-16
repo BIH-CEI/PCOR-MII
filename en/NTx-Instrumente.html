@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung - PCOR-MII Implementation Guide v0.9.0</title>
+    <title>NTx-Instrumente — BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung - PCOR-MII Implementation Guide v0.9.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -281,7 +281,7 @@ a[name="test"] + h3 + div {
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='Instrumente.html'><b>Instrumentenübersicht</b></a></li><li><a href='NTx.html'><b>NTx (Nierentransplantation)</b></a></li><li><b>NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='Instrumente.html'><b>Instrumentenübersicht</b></a></li><li><a href='NTx.html'><b>NTx (Nierentransplantation)</b></a></li><li><b>NTx-Instrumente — BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung</b></li>
 
           <span style="float: var(--ig-right);">
 
@@ -312,7 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">PCOR-MII Implementation Guide - Local Development build (v0.9.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://bih-cei.github.io/PCOR-MII/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung</h2>
+  <h2>NTx-Instrumente — BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung</h2>
   
 
 
@@ -335,7 +335,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#verwendung-in-pcor-mii" id="markdown-toc-verwendung-in-pcor-mii">Verwendung in PCOR-MII</a></li>
   <li><a href="#lizenz-und-bezugsweg" id="markdown-toc-lizenz-und-bezugsweg">Lizenz und Bezugsweg</a></li>
   <li><a href="#baasis" id="markdown-toc-baasis">BAASIS</a></li>
-  <li><a href="#abq" id="markdown-toc-abq">ABQ</a></li>
   <li><a href="#mtsosd-r59" id="markdown-toc-mtsosd-r59">MTSOSD-R59</a></li>
   <li><a href="#mhi-ntx-transplantationsanamnese" id="markdown-toc-mhi-ntx-transplantationsanamnese">MHI-NTx (Transplantationsanamnese)</a></li>
   <li><a href="#ntx-verlaufsbefragung-mhh" id="markdown-toc-ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung (MHH)</a></li>
@@ -344,28 +343,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Im Anwendungsfall <strong>Nierentransplantation (NTx)</strong> werden drei Instrumente zur <strong>Medikamentenadhärenz</strong> und <strong>Symptomlast</strong> erhoben, dazu die <a href="#mhi-ntx-transplantationsanamnese">Transplantationsanamnese MHI-NTx</a> und die <a href="#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a> des Standorts Hannover: <strong>BAASIS</strong> (Selbstauskunft zur Einnahme immunsuppressiver Medikation), <strong>ABQ</strong> (Barrieren der Adhärenz) und <strong>MTSOSD-R59</strong> (Symptomlast mit Belastungsbewertung). BAASIS und ABQ hängen zusammen: Der ABQ wird nur bei Hinweis auf Nichtadhärenz im BAASIS erhoben. Quelle der Item-Auswahl ist das <strong>Item Level Dictionary</strong> (Blatt NTx, Kategorien TCH und MSE).</p>
+<p>Im Anwendungsfall <strong>Nierentransplantation (NTx)</strong> werden zwei Instrumente zur <strong>Medikamentenadhärenz</strong> und <strong>Symptomlast</strong> erhoben, dazu die <a href="#mhi-ntx-transplantationsanamnese">Transplantationsanamnese MHI-NTx</a> und die <a href="#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a> des Standorts Hannover: <strong>BAASIS</strong> (Selbstauskunft zur Einnahme immunsuppressiver Medikation) und <strong>MTSOSD-R59</strong> (Symptomlast mit Belastungsbewertung). Quelle der Item-Auswahl ist das <strong>Item Level Dictionary</strong> (Blatt NTx, Kategorien TCH und MSE).</p>
 
 <blockquote>
-  <p><strong>Metadata-only:</strong> Alle drei Instrumente bilden <strong>ausschließlich Struktur und Metadaten</strong> ab, <strong>nicht</strong> den Originalwortlaut. Eine Veröffentlichung der konkreten Items einschließlich Antwortmöglichkeiten ist laut Rechteinhabern nicht erlaubt. Die wissenschaftliche Nutzung ohne Pharma-Beteiligung ist kostenfrei, <strong>jedes Zentrum benötigt eine eigene Lizenzvereinbarung</strong>.</p>
+  <p><strong>ABQ entfernt (2026-11-16):</strong> Der <em>Adherence Barriers Questionnaire</em> (Müller, Kohlmann &amp; Wilke 2015; im Dictionary nur bei Nichtadhärenz im BAASIS erhoben) war bis 0.9.0 als dritter metadata-only-Stub enthalten. Seine Daten dürfen aus Lizenzgründen nicht an die DIZ übermittelt werden; Bogen, Antwortskala <code class="language-plaintext highlighter-rouge">abq-skala-4</code>, Dictionary-Codes <code class="language-plaintext highlighter-rouge">ABQ_01</code>–<code class="language-plaintext highlighter-rouge">ABQ_16</code>, Beispielantwort und Manifest-Eintrag wurden entfernt. Siehe <a href="Rechtelage.html#ntx">Rechtelage</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Metadata-only:</strong> Beide Instrumente bilden <strong>ausschließlich Struktur und Metadaten</strong> ab, <strong>nicht</strong> den Originalwortlaut. Eine Veröffentlichung der konkreten Items einschließlich Antwortmöglichkeiten ist laut Rechteinhabern nicht erlaubt. Die wissenschaftliche Nutzung ohne Pharma-Beteiligung ist kostenfrei, <strong>jedes Zentrum benötigt eine eigene Lizenzvereinbarung</strong>.</p>
 </blockquote>
 
 <h3 id="verwendung-in-pcor-mii">Verwendung in PCOR-MII</h3>
 
-<p>Die Instrumente sind NTx-spezifisch und gehören daher in die Use-Case-Schicht von PCOR-MII, wie auch <a href="WAI.html">WAI</a> und <a href="UKHD-EDP.html">UKHD-EDP</a>. Alle drei sind Selbstauskunfts-PROs und tragen deshalb das Profil des MII-PRO-Moduls (nicht ISiKFormularDefinition). Metadata-only bedeutet konkret:</p>
+<p>Die Instrumente sind NTx-spezifisch und gehören daher in die Use-Case-Schicht von PCOR-MII, wie auch <a href="WAI.html">WAI</a> und <a href="UKHD-EDP.html">UKHD-EDP</a>. Beide sind Selbstauskunfts-PROs und tragen deshalb das Profil des MII-PRO-Moduls (nicht ISiKFormularDefinition). Metadata-only bedeutet konkret:</p>
 
 <ul>
   <li><strong>Item-Texte</strong> sind neutrale, selbst formulierte Beschreibungen („Erfasst: …“), kein Originalwortlaut.</li>
   <li><strong>Antwortkonzepte</strong> sind neutral benannt („Stufe 1“ … „Stufe n“) und tragen <code class="language-plaintext highlighter-rouge">itemWeight</code>, damit eine spätere Auswertung möglich bleibt.</li>
   <li><strong>Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Typen, Wertebereiche und Bedingungen</strong> sind lizenzfrei und vollständig angelegt. Die <code class="language-plaintext highlighter-rouge">linkId</code>s sind die Variablen-IDs des Item Level Dictionary.</li>
-  <li>Alle Capabilities sind <code class="language-plaintext highlighter-rouge">false</code> (nicht displayable, collectable, extractable, domain-aligned), beim ABQ ist zusätzlich <code class="language-plaintext highlighter-rouge">calculatable</code> gesetzt.</li>
+  <li>Alle Capabilities sind <code class="language-plaintext highlighter-rouge">false</code> (nicht displayable, collectable, extractable, domain-aligned).</li>
 </ul>
 
 <p>Für die Erhebung ist der wortgleiche Originalbogen über die berechtigte Bezugsquelle zu beziehen; diese Ressourcen dienen der strukturell korrekten Ablage der Antworten.</p>
 
 <h3 id="lizenz-und-bezugsweg">Lizenz und Bezugsweg</h3>
 
-<p>Rechteinhaber, Bezugswege, Lizenzbedingungen und die offenen Fragen zu allen drei Instrumenten stehen gesammelt auf <a href="Rechtelage.html#ntx">Rechtelage und offene Punkte</a>; die Hinweise sind maschinenlesbar im <code class="language-plaintext highlighter-rouge">copyright</code>-Element der Ressourcen hinterlegt. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).</p>
+<p>Rechteinhaber, Bezugswege, Lizenzbedingungen und die offenen Fragen zu beiden Instrumenten stehen gesammelt auf <a href="Rechtelage.html#ntx">Rechtelage und offene Punkte</a>; die Hinweise sind maschinenlesbar im <code class="language-plaintext highlighter-rouge">copyright</code>-Element der Ressourcen hinterlegt. Nur der PCOR-MII-eigene FHIR-Inhalt unterliegt der Repository-Lizenz (CC-BY-4.0).</p>
 
 <h3 id="baasis">BAASIS</h3>
 
@@ -434,34 +437,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Zwei Häufigkeitsskalen</strong>: Das Dictionary gibt für 1A_a und 1B_a fünf Anzahl-Kategorien an, für 2_a dagegen fünf Raten-Kategorien (von einmalig bis fast täglich). Beide sind als getrennte ValueSets modelliert, damit „Stufe 2“ nicht in beiden als dasselbe gelesen wird. Die offizielle Erläuterung nennt für alle drei Teilfragen dieselben Anzahl-Kategorien; ob die Raten-Skala bei 2_a dem lizenzierten deutschen Bogen entspricht oder eine lokale Abweichung ist, ist mit MHH zu prüfen (<a href="Rechtelage.html#ntx">offener Punkt</a>).</li>
   <li><strong>Bedingungen</strong>: 1A_a nur bei 1A = ja; 1B nur bei 1A = ja; 1B_a nur bei 1B = ja; 2_a nur bei 2 = ja; 5_a nur bei 5 = ja.</li>
-  <li><strong>Scoring</strong>: kein Gesamtscore; die offizielle Auswertung bewertet die drei Phasen getrennt. <strong>Implementierungsproblem</strong> bei „ja“ in 1A, 1B, 2 oder 3; <strong>Nicht-Persistenz</strong> bei „ja“ in 4; <strong>Nicht-Initiierung</strong> bei „ja“ in 5 und „nein“ in 5_a, der Anteil wird nur unter den Neuverordneten berechnet. Das ist <strong>nur dokumentiert</strong>, nicht als Ausdruck ausgeliefert. Der PCOR-MII-Auslöser für den ABQ („ja“ in 1A, 2, 3 oder 4) entspricht Implementierungs- oder Persistenzproblem, da 1B ein „ja“ in 1A voraussetzt.</li>
+  <li><strong>Scoring</strong>: kein Gesamtscore; die offizielle Auswertung bewertet die drei Phasen getrennt. <strong>Implementierungsproblem</strong> bei „ja“ in 1A, 1B, 2 oder 3; <strong>Nicht-Persistenz</strong> bei „ja“ in 4; <strong>Nicht-Initiierung</strong> bei „ja“ in 5 und „nein“ in 5_a, der Anteil wird nur unter den Neuverordneten berechnet. Das ist <strong>nur dokumentiert</strong>, nicht als Ausdruck ausgeliefert.</li>
   <li><strong>Lizenzbedingungen</strong> (Website): Erlaubnis je Projekt über das Online-Formular, keine Gebühr genannt, wortgleiche Veröffentlichung von Items oder Skala untersagt. Publikationen müssen Denhaerynck et al. 2023, Haupenthal et al. 2025 und die Website zitieren. <strong>Die Nutzung verpflichtet zur Weitergabe der Daten an das laufende Validierungsprojekt der Uni Basel</strong> (Term IV), das sollte das Konsortium vor der Lizenzanfrage kennen. Eine deutsche Fassung der Version 2021 ist offiziell verfügbar.</li>
 </ul>
-
-<h3 id="abq">ABQ</h3>
-
-<p><em>Adherence Barriers Questionnaire</em>, Kategorie TCH.</p>
-
-<p><strong>Artefakte:</strong></p>
-
-<ul>
-  <li><strong>Fragebogen:</strong> <a href="Questionnaire-ABQ.html">Questionnaire-ABQ</a> · Beispielantwort <a href="QuestionnaireResponse-ABQResponse.html">ABQResponse</a> (Summe 26 im berechneten Item)</li>
-  <li><strong>Antwortskala:</strong> <a href="ValueSet-abq-skala-4-vs.html">ValueSet abq-skala-4-vs</a> · <a href="CodeSystem-abq-skala-4.html">CodeSystem abq-skala-4</a> — vier neutral benannte Konzepte mit <code class="language-plaintext highlighter-rouge">itemWeight</code> 1–4</li>
-</ul>
-
-<p><strong>Canonical:</strong> <code class="language-plaintext highlighter-rouge">https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ</code></p>
-
-<p><strong>Eigenschaften:</strong></p>
-
-<ul>
-  <li><strong>Items</strong>: 16 Items (<code class="language-plaintext highlighter-rouge">ABQ_01</code> … <code class="language-plaintext highlighter-rouge">ABQ_16</code>) auf der 4-stufigen Skala, dazu das berechnete Summen-Item <code class="language-plaintext highlighter-rouge">abq-summe</code>.</li>
-  <li><strong>Bedingung (Cross-Questionnaire)</strong>: Laut Item Level Dictionary wird der ABQ nur erhoben, wenn BAASIS1A, BAASIS2, BAASIS3 oder BAASIS4 mit „ja“ beantwortet wurde. Das ist <strong>nicht als <code class="language-plaintext highlighter-rouge">enableWhen</code></strong> modelliert, sondern nur dokumentiert; der aufrufende Prozess steuert es. Für <code class="language-plaintext highlighter-rouge">ABQ_01</code> nennt das Dictionary nur BAASIS1A, vermutlich eine Inkonsistenz, die zu klären ist.</li>
-  <li><strong>Scoring</strong>: Summe der 16 Items als SDC <code class="language-plaintext highlighter-rouge">calculatedExpression</code> über <code class="language-plaintext highlighter-rouge">.weight().sum()</code>, Bereich <strong>16–64</strong>, höhere Werte bedeuten mehr Adhärenzbarrieren. Es werden keine Cut-offs ausgeliefert.</li>
-</ul>
-
-<blockquote>
-  <p><strong>Offen:</strong> Polung der Gewichte und Bezugsweg — siehe <a href="Rechtelage.html#ntx">Rechtelage und offene Punkte</a>.</p>
-</blockquote>
 
 <h3 id="mtsosd-r59">MTSOSD-R59</h3>
 
@@ -588,7 +566,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="terminologie-recherche">Terminologie-Recherche</h3>
 
-<p>Für den ABQ nicht durchgeführt (Terminologie-MCP in der Session nicht verfügbar). Für BAASIS und MTSOSD-R59 am 2026-11-05 gegen LOINC 2.83 und SNOMED CT International (Stand 2026-10) recherchiert: kein Panel und kein Konzept für eines der Instrumente. LOINC <code class="language-plaintext highlighter-rouge">71799-1</code> „Adherence to prescribed medication instructions [Reported]“ ist ein generisches Einzelkonzept, kein BAASIS-Code, und wird nicht gesetzt. <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> trägt bei allen dreien nur den PCOR-Katalogcode (<code class="language-plaintext highlighter-rouge">baasis</code>, <code class="language-plaintext highlighter-rouge">abq</code>, <code class="language-plaintext highlighter-rouge">mtsosd-r59</code>).</p>
+<p>Für BAASIS und MTSOSD-R59 am 2026-11-05 gegen LOINC 2.83 und SNOMED CT International (Stand 2026-10) recherchiert: kein Panel und kein Konzept für eines der Instrumente. LOINC <code class="language-plaintext highlighter-rouge">71799-1</code> „Adherence to prescribed medication instructions [Reported]“ ist ein generisches Einzelkonzept, kein BAASIS-Code, und wird nicht gesetzt. <code class="language-plaintext highlighter-rouge">Questionnaire.code</code> trägt bei beiden nur den PCOR-Katalogcode (<code class="language-plaintext highlighter-rouge">baasis</code>, <code class="language-plaintext highlighter-rouge">mtsosd-r59</code>).</p>
 
 <h3 id="quellen">Quellen</h3>
 
@@ -597,7 +575,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Denhaerynck K, Dobbels F, Košťálová B, De Geest S; BAASIS consortium. Psychometric properties of the BAASIS: a meta-analysis of individual participant data. Transplantation. 2023. doi:10.1097/TP.0000000000004574</li>
   <li>Haupenthal F, Doberer K, Kapps S, et al. Self-reported non-adherence to immunosuppressive medication detected by the BAASIS predicts allograft rejections in kidney transplant recipients. Nephrol Dial Transplant. 2025. doi:10.1093/ndt/gfaf078</li>
   <li>Vrijens B, De Geest S, Hughes DA, et al. A new taxonomy for describing and defining adherence to medications. Br J Clin Pharmacol. 2012;73(5):691-705.</li>
-  <li>Müller S, Kohlmann T, Wilke T. Adherence Barriers Questionnaire (ABQ). 2015.</li>
   <li>KU Leuven. MTSOSD-R59. Kontakt: joke.willems@kuleuven.be</li>
   <li>Dobbels F, Moons P, Abraham I, Larsen CP, Dupont L, De Geest S. Measuring symptom experience of side-effects of immunosuppressive drugs: the Modified Transplant Symptom Occurrence and Distress Scale. Transpl Int. 2008;21(8):764-73. doi:10.1111/j.1432-2277.2008.00674.x</li>
   <li>Kugler C, Geyer S, Gottlieb J, Simon A, Haverich A, Dracup K. Symptom experience after solid organ transplantation. J Psychosom Res. 2009;66(2):101-10.</li>
@@ -656,8 +633,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

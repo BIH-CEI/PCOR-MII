@@ -14,7 +14,7 @@
   "name" : "PCOR_MII",
   "title" : "PCOR-MII Implementation Guide",
   "status" : "draft",
-  "date" : "2026-11-12T18:28:00+00:00",
+  "date" : "2026-11-16T14:40:34+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -435,70 +435,6 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ValueSet-abq-skala-4-vs.html"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/abq-skala-4-vs"
-      },
-      "name" : "ABQ Antwortskala 4-stufig",
-      "description" : "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. Metadata-only, siehe AbqSkala4CS.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "CodeSystem-abq-skala-4.html"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/abq-skala-4"
-      },
-      "name" : "ABQ Antwortskala 4-stufig (Codes)",
-      "description" : "Neutral benannte 4-stufige Antwortskala des ABQ (Stufe 1 bis Stufe 4). METADATA-ONLY: Die Originalbezeichnungen der Antwortstufen dürfen nicht veröffentlicht werden. Polung (welche Stufe die höchste Barriere abbildet) nicht gegen das Original verifiziert. itemWeight-Property je Konzept (1-4) ermöglicht Scoring bzw. spätere Auswertung.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Questionnaire"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Questionnaire-ABQ.html"
-      }],
-      "reference" : {
-        "reference" : "Questionnaire/ABQ"
-      },
-      "name" : "ABQ — Adherence Barriers Questionnaire (NTx, metadata-only)",
-      "description" : "Adherence Barriers Questionnaire, 16 Items aus dem NTx-Dictionary (Kategorie TCH). **Metadata-only:** Struktur, `linkId`s, Typen und Wertebereiche sind abgebildet, Itemwortlaut und Antwortbezeichnungen bewusst nicht. Summenscore 16-64 über `itemWeight`; die Polung ist nicht gegen das Original verifiziert. Wird nur bei Hinweis auf Nonadhärenz im BAASIS erhoben.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "QuestionnaireResponse"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "QuestionnaireResponse-ABQResponse.html"
-      }],
-      "reference" : {
-        "reference" : "QuestionnaireResponse/ABQResponse"
-      },
-      "name" : "ABQ — Beispielantwort",
-      "description" : "Beispielantwort zum ABQ (metadata-only) für den NTx-Termin, ausgelöst durch das Implementierungsproblem im BAASIS: überwiegend niedrige Barrieren, drei Items auf Stufe 3; Summe 26 (Bereich 16–64) im berechneten Item `abq-summe`. **Belegt das metadata-only-Muster:** nur `linkId`s und Codes, kein Wortlaut.",
-      "exampleBoolean" : true
-    },
-    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
@@ -3055,7 +2991,7 @@
         "reference" : "Library/use-case-ntxr"
       },
       "name" : "Use-Case-Manifest NTXr — Nierentransplantation, Empfänger",
-      "description" : "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS, ABQ und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.",
+      "description" : "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.",
       "exampleBoolean" : false
     },
     {
@@ -3312,7 +3248,7 @@
               "valueUrl" : "NTx-Instrumente.html"
             }],
             "nameUrl" : "NTx-Instrumente.html",
-            "title" : "NTx-Instrumente — BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung",
+            "title" : "NTx-Instrumente — BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und Verlaufsbefragung",
             "generation" : "markdown"
           }]
         }]

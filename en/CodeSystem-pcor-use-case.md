@@ -24,7 +24,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "PCOR-MII Use Cases",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-11-12T18:28:00+00:00",
+  "date" : "2026-11-16T14:40:34+00:00",
   "publisher" : "BIH-CEI",
   "contact" : [{
     "name" : "BIH-CEI",
@@ -55,7 +55,7 @@ This Code system is referenced in the definition of the following value sets:
   {
     "code" : "ntxr",
     "display" : "NTXr — Nierentransplantation, Empfänger",
-    "definition" : "Generische Batterie plus BAASIS, ABQ, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A."
+    "definition" : "Generische Batterie plus BAASIS, MTSOSD-R59 (metadata-only), MHI-NTx und NTx-Verlaufsbefragung; WAI hier Prio A."
   },
   {
     "code" : "ntxd",

@@ -12,7 +12,7 @@ Die Rechtelage bestimmt, **wie** ein Instrument modelliert wird — nicht, wie w
 
 * **frei** — vollständiger Questionnaire mit Itemtexten, Antwortoptionen und Scoring.
 * **Nutzungsvereinbarung** (PROMIS via CPCOR, WHODAS via WHO, EQ-5D-5L via EuroQol) — vollständig, aber unter der jeweiligen Vereinbarung; Bedingungen im `copyright`-Element.
-* **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.md), [UKHD-EDP](UKHD-EDP.md) sowie [BAASIS, ABQ und MTSOSD-R59](NTx-Instrumente.md). Für die drei lizenzierten NTx-Bögen kommt nach [ADR-014](Designentscheidungen.md) eine **private erfassbare Variante** hinzu, die nur an lizenzierte Zentren ausgeliefert wird.
+* **metadata-only** — keine wortgleichen Items oder Antworten im publizierten Package. Nur Struktur, `linkId`s, Wertebereiche, Score-Definition und Bezugsweg. Betrifft [WAI](WAI.md), [UKHD-EDP](UKHD-EDP.md) sowie [BAASIS und MTSOSD-R59](NTx-Instrumente.md). Für die beiden lizenzierten NTx-Bögen kommt nach [ADR-014](Designentscheidungen.md) eine **private erfassbare Variante** hinzu, die nur an lizenzierte Zentren ausgeliefert wird.
 * **Freigabe offen** — der Wortlaut ist aufgenommen, aber **keine dokumentierte Erlaubnis liegt vor**. Das ist kein eigener Rechtestatus, sondern ein Wissensstand: Die DIZ-Implementierungsliste führt nur publizierte Instrumente und sagt über die standortspezifischen Itemgruppen gar nichts. Betrifft die [UKHD-Zusatzitems](UKHD-Zusatzitems.md), die MHH-Bögen [MHI-NTx und NTx-Verlaufsbefragung](NTx-Instrumente.md) sowie die bereits im [MHI](MHI.md) publizierten 34 Standort-Items. Bei einer Einschränkung ist metadata-only das vorgesehene Mittel, je Gruppe.
 
 Quelle der Rechteangaben ist die **DIZ-Implementierungsliste PCOR-MII** (Stand 24.07.2026). Ihre Lizenzspalte erfasst erkennbar die **Beschaffbarkeit für die Forschung**, nicht die Frage, ob der Wortlaut in einer Spezifikation weitergegeben werden darf; bei jedem Instrument mit verlegter deutscher Fassung ist die Angabe daher eigenständig geprüft. Das ist eine Arbeitsregel dieses Projekts, keine Rechtsauskunft.
@@ -47,7 +47,7 @@ Praktisch folgt daraus: **Frei zugänglich ist nicht frei nachnutzbar.** Dass ei
 | `UKHD-BI` | wie UKHD-Zusatzitems | nicht modelliert: visuelle Bildskala ohne Bildvorlage | [Standortgruppen](#standortgruppen) |
 | [UKHD-EDP](UKHD-EDP.md) | vermutlich EDI-2-Zuschnitt (Hogrefe-Testverfahren); in der DIZ-Liste weder „EDI“ noch „UKHD-EDP“ —**unbewertet** | **metadata-only** | [UKHD-EDP](#ukhd-edp) |
 | [BAASIS](NTx-Instrumente.md#baasis) | © Universität Basel; Forschung ohne Pharma-Beteiligung kostenfrei, Erlaubnis je Projekt,**Items und Antwortoptionen nicht publizierbar**, Datenweitergabe an das Validierungsprojekt (Term IV) | **metadata-only**+ private erfassbare Variante ([ADR-014](Designentscheidungen.md)) | [NTx](#ntx) |
-| [ABQ](NTx-Instrumente.md#abq) | Müller, Kohlmann & Wilke 2015; Lizenzvereinbarung je Zentrum, Items nicht publizierbar | **metadata-only**+ private Variante | [NTx](#ntx) |
+| ABQ | Müller, Kohlmann & Wilke 2015; Lizenzvereinbarung je Zentrum,**Daten dürfen nicht an die DIZ übermittelt werden** | **entfernt**(2026-11-16; bis dahin metadata-only) | [NTx](#ntx) |
 | [MTSOSD-R59](NTx-Instrumente.md#mtsosd-r59) | © KU Leuven; deutsche Fassung (MAPI) über die Erstautorinnen, Items nicht publizierbar | **metadata-only**+ private Variante | [NTx](#ntx) |
 | [MHI-NTx, NTx-Verlaufsbefragung](NTx-Instrumente.md)(MHH) | Standortitems, in der DIZ-Liste nicht geführt; triviale Faktenfragen | vollständig, Vorbehalt im`copyright` | [Standortgruppen](#standortgruppen) |
 | `UKE-HCU/HCU2/PSE/TR/DOT`(PSS) | Standortitems, in der DIZ-Liste nicht geführt | nicht modelliert | [Standortgruppen](#standortgruppen) |
@@ -57,7 +57,6 @@ Praktisch folgt daraus: **Frei zugänglich ist nicht frei nachnutzbar.** Dass ei
 | | | |
 | :--- | :--- | :--- |
 | BAASIS | Universität Basel | Nutzungserlaubnis:[https://baasis.nursing.unibas.ch/how-to-obtain](https://baasis.nursing.unibas.ch/how-to-obtain) |
-| ABQ | Müller S, Kohlmann T, Wilke T (2015) | Lizenzvereinbarung je Zentrum; Bezugsweg zu klären |
 | MTSOSD-R59 | KU Leuven | Kontakt: joke.willems@kuleuven.be |
 
 ### Offene Rechtefragen
@@ -144,16 +143,16 @@ Sinnvoll bleibt außerdem, die offizielle deutsche PaRIS-Übersetzung (cApStAn, 
 
 **GI-PS (2 Items in DEM, 9 Items in MHI) — echte Weitergabebeschränkung.** Zitat aus der DIZ-Liste: „Die Eigentums-, Urheber-, Weitergabe- und Veröffentlichungsrechte … verbleiben bei den jeweiligen Testautorinnen oder -autoren, d. h. das gi-ps oder dessen Teile dürfen ohne Zustimmung der Rechteinhaber nicht modifiziert, übersetzt oder an Dritte weitergegeben werden.“ (Entwicklungspaper: [10.13109/zptm.2023.69.1.56](https://doi.org/10.13109/zptm.2023.69.1.56)). Anders als bei der OECD gibt es keine allgemeine Erlaubnis: Eine **Zustimmung der Rechteinhaber** ist erforderlich, andernfalls sind die betroffenen Items auf metadata-only umzustellen. `Questionnaire.copyright` von DEM und MHI weist den Vorbehalt aus. Die Lizenz-Tabelle auf [Instrumente](Instrumente.md) führt OECD und GI-PS bisher nicht auf.
 
-#### BAASIS, ABQ, MTSOSD-R59 — Lizenznehmer, Bezugswege, Fassungen
+#### BAASIS, MTSOSD-R59 — Lizenznehmer, Bezugswege, Fassungen
 
 **Status:** offen, aufgenommen 2026-11-05 · **Antwort von:** Use-Case-Leitung NTx, MHH, Universität Basel, KU Leuven
 
-Die drei Instrumente sind metadata-only mit privater erfassbarer Variante ([ADR-014](Designentscheidungen.md)); die Rechte stehen oben in der Tabelle. Offen ist Folgendes:
+Die beiden Instrumente sind metadata-only mit privater erfassbarer Variante ([ADR-014](Designentscheidungen.md)); die Rechte stehen oben in der Tabelle. Offen ist Folgendes:
 
 * **Lizenznehmer:** Die Uni Basel erteilt die BAASIS-Erlaubnis **je Projekt** über ihr Online-Formular, die DIZ-Liste spricht von einer Lizenzvereinbarung **je Zentrum**. Davon hängt ab, wie die Lizenzschranke auf dem Fragebogen-Server zu schneiden ist (Rolle je Standort oder je Projekt).
 * **Datenweitergabe:** Die BAASIS-Nutzung verpflichtet zur Weitergabe der Daten an das laufende Validierungsprojekt der Uni Basel (Term IV). Das sollte die Use-Case-Leitung vor der Lizenzanfrage kennen. Publikationen müssen Denhaerynck et al. 2023, Haupenthal et al. 2025 und die Website zitieren.
 * **BAASIS 2_a:** Das Dictionary gibt für die Teilfrage 2_a eine Raten-Skala an (von einmalig bis fast täglich), die offizielle Erläuterung für alle drei Teilfragen dieselben Anzahl-Kategorien. Ob die Raten-Skala dem lizenzierten deutschen Bogen (Version 2021) entspricht oder eine lokale Abweichung ist, ist mit MHH zu prüfen. Bis dahin sind beide Skalen getrennt modelliert.
-* **ABQ:** Bezugsweg der Lizenzvereinbarung zu klären. Die **Polung** der Gewichte 1–4 ist nicht gegen das Originalinstrument verifiziert — das Dictionary führt die Zustimmungsstufe mit dem Wert 1 als erste Option; ob die Stufenfolge die Barrierenstärke in der erwarteten Richtung abbildet, ist vor produktiver Nutzung zu prüfen. Für `ABQ_01` nennt das Dictionary als Auslöser nur BAASIS1A, für alle anderen Items BAASIS1A/2/3/4 — vermutlich eine Inkonsistenz.
+* **ABQ:** **erledigt 2026-11-16** — aus dem IG entfernt, weil die Daten des Adherence Barriers Questionnaire aus Lizenzgründen nicht an die DIZ übermittelt werden dürfen. Bezugsweg, Polung der Gewichte und die Dictionary-Inkonsistenz bei `ABQ_01` sind damit gegenstandslos. Entfernt wurden Questionnaire `ABQ`, CodeSystem/ValueSet `abq-skala-4`, Katalogcode `abq`, Dictionary-Codes `ABQ_01`–`ABQ_16`, `ABQResponse` (auch im NTx-Bundle) und der Eintrag im Manifest `use-case-ntxr`.
 * **MTSOSD-R59:** Ob MHH die vom MAPI Research Institute linguistisch validierte deutsche Fassung einsetzt, ist zu bestätigen. Und der **Erhebungsumfang** ist offen: Laut Dictionary wurde der komplette Bogen erhoben, das Blatt **Domain Overview** führt im Monitoring nur die Domänen Tremor und Diarrhoe (Prio A, quartalsweise, Telemonitoring wöchentlich), das Blatt **Comments and Questions** fragt „komplette Nebenwirkungen? Oder trennen?“. Der Questionnaire ist in beiden Fällen die Basis; ein Telemonitoring-Zuschnitt aus den Symptomen 16 und 30 würde als eigene Ressource per `derivedFrom` abgeleitet ([ADR-008](Designentscheidungen.md)).
 * **PHQ-15 in NTx:** Das Domain Overview führt PHQ-15 nur für PSS, das Dictionary-Blatt NTx aber mit; die NTx-Manifeste pinnen es deshalb nicht. Entscheidung der Use-Case-Leitung.
 

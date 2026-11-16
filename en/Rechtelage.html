@@ -351,7 +351,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>free</strong> — complete questionnaire with item texts, answer options and scoring.</li>
   <li><strong>Usage agreement</strong> (PROMIS via CPCOR, WHODAS via WHO, EQ-5D-5L via EuroQol) — complete, but under the respective agreement; conditions in the <code class="language-plaintext highlighter-rouge">copyright</code> element.</li>
-  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to <a href="WAI.html">WAI</a>, <a href="UKHD-EDP.html">UKHD-EDP</a> and <a href="NTx-Instrumente.html">BAASIS, ABQ and MTSOSD-R59</a>. For the three licensed NTx questionnaires a <strong>private collectable variant</strong> is added per <a href="Designentscheidungen.html">ADR-014</a>, delivered to licensed centres only.</li>
+  <li><strong>metadata-only</strong> — no verbatim items or answers in the published package. Structure, <code class="language-plaintext highlighter-rouge">linkId</code>s, value ranges, score definition and how to obtain the instrument only. Applies to <a href="WAI.html">WAI</a>, <a href="UKHD-EDP.html">UKHD-EDP</a> and <a href="NTx-Instrumente.html">BAASIS and MTSOSD-R59</a>. For the two licensed NTx questionnaires a <strong>private collectable variant</strong> is added per <a href="Designentscheidungen.html">ADR-014</a>, delivered to licensed centres only.</li>
   <li><strong>clearance open</strong> — the wording is included, but <strong>no documented permission is on record</strong>. This is not a rights status of its own but a state of knowledge: the DIZ implementation list covers published instruments only and says nothing about the site-specific item groups. Applies to the <a href="UKHD-Zusatzitems.html">UKHD supplementary items</a>, the MHH questionnaires <a href="NTx-Instrumente.html">MHI-NTx and NTx follow-up</a> and the 34 site items already published in the <a href="MHI.html">MHI</a>. If a restriction emerges, metadata-only per group is the intended remedy.</li>
 </ul>
 
@@ -478,9 +478,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="#ntx">NTx</a></td>
     </tr>
     <tr>
-      <td><a href="NTx-Instrumente.html#abq">ABQ</a></td>
-      <td>Müller, Kohlmann &amp; Wilke 2015; licence agreement per centre, items not publishable</td>
-      <td><strong>metadata-only</strong> + private variant</td>
+      <td>ABQ</td>
+      <td>Müller, Kohlmann &amp; Wilke 2015; licence agreement per centre, <strong>data must not be transmitted to the DIZ</strong></td>
+      <td><strong>removed</strong> (2026-11-16; metadata-only until then)</td>
       <td><a href="#ntx">NTx</a></td>
     </tr>
     <tr>
@@ -519,11 +519,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>BAASIS</td>
       <td>University of Basel</td>
       <td>permission: <a href="https://baasis.nursing.unibas.ch/how-to-obtain">https://baasis.nursing.unibas.ch/how-to-obtain</a></td>
-    </tr>
-    <tr>
-      <td>ABQ</td>
-      <td>Müller S, Kohlmann T, Wilke T (2015)</td>
-      <td>licence agreement per centre; route to be clarified</td>
     </tr>
     <tr>
       <td>MTSOSD-R59</td>
@@ -643,16 +638,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><a name="ntx"></a></p>
 
-<h4 id="baasis-abq-mtsosd-r59--licensees-sources-versions">BAASIS, ABQ, MTSOSD-R59 — licensees, sources, versions</h4>
+<h4 id="baasis-mtsosd-r59--licensees-sources-versions">BAASIS, MTSOSD-R59 — licensees, sources, versions</h4>
 <p><strong>Status:</strong> open, added 2026-11-05 · <strong>Answer from:</strong> NTx use-case lead, MHH, University of Basel, KU Leuven</p>
 
-<p>The three instruments are metadata-only with a private collectable variant (<a href="Designentscheidungen.html">ADR-014</a>); the rights are in the table above. Open:</p>
+<p>The two instruments are metadata-only with a private collectable variant (<a href="Designentscheidungen.html">ADR-014</a>); the rights are in the table above. Open:</p>
 
 <ul>
   <li><strong>Licensee:</strong> the University of Basel grants the BAASIS permission <strong>per project</strong> through its online form, the DIZ list speaks of a licence agreement <strong>per centre</strong>. This determines how the licence gate on the questionnaire server is cut (role per site or per project).</li>
   <li><strong>Data sharing:</strong> using the BAASIS obliges to share the data with the ongoing validation project of the University of Basel (Term IV). The use-case lead should know that before the licence request. Publications must cite Denhaerynck et al. 2023, Haupenthal et al. 2025 and the website.</li>
   <li><strong>BAASIS 2_a:</strong> the dictionary gives a rate scale for sub-question 2_a (from once to almost daily), the official explanation gives the same count categories for all three sub-questions. Whether the rate scale matches the licensed German questionnaire (version 2021) or is a local deviation is to be checked with MHH. Until then both scales are modelled separately.</li>
-  <li><strong>ABQ:</strong> route to the licence agreement to be clarified. The <strong>polarity</strong> of the weights 1–4 is not verified against the original instrument — the dictionary lists the agreement level with value 1 as first option; whether the level order reflects barrier strength in the expected direction is to be checked before productive use. For <code class="language-plaintext highlighter-rouge">ABQ_01</code> the dictionary names only BAASIS1A as trigger, for all other items BAASIS1A/2/3/4 — presumably an inconsistency.</li>
+  <li><strong>ABQ:</strong> <strong>resolved 2026-11-16</strong> — removed from the IG because, for licensing reasons, data from the Adherence Barriers Questionnaire must not be transmitted to the DIZ. Source route, weight polarity and the dictionary inconsistency at <code class="language-plaintext highlighter-rouge">ABQ_01</code> are thereby moot. Removed: Questionnaire <code class="language-plaintext highlighter-rouge">ABQ</code>, CodeSystem/ValueSet <code class="language-plaintext highlighter-rouge">abq-skala-4</code>, catalogue code <code class="language-plaintext highlighter-rouge">abq</code>, dictionary codes <code class="language-plaintext highlighter-rouge">ABQ_01</code>–<code class="language-plaintext highlighter-rouge">ABQ_16</code>, <code class="language-plaintext highlighter-rouge">ABQResponse</code> (also in the NTx bundle) and the entry in the manifest <code class="language-plaintext highlighter-rouge">use-case-ntxr</code>.</li>
   <li><strong>MTSOSD-R59:</strong> whether MHH uses the German version linguistically validated by the MAPI Research Institute is to be confirmed. And the <strong>collection scope</strong> is open: according to the dictionary the complete questionnaire was collected, the <em>Domain Overview</em> sheet lists only the domains tremor and diarrhoea for monitoring (priority A, quarterly, telemonitoring weekly), the <em>Comments and Questions</em> sheet asks "complete side effects? Or separate?". The questionnaire is the basis in both cases; a telemonitoring subset of symptoms 16 and 30 would be derived as its own resource via <code class="language-plaintext highlighter-rouge">derivedFrom</code> (<a href="Designentscheidungen.html">ADR-008</a>).</li>
   <li><strong>PHQ-15 in NTx:</strong> the Domain Overview lists PHQ-15 for PSS only, the NTx dictionary sheet includes it; the NTx manifests therefore do not pin it. Decision of the use-case lead.</li>
 </ul>
@@ -757,8 +752,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

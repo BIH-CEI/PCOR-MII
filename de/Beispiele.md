@@ -2,7 +2,7 @@
 
 ## Beispiele — Patient:innen, Bundles, Antworten
 
-Diese Seite führt **alle Beispiele des IG an einer Stelle**: drei synthetische Beispielpatient:innen, vier Termin-Bundles und 46 Beispielantworten. Die Use-Case-Seiten [PSS](PSS.md), [AN](AN.md) und [NTx](NTx.md) verweisen hierher; die Tabellen dort nennen je Bogen die Beispielantwort, die ihn belegt.
+Diese Seite führt **alle Beispiele des IG an einer Stelle**: drei synthetische Beispielpatient:innen, vier Termin-Bundles und 45 Beispielantworten. Die Use-Case-Seiten [PSS](PSS.md), [AN](AN.md) und [NTx](NTx.md) verweisen hierher; die Tabellen dort nennen je Bogen die Beispielantwort, die ihn belegt.
 
 Die Beispiele sind keine unverbundenen Testdaten, sondern **zusammenhängende Datensätze**: Jede Antwort gehört zu einer Person und einem Erhebungstermin, und die Antwortwerte sind aufeinander abgestimmt, nicht gewürfelt. Was zu einem Termin nicht erhoben wird, **fehlt** in dessen Bundle, statt leer dazustehen — so wird die `TIMING`-Spalte des Item Level Dictionary sichtbar, die in den Questionnaires bewusst nicht modelliert ist.
 
@@ -25,7 +25,7 @@ Je Erhebungstermin ein `Bundle` vom Typ `collection` mit der Patientenressource 
 | [AN — Initial](Bundle-pcor-mii-exa-bundle-an-initial.md) | AN | 18.06.2026 | 13 | DEM, MHI, die fünf AN-Instrumente und fünf UKHD-Zusatzbögen; UKHD-ND fehlt bewusst, weil keines seiner Items zum Initial-Termin erhoben wird |
 | [AN — Monitoring](Bundle-pcor-mii-exa-bundle-an-monitoring.md) | AN | 30.07.2026 | 10 | neun Verlaufsantworten sechs Wochen später, leicht gebessert, nicht remittiert: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, UKHD-PT (nur`bdkm16`), UKHD-CT, UKHD-LE, die**erste UKHD-ND-Antwort**und die metadata-only-Antwort zu UKHD-EDP. ACE, UKHD-ANB, UKHD-D und`bdkm15`sind Initial-Items und werden nicht wiederholt |
 | [PSS — Screening](Bundle-pcor-mii-exa-bundle-pss-screening.md) | PSS | 25.06.2026 | 21 | die vollständige PSS-Batterie: DEM, MHI, OPD-SFK, GSLTPAQ, EXPECT, IPQ-S, WAI und PHQ-D Panik-Block als PCOR-MII-Bögen plus zwölf Antworten auf MII-PRO-Questionnaires (PHQ-9, GAD-7, PHQ-15, SSD-12, WHODAS-12, EURONET-SOMA, WI-7, SCOFF, ISR-Z, PC-PTSD, PROMIS-16, PROMIS Cognitive Function). Der vollständige PHQ-9 ist beantwortet, weil der Screening-Termin ein Vor-Ort-Termin mit unmittelbarem Arztkontakt ist |
-| [NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.md) | NTx | 06.10.2026 | 6 | MHI-NTx (Screening), NTx-Verlaufsbefragung und die drei**metadata-only-Antworten**zu BAASIS, ABQ und MTSOSD-R59 (nur`linkId`s und Codes, kein Wortlaut) |
+| [NTx — Erstbefragung](Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.md) | NTx | 06.10.2026 | 5 | MHI-NTx (Screening), NTx-Verlaufsbefragung und die beiden**metadata-only-Antworten**zu BAASIS und MTSOSD-R59 (nur`linkId`s und Codes, kein Wortlaut) |
 
 Die Antworten auf MII-PRO-Questionnaires liegen als JSON unter `input/examples/` und referenzieren die Upstream-Canonicals mit Versionspin `|2027.0.0-ballot.2`; die Antworten auf PCOR-MII-Bögen sind FHIR-Shorthand-Instanzen mit Pin `|0.9.0`. Beide Formen stehen gleichberechtigt im Bundle.
 
@@ -95,11 +95,10 @@ Die Spalte **Zeigt** nennt, was die Antwort über die bloße Gültigkeit hinaus 
 | :--- | :--- | :--- |
 | [MHINTXResponse](QuestionnaireResponse-MHINTXResponse.md) | [MHINTX](Questionnaire-MHINTX.md) | Transplantationsanamnese: Lebendspende, Datum, erste Spenderniere — ISiKFormularDaten wie der MHI |
 | [NTXVERLAUFResponse](QuestionnaireResponse-NTXVERLAUFResponse.md) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.md) | erstes Quartals-Monitoring: Dialysevorgeschichte, Blutdruck mit UCUM-Einheiten, Ja/Nein als SNOMED CT |
-| [BAASISResponse](QuestionnaireResponse-BAASISResponse.md) | [BAASIS](Questionnaire-BAASIS.md) | gelegentlich vergessene Einnahmen; nur Items mit erfüllter`enableWhen`-Bedingung beantwortet — und damit der Auslöser für den ABQ |
-| [ABQResponse](QuestionnaireResponse-ABQResponse.md) | [ABQ](Questionnaire-ABQ.md) | 16 Stufenwerte, Summe 26 im berechneten Item |
+| [BAASISResponse](QuestionnaireResponse-BAASISResponse.md) | [BAASIS](Questionnaire-BAASIS.md) | gelegentlich vergessene Einnahmen; nur Items mit erfüllter`enableWhen`-Bedingung beantwortet |
 | [MTSOSDR59Response](QuestionnaireResponse-MTSOSDR59Response.md) | [MTSOSDR59](Questionnaire-MTSOSDR59.md) | elf aufgetretene Symptome, Belastung nur dort; Tremor und Durchfall am belastendsten; keine Freitext-Symptome |
 
-Die Antworten zu BAASIS, ABQ und MTSOSD-R59 tragen nur `linkId`s und Codes, keinen Wortlaut — genau so, wie Antworten auf lizenzierte Bögen im Austausch ankommen ([ADR-014](Designentscheidungen.md)).
+Die Antworten zu BAASIS und MTSOSD-R59 tragen nur `linkId`s und Codes, keinen Wortlaut — genau so, wie Antworten auf lizenzierte Bögen im Austausch ankommen ([ADR-014](Designentscheidungen.md)).
 
 ### Validierungsstand
 

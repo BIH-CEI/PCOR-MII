@@ -71,7 +71,6 @@ A • marks that the instrument is collected in that entity; the number is the i
 | ACE + timing items (11) | EFA | — | • | — | ACE free; the 6 UKHD items**clearance open** | [ACE](ACE.md)— first five ACE questions plus`UKHD-CTT`(PCOR-MII composite) |
 | BAASIS (10) | TCH | — | — | • | © University of Basel, items not publishable | [NTx instruments](NTx-Instrumente.md)— metadata-only |
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, items not publishable | [NTx instruments](NTx-Instrumente.md)— metadata-only |
-| ABQ (16) | TCH | — | — | • | use without pharmaceutical-industry involvement | [NTx instruments](NTx-Instrumente.md)— metadata-only |
 
 On top of these come **site-specific item groups** that do not correspond to any published instrument and come straight from the dictionary — for example `UKE-HCU/PSE/TR/DOT` (healthcare utilisation, PSS), the `UKHD-*` groups (AN) and `MHH-DIAL/UTI/T/BP` (follow-up parameters, NTx). For these the DIZ implementation list carries **no entry at all**, so no clearance is documented; see the open points in [Design Decisions](Designentscheidungen.md).
 

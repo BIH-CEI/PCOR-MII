@@ -69,7 +69,6 @@ Ein • markiert, dass das Instrument in der jeweiligen Entität erhoben wird; d
 | UKHD-EDP (11) | DCH | — | • | — | **keine dokumentierte Freigabe**; vermutlich EDI-2-Zuschnitt | [UKHD-EDP](UKHD-EDP.md)— metadata-only |
 | BAASIS (10) | TCH | — | — | • | © Uni Basel, Items nicht publizierbar | [NTx-Instrumente](NTx-Instrumente.md)— metadata-only |
 | MTSOSD-R59 (126) | MSE | — | — | • | © KU Leuven, Items nicht publizierbar | [NTx-Instrumente](NTx-Instrumente.md)— metadata-only |
-| ABQ (16) | TCH | — | — | • | Nutzung ohne Pharma-Beteiligung | [NTx-Instrumente](NTx-Instrumente.md)— metadata-only |
 
 Dazu kommen **standortspezifische Item-Gruppen**, die kein publiziertes Instrument abbilden und direkt aus dem Dictionary stammen — etwa `UKE-HCU/PSE/TR/DOT` (Versorgungsinanspruchnahme, PSS), die `UKHD-*`-Gruppen (AN) und `MHH-DIAL/UTI/T/BP` (Verlaufsparameter, NTx). Sie stehen in der Tabelle oben nicht, weil die Tabelle Instrumente auflistet und diese Gruppen keine sind.
 
@@ -87,7 +86,7 @@ Nicht modelliert bleibt für AN `UKHD-BI` (Körperbild, 3 Items — visuelle Bil
 ### Woher kommt welche Ressource?
 
 * **MII-PRO-Modul** (`de.medizininformatikinitiative.kerndatensatz.pros`, aktuell 2027.0.0-ballot.2): alle Instrumente, die modulweit nachgenutzt werden — PHQ-Familie, WHODAS, PROMIS, seit 2026.6.0 EURONET-SOMA, ISR-Z, PC-PTSD, SCOFF, SSD-12 und WI-7 sowie seit 2026.7.0 der GAD-7. PCOR-MII referenziert sie und baut sie nicht nach.
-* **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S und den PHQ-D-Panik-Block, die NTx-Stubs BAASIS, ABQ und MTSOSD-R59 (metadata-only, ADR-012) sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe [ADR-003](Designentscheidungen.md)).
+* **PCOR-MII selbst**: DEM und MHI (projektspezifische Zusammenstellungen), OPD-SFK, WAI, GSLTPAQ, EXPECT, IPQ-S und den PHQ-D-Panik-Block, die NTx-Stubs BAASIS und MTSOSD-R59 (metadata-only, ADR-012) sowie — vorläufig, bis zur möglichen Aufnahme ins MII-PRO-Modul — die AN-Instrumente ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2 und ACE (siehe [ADR-003](Designentscheidungen.md)).
 
 ### Lizenz-Tiers
 

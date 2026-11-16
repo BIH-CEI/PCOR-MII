@@ -562,16 +562,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>—</td>
     </tr>
     <tr>
-      <td>ABQ</td>
-      <td style="text-align: center">—</td>
-      <td style="text-align: center">—</td>
-      <td style="text-align: center">•</td>
-      <td><a href="NTx-Instrumente.html">Seite</a></td>
-      <td><a href="Questionnaire-ABQ.html">ABQ</a> (metadata-only)</td>
-      <td><a href="QuestionnaireResponse-ABQResponse.html">Beispiel</a></td>
-      <td>—</td>
-    </tr>
-    <tr>
       <td>MTSOSD-R59</td>
       <td style="text-align: center">—</td>
       <td style="text-align: center">—</td>
@@ -748,7 +738,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispielpatienten-und-bundles">Beispielpatienten und Bundles</h3>
 
-<p>Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 46 Beispielantworten sind auf der Seite <a href="Beispiele.html">Beispiele</a> beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.</p>
+<p>Drei synthetische Beispielpatient:innen (AN, PSS, NTx), vier Termin-Bundles und 45 Beispielantworten sind auf der Seite <a href="Beispiele.html">Beispiele</a> beschrieben — mit Profil, Termin, Inhalt der Bundles und dem, was jede Antwort belegt. In den Tabellen oben steht je Bogen die zugehörige Beispielantwort.</p>
 
 <p><a name="use-cases"></a></p>
 
@@ -850,7 +840,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Fachliche Beschreibung: <a href="NTx.html">NTx</a>. Das Domain Overview trennt <strong>Empfänger (NTXr)</strong> und <strong>Spender (NTXd)</strong> mit eigenen Prioritätsprofilen; seit 2026-11-05 gibt es für beide ein Manifest.</p>
 
-<p><strong>Maschinenlesbar:</strong> <a href="Library-use-case-ntxr.html">Library/use-case-ntxr</a> pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs <a href="NTx-Instrumente.html">BAASIS, ABQ und MTSOSD-R59</a>, die Transplantationsanamnese <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> und die <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a>. <a href="Library-use-case-ntxd.html">Library/use-case-ntxd</a> enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.</p>
+<p><strong>Maschinenlesbar:</strong> <a href="Library-use-case-ntxr.html">Library/use-case-ntxr</a> pinnt die generische Batterie plus WAI (in NTx Prio A), die metadata-only-Stubs <a href="NTx-Instrumente.html">BAASIS und MTSOSD-R59</a>, die Transplantationsanamnese <a href="NTx-Instrumente.html#mhi-ntx-transplantationsanamnese">MHI-NTx</a> und die <a href="NTx-Instrumente.html#ntx-verlaufsbefragung-mhh">NTx-Verlaufsbefragung</a>. <a href="Library-use-case-ntxd.html">Library/use-case-ntxd</a> enthält nur die generische Batterie: Spender haben laut Plan kein spezifisches Instrument und kein Monitoring. Nicht gepinnt ist PHQ-15, weil das Domain Overview es nur für PSS führt, das Dictionary-Blatt NTx aber mit; die Klärung liegt bei der Use-Case-Leitung.</p>
 
 <table>
   <thead>
@@ -863,10 +853,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>BAASIS, ABQ, MTSOSD-R59 (metadata-only)</td>
+      <td>BAASIS, MTSOSD-R59 (metadata-only)</td>
       <td><a href="NTx-Instrumente.html">NTx-Instrumente</a></td>
-      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> · <a href="Questionnaire-ABQ.html">ABQ</a> · <a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a></td>
-      <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASIS</a> · <a href="QuestionnaireResponse-ABQResponse.html">ABQ</a> · <a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSD-R59</a></td>
+      <td><a href="Questionnaire-BAASIS.html">BAASIS</a> · <a href="Questionnaire-MTSOSDR59.html">MTSOSDR59</a></td>
+      <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASIS</a> · <a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSD-R59</a></td>
     </tr>
     <tr>
       <td>MHI-NTx — Transplantationsanamnese</td>
@@ -945,8 +935,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

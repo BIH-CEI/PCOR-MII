@@ -513,15 +513,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASISResponse</a></td>
     </tr>
     <tr>
-      <td>ABQ — Adhärenzbarrieren</td>
-      <td>TCH</td>
-      <td style="text-align: right">16</td>
-      <td>nur bei Hinweis auf Nonadhärenz im BAASIS, Prio A</td>
-      <td><strong>PCOR-MII</strong> → <a href="Questionnaire-ABQ.html"><code class="language-plaintext highlighter-rouge">ABQ</code></a> — <strong>metadata-only</strong>, Summenscore 16–64</td>
-      <td><a href="NTx-Instrumente.html#abq">NTx-Instrumente</a></td>
-      <td><a href="QuestionnaireResponse-ABQResponse.html">ABQResponse</a></td>
-    </tr>
-    <tr>
       <td>MTSOSD-R59 — Symptomlast der Immunsuppression</td>
       <td>MSE</td>
       <td style="text-align: right">126</td>
@@ -533,7 +524,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>BAASIS und ABQ hängen zusammen: Der ABQ wird nur erhoben, wenn der BAASIS auf Nichtadhärenz hinweist — eine Bedingung zwischen zwei Bögen, die nicht als <code class="language-plaintext highlighter-rouge">enableWhen</code> modelliert ist, sondern den aufrufenden Prozess steuert. Die drei lizenzierten Instrumente sind als <strong>Variantenpaar</strong> nach <a href="Designentscheidungen.html">ADR-014</a> angelegt: Die öffentliche Definition hier trägt Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Antwortformate und Bedingungen ohne Originalwortlaut; die erfassbare Variante mit Wortlaut liegt außerhalb des IG und wird nur an lizenzierte Zentren ausgeliefert.</p>
+<p>Die beiden lizenzierten Instrumente BAASIS und MTSOSD-R59 sind als <strong>Variantenpaar</strong> nach <a href="Designentscheidungen.html">ADR-014</a> angelegt: Die öffentliche Definition hier trägt Struktur, <code class="language-plaintext highlighter-rouge">linkId</code>s, Antwortformate und Bedingungen ohne Originalwortlaut; die erfassbare Variante mit Wortlaut liegt außerhalb des IG und wird nur an lizenzierte Zentren ausgeliefert.</p>
+
+<blockquote>
+  <p><strong>ABQ entfernt (2026-11-16):</strong> Der <em>Adherence Barriers Questionnaire</em> (Müller, Kohlmann &amp; Wilke 2015) war bis 0.9.0 als metadata-only-Stub mit Summenscore enthalten. Seine Daten dürfen aus Lizenzgründen nicht an die DIZ übermittelt werden; der Bogen, seine Antwortskala, die Dictionary-Codes <code class="language-plaintext highlighter-rouge">ABQ_01</code>–<code class="language-plaintext highlighter-rouge">ABQ_16</code>, die Beispielantwort und der Eintrag im NTx-Manifest wurden deshalb entfernt. Die Auslöse-Bedingung aus dem BAASIS (Nichtadhärenz) ist damit im IG gegenstandslos. Siehe <a href="Rechtelage.html#ntx">Rechtelage</a>.</p>
+</blockquote>
 
 <p><strong>Scores</strong></p>
 
@@ -546,11 +541,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>ABQ Summenscore 16–64</td>
-      <td><strong>PCOR-MII</strong> — berechnetes Item <code class="language-plaintext highlighter-rouge">abq-summe</code> im Bogen</td>
-      <td><a href="NTx-Instrumente.html#abq">NTx-Instrumente</a></td>
-    </tr>
     <tr>
       <td>BAASIS — drei Phasen (Implementierung, Persistenz, Initiierung)</td>
       <td>nur dokumentiert, kein Ausdruck</td>
@@ -582,7 +572,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td>Manifest</td>
-      <td><a href="Library-use-case-ntxr.html">use-case-ntxr</a>, 17 Bögen</td>
+      <td><a href="Library-use-case-ntxr.html">use-case-ntxr</a>, 16 Bögen</td>
       <td><a href="Library-use-case-ntxd.html">use-case-ntxd</a>, 12 Bögen</td>
     </tr>
     <tr>
@@ -591,7 +581,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>ja</td>
     </tr>
     <tr>
-      <td>MHI-NTx, Verlaufsbefragung, BAASIS, ABQ, MTSOSD-R59</td>
+      <td>MHI-NTx, Verlaufsbefragung, BAASIS, MTSOSD-R59</td>
       <td>ja</td>
       <td>nein</td>
     </tr>
@@ -607,11 +597,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="beispieldatensatz">Beispieldatensatz</h3>
 
-<p>Der NTx-Beispielpatient (<a href="Patient-pcor-mii-exa-patient-ntx.html">pcor-mii-exa-patient-ntx</a>) ist Empfänger einer Lebendspende; das <a href="Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html">Bundle NTx — Erstbefragung</a> (06.10.2026) fasst Screening und erstes Quartals-Monitoring zusammen, mit den drei metadata-only-Antworten zu BAASIS, ABQ und MTSOSD-R59. Profil, Werte und was jede Antwort belegt: <a href="Beispiele.html">Beispiele</a>.</p>
+<p>Der NTx-Beispielpatient (<a href="Patient-pcor-mii-exa-patient-ntx.html">pcor-mii-exa-patient-ntx</a>) ist Empfänger einer Lebendspende; das <a href="Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html">Bundle NTx — Erstbefragung</a> (06.10.2026) fasst Screening und erstes Quartals-Monitoring zusammen, mit den beiden metadata-only-Antworten zu BAASIS und MTSOSD-R59. Profil, Werte und was jede Antwort belegt: <a href="Beispiele.html">Beispiele</a>.</p>
 
 <h3 id="rechtelage-und-status">Rechtelage und Status</h3>
 
-<p>BAASIS (© Universität Basel), MTSOSD-R59 (© KU Leuven) und ABQ sind für die Forschung frei nutzbar, ihre Items und Antwortoptionen dürfen aber nicht publiziert werden; jedes Zentrum braucht eine eigene Lizenzvereinbarung, beim BAASIS mit Datenweitergabe an das Validierungsprojekt der Uni Basel. Die MHH-Standortitems (MHI-NTx, Verlaufsbefragung) haben keine dokumentierte Freigabe. Bezugswege, Lizenzbedingungen und die offenen Fragen (Lizenznehmer je Projekt oder Zentrum, Raten-Skala BAASIS 2_a, ABQ-Polung, MTSOSD-Umfang, MAPI-Fassung): <a href="Rechtelage.html#ntx">Rechtelage und offene Punkte</a>.</p>
+<p>BAASIS (© Universität Basel) und MTSOSD-R59 (© KU Leuven) sind für die Forschung frei nutzbar, ihre Items und Antwortoptionen dürfen aber nicht publiziert werden; jedes Zentrum braucht eine eigene Lizenzvereinbarung, beim BAASIS mit Datenweitergabe an das Validierungsprojekt der Uni Basel. Die MHH-Standortitems (MHI-NTx, Verlaufsbefragung) haben keine dokumentierte Freigabe. Bezugswege, Lizenzbedingungen und die offenen Fragen (Lizenznehmer je Projekt oder Zentrum, Raten-Skala BAASIS 2_a, MTSOSD-Umfang, MAPI-Fassung): <a href="Rechtelage.html#ntx">Rechtelage und offene Punkte</a>.</p>
 
 <p>Quellen dieser Seite: Blatt <code class="language-plaintext highlighter-rouge">Item Level Dictionary NTx</code> und <code class="language-plaintext highlighter-rouge">Domain Overview</code> des Item Level Dictionary (nicht Teil dieses Repositories), DIZ-Implementierungsliste PCOR-MII; die Zuordnung entspricht den Manifesten <a href="Library-use-case-ntxr.html">use-case-ntxr</a> und <a href="Library-use-case-ntxd.html">use-case-ntxd</a>. Hinweise zum Lebenszyklus von <code class="language-plaintext highlighter-rouge">Questionnaire</code> zu <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> siehe <a href="Implementation.html">Anwendung</a>; alle Artefakte unter <a href="artifacts.html">Artefakte</a>.</p>
 
@@ -665,8 +655,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

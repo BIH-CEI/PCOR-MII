@@ -80,7 +80,7 @@ The **PHQ-D panic block** (`phq3a`–`phq3d`) is something different from PHQ-4:
 * **PSS only**: SSD-12, WI-7, SCOFF, ISR-Z, PC-PTSD, the PHQ-D panic block, EXPECT, IPQ-S, GSLTPAQ and the UKE healthcare-utilisation items. The Domain Overview lists PHQ-15 for PSS only (the NTx dictionary sheet includes it too — see [NTx](NTx.md)).
 * **PSS and AN**: OPD-SFK (collected by individual sites, no direct recommendation of the use-case lead) and PHQ-SI.
 * **AN only**: ERQ-6, EDE-Q6, ANSOCQ-2, SSUK-2, ACE and the UKHD supplementary questionnaires — see [AN](AN.md).
-* **NTx only**: BAASIS, ABQ, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire — see [NTx](NTx.md).
+* **NTx only**: BAASIS, MTSOSD-R59, MHI-NTx and the NTx follow-up questionnaire — see [NTx](NTx.md).
 
 ### Example data set
 

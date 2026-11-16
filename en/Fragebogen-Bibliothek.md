@@ -33,7 +33,6 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 | EXPECT | • | — | — | [Seite](EXPECT.md) | [EXPECT](Questionnaire-EXPECT.md) | [✓](QuestionnaireResponse-EXPECTResponse.md) | — |
 | PHQ-D panic block | • | — | — | [Page](PHQ-Panik.md) | [PHQPANIK](Questionnaire-PHQPANIK.md) | [✓](QuestionnaireResponse-PHQPANIKResponse.md) | — |
 | BAASIS | — | — | • | [Page](NTx-Instrumente.md) | [BAASIS](Questionnaire-BAASIS.md)(metadata-only) | — | — |
-| ABQ | — | — | • | [Page](NTx-Instrumente.md) | [ABQ](Questionnaire-ABQ.md)(metadata-only) | — | — |
 | MTSOSD-R59 | — | — | • | [Page](NTx-Instrumente.md) | [MTSOSDR59](Questionnaire-MTSOSDR59.md)(metadata-only) | — | — |
 | IPQ-S | • | — | — | [Seite](IPQ-S.md) | [IPQS](Questionnaire-IPQS.md) | [✓](QuestionnaireResponse-IPQSResponse.md) | — |
 | GSLTPAQ | • | — | — | [Seite](GSLTPAQ.md) | [GSLTPAQ](Questionnaire-GSLTPAQ.md) | [✓](QuestionnaireResponse-GSLTPAQResponse.md) | — |
@@ -54,7 +53,7 @@ Sorted project-wide collective questionnaires first, then by use-case breadth. �
 
 ### Example patients and bundles
 
-Three synthetic example patients (AN, PSS, NTx), four visit bundles and 46 example responses are described on the [Examples](Beispiele.md) page — with profile, visit, bundle contents and what each response demonstrates. The tables above list the example response per questionnaire.
+Three synthetic example patients (AN, PSS, NTx), four visit bundles and 45 example responses are described on the [Examples](Beispiele.md) page — with profile, visit, bundle contents and what each response demonstrates. The tables above list the example response per questionnaire.
 
 ### Use case PSS — persistent somatic symptoms
 
@@ -82,11 +81,11 @@ Clinical description and instrument table: [AN](AN.md). **Machine-readable:** [L
 
 ### Use case NTx — kidney transplantation
 
-Clinical description: [NTx](NTx.md). The Domain Overview separates **recipients (NTXr)** and **donors (NTXd)**; both have a manifest since 2026-11-05. **Machine-readable:** [Library/use-case-ntxr](Library-use-case-ntxr.md) pins the generic battery plus WAI (priority A in NTx), the metadata-only stubs [BAASIS, ABQ and MTSOSD-R59](NTx-Instrumente.md), the transplant history [MHI-NTx](NTx-Instrumente.md#mhi-ntx-transplantationsanamnese) and the [NTx follow-up questionnaire](NTx-Instrumente.md#ntx-verlaufsbefragung-mhh); [Library/use-case-ntxd](Library-use-case-ntxd.md) contains only the generic battery. PHQ-15 is not pinned: the Domain Overview lists it for PSS only, the NTx dictionary sheet does include it — to be settled by the use-case lead.
+Clinical description: [NTx](NTx.md). The Domain Overview separates **recipients (NTXr)** and **donors (NTXd)**; both have a manifest since 2026-11-05. **Machine-readable:** [Library/use-case-ntxr](Library-use-case-ntxr.md) pins the generic battery plus WAI (priority A in NTx), the metadata-only stubs [BAASIS and MTSOSD-R59](NTx-Instrumente.md), the transplant history [MHI-NTx](NTx-Instrumente.md#mhi-ntx-transplantationsanamnese) and the [NTx follow-up questionnaire](NTx-Instrumente.md#ntx-verlaufsbefragung-mhh); [Library/use-case-ntxd](Library-use-case-ntxd.md) contains only the generic battery. PHQ-15 is not pinned: the Domain Overview lists it for PSS only, the NTx dictionary sheet does include it — to be settled by the use-case lead.
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| BAASIS, ABQ, MTSOSD-R59 (metadata-only) | [NTx instruments](NTx-Instrumente.md) | [BAASIS](Questionnaire-BAASIS.md)·[ABQ](Questionnaire-ABQ.md)·[MTSOSDR59](Questionnaire-MTSOSDR59.md) | [BAASIS](QuestionnaireResponse-BAASISResponse.md)·[ABQ](QuestionnaireResponse-ABQResponse.md)·[MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.md) |
+| BAASIS, MTSOSD-R59 (metadata-only) | [NTx instruments](NTx-Instrumente.md) | [BAASIS](Questionnaire-BAASIS.md)·[MTSOSDR59](Questionnaire-MTSOSDR59.md) | [BAASIS](QuestionnaireResponse-BAASISResponse.md)·[MTSOSD-R59](QuestionnaireResponse-MTSOSDR59Response.md) |
 | MHI-NTx — transplant history | [NTx instruments](NTx-Instrumente.md#mhi-ntx-transplantationsanamnese) | [MHINTX](Questionnaire-MHINTX.md) | [example](QuestionnaireResponse-MHINTXResponse.md) |
 | NTx follow-up questionnaire (MHH) | [NTx instruments](NTx-Instrumente.md#ntx-verlaufsbefragung-mhh) | [NTXVERLAUF](Questionnaire-NTXVERLAUF.md) | [example](QuestionnaireResponse-NTXVERLAUFResponse.md) |
 | DEM, MHI, WAI, PROMIS, WHODAS, PHQ-8, GAD-7, EURONET-SOMA, EQ-5D-5L | see the full table | see the full table | — |

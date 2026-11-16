@@ -358,7 +358,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><strong><code class="language-plaintext highlighter-rouge">itemWeight</code> statt <code class="language-plaintext highlighter-rouge">ordinalValue</code></strong> — Gewichte als Extension an <code class="language-plaintext highlighter-rouge">answerOption</code> (fremde Terminologie) oder als Concept-Property <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/concept-properties#itemWeight</code> am eigenen CodeSystem; das Modul schreibt sie nur noch über die RuleSets <code class="language-plaintext highlighter-rouge">WeightedOption</code>, <code class="language-plaintext highlighter-rouge">WeightedConcept</code>, <code class="language-plaintext highlighter-rouge">ItemWeightProperty</code></td>
-      <td>Umgesetzt: 15 Antwort-CodeSystems, 72 Konzepte, Gewichte und Codes unverändert; die Score-Ausdrücke von OPD-SFK und ABQ rechnen mit <code class="language-plaintext highlighter-rouge">.weight().sum()</code>. Dieselbe Richtung wie unsere Ballot-Einreichung <strong>HDB-972</strong>. Welche Skalen überhaupt Gewichte tragen (nur ordinale — siehe <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>), blieb unverändert.</td>
+      <td>Umgesetzt: 15 Antwort-CodeSystems, 72 Konzepte, Gewichte und Codes unverändert; der Score-Ausdruck des OPD-SFK (und des inzwischen entfernten ABQ) rechnet mit <code class="language-plaintext highlighter-rouge">.weight().sum()</code>. Dieselbe Richtung wie unsere Ballot-Einreichung <strong>HDB-972</strong>. Welche Skalen überhaupt Gewichte tragen (nur ordinale — siehe <a href="UKHD-Zusatzitems.html">UKHD-Zusatzitems</a>), blieb unverändert.</td>
     </tr>
     <tr>
       <td><strong>PROMIS Scale v1.2 – Global Health</strong> neu im Modul (<code class="language-plaintext highlighter-rouge">mii-qst-pro-promis-global-health</code>, 10 Items, Status <code class="language-plaintext highlighter-rouge">draft</code>)</td>
@@ -452,8 +452,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Erstellt 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

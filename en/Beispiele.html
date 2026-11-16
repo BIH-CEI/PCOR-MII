@@ -339,7 +339,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>This page collects <strong>every example of the IG in one place</strong>: three synthetic example patients, four visit bundles and 46 example responses. The use-case pages <a href="PSS.html">PSS</a>, <a href="AN.html">AN</a> and <a href="NTx.html">NTx</a> point here; their tables name, per questionnaire, the example response that exercises it.</p>
+<p>This page collects <strong>every example of the IG in one place</strong>: three synthetic example patients, four visit bundles and 45 example responses. The use-case pages <a href="PSS.html">PSS</a>, <a href="AN.html">AN</a> and <a href="NTx.html">NTx</a> point here; their tables name, per questionnaire, the example response that exercises it.</p>
 
 <p>The examples are not unconnected test data but <strong>coherent data sets</strong>: every response belongs to one person and one assessment visit, and the answer values are coordinated, not rolled. What is not collected at a visit is <strong>absent</strong> from its bundle rather than present but empty — that is how the <code class="language-plaintext highlighter-rouge">TIMING</code> column of the Item Level Dictionary becomes visible, which is deliberately not modelled in the questionnaires.</p>
 
@@ -418,8 +418,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="Bundle-pcor-mii-exa-bundle-ntx-erstbefragung.html">NTx — initial assessment</a></td>
       <td>NTx</td>
       <td>2026-10-06</td>
-      <td style="text-align: right">6</td>
-      <td>MHI-NTx (screening), NTx follow-up questionnaire and the three <strong>metadata-only responses</strong> to BAASIS, ABQ and MTSOSD-R59 (only <code class="language-plaintext highlighter-rouge">linkId</code>s and codes, no wording)</td>
+      <td style="text-align: right">5</td>
+      <td>MHI-NTx (screening), NTx follow-up questionnaire and the two <strong>metadata-only responses</strong> to BAASIS and MTSOSD-R59 (only <code class="language-plaintext highlighter-rouge">linkId</code>s and codes, no wording)</td>
     </tr>
   </tbody>
 </table>
@@ -701,12 +701,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="QuestionnaireResponse-BAASISResponse.html">BAASISResponse</a></td>
       <td><a href="Questionnaire-BAASIS.html">BAASIS</a></td>
-      <td>occasionally missed doses; only items with a satisfied <code class="language-plaintext highlighter-rouge">enableWhen</code> condition are answered — and thereby the trigger for the ABQ</td>
-    </tr>
-    <tr>
-      <td><a href="QuestionnaireResponse-ABQResponse.html">ABQResponse</a></td>
-      <td><a href="Questionnaire-ABQ.html">ABQ</a></td>
-      <td>16 level values, sum 26 in the calculated item</td>
+      <td>occasionally missed doses; only items with a satisfied <code class="language-plaintext highlighter-rouge">enableWhen</code> condition are answered</td>
     </tr>
     <tr>
       <td><a href="QuestionnaireResponse-MTSOSDR59Response.html">MTSOSDR59Response</a></td>
@@ -716,7 +711,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>The responses to BAASIS, ABQ and MTSOSD-R59 carry only <code class="language-plaintext highlighter-rouge">linkId</code>s and codes, no wording — exactly as responses to licensed questionnaires arrive in exchange (<a href="Designentscheidungen.html">ADR-014</a>).</p>
+<p>The responses to BAASIS and MTSOSD-R59 carry only <code class="language-plaintext highlighter-rouge">linkId</code>s and codes, no wording — exactly as responses to licensed questionnaires arrive in exchange (<a href="Designentscheidungen.html">ADR-014</a>).</p>
 
 <h3 id="validation-status">Validation status</h3>
 
@@ -774,8 +769,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.bihealth.org/">BIH-CEI</a>.  
           Package pcor-mii#0.9.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-11-12 18:28:00 +0000">
-    2026-11-12
+  <span title="2026-11-16 14:40:00 +0000">
+    2026-11-16
   </span>
 
           <br/>

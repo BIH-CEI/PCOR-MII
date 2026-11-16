@@ -25,7 +25,7 @@
 * Metadata: Steward Contact
   * ?: BIH-CEI
 * Metadata: Description
-  * ?: Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS, ABQ und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.
+  * ?: Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.
 * Metadata: Type
   * ?: [http://terminology.hl7.org/CodeSystem/library-type](http://terminology.hl7.org/7.5.0/CodeSystem-library-type.html)#asset-collection
 * Metadata:  Parameters
@@ -46,8 +46,6 @@
   * ?: **Description**: PROMIS-GH — Global Health Global01/Global02 [2-Item-Zuschnitt; Übergangslösung bis zur Aufnahme der 10-Item-Skala ins PRO-Modul]**Resource**:[PROMIS-GH — PROMIS Global Health (2-Item-ShortForm)](Questionnaire-PROMISGH.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/PROMISGH|0.9.0
 * Metadata: Component
   * ?: **Description**: BAASIS — Adhärenz Immunsuppression [metadata-only; Monitoring quartalsweise, Prio A]**Resource**:[BAASIS — Adhärenz gegenüber immunsuppressiver Medikation (NTx, metadata-only)](Questionnaire-BAASIS.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/BAASIS|0.9.0
-* Metadata: Component
-  * ?: **Description**: ABQ — Adhärenzbarrieren [metadata-only; nur bei BAASIS-Nonadhärenz, Prio A]**Resource**:[ABQ — Adherence Barriers Questionnaire (NTx, metadata-only)](Questionnaire-ABQ.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ|0.9.0
 * Metadata: Component
   * ?: **Description**: MTSOSD-R59 — Symptomlast Immunsuppression [metadata-only; Monitoring quartalsweise, Umfang offen]**Resource**:[MTSOSD-R59 — Symptomlast, 59 Symptome und 3 Freitext (NTx, metadata-only)](Questionnaire-MTSOSDR59.md)version: 0.9.0**Canonical URL**:https://bih-cei.github.io/PCOR-MII/Questionnaire/MTSOSDR59|0.9.0
 * Metadata: Component
@@ -100,7 +98,7 @@
       "value" : "https://www.bihealth.org/"
     }]
   }],
-  "description" : "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS, ABQ und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.",
+  "description" : "Maschinenlesbare Instrumentenliste des Use Case NTXr (Empfänger einer Nierentransplantation): alle Questionnaire-Definitionen mit versionierter Canonical — PCOR-MII-eigene Bögen mit |0.9.0, MII-PRO-Bögen mit |2027.0.0-ballot.2. Quelle: Erhebungsplan (Domain Overview, Spalten NTXr) und Dictionary-Blatt NTx. Enthält die generische Batterie aller Use Cases, dazu WAI (hier Prio A), die metadata-only-Stubs BAASIS und MTSOSD-R59 (wortgleiche Vollversionen nur über den Form Server, Lizenz je Zentrum), die Transplantationsanamnese MHI-NTx (Screening) und die NTx-Verlaufsbefragung (quartalsweises Monitoring). Nicht enthalten: PHQ-15 (Domain Overview führt es nur für PSS, das Dictionary-Blatt NTx dagegen mit — Klärung durch die Use-Case-Leitung offen) und OPD-SFK (nicht in NTx). PROMIS-16 und PROMIS-29 + Cognitive Function SF 4a sind Standortvarianten (entweder/oder), beide enthalten. Ob der MTSOSD-R59 komplett oder nur mit Tremor und Diarrhoe ins Monitoring geht, ist im Erhebungsplan offen; gepinnt ist der komplette Bogen.",
   "useContext" : [{
     "code" : {
       "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
@@ -155,11 +153,6 @@
     "type" : "composed-of",
     "display" : "BAASIS — Adhärenz Immunsuppression [metadata-only; Monitoring quartalsweise, Prio A]",
     "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/BAASIS|0.9.0"
-  },
-  {
-    "type" : "composed-of",
-    "display" : "ABQ — Adhärenzbarrieren [metadata-only; nur bei BAASIS-Nonadhärenz, Prio A]",
-    "resource" : "https://bih-cei.github.io/PCOR-MII/Questionnaire/ABQ|0.9.0"
   },
   {
     "type" : "composed-of",
